@@ -1,6 +1,3 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    // do something
-    // State variables
 let heroBg = document.getElementById('heroBg');
 let circleBg = document.getElementById('circleCliper');
 let heroSec = document.getElementById('heroSec');
@@ -87,4 +84,3 @@ setTimeout(() => {
       runAnimation();
     });
 }, 300);
-  });
