@@ -1,0 +1,204 @@
+
+:root{
+  --NohemiT: 'Nohemi-Thin';
+  --NohemiEL: 'Nohemi-ExtraLight';
+  --NohemiL: 'Nohemi-Light';
+  --Nohemi: 'Nohemi-Regular';
+  --NohemiM: 'Nohemi-Medium';
+  --NohemiB: 'Nohemi-Bold';
+  --NohemiSB: 'Nohemi-SemiBold';
+  --NohemiBL: 'Nohemi-Black';
+  --Satoshi: 'Satoshi-Regular';
+  --SatoshiL: 'Satoshi-Light';
+  --SatoshiM: 'Satoshi-Medium';
+  --SatoshiB: 'Satoshi-Bold';
+  --SatoshiBL: 'Satoshi-Black';
+
+  --gray-59: #595959;
+  --gray-79: #797979;
+  --gray-97: #979797;
+  --gray-c5: #C5C5C5;
+  
+  --main: #EAEAEA;
+  --sec:  #FF2626;
+  --dark: #000000;
+  --light:#ffffff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--Satoshi);
+}
+
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+
+/* Satoshi Font */
+@font-face {
+  font-family: 'Satoshi-Light';
+  src: url('../assets//fonts/satoshi/Satoshi-Light.woff') format('woff'),
+       url('../assets//fonts/satoshi/Satoshi-Light.ttf') format('ttf'),
+       url('../assets//fonts/satoshi/Satoshi-Light.woff2') format('woff2');
+       font-weight: 100;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('../assets//fonts/satoshi/Satoshi-Regular.woff') format('woff'),
+       url('../assets//fonts/satoshi/Satoshi-Regular.ttf') format('ttf'),
+       url('../assets//fonts/satoshi/Satoshi-Regular.woff2') format('woff2');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url('../assets//fonts/satoshi/Satoshi-Medium.woff') format('woff'),
+       url('../assets//fonts/satoshi/Satoshi-Medium.ttf') format('ttf'),
+       url('../assets//fonts/satoshi/Satoshi-Medium.woff2') format('woff2');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('../assets//fonts/satoshi/Satoshi-Bold.woff') format('woff'),
+       url('../assets//fonts/satoshi/Satoshi-Bold.ttf') format('ttf'),
+       url('../assets//fonts/satoshi/Satoshi-Bold.woff2') format('woff2');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Black';
+  src: url('../assets//fonts/satoshi/Satoshi-Black.woff') format('woff'),
+       url('../assets//fonts/satoshi/Satoshi-Black.ttf') format('ttf'),
+       url('../assets//fonts/satoshi/Satoshi-Black.woff2') format('woff2');
+       font-weight: 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+
+/* Nohemi Font */
+
+@font-face {
+  font-family: 'Nohemi-Thin';
+  src: url('../assets//fonts/Nohemi-Thin-BF6438cc57e2011.woff') format('woff'),
+       url('../assets//fonts/Nohemi-Thin-BF6438cc5896c67.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-Thin-BF6438cc577ef3b.otf') format('otf');
+       font-weight: 100;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Nohemi-ExtraLight';
+  src: url('../assets//fonts/Nohemi-ExtraLight-BF6438cc581502c.woff') format('woff'),
+       url('../assets//fonts/Nohemi-ExtraLight-BF6438cc58a2634.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-ExtraLight-BF6438cc57e06d5.otf') format('otf');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Nohemi-Light';
+  src: url('../assets//fonts/Nohemi-Light-BF6438cc5702321.woff') format('woff'),
+       url('../assets//fonts/Nohemi-Light-BF6438cc5899919.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-Light-BF6438cc583f70b.otf') format('otf');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Nohemi-Regular';
+  src: url('../assets//fonts/Nohemi-Regular-BF6438cc579d934.woff') format('woff'),
+       url('../assets//fonts/Nohemi-Regular-BF6438cc4d0e493.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-Regular-BF6438cc58b98fc.otf') format('otf');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Nohemi-Medium';
+  src: url('../assets//fonts/Nohemi-Medium-BF6438cc57ddecd.woff') format('woff'),
+       url('../assets//fonts/Nohemi-Medium-BF6438cc5883899.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-Medium-BF6438cc581a509.otf') format('otf');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Nohemi-Bold';
+  src: url('../assets//fonts/Nohemi-Bold-BF6438cc577b524.woff') format('woff'),
+       url('../assets//fonts/Nohemi-Bold-BF6438cc587b5b5.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-Bold-BF6438cc5812315.otf') format('otf');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Nohemi-SemiBold';
+  src: url('../assets//fonts/Nohemi-SemiBold-BF6438cc57db2ff.woff') format('woff'),
+       url('../assets//fonts/Nohemi-SemiBold-BF6438cc588a48a.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-SemiBold-BF6438cc588b5e5.otf') format('otf');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Nohemi-ExtraBold';
+  src: url('../assets//fonts/Nohemi-ExtraBold-BF6438cc5761ae2.woff') format('woff'),
+       url('../assets//fonts/Nohemi-ExtraBold-BF6438cc5881baf.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-ExtraBold-BF6438cc58a4c3c.otf') format('otf');
+       font-weight: 800;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Nohemi-Black';
+  src: url('../assets//fonts/Nohemi-Black-BF6438cc565e67b.woff') format('woff'),
+       url('../assets//fonts/Nohemi-Black-BF6438cc58744d4.ttf') format('ttf'),
+       url('../assets//fonts/Nohemi-Black-BF6438cc5874bd2.otf') format('otf');
+       font-weight: 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+  
