@@ -8,30 +8,40 @@ let tl; // declare timeline variable
 function setCirclePosition() {
   const element = circleBg;
   if (element) {
-    const rect = element.getBoundingClientRect();
-    return {
-      left: rect.left + rect.width / 2,
-      top: rect.top + window.scrollY + rect.height / 2,
-    };
+    // Use requestAnimationFrame to ensure that the DOM has been updated
+    return new Promise(resolve => {
+      requestAnimationFrame(() => {
+        const rect = element.getBoundingClientRect();
+        resolve({
+          left: rect.left + rect.width / 2,
+          top: rect.top + window.scrollY + rect.height / 2,
+        });
+      });
+    });
   }
 }
 
 // Function to run the animation
-function runAnimation() {
+async function runAnimation() {
   // Destroy existing timeline if it exists
   if (tl) {
     tl.kill();
   }
+
+  // Get the initial circle position
+  const initialCirclePosition = await setCirclePosition();
+
+  console.log(initialCirclePosition)
 
   // Create a new timeline
   tl = gsap.timeline();
   tl.fromTo(
     heroBg,
     {
-      clipPath: `circle(0% at ${setCirclePosition().left}px ${setCirclePosition().top}px)`,
+      clipPath: `circle(0% at ${initialCirclePosition.left}px ${initialCirclePosition.top}px)`,
     },
     {
-      clipPath: `circle(200% at ${setCirclePosition().left}px ${setCirclePosition().top}px)`,
+      clipPath: `circle(200% at ${initialCirclePosition.left}px ${initialCirclePosition.top}px)`,
     },"a"
   ).to(
     circleBg,
@@ -47,22 +57,17 @@ function runAnimation() {
     start: "top top",
     end: "bottom 60%",
     scrub: 1,
-    animation: tl,
-    invalidateOnRefresh: true
+    animation: tl,  
   });
 }
 
 // Initial run of the animation
 runAnimation();
- setTimeout(() => {
-      runAnimation();
- }, 10);
- setTimeout(() => {
-      runAnimation();
- }, 15);
- setTimeout(() => {
-      runAnimation();
- }, 20);
+
+setTimeout(() => {
+    runAnimation();
+  }, 100);
+
 
 // Set listener for window resize
 window.addEventListener("resize", () => {
