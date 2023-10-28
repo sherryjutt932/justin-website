@@ -8,8 +8,8 @@
   --NohemiB: 'Nohemi-Bold';
   --NohemiSB: 'Nohemi-SemiBold';
   --NohemiBL: 'Nohemi-Black';
-  --Satoshi: 'Satoshi-Regular';
-  --SatoshiL: 'Satoshi-Light';
+  --Satoshi: 'Satoshi-Light';
+  --SatoshiR: 'Satoshi-Regular';
   --SatoshiM: 'Satoshi-Medium';
   --SatoshiB: 'Satoshi-Bold';
   --SatoshiBL: 'Satoshi-Black';
@@ -18,6 +18,7 @@
   --gray-79: #797979;
   --gray-97: #979797;
   --gray-c5: #C5C5C5;
+  --gray-cd: #CDCDCD;
   
   --main: #EAEAEA;
   --sec:  #FF2626;
@@ -44,6 +45,14 @@ body {
   font-family: var(--Satoshi);
 }
 
+.pattern{
+  background-color: var(--main);
+  background-image: radial-gradient(var(--dark) 4%, transparent 5%),
+    radial-gradient(var(--dark) 4%, transparent 5%);
+  background-size: 50px 50px;
+  background-position: 0 0, 50px 50px;
+  background-repeat: repeat;
+}
 
 html.lenis {
   height: auto;

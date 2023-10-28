@@ -64,7 +64,7 @@ async function runAnimation() {
   ScrollTrigger.create({
     trigger: heroSec,
     start: "top top",
-    end: "bottom+=2000",
+    end: "bottom+=500",
     onEnter: () => {
       console.log("Animation started");
       // Additional actions when the animation starts
@@ -84,3 +84,21 @@ setTimeout(() => {
       runAnimation();
     });
 }, 300);
+
+
+
+
+
+// ----------------------------Toggle Menu
+
+function toggleMenu() {
+  const element = document.getElementById("navigationSec");
+
+  if (element) {
+    const currentHeight = element.offsetHeight;
+    const isFullHeight = currentHeight === window.innerHeight;
+
+    // Toggle the height based on the current state
+    element.style.height = isFullHeight ? '0' : '100vh';
+  }
+}
