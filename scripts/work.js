@@ -6,22 +6,21 @@ const workSec = document.getElementById("workSec");
 //   const [currentSec, setCurrentSec] = useState(1);
 
   let updateTimer;
-  var tl = gsap.timeline();
+  var worktimeline = gsap.timeline();
 
   gsap.set(detailRef, {
     x: -detailRef.children[0].offsetWidth * (detailRef.childElementCount - 1),
   });
 
-  if (imgRef) {
+  if (true) {
     const imgArray = Array.from(imgRef.children);
 
     for (let index = 0; index < imgArray.length; index++) {
       const child = imgArray[index];
-      tl.to(
+      worktimeline.to(
         child,
         {
           yPercent: -100 * index,
-          ease: "none",
         },
         index
       );
@@ -30,11 +29,10 @@ const workSec = document.getElementById("workSec");
       for (let prevIndex = 0; prevIndex < index; prevIndex++) {
         const prevChild = imgArray[prevIndex];
 
-        tl.to(
+        worktimeline.to(
           prevChild,
           {
             yPercent: -100 * index,
-            ease: "none",
           },
           index
         );
@@ -42,16 +40,15 @@ const workSec = document.getElementById("workSec");
     }
   }
 
-  if (detailRef) {
+  if (true) {
     const detailArray = Array.from(detailRef.children);
 
     for (let index = 0; index < detailArray.length; index++) {
       const child = detailArray[index];
-      tl.to(
+      worktimeline.to(
         child,
         {
           xPercent: 100 * index,
-          ease: "none",
         },
         index
       );
@@ -60,12 +57,11 @@ const workSec = document.getElementById("workSec");
       for (let prevIndex = 0; prevIndex < index; prevIndex++) {
         const prevChild = detailArray[prevIndex];
 
-        tl.to(
+        worktimeline.to(
           prevChild,
           {
             xPercent: 100 * index,
             opacity: 0,
-            ease: "none",
           },
           index
         );
@@ -76,11 +72,10 @@ const workSec = document.getElementById("workSec");
   ScrollTrigger.create({
     trigger: workSec,
     start: "top top",
-    end: () => `+=${imgRef.offsetHeight*.7}`,
+    end: () => `+=${imgRef.offsetHeight}`,
     scrub: true,
     pin: true,
-    animation: tl,
-    invalidateOnRefresh: true,
+    animation: worktimeline,
     snap: {
       snapTo: 1 / (imgRef.childElementCount - 1),
     },
