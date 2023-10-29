@@ -26,7 +26,7 @@ function setTimeline(location) {
     timeline.fromTo(
       heroBg,
       {
-        clipPath: `circle(1% at ${location.left}px ${location.top}px)`,
+        clipPath: `circle(0% at ${location.left}px ${location.top}px)`,
       },
       {
         clipPath: `circle(200% at ${location.left}px ${location.top}px)`,
