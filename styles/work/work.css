@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  padding-top: 30px;
 }
 
 .work {
@@ -232,6 +233,9 @@
   }
 }
 @media (min-width: 1536px) {
+  #workSec {
+    padding-top: 40px;
+  }
   .work .topborder {
     width: calc(100% - 256px);
   }
@@ -244,7 +248,7 @@
     font-size: 20px;
   }
   .work .workGrid .workdetail #detailRef > div {
-    padding-top: 30px;
+    padding-top: 60px;
     width: 40vw;
     gap: 92px;
     padding-left: 120px !important;

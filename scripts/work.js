@@ -73,7 +73,7 @@ const workSec = document.getElementById("workSec");
   ScrollTrigger.create({
     trigger: workSec,
     start: "top top",
-    end: () => `+=${imgRef.offsetHeight}`,
+    end: () => `+=${workSec.offsetHeight*3}`,
     scrub: true,
     pin: true,
     animation: worktimeline,

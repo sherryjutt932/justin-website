@@ -1,10 +1,10 @@
 const boxesSec = document.getElementById("boxesSec");
-const boxesRef = document.getElementById("boxesRef2");
+const boxesRef2 = document.getElementById("boxesRef2");
 
 var boxesTimeline = gsap.timeline();
 
 if (true) {
-  const boxesArray = Array.from(boxesRef.children);
+  const boxesArray = Array.from(boxesRef2.children);
 
   for (let index = 0; index < boxesArray.length; index++) {
     gsap.set(boxesArray[index], {
@@ -31,6 +31,6 @@ ScrollTrigger.create({
   start: "top 60%",
   end: "top 30%",
   markers:true,
-  scrub: true,
+  scrub: 2,
   animation: boxesTimeline,
 });
