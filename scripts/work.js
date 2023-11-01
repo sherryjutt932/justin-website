@@ -37,6 +37,8 @@ const workSec = document.getElementById("workSec");
           index
         );
       }
+
+      worktimeline.addLabel(index+"abc")
     }
   }
 
@@ -73,12 +75,12 @@ const workSec = document.getElementById("workSec");
   ScrollTrigger.create({
     trigger: workSec,
     start: "top top",
-    end: () => `+=${workSec.offsetHeight*3}`,
+    end: () => `+=${workSec.offsetHeight}`,
     scrub: true,
     pin: true,
     animation: worktimeline,
     snap: {
-      snapTo: 1 / (imgRef.childElementCount - 1),
+      snapTo: "labels",
     },
     // onUpdate: (self) => {
     //   clearTimeout(updateTimer);

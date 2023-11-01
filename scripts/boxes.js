@@ -30,7 +30,6 @@ ScrollTrigger.create({
   trigger: boxesSec,
   start: "top 60%",
   end: "top 30%",
-  markers:true,
   scrub: 2,
   animation: boxesTimeline,
 });
