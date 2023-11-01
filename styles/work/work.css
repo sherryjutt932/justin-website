@@ -90,8 +90,10 @@
   padding: 20px 0px;
   padding-left: 16px;
   padding-right: 32px;
-  border-bottom: 1px solid var(--gray-c5);
   border-top: 1px solid var(--gray-c5);
+}
+.work .workGrid .workdetail #detailRef > div ul li:last-child {
+  border-bottom: 1px solid var(--gray-c5);
 }
 .work .workGrid .workdetail #detailRef > div ul li span {
   position: relative;
@@ -106,6 +108,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: var(--SatoshiR);
 }
 .work .workGrid .stickybutton > a {
   cursor: pointer;
@@ -120,6 +123,8 @@
   border-radius: 50%;
 }
 .work .workGrid .stickybutton > a #magneticBtn > div {
+  overflow: hidden;
+  position: relative;
   width: 96px;
   aspect-ratio: 1/1;
   background-color: var(--sec);
@@ -130,6 +135,19 @@
   font-size: 16px;
   align-items: center;
   color: var(--light);
+  text-align: center;
+}
+.work .workGrid .stickybutton > a #magneticBtn > div .Btnfirst {
+  width: 96px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.work .workGrid .stickybutton > a #magneticBtn > div .Btnsecond {
+  width: 96px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100%;
 }
 .work .workGrid .workimage {
   grid-row: span 3;
@@ -152,7 +170,7 @@
   padding-bottom: 40px;
 }
 .work .workGrid .workimage #imgRef > div img {
-  aspect-ratio: 1088/712;
+  aspect-ratio: 1088/656;
   width: 85%;
 }
 
@@ -182,7 +200,6 @@
     font-size: 16px;
   }
   .work .workGrid .workdetail #detailRef > div ul li {
-    padding: 20px 0px;
     padding-left: 16px;
     padding-right: 32px;
   }
@@ -212,5 +229,61 @@
     width: 815px;
     min-height: 495px;
     height: 495px;
+  }
+}
+@media (min-width: 1536px) {
+  .work .topborder {
+    width: calc(100% - 256px);
+  }
+  .work .workhead {
+    font-size: 20px;
+    padding-left: 120px !important;
+    padding-right: 120px !important;
+  }
+  .work .workGrid {
+    font-size: 20px;
+  }
+  .work .workGrid .workdetail #detailRef > div {
+    padding-top: 30px;
+    width: 40vw;
+    gap: 92px;
+    padding-left: 120px !important;
+    justify-content: center;
+  }
+  .work .workGrid .workdetail #detailRef > div h2 {
+    font-size: 80px;
+  }
+  .work .workGrid .workdetail #detailRef > div ul {
+    font-size: 22px;
+  }
+  .work .workGrid .workdetail #detailRef > div ul li {
+    padding: 30px 0px;
+    padding-left: 16px;
+    padding-right: 32px;
+  }
+  .work .workGrid .workdetail #detailRef > div ul li span {
+    left: -12px;
+  }
+  .work .workGrid .stickybutton {
+    padding-bottom: 30px;
+    padding-left: 120px !important;
+    justify-content: start;
+  }
+  .work .workGrid .stickybutton > a #magneticBtn {
+    margin: -30px;
+    padding: 30px;
+  }
+  .work .workGrid .stickybutton > a #magneticBtn > div {
+    width: 132px;
+    font-size: 22px;
+  }
+  .work .workGrid .workimage #imgRef > div {
+    padding: 30px 0px;
+    padding-right: 120px !important;
+    padding-bottom: 120px;
+  }
+  .work .workGrid .workimage #imgRef > div img {
+    width: 1088px;
+    height: 656px;
   }
 }/*# sourceMappingURL=work.css.map */

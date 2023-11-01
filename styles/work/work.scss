@@ -98,8 +98,12 @@
                             padding: 20px 0px;
                             padding-left: 16px;
                             padding-right: 32px;
-                            border-bottom: 1px solid var(--gray-c5);
                             border-top: 1px solid var(--gray-c5);
+                            
+                            &:last-child{
+                                border-bottom: 1px solid var(--gray-c5);
+
+                            }
 
                             span{
                                 position: relative;
@@ -115,13 +119,13 @@
             grid-row: span 1 ;
             grid-column: span 3 ;
             padding-left: 64px;
-            // 2xl:pl-32
             padding-bottom: 30;
             grid-row-start: 3;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            // m14:justify-start
+            font-family: var(--SatoshiR);
+
 
             &>a{
                 cursor: pointer;
@@ -135,6 +139,8 @@
                     border-radius: 50%;
 
                     &>div{
+                        overflow: hidden;
+                        position: relative;
                             width: 96px;
                             aspect-ratio: 1/1;
                             background-color: var(--sec);
@@ -145,7 +151,19 @@
                             font-size: 16px;
                             align-items: center;
                             color: var(--light);
-                            // 2xl:w-32 2xl:text-[22px] 
+                            text-align: center;
+                            
+                            .Btnfirst {
+                                width: 96px;
+                                height: fit-content;
+                            }
+                            .Btnsecond {
+                                width: 96px;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left:100%;
+                            }
                   }
                   
             }
@@ -165,19 +183,16 @@
 
                 &>div{
                     padding: 30 0px;
-                    // 2xl:pr-32 
                     height: 100%;
                     display: flex;
                     justify-content: end;
                     align-items: end;
                     padding-right: 64px;
                     padding-bottom: 40px;
-                    // 2xl:pb-32 m14:pb-16
 
                     img{
-                        aspect-ratio: 1088/712;
+                        aspect-ratio: 1088/656;
                         width: 85%;
-                        // m14:w-[815px] 2xl:w-[1088px]
                     }
                 }
             }
@@ -223,7 +238,6 @@
                         // 2xl:text-[22px]
 
                         li{
-                            padding: 20px 0px;
                             padding-left: 16px;
                             padding-right: 32px;
                            
@@ -237,7 +251,6 @@
         }
 
         .stickybutton{
-            // 2xl:pl-32
             padding-bottom: 30px;
             padding-left: 100px !important;
             justify-content: start;
@@ -251,7 +264,6 @@
                     &>div{
                             width: 96px;
                             font-size: 16px;
-                            // 2xl:w-32 2xl:text-[22px] 
                   }
                   
             }
@@ -282,5 +294,84 @@
 }
 
 @media (min-width: 1536px) {
+   .work{
+    .topborder{
+        width: calc(100% - 256px);
+    }
 
+    .workhead{
+        font-size: 20px;
+        padding-left: 120px !important;
+        padding-right: 120px !important;
+
+    }
+
+    .workGrid{
+        font-size: 20px;
+        .workdetail{
+            #detailRef{
+                &>div{
+                    padding-top: 30px;
+                    width: 40vw;
+                    gap: 92px;
+                    padding-left: 120px !important;
+                    justify-content: center;
+
+                    h2{
+                        font-size: 80px;
+                    }
+
+                    ul{
+                        font-size: 22px;
+
+                        li{
+                            padding: 30px 0px;
+                            padding-left: 16px;
+                            padding-right: 32px;
+                           
+                            span{
+                                left: -12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .stickybutton{
+            padding-bottom: 30px;
+            padding-left: 120px !important;
+            justify-content: start;
+
+            &>a{
+             
+                #magneticBtn {
+                    margin: -30px;
+                    padding: 30px;
+
+                    &>div{
+                            width: 132px;
+                            font-size: 22px;
+                  }
+                  
+            }
+            }
+        }
+
+        .workimage{
+            #imgRef{
+                &>div{
+                    padding: 30px 0px;
+                    padding-right: 120px !important;
+                    padding-bottom: 120px;
+
+                    img{
+                        width: 1088px;
+                        height: 656px;
+                    }
+                }
+            }
+        }
+    }
+   }
 }

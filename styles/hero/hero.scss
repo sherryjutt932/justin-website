@@ -234,15 +234,14 @@
         &>div {
             height: fit-content;
             width: fit-content;
-            padding-right: calc(62px + 20px);
-            padding-left: calc(20px);
+            padding-right: calc(62px + 40px);
+            padding-left: calc(40px);
             padding-top: 12px;
             position: relative;
 
             &::after {
                 content: "*";
-                width: 52px;
-                height: 52px;
+                height: 82px;
                 position: absolute;
                 right: 0px;
                 top: 50%;
@@ -641,8 +640,8 @@ nav {
 
     .head {
         .headCon {
-            font-size: 140px;
-            line-height: 165px;
+            font-size: 100px;
+            line-height: 115px;
 
             .circle {
                 width: 80px;

@@ -91,11 +91,10 @@
 
 @media (min-width: 1390px) {
   #aboutRef {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
   .aboutdetail {
-    flex-direction: column;
     gap: 0px;
   }
   .aboutdetail > div:nth-child(2) {
@@ -107,8 +106,8 @@
     padding: 64px 120px;
   }
   #aboutRef {
-    margin-top: 120px;
-    margin-bottom: 60px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     font-size: 80px;
   }
   #aboutRef .scrollerWrapper {

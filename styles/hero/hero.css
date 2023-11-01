@@ -205,15 +205,14 @@
   height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding-right: 82px;
-  padding-left: 20px;
+  padding-right: 102px;
+  padding-left: 40px;
   padding-top: 12px;
   position: relative;
 }
 #marqueeWrapper #marquee > div::after {
   content: "*";
-  width: 52px;
-  height: 52px;
+  height: 82px;
   position: absolute;
   right: 0px;
   top: 50%;
@@ -521,8 +520,8 @@ nav .line {
     height: 30px;
   }
   .head .headCon {
-    font-size: 140px;
-    line-height: 165px;
+    font-size: 100px;
+    line-height: 115px;
   }
   .head .headCon .circle {
     width: 80px;

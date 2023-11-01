@@ -11,6 +11,7 @@
   <link href="./styles/skills/skills.css" rel="stylesheet" />
   <link href="./styles/hero/hero.css" rel="stylesheet" />
   <link href="./styles/work/work.css" rel="stylesheet" />
+  <link href="./styles/boxes/boxes.css" rel="stylesheet" />
 
   <!-- gsap -->
   <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
@@ -528,7 +529,18 @@
         <div class="stickybutton">
           <a href="/">
             <div id="magneticBtn">
-              <div class="my-button">View more</div>
+              <div class="my-button">
+
+                <div>
+                  <div id="Btnfirst" class="Btnfirst">
+                    View more
+                  </div>
+                  <div id="Btnsecond" class="Btnsecond">
+                    View more
+                  </div>
+                </div>
+
+              </div>
             </div>
           </a>
         </div>
@@ -555,6 +567,64 @@
     </div>
   </section>
 
+  <section id="boxesSec">
+    <div id="boxesRef">
+      <div class="boxitem">
+        <div>
+          <span></span>
+          01
+        </div>
+
+        <div>
+          <div>
+            <img src="./assets/icons/demo.svg" alt="" />
+          </div>
+          <div>Book a Demo</div>
+        </div>
+      </div>
+      <div class="boxitem">
+        <div>
+          <span></span>
+          02
+        </div>
+
+        <div>
+          <div>
+            <img src="./assets/icons/request.svg" alt="" />
+          </div>
+          <div>Subscribe & Request</div>
+        </div>
+      </div>
+      <div class="boxitem">
+        <div>
+          <span></span>
+          03
+        </div>
+
+        <div>
+          <div>
+            <img src="./assets/icons/designs.svg" alt="" />
+          </div>
+          <div>Get Your Designs</div>
+        </div>
+      </div>
+      <div class="boxitem">
+        <div>
+          <span></span>
+          04
+        </div>
+
+        <div>
+          <div>
+            <img src="./assets/icons/revisions.svg" alt="" />
+          </div>
+          <div>Unlimited Revisions</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
   <section style="height: 100vh;" class="pattern"></section>
 
   <script>
@@ -579,6 +649,7 @@
         "./scripts/aboutus.js",
         "./scripts/work.js",
         "./scripts/stickyButton.js",
+        "./scripts/boxes.js",
       ];
 
       // Load each script one by one
@@ -603,6 +674,8 @@
   <script src="./scripts/aboutus.js"></script>
   <script src="./scripts/stickyButton.js"></script>
   <script src="./scripts/work.js"></script> -->
+
+  <!-- <script src="./scripts/boxes.js"></script> -->
 </body>
 
 </html>

@@ -62,6 +62,7 @@ const workSec = document.getElementById("workSec");
           {
             xPercent: 100 * index,
             opacity: 0,
+            duration:.2,
           },
           index
         );
@@ -91,3 +92,4 @@ const workSec = document.getElementById("workSec");
     //   }, 20);
     // },
   });
+
