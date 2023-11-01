@@ -160,6 +160,7 @@
   width: 100%;
   height: 100%;
   z-index: 10;
+  padding-bottom: 20px;
 }
 .work .workGrid .workimage #imgRef > div {
   padding: 30 0px;
@@ -188,7 +189,7 @@
     font-size: 20px;
   }
   .work .workGrid .workdetail #detailRef > div {
-    padding-top: 30px;
+    padding-top: 40px;
     width: 40vw;
     gap: 64px;
     padding-left: 100px !important;
@@ -223,7 +224,7 @@
   .work .workGrid .workimage #imgRef > div {
     padding: 30px 0px;
     padding-right: 100px !important;
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
   }
   .work .workGrid .workimage #imgRef > div img {
     min-width: 815px;
@@ -281,10 +282,16 @@
     width: 132px;
     font-size: 22px;
   }
+  .work .workGrid .stickybutton > a #magneticBtn > div .Btnfirst {
+    width: 132px;
+  }
+  .work .workGrid .stickybutton > a #magneticBtn > div .Btnsecond {
+    width: 132px;
+  }
   .work .workGrid .workimage #imgRef > div {
     padding: 30px 0px;
     padding-right: 120px !important;
-    padding-bottom: 120px;
+    padding-bottom: 120px !important;
   }
   .work .workGrid .workimage #imgRef > div img {
     width: 1088px;

@@ -82,16 +82,20 @@ const workSec = document.getElementById("workSec");
     snap: {
       snapTo: "labels",
     },
-    // onUpdate: (self) => {
-    //   clearTimeout(updateTimer);
-
-    //   updateTimer = setTimeout(() => {
-    //     const progress = self.progress;
-    //     const totalItems = imgRef.childNodes.length;
-    //     const currentIndex = Math.round(progress * (totalItems - 1)) + 1;
-
-    //     setCurrentSec(currentIndex);
-    //   }, 20);
-    // },
+    onUpdate: (self) => {
+      updateTimer = setTimeout(() => {
+        const progress = self.progress;
+  
+        // Convert imgRef to an array if it's not already
+        const imgArray = Array.from(imgRef.children);
+  
+        const totalItems = imgArray.length;
+        const currentIndex = Math.round(progress * (totalItems - 1)) + 1;
+  
+        document.getElementById("workcounter").innerHTML = "0" + currentIndex;
+        console.log(currentIndex);
+      }, 20);
+    },
   });
+  
 

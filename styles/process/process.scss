@@ -1,0 +1,277 @@
+
+#processSec {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: var(--light);
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    
+    .proc-marquee-wrap {
+        width: 100%;
+        overflow: hidden;
+        padding: 24px 0px;
+        // m14py-10
+    
+        .proc-marquee-con{
+            width: 100%;
+            color: var(--light);
+            line-height: normal;
+            vertical-align: bottom;
+            font-size: 36px;
+            // m14:text-[54px]
+            display: flex;
+            flex-wrap: nowrap;
+            font-family: var(--Nohemi);
+    
+            #proc-marquee{
+                flex:1 1 0%;
+                flex-shrink: 0;
+                min-width: fit-content;
+                width: fit-content;
+                height: fit-content;
+                position: relative;
+                white-space: nowrap;
+    
+                #proc-marquee-first{
+                    width: fit-content;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    height: fit-content;
+                    padding-top: 12px;
+                }
+                #proc-marquee-second,
+                    #proc-marquee-third{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    height: fit-content;
+                    position: absolute;
+                    top: 0%;
+                    padding-top: 12px;
+                }
+    
+                img.arrowRef{
+                    margin: 0px 48px;
+                }
+            }
+        }
+    }
+
+    .proc-cards-wrap{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &>div{
+            display: flex;
+            width: 75%;
+            justify-content: center;
+
+            .card-icon{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding-right: 100px;
+                img{
+                    width: 128px;
+                    // width: 190px;
+                }
+                flex-grow: 1;
+            }
+
+            .card-grid{
+                flex-grow: 1;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                
+                gap: 32px 64px;
+                // m14:gap-y-16 m14:gap-x-32
+                // gap: 64px 128px;
+                align-content: end;
+                
+                .process-card{
+                    aspect-ratio: 1.75;
+                    padding: 28px 24px ;
+                    // max-height: 250px;
+                    max-height: 186px;
+                    height: 100%;
+                    grid-column: span 1 / span 1;
+                    grid-row: span 1 / span 1;
+                    position: relative;
+
+                    &>div:nth-child(1){
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        width:fit-content;
+                        height: fit-content;
+                        z-index: 10;
+
+                        &>span{
+                            border: 1px solid var(--light);
+                            color: var(--light);
+                            aspect-ratio: 1/1;
+                            font-size: 12px;
+                            height: 20px;
+                            // font-size: 20px;
+                            border-radius: 100px;
+                            margin-right: 8px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            line-height: normal;
+                            transition: all 500ms ease;
+                        }
+                    }
+                    &>div:nth-child(2){
+                        position: relative;
+                        z-index: 10;
+
+                        h1{
+                            text-transform: capitalize;
+                            color: var(--light);
+                            font-family: var(--SatoshiM);
+                            font-size: 18px;
+                            line-height: 14px;
+                            // 2xl:text-[24px]
+                            padding-bottom: 12px;
+                            transition: all 500ms ease;
+                        }
+
+                        p{
+                            color: var(--gray-97);
+                            font-family: var(--Satoshi);
+                            font-size: 14px;
+                            line-height: 20px;
+                            // 2xl:text-[18px] 2xl:leading-[28px]
+                            letter-spacing: -0.3px;
+                            width: 90%;
+                            transition: all 500ms ease;
+                        }
+                    }
+                    &>div:nth-child(3){
+                        transition: all 500ms ease;
+                        position: absolute;
+                        height: 0%;
+                        width: 100%;
+                        background-color: var(--light);
+                        left: 0;
+                        bottom: 0;
+
+                    }
+
+                    &.active>div:nth-child(1){
+                        &>span{
+                            border: 1px solid var(--dark);
+                            color: var(--dark);
+                        }
+                    }
+                    &.active>div:nth-child(2){
+                        h1{
+                            color: var(--dark);
+                        }
+
+                        p{
+                            color: var(--dark);
+                        }
+                    }
+                    &.active>div:nth-child(3){
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1390px){
+    #processSec {
+        .proc-marquee-wrap {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            
+            .proc-marquee-con{
+                font-family: var(--NohemiL);
+                font-size: 40px;
+            }
+        }
+    
+        .proc-cards-wrap{
+            &>div{
+                .card-grid{
+                    gap: 64px 120px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1536px){
+    #processSec {
+        .proc-marquee-wrap {
+            .proc-marquee-con{
+                font-size: 36px;
+                #proc-marquee{
+        
+                    #proc-marquee-first{
+                        padding-top: 12px;
+                    }
+                    #proc-marquee-second,
+                        #proc-marquee-third{
+                        padding-top: 12px;
+                    }
+        
+                    img.arrowRef{
+                        margin: 0px 48px;
+                    }
+                }
+            }
+        }
+    
+        .proc-cards-wrap{
+            &>div{
+                width: 75%;
+                .card-icon{
+                    img{
+                        width: 190px;
+                    }
+
+                    padding-right: 150px;
+                }
+    
+                .card-grid{
+                    .process-card{
+                        padding: 28px 24px ;
+                        max-height: 250px;
+                        &>div:nth-child(1){
+                            &>span{
+                                font-size: 20px;
+                                height: 28px;
+                                margin-right: 8px;
+                            }
+                        }
+                        &>div:nth-child(2){
+    
+                            h1{
+                                font-size: 24px;
+                                line-height: normal;
+                                padding-bottom: 12px;
+                            }
+    
+                            p{
+                                font-size: 18px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

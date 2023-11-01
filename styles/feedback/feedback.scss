@@ -1,0 +1,233 @@
+#feedbackSec {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 100px;
+    
+    &>div:nth-child(1){
+        font-size: 16px;
+        line-height: 21px;
+        width: 100%;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--gray-c5);
+        
+        span{
+            display: inline-block;
+            border-radius: 20px;
+            width: 8px;
+            height: 8px;
+            background-color: black;
+            margin-right: 8px;
+        }
+    }
+    
+    .feedbackCon{
+        display: flex;
+        justify-content: space-between;
+        .feedbackdetail{
+            height: 90%;
+            width: 60%;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            
+            &>div:nth-child(1){
+                display: flex;
+                gap: 80px;
+                flex-direction: column;
+                max-width: 742px;
+                flex-shrink: 0;
+                width: 100%;
+    
+                .carousel_track{
+                    display: flex;
+                    overflow-x: hidden;
+                    p{
+                    transform: translateX(-300%);
+                        flex-shrink: 0;
+                        height: 100%;
+                        width: 100%;
+                        font-size: 26px;
+                        line-height: 35px;
+                        font-weight: 400 !important;
+                    }
+    
+                }
+                
+    
+                &>div:nth-child(2){
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                   
+                    .tablet{
+                        min-width: 240px;
+                        border: 1px dashed var(--dark);
+                        border-radius: 100px;
+                        padding: 20px;
+                        padding-right: 30px;
+                        height: 70px;
+                        display: flex;
+                        align-items: center;
+                        background-color: var(--light);
+                        span{
+                            display: inline-block;
+                            width: 30px;
+                        height: 30px;
+                        border-radius: 100px;
+                        background-color: var(--dark);
+                        color: var(--light);
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 30px;
+                        margin-right:30px;
+    
+                        }
+    
+                        h2{
+                            font-family: var(--SatoshiM) !important;
+                            font-size: 18px;
+                        line-height: normal;
+                        display: none;
+                        }
+                        h2.active{
+                            display: block;
+                             }
+                        
+                        p{
+                            font-weight: 400 !important;
+                            font-size: 18px;
+                        line-height: normal;
+                        display: none;
+                        }
+                        p.active{
+                            display: block;
+                             }
+                    }
+    
+                    button{
+                        cursor: pointer;
+                        background-color: var(--dark);
+                        color: var(--light);
+                        width: 37px;
+                        height: 37px;
+                        border-radius: 100px;
+                        text-align: center;
+                        outline: none;
+                        border: none;
+    
+                        &:nth-child(2){
+                            background-color: var(--gray-d4) !important;
+                        }
+    
+                    }
+                }
+            }
+        }
+    
+        .feebackimg{
+            position: relative;
+    
+            #rotate-steric{
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                animation: rotate 30s infinite forwards;
+            }
+        }
+    }
+}
+
+
+@keyframes rotate {
+    0% {
+        transform:  translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform:  translateX(-50%) rotate(360deg);
+    }
+}
+
+@media (min-width: 1536px){
+    #feedbackSec {
+        padding: 60px 120px;
+
+        &>div:nth-child(1){
+            font-size: 20px;
+            line-height: 28px;
+            span{
+                width: 10px;
+                height: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        .feedbackCon{
+            .feedbackdetail{
+                height: 90%;
+                width: 60%;
+                padding-top: 100px;
+                &>div:nth-child(1){
+                    gap: 65px;
+                    max-width: 967px;
+        
+                    .carousel_track{
+                        p{
+                            font-size: 34px;
+                            line-height: 50px;
+                        }
+        
+                    }
+                    
+        
+                    &>div:nth-child(2){
+                        gap: 20px;
+                       
+                        .tablet{
+                            min-width: 240px;
+                            padding: 25px;
+                            padding-right: 30px;
+                            height: 93px;
+                            span{
+                                width: 38px;
+                            height: 38px;
+                            font-size: 18px;
+                            line-height: 38px;
+                            margin-right:38px;
+        
+                            }
+        
+                            h2{
+                                font-size: 24px;
+                            }
+                          
+                            p{
+                                font-size: 24px;
+                            }
+                        
+                        }
+        
+                        button{
+                            width: 50px;
+                            height: 50px;
+        
+                        }
+                    }
+                }
+            }
+        
+            .feebackimg{
+                #biglogo{
+                    height: 660px;
+                }
+                #rotate-steric{
+                    height: 90px;
+                    top: 50px;
+                }
+            }
+        }
+    }
+}

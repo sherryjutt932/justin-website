@@ -12,6 +12,10 @@
   <link href="./styles/hero/hero.css" rel="stylesheet" />
   <link href="./styles/work/work.css" rel="stylesheet" />
   <link href="./styles/boxes/boxes.css" rel="stylesheet" />
+  <link href="./styles/process/process.css" rel="stylesheet" />
+  <link href="./styles/perks/perks.css" rel="stylesheet" />
+  <link href="./styles/feedback/feedback.css" rel="stylesheet" />
+  <link href="./styles/ideas/ideas.css" rel="stylesheet" />
 
   <!-- gsap -->
   <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
@@ -138,7 +142,6 @@
       </header>
     </div>
   </section>
-
 
   <section id="heroSec">
     <div id="hero">
@@ -385,7 +388,6 @@
     </div>
   </section>
 
-
   <section id="aboutSec">
     <div class="aboutus">
 
@@ -460,7 +462,7 @@
       <div class="workhead">
         <div><span class="dot"></span>
           Recent Work</div>
-        <div>
+        <div id="workcounter">
           01
         </div>
       </div>
@@ -625,7 +627,345 @@
 
   </section>
 
-  <section style="height: 100vh;" class="pattern"></section>
+  <section id="processSec">
+    <div class="proc-marquee-wrap">
+      <div class="proc-marquee-con">
+        <div id="proc-marquee">
+          <div id="proc-marquee-first">
+            <div>DISCOVER MORE</div>
+            <img class="arrowRef" src="assets/icons/longArrowRight.svg" alt="" />
+            <div>OUR PROCESS</div>
+            <img class="arrowRef" src="assets/icons/longArrowRight.svg" alt="" />
+          </div>
+          <div id="proc-marquee-second">
+            <div>DISCOVER MORE</div>
+            <img class="arrowRef" src="assets/icons/longArrowRight.svg" alt="" />
+            <div>OUR PROCESS</div>
+            <img class="arrowRef" src="assets/icons/longArrowRight.svg" alt="" />
+          </div>
+          <div id="proc-marquee-third">
+            <div>DISCOVER MORE</div>
+            <img class="arrowRef" src="assets/icons/longArrowRight.svg" alt="" />
+            <div>OUR PROCESS</div>
+            <img class="arrowRef" src="assets/icons/longArrowRight.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proc-cards-wrap">
+
+      <div>
+
+        <div class="card-icon">
+          <img id="process-icon" src="./assets/icons/Process/discovery.svg" alt="" />
+        </div>
+
+        <div class="card-grid">
+
+          <div onClick="setisActive(1)" onMouseEnter="setisActive(1)" class="process-card active" data-index="1">
+
+            <div>
+              <span>
+                1
+              </span>
+            </div>
+
+            <div class="relative z-10">
+              <h1>
+                Discovery
+              </h1>
+              <p>
+                We start every new client interaction with an in-depth discovery call where we get to know each other,
+                discuss your current and future objectives, and recommend the best course of action.
+              </p>
+            </div>
+
+            <div>
+            </div>
+
+          </div>
+
+          <div onClick="setisActive(2)" onMouseEnter="setisActive(2)" class="process-card" data-index="2">
+
+            <div>
+              <span>
+                2
+              </span>
+            </div>
+
+            <div class="relative z-10">
+              <h1>
+                Strategy
+              </h1>
+              <p>
+                Every end-to-end project of ours begins with a bespoke pre-build strategy. From brand ID consultation to
+                in-depth cycle reviews, we're here to set the stage for success.
+              </p>
+            </div>
+
+            <div>
+            </div>
+
+          </div>
+
+          <div onClick="setisActive(3)" onMouseEnter="setisActive(3)" class="process-card" data-index="3">
+
+            <div>
+              <span>
+                3
+              </span>
+            </div>
+
+            <div class="relative z-10">
+              <h1>
+                Design
+              </h1>
+              <p>
+                After we have a comprehensive understanding of your brand, we'll be ready to move onto design. Each page
+                or will be designed, reviewed, and given your stamp of approval.
+              </p>
+            </div>
+
+            <div>
+            </div>
+
+          </div>
+
+          <div onClick="setisActive(4)" onMouseEnter="setisActive(4)" class="process-card" data-index="4">
+
+            <div>
+              <span>
+                4
+              </span>
+            </div>
+
+            <div>
+              <h1>
+                Development
+              </h1>
+              <p>
+                Whether we've just finished designing your new site or you're handing off finished designs for us to
+                develop in Webflow, we're here to apply our trusted development process to your project.
+              </p>
+            </div>
+
+            <div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="perksSec">
+
+    <div id="perksHead">
+      <div>
+        <span></span> Membership Benefits
+      </div>
+      <div>
+        <h1>
+          Perks you'll love, and more.
+        </h1>
+        <p>
+          You'll receive all the designs you need, delivered fast and for one fixed price. No limits on scope, just
+          high-quality work backed by unlimited edits. Yep, it's genuinely as good as it sounds.
+        </p>
+      </div>
+    </div>
+
+    <div id="perksRef" class="perksRow">
+      <div class="perkCard">
+        <img src="./assets/icons/perks/designboard.svg" alt="" />
+        <h1>Design Board</h1>
+        <p>All your designs requests in one place. Backlog, in-progress, and approved work.</p>
+      </div>
+
+      <div class="perkCard">
+        <img src="./assets/icons/perks/fastdelivery.svg" alt="" />
+        <h1>Fast Delivery</h1>
+        <p>Designs delivered one at a time, and in just a few business days.</p>
+      </div>
+      <div class="perkCard">
+        <img src="./assets/icons/perks/scalableflexible.svg" alt="" />
+        <h1>Scalable & Flexible</h1>
+        <p>We scale with your business and design needs. Pause or cancel at any time.</p>
+      </div>
+    </div>
+
+    <div id="perksRef2" class="perksRow">
+      <div class="perkCard">
+        <img src="./assets/icons/perks/completelyasync.svg" alt="" />
+        <h1>Completely Async</h1>
+        <p>We operate autonomously, but are always available via your design board.</p>
+      </div>
+
+      <div class="perkCard">
+        <img src="./assets/icons/perks/premiumquality.svg" alt="" />
+        <h1>Premium Quality</h1>
+        <p>Each of your designs are made unique to you, and aimed to wow.</p>
+      </div>
+      <div class="perkCard">
+        <img src="./assets/icons/perks/fixedmonthlysalary.svg" alt="" />
+        <h1>Fixed Monthly Cost</h1>
+        <p>No surprises or hidden costs, ever. Pay the same fixed price, monthly.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="feedbackSec">
+    <div>
+      <div><span></span> Client Feedback</div>
+    </div>
+
+    <div class="feedbackCon">
+      <div class="feedbackdetail">
+        <div>
+          <div id="feedbackP" class="carousel_track">
+            <p class="carousel">Our team consistently achieves defined objectives through a strong dedication to
+              success,employing a blend of creativity, skillfulness, and a robust work.</p>
+            <p class="carousel">Creativity is the cornerstone of our problem-solving strategy. We approach each
+              challenge with inventive thinking, turning obstacles into opportunities. Through collaborative
+              skillfulness.</p>
+            <p class="carousel">Punctuality and reliability are embedded in our team's ethos. We adhere to deadlines
+              with precision, demonstrating a commitment. </p>
+            <p class="carousel is-selected">They consistently set and achieve clear goals with a strong work
+              ethic,creativity, and skillfulness, while meeting deadlines and effectively solving problems.
+            </p>
+            <p class="carousel">Collaboration defines our team's skillfulness. Recognizing the power of combined effort,
+              we actively foster a collaborative environment.</p>
+            <p class="carousel">Our team consistently achieves defined objectives through a strong dedication to
+              success,employing a blend of creativity, skillfulness, and a robust work.</p>
+          </div>
+
+          <div>
+            <div class="tablet">
+              <div><span id="carouselNumber" data-index="0">01</span></div>
+              <div>
+                <h2 data-index="0" class="carouselname active">Hatim</h2>
+                <h2 data-index="1" class="carouselname">Morphine</h2>
+                <h2 data-index="2" class="carouselname">John</h2>
+                <h2 data-index="3" class="carouselname">Thomas</h2>
+                <h2 data-index="4" class="carouselname">Elbert</h2>
+                <p data-index="0" class="carouselrole active">Founder-Aqsit</p>
+                <p data-index="1" class="carouselrole">CEO-Aqsit</p>
+                <p data-index="2" class="carouselrole">COO-Aqsit</p>
+                <p data-index="3" class="carouselrole">HR-Aqsit</p>
+                <p data-index="4" class="carouselrole">Dev-Aqsit</p>
+              </div>
+            </div>
+            <button onclick="prevButtonClick()">
+              <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
+                  stroke-width="1.6" />
+              </svg>
+
+            </button>
+            <button onclick="nextButtonClick()">
+              <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
+                  stroke-width="1.6" />
+              </svg>
+
+            </button>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class="feebackimg">
+        <img id="biglogo" src="./assets/icons/logoBig.svg" alt="">
+        <img src="./assets/icons/steric-med.svg" id="rotate-steric" alt="">
+      </div>
+    </div>
+
+  </section>
+
+  <section id="ideasSec">
+
+    <div id="ideasCon">
+      <h1>Let’s turn your<br>
+        idea into reality</h1>
+
+
+      <div class="ideasproducts">
+        <p>Designed Products across various Industries Fintech • Healthcare • SASS • E-commerce • Retail • Realestate
+        </p>
+
+        <div class="tabsflex">
+          <a href="/">Work <img src="./assets/icons/link.svg" alt=""></a>
+          <a href="/">Process <img src="./assets/icons/link.svg" alt=""></a>
+          <a href="/">About <img src="./assets/icons/link.svg" alt=""></a>
+          <a href="/">Plans <img src="./assets/icons/link.svg" alt=""></a>
+        </div>
+
+        <div class="tabsflex">
+          <a href="/">Contact Us <img src="./assets/icons/link.svg" alt=""></a>
+          <a href="/">Services <img src="./assets/icons/link.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="idea-marquee-wrap">
+      <div class="idea-marquee-con">
+        <div id="idea-marquee">
+          <div id="idea-marquee-first">
+            <div>JUST GREAT WORK</div>
+            <img src="assets/icons/steric-med.svg" alt="" />
+            <div>JUST GREAT WORK</div>
+            <img src="assets/icons/steric-med.svg" alt="" />
+          </div>
+          <div id="idea-marquee-second">
+            <div>JUST GREAT WORK</div>
+            <img src="assets/icons/steric-med.svg" alt="" />
+            <div>JUST GREAT WORK</div>
+            <img src="assets/icons/steric-med.svg" alt="" />
+          </div>
+          <div id="idea-marquee-third">
+            <div>JUST GREAT WORK</div>
+            <img src="assets/icons/steric-med.svg" alt="" />
+            <div>JUST GREAT WORK</div>
+            <img src="assets/icons/steric-med.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="footer">
+    <div class="footerCon">
+      <div>
+        <h1>Reach Us</h1>
+        <p>🇺🇸 +1 (750) 996-4899</p>
+        <p>🇵🇰 +92 8754 3864</p>
+        <p>business@webpioneers.com</p>
+      </div>
+      <div>
+        <h1>Social</h1>
+        <a>linkedin <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a>Instagram <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a>Dribble <img src="./assets/icons/linkb.svg" alt=""></a>
+      </div>
+      <div>
+        <h1>Quick</h1>
+        <a>Pricing <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a>About <img src="./assets/icons/linkb.svg" alt=""></a>
+          <a>Team <img src="./assets/icons/linkb.svg" alt=""></a>
+      </div>
+      <div>
+        <h1>Legal</h1>
+        <a>Privacy <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a>Terms <img src="./assets/icons/linkb.svg" alt=""></a>
+      </div>
+    </div>
+  </section>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -650,6 +990,10 @@
         "./scripts/work.js",
         "./scripts/stickyButton.js",
         "./scripts/boxes.js",
+        "./scripts/process.js",
+        "./scripts/perks.js",
+        "./scripts/feedback.js",
+        "./scripts/ideas.js",
       ];
 
       // Load each script one by one
@@ -667,15 +1011,8 @@
     });
 
   </script>
-  <!-- <script src="./scripts/lenis.js"></script>
-  <script src="./scripts/hero.js"></script>
-  <script src="./scripts/marquee.js"></script>
-  <script src="./scripts/skills.js"></script>
-  <script src="./scripts/aboutus.js"></script>
-  <script src="./scripts/stickyButton.js"></script>
-  <script src="./scripts/work.js"></script> -->
 
-  <!-- <script src="./scripts/boxes.js"></script> -->
+  <!-- <script src="./scripts/ideas.js"></script> -->
 </body>
 
 </html>

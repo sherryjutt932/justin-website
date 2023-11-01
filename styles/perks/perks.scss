@@ -1,0 +1,149 @@
+#perksSec {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    #perksHead{
+        padding: 62px 100px;
+        font-family: var(--Satoshi);
+        font-weight: 400 !important;
+
+        
+        &>div:nth-child(1){
+            font-size: 16px;
+            line-height: 21px;
+            margin-bottom: 50px;
+
+            span{
+                display: inline-block;
+                border-radius: 20px;
+                width: 8px;
+                height: 8px;
+                background-color: black;
+                margin-right: 8px;
+            }
+        }
+
+        &>div:nth-child(2){
+            display: flex;
+            justify-content: space-between;
+            h1{
+                width: 40%;
+                font-size: 60px;
+                line-height: 70px;
+                font-family: var(--NohemiL);
+                font-weight: 300 !important;
+            }
+            
+            p{
+                width: 40%;
+                font-size: 18px;
+                line-height: 27px;
+                letter-spacing: -0.3px;
+                max-width: 392px;
+                margin-right: 62px;
+            }
+        }
+    }
+
+    .perksRow {
+        display: flex;
+        gap: 0;
+    
+        .perkCard{
+            border: 1px solid var(--gray-c5);
+            border-left: none;
+            background-color: var(--main);
+            aspect-ratio: 1.54;
+            flex: 1 1 0%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 50px;
+            gap: 25px;
+            font-family: var(--Satoshi);
+    
+            &:last-child{
+                border-right: none;
+            }
+    
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            h1{
+                font-size: 32px;
+                line-height: 43px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+
+    }
+
+    #perksRef2{
+        .perkCard{
+            border-top: none !important;
+        }
+    }
+}
+
+
+@media (min-width: 1536px){
+    #perksSec {
+        #perksHead{
+            padding: 82px 120px;
+            
+            &>div:nth-child(1){
+                font-size: 20px;
+                line-height: 28px;
+                margin-bottom: 80px;
+    
+                span{
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 10px;
+                }
+            }
+    
+            &>div:nth-child(2){
+                h1{
+                    font-size: 80px;
+                    line-height: 95px;
+                }
+                
+                p{
+                    font-size: 24px;
+                    line-height: 36px;
+                    max-width: 538px;
+                    margin-right: 82px;
+                }
+            }
+        }
+    
+        .perksRow {
+            .perkCard{
+                padding: 66px;
+                gap: 33px;
+
+                img{
+                    width: 65px;
+                    height: 65px;
+                }
+                h1{
+                    font-size: 42px;
+                    line-height: normal;
+                }
+                p{
+                    font-size: 24px;
+                    line-height: 40px;
+                }
+            }
+    
+        }
+        
+    }
+}
