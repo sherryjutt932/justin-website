@@ -1,5 +1,5 @@
 const boxesSec = document.getElementById("boxesSec");
-const boxesRef = document.getElementById("boxesRef");
+const boxesRef = document.getElementById("boxesRef2");
 
 var boxesTimeline = gsap.timeline();
 
