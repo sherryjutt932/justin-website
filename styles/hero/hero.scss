@@ -22,6 +22,7 @@
     header {
         justify-content: space-between;
 
+
         .content{
             display: flex;
 
@@ -279,6 +280,14 @@ nav {
     justify-content: space-between;
     white-space: nowrap;
 
+    .logoimg{
+        justify-content: left;
+
+        img{
+            width: 59px;
+        }
+    }
+
     .border-bottom {
         position: absolute;
         border-radius: 100px;
@@ -314,6 +323,8 @@ nav {
 
         &>.text {
             font-size: 16px;
+            font-size: var(--SatoshiR);
+            font-weight: 400 !important;
             padding: 4px 16px;
             cursor: pointer;
             transition: all 300ms;
@@ -412,14 +423,15 @@ nav {
                         align-items: center;
                         text-decoration: none;
                         color: inherit;
-
+                        
                         &>div {
                             position: relative;
+                            padding-bottom: 4px;
 
                             &>div {
                                 background-color: var(--dark);
                                 position: absolute;
-                                bottom: -10px;
+                                bottom: -2px;
                                 left: 50%;
                                 transform: translateX(-50%);
                                 height: 2px;
@@ -440,7 +452,7 @@ nav {
                             border: 1px dashed var(--dark);
                             background-color: var(--light);
                             margin-left: 24px;
-                            padding: 4px 24px;
+                            padding: 4px 36px;
                             border-radius: 100px;
                             display: block;
 
@@ -623,6 +635,13 @@ nav {
             gap: 22px;
         }
 
+        .logoimg{
+            img{
+                width: 73px;
+            }
+        }
+
+        
         .nav-link {
 
             &>.textbg,
@@ -665,6 +684,13 @@ nav {
                         a {
                             font-size: 18px;
                             line-height: 1;
+                            &>div {
+                                padding-bottom: 4px;
+                                &>div {
+                                    bottom: -6px;
+                                }
+    
+                            }
 
                             span {
                                 margin-left: 32px;

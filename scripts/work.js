@@ -21,6 +21,8 @@ const workSec = document.getElementById("workSec");
         child,
         {
           yPercent: -100 * index,
+          duration:1,
+          ease:"none"
         },
         index
       );
@@ -33,6 +35,9 @@ const workSec = document.getElementById("workSec");
           prevChild,
           {
             yPercent: -100 * index,
+            duration:1,
+            ease:"none"
+
           },
           index
         );
@@ -50,7 +55,9 @@ const workSec = document.getElementById("workSec");
       worktimeline.to(
         child,
         {
-          xPercent: 100 * index,
+            xPercent: 100 * index,
+            duration:1,
+            ease:"none"
         },
         index
       );
@@ -64,7 +71,8 @@ const workSec = document.getElementById("workSec");
           {
             xPercent: 100 * index,
             opacity: 0,
-            duration:.2,
+            duration:.4,
+            ease:"none"
           },
           index
         );
@@ -75,26 +83,25 @@ const workSec = document.getElementById("workSec");
   ScrollTrigger.create({
     trigger: workSec,
     start: "top top",
-    end: () => `+=${workSec.offsetHeight}`,
+    end: () => `+=${workSec.offsetHeight*2}`,
     scrub: true,
     pin: true,
     animation: worktimeline,
-    snap: {
-      snapTo: "labels",
-    },
+    // snap: {
+    //   snapTo: "labels",
+    // },
     onUpdate: (self) => {
-      updateTimer = setTimeout(() => {
-        const progress = self.progress;
-  
-        // Convert imgRef to an array if it's not already
-        const imgArray = Array.from(imgRef.children);
-  
-        const totalItems = imgArray.length;
-        const currentIndex = Math.round(progress * (totalItems - 1)) + 1;
-  
-        document.getElementById("workcounter").innerHTML = "0" + currentIndex;
-        console.log(currentIndex);
-      }, 20);
+      const progress = self.progress;
+
+      // Convert imgRef to an array if it's not already
+      const imgArray = Array.from(imgRef.children);
+
+      const totalItems = imgArray.length;
+      const currentIndex = Math.round(progress * (totalItems - 1)) + 1;
+
+      document.getElementById("workcounter").innerHTML = (currentIndex > 1)? ("0" + currentIndex):"01";
+      // updateTimer = setTimeout(() => {
+      // }, 1);
     },
   });
   

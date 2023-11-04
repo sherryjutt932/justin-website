@@ -61,7 +61,7 @@
 #perksSec .perksRow .perkCard:last-child {
   border-right: none;
 }
-#perksSec .perksRow .perkCard img {
+#perksSec .perksRow .perkCard img, #perksSec .perksRow .perkCard .animicon {
   width: 50px;
   height: 50px;
 }
@@ -105,7 +105,7 @@
     padding: 66px;
     gap: 33px;
   }
-  #perksSec .perksRow .perkCard img {
+  #perksSec .perksRow .perkCard img, #perksSec .perksRow .perkCard .animicon {
     width: 65px;
     height: 65px;
   }

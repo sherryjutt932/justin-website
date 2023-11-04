@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./styles/global.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
 
   <link href="./styles/aboutUs/aboutUs.css" rel="stylesheet" />
   <link href="./styles/skills/skills.css" rel="stylesheet" />
@@ -29,7 +31,9 @@
     <div id="navigation">
       <header>
         <nav>
-          <div></div>
+          <div class="logoimg">
+            <img src="./assets/icons/mainlogo.svg" alt="">
+          </div>
           <div>
             <!-- nav link -->
             <div class="nav-link">
@@ -147,7 +151,9 @@
     <div id="hero">
       <header>
         <nav>
-          <div></div>
+          <div class="logoimg">
+            <img src="./assets/icons/mainlogo.svg" alt="">
+          </div>
           <div>
             <!-- nav link -->
             <div class="nav-link">
@@ -405,28 +411,32 @@
             <div class="scrollerItem">
               We specialize
               <div class="inline-block align-middle mx-10">
-                <img src="./assets/icons/specialize.svg" alt="specialize" />
+                <div class="animicon" id="aicon-crafting"></div>
+                <!-- <img src="./assets/icons/specialize.svg" alt="specialize" /> -->
               </div>
             </div>
 
             <div class="scrollerItem">
               In crafting
               <div class="inline-block align-middle mx-10">
-                <img src="./assets/icons/crafting.svg" alt="crafting" />
+                <div class="animicon" id="aicon-products"></div>
+                <!-- <img src="./assets/icons/crafting.svg" alt="crafting" /> -->
               </div>
             </div>
 
             <div class="scrollerItem">
               Digital products
               <div class="inline-block align-middle mx-10">
-                <img src="./assets/icons/products.svg" alt="products" />
+                <div class="animicon" id="aicon-care"></div>
+                <!-- <img src="./assets/icons/products.svg" alt="products" /> -->
               </div>
             </div>
 
             <div class="scrollerItem">
               With great care
               <div class="inline-block align-middle mx-10">
-                <img src="./assets/icons/care.svg" alt="care" />
+                <div class="animicon" id="aicon-portfolio"></div>
+                <!-- <img src="./assets/icons/care.svg" alt="care" /> -->
               </div>
             </div>
 
@@ -579,7 +589,8 @@
 
         <div>
           <div>
-            <img src="./assets/icons/demo.svg" alt="" />
+            <div class="animicon" id="aicon-demo"></div>
+            <!-- <img src="./assets/icons/demo.svg" alt="" /> -->
           </div>
           <div>Book a Demo</div>
         </div>
@@ -592,7 +603,8 @@
 
         <div>
           <div>
-            <img src="./assets/icons/request.svg" alt="" />
+            <div class="animicon" id="aicon-request"></div>
+            <!-- <img src="./assets/icons/request.svg" alt="" /> -->
           </div>
           <div>Subscribe & Request</div>
         </div>
@@ -605,7 +617,8 @@
 
         <div>
           <div>
-            <img src="./assets/icons/designs.svg" alt="" />
+            <div class="animicon" id="aicon-design"></div>
+            <!-- <img src="./assets/icons/designs.svg" alt="" /> -->
           </div>
           <div>Get Your Designs</div>
         </div>
@@ -618,7 +631,8 @@
 
         <div>
           <div>
-            <img src="./assets/icons/revisions.svg" alt="" />
+            <div class="animicon" id="aicon-revision"></div>
+            <!-- <img src="./assets/icons/revisions.svg" alt="" /> -->
           </div>
           <div>Unlimited Revisions</div>
         </div>
@@ -657,8 +671,12 @@
 
       <div>
 
-        <div class="card-icon">
-          <img id="process-icon" src="./assets/icons/Process/discovery.svg" alt="" />
+        <div id="process-animated-icons" class="card-icon">
+          <div class="animicon" id="aicon-process-discovery"></div>
+          <div style="display:none;" class="animicon" id="aicon-process-strategy"></div>
+          <div style="display:none;" class="animicon" id="aicon-process-design"></div>
+          <div style="display:none;" class="animicon" id="aicon-process-development"></div>
+          <!-- <img id="process-icon" src="./assets/icons/Process/discovery.svg" alt="" /> -->
         </div>
 
         <div class="card-grid">
@@ -779,18 +797,19 @@
 
     <div id="perksRef" class="perksRow">
       <div class="perkCard">
-        <img src="./assets/icons/perks/designboard.svg" alt="" />
+        <div class="animicon" id="aicon-perks-designboard"></div>
+        <!-- <img src="./assets/icons/perks/designboard.svg" alt="" /> -->
         <h1>Design Board</h1>
         <p>All your designs requests in one place. Backlog, in-progress, and approved work.</p>
       </div>
 
       <div class="perkCard">
-        <img src="./assets/icons/perks/fastdelivery.svg" alt="" />
+        <div class="animicon" id="aicon-perks-fastdelivery"></div>
         <h1>Fast Delivery</h1>
         <p>Designs delivered one at a time, and in just a few business days.</p>
       </div>
       <div class="perkCard">
-        <img src="./assets/icons/perks/scalableflexible.svg" alt="" />
+        <div class="animicon" id="aicon-perks-scalableflexible"></div>
         <h1>Scalable & Flexible</h1>
         <p>We scale with your business and design needs. Pause or cancel at any time.</p>
       </div>
@@ -798,18 +817,18 @@
 
     <div id="perksRef2" class="perksRow">
       <div class="perkCard">
-        <img src="./assets/icons/perks/completelyasync.svg" alt="" />
+        <div class="animicon" id="aicon-perks-completelyasync"></div>
         <h1>Completely Async</h1>
         <p>We operate autonomously, but are always available via your design board.</p>
       </div>
 
       <div class="perkCard">
-        <img src="./assets/icons/perks/premiumquality.svg" alt="" />
+        <div class="animicon" id="aicon-perks-premiumquality"></div>
         <h1>Premium Quality</h1>
         <p>Each of your designs are made unique to you, and aimed to wow.</p>
       </div>
       <div class="perkCard">
-        <img src="./assets/icons/perks/fixedmonthlysalary.svg" alt="" />
+        <div class="animicon" id="aicon-perks-fixedmonthlysalary"></div>
         <h1>Fixed Monthly Cost</h1>
         <p>No surprises or hidden costs, ever. Pay the same fixed price, monthly.</p>
       </div>
@@ -943,29 +962,60 @@
     <div class="footerCon">
       <div>
         <h1>Reach Us</h1>
-        <p>🇺🇸 +1 (750) 996-4899</p>
-        <p>🇵🇰 +92 8754 3864</p>
+        <p><img src="./assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
+        <p><img src="./assets/icons/pk.svg" alt=""> +92 8754 3864</p>
         <p>business@webpioneers.com</p>
       </div>
       <div>
         <h1>Social</h1>
-        <a>linkedin <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a>Instagram <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a>Dribble <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a href="/">linkedin <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a href="/">Instagram <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a href="/">Dribble <img src="./assets/icons/linkb.svg" alt=""></a>
       </div>
       <div>
         <h1>Quick</h1>
-        <a>Pricing <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a>About <img src="./assets/icons/linkb.svg" alt=""></a>
-          <a>Team <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a href="/">Pricing <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a href="/">About <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a href="/">Team <img src="./assets/icons/linkb.svg" alt=""></a>
       </div>
       <div>
         <h1>Legal</h1>
-        <a>Privacy <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a>Terms <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a href="/">Privacy <img src="./assets/icons/linkb.svg" alt=""></a>
+        <a href="/">Terms <img src="./assets/icons/linkb.svg" alt=""></a>
       </div>
     </div>
   </section>
+
+  <script>
+    function setupAnimation(containerId, animationPath) {
+      const container = document.getElementById(containerId);
+
+      return lottie.loadAnimation({
+        container: container,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: animationPath,
+      });
+    }
+
+    const apath_crafting = './assets/Animation/ABOUT US SECTION/Crafting/Crafting.json';
+    const apath_products = './assets/Animation/ABOUT US SECTION/Digital Production/DigitalProduction.json';
+    const apath_care = './assets/Animation/ABOUT US SECTION/Care/Care.json';
+    const apath_portfolio = './assets/Animation/ABOUT US SECTION/Our Portfolio/OurPortfolio.json';
+
+    const aicon_crafting = 'aicon-crafting';
+    const aicon_products = 'aicon-products';
+    const aicon_care = 'aicon-care';
+    const aicon_portfolio = 'aicon-portfolio';
+
+    const anim_crafting = setupAnimation(aicon_crafting, apath_crafting);
+    const anim_products = setupAnimation(aicon_products, apath_products);
+    const anim_care = setupAnimation(aicon_care, apath_care);
+    const anim_portfolio = setupAnimation(aicon_portfolio, apath_portfolio);
+
+  </script>
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -1012,7 +1062,7 @@
 
   </script>
 
-  <!-- <script src="./scripts/ideas.js"></script> -->
+  <!-- <script src="./scripts/boxes.js"></script> -->
 </body>
 
 </html>

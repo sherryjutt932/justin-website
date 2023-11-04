@@ -43,7 +43,8 @@
   margin-right: 8px;
 }
 #boxesRef2 .boxitem > div:nth-child(2) {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 400;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -52,8 +53,28 @@
   align-items: center;
 }
 #boxesRef2 .boxitem > div:nth-child(2) > div:nth-child(1) {
-  border: 1px solid var(--dark);
-  padding: 8px;
   width: -moz-fit-content;
   width: fit-content;
+}
+#boxesRef2 .boxitem > div:nth-child(2) > div:nth-child(1) .animicon {
+  width: 70px;
+  height: 70px;
+}
+
+@media (min-width: 1536px) {
+  #boxesRef2 .boxitem > div:nth-child(1) span {
+    width: 12px;
+    height: 12px;
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  #boxesRef2 .boxitem > div:nth-child(2) {
+    font-size: 24px;
+    font-weight: 400;
+    gap: 40px;
+  }
+  #boxesRef2 .boxitem > div:nth-child(2) > div:nth-child(1) .animicon {
+    width: 93px;
+    height: 93px;
+  }
 }/*# sourceMappingURL=boxes.css.map */

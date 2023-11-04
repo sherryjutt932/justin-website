@@ -4,18 +4,19 @@ const ideasSec = document.getElementById("ideasSec");
 var ideasanim = gsap.timeline();
 ideasanim.fromTo(
     ideasSec,
-    {scaleX:1
+    {
+      transform: "scale3d(1,1,1)",
     },
     {
-        scaleX:0.95
+      transform: "scale3d(0.95,0.95,1)",
     },
     "a"
   );
 
 ScrollTrigger.create({
     trigger: ideasSec,
-    start: "bottom 70%",
-    end: "bottom top",
+    start: "bottom bottom",
+    end: "+=400",
     scrub: 1,
     animation:ideasanim,
   });

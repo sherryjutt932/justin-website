@@ -12,7 +12,6 @@
   width: 100%;
   margin-bottom: 80px;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--gray-c5);
 }
 #feedbackSec > div:nth-child(1) span {
   display: inline-block;
@@ -106,10 +105,21 @@
   color: var(--light);
   width: 37px;
   height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100px;
   text-align: center;
   outline: none;
   border: none;
+  transition: all 500ms ease;
+}
+#feedbackSec .feedbackCon .feedbackdetail > div:nth-child(1) > div:nth-child(2) button svg {
+  width: 17px;
+  height: 17px;
+}
+#feedbackSec .feedbackCon .feedbackdetail > div:nth-child(1) > div:nth-child(2) button:hover {
+  transform: scale(1.2);
 }
 #feedbackSec .feedbackCon .feedbackdetail > div:nth-child(1) > div:nth-child(2) button:nth-child(2) {
   background-color: var(--gray-d4) !important;
@@ -121,7 +131,7 @@
   position: absolute;
   top: 50px;
   left: 50%;
-  animation: rotate 30s infinite forwards;
+  animation: rotate 15s linear infinite forwards;
 }
 
 @keyframes rotate {
@@ -183,6 +193,10 @@
   #feedbackSec .feedbackCon .feedbackdetail > div:nth-child(1) > div:nth-child(2) button {
     width: 50px;
     height: 50px;
+  }
+  #feedbackSec .feedbackCon .feedbackdetail > div:nth-child(1) > div:nth-child(2) button svg {
+    width: 22px;
+    height: 22px;
   }
   #feedbackSec .feedbackCon .feebackimg #biglogo {
     height: 660px;

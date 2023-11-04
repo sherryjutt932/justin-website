@@ -24,7 +24,7 @@ gsap
   ).to(
     stericRef,
     {
-        rotation: 360,
+        rotation: 720,
         ease: "linear",
     },
     "a"

@@ -55,18 +55,19 @@ function setTablet(ind) {
 }
 
 function prevButtonClick() {
-    let carouselNumber = document.getElementById("carouselNumber");
+  let carouselNumber = document.getElementById("carouselNumber");
 
-    var ind = carouselNumber.dataset.index;
-    var newind = (ind<=0)? 4:(parseInt(ind) - 1);
-    carouselNumber.dataset.index = newind;
-    carouselNumber.innerHTML="0"+(newind + 1);
+  var ind = carouselNumber.dataset.index;
+  var newind = (ind <= 0) ? 4 : (parseInt(ind) - 1);
 
-    setTablet(newind);
+  carouselNumber.dataset.index = newind;
+  carouselNumber.innerHTML = "0" + (newind + 1);
+
+  setTablet(newind);
 
   gsap.to(".carousel", 0.3, {
+    xPercent: -newind * 100, // Use the newind to determine the position
     ease: Linear.easeNone,
-    xPercent: "-=100",
     modifiers: {
       xPercent: function (x) {
         return `${wrap(parseInt(x), -200, 300)}`;
@@ -74,22 +75,23 @@ function prevButtonClick() {
     },
   });
 }
+
+
 
 function nextButtonClick() {
-    if (true) {
-        let carouselNumber = document.getElementById("carouselNumber");
+  let carouselNumber = document.getElementById("carouselNumber");
 
-        var ind = carouselNumber.dataset.index;
-        var newind = (parseInt(ind) + 1) % 5;
-        carouselNumber.dataset.index = newind;
-        carouselNumber.innerHTML="0"+(newind + 1);
-      }
-      setTablet(newind);
+  var ind = carouselNumber.dataset.index;
+  var newind = (parseInt(ind) + 1) % 5;
 
+  carouselNumber.dataset.index = newind;
+  carouselNumber.innerHTML = "0" + (newind + 1);
+
+  setTablet(newind);
 
   gsap.to(".carousel", 0.3, {
+    xPercent: -newind * 100, // Use the newind to determine the position
     ease: Linear.easeNone,
-    xPercent: "+=100", // Use "+=" to move to the next slide
     modifiers: {
       xPercent: function (x) {
         return `${wrap(parseInt(x), -200, 300)}`;
@@ -97,6 +99,8 @@ function nextButtonClick() {
     },
   });
 }
+
+
 
 gsap.set(".carousel", {
   xPercent: function (i) {
