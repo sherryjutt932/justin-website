@@ -170,6 +170,9 @@
 #heroBg nav {
   color: var(--light);
 }
+#heroBg .head .headCon {
+  width: 100%;
+}
 #heroBg .head .headCon .circle {
   background-color: var(--dark);
 }
