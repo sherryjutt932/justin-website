@@ -589,6 +589,7 @@ nav .line {
   }
   #mobileNav > div {
     background-color: var(--light);
+    z-index: 100;
     position: absolute;
     right: 30px;
     top: 30px;
