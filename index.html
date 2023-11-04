@@ -145,6 +145,41 @@
 
       </header>
     </div>
+    <div id="mobileNav">
+      <div>
+        <div class="mobileNav-head">
+          <h1>Menu</h1>
+          <button onclick="toggleMenu()">
+            <img src="./assets/icons/cancel.svg" alt="hamburger" /></b>
+        </div>
+
+        <a class="mobileNav-item">
+          <p>Portfolio</p>
+          <div></div>
+        </a>
+        <a class="mobileNav-item">
+          <p>About Us</p>
+          <div></div>
+        </a>
+        <a class="mobileNav-item">
+          <p>Stories</p>
+          <div></div>
+        </a>
+        <a class="mobileNav-item">
+          <p>FAQ's</p>
+          <div></div>
+        </a>
+        <a class="mobileNav-item">
+          <p>Pricing</p>
+          <div></div>
+        </a>
+        <a class="mobileNav-item">
+          <p>Contact Us</p>
+          <div></div>
+        </a>
+
+      </div>
+    </div>
   </section>
 
   <section id="heroSec">
@@ -154,7 +189,7 @@
           <div class="logoimg">
             <img src="./assets/icons/mainlogo.svg" alt="">
           </div>
-          <div>
+          <div class="navlinkscenter">
             <!-- nav link -->
             <div class="nav-link">
               <div class="text">Home</div>
@@ -198,16 +233,16 @@
           <div class="headCon">
             <!-- main heading -->
             <div>
-              Your Trusted Partner <br />
+              Your Trusted Partner <br id="deskbr" />
               For Your
               <span id="circle" class="circle"></span>nline
               <div style="z-index:20;" id="marqueeWrapper">
                 <div id="marquee">
                   <div id="first">
-                    Business
+                    Business <span>*</span> Brands <span>*</span> Experience <span>*</span> Creativity <span>*</span>
                   </div>
                   <div id="second">
-                    Business
+                    Business <span>*</span> Brands <span>*</span> Experience <span>*</span> Creativity <span>*</span>
                   </div>
                 </div>
               </div>
@@ -242,7 +277,7 @@
       <div id="skillsRef" class="skills">
         <div id="labelsCon">
           <div>
-            We Bring Skills,
+            We Bring<br class="mobilebr" /> Skills,
             <br />
             You Achieve Results
             <div id="labelsRef" class="absolute left-0 top-0 h-full w-full text-2xl">
@@ -308,8 +343,10 @@
     <div id="heroBg">
       <header>
         <nav>
-          <div></div>
-          <div>
+          <div class="logoimg">
+            <img src="./assets/icons/mainlogo.svg" alt="">
+          </div>
+          <div class="navlinkscenter">
             <!-- nav link -->
             <div class="nav-link">
               <div class="text">Home</div>
@@ -351,7 +388,7 @@
           <div class="headCon">
             <!-- main heading -->
             <div>
-              Your Trusted Partner <br />
+              Your Trusted Partner <br id="deskbr" />
               For Your
               <span id="circleCliper" class="circle"></span>nline
               <div id="marqueeWrapper">
@@ -404,7 +441,7 @@
 
       <!-- horizontal scroller -->
       <div id="aboutRef">
-        <div>
+        <div class="pc-aboutus">
           <div>At our agency,</div>
           <div class="scrollerWrapper">
 
@@ -445,6 +482,29 @@
             <div>Check our portfolio</div>
           </div>
         </div>
+
+        <div class="mobile-aboutus">
+          <div>
+            At our agency,<br>
+            We specialize<br>
+            In crafting<br>
+            Digital <br>products<br>
+            With great <br>
+            care Check <br>
+            our portfolio<br>
+          </div>
+
+          <div>
+            <div class="animicon" id="aicon-mb-crafting"></div>
+            <div class="animicon" id="aicon-mb-products"></div>
+            <div class="animicon" id="aicon-mb-care"></div>
+            <div class="animicon" id="aicon-mb-portfolio"></div>
+
+
+          </div>
+        </div>
+
+
       </div>
 
       <!-- detail -->
@@ -477,7 +537,7 @@
         </div>
       </div>
 
-      <!-- work grid -->
+      <!-- work grid for pc -->
       <div class="workGrid">
 
         <!-- Detail -->
@@ -576,6 +636,162 @@
           </div>
         </div>
       </div>
+
+      <!-- work flex for mobile -->
+      <div class="workflex">
+
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Epoch.</h2>
+            </div>
+            <div>
+              <p>01</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <img src="./assets/images/work1.png" alt="">
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="/">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View more
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Epoch.</h2>
+            </div>
+            <div>
+              <p>02</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <img src="./assets/images/work1.png" alt="">
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="/">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View more
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Epoch.</h2>
+            </div>
+            <div>
+              <p>03</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <img src="./assets/images/work1.png" alt="">
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="/">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View more
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="morework">
+        <a href="/">
+          <div>
+            More work
+            <div></div>
+          </div>
+          <span>
+            <img src="./assets/icons/greaterThen.svg" alt="greaterthen" />
+          </span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -583,58 +799,65 @@
     <div id="boxesRef2">
       <div class="boxitem">
         <div>
-          <span></span>
-          01
-        </div>
-
-        <div>
           <div>
-            <div class="animicon" id="aicon-demo"></div>
-            <!-- <img src="./assets/icons/demo.svg" alt="" /> -->
+            <span></span>
+            01
           </div>
-          <div>Book a Demo</div>
+
+          <div>
+            <div>
+              <div class="animicon" id="aicon-demo"></div>
+            </div>
+            <div>Book a Demo</div>
+          </div>
         </div>
       </div>
       <div class="boxitem">
         <div>
-          <span></span>
-          02
-        </div>
-
-        <div>
           <div>
-            <div class="animicon" id="aicon-request"></div>
-            <!-- <img src="./assets/icons/request.svg" alt="" /> -->
+            <span></span>
+            02
           </div>
-          <div>Subscribe & Request</div>
+
+          <div>
+            <div>
+              <div class="animicon" id="aicon-request"></div>
+              <!-- <img src="./assets/icons/request.svg" alt="" /> -->
+            </div>
+            <div>Subscribe &<br> Request</div>
+          </div>
         </div>
       </div>
       <div class="boxitem">
         <div>
-          <span></span>
-          03
-        </div>
-
-        <div>
           <div>
-            <div class="animicon" id="aicon-design"></div>
-            <!-- <img src="./assets/icons/designs.svg" alt="" /> -->
+            <span></span>
+            03
           </div>
-          <div>Get Your Designs</div>
+
+          <div>
+            <div>
+              <div class="animicon" id="aicon-design"></div>
+              <!-- <img src="./assets/icons/designs.svg" alt="" /> -->
+            </div>
+            <div>Get Your Designs</div>
+          </div>
         </div>
       </div>
       <div class="boxitem">
         <div>
-          <span></span>
-          04
-        </div>
-
-        <div>
           <div>
-            <div class="animicon" id="aicon-revision"></div>
-            <!-- <img src="./assets/icons/revisions.svg" alt="" /> -->
+            <span></span>
+            04
           </div>
-          <div>Unlimited Revisions</div>
+
+          <div>
+            <div>
+              <div class="animicon" id="aicon-revision"></div>
+              <!-- <img src="./assets/icons/revisions.svg" alt="" /> -->
+            </div>
+            <div>Unlimited<br> Revisions</div>
+          </div>
         </div>
       </div>
     </div>
@@ -776,6 +999,139 @@
 
       </div>
     </div>
+
+    <div class="proc-cards-wrap-mob">
+
+      <div class="process-card">
+
+        <div>
+
+          <div>
+            <span>
+              1
+            </span>
+            <h1>
+              Discovery
+            </h1>
+          </div>
+
+          <div>
+            <img src="./assets/icons/Process/discoveryB.svg" alt="">
+            <!-- <div class="animicon" id="aicon-process-mob-discovery"></div> -->
+          </div>
+
+        </div>
+
+        <div>
+          <p>
+            We start every new client interaction with an in-depth discovery call where we get to know each other,
+            discuss your current and future objectives, and recommend the best course of action.
+          </p>
+        </div>
+
+        <div>
+        </div>
+
+      </div>
+
+      <div class="process-card">
+
+        <div>
+
+          <div>
+            <span>
+              2
+            </span>
+            <h1>
+              Strategy
+            </h1>
+          </div>
+
+          <div>
+            <img src="./assets/icons/Process/strategyB.svg" alt="">
+            <!-- <div class="animicon" id="aicon-process-mob-strategy"></div> -->
+          </div>
+
+        </div>
+
+        <div>
+          <p>
+            Every end-to-end project of ours begins with a bespoke pre-build strategy. From brand ID consultation to
+            in-depth cycle reviews, we're here to set the stage for success.
+          </p>
+        </div>
+
+        <div>
+        </div>
+
+      </div>
+
+      <div class="process-card">
+
+        <div>
+
+          <div>
+            <span>
+              3
+            </span>
+            <h1>
+              Design
+            </h1>
+          </div>
+
+          <div>
+            <img src="./assets/icons/Process/designB.svg" alt="">
+            <!-- <div class="animicon" id="aicon-process-mob-design"></div> -->
+          </div>
+
+        </div>
+
+        <div>
+          <p>
+            After we have a comprehensive understanding of your brand, we'll be ready to move onto design. Each page
+            or will be designed, reviewed, and given your stamp of approval.
+          </p>
+        </div>
+
+        <div>
+        </div>
+
+      </div>
+
+      <div class="process-card">
+
+        <div>
+
+          <div>
+            <span>
+              4
+            </span>
+            <h1>
+              Development
+            </h1>
+          </div>
+
+          <div>
+            <img src="./assets/icons/Process/developmentB.svg" alt="">
+            <!-- <div class="animicon" id="aicon-process-mob-development"></div> -->
+          </div>
+
+        </div>
+
+        <div>
+          <p>
+            Whether we've just finished designing your new site or you're handing off finished designs for us to
+            develop in Webflow, we're here to apply our trusted development process to your project.
+          </p>
+        </div>
+
+        <div>
+        </div>
+
+      </div>
+
+
+    </div>
   </section>
 
   <section id="perksSec">
@@ -802,7 +1158,6 @@
         <h1>Design Board</h1>
         <p>All your designs requests in one place. Backlog, in-progress, and approved work.</p>
       </div>
-
       <div class="perkCard">
         <div class="animicon" id="aicon-perks-fastdelivery"></div>
         <h1>Fast Delivery</h1>
@@ -834,6 +1189,59 @@
       </div>
     </div>
 
+    <div class="perksCarousel-wrapper">
+
+      <div class="perksCarousel">
+        <div class="perkCard-mb">
+          <div class="animicon" id="aicon-perks-mb-designboard"></div>
+          <h1>Design Board</h1>
+          <p>All your designs requests in one place. Backlog, in-progress, and approved work.</p>
+        </div>
+        <div class="perkCard-mb">
+          <div class="animicon" id="aicon-perks-mb-fastdelivery"></div>
+          <h1>Fast Delivery</h1>
+          <p>Designs delivered one at a time, and in just a few business days.</p>
+        </div>
+        <div class="perkCard-mb">
+          <div class="animicon" id="aicon-perks-mb-scalableflexible"></div>
+          <h1>Scalable & Flexible</h1>
+          <p>We scale with your business and design needs. Pause or cancel at any time.</p>
+        </div>
+        <div class="perkCard-mb">
+          <div class="animicon" id="aicon-perks-mb-completelyasync"></div>
+          <h1>Completely Async</h1>
+          <p>We operate autonomously, but are always available via your design board.</p>
+        </div>
+        <div class="perkCard-mb">
+          <div class="animicon" id="aicon-perks-mb-premiumquality"></div>
+          <h1>Premium Quality</h1>
+          <p>Each of your designs are made unique to you, and aimed to wow.</p>
+        </div>
+        <div class="perkCard-mb">
+          <div class="animicon" id="aicon-perks-mb-fixedmonthlysalary"></div>
+          <h1>Fixed Monthly Cost</h1>
+          <p>No surprises or hidden costs, ever. Pay the same fixed price, monthly.</p>
+        </div>
+      </div>
+
+      <div class="perksCarousel-buttons">
+        <button onclick="prevPerkCarousel()">
+          <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
+              stroke-width="1.6" />
+          </svg>
+
+        </button>
+        <button onclick="nextPerkCarousel()">
+          <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
+              stroke-width="1.6" />
+          </svg>
+
+        </button>
+      </div>
+    </div>
+
   </section>
 
   <section id="feedbackSec">
@@ -842,6 +1250,11 @@
     </div>
 
     <div class="feedbackCon">
+
+      <div class="feedback-border-top">
+        <div></div>
+      </div>
+
       <div class="feedbackdetail">
         <div>
           <div id="feedbackP" class="carousel_track">
@@ -922,6 +1335,9 @@
           <a href="/">Process <img src="./assets/icons/link.svg" alt=""></a>
           <a href="/">About <img src="./assets/icons/link.svg" alt=""></a>
           <a href="/">Plans <img src="./assets/icons/link.svg" alt=""></a>
+
+          <a class="mob-only" href="/">Contact Us <img src="./assets/icons/link.svg" alt=""></a>
+          <a class="mob-only" href="/">Services <img src="./assets/icons/link.svg" alt=""></a>
         </div>
 
         <div class="tabsflex">
@@ -999,6 +1415,7 @@
       });
     }
 
+
     const apath_crafting = './assets/Animation/ABOUT US SECTION/Crafting/Crafting.json';
     const apath_products = './assets/Animation/ABOUT US SECTION/Digital Production/DigitalProduction.json';
     const apath_care = './assets/Animation/ABOUT US SECTION/Care/Care.json';
@@ -1009,13 +1426,22 @@
     const aicon_care = 'aicon-care';
     const aicon_portfolio = 'aicon-portfolio';
 
+    const aicon_mb_crafting = 'aicon-mb-crafting';
+    const aicon_mb_products = 'aicon-mb-products';
+    const aicon_mb_care = 'aicon-mb-care';
+    const aicon_mb_portfolio = 'aicon-mb-portfolio';
+
     const anim_crafting = setupAnimation(aicon_crafting, apath_crafting);
     const anim_products = setupAnimation(aicon_products, apath_products);
     const anim_care = setupAnimation(aicon_care, apath_care);
     const anim_portfolio = setupAnimation(aicon_portfolio, apath_portfolio);
 
-  </script>
+    const anim_mb_crafting = setupAnimation(aicon_mb_crafting, apath_crafting);
+    const anim_mb_products = setupAnimation(aicon_mb_products, apath_products);
+    const anim_mb_care = setupAnimation(aicon_mb_care, apath_care);
+    const anim_mb_portfolio = setupAnimation(aicon_mb_portfolio, apath_portfolio);
 
+  </script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -1033,6 +1459,7 @@
       // List of scripts to load
       var scriptsToLoad = [
         "./scripts/lenis.js",
+        "./scripts/global.js",
         "./scripts/hero.js",
         "./scripts/marquee.js",
         "./scripts/skills.js",

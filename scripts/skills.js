@@ -40,7 +40,7 @@ if(true ){
   )
   
 }
-if(true){
+if(!isMobile()){
   boxesTl.fromTo(
     boxesRef.children[0],
     {
@@ -84,3 +84,4 @@ ScrollTrigger.create({
   scrub: 3,
   animation: boxesTl,
 });
+

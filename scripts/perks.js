@@ -31,7 +31,6 @@
 //     animation: perksTimeline,
 //   });
 
-
 const apath_perks_designboard =
   "./assets/Animation/Perks you'll love more/Design board/DesignBoard.json";
 const apath_perks_fastdelivery =
@@ -45,36 +44,53 @@ const apath_perks_premiumquality =
 const apath_perks_fixedmonthlysalary =
   "./assets/Animation/Perks you'll love more/Fixed Monthy cost/FixedMonthlyCost.json";
 
-  
-  const aicon_perks_designboard = "aicon-perks-designboard";
-  const aicon_perks_fastdelivery = "aicon-perks-fastdelivery";
-  const aicon_perks_scalableflexible = "aicon-perks-scalableflexible";
-  const aicon_perks_completelyasync = "aicon-perks-completelyasync";
-  const aicon_perks_premiumquality = "aicon-perks-premiumquality";
-  const aicon_perks_fixedmonthlysalary = "aicon-perks-fixedmonthlysalary";
-    
-const anim_perks_designboard = setupAnimation(
-  aicon_perks_designboard,
-  apath_perks_designboard
-);
-const anim_perks_fastdelivery = setupAnimation(
-  aicon_perks_fastdelivery,
-  apath_perks_fastdelivery
-);
-const anim_perks_scalableflexible = setupAnimation(
-  aicon_perks_scalableflexible,
-  apath_perks_scalableflexible
-);
-const anim_perks_completelyasync = setupAnimation(
-  aicon_perks_completelyasync,
-  apath_perks_completelyasync
-);
-const anim_perks_premiumquality = setupAnimation(
-  aicon_perks_premiumquality,
-  apath_perks_premiumquality
-);
-const anim_perks_fixedmonthlysalary = setupAnimation(
-  aicon_perks_fixedmonthlysalary,
-  apath_perks_fixedmonthlysalary
-);
+const aicon_perks_designboard = "aicon-perks-designboard";
+const aicon_perks_fastdelivery = "aicon-perks-fastdelivery";
+const aicon_perks_scalableflexible = "aicon-perks-scalableflexible";
+const aicon_perks_completelyasync = "aicon-perks-completelyasync";
+const aicon_perks_premiumquality = "aicon-perks-premiumquality";
+const aicon_perks_fixedmonthlysalary = "aicon-perks-fixedmonthlysalary";
 
+setupAnimation(aicon_perks_designboard, apath_perks_designboard);
+setupAnimation(aicon_perks_fastdelivery, apath_perks_fastdelivery);
+setupAnimation(aicon_perks_scalableflexible, apath_perks_scalableflexible);
+setupAnimation(aicon_perks_completelyasync, apath_perks_completelyasync);
+setupAnimation(aicon_perks_premiumquality, apath_perks_premiumquality);
+setupAnimation(aicon_perks_fixedmonthlysalary, apath_perks_fixedmonthlysalary);
+
+const aicon_perks_mb_designboard = "aicon-perks-mb-designboard";
+const aicon_perks_mb_fastdelivery = "aicon-perks-mb-fastdelivery";
+const aicon_perks_mb_scalableflexible = "aicon-perks-mb-scalableflexible";
+const aicon_perks_mb_completelyasync = "aicon-perks-mb-completelyasync";
+const aicon_perks_mb_premiumquality = "aicon-perks-mb-premiumquality";
+const aicon_perks_mb_fixedmonthlysalary = "aicon-perks-mb-fixedmonthlysalary";
+
+setupAnimation(aicon_perks_mb_designboard, apath_perks_designboard);
+setupAnimation(aicon_perks_mb_fastdelivery, apath_perks_fastdelivery);
+setupAnimation(aicon_perks_mb_scalableflexible, apath_perks_scalableflexible);
+setupAnimation(aicon_perks_mb_completelyasync, apath_perks_completelyasync);
+setupAnimation(aicon_perks_mb_premiumquality, apath_perks_premiumquality);
+setupAnimation(aicon_perks_mb_fixedmonthlysalary, apath_perks_fixedmonthlysalary);
+
+let currentIndex = 0;
+const perkCards = document.querySelectorAll(".perkCard-mb");
+const totalCards = perkCards.length;
+const width = perkCards[0].offsetWidth + 20; // Adjusted to offsetWidth
+
+function nextPerkCarousel() {
+  if (currentIndex < totalCards - 1) {
+    currentIndex++;
+    perkCards.forEach((card, index) => {
+      card.style.transform = `translateX(-${currentIndex * width}px)`;
+    });
+  }
+}
+
+function prevPerkCarousel() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    perkCards.forEach((card, index) => {
+      card.style.transform = `translateX(-${currentIndex * width}px)`;
+    });
+  }
+}

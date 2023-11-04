@@ -2,7 +2,8 @@
 const ideasSec = document.getElementById("ideasSec");
 
 var ideasanim = gsap.timeline();
-ideasanim.fromTo(
+if(!isMobile()){
+  ideasanim.fromTo(
     ideasSec,
     {
       transform: "scale3d(1,1,1)",
@@ -12,6 +13,19 @@ ideasanim.fromTo(
     },
     "a"
   );
+}
+else{
+  ideasanim.fromTo(
+    ideasSec,
+    {
+      transform: "scale3d(1,1,1)",
+    },
+    {
+      transform: "scale3d(0.9,0.9,1)",
+    },
+    "a"
+  );
+}
 
 ScrollTrigger.create({
     trigger: ideasSec,

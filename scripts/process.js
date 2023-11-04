@@ -137,25 +137,22 @@ const apath_Process_design =
 const apath_Process_development =
   "./assets/Animation/Our_Process/Development/Development.json";
 
-  
-  const aicon_Process_discovery = "aicon-process-discovery";
-  const aicon_Process_strategy = "aicon-process-strategy";
-  const aicon_Process_design = "aicon-process-design";
-  const aicon_Process_development = "aicon-process-development";
-    
-const anim_Process_discovery = setupAnimation(
-  aicon_Process_discovery,
-  apath_Process_discovery
-);
-const anim_Process_strategy = setupAnimation(
-  aicon_Process_strategy,
-  apath_Process_strategy
-);
-const anim_Process_design = setupAnimation(
-  aicon_Process_design,
-  apath_Process_design
-);
-const anim_Process_development = setupAnimation(
-  aicon_Process_development,
-  apath_Process_development
-);
+const aicon_Process_discovery = "aicon-process-discovery";
+const aicon_Process_strategy = "aicon-process-strategy";
+const aicon_Process_design = "aicon-process-design";
+const aicon_Process_development = "aicon-process-development";
+
+setupAnimation(aicon_Process_discovery, apath_Process_discovery);
+setupAnimation(aicon_Process_strategy, apath_Process_strategy);
+setupAnimation(aicon_Process_design, apath_Process_design);
+setupAnimation(aicon_Process_development, apath_Process_development);
+
+const aicon_Process_mob_discovery = "aicon-process-mob-discovery";
+const aicon_Process_mob_strategy = "aicon-process-mob-strategy";
+const aicon_Process_mob_design = "aicon-process-mob-design";
+const aicon_Process_mob_development = "aicon-process-mob-development";
+
+setupAnimation(aicon_Process_mob_discovery, apath_Process_discovery);
+setupAnimation(aicon_Process_mob_strategy, apath_Process_strategy);
+setupAnimation(aicon_Process_mob_design, apath_Process_design);
+setupAnimation(aicon_Process_mob_development, apath_Process_development);

@@ -4,7 +4,7 @@ const marquee = document.getElementById('marquee');
 
   let xPercent = 0;
   let direction = "left";
-  let speed = 4;
+  let speed = 1;
 
   const animateMarquee = () => {
     xPercent = direction === "left" ? (xPercent - speed / 10) : (xPercent + speed / 10);

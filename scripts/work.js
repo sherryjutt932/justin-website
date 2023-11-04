@@ -4,7 +4,7 @@ const workSec = document.getElementById("workSec");
   
   
 //   const [currentSec, setCurrentSec] = useState(1);
-
+if (!isMobile()) {
   let updateTimer;
   var worktimeline = gsap.timeline();
 
@@ -106,3 +106,4 @@ const workSec = document.getElementById("workSec");
   });
   
 
+}

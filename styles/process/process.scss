@@ -189,6 +189,10 @@
             }
         }
     }
+
+    .proc-cards-wrap-mob{
+        display: none;
+     }
 }
 
 @media (min-width: 1390px){
@@ -276,4 +280,156 @@
             }
         }
     }
+}
+
+
+// -----------------mobile
+
+@media (max-width: 750px) {
+    
+#processSec {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    color: var(--light);
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    
+    .proc-marquee-wrap {
+        width: 100%;
+        overflow: hidden;
+        padding: 24px 0px;
+        // m14py-10
+    
+        .proc-marquee-con{
+            width: 100%;
+            color: var(--light);
+            line-height: normal;
+            vertical-align: bottom;
+            font-size: 21px;
+            letter-spacing: 0.1ch;
+            // m14:text-[54px]
+            display: flex;
+            flex-wrap: nowrap;
+            font-family: var(--Nohemil);
+    
+            #proc-marquee{
+                flex:1 1 0%;
+                flex-shrink: 0;
+                min-width: fit-content;
+                width: fit-content;
+                height: fit-content;
+                position: relative;
+                white-space: nowrap;
+    
+                #proc-marquee-first{
+                    width: fit-content;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    height: fit-content;
+                    padding-top: 12px;
+                }
+                #proc-marquee-second,
+                    #proc-marquee-third{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    height: fit-content;
+                    position: absolute;
+                    top: 0%;
+                    padding-top: 12px;
+                }
+
+                img.arrowRef{
+                    width: 20px;
+                    margin: 0px 20px;
+                }
+            }
+        }
+    }
+
+    .proc-cards-wrap{
+       display: none;
+    }
+
+    .proc-cards-wrap-mob{
+        display: flex;
+        flex-direction: column;
+        padding: 60px 40px;
+        gap: 40px;
+
+        .process-card{
+            position: relative;
+            padding: 20px;
+
+            &>div:nth-child(1){
+                position: relative;
+                z-index: 10;
+                display: flex;
+                color: var(--dark);
+                padding-bottom: 12px;
+
+                &>div:nth-child(1){
+                    flex-grow: 1;
+                }
+
+                img, .animicon{
+                    width: 50px;
+                    height: 50px;
+                }
+
+              span{
+                    border: 1px solid var(--dark);
+                    aspect-ratio: 1/1;
+                    font-size: 12px;
+                    height: 20px;
+                    border-radius: 100px;
+                    margin-right: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: normal;
+                    transition: all 500ms ease;
+                }
+
+                h1{
+                    padding-top: 12px;
+                    text-transform: capitalize;
+                    font-family: var(--SatoshiM);
+                    font-size: 20px;
+                    line-height: normal;
+                    transition: all 500ms ease;
+                }
+
+            }
+            &>div:nth-child(2){
+                position: relative;
+                z-index: 10;
+                p{
+                    color: var(--gray-97);
+                    font-family: var(--Satoshi);
+                    font-size: 16px;
+                    font-weight: 100;
+                    line-height: 24px;
+                    letter-spacing: -0.3px;
+                    width: 90%;
+                    transition: all 500ms ease;
+                }
+            }
+            &>div:nth-child(3){
+                transition: all 500ms ease;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: var(--light);
+                left: 0;
+                bottom: 0;
+
+            }
+
+        }
+     }
+}
 }

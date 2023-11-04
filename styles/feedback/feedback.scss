@@ -6,6 +6,9 @@
     overflow: hidden;
     padding: 40px 100px;
     
+    .feedback-border-top{
+       display: none;
+    }
     &>div:nth-child(1){
         font-size: 16px;
         line-height: 21px;
@@ -243,6 +246,191 @@
                 #rotate-steric{
                     height: 90px;
                     top: 50px;
+                }
+            }
+        }
+    }
+}
+
+// ------------mobile
+
+
+@media (max-width: 750px){
+    #feedbackSec {
+        width: 100%;
+        height: fit-content;
+        max-height: unset;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 24px;
+        padding-bottom: 100px;
+        
+        .feedback-border-top{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0px 20px;
+            div{
+                height: 100%;
+                width: 100%;
+                background-color: var(--gray-c5);
+            }
+        }
+        &>div:nth-child(1){
+            font-size: 16px;
+            line-height: 21px;
+            width: 100%;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            
+            span{
+                display: inline-block;
+                border-radius: 20px;
+                width: 8px;
+                height: 8px;
+                background-color: black;
+                margin-right: 8px;
+            }
+        }
+        
+        .feedbackCon{
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            .feedbackdetail{
+                height: 90%;
+                flex-grow: 1;
+                padding-top: 50px;
+                display: flex;
+                flex-direction: column;
+                
+                &>div:nth-child(1){
+                    display: flex;
+                    gap: 0px;
+                    flex-direction: column;
+                    max-width: unset;
+                    flex-shrink: 0;
+                    width: 100%;
+        
+                    .carousel_track{
+                        display: flex;
+                        overflow-x: hidden;
+                        p{
+                        transform: translateX(-300%);
+                            flex-shrink: 0;
+                            height: 100%;
+                            width: 100%;
+                            font-size: 26px;
+                            line-height: 35px;
+                            font-weight: 400 !important;
+                        }
+        
+                    }
+                    
+        
+                    &>div:nth-child(2){
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                       padding-top: 20px;
+                       z-index: 10;
+                        .tablet{
+                            min-width: 200px;
+                            white-space: nowrap;
+                            border: 1px dashed var(--dark);
+                            border-radius: 100px;
+                            padding: 20px;
+                            padding-right: 30px;
+                            height: 60px;
+                            display: flex;
+                            align-items: center;
+                            background-color: var(--light);
+                            span{
+                                display: inline-block;
+                                width: 30px;
+                            height: 30px;
+                            border-radius: 100px;
+                            background-color: var(--dark);
+                            color: var(--light);
+                            text-align: center;
+                            font-size: 14px;
+                            line-height: 30px;
+                            margin-right:10px;
+        
+                            }
+        
+                            h2{
+                                font-family: var(--SatoshiM) !important;
+                                font-size: 18px;
+                            line-height: normal;
+                            display: none;
+                            }
+                            h2.active{
+                                display: block;
+                                 }
+                            
+                            p{
+                                font-weight: 400 !important;
+                                font-size: 18px;
+                            line-height: normal;
+                            display: none;
+                            }
+                            p.active{
+                                display: block;
+                                 }
+                        }
+        
+                        button{
+                            cursor: pointer;
+                            background-color: var(--dark);
+                            color: var(--light);
+                            min-width: 37px;
+                            min-height: 37px;
+                            width: 37px;
+                            height: 37px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100px;
+                            text-align: center;
+                            outline: none;
+                            border: none;
+                            transition: all 500ms ease;
+    
+                            svg{
+                                width: 17px;
+                                height: 17px;
+                            }
+        
+                            &:hover{
+                                transform: scale(1.2);
+                            }
+                            
+                            &:nth-child(2){
+                                background-color: var(--gray-d4) !important;
+                            }
+        
+                        }
+                    }
+                }
+            }
+        
+            .feebackimg{
+                position: relative;
+                padding-top: 100px;
+                #biglogo{
+                height: 142px;
+                }
+                #rotate-steric{
+                    position: absolute;
+                    top: 110px;
+                height: 25px;
+                    left: 50%;
+                    animation: rotate 15s linear infinite forwards;
                 }
             }
         }

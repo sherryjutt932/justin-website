@@ -9,7 +9,7 @@
   height: 100vh;
   width: 100%;
   position: relative;
-  padding: 64px;
+  padding: 64px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,6 +39,12 @@
   flex-wrap: nowrap;
   margin: 30px 0px;
   margin-top: 70px;
+}
+#aboutRef .pc-aboutus {
+  display: block;
+}
+#aboutRef .mobile-aboutus {
+  display: none;
 }
 #aboutRef .scrollerWrapper {
   display: flex;
@@ -142,5 +148,112 @@
   .aboutdetail > div:nth-child(2) img {
     width: 256px;
     height: 256px;
+  }
+}
+@media (max-width: 750px) {
+  #aboutSec {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+    background-color: var(--main);
+  }
+  .aboutus {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    padding: 50px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .aboutus .abouthead {
+    font-family: var(--Satoshi);
+    font-size: 20px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .aboutus .abouthead .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: var(--dark);
+    margin-right: 8px;
+  }
+  #aboutRef {
+    width: 100%;
+    font-size: 36px;
+    font-weight: 400 !important;
+    line-height: 55px;
+    font-family: var(--NohemiL);
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px 0px;
+    margin-top: 70px;
+  }
+  #aboutRef .pc-aboutus {
+    display: none;
+  }
+  #aboutRef .mobile-aboutus {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  #aboutRef .mobile-aboutus > div:nth-child(1) {
+    flex-grow: 1;
+  }
+  #aboutRef .mobile-aboutus > div:nth-child(2) {
+    display: flex;
+    height: 80%;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  #aboutRef .mobile-aboutus > div:nth-child(2) .animicon {
+    width: 60px;
+    height: 60px;
+  }
+  #aboutRef .mobile-aboutus > div:nth-child(2) .animicon:nth-child(even) {
+    position: relative;
+    left: -120%;
+  }
+  .aboutdetail {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 50px;
+  }
+  .aboutdetail > div:nth-child(1) {
+    flex: 1 1 0%;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: end;
+  }
+  .aboutdetail > div:nth-child(1) p {
+    max-width: 100%;
+    font-family: var(--Satoshi);
+    font-size: 18px;
+    font-weight: 400 !important;
+    line-height: 27px;
+    margin-right: 0px;
+  }
+  .aboutdetail > div:nth-child(2) {
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: end;
+  }
+  .aboutdetail > div:nth-child(2) img {
+    width: 132px;
+    height: 132px;
   }
 }/*# sourceMappingURL=aboutUs.css.map */
