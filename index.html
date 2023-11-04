@@ -1489,6 +1489,27 @@
 
   </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Code to run after the DOM is fully loaded
+
+    // Function to reload the page
+    function reloadPage() {
+      location.reload();
+    }
+
+    // Attach the reload function to the window's resize event
+    window.addEventListener("resize", function () {
+      // Debounce the reload to avoid excessive reloading
+      clearTimeout(window.resizeTimer);
+      window.resizeTimer = setTimeout(function () {
+        reloadPage();
+      }, 250);
+    });
+  });
+</script>
+
+
   <!-- <script src="./scripts/boxes.js"></script> -->
 </body>
 
