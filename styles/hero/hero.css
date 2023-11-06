@@ -500,7 +500,7 @@ nav .line {
     height: 70px;
   }
   .head .headCon .detail > div:nth-child(1) {
-    padding-left: 26px;
+    padding-left: 50%;
   }
   .head .headCon .detail > div:nth-child(1) a span {
     margin-left: 24px;
@@ -601,7 +601,7 @@ nav .line {
   .head .headCon .detail > div:nth-child(1) {
     font-size: 22px;
     line-height: 32px;
-    padding-left: 26px;
+    padding-left: 50%;
   }
   .head .headCon .detail > div:nth-child(1) p {
     width: 80%;
