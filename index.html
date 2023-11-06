@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <section id="navigationSec">
+  <section id="navigationSec" class="">
     <div id="navigation">
       <header>
         <nav>
@@ -64,7 +64,7 @@
               <div class="textbg">Login</div>
             </div>
 
-            <button onclick="toggleMenu()">
+            <button style="opacity: 0;">
               <img src="./assets/icons/cancel.svg" alt="hamburger" />
             </button>
           </div>
@@ -220,8 +220,14 @@
             </div>
 
 
-            <button onclick="toggleMenu()">
-              <img src="./assets/icons/hamBurger.svg" alt="hamburger" />
+           
+            <button style="z-index: 100;" onclick="toggleMenu()" class="HeadrnavBtn">
+              <!-- <img src="./assets/icons/hamBurger.svg" alt="hamburger" /> -->
+              <div class="nav-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
 
           </div>
@@ -235,7 +241,7 @@
             <div>
               Your Trusted Partner <br id="deskbr" />
               For Your
-              <span id="circle" class="circle"></span>nline
+              <span style="display: inline-block;"><span id="circle" class="circle"></span>nline</span>
               <div style="z-index:20;" id="marqueeWrapper">
                 <div id="marquee">
                   <div id="first">
@@ -251,7 +257,6 @@
 
               <!-- bottom right content -->
               <div class="detail">
-                <div></div>
                 <div>
                   <p>
                     Our top priority is to provide exceptional support to our
@@ -376,8 +381,13 @@
               <div class="textbg">Login</div>
             </div>
 
-            <button onclick="toggleMenu()">
-              <img src="./assets/icons/hamBurger.svg" alt="hamburger" />
+            <button class="HeadrnavBtn" onclick="toggleMenu()">
+              <!-- <img src="./assets/icons/hamBurger.svg" alt="hamburger" /> -->
+              <div class="nav-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
           </div>
 
@@ -390,7 +400,7 @@
             <div>
               Your Trusted Partner <br id="deskbr" />
               For Your
-              <span id="circleCliper" class="circle"></span>nline
+              <span style="display: inline-block;"><span id="circleCliper" class="circle"></span>nline</span>
               <div id="marqueeWrapper">
                 <div id="marquee">
                   <div id="first">
@@ -406,7 +416,6 @@
 
               <!-- bottom right content -->
               <div class="detail">
-                <div></div>
                 <div>
                   <p>
                     Our top priority is to provide exceptional support to our
@@ -1258,8 +1267,6 @@
       <div class="feedbackdetail">
         <div>
           <div id="feedbackP" class="carousel_track">
-            <p class="carousel">Our team consistently achieves defined objectives through a strong dedication to
-              success,employing a blend of creativity.</p>
             <p class="carousel">Creativity is the cornerstone of our problem-solving strategy. We approach each
               challenge with inventive thinking, turning obstacles into opportunities. </p>
             <p class="carousel">Punctuality and reliability are embedded in our team's ethos. We adhere to deadlines
@@ -1330,18 +1337,100 @@
         </p>
 
         <div class="tabsflex">
-          <a href="/">Work <img src="./assets/icons/link.svg" alt=""></a>
-          <a href="/">Process <img src="./assets/icons/link.svg" alt=""></a>
-          <a href="/">About <img src="./assets/icons/link.svg" alt=""></a>
-          <a href="/">Plans <img src="./assets/icons/link.svg" alt=""></a>
+          <a href="/" class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">Work</div>
+            <div class="hiddenTag" >Work</div>
+            </div>
+  
+            <div>
+              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+            </div>
+          </a>
 
-          <a class="mob-only" href="/">Contact Us <img src="./assets/icons/link.svg" alt=""></a>
-          <a class="mob-only" href="/">Services <img src="./assets/icons/link.svg" alt=""></a>
+          <a href="/" class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">Process</div>
+            <div class="hiddenTag" >Process</div>
+            </div>
+  
+            <div>
+              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+            </div>
+          </a><a href="/" class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">About</div>
+            <div class="hiddenTag" >About</div>
+            </div>
+  
+            <div>
+              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+            </div>
+          </a><a href="/" class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">Plans</div>
+            <div class="hiddenTag" >Plans</div>
+            </div>
+  
+            <div>
+              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+            </div>
+          </a>
+          
+        </a><a href="/" class="LinkhoverGroup mob-only">
+          <div>
+            <div class="visibleTag">Contact Us</div>
+          <div class="hiddenTag" >Contact Us</div>
+          </div>
+
+          <div>
+            <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+            <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+          </div>
+        </a>
+
+      </a><a href="/" class="LinkhoverGroup mob-only">
+        <div>
+          <div class="visibleTag">Services</div>
+        <div class="hiddenTag" >Services</div>
+        </div>
+
+        <div>
+          <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+          <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+        </div>
+      </a>
+         
         </div>
 
         <div class="tabsflex">
-          <a href="/">Contact Us <img src="./assets/icons/link.svg" alt=""></a>
-          <a href="/">Services <img src="./assets/icons/link.svg" alt=""></a>
+        </a><a href="/" class="LinkhoverGroup">
+          <div>
+            <div class="visibleTag">Contact Us</div>
+          <div class="hiddenTag" >Contact Us</div>
+          </div>
+
+          <div>
+            <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+            <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+          </div>
+        </a>
+
+      </a><a href="/" class="LinkhoverGroup">
+        <div>
+          <div class="visibleTag">Services</div>
+        <div class="hiddenTag" >Services</div>
+        </div>
+
+        <div>
+          <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+          <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+        </div>
+      </a>
         </div>
       </div>
     </div>
@@ -1379,24 +1468,116 @@
         <h1>Reach Us</h1>
         <p><img src="./assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
         <p><img src="./assets/icons/pk.svg" alt=""> +92 8754 3864</p>
-        <p>business@webpioneers.com</p>
+        <a href="/" class="LinkhoverGroup">
+          <div>
+            <div class="visibleTag">business@webpioneers.com</div>
+          <div class="hiddenTag" >business@webpioneers.com</div>
+          </div>
+
+          <div>
+            <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+            <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+          </div>
+        </a>
       </div>
       <div>
-        <h1>Social</h1>
-        <a href="/">linkedin <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a href="/">Instagram <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a href="/">Dribble <img src="./assets/icons/linkb.svg" alt=""></a>
+        <div>
+          <h1>Social</h1>
+          <a  href="/"class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">linkedin</div>
+            <div class="hiddenTag">linkedin</div>
+            </div>
+            <div>
+              <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+            </div>
+          </a>
+          <a  href="/"class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">Instagram</div>
+            <div class="hiddenTag">Instagram</div>
+            </div>
+            <div>
+              <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+            </div>
+          </a>
+          <a  href="/"class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">Dribble</div>
+            <div class="hiddenTag">Dribble</div>
+            </div>
+            <div>
+              <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+            </div>
+          </a>
+        </div>
       </div>
       <div>
-        <h1>Quick</h1>
-        <a href="/">Pricing <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a href="/">About <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a href="/">Team <img src="./assets/icons/linkb.svg" alt=""></a>
+        <div>
+          <h1>Quick</h1>
+        <a href="/" class="LinkhoverGroup">
+          <div>
+            <div class="visibleTag">Pricing</div>
+          <div class="hiddenTag" >Pricing</div>
+          </div>
+
+          <div>
+            <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+            <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+          </div>
+        </a>
+        <a  href="/"class="LinkhoverGroup">
+          <div>
+            <div class="visibleTag">About</div>
+          <div class="hiddenTag">About</div>
+          </div>
+          <div>
+            <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+            <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+          </div>
+        </a>
+        <a  href="/"class="LinkhoverGroup">
+          <div>
+            <div class="visibleTag">Team</div>
+          <div class="hiddenTag">Team</div>
+          </div>
+          <div>
+            <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+            <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+          </div>
+        </a>
+        </div>
       </div>
       <div>
-        <h1>Legal</h1>
-        <a href="/">Privacy <img src="./assets/icons/linkb.svg" alt=""></a>
-        <a href="/">Terms <img src="./assets/icons/linkb.svg" alt=""></a>
+        <div>
+          <h1>Legal</h1>
+
+          <a href="/" class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">Privacy</div>
+            <div class="hiddenTag" >Privacy</div>
+            </div>
+  
+            <div>
+              <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+            </div>
+          </a>
+          <a href="/" class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">Terms</div>
+            <div class="hiddenTag" >Terms</div>
+            </div>
+  
+            <div>
+              <img class="visibleTag" src="./assets/icons/linkb.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/linkb.svg" alt="">
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </section>

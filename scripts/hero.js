@@ -1,7 +1,7 @@
 let heroBg = document.getElementById('heroBg');
 let circleBg = document.getElementById('circleCliper');
 let heroSec = document.getElementById('heroSec');
-let tl; // declare timeline variable
+let herotimeline; // declare timeline variable
 
 // Function to set circle position
 function setCirclePosition() {
@@ -29,7 +29,7 @@ function setTimeline(location) {
         clipPath: `circle(0% at ${location.left}px ${location.top}px)`,
       },
       {
-        clipPath: `circle(200% at ${location.left}px ${location.top}px)`,
+        clipPath: `circle(150% at ${location.left}px ${location.top}px)`,
       },
       "a"
     ).to(
@@ -54,30 +54,30 @@ async function runAnimation() {
   const timeline = setTimeline(initialCirclePosition);
 
   // Destroy existing timeline if it exists
-  if (tl) {
-    tl.kill();
+  if (herotimeline) {
+    herotimeline.kill();
   }
 
-  tl = timeline;
+  herotimeline = timeline;
 
   // Create ScrollTrigger
   ScrollTrigger.create({
     trigger: heroSec,
     start: "top top",
-    end: "bottom+=500",
+    end: "+=500",
     onEnter: () => {
-      console.log("Animation started");
       // Additional actions when the animation starts
     },
-    scrub: 1,
-    animation: tl,
+    scrub: true,
+    animation: herotimeline,
   });
 }
+
 
 setTimeout(() => {
     // Initial run of the animation
     runAnimation();
-    
+
     // Set listener for window resize
     window.addEventListener("resize", () => {
       // Run animation on resize
@@ -88,13 +88,18 @@ setTimeout(() => {
 
 
 
-
 // ----------------------------Toggle Menu
 
 function toggleMenu() {
   const element = document.getElementById("navigationSec");
+  var btnNavs = document.getElementsByClassName("nav-icon1");
+  Array.from(btnNavs).forEach(ele => {
+    ele.classList.toggle('open');
+  });
 
-  if (element) {
+  element.classList.toggle('open');
+
+  if (element && !isMobile()) {
     const currentHeight = element.offsetHeight;
     const isFullHeight = currentHeight === window.innerHeight;
 

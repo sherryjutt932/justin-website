@@ -1,3 +1,59 @@
+/* Icon 1 */
+.HeadrnavBtn {
+  transform: scale(55%) translateY(6px);
+}
+
+.nav-icon1 {
+  width: 53px;
+  height: 45px;
+  display: block;
+  position: relative;
+  margin: 50px auto;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #000;
+  border-radius: 4px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+.nav-icon1 span:nth-child(2) {
+  top: 18px;
+}
+
+.nav-icon1 span:nth-child(3) {
+  top: 36px;
+}
+
+.nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+}
+
+.nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-135deg);
+}
+
 #navigationSec {
   width: 100%;
   height: 0vh;
@@ -167,19 +223,19 @@
   flex-direction: column;
   padding: 0 100px;
 }
+#heroBg .nav-icon1 span {
+  background-color: #fff !important;
+}
 #heroBg nav {
   color: var(--light);
-}
-#heroBg .head .headCon {
-  width: 100%;
 }
 #heroBg .head .headCon .circle {
   background-color: var(--dark);
 }
-#heroBg .head .headCon .detail > div:nth-child(2) a {
+#heroBg .head .headCon .detail > div:nth-child(1) a {
   color: inherit;
 }
-#heroBg .head .headCon .detail > div:nth-child(2) a > div > div {
+#heroBg .head .headCon .detail > div:nth-child(1) a > div > div {
   background-color: var(--light);
 }
 
@@ -240,9 +296,8 @@ nav {
   overflow: hidden;
   display: flex;
   align-items: center;
-  height: 12vh;
-  min-height: 65px;
-  max-height: 100px;
+  min-height: 100px;
+  height: 100px;
   justify-content: space-between;
   white-space: nowrap;
 }
@@ -329,6 +384,7 @@ nav .line {
   font-size: clamp(70px, 7vw, 100px);
   line-height: 1;
   display: flex;
+  width: 100%;
   align-items: center;
   padding: 48px 0px;
   font-family: var(--NohemiL);
@@ -343,42 +399,44 @@ nav .line {
   aspect-ratio: 1/1;
   display: inline-block;
 }
+.head .headCon > div:nth-child(1) {
+  width: 100%;
+}
 .head .headCon .detail {
   width: 100%;
   display: flex;
   font-family: var(--Satoshi);
 }
-.head .headCon .detail > div {
-  flex: 1 1 0%;
-}
-.head .headCon .detail > div:nth-child(2) {
+.head .headCon .detail > div:nth-child(1) {
   font-size: 16px;
   line-height: 22px;
-  padding-left: 26px;
+  padding-left: 50%;
+  flex: 1 1 0%;
 }
-.head .headCon .detail > div:nth-child(2) p {
+.head .headCon .detail > div:nth-child(1) p {
   color: var(--gray-79);
   width: 80%;
   font-weight: 400 !important;
   min-width: 300px;
   max-width: 477px;
 }
-.head .headCon .detail > div:nth-child(2) a {
+.head .headCon .detail > div:nth-child(1) a {
   font-size: 14px;
   line-height: 21px;
   margin-top: 16px;
   font-weight: 600;
+  font-family: var(--SatoshiM);
   text-transform: uppercase;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: inherit;
 }
-.head .headCon .detail > div:nth-child(2) a > div {
+.head .headCon .detail > div:nth-child(1) a > div {
   position: relative;
   padding-bottom: 4px;
 }
-.head .headCon .detail > div:nth-child(2) a > div > div {
+.head .headCon .detail > div:nth-child(1) a > div > div {
   background-color: var(--dark);
   position: absolute;
   bottom: -2px;
@@ -388,10 +446,10 @@ nav .line {
   width: 100%;
   transition: all 300ms;
 }
-.head .headCon .detail > div:nth-child(2) a:hover > div > div {
+.head .headCon .detail > div:nth-child(1) a:hover > div > div {
   width: 0;
 }
-.head .headCon .detail > div:nth-child(2) a span {
+.head .headCon .detail > div:nth-child(1) a span {
   color: var(--dark);
   transition: all 300ms;
   height: 36px;
@@ -402,10 +460,10 @@ nav .line {
   border-radius: 100px;
   display: block;
 }
-.head .headCon .detail > div:nth-child(2) a span img {
+.head .headCon .detail > div:nth-child(1) a span img {
   vertical-align: middle;
 }
-.head .headCon .detail > div:nth-child(2) a:hover span {
+.head .headCon .detail > div:nth-child(1) a:hover span {
   border: 1px dashed var(--light);
 }
 
@@ -441,10 +499,10 @@ nav .line {
     width: 70px;
     height: 70px;
   }
-  .head .headCon .detail > div:nth-child(2) {
+  .head .headCon .detail > div:nth-child(1) {
     padding-left: 26px;
   }
-  .head .headCon .detail > div:nth-child(2) a span {
+  .head .headCon .detail > div:nth-child(1) a span {
     margin-left: 24px;
     padding: 4px 24px;
   }
@@ -540,58 +598,93 @@ nav .line {
     width: 80px;
     height: 80px;
   }
-  .head .headCon .detail > div:nth-child(2) {
+  .head .headCon .detail > div:nth-child(1) {
     font-size: 22px;
     line-height: 32px;
     padding-left: 26px;
   }
-  .head .headCon .detail > div:nth-child(2) p {
+  .head .headCon .detail > div:nth-child(1) p {
     width: 80%;
     max-width: 636px;
   }
-  .head .headCon .detail > div:nth-child(2) a {
+  .head .headCon .detail > div:nth-child(1) a {
     font-size: 18px;
     line-height: 1;
   }
-  .head .headCon .detail > div:nth-child(2) a > div {
+  .head .headCon .detail > div:nth-child(1) a > div {
     padding-bottom: 4px;
   }
-  .head .headCon .detail > div:nth-child(2) a > div > div {
+  .head .headCon .detail > div:nth-child(1) a > div > div {
     bottom: -6px;
   }
-  .head .headCon .detail > div:nth-child(2) a span {
+  .head .headCon .detail > div:nth-child(1) a span {
     margin-left: 32px;
     padding: 6px 32px;
     height: 40px;
   }
 }
 @media (max-width: 750px) {
+  .HeadrnavBtn {
+    transform: scale(100%) translateY(0px);
+  }
+  .HeadrnavBtn .nav-icon1 {
+    width: 53px;
+    height: 45px;
+    display: block;
+    position: relative;
+    margin: 50px auto;
+    transform: scale(40%) rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .HeadrnavBtn .nav-icon1 span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #000;
+    border-radius: 4px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
   #navigationSec {
     width: 100%;
-    height: 0vh;
+    height: 100vh;
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
     background-color: transparent !important;
-    transition: all 0ms;
+  }
+  #navigationSec.open #mobileNav {
+    background-color: rgba(0, 0, 0, 0.5019607843);
+  }
+  #navigationSec.open #mobileNav > div {
+    -webkit-clip-path: circle(200% at 90% 9%);
+            clip-path: circle(200% at 90% 9%);
   }
   #navigation {
     display: none;
   }
   #mobileNav {
-    background-color: rgba(0, 0, 0, 0.5019607843);
     display: flex;
     height: 100%;
     width: 100%;
     position: relative;
+    transition: all 800ms ease;
   }
   #mobileNav > div {
+    transition: all 800ms ease;
+    overflow: hidden;
+    -webkit-clip-path: circle(0% at 90% 9%);
+            clip-path: circle(0% at 90% 9%);
     background-color: var(--light);
     z-index: 100;
-    position: absolute;
-    right: 30px;
+    position: fixed;
+    right: 20px;
     top: 30px;
     border-radius: 24px;
     width: 264px;
@@ -686,10 +779,10 @@ nav .line {
   #heroBg .head .headCon .circle {
     background-color: var(--dark);
   }
-  #heroBg .head .headCon .detail > div:nth-child(2) a {
+  #heroBg .head .headCon .detail > div:nth-child(1) a {
     color: inherit;
   }
-  #heroBg .head .headCon .detail > div:nth-child(2) a > div > div {
+  #heroBg .head .headCon .detail > div:nth-child(1) a > div > div {
     background-color: var(--light);
   }
   #marqueeWrapper {
@@ -834,26 +927,20 @@ nav .line {
     display: flex;
     font-family: var(--Satoshi);
   }
-  .head .headCon .detail > div {
-    flex: 1 1 0%;
-  }
   .head .headCon .detail > div:nth-child(1) {
-    display: none;
-  }
-  .head .headCon .detail > div:nth-child(2) {
     font-size: 16px;
     line-height: 27px;
     padding-left: 0px;
     padding: 38px 0px;
   }
-  .head .headCon .detail > div:nth-child(2) p {
+  .head .headCon .detail > div:nth-child(1) p {
     color: var(--gray-79);
     width: 100%;
     font-weight: 400 !important;
     min-width: 300px;
     max-width: 477px;
   }
-  .head .headCon .detail > div:nth-child(2) a {
+  .head .headCon .detail > div:nth-child(1) a {
     font-size: 14px;
     line-height: 21px;
     margin-top: 16px;
@@ -864,11 +951,11 @@ nav .line {
     text-decoration: none;
     color: inherit;
   }
-  .head .headCon .detail > div:nth-child(2) a > div {
+  .head .headCon .detail > div:nth-child(1) a > div {
     position: relative;
     padding-bottom: 4px;
   }
-  .head .headCon .detail > div:nth-child(2) a > div > div {
+  .head .headCon .detail > div:nth-child(1) a > div > div {
     background-color: var(--dark);
     position: absolute;
     bottom: -2px;
@@ -878,10 +965,10 @@ nav .line {
     width: 100%;
     transition: all 300ms;
   }
-  .head .headCon .detail > div:nth-child(2) a:hover > div > div {
+  .head .headCon .detail > div:nth-child(1) a:hover > div > div {
     width: 0;
   }
-  .head .headCon .detail > div:nth-child(2) a span {
+  .head .headCon .detail > div:nth-child(1) a span {
     color: var(--dark);
     transition: all 300ms;
     height: 36px;
@@ -892,10 +979,10 @@ nav .line {
     border-radius: 100px;
     display: block;
   }
-  .head .headCon .detail > div:nth-child(2) a span img {
+  .head .headCon .detail > div:nth-child(1) a span img {
     vertical-align: middle;
   }
-  .head .headCon .detail > div:nth-child(2) a:hover span {
+  .head .headCon .detail > div:nth-child(1) a:hover span {
     border: 1px dashed var(--light);
   }
 }/*# sourceMappingURL=hero.css.map */

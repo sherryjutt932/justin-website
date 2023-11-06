@@ -1,3 +1,81 @@
+
+/* Icon 1 */
+.HeadrnavBtn{
+    transform: scale(55%) translateY(6px);
+}
+
+.nav-icon1{
+    width: 53px;
+    height: 45px;
+    display: block;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+
+
+  
+  .nav-icon1 span{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #000;
+    border-radius: 4px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+  
+  .nav-icon1 span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .nav-icon1 span:nth-child(2) {
+    top: 18px;
+  }
+  
+  .nav-icon1 span:nth-child(3) {
+    top: 36px;
+  }
+  
+  .nav-icon1.open span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  
+  .nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  .nav-icon1.open span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  
+
 #navigationSec {
     width: 100%;
     height: 0vh;
@@ -183,20 +261,23 @@
     flex-direction: column;
     padding: 0 100px;
 
+    .nav-icon1 span {
+        background-color: #fff !important;
+      }
+
     nav {
         color: var(--light);
     }
 
     .head {
         .headCon {
-            width: 100%;
             .circle {
                 background-color: var(--dark);
             }
 
             .detail {
                 &>div {
-                    &:nth-child(2) {
+                    &:nth-child(1) {
                         a {
                             color: inherit;
 
@@ -272,9 +353,9 @@ nav {
     overflow: hidden;
     display: flex;
     align-items: center;
-    height: 12vh;
-    min-height: 65px;
-    max-height: 100px;
+    // height: 12vh;
+    min-height: 100px;
+    height: 100px;
     justify-content: space-between;
     white-space: nowrap;
 
@@ -373,6 +454,7 @@ nav {
         font-size: clamp(70px, 7vw, 100px);
         line-height: 1;
         display: flex;
+        width: 100%;
         align-items: center;
         padding: 48px 0px;
         font-family: var(--NohemiL);
@@ -388,6 +470,10 @@ nav {
             display: inline-block;
         }
 
+        & > div:nth-child(1){
+            width: 100%;
+        }
+
         .detail {
             width: 100%;
             display: flex;
@@ -395,12 +481,12 @@ nav {
 
             // border: 1px solid red;
             &>div {
-                flex: 1 1 0%;
 
-                &:nth-child(2) {
+                &:nth-child(1) {
                     font-size: 16px;
                     line-height: 22px;
-                    padding-left: 26px;
+                    padding-left: 50%;
+                    flex: 1 1 0%;
 
                     p {
                         color: var(--gray-79);
@@ -416,6 +502,7 @@ nav {
                         line-height: 21px;
                         margin-top: 16px;
                         font-weight: 600;
+                        font-family: var(--SatoshiM);
                         text-transform: uppercase;
                         display: flex;
                         align-items: center;
@@ -520,7 +607,7 @@ nav {
 
             .detail {
                 &>div {
-                    &:nth-child(2) {
+                    &:nth-child(1) {
                         padding-left: 26px;
 
                         a {
@@ -664,7 +751,7 @@ nav {
 
             .detail {
                 &>div {
-                    &:nth-child(2) {
+                    &:nth-child(1) {
                         font-size: 22px;
                         line-height: 32px;
                         padding-left: 26px;
@@ -705,16 +792,64 @@ nav {
 // ---------------------mobile
 
 @media (max-width: 750px) {
+    .HeadrnavBtn{
+        transform: scale(100%) translateY(0px);
+
+        .nav-icon1{
+            width: 53px;
+            height: 45px;
+            display: block;
+            position: relative;
+            margin: 50px auto;
+            -webkit-transform:scale(40%)  rotate(0deg);
+            -moz-transform:scale(40%)  rotate(0deg);
+            -o-transform:scale(40%)  rotate(0deg);
+            transform:scale(40%)  rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+          }
+        
+          .nav-icon1 span{
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background: #000;
+            border-radius: 4px;
+            opacity: 1;
+            left: 0;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+          }
+    }
+    
     #navigationSec {
         width: 100%;
-        height: 0vh;
+        height: 100vh;
         overflow: hidden;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 50;
         background-color: transparent !important;
-        transition: all 0ms;
+    }
+   
+    #navigationSec.open #mobileNav {
+        background-color: #00000080;
+    }
+    
+    #navigationSec.open #mobileNav > div{
+        
+        clip-path: circle(200% at 90% 9%);
     }
     
     #navigation {
@@ -722,16 +857,19 @@ nav {
     }
 
     #mobileNav{
-        background-color: #00000080;
         display: flex;
         height: 100%;
         width: 100%;
         position: relative;
+        transition: all 800ms ease;
         & > div{
+        transition: all 800ms ease;
+        overflow: hidden;
+        clip-path: circle(0% at 90% 9%);
             background-color: var(--light);
             z-index: 100;
-            position: absolute;
-            right: 30px;
+            position: fixed;
+            right: 20px;
             top: 30px;
             border-radius: 24px;
             width: 264px;
@@ -842,7 +980,7 @@ nav {
     
                 .detail {
                     &>div {
-                        &:nth-child(2) {
+                        &:nth-child(1) {
                             a {
                                 color: inherit;
     
@@ -998,6 +1136,7 @@ nav {
             font-family: var(--NohemiL);
             font-weight: 300;
 
+
             #deskbr{
                 display: none;
             }
@@ -1019,13 +1158,8 @@ nav {
     
                 // border: 1px solid red;
                 &>div {
-                    flex: 1 1 0%;
-
-                    &:nth-child(1){
-                        display: none;
-                    }
     
-                    &:nth-child(2) {
+                    &:nth-child(1) {
                         font-size: 16px;
                         line-height: 27px;
                         padding-left: 0px;

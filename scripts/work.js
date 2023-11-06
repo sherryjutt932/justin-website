@@ -12,78 +12,153 @@ if (!isMobile()) {
     x: -detailRef.children[0].offsetWidth * (detailRef.childElementCount - 1),
   });
 
+  
   if (true) {
     const imgArray = Array.from(imgRef.children);
-
-    for (let index = 0; index < imgArray.length; index++) {
-      const child = imgArray[index];
-      worktimeline.to(
-        child,
-        {
-          yPercent: -100 * index,
-          duration:1,
-          ease:"none"
-        },
-        index
-      );
-
-      // Nested loop to access all previous children
-      for (let prevIndex = 0; prevIndex < index; prevIndex++) {
-        const prevChild = imgArray[prevIndex];
-
-        worktimeline.to(
-          prevChild,
-          {
-            yPercent: -100 * index,
-            duration:1,
-            ease:"none"
-
-          },
-          index
-        );
-      }
-
-      worktimeline.addLabel(index+"abc")
-    }
+   
+    worktimeline.to(
+      imgArray[0],
+      {
+        yPercent: -100,
+        duration:1,
+        ease:"none"
+      },
+      1
+    ).to(
+      imgArray[1],
+      {
+        yPercent: -100,
+        duration:1,
+        ease:"none"
+      },
+      1
+    ).to(
+      imgArray[2],
+      {
+        yPercent: -100,
+        duration:1,
+        ease:"none"
+      },
+      1
+    ).to(
+      imgArray[0],
+      {
+        yPercent: -200,
+        duration:1,
+        ease:"none"
+      },
+      2
+    ).to(
+      imgArray[1],
+      {
+        yPercent: -200,
+        duration:1,
+        ease:"none"
+      },
+      2
+    ).to(
+      imgArray[2],
+      {
+        yPercent: -200,
+        duration:1,
+        ease:"none"
+      },
+      2
+    );
   }
 
   if (true) {
     const detailArray = Array.from(detailRef.children);
 
-    for (let index = 0; index < detailArray.length; index++) {
-      const child = detailArray[index];
-      worktimeline.to(
-        child,
-        {
-            xPercent: 100 * index,
-            duration:1,
-            ease:"none"
-        },
-        index
-      );
+    // for (let index = 1; index < detailArray.length; index++) {
+    //   const child = detailArray[index];
+    //   console.log("a")
+    //   worktimeline.to(
+    //     child,
+    //     {
+    //         xPercent: 100 * index,
+    //         duration:1,
+    //         ease:"none"
+    //       },
+    //       index
+    //       );
+          
+    //       // Nested loop to access all previous children
+    //       for (let prevIndex = 0; prevIndex < index; prevIndex++) {
+    //         const prevChild = detailArray[prevIndex];
+            
+    //         console.log("b")
+    //     worktimeline.to(
+    //       prevChild,
+    //       {
+    //         xPercent: 100 * index,
+    //         opacity: 0,
+    //         duration:.4,
+    //         ease:"none"
+    //       },
+    //       index
+    //     );
+    //   }
+    // }
 
-      // Nested loop to access all previous children
-      for (let prevIndex = 0; prevIndex < index; prevIndex++) {
-        const prevChild = detailArray[prevIndex];
-
-        worktimeline.to(
-          prevChild,
-          {
-            xPercent: 100 * index,
-            opacity: 0,
-            duration:.4,
-            ease:"none"
-          },
-          index
-        );
-      }
-    }
+    worktimeline.to(
+      detailArray[0],
+      {
+        xPercent: 100,
+        duration:0.4,
+        opacity: 0,
+        ease:"none"
+      },
+      1
+    ).to(
+      detailArray[1],
+      {
+        xPercent: 100,
+        duration:1,
+        ease:"none"
+      },
+      1
+    ).to(
+      detailArray[2],
+      {
+        xPercent: 100,
+        duration:1,
+        ease:"none"
+      },
+      1
+    ).to(
+      detailArray[0],
+      {
+        xPercent: 200,
+        opacity: 0,
+        duration:0.4,
+        ease:"none"
+      },
+      2
+    ).to(
+      detailArray[1],
+      {
+        xPercent: 200,
+        opacity: 0,
+        duration:0.4,
+        ease:"none"
+      },
+      2
+    ).to(
+      detailArray[2],
+      {
+       xPercent: 200,
+        duration:1,
+        ease:"none"
+      },
+      2
+    );
   }
 
   ScrollTrigger.create({
     trigger: workSec,
     start: "top top",
-    end: () => `+=${workSec.offsetHeight*2}`,
+    // end: () => `+=${workSec.offsetHeight}`,
     scrub: true,
     pin: true,
     animation: worktimeline,

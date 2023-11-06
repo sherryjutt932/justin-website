@@ -49,13 +49,14 @@
                     display: flex;
                     overflow-x: hidden;
                     p{
-                    transform: translateX(-300%);
+                    // transform: translateX(-300%);
                         flex-shrink: 0;
                         height: 100%;
                         width: 100%;
                         font-size: 26px;
                         line-height: 35px;
                         font-weight: 400 !important;
+                        transition: all 500ms ease;
                     }
     
                 }

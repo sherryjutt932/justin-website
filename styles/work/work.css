@@ -1,7 +1,6 @@
 #workSec {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   padding-top: 30px;
 }
 
@@ -176,6 +175,9 @@
   width: 85%;
 }
 .work .workflex {
+  display: none;
+}
+.work .morework {
   display: none;
 }
 
@@ -451,6 +453,7 @@
     height: fit-content;
   }
   .work .morework {
+    display: block;
     padding-top: 20px;
   }
   .work .morework a {

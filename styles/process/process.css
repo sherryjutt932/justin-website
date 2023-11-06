@@ -21,7 +21,7 @@
   font-size: 36px;
   display: flex;
   flex-wrap: nowrap;
-  font-family: var(--Nohemi);
+  font-family: var(--NohemiL);
 }
 #processSec .proc-marquee-wrap .proc-marquee-con #proc-marquee {
   flex: 1 1 0%;
