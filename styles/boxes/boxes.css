@@ -6,7 +6,7 @@
   overflow: hidden;
   font-family: var(--Satoshi);
   padding-top: 80px;
-  display: nones;
+  display: none;
 }
 
 #boxesRef2 {
