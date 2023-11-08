@@ -29,8 +29,8 @@ function setTimeline(location) {
         clipPath: `circle(0% at ${location.left}px ${location.top}px)`,
       },
       {
-        clipPath: `circle(150% at ${location.left}px ${location.top}px)`,
-        // clipPath: `circle(70% at ${location.left}px ${location.top}px)`,
+        // clipPath: `circle(150% at ${location.left}px ${location.top}px)`,
+        clipPath: `circle(70% at ${location.left}px ${location.top}px)`,
       },
       "a"
     ).to(
@@ -65,10 +65,10 @@ async function runAnimation() {
   ScrollTrigger.create({
     trigger: heroSec,
     start: "top top",
-    end: "+=2000",
+    // end: "+=2000",
 
-    // end: "+=500",
-    // pin:true,
+    end: "+=500",
+    pin:true,
 
     onEnter: () => {
       // Additional actions when the animation starts
@@ -112,6 +112,25 @@ function toggleMenu() {
     element.style.height = isFullHeight ? '0' : '100vh';
     // element.style.position = isFullHeight ? '' : '';
   }
+
+
+
+  // ------new
+  wrapper.classList.toggle("open");
+
+  if (wrapper.classList.contains("open")) {
+    setTimeout(() => {
+      navAnimatedIcon_pathlist[0].setAttribute("d", opend1);
+      navAnimatedIcon_pathlist[1].setAttribute("d", opend2);
+      navAnimatedIcon_pathlist[2].setAttribute("d", opend3);
+    }, 200); // 200 milliseconds delay
+  } else {
+    setTimeout(() => {
+      navAnimatedIcon_pathlist[0].setAttribute("d", closedd1);
+      navAnimatedIcon_pathlist[1].setAttribute("d", closedd2);
+      navAnimatedIcon_pathlist[2].setAttribute("d", closedd3);
+    }, 200); // 200 milliseconds delay
+  }
 }
 
 
@@ -119,7 +138,7 @@ function toggleMenu() {
 // ------------------------------------icon
 
 const apath_Navbar_brand = "./assets/Animation/Perks you'll love more/Design board/DesignBoard.json";;
-const apath_Navbar_uiux = './assets/Animation/Clear path to your peoject/Get your designs/GetYourDesigns.json';
+const apath_Navbar_uiux = './assets/Animation/get your designs_Rounded corners/Get your designs_rounded corner.json';
 const apath_Navbar_development = "./assets/Animation/Our_Process/Development/Development_Black.json";
 
 
@@ -130,3 +149,36 @@ const aicon_Navbar_development = "aicon-navbar-development";
 setupAnimation(aicon_Navbar_brand, apath_Navbar_brand);
 setupAnimation(aicon_Navbar_uiux, apath_Navbar_uiux);
 setupAnimation(aicon_Navbar_development, apath_Navbar_development);
+
+
+
+// -----------nav icon animation
+var navAnimatedIcon_pathlist = document.getElementsByClassName("changepath");
+var ele = document.getElementById("changesvg");
+var wrapper = document.getElementById("navAnimatedIcon");
+
+opend1 = "M-16,8 C-16,8 0,-8 0,-8 C0,-8 16,8 16,8";
+opend2 = "M-1,0 C-1,0 1,0 1,0";
+opend3 = "M-16,-9 C-16,-9 0,8 0,8 C0,8 16,-9 16,-9";
+
+closedd1 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
+closedd2 = "M-16,0 C-16,0 16,0 16,0";
+closedd3 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
+
+// wrapper.addEventListener("click", () => {
+//   wrapper.classList.toggle("open");
+
+//   if (wrapper.classList.contains("open")) {
+//     setTimeout(() => {
+//       navAnimatedIcon_pathlist[0].setAttribute("d", opend1);
+//       navAnimatedIcon_pathlist[1].setAttribute("d", opend2);
+//       navAnimatedIcon_pathlist[2].setAttribute("d", opend3);
+//     }, 200); // 200 milliseconds delay
+//   } else {
+//     setTimeout(() => {
+//       navAnimatedIcon_pathlist[0].setAttribute("d", closedd1);
+//       navAnimatedIcon_pathlist[1].setAttribute("d", closedd2);
+//       navAnimatedIcon_pathlist[2].setAttribute("d", closedd3);
+//     }, 200); // 200 milliseconds delay
+//   }
+// });

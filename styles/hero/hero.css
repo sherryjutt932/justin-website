@@ -1,6 +1,45 @@
 /* Icon 1 */
 .HeadrnavBtn {
-  transform: scale(55%) translateY(6px);
+  height: 40px;
+  width: 40px;
+}
+.HeadrnavBtn #navAnimatedIcon {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.HeadrnavBtn #navAnimatedIcon svg {
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  content-visibility: visible;
+}
+.HeadrnavBtn #navAnimatedIcon .changepath {
+  transition: all 500ms ease;
+}
+.HeadrnavBtn #navAnimatedIcon.open #p1change {
+  animation: iconanim 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.HeadrnavBtn #navAnimatedIcon.open #p2change {
+  animation: iconanim2 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.HeadrnavBtn #navAnimatedIcon.open #p3change {
+  animation: iconanim3 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes iconanim {
+  20% {
+    transform: translateY(10%);
+  }
+}
+@keyframes iconanim2 {
+  20% {
+    transform: scaleX(1.2);
+  }
+}
+@keyframes iconanim3 {
+  20% {
+    transform: translateY(-10%);
+  }
 }
 
 .nav-icon1 {
@@ -626,9 +665,6 @@ nav .line {
   }
 }
 @media (max-width: 750px) {
-  .HeadrnavBtn {
-    transform: scale(100%) translateY(0px);
-  }
   .HeadrnavBtn .nav-icon1 {
     width: 53px;
     height: 45px;

@@ -131,7 +131,7 @@ function setisActive(ind) {
 const apath_Process_discovery =
   "./assets/Animation/Our_Process/discovery/discovery.json";
 const apath_Process_strategy =
-  "./assets/Animation/Our_Process/Strategy/Strategy.json";
+  "./assets/Animation/Our_Process/Strategy/Test_StratergyIcon_Black.json";
 const apath_Process_design =
   "./assets/Animation/Our_Process/Design/Design_Icon_White.json";
 const apath_Process_development =
