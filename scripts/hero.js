@@ -29,8 +29,8 @@ function setTimeline(location) {
         clipPath: `circle(0% at ${location.left}px ${location.top}px)`,
       },
       {
-        // clipPath: `circle(150% at ${location.left}px ${location.top}px)`,
-        clipPath: `circle(70% at ${location.left}px ${location.top}px)`,
+        clipPath: `circle(150% at ${location.left}px ${location.top}px)`,
+        // clipPath: `circle(70% at ${location.left}px ${location.top}px)`,
       },
       "a"
     ).to(
@@ -65,10 +65,10 @@ async function runAnimation() {
   ScrollTrigger.create({
     trigger: heroSec,
     start: "top top",
-    // end: "+=2000",
+    end: "+=2000",
 
-    end: "+=500",
-    pin:true,
+    // end: "+=500",
+    // pin:true,
 
     onEnter: () => {
       // Additional actions when the animation starts
