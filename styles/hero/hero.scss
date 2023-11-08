@@ -21,8 +21,12 @@
     cursor: pointer;
   }
 
+//   .nav-icon1.open{
+//     position: fixed;
+//     top: 0px;
+//     right: 0px;
+//   }
 
-  
   .nav-icon1 span{
     display: block;
     position: absolute;
@@ -74,6 +78,8 @@
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
   }
+  
+
   
 
 #navigationSec {
@@ -157,6 +163,7 @@
                         display: flex;
                         max-width: 396px;
                         max-height: 164px;
+                        align-items: center;
                         border: 1px solid var(--gray-cd);
                         padding: 15px;
                         gap: 30px;
@@ -176,6 +183,11 @@
                             line-height: normal;
                             max-width: 180px;
                             font-family: var(--Satoshi);
+                        }
+                        .animicon{
+                            width: 55px;
+                            height: 55px;
+                            margin-right: 10px;
                         }
                     }
                 }
@@ -242,6 +254,8 @@
     align-items: center;
     flex-direction: column;
     padding: 0 100px;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 
@@ -302,10 +316,11 @@
     display: inline-block;
     border-radius: 200px;
     color: var(--light);
-    max-width: 475px;
+    // max-width: 475px;
+    max-width: 30vw;
     box-sizing: border-box;
     line-height: normal;
-    vertical-align: bottom;
+    vertical-align: middle;
     background-color: var(--sec);
 
     #marquee {
@@ -451,7 +466,7 @@ nav {
     align-items: center;
 
     .headCon {
-        font-size: clamp(70px, 7vw, 100px);
+        font-size: 7vw;
         line-height: 1;
         display: flex;
         width: 100%;
@@ -462,8 +477,8 @@ nav {
 
         .circle {
             background-color: var(--dark);
-            width: 4rem;
-            height: 4rem;
+            width: 5vw;
+            // height: 4rem;
             border-radius: 100%;
             vertical-align: baseline;
             aspect-ratio: 1/1;
@@ -570,8 +585,8 @@ nav {
 
 
     nav {
-        height: 16vh;
-            min-height: 90px;
+        height: 100px;
+            min-height: 100px;
             max-height: 100px;
 
         &>div {
@@ -595,7 +610,7 @@ nav {
 
     .head {
         .headCon {
-            font-size: 100px;
+            // font-size: 100px;
             line-height: 125px;
             padding: 48px 0px;
             font-weight: 300;
@@ -705,12 +720,12 @@ nav {
     }
 
     #marqueeWrapper {
-        max-width: 645px;
+        // max-width: 645px;
     }
 
     nav {
-        height: 16vh;
-            min-height: 110px;
+        height: 133px;
+            min-height: 133px;
             max-height: 133px;
 
         &>div {
@@ -741,7 +756,7 @@ nav {
 
     .head {
         .headCon {
-            font-size: 140px;
+            // font-size: 140px;
             line-height: 165px;
 
             .circle {
@@ -834,7 +849,8 @@ nav {
     
     #navigationSec {
         width: 100%;
-        height: 100vh;
+        height: 0vh;
+        transition: height 0ms linear;
         overflow: hidden;
         position: fixed;
         top: 0;

@@ -30,6 +30,7 @@ function setTimeline(location) {
       },
       {
         clipPath: `circle(150% at ${location.left}px ${location.top}px)`,
+        // clipPath: `circle(70% at ${location.left}px ${location.top}px)`,
       },
       "a"
     ).to(
@@ -64,7 +65,11 @@ async function runAnimation() {
   ScrollTrigger.create({
     trigger: heroSec,
     start: "top top",
-    end: "+=500",
+    end: "+=2000",
+
+    // end: "+=500",
+    // pin:true,
+
     onEnter: () => {
       // Additional actions when the animation starts
     },
@@ -99,11 +104,29 @@ function toggleMenu() {
 
   element.classList.toggle('open');
 
-  if (element && !isMobile()) {
+  if (element) {
     const currentHeight = element.offsetHeight;
     const isFullHeight = currentHeight === window.innerHeight;
 
     // Toggle the height based on the current state
     element.style.height = isFullHeight ? '0' : '100vh';
+    // element.style.position = isFullHeight ? '' : '';
   }
 }
+
+
+
+// ------------------------------------icon
+
+const apath_Navbar_brand = "./assets/Animation/Perks you'll love more/Design board/DesignBoard.json";;
+const apath_Navbar_uiux = './assets/Animation/Clear path to your peoject/Get your designs/GetYourDesigns.json';
+const apath_Navbar_development = "./assets/Animation/Our_Process/Development/Development_Black.json";
+
+
+const aicon_Navbar_brand = "aicon-navbar-brand";
+const aicon_Navbar_uiux = "aicon-navbar-uiux";
+const aicon_Navbar_development = "aicon-navbar-development";
+
+setupAnimation(aicon_Navbar_brand, apath_Navbar_brand);
+setupAnimation(aicon_Navbar_uiux, apath_Navbar_uiux);
+setupAnimation(aicon_Navbar_development, apath_Navbar_development);

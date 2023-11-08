@@ -9,13 +9,12 @@
   background-color: var(--dark);
   color: var(--light);
   padding-bottom: 20px;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 #ideasSec #ideasCon {
   display: flex;
   flex-direction: column;
-  padding: 60px 100px;
-  padding-bottom: 10px;
+  padding: 110px 100px;
 }
 #ideasSec #ideasCon h1 {
   font-size: 60px;
@@ -34,6 +33,7 @@
 #ideasSec #ideasCon .ideasproducts p {
   font-size: 24px;
   line-height: 32px;
+  margin-bottom: 90px;
 }
 #ideasSec #ideasCon .ideasproducts .tabsflex {
   margin-top: 30px;
@@ -58,7 +58,7 @@
   font-family: var(--Satoshi);
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) {
   position: relative;
@@ -113,13 +113,15 @@
   width: 100%;
   overflow: hidden;
   padding: 24px 0px;
+  padding-bottom: 110px;
 }
 #ideasSec .idea-marquee-wrap .idea-marquee-con {
   width: 100%;
   color: var(--light);
   line-height: normal;
   vertical-align: bottom;
-  font-size: 40px;
+  font-size: 60px;
+  line-height: 60px;
   display: flex;
   flex-wrap: nowrap;
   font-family: var(--NohemiL);
@@ -274,17 +276,18 @@
 }
 #footer .footerCon p img {
   height: 16px;
-  margin-right: 5px;
+  margin-right: 0px;
 }
 
 @media (min-width: 1536px) {
   #ideasSec {
     padding-bottom: 40px;
+    border-radius: 40px;
   }
   #ideasSec #ideasCon {
     display: flex;
     flex-direction: column;
-    padding: 80px 120px;
+    padding: 150px 120px;
     padding-bottom: 10px;
   }
   #ideasSec #ideasCon h1 {
@@ -294,11 +297,12 @@
   #ideasSec #ideasCon .ideasproducts {
     margin-top: 80px;
     padding-top: 60px;
+    margin-bottom: 190px;
   }
   #ideasSec #ideasCon .ideasproducts p {
     font-size: 32px;
     line-height: normal;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
   #ideasSec #ideasCon .ideasproducts .tabsflex {
     margin-top: 40px;
@@ -308,21 +312,23 @@
   }
   #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup {
     padding: 25px;
-    font-size: 32px;
+    font-size: 34px;
     line-height: 40px;
-    gap: 40px;
+    gap: 65px;
   }
   #ideasSec .idea-marquee-wrap {
     width: 100%;
     overflow: hidden;
     padding: 24px 0px;
+    padding-bottom: 120px;
   }
   #ideasSec .idea-marquee-wrap .idea-marquee-con {
     width: 100%;
     color: var(--light);
     line-height: normal;
     vertical-align: bottom;
-    font-size: 54px;
+    font-size: 80px;
+    line-height: 80px;
     display: flex;
     flex-wrap: nowrap;
     font-family: var(--Nohemi);
@@ -362,9 +368,11 @@
     padding-top: 12px;
   }
   #ideasSec .idea-marquee-wrap .idea-marquee-con #idea-marquee img {
+    vertical-align: middle;
     margin: 0px 56px;
     height: 66px;
     width: 66px;
+    margin-bottom: 15px;
   }
   #footer {
     width: 100%;
@@ -415,7 +423,7 @@
   #footer .footerCon a img {
     height: 10px;
     fill: #000;
-    margin-left: 10px;
+    margin-left: 0px;
   }
 }
 @media (max-width: 750px) {
@@ -430,13 +438,12 @@
     background-color: var(--dark);
     color: var(--light);
     padding-bottom: 20px;
-    border-radius: 30px;
+    border-radius: 20px;
   }
   #ideasSec #ideasCon {
     display: flex;
     flex-direction: column;
-    padding: 40px 24px;
-    padding-bottom: 10px;
+    padding: 90px 24px;
   }
   #ideasSec #ideasCon h1 {
     font-size: 48px;
@@ -444,7 +451,7 @@
     font-weight: 300 !important;
   }
   #ideasSec #ideasCon .ideasproducts {
-    margin-top: 30px;
+    margin-top: 50px;
     padding-top: 40px;
     border-top: 1px solid var(--gray-97);
     color: var(--gray-97);
@@ -468,24 +475,75 @@
   }
   #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup {
     font-size: 20px;
-    padding: 15px 20px;
+    padding: 10px 20px;
     line-height: 20px;
     gap: 20px;
   }
   #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup.mob-only {
     display: flex !important;
   }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) {
+    position: relative;
+    overflow: hidden;
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) * {
+    transition: all 300ms ease;
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) .hiddenTag {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(2) {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(2) * {
+    transition: all 400ms ease;
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(2) img {
+    fill: #fff;
+    height: 20px;
+    width: 20px;
+    padding: 4px;
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(2) .hiddenTag {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup:hover > div:nth-child(1) .visibleTag {
+    transform: translateY(-100%);
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup:hover > div:nth-child(1) .hiddenTag {
+    transform: translateY(-100%);
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup:hover > div:nth-child(2) .visibleTag {
+    transform: translate3d(100%, -100%, 0);
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup:hover > div:nth-child(2) .hiddenTag {
+    transform: translate3d(100%, -100%, 0);
+  }
   #ideasSec .idea-marquee-wrap {
     width: 100%;
     overflow: hidden;
     padding: 24px 0px;
+    padding-bottom: 90px;
   }
   #ideasSec .idea-marquee-wrap .idea-marquee-con {
     width: 100%;
     color: var(--light);
     line-height: normal;
     vertical-align: bottom;
-    font-size: 35px;
+    font-size: 48px;
+    line-height: 48px;
     display: flex;
     flex-wrap: nowrap;
     font-family: var(--NohemiL);
@@ -591,7 +649,7 @@
   }
   #footer .footerCon p img {
     height: 16px;
-    margin-left: 10px;
+    margin-left: 0px;
   }
   #footer .footerCon a {
     font-weight: 400;
@@ -606,6 +664,6 @@
   #footer .footerCon a img {
     height: 10px;
     fill: #000;
-    margin-left: 10px;
+    margin-left: 0px;
   }
 }/*# sourceMappingURL=ideas.css.map */

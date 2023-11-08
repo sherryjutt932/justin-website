@@ -38,12 +38,19 @@ html, body{
   height: 100%;
 }
 
+html{
+  background-color: #fff;
+}
+
 body {
   background-color: var(--main);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--Satoshi);
+  max-width: 2400px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .pattern{
