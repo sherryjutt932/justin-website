@@ -105,7 +105,8 @@
     gap: 0;
   }
   #boxesRef2 .boxitem {
-    flex: 1 1 48%;
+    flex: 1 1 49.5%;
+    max-width: 50%;
     border-left: none;
     background-color: var(--main);
     aspect-ratio: 1;

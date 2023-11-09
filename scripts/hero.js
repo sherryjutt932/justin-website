@@ -19,6 +19,13 @@ function setCirclePosition() {
   }
 }
 
+var cir_duration = 0.009;
+
+if(isMobile()){
+  cir_duration = 0.004
+}
+
+
 // Function to set timeline
 function setTimeline(location) {
   var timeline = gsap.timeline();
@@ -37,7 +44,7 @@ function setTimeline(location) {
       circleBg,
       {
         backgroundColor: "#FF2626",
-        duration: 0.009,
+        duration: cir_duration,
         ease: "steps(1)",
       },
       "a"
@@ -96,15 +103,34 @@ setTimeout(() => {
 // ----------------------------Toggle Menu
 
 function toggleMenu() {
+  const mobileNavBtnelement = document.getElementById("mobileNavBtn");
   const element = document.getElementById("navigationSec");
   var btnNavs = document.getElementsByClassName("nav-icon1");
   Array.from(btnNavs).forEach(ele => {
     ele.classList.toggle('open');
   });
 
-  element.classList.toggle('open');
+  
+  if(!isMobile()){
+    element.classList.toggle('open');
+  }
+  else{
+    // let mobileNavBtnelementwidth = mobileNavBtnelement.offsetWidth;
+    // let mobileNavBtn_FC = mobileNavBtnelement.querySelector("#mobileNavBtn-FC");
+    if(mobileNavBtnelement.classList.contains("initial")){
+      mobileNavBtnelement.classList.remove('initial');
+    }
+    if(mobileNavBtnelement.classList.contains("open")){
+      mobileNavBtnelement.classList.add('close');
+    }
+    else{
+      mobileNavBtnelement.classList.remove('close');
+    }
+    mobileNavBtnelement.classList.toggle('open');
+    document.getElementById("heroSec").classList.toggle('open');
+  }
 
-  if (element) {
+  if (element  && !isMobile()) {
     const currentHeight = element.offsetHeight;
     const isFullHeight = currentHeight === window.innerHeight;
 
@@ -116,22 +142,61 @@ function toggleMenu() {
 
 
   // ------new
+
+  var changesvgele = document.getElementById("changesvg");
+  var navAnimatedIcon_pathlist = changesvgele.getElementsByClassName("changepath");
+var wrapper = document.getElementById("navAnimatedIcon");
+
+
+opend1 = "M-16,8 C-16,8 0,-8 0,-8 C0,-8 16,8 16,8";
+opend2 = "M-1,0 C-1,0 1,0 1,0";
+opend3 = "M-16,-9 C-16,-9 0,8 0,8 C0,8 16,-9 16,-9";
+
+closedd1 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
+closedd2 = "M-16,0 C-16,0 16,0 16,0";
+closedd3 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
+
+if(isMobile()){
+  var changesvgeleM = document.getElementById("changesvgM");
+  var navAnimatedIcon_pathlistM = changesvgeleM.getElementsByClassName("changepath");
+  var wrapperM = document.getElementById("navAnimatedIconM");
+
+  wrapperM.classList.toggle("open");
+
+  if (wrapperM.classList.contains("open")) {
+   wrapperM.classList.remove("close");
+    setTimeout(() => {
+      navAnimatedIcon_pathlistM[0].setAttribute("d", opend1);
+      navAnimatedIcon_pathlistM[1].setAttribute("d", opend2);
+      navAnimatedIcon_pathlistM[2].setAttribute("d", opend3);
+    }, 200);
+  } else {
+      navAnimatedIcon_pathlistM[0].setAttribute("d", closedd1);
+      navAnimatedIcon_pathlistM[1].setAttribute("d", closedd2);
+      navAnimatedIcon_pathlistM[2].setAttribute("d", closedd3);
+      wrapperM.classList.add("close");
+  }
+}
+else{
   wrapper.classList.toggle("open");
 
   if (wrapper.classList.contains("open")) {
+   wrapper.classList.remove("close");
     setTimeout(() => {
       navAnimatedIcon_pathlist[0].setAttribute("d", opend1);
       navAnimatedIcon_pathlist[1].setAttribute("d", opend2);
       navAnimatedIcon_pathlist[2].setAttribute("d", opend3);
-    }, 200); // 200 milliseconds delay
+    }, 200);
   } else {
-    setTimeout(() => {
       navAnimatedIcon_pathlist[0].setAttribute("d", closedd1);
       navAnimatedIcon_pathlist[1].setAttribute("d", closedd2);
       navAnimatedIcon_pathlist[2].setAttribute("d", closedd3);
-    }, 200); // 200 milliseconds delay
+      wrapper.classList.add("close");
   }
 }
+
+ 
+}//event lister end
 
 
 
@@ -153,17 +218,6 @@ setupAnimation(aicon_Navbar_development, apath_Navbar_development);
 
 
 // -----------nav icon animation
-var navAnimatedIcon_pathlist = document.getElementsByClassName("changepath");
-var ele = document.getElementById("changesvg");
-var wrapper = document.getElementById("navAnimatedIcon");
-
-opend1 = "M-16,8 C-16,8 0,-8 0,-8 C0,-8 16,8 16,8";
-opend2 = "M-1,0 C-1,0 1,0 1,0";
-opend3 = "M-16,-9 C-16,-9 0,8 0,8 C0,8 16,-9 16,-9";
-
-closedd1 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
-closedd2 = "M-16,0 C-16,0 16,0 16,0";
-closedd3 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
 
 // wrapper.addEventListener("click", () => {
 //   wrapper.classList.toggle("open");
@@ -182,3 +236,27 @@ closedd3 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
 //     }, 200); // 200 milliseconds delay
 //   }
 // });
+
+
+
+
+// ---------------navigation-cards
+
+var navigation_cards = document.getElementById("navigation-cards");
+var navigation_cards_list = navigation_cards.getElementsByClassName("card");
+
+// Convert HTMLCollection to an array for easier manipulation
+var navigation_cards_Array = Array.from(navigation_cards_list);
+
+// Add click event listener to each card
+navigation_cards_Array.forEach(function(card) {
+  card.addEventListener("click", function() {
+    // Remove active class from all cards
+    navigation_cards_Array.forEach(function(c) {
+      c.classList.remove("active");
+    });
+
+    // Add active class to the clicked card
+    card.classList.add("active");
+  });
+});

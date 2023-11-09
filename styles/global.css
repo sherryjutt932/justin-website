@@ -48,8 +48,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--Satoshi);
-  max-width: 2400px;
-  margin: 0 auto;
+  /* max-width: 2400px;
+  margin: 0 auto; */
   overflow-x: hidden;
 }
 

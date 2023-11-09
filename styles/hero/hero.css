@@ -18,13 +18,13 @@
   transition: all 500ms ease;
 }
 .HeadrnavBtn #navAnimatedIcon.open #p1change {
-  animation: iconanim 1s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: iconanim 1s ease;
 }
 .HeadrnavBtn #navAnimatedIcon.open #p2change {
-  animation: iconanim2 1s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: iconanim2 1s ease;
 }
 .HeadrnavBtn #navAnimatedIcon.open #p3change {
-  animation: iconanim3 1s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: iconanim3 1s ease;
 }
 @keyframes iconanim {
   20% {
@@ -40,6 +40,34 @@
   20% {
     transform: translateY(-10%);
   }
+}
+.HeadrnavBtn #navAnimatedIcon.close #p1change {
+  animation: reverseIconanim 1s ease;
+}
+.HeadrnavBtn #navAnimatedIcon.close #p2change {
+  animation: reverseIconanim2 1s ease;
+}
+.HeadrnavBtn #navAnimatedIcon.close #p3change {
+  animation: reverseIconanim3 1s ease;
+}
+@keyframes reverseIconanim {
+  20% {
+    transform: translateY(10%);
+  }
+}
+@keyframes reverseIconanim2 {
+  20% {
+    transform: scaleX(1.2);
+  }
+}
+@keyframes reverseIconanim3 {
+  20% {
+    transform: translateY(-10%);
+  }
+}
+
+#mobileNavBtn {
+  display: none;
 }
 
 .nav-icon1 {
@@ -93,6 +121,23 @@
   transform: rotate(-135deg);
 }
 
+#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link > div {
+  transition-delay: 100ms;
+  transform: translateY(0px);
+  opacity: 1;
+}
+#navigationSec.open #navigation header .content > div:nth-child(2) .card {
+  transition-delay: 100ms;
+  transform: translateX(0px);
+  opacity: 1;
+}
+#navigationSec.open #navigation header .content > div:nth-child(2) .card:nth-child(2) {
+  transition-delay: 300ms;
+}
+#navigationSec.open #navigation header .content > div:nth-child(2) .card:nth-child(3) {
+  transition-delay: 500ms;
+}
+
 #navigationSec {
   width: 100%;
   height: 0vh;
@@ -102,7 +147,7 @@
   left: 0;
   z-index: 50;
   background-color: var(--main);
-  transition: all 500ms;
+  transition: all 500ms ease;
 }
 
 #navigation {
@@ -130,24 +175,30 @@
   gap: 15px;
 }
 #navigation header .content > div:nth-child(1) .nav-link {
-  position: relative;
+  overflow: hidden;
+}
+#navigation header .content > div:nth-child(1) .nav-link > div {
+  opacity: 1;
+  transition: all 0.9s cubic-bezier(0.5, 0, 0.75, 0);
+  transform: translateY(90%);
   border-radius: 100px;
   overflow: hidden;
+  position: relative;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 40px;
   line-height: 50px;
   font-family: var(--Satoshi);
 }
-#navigation header .content > div:nth-child(1) .nav-link > .text {
+#navigation header .content > div:nth-child(1) .nav-link > div > .text {
   padding: 6px 16px;
   cursor: pointer;
   transition: all 300ms;
 }
-#navigation header .content > div:nth-child(1) .nav-link:hover > .text {
+#navigation header .content > div:nth-child(1) .nav-link > div:hover > .text {
   transform: scale(0.75);
 }
-#navigation header .content > div:nth-child(1) .nav-link > .textbg {
+#navigation header .content > div:nth-child(1) .nav-link > div > .textbg {
   position: absolute;
   background-color: var(--sec);
   padding: 6px 16px;
@@ -159,7 +210,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-#navigation header .content > div:nth-child(1) .nav-link:hover > .textbg {
+#navigation header .content > div:nth-child(1) .nav-link > div:hover > .textbg {
   top: 0%;
 }
 #navigation header .content > div:nth-child(2) {
@@ -167,6 +218,8 @@
   gap: 40px;
 }
 #navigation header .content > div:nth-child(2) .card {
+  opacity: 0;
+  transform: translateX(100%);
   display: flex;
   max-width: 396px;
   max-height: 164px;
@@ -174,8 +227,31 @@
   border: 1px solid var(--gray-cd);
   padding: 15px;
   gap: 30px;
+  cursor: pointer;
+  transition: all 500ms ease;
+  position: relative;
 }
-#navigation header .content > div:nth-child(2) .card:nth-child(2) {
+#navigation header .content > div:nth-child(2) .card.active::after {
+  opacity: 1;
+  left: -90px;
+}
+#navigation header .content > div:nth-child(2) .card::after {
+  opacity: 0;
+  position: absolute;
+  content: url(../../assets/icons/navbarContentCardArrow.svg);
+  left: -40px;
+  top: 25%;
+  transform: translateY(-25%);
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: var(--sec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms ease;
+}
+#navigation header .content > div:nth-child(2) .card.active {
   margin-right: 25%;
 }
 #navigation header .content > div:nth-child(2) .card h5 {
@@ -250,8 +326,6 @@
   align-items: center;
   flex-direction: column;
   padding: 0 100px;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 #heroBg {
@@ -514,6 +588,10 @@ nav .line {
 }
 
 @media (min-width: 1390px) {
+  .HeadrnavBtn {
+    height: 30px;
+    width: 30px;
+  }
   #navigation .footer {
     height: 16vh;
     min-height: 90px;
@@ -527,7 +605,7 @@ nav .line {
   nav > div {
     gap: 16px;
   }
-  nav .nav-link > .textbg, nav .nav-link > .text {
+  nav .nav-link div > .textbg, nav .nav-link div > .text {
     font-size: 16px;
     line-height: 24px;
     padding: 4px 16px;
@@ -553,6 +631,10 @@ nav .line {
   }
 }
 @media (min-width: 1536px) {
+  .HeadrnavBtn {
+    height: 40px;
+    width: 40px;
+  }
   #hero,
   #heroBg {
     padding: 0 120px;
@@ -563,14 +645,14 @@ nav .line {
   #navigation header .content > div:nth-child(1) {
     gap: 25px;
   }
-  #navigation header .content > div:nth-child(1) .nav-link {
+  #navigation header .content > div:nth-child(1) .nav-link div {
     font-size: 60px;
     line-height: 81px;
   }
-  #navigation header .content > div:nth-child(1) .nav-link > .text {
+  #navigation header .content > div:nth-child(1) .nav-link div > .text {
     padding: 6px 16px;
   }
-  #navigation header .content > div:nth-child(1) .nav-link > .textbg {
+  #navigation header .content > div:nth-child(1) .nav-link div > .textbg {
     padding: 6px 16px;
   }
   #navigation header .content > div:nth-child(2) {
@@ -581,9 +663,6 @@ nav .line {
     max-height: 164px;
     padding: 25px;
     gap: 80px;
-  }
-  #navigation header .content > div:nth-child(2) .card:nth-child(2) {
-    margin-right: 25%;
   }
   #navigation header .content > div:nth-child(2) .card h5 {
     font-size: 24px;
@@ -665,27 +744,159 @@ nav .line {
   }
 }
 @media (max-width: 750px) {
-  .HeadrnavBtn .nav-icon1 {
-    width: 53px;
-    height: 45px;
-    display: block;
+  .HeadrnavBtn {
     position: relative;
-    margin: 50px auto;
-    transform: scale(40%) rotate(0deg);
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
   }
-  .HeadrnavBtn .nav-icon1 span {
-    display: block;
-    position: absolute;
-    height: 4px;
+  .HeadrnavBtn #navAnimatedIconM svg {
     width: 100%;
-    background: #000;
-    border-radius: 4px;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    content-visibility: visible;
+  }
+  .HeadrnavBtn #navAnimatedIconM .changepath {
+    transition: all 500ms ease;
+  }
+  .HeadrnavBtn #navAnimatedIconM.open #p1change {
+    animation: iconanim 1s ease;
+  }
+  .HeadrnavBtn #navAnimatedIconM.open #p2change {
+    animation: iconanim2 1s ease;
+  }
+  .HeadrnavBtn #navAnimatedIconM.open #p3change {
+    animation: iconanim3 1s ease;
+  }
+  .HeadrnavBtn #navAnimatedIconM.close #p1change {
+    animation: reverseIconanim 1s ease;
+  }
+  .HeadrnavBtn #navAnimatedIconM.close #p2change {
+    animation: reverseIconanim2 1s ease;
+  }
+  .HeadrnavBtn #navAnimatedIconM.close #p3change {
+    animation: reverseIconanim3 1s ease;
+  }
+  .HeadrnavBtn #mobileNavBtn {
+    position: absolute;
+    display: flex;
+    border-radius: 24px;
+    background-color: var(--light);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1254901961);
+    overflow: hidden;
+    z-index: 50;
+    transition: all 1s ease;
+  }
+  .HeadrnavBtn #mobileNavBtn > div {
+    transition: all 1s ease;
+    padding: 15px 24px;
+  }
+  .HeadrnavBtn #mobileNavBtn > div .mobileNav-item,
+  .HeadrnavBtn #mobileNavBtn > div .mobileNav-head {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease;
+    transform-origin: top left;
+  }
+  .HeadrnavBtn #mobileNavBtn > div .mobileNav-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .HeadrnavBtn #mobileNavBtn > div .mobileNav-head h1 {
+    font-family: var(--NohemiEL);
+    color: var(--gray-cd);
+    letter-spacing: 0.1ch;
+    font-size: 24px;
+  }
+  .HeadrnavBtn #mobileNavBtn > div .mobileNav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    padding-right: 10px;
+  }
+  .HeadrnavBtn #mobileNavBtn > div .mobileNav-item:active div, .HeadrnavBtn #mobileNavBtn > div .mobileNav-item:hover div {
+    background-color: var(--sec);
+  }
+  .HeadrnavBtn #mobileNavBtn > div .mobileNav-item p {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--Satoshi);
+    color: var(--black);
+    font-size: 20px;
+  }
+  .HeadrnavBtn #mobileNavBtn > div .mobileNav-item div {
+    background-color: var(--light);
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+    transition: all 500ms ease;
+  }
+  .HeadrnavBtn #navAnimatedIconM {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    aspect-ratio: 1/1;
+    z-index: 100;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 100px;
+  }
+  .HeadrnavBtn #navAnimatedIconM #changesvgM {
+    transition: all 500ms ease;
+  }
+  .HeadrnavBtn #mobileNavBtn.initial {
+    width: 0;
+    height: 0;
+  }
+  .HeadrnavBtn #mobileNavBtn.initial > div {
+    width: 0;
+    height: 0;
+  }
+  .HeadrnavBtn #mobileNavBtn.open {
+    animation: who 1s forwards;
+    top: -5px;
+    right: -10px;
+  }
+  .HeadrnavBtn #mobileNavBtn.open > div {
+    animation: who 1s forwards;
+  }
+  .HeadrnavBtn #mobileNavBtn.open > div .mobileNav-item,
+  .HeadrnavBtn #mobileNavBtn.open > div .mobileNav-head {
     opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
+    transform: scale(1);
+  }
+  @keyframes who {
+    0% {
+      height: 2px;
+      width: 2px;
+    }
+    100% {
+      height: 338px;
+      width: 264px;
+    }
+  }
+  .HeadrnavBtn #mobileNavBtn.close {
+    animation: whc 1s forwards;
+    top: 2px;
+    right: 2px;
+  }
+  .HeadrnavBtn #mobileNavBtn.close > div {
+    animation: whc 1s forwards;
+  }
+  .HeadrnavBtn #mobileNavBtn.close > div .mobileNav-item,
+  .HeadrnavBtn #mobileNavBtn.close > div .mobileNav-head {
+    opacity: 0;
+    transform: scale(0.2);
+    padding: 0;
+  }
+  @keyframes whc {
+    0% {
+      height: 338px;
+      width: 264px;
+    }
+    100% {
+      height: 2px;
+      width: 2px;
+    }
   }
   #navigationSec {
     width: 100%;
@@ -747,7 +958,6 @@ nav .line {
     outline: none;
     background: none;
     border-radius: 100px;
-    padding: 10px;
     padding-right: 0;
   }
   #mobileNav > div .mobileNav-head button img {
@@ -878,7 +1088,7 @@ nav .line {
     position: relative;
     top: 0;
     left: 0%;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     height: 12vh;
@@ -915,16 +1125,9 @@ nav .line {
     outline: none;
     border: none;
     cursor: pointer;
-    background-color: #fff;
-    border-radius: 100px;
-    width: 48px;
-    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  nav > div:nth-child(3) button img {
-    width: 35px;
   }
   nav .navlinkscenter {
     display: none !important;
