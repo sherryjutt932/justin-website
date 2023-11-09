@@ -128,7 +128,7 @@ function setisActive(ind) {
 
 // ------------------------------------icon
 
-if (!isMobile()) {
+if (true) {
   var apath_Process_discovery =
     "./assets/Animation/Our_Process/discovery/discovery.json";
   var apath_Process_strategy =
@@ -147,7 +147,9 @@ if (!isMobile()) {
   setupAnimation(aicon_Process_strategy, apath_Process_strategy);
   setupAnimation(aicon_Process_design, apath_Process_design);
   setupAnimation(aicon_Process_development, apath_Process_development);
-} else {
+} 
+
+if(isMobile()){
 
   var apath_Process_strategy_black =
   "./assets/Animation/Our_Process/Strategy/Stratergy_Black.json";
