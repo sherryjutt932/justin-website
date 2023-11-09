@@ -976,6 +976,7 @@ nav .line {
     height: -moz-fit-content;
     height: fit-content;
     padding: 15px 24px;
+    color: var(--dark);
   }
   #mobileNav > div .mobileNav-head {
     display: flex;
