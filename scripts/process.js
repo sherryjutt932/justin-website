@@ -128,46 +128,45 @@ function setisActive(ind) {
 
 // ------------------------------------icon
 
-
-if(!isMobile()){
+if (!isMobile()) {
   const apath_Process_discovery =
-  "./assets/Animation/Our_Process/discovery/discovery.json";
-const apath_Process_strategy =
-  "./assets/Animation/Our_Process/Strategy/Strategy.json";
-const apath_Process_design =
-  "./assets/Animation/Our_Process/Design/Design_Icon_White.json";
-const apath_Process_development =
-  "./assets/Animation/Our_Process/Development/Development.json";
+    "./assets/Animation/Our_Process/discovery/discovery.json";
+  const apath_Process_strategy =
+    "./assets/Animation/Our_Process/Strategy/Strategy.json";
+  const apath_Process_design =
+    "./assets/Animation/Our_Process/Design/Design_Icon_White.json";
+  const apath_Process_development =
+    "./assets/Animation/Our_Process/Development/Development.json";
 
-const aicon_Process_discovery = "aicon-process-discovery";
-const aicon_Process_strategy = "aicon-process-strategy";
-const aicon_Process_design = "aicon-process-design";
-const aicon_Process_development = "aicon-process-development";
+  const aicon_Process_discovery = "aicon-process-discovery";
+  const aicon_Process_strategy = "aicon-process-strategy";
+  const aicon_Process_design = "aicon-process-design";
+  const aicon_Process_development = "aicon-process-development";
 
-setupAnimation(aicon_Process_discovery, apath_Process_discovery);
-setupAnimation(aicon_Process_strategy, apath_Process_strategy);
-setupAnimation(aicon_Process_design, apath_Process_design);
-setupAnimation(aicon_Process_development, apath_Process_development);
-}
-else{
-  
-const apath_Process_discovery_black =
-"./assets/Animation/Our_Process/discovery/discovery_Black.json";
-const apath_Process_strategy_black =
-"./assets/Animation/Our_Process/Strategy/Stratergy_Black.json";
-const apath_Process_design_black =
-"./assets/Animation/Our_Process/Design/Design_Icon_Black.json";
-const apath_Process_development_black =
-"./assets/Animation/Our_Process/Development/Development_Black.json";
+  setupAnimation(aicon_Process_discovery, apath_Process_discovery);
+  setupAnimation(aicon_Process_strategy, apath_Process_strategy);
+  setupAnimation(aicon_Process_design, apath_Process_design);
+  setupAnimation(aicon_Process_development, apath_Process_development);
+} else {
+  const apath_Process_strategy_black =
+  "./assets/Animation/Our_Process/Strategy/Stratergy_Black.json";
+  const apath_Process_design_black =
+  "./assets/Animation/Our_Process/Design/Design_Icon_Black.json";
+  const apath_Process_development_black =
+  "./assets/Animation/Our_Process/Development/Development_Black.json";
+  const apath_Process_discovery_black =
+    "./assets/Animation/Our_Process/discovery/discovery_Black.json";
 
-const aicon_Process_mob_discovery = "aicon-process-mob-discovery";
-const aicon_Process_mob_strategy = "aicon-process-mob-strategy";
-const aicon_Process_mob_design = "aicon-process-mob-design";
-const aicon_Process_mob_development = "aicon-process-mob-development";
+  const aicon_Process_mob_discovery = "aicon-process-mob-discovery";
+  const aicon_Process_mob_strategy = "aicon-process-mob-strategy";
+  const aicon_Process_mob_design = "aicon-process-mob-design";
+  const aicon_Process_mob_development = "aicon-process-mob-development";
 
-setupAnimation(aicon_Process_mob_discovery, apath_Process_discovery_black);
-setupAnimation(aicon_Process_mob_strategy, apath_Process_strategy_black);
-setupAnimation(aicon_Process_mob_design, apath_Process_design_black);
-setupAnimation(aicon_Process_mob_development, apath_Process_development_black);
-
+  setupAnimation(aicon_Process_mob_discovery, apath_Process_discovery_black);
+  setupAnimation(aicon_Process_mob_strategy, apath_Process_strategy_black);
+  setupAnimation(aicon_Process_mob_design, apath_Process_design_black);
+  setupAnimation(
+    aicon_Process_mob_development,
+    apath_Process_development_black
+  );
 }
