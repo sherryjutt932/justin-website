@@ -128,7 +128,9 @@ function setisActive(ind) {
 
 // ------------------------------------icon
 
-const apath_Process_discovery =
+
+if(!isMobile()){
+  const apath_Process_discovery =
   "./assets/Animation/Our_Process/discovery/discovery.json";
 const apath_Process_strategy =
   "./assets/Animation/Our_Process/Strategy/Strategy.json";
@@ -136,15 +138,6 @@ const apath_Process_design =
   "./assets/Animation/Our_Process/Design/Design_Icon_White.json";
 const apath_Process_development =
   "./assets/Animation/Our_Process/Development/Development.json";
-
- const apath_Process_discovery_black =
-  "./assets/Animation/Our_Process/discovery/discovery_Black.json";
-const apath_Process_strategy_black =
-  "./assets/Animation/Our_Process/Strategy/Stratergy_Black.json";
-const apath_Process_design_black =
-  "./assets/Animation/Our_Process/Design/Design_Icon_Black.json";
-const apath_Process_development_black =
-  "./assets/Animation/Our_Process/Development/Development_Black.json";
 
 const aicon_Process_discovery = "aicon-process-discovery";
 const aicon_Process_strategy = "aicon-process-strategy";
@@ -155,6 +148,17 @@ setupAnimation(aicon_Process_discovery, apath_Process_discovery);
 setupAnimation(aicon_Process_strategy, apath_Process_strategy);
 setupAnimation(aicon_Process_design, apath_Process_design);
 setupAnimation(aicon_Process_development, apath_Process_development);
+}
+else{
+  
+const apath_Process_discovery_black =
+"./assets/Animation/Our_Process/discovery/discovery_Black.json";
+const apath_Process_strategy_black =
+"./assets/Animation/Our_Process/Strategy/Stratergy_Black.json";
+const apath_Process_design_black =
+"./assets/Animation/Our_Process/Design/Design_Icon_Black.json";
+const apath_Process_development_black =
+"./assets/Animation/Our_Process/Development/Development_Black.json";
 
 const aicon_Process_mob_discovery = "aicon-process-mob-discovery";
 const aicon_Process_mob_strategy = "aicon-process-mob-strategy";
@@ -165,3 +169,5 @@ setupAnimation(aicon_Process_mob_discovery, apath_Process_discovery_black);
 setupAnimation(aicon_Process_mob_strategy, apath_Process_strategy_black);
 setupAnimation(aicon_Process_mob_design, apath_Process_design_black);
 setupAnimation(aicon_Process_mob_development, apath_Process_development_black);
+
+}
