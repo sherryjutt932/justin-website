@@ -77,9 +77,10 @@
                 justify-content: start;
                 align-items: center;
                 padding-right: 100px;
-                width: 128px;
+                width: fit-content;
                 img, .animicon{
-                    width: 100%;
+                    width: 128px;
+                    height: 128px;
                     // width: 190px;
                 }
                 flex-grow: 1;
@@ -243,9 +244,11 @@
             &>div{
                 width: 75%;
                 .card-icon{
-                    width: 190px;
+                    width: fit-content;
                     img,.animicon{
-                        width: 100%;
+                        width: 190px;
+                        height: 190px;
+
                     }
 
                     padding-right: 150px;
