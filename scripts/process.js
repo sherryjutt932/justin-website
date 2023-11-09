@@ -148,6 +148,7 @@ if (!isMobile()) {
   setupAnimation(aicon_Process_design, apath_Process_design);
   setupAnimation(aicon_Process_development, apath_Process_development);
 } else {
+
   const apath_Process_strategy_black =
   "./assets/Animation/Our_Process/Strategy/Stratergy_Black.json";
   const apath_Process_design_black =
@@ -155,7 +156,7 @@ if (!isMobile()) {
   const apath_Process_development_black =
   "./assets/Animation/Our_Process/Development/Development_Black.json";
   const apath_Process_discovery_black =
-    "./assets/Animation/Our_Process/discovery/discovery_Black.json";
+    "./assets/Animation/Our_Process/discovery/discovery_Black_new.json";
 
   const aicon_Process_mob_discovery = "aicon-process-mob-discovery";
   const aicon_Process_mob_strategy = "aicon-process-mob-strategy";

@@ -2,15 +2,15 @@
 const feedbackSec = document.getElementById("feedbackSec");
 
 var feedbackanim = gsap.timeline();
-feedbackanim.fromTo(
-    "#bbbbbb",
-    {x:100,
-    },
-    {
-      x:0,
-    },
-    "a"
-  );
+// feedbackanim.fromTo(
+//     "#bbbbbb",
+//     {x:100,
+//     },
+//     {
+//       x:0,
+//     },
+//     "a"
+//   );
 
 ScrollTrigger.create({
     trigger: feedbackSec,
