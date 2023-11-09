@@ -163,7 +163,7 @@ if (!isMobile()) {
   const aicon_Process_mob_design = "aicon-process-mob-design";
   const aicon_Process_mob_development = "aicon-process-mob-development";
 
-  setupAnimation(aicon_Process_mob_discovery, apath_Process_discovery_black);
+  setupAnimation(aicon_Process_mob_discovery, apath_Process_strategy_black);
   setupAnimation(aicon_Process_mob_strategy, apath_Process_strategy_black);
   setupAnimation(aicon_Process_mob_design, apath_Process_design_black);
   setupAnimation(
