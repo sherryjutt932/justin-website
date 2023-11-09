@@ -74,6 +74,7 @@ setupAnimation(aicon_perks_mb_fixedmonthlysalary, apath_perks_fixedmonthlysalary
 
 let currentIndex = 0;
 const perkCards = document.querySelectorAll(".perkCard-mb");
+const perkCardsCont = document.querySelector("#perksRef");
 const totalCards = perkCards.length;
 const width = perkCards[0].offsetWidth + 20; // Adjusted to offsetWidth
 

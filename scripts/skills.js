@@ -112,25 +112,25 @@ ScrollTrigger.create({
 const animateskillMarquee = () => {
   if(true ){
     gsap.timeline().to(
-      [labelsRef.children[0]],5,
+      [labelsRef.children[0]],3,
       //
       {
-        y:process_scrollDir === "down" ? -40 : 40,
+        y:process_scrollDir === "down" ? -20 : 20,
       }
       ,"a"
     )
     .to(
-      [labelsRef.children[3]],5,
-      //
-      {
-        y:process_scrollDir === "down" ? -35 : 35,
-      }
-      ,"a"
-    ).to(
-      [labelsRef.children[1],labelsRef.children[2]],7,
+      [labelsRef.children[3]],3,
       //
       {
         y:process_scrollDir === "down" ? -25 : 25,
+      }
+      ,"a"
+    ).to(
+      [labelsRef.children[1],labelsRef.children[2]],4,
+      //
+      {
+        y:process_scrollDir === "down" ? -15 : 15,
       }
       ,"a"
     )

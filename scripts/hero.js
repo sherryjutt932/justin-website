@@ -19,7 +19,7 @@ function setCirclePosition() {
   }
 }
 
-var cir_duration = 0.009;
+var cir_duration = 0.007;
 
 if(isMobile()){
   cir_duration = 0.004
