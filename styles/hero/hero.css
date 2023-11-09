@@ -831,8 +831,8 @@ nav .line {
     transition: all 500ms ease;
   }
   .HeadrnavBtn #navAnimatedIconM {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     padding: 10px;
     aspect-ratio: 1/1;
     z-index: 100;
@@ -841,7 +841,7 @@ nav .line {
     border-radius: 100px;
   }
   .HeadrnavBtn #navAnimatedIconM #changesvgM {
-    transition: all 500ms ease;
+    transition: all 1000ms ease;
   }
   .HeadrnavBtn #mobileNavBtn.initial {
     width: 0;
@@ -901,20 +901,55 @@ nav .line {
   #navigationSec {
     width: 100%;
     height: 0vh;
-    transition: height 0ms linear;
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
-    background-color: transparent !important;
+    opacity: 0;
+    transition: height 0ms linear;
+    transition: opacity 400ms ease;
   }
-  #navigationSec.open #mobileNav {
+  #navigationSec.initial {
+    opacity: 0;
+    height: 0vh;
     background-color: rgba(0, 0, 0, 0.5019607843);
   }
-  #navigationSec.open #mobileNav > div {
-    -webkit-clip-path: circle(200% at 90% 9%);
-            clip-path: circle(200% at 90% 9%);
+  #navigationSec.open {
+    animation: navigationSecAnimO 500ms ease forwards;
+  }
+  @keyframes navigationSecAnimO {
+    0% {
+      height: 0vh;
+    }
+    1% {
+      opacity: 0;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5019607843);
+    }
+    100% {
+      opacity: 1;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5019607843);
+    }
+  }
+  #navigationSec.close {
+    animation: navigationSecAnimC 500ms ease forwards;
+  }
+  @keyframes navigationSecAnimC {
+    0% {
+      height: 100vh;
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.5019607843);
+    }
+    99% {
+      opacity: 0;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5019607843);
+    }
+    100% {
+      height: 0vh;
+    }
   }
   #navigation {
     display: none;
@@ -1101,7 +1136,7 @@ nav .line {
     justify-content: left;
   }
   nav .logoimg img {
-    width: 59px;
+    width: 53px;
   }
   nav .border-bottom {
     position: absolute;

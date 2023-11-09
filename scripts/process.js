@@ -4,7 +4,7 @@ const processSecond = document.getElementById("proc-marquee-second");
 const processThird = document.getElementById("proc-marquee-third");
 
 var process_xPercent = 0;
-var process_scrollDir = "up";
+var process_scrollDir = "down";
 var processSpeed = 12;
 
 const handleProcessScroll = () => {
@@ -131,7 +131,7 @@ function setisActive(ind) {
 const apath_Process_discovery =
   "./assets/Animation/Our_Process/discovery/discovery.json";
 const apath_Process_strategy =
-  "./assets/Animation/Our_Process/Strategy/Test_StratergyIcon_Black.json";
+  "./assets/Animation/Our_Process/Strategy/StratergyIcon_White.json";
 const apath_Process_design =
   "./assets/Animation/Our_Process/Design/Design_Icon_White.json";
 const apath_Process_development =

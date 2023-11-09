@@ -36,7 +36,7 @@ function setTimeline(location) {
         clipPath: `circle(0% at ${location.left}px ${location.top}px)`,
       },
       {
-        clipPath: `circle(150% at ${location.left}px ${location.top}px)`,
+        clipPath: `circle(170% at ${location.left}px ${location.top}px)`,
         // clipPath: `circle(70% at ${location.left}px ${location.top}px)`,
       },
       "a"
@@ -110,11 +110,18 @@ function toggleMenu() {
     ele.classList.toggle('open');
   });
 
-  
-  if(!isMobile()){
-    element.classList.toggle('open');
+  if(element.classList.contains("initial")){
+    element.classList.remove('initial');
+  }
+  if(element.classList.contains("open")){
+    element.classList.add('close');
   }
   else{
+    element.classList.remove('close');
+  }
+  element.classList.toggle('open');
+  
+  if(isMobile()){
     // let mobileNavBtnelementwidth = mobileNavBtnelement.offsetWidth;
     // let mobileNavBtn_FC = mobileNavBtnelement.querySelector("#mobileNavBtn-FC");
     if(mobileNavBtnelement.classList.contains("initial")){
