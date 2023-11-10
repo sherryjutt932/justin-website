@@ -9,7 +9,7 @@ if (!isMobile()) {
   aboutusTl.to(
       aboutRef,
       {
-        xPercent: -70,
+        xPercent: -63,
         ease: "none",
       },
       "a"

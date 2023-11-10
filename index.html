@@ -133,7 +133,11 @@
           </div>
 
           <div id="navigation-cards">
-            <a class="card">
+            <span id="navdot">
+              <img src="./assets/icons/navbarContentCardArrow.svg" alt="">
+            </span>
+
+            <a class="card" href="/">
               <div>
                 <h5>Brand Identity</h5>
                 <p>Creative strategies for brands.</h>
@@ -143,7 +147,7 @@
                 <div class="animicon" id="aicon-navbar-brand"></div>
               </div>
             </a>
-            <a class="card active">
+            <a class="card" href="/">
               <div>
                 <h5>UI UX</h5>
                 <p>Handcraft the user experience.</h>
@@ -153,7 +157,7 @@
                 <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
               </div>
             </a>
-            <a class="card">
+            <a class="card" href="/">
               <div>
                 <h5>Development</h5>
                 <p>Leverage the power of code.</h>
@@ -168,17 +172,36 @@
 
         <div class="footer">
           <div class="border-top"></div>
-          <div class="creator">Made by Xaib</div>
+          <!-- <div class="creator">Made by Xaib</div> -->
+          <a  href="/" class="LinkhoverGroup creator">
+            <div class="textonly">
+              <div class="visibleTag">Made by Xaib</div>
+            <div class="hiddenTag">Made by Xaib</div>
+            </div>
+          </a>
+
           <div class="icons">
-            <div>
-              <img src="./assets/icons/header/dribble.svg" alt="">
-            </div>
-            <div>
-              <img src="./assets/icons/header/linkedin.svg" alt="">
-            </div>
-            <div>
-              <img src="./assets/icons/header/instagram.svg" alt="">
-            </div>
+            <a  href="/" class="LinkhoverGroup">
+              <div class="icononly">
+                <img class="visibleTag" src="./assets/icons/header/dribble.svg" alt="">
+                <img class="hiddenTag" src="./assets/icons/header/dribble.svg" alt="">
+              </div>
+            </a>
+
+            <a  href="/" class="LinkhoverGroup">
+              <div class="icononly">
+                <img class="visibleTag" src="./assets/icons/header/linkedin.svg"  alt="">
+                <img class="hiddenTag" src="./assets/icons/header/linkedin.svg"  alt="">
+              </div>
+            </a>
+
+            <a  href="/" class="LinkhoverGroup">
+              <div class="icononly">
+                <img class="visibleTag" src="./assets/icons/header/instagram.svg" alt="">
+                <img class="hiddenTag" src="./assets/icons/header/instagram.svg" alt="">
+              </div>
+            </a>
+            
           </div>
         </div>
 

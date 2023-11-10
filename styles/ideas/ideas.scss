@@ -559,6 +559,8 @@
                         padding: 10px 20px;
                         line-height: 20px;
                         gap: 20px;
+                        color: var(--black);
+                        text-decoration: none;
 
                         &.mob-only {
                             display: flex !important;
