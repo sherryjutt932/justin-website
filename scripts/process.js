@@ -130,7 +130,7 @@ function setisActive(ind) {
 
 if (true) {
   var apath_Process_discovery =
-    "./assets/Animation/Our_Process/discovery/Discovery_Icon_White_V3.json";
+    "./assets/Animation/Our_Process/discovery/Discovery_Icon_Black_V3.json";
   var apath_Process_strategy =
     "./assets/Animation/Our_Process/Strategy/StratergyIcon_White_V2.json";
   var apath_Process_design =
@@ -158,7 +158,7 @@ if(isMobile()){
   var apath_Process_development_black =
   "./assets/Animation/Our_Process/Development/Development_Black.json";
   var apath_Process_discovery_black =
-    "./assets/Animation/Our_Process/discovery/Discovery_Icon_Black_V3.json";
+    "./assets/Animation/Our_Process/discovery/Discovery_Icon_White_V3.json";
 
   var aicon_Process_mob_discovery = "aicon-process-mob-discovery";
   var aicon_Process_mob_strategy = "aicon-process-mob-strategy";
