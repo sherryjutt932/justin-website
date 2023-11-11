@@ -120,21 +120,21 @@ function toggleMenu() {
     }
     if (mobileNavBtnelement.classList.contains("open")) {
       mobileNavBtnelement.classList.add("close");
-    } else {
+    } else if (!mobileNavBtnelement.classList.contains("open")) {
       mobileNavBtnelement.classList.remove("close");
     }
     mobileNavBtnelement.classList.toggle("open");
     document.getElementById("heroSec").classList.toggle("open");
   }
 
-  if (element && !isMobile()) {
-    const currentHeight = element.offsetHeight;
-    const isFullHeight = currentHeight === window.innerHeight;
+  // if (element && !isMobile()) {
+  //   const currentHeight = element.offsetHeight;
+  //   const isFullHeight = currentHeight === window.innerHeight;
 
-    // Toggle the height based on the current state
-    element.style.height = isFullHeight ? "0" : "100vh";
-    // element.style.position = isFullHeight ? '' : '';
-  }
+  //   // Toggle the height based on the current state
+  //   element.style.height = isFullHeight ? "0" : "100vh";
+  //   // element.style.position = isFullHeight ? '' : '';
+  // }
 
   // ------new
 
@@ -160,17 +160,20 @@ function toggleMenu() {
     wrapperM.classList.toggle("open");
 
     if (wrapperM.classList.contains("open")) {
+      element.style.height = "100vh";
       wrapperM.classList.remove("close");
       setTimeout(() => {
         navAnimatedIcon_pathlistM[0].setAttribute("d", opend1);
         navAnimatedIcon_pathlistM[1].setAttribute("d", opend2);
         navAnimatedIcon_pathlistM[2].setAttribute("d", opend3);
       }, 200);
-    } else {
+      
+    } else if (!wrapperM.classList.contains("open")) {
       navAnimatedIcon_pathlistM[0].setAttribute("d", closedd1);
       navAnimatedIcon_pathlistM[1].setAttribute("d", closedd2);
       navAnimatedIcon_pathlistM[2].setAttribute("d", closedd3);
       wrapperM.classList.add("close");
+      element.style.height ="0";
     }
   } else {
     // console.log(wrapper)
@@ -182,16 +185,18 @@ function toggleMenu() {
       wrapper.style.left = wrapIL;
       wrapper.style.top = wrapIT;
       wrapper.classList.remove("close");
+      element.style.height = "100vh";
       setTimeout(() => {
         navAnimatedIcon_pathlist[0].setAttribute("d", opend1);
         navAnimatedIcon_pathlist[1].setAttribute("d", opend2);
         navAnimatedIcon_pathlist[2].setAttribute("d", opend3);
-      }, 200);
-    } else {
+      }, 5);
+    } else if (!wrapper.classList.contains("open")) {
       navAnimatedIcon_pathlist[0].setAttribute("d", closedd1);
       navAnimatedIcon_pathlist[1].setAttribute("d", closedd2);
       navAnimatedIcon_pathlist[2].setAttribute("d", closedd3);
       wrapper.classList.add("close");
+      element.style.height ="0";
     }
   }
 } //event lister end
@@ -265,56 +270,55 @@ navigation_cards_Array.forEach(function (card) {
     // Add active class to the clicked card
     card.classList.add("active");
 
-    gsap.to(mousefollower, {
+    gsap.to(mousefollower,0.2, {
       width: 40,
     });
-    
-    let mousefollower_rightarrow = mousefollower.querySelector("#mousefollower-rightarrow");
+
+    let mousefollower_rightarrow = mousefollower.querySelector(
+      "#mousefollower-rightarrow"
+    );
     if (mousefollower_rightarrow) {
       mousefollower_rightarrow.style.display = "block";
-      gsap.to(mousefollower_rightarrow, {
-        scale:1
+      gsap.to(mousefollower_rightarrow,0.2, {
+        scale: 1,
       });
     }
-
   });
   card.addEventListener("mouseleave", function () {
-    gsap.to(mousefollower,{
-      width:16
+    gsap.to(mousefollower, 0.2,{
+      width: 16,
     });
-    
-    let mousefollower_rightarrow = mousefollower.querySelector("#mousefollower-rightarrow");
+
+    let mousefollower_rightarrow = mousefollower.querySelector(
+      "#mousefollower-rightarrow"
+    );
     if (mousefollower_rightarrow) {
-      gsap.to(mousefollower_rightarrow, {
-        scale:0,
+      gsap.to(mousefollower_rightarrow, 0.2,{
+        scale: 0,
         onComplete: () => {
           mousefollower_rightarrow.style.display = "block";
-        }
+        },
       });
-      
     }
-
   });
 });
 
-
-
 // ------------------------scroller Animation
 // GSAP Timeline
-const scroller_Animation_timeline = gsap.timeline({ repeat: -1,});
+const scroller_Animation_timeline = gsap.timeline({ repeat: -1 });
 
 // Add your animation to the timeline
-scroller_Animation_timeline.to(".scrollerAnim-circle", {
-  y: -34,
-  duration:1,
-  ease: 'ease',
-})
-.to(".scrollerAnim-circle", {
-  y: 0,
-  duration:1,
-  ease: 'bounce.out',
-})
-;
+scroller_Animation_timeline
+  .to(".scrollerAnim-circle", {
+    y: -34,
+    duration: 1,
+    ease: "ease",
+  })
+  .to(".scrollerAnim-circle", {
+    y: 0,
+    duration: 1,
+    ease: "bounce.out",
+  });
 
 // Add a delay after each repetition
 scroller_Animation_timeline.to({}, { delay: 2 });

@@ -75,20 +75,20 @@
 #navigationSec.open {
   --localtransitiontime: 600ms;
 }
-#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link > div {
+#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link {
   transition-delay: var(--localtransitiontime);
   opacity: 1;
 }
-#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link:nth-child(2) div {
+#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link:nth-child(2) {
   transition-delay: calc(var(--localtransitiontime) + 100ms);
 }
-#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link:nth-child(3) div {
+#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link:nth-child(3) {
   transition-delay: calc(var(--localtransitiontime) + 200ms);
 }
-#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link:nth-child(4) div {
+#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link:nth-child(4) {
   transition-delay: calc(var(--localtransitiontime) + 300ms);
 }
-#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link:nth-child(5) div {
+#navigationSec.open #navigation header .content > div:nth-child(1) .nav-link:nth-child(5) {
   transition-delay: calc(var(--localtransitiontime) + 400ms);
 }
 #navigationSec.open #navigation header .content > div:nth-child(2) .card {
@@ -201,11 +201,11 @@
   gap: 15px;
 }
 #navigation header .content > div:nth-child(1) .nav-link {
+  opacity: 0;
+  transition: opacity 1s ease;
   overflow: hidden;
 }
 #navigation header .content > div:nth-child(1) .nav-link > div {
-  opacity: 0;
-  transition: opacity 1s ease;
   border-radius: 100px;
   overflow: hidden;
   position: relative;

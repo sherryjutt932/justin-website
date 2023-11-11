@@ -95,24 +95,16 @@
       .content {
         & > div {
           &:nth-child(1) {
-            .nav-link > div {
+            .nav-link{
               //hello
               transition-delay: var(--localtransitiontime);
               opacity: 1;
 
             }
-            .nav-link:nth-child(2){
-              div {transition-delay: calc(var(--localtransitiontime) + 100ms);}
-            }
-            .nav-link:nth-child(3){
-              div {transition-delay: calc(var(--localtransitiontime) + 200ms);}
-            }
-            .nav-link:nth-child(4){
-              div {transition-delay: calc(var(--localtransitiontime) + 300ms);}
-            }
-            .nav-link:nth-child(5){
-              div {transition-delay: calc(var(--localtransitiontime) + 400ms);}
-            }
+            .nav-link:nth-child(2){transition-delay: calc(var(--localtransitiontime) + 100ms);}
+            .nav-link:nth-child(3){transition-delay: calc(var(--localtransitiontime) + 200ms);}
+            .nav-link:nth-child(4){transition-delay: calc(var(--localtransitiontime) + 300ms);}
+            .nav-link:nth-child(5){transition-delay: calc(var(--localtransitiontime) + 400ms);}
           }
           &:nth-child(2) {
             .card {
@@ -250,10 +242,10 @@
         &:nth-child(1) {
           gap: 15px;
           .nav-link {
+            opacity: 0;
+            transition: opacity 1s ease;
             overflow: hidden;
             & > div {
-              opacity: 0;
-              transition: opacity 1s ease;
               //hello1
               border-radius: 100px;
               overflow: hidden;
