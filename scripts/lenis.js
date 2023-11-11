@@ -5,7 +5,7 @@ lenis.on('scroll', ScrollTrigger.update)
 gsap.ticker.add((time)=>{
 
   if(isMobile()){
-    lenis.raf(time * 200)
+    lenis.raf(time * 100)
   }
   else{
     lenis.raf(time * 500)
