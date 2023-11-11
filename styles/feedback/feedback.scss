@@ -1,15 +1,26 @@
 #feedbackSec {
     width: 100%;
-    height: 100vh;
-    max-height: 100vh;
+    height: fit-content;
+    // max-height: 100vh;
     position: relative;
-    overflow: hidden;
-    padding: 40px 100px;
-    
+    // overflow: hidden;
+    margin-bottom: -100vh;
+
+    .spacer{
+        height: 100vh;
+    }
+    .feedbackWrapper{
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        padding: 40px 100px;
+
+    }
+
     .feedback-border-top{
        display: none;
     }
-    &>div:nth-child(1){
+    &>div>div:nth-child(1){
         font-size: 16px;
         line-height: 21px;
         width: 100%;
@@ -170,9 +181,13 @@
 
 @media (min-width: 1536px){
     #feedbackSec {
-        padding: 60px 120px;
+        
+        .feedbackWrapper{
+            padding: 60px 120px;
+    
+        }
 
-        &>div:nth-child(1){
+        &>div>div:nth-child(1){
             font-size: 20px;
             line-height: 28px;
             span{
@@ -258,13 +273,14 @@
 
 @media (max-width: 750px){
     #feedbackSec {
-        width: 100%;
-        height: fit-content;
-        max-height: unset;
-        position: relative;
-        overflow: hidden;
-        padding: 40px 24px;
-        padding-bottom: 100px;
+        .feedbackWrapper{
+            position: sticky;
+            top: 0;
+            height: fit-content;
+            padding: 40px 24px;
+            padding-bottom: 100px;
+    
+        }
         
         .feedback-border-top{
             display: block;
@@ -281,7 +297,7 @@
                 background-color: var(--gray-c5);
             }
         }
-        &>div:nth-child(1){
+        &>div>div:nth-child(1){
             font-size: 16px;
             line-height: 21px;
             width: 100%;

@@ -36,7 +36,7 @@ function setTimeline(location) {
           clipPath: `circle(0% at ${location.left}px ${location.top}px)`,
         },
         {
-          clipPath: `circle(170% at ${location.left}px ${location.top}px)`,
+          clipPath: `circle(180% at ${location.left}px ${location.top}px)`,
           // clipPath: `circle(70% at ${location.left}px ${location.top}px)`,
         },
         "a"
@@ -287,3 +287,25 @@ navigation_cards_Array.forEach(function (card) {
     })
   });
 });
+
+
+
+// ------------------------scroller Animation
+// GSAP Timeline
+const scroller_Animation_timeline = gsap.timeline({ repeat: -1,});
+
+// Add your animation to the timeline
+scroller_Animation_timeline.to(".scrollerAnim-circle", {
+  y: -34,
+  duration:1,
+  ease: 'ease',
+})
+.to(".scrollerAnim-circle", {
+  y: 0,
+  duration:1,
+  ease: 'bounce.out',
+})
+;
+
+// Add a delay after each repetition
+scroller_Animation_timeline.to({}, { delay: 2 });

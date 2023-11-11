@@ -12,14 +12,14 @@ var feedbackanim = gsap.timeline();
 //     "a"
 //   );
 
-ScrollTrigger.create({
-    trigger: feedbackSec,
-    start: "top top",
-    pin:true,
-    pinSpacing:false,
-    scrub: 1,
-    animation:feedbackanim,
-  });
+// ScrollTrigger.create({
+//     trigger: feedbackSec,
+//     start: "top top",
+//     pin:true,
+//     pinSpacing:false,
+//     scrub: 1,
+//     animation:feedbackanim,
+//   });
 
 
 // const carousel = document.querySelector(".carousel");

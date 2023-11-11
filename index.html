@@ -401,6 +401,16 @@
 
               <!-- bottom right content -->
               <div class="detail">
+                <div class="scrollerAnim">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="75" viewBox="0 0 40 75" fill="none">
+                    <rect x="0.75" y="0.75" width="38.5" height="73.5" rx="19.25" stroke="black" stroke-width="1.5"/>
+                    <circle class="scrollerAnim-circle" cx="20" cy="54" r="12" fill="#FF2626"/>
+                    </svg>
+                  <div>
+                    <h2>Scroll down</h2>
+                    <p>To discover more</p>
+                  </div>
+                </div>
                 <div>
                   <p>
                     Our top priority is to provide exceptional support to our
@@ -560,6 +570,17 @@
 
               <!-- bottom right content -->
               <div class="detail">
+                <div class="scrollerAnim">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="75" viewBox="0 0 40 75" fill="none">
+                    <rect x="0.75" y="0.75" width="38.5" height="73.5" rx="19.25" stroke="white" stroke-width="1.5"/>
+                    <circle class="scrollerAnim-circle" cx="20" cy="54" r="12" fill="#FF2626"/>
+                    </svg>
+                  <div>
+                    <h2>Scroll down</h2>
+                    <p>To discover more</p>
+                  </div>
+                </div>
+
                 <div>
                   <p>
                     Our top priority is to provide exceptional support to our
@@ -1398,215 +1419,252 @@
   </section>
 
   <section id="feedbackSec">
-    <div>
-      <div><span></span> Client Feedback</div>
-    </div>
-
-    <div class="feedbackCon">
-
-      <div class="feedback-border-top">
-        <div></div>
+    <div class="feedbackWrapper">
+      <div>
+        <div><span></span> Client Feedback</div>
       </div>
-
-      <div class="feedbackdetail">
-        <div>
-          <div id="feedbackP" class="carousel_track">
-            <p class="carousel">Creativity is the cornerstone of our problem-solving strategy. We approach each
-              challenge with inventive thinking, turning obstacles into opportunities. </p>
-            <p class="carousel">Punctuality and reliability are embedded in our team's ethos. We adhere to deadlines
-              with precision, demonstrating a commitment. </p>
-            <p class="carousel is-selected">They consistently set and achieve clear goals with a strong work
-              ethic,creativity, and skillfulness, while meeting deadlines and effectively solving problems.
-            </p>
-            <p class="carousel">Collaboration defines our team's skillfulness. Recognizing the power of combined effort,
-              we actively foster a collaborative environment.</p>
-            <p class="carousel">Our team consistently achieves defined objectives through a strong dedication to
-              success,employing a blend of creativity.</p>
-          </div>
-
-          <div>
-            <div class="tablet">
-              <div><span id="carouselNumber" data-index="0">01</span></div>
-              <div>
-                <h2 data-index="0" class="carouselname active">Hatim</h2>
-                <h2 data-index="1" class="carouselname">Morphine</h2>
-                <h2 data-index="2" class="carouselname">John</h2>
-                <h2 data-index="3" class="carouselname">Thomas</h2>
-                <h2 data-index="4" class="carouselname">Elbert</h2>
-                <p data-index="0" class="carouselrole active">Founder-Aqsit</p>
-                <p data-index="1" class="carouselrole">CEO-Aqsit</p>
-                <p data-index="2" class="carouselrole">COO-Aqsit</p>
-                <p data-index="3" class="carouselrole">HR-Aqsit</p>
-                <p data-index="4" class="carouselrole">Dev-Aqsit</p>
-              </div>
-            </div>
-            <button onclick="prevButtonClick()">
-              <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
-                  stroke-width="1.6" />
-              </svg>
-
-            </button>
-            <button onclick="nextButtonClick()">
-              <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
-                  stroke-width="1.6" />
-              </svg>
-
-            </button>
-          </div>
-
+  
+      <div class="feedbackCon">
+  
+        <div class="feedback-border-top">
+          <div></div>
         </div>
-
-
-      </div>
-
-      <div class="feebackimg">
-        <img id="biglogo" src="./assets/icons/logoBig.svg" alt="">
-        <img src="./assets/icons/steric-med.svg" id="rotate-steric" alt="">
+  
+        <div class="feedbackdetail">
+          <div>
+            <div id="feedbackP" class="carousel_track">
+              <p class="carousel">Creativity is the cornerstone of our problem-solving strategy. We approach each
+                challenge with inventive thinking, turning obstacles into opportunities. </p>
+              <p class="carousel">Punctuality and reliability are embedded in our team's ethos. We adhere to deadlines
+                with precision, demonstrating a commitment. </p>
+              <p class="carousel is-selected">They consistently set and achieve clear goals with a strong work
+                ethic,creativity, and skillfulness, while meeting deadlines and effectively solving problems.
+              </p>
+              <p class="carousel">Collaboration defines our team's skillfulness. Recognizing the power of combined effort,
+                we actively foster a collaborative environment.</p>
+              <p class="carousel">Our team consistently achieves defined objectives through a strong dedication to
+                success,employing a blend of creativity.</p>
+            </div>
+  
+            <div>
+              <div class="tablet">
+                <div><span id="carouselNumber" data-index="0">01</span></div>
+                <div>
+                  <h2 data-index="0" class="carouselname active">Hatim</h2>
+                  <h2 data-index="1" class="carouselname">Morphine</h2>
+                  <h2 data-index="2" class="carouselname">John</h2>
+                  <h2 data-index="3" class="carouselname">Thomas</h2>
+                  <h2 data-index="4" class="carouselname">Elbert</h2>
+                  <p data-index="0" class="carouselrole active">Founder-Aqsit</p>
+                  <p data-index="1" class="carouselrole">CEO-Aqsit</p>
+                  <p data-index="2" class="carouselrole">COO-Aqsit</p>
+                  <p data-index="3" class="carouselrole">HR-Aqsit</p>
+                  <p data-index="4" class="carouselrole">Dev-Aqsit</p>
+                </div>
+              </div>
+              <button onclick="prevButtonClick()">
+                <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
+                    stroke-width="1.6" />
+                </svg>
+  
+              </button>
+              <button onclick="nextButtonClick()">
+                <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
+                    stroke-width="1.6" />
+                </svg>
+  
+              </button>
+            </div>
+  
+          </div>
+  
+  
+        </div>
+  
+        <div class="feebackimg">
+          <img id="biglogo" src="./assets/icons/logoBig.svg" alt="">
+          <img src="./assets/icons/steric-med.svg" id="rotate-steric" alt="">
+        </div>
       </div>
     </div>
-
+    <div class="spacer"></div>
   </section>
 
-  <section id="ideasSec">
-
-    <div id="ideasCon">
-      <h1>Let’s turn your<br>
-        idea into reality</h1>
-
-
-      <div class="ideasproducts">
-        <p>Designed Products across various Industries Fintech • Healthcare • SASS • E-commerce • Retail • Realestate
-        </p>
-
-        <div class="tabsflex">
-          <a href="/" class="LinkhoverGroup">
-            <div>
-              <div class="visibleTag">Work</div>
-            <div class="hiddenTag" >Work</div>
-            </div>
   
-            <div>
-              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
-              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
-            </div>
-          </a>
-
-          <a href="/" class="LinkhoverGroup">
-            <div>
-              <div class="visibleTag">Process</div>
-            <div class="hiddenTag" >Process</div>
-            </div>
+  <section id="footer">
+    <section id="ideasSec">
   
-            <div>
-              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
-              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
-            </div>
-          </a><a href="/" class="LinkhoverGroup">
-            <div>
-              <div class="visibleTag">About</div>
-            <div class="hiddenTag" >About</div>
-            </div>
-  
-            <div>
-              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
-              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
-            </div>
-          </a><a href="/" class="LinkhoverGroup">
-            <div>
-              <div class="visibleTag">Plans</div>
-            <div class="hiddenTag" >Plans</div>
-            </div>
-  
-            <div>
-              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
-              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
-            </div>
-          </a>
+      <div id="ideasCon">
+        
+        <div class="animated-head">
           
+          <h1>Let’s turn your<br>
+            idea into reality</h1>
+            <div>
+              <svg width="663" height="283" viewBox="0 0 663 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame 1000003707">
+                    <path id="Ellipse 1228"
+                        d="M565.886 97.6308C568.123 109.835 563.977 122.775 554.226 135.808C544.474 148.843 529.205 161.84 509.502 174.048C470.105 198.46 413.258 219.545 348.304 231.45C283.349 243.356 222.719 243.803 177.226 234.952C154.474 230.525 135.587 223.788 121.846 215.059C108.108 206.332 99.6412 195.704 97.4043 183.499C95.1674 171.295 99.3139 158.355 109.064 145.322C118.816 132.288 134.085 119.29 153.788 107.082C193.185 82.6705 250.032 61.5855 314.987 49.6799C379.942 37.7743 440.571 37.3268 486.065 46.1783C508.817 50.605 527.703 57.3422 541.444 66.0708C555.183 74.7982 563.649 85.4265 565.886 97.6308Z"
+                        stroke="#EAEAEA" stroke-width="3"></path>
+                    <path id="*"
+                        d="M314.452 232.835L302.087 225.678L308.151 215.93L319.981 222.567C326.857 226.381 330.512 229.377 334.255 233.018C333.989 227.729 334.296 222.759 335.634 215.679L338.273 201.721L349.684 203.878L347.045 217.836C345.706 224.916 343.897 230.022 341.998 234.482C346.775 232.661 351.309 231.004 358.9 229.925L372.578 227.902L374.83 239.432L360.502 241.542C353.319 242.698 347.868 242.506 343.067 242.226C346.657 246.677 349.102 250.491 351.826 257.292L357.631 270.123L347.034 274.824L341.191 262.195C338.059 255.318 336.697 250.241 335.667 245.646C333.119 250.193 329.998 254.422 324.89 259.113L314.635 268.698L306.283 260.414L316.371 250.588C321.798 245.329 325.912 242.545 330.433 239.838C324.474 237.873 319.94 236.178 314.452 232.835Z"
+                        fill="#FF2626"
+                        style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                    </path>
+                    <circle id="Ellipse 1229" cx="270.001" cy="62.1572" r="15.9552"
+                        transform="rotate(10.7066 270.001 62.1572)" fill="#FF2626"
+                        style="transform: translate(0px, 0px) rotate(10.7066deg) rotateX(7.54902deg) rotateY(1.08333deg);">
+                    </circle>
+                    <path id="Vector"
+                        d="M141.509 182.705L153.03 184.883C148.049 211.221 143.075 237.561 138.088 263.897L126.571 261.719C127.946 254.435 129.326 247.152 130.701 239.867C127.035 243.135 123.088 246.067 119.05 248.848C115.205 251.48 111.27 253.983 107.24 256.319C104.831 252.792 102.422 249.264 100.013 245.736C104.425 242.38 108.988 239.225 113.68 236.278C117.784 233.721 121.994 231.308 126.423 229.366C128.396 228.509 130.418 227.749 132.505 227.228C129.62 227.32 126.733 227.175 123.86 226.923C119.932 226.571 116.027 226.01 112.143 225.333C108.064 224.615 104.006 223.781 99.9837 222.796L102.363 210.212C105.57 210.576 108.764 211.045 111.948 211.58C116.233 212.306 120.499 213.164 124.709 214.249C127.853 215.065 130.973 216.002 133.994 217.204C131.915 215.658 130.055 213.837 128.294 211.938C125.588 209 123.124 205.844 120.777 202.61C117.325 197.822 114.11 192.861 111.134 187.759C114.664 185.352 118.195 182.948 121.727 180.544C125.259 185.179 128.579 189.979 131.66 194.93C133.693 198.215 135.614 201.574 137.281 205.064C138.692 197.612 140.1 190.158 141.509 182.705Z"
+                        fill="#EAEAEA"
+                        style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                    </path>
+                    <path id="Vector_2"
+                        d="M507.515 32.3699L547.499 39.9297L538.87 85.565C532.984 84.4535 527.097 83.3406 521.211 82.2284C520.79 84.4712 520.35 86.7097 519.947 88.956C519.707 90.4817 519.563 92.0842 520.026 93.5821C520.344 94.6792 521.131 95.5995 522.102 96.1727C523.226 96.8352 524.503 97.1711 525.773 97.4214C529.266 98.0841 532.761 98.7379 536.253 99.406L532.58 118.834C529.859 118.322 527.14 117.806 524.42 117.293C522.548 116.928 520.665 116.617 518.81 116.169C514.693 115.183 510.655 113.672 507.117 111.308C503.352 108.831 500.285 105.216 498.675 100.967C497.041 96.7579 496.765 92.1312 497.217 87.6655C497.365 86.0818 497.64 84.515 497.95 82.9564C501.139 66.0942 504.327 49.2321 507.515 32.3699Z"
+                        fill="#EAEAEA"
+                        style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                    </path>
+                </g>
+            </svg>
+            </div>
+          </div>
+  
+  
+        <div class="ideasproducts">
+          <p>Designed Products across various Industries Fintech • Healthcare • SASS • E-commerce • Retail • Realestate
+          </p>
+  
+          <div class="tabsflex">
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Work</div>
+              <div class="hiddenTag" >Work</div>
+              </div>
+    
+              <div>
+                <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+                <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+              </div>
+            </a>
+  
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Process</div>
+              <div class="hiddenTag" >Process</div>
+              </div>
+    
+              <div>
+                <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+                <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+              </div>
+            </a><a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">About</div>
+              <div class="hiddenTag" >About</div>
+              </div>
+    
+              <div>
+                <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+                <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+              </div>
+            </a><a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Plans</div>
+              <div class="hiddenTag" >Plans</div>
+              </div>
+    
+              <div>
+                <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+                <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+              </div>
+            </a>
+            
+          </a><a href="/" class="LinkhoverGroup mob-only">
+            <div>
+              <div class="visibleTag">Contact Us</div>
+            <div class="hiddenTag" >Contact Us</div>
+            </div>
+  
+            <div>
+              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+            </div>
+          </a>
+  
         </a><a href="/" class="LinkhoverGroup mob-only">
           <div>
-            <div class="visibleTag">Contact Us</div>
-          <div class="hiddenTag" >Contact Us</div>
+            <div class="visibleTag">Services</div>
+          <div class="hiddenTag" >Services</div>
           </div>
-
+  
           <div>
             <img class="visibleTag" src="./assets/icons/link.svg" alt="">
             <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
           </div>
         </a>
-
-      </a><a href="/" class="LinkhoverGroup mob-only">
-        <div>
-          <div class="visibleTag">Services</div>
-        <div class="hiddenTag" >Services</div>
-        </div>
-
-        <div>
-          <img class="visibleTag" src="./assets/icons/link.svg" alt="">
-          <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
-        </div>
-      </a>
-         
-        </div>
-
-        <div class="tabsflex">
+           
+          </div>
+  
+          <div class="tabsflex">
+          </a><a href="/" class="LinkhoverGroup">
+            <div>
+              <div class="visibleTag">Contact Us</div>
+            <div class="hiddenTag" >Contact Us</div>
+            </div>
+  
+            <div>
+              <img class="visibleTag" src="./assets/icons/link.svg" alt="">
+              <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
+            </div>
+          </a>
+  
         </a><a href="/" class="LinkhoverGroup">
           <div>
-            <div class="visibleTag">Contact Us</div>
-          <div class="hiddenTag" >Contact Us</div>
+            <div class="visibleTag">Services</div>
+          <div class="hiddenTag" >Services</div>
           </div>
-
+  
           <div>
             <img class="visibleTag" src="./assets/icons/link.svg" alt="">
             <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
           </div>
         </a>
-
-      </a><a href="/" class="LinkhoverGroup">
-        <div>
-          <div class="visibleTag">Services</div>
-        <div class="hiddenTag" >Services</div>
-        </div>
-
-        <div>
-          <img class="visibleTag" src="./assets/icons/link.svg" alt="">
-          <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
-        </div>
-      </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="idea-marquee-wrap">
-      <div class="idea-marquee-con">
-        <div id="idea-marquee">
-          <div id="idea-marquee-first">
-            <div>JUST GREAT WORK</div>
-            <img src="assets/icons/steric-med.svg" alt="" />
-            <div>JUST GREAT WORK</div>
-            <img src="assets/icons/steric-med.svg" alt="" />
-          </div>
-          <div id="idea-marquee-second">
-            <div>JUST GREAT WORK</div>
-            <img src="assets/icons/steric-med.svg" alt="" />
-            <div>JUST GREAT WORK</div>
-            <img src="assets/icons/steric-med.svg" alt="" />
-          </div>
-          <div id="idea-marquee-third">
-            <div>JUST GREAT WORK</div>
-            <img src="assets/icons/steric-med.svg" alt="" />
-            <div>JUST GREAT WORK</div>
-            <img src="assets/icons/steric-med.svg" alt="" />
           </div>
         </div>
       </div>
-    </div>
+  
+      <div class="idea-marquee-wrap">
+        <div class="idea-marquee-con">
+          <div id="idea-marquee">
+            <div id="idea-marquee-first">
+              <div>JUST GREAT WORK</div>
+              <img src="assets/icons/steric-med.svg" alt="" />
+              <div>JUST GREAT WORK</div>
+              <img src="assets/icons/steric-med.svg" alt="" />
+            </div>
+            <div id="idea-marquee-second">
+              <div>JUST GREAT WORK</div>
+              <img src="assets/icons/steric-med.svg" alt="" />
+              <div>JUST GREAT WORK</div>
+              <img src="assets/icons/steric-med.svg" alt="" />
+            </div>
+            <div id="idea-marquee-third">
+              <div>JUST GREAT WORK</div>
+              <img src="assets/icons/steric-med.svg" alt="" />
+              <div>JUST GREAT WORK</div>
+              <img src="assets/icons/steric-med.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </section>
 
-  </section>
-
-  <section id="footer">
+    <section class="footerSec">
+      <div class="spacer"></div>
     <div class="footerCon">
       <div>
         <h1>Reach Us</h1>
@@ -1724,6 +1782,7 @@
         </div>
       </div>
     </div>
+    </section>
   </section>
 
   <script>
@@ -1789,6 +1848,7 @@
       var scriptsToLoad = [
         "./scripts/global.js",
         "./scripts/lenis.js",
+        "./scripts/animated/figmafooter.js",
         "./scripts/hero.js",
         "./scripts/marquee.js",
         "./scripts/process.js",

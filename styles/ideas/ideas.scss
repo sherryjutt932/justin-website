@@ -17,12 +17,26 @@
         flex-direction: column;
         padding: 110px 100px;
 
+       .animated-head{
+        display: flex;
+        align-items: center;
         h1 {
+            flex: 1 1 40%;
+            font-family: var(--NohemiL);
             font-size: 60px;
             line-height: 70px;
-            font-family: var(--NohemiL);
             font-weight: 300 !important;
         }
+        &>div{
+            flex: 1 1 60%;
+            padding-right: 10%;
+            img,svg{
+                width: 663px;
+                height: 283px;
+                float: right;
+            }
+        }
+       }
 
         .ideasproducts {
             margin-top: 60px;
@@ -196,13 +210,22 @@
 #footer {
     width: 100%;
     height: fit-content;
-    position: relative;
-    overflow: hidden;
-    background-color: var(--main);
 
+    .footerSec{
+        margin-top: -100vh;
+        background-color: var(--main);
+    }
+    
+    .spacer{
+        height: 100vh;
+    }
     .footerCon {
-        width: 80%;
-        margin: 60px auto;
+        position: sticky;
+        position:  -webkit-sticky;
+        bottom: 0;
+        width: 100%;
+        padding: 60px 100px;
+        // margin: 60px auto;
         display: flex;
 
         &>div:nth-child(1) {
@@ -343,11 +366,27 @@
             padding: 150px 120px;
             padding-bottom: 10px;
 
-            h1 {
-                font-size: 80px;
-                line-height: 95px;
-            }
+            .animated-head{
+                display: flex;
+                align-items: center;
+                h1 {
+                    flex: 1 1 40%;
+                    font-family: var(--NohemiL);
+                    font-size: 80px;
+                     line-height: 95px;
+                }
+                &>div{
+                    flex: 1 1 60%;
+                    padding-right: 10%;
+                    img,svg{
+                        width: 663px;
+                        height: 283px;
+                        float: right;
+                    }
+                }
+               }
 
+               
             .ideasproducts {
                 margin-top: 80px;
                 padding-top: 60px;
@@ -441,14 +480,10 @@
     #footer {
         width: 100%;
         height: fit-content;
-        position: relative;
-        overflow: hidden;
-        background-color: var(--main);
 
         .footerCon {
-            width: 80%;
-            margin: 60px auto;
-            display: flex;
+            width: 100%;
+            padding: 60px 120px;
 
             &>div:nth-child(1) {
                 width: 40%;
@@ -523,11 +558,26 @@
             flex-direction: column;
             padding: 90px 24px;
 
-            h1 {
-                font-size: 48px;
-                line-height: 60px;
-                font-weight: 300 !important;
-            }
+            .animated-head{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                h1 {
+                    flex: 1 1 100%;
+                    font-family: var(--NohemiL);
+                    font-size: 48px;
+                    line-height: 60px;
+                    font-weight: 300 !important;
+                    padding-right: 10%;
+
+                    br{
+                        display: none;
+                    }
+                }
+                &>div{
+                    display: none;
+                }
+               }
 
             .ideasproducts {
                 margin-top: 50px;
@@ -540,6 +590,7 @@
                 p {
                     font-size: 18px;
                     line-height: 27px;
+                    padding-right: 10%;
                 }
 
                 .tabsflex {
@@ -696,16 +747,10 @@
     }
 
     #footer {
-        width: 100%;
-        height: fit-content;
-        position: relative;
-        overflow: hidden;
-        background-color: var(--main);
 
         .footerCon {
             width: 100%;
             padding: 30px 24px;
-            padding-bottom: 0;
             margin-top: 0px;
             display: flex;
             flex-wrap: wrap;

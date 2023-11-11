@@ -16,11 +16,25 @@
   flex-direction: column;
   padding: 110px 100px;
 }
-#ideasSec #ideasCon h1 {
+#ideasSec #ideasCon .animated-head {
+  display: flex;
+  align-items: center;
+}
+#ideasSec #ideasCon .animated-head h1 {
+  flex: 1 1 40%;
+  font-family: var(--NohemiL);
   font-size: 60px;
   line-height: 70px;
-  font-family: var(--NohemiL);
   font-weight: 300 !important;
+}
+#ideasSec #ideasCon .animated-head > div {
+  flex: 1 1 60%;
+  padding-right: 10%;
+}
+#ideasSec #ideasCon .animated-head > div img, #ideasSec #ideasCon .animated-head > div svg {
+  width: 663px;
+  height: 283px;
+  float: right;
 }
 #ideasSec #ideasCon .ideasproducts {
   margin-top: 60px;
@@ -170,13 +184,20 @@
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  position: relative;
-  overflow: hidden;
+}
+#footer .footerSec {
+  margin-top: -100vh;
   background-color: var(--main);
 }
+#footer .spacer {
+  height: 100vh;
+}
 #footer .footerCon {
-  width: 80%;
-  margin: 60px auto;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 60px 100px;
   display: flex;
 }
 #footer .footerCon > div:nth-child(1) {
@@ -290,9 +311,24 @@
     padding: 150px 120px;
     padding-bottom: 10px;
   }
-  #ideasSec #ideasCon h1 {
+  #ideasSec #ideasCon .animated-head {
+    display: flex;
+    align-items: center;
+  }
+  #ideasSec #ideasCon .animated-head h1 {
+    flex: 1 1 40%;
+    font-family: var(--NohemiL);
     font-size: 80px;
     line-height: 95px;
+  }
+  #ideasSec #ideasCon .animated-head > div {
+    flex: 1 1 60%;
+    padding-right: 10%;
+  }
+  #ideasSec #ideasCon .animated-head > div img, #ideasSec #ideasCon .animated-head > div svg {
+    width: 663px;
+    height: 283px;
+    float: right;
   }
   #ideasSec #ideasCon .ideasproducts {
     margin-top: 80px;
@@ -378,14 +414,10 @@
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
-    position: relative;
-    overflow: hidden;
-    background-color: var(--main);
   }
   #footer .footerCon {
-    width: 80%;
-    margin: 60px auto;
-    display: flex;
+    width: 100%;
+    padding: 60px 120px;
   }
   #footer .footerCon > div:nth-child(1) {
     width: 40%;
@@ -445,10 +477,24 @@
     flex-direction: column;
     padding: 90px 24px;
   }
-  #ideasSec #ideasCon h1 {
+  #ideasSec #ideasCon .animated-head {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  #ideasSec #ideasCon .animated-head h1 {
+    flex: 1 1 100%;
+    font-family: var(--NohemiL);
     font-size: 48px;
     line-height: 60px;
     font-weight: 300 !important;
+    padding-right: 10%;
+  }
+  #ideasSec #ideasCon .animated-head h1 br {
+    display: none;
+  }
+  #ideasSec #ideasCon .animated-head > div {
+    display: none;
   }
   #ideasSec #ideasCon .ideasproducts {
     margin-top: 50px;
@@ -461,6 +507,7 @@
   #ideasSec #ideasCon .ideasproducts p {
     font-size: 18px;
     line-height: 27px;
+    padding-right: 10%;
   }
   #ideasSec #ideasCon .ideasproducts .tabsflex {
     margin-top: 30px;
@@ -590,18 +637,9 @@
     width: 45px;
     vertical-align: middle;
   }
-  #footer {
-    width: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
-    position: relative;
-    overflow: hidden;
-    background-color: var(--main);
-  }
   #footer .footerCon {
     width: 100%;
     padding: 30px 24px;
-    padding-bottom: 0;
     margin-top: 0px;
     display: flex;
     flex-wrap: wrap;

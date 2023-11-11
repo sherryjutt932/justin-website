@@ -709,11 +709,42 @@ nav {
 
       // border: 1px solid red;
       & > div {
-        &:nth-child(1) {
+        
+        &:nth-child(1){
+          flex: 1 1 47%;
+          display: flex;
+          font-family: var(--SatoshiM);
+          align-items: flex-end;
+          gap: 15px;
+
+          &>div{
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+          svg{
+            width: 40px;
+            height: 75px;
+            flex-shrink: 0;
+          }
+          h2{
+            color: var(--black);
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 28px;
+          }
+          p{
+            color: var(--gray-5e);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+          }
+        }
+        &:nth-child(2) {
           font-size: 16px;
           line-height: 22px;
-          padding-left: 50%;
-          flex: 1 1 0%;
+          flex: 1 1 53%;
 
           p {
             color: #5e5e5e !important;
@@ -835,9 +866,7 @@ nav {
 
       .detail {
         & > div {
-          &:nth-child(1) {
-            padding-left: 50%;
-
+          &:nth-child(2) {
             a {
               span {
                 margin-left: 24px;
@@ -976,10 +1005,9 @@ nav {
 
       .detail {
         & > div {
-          &:nth-child(1) {
+          &:nth-child(2) {
             font-size: 22px;
             line-height: 32px;
-            padding-left: 50%;
 
             p {
               width: 80%;
@@ -1541,13 +1569,18 @@ nav {
         width: 100%;
         display: flex;
         font-family: var(--Satoshi);
+        flex-direction: column-reverse;
 
         // border: 1px solid red;
         & > div {
-          &:nth-child(1) {
+
+          &.scrollerAnim{
+            justify-content: center;
+            padding: 40px 0;
+          }
+          &:nth-child(2) {
             font-size: 16px;
             line-height: 27px;
-            padding-left: 0px;
             padding: 38px 0px;
 
             p {

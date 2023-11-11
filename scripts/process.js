@@ -132,7 +132,7 @@ if (true) {
   var apath_Process_discovery =
     "./assets/Animation/DiscoveryV3/Discovery_Icon_White_V3.json";
   var apath_Process_strategy =
-    "./assets/Animation/Our_Process/Strategy/StratergyIcon_White_V2.json";
+    "./assets/Animation/Our_Process/Strategy/StratergyIcon_White_V3.json";
   var apath_Process_design =
     "./assets/Animation/Our_Process/Design/Design_Icon_White.json";
   var apath_Process_development =
