@@ -173,10 +173,14 @@ function toggleMenu() {
       wrapperM.classList.add("close");
     }
   } else {
-    console.log(wrapper)
+    // console.log(wrapper)
     wrapper.classList.toggle("open");
+    let wrapIL = wrapper.getBoundingClientRect().left;
+    let wrapIT = wrapper.getBoundingClientRect().top;
 
     if (wrapper.classList.contains("open")) {
+      wrapper.style.left = wrapIL;
+      wrapper.style.top = wrapIT;
       wrapper.classList.remove("close");
       setTimeout(() => {
         navAnimatedIcon_pathlist[0].setAttribute("d", opend1);

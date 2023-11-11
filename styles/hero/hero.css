@@ -636,6 +636,11 @@ nav .line {
     height: 30px;
     width: 30px;
   }
+  .HeadrnavBtn #navAnimatedIcon.open {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+  }
   #navigation .footer {
     height: 16vh;
     min-height: 90px;
@@ -673,6 +678,11 @@ nav .line {
 }
 @media (min-width: 1536px) {
   .HeadrnavBtn {
+    height: 40px;
+    width: 40px;
+  }
+  .HeadrnavBtn #navAnimatedIcon.open {
+    position: fixed;
     height: 40px;
     width: 40px;
   }
@@ -796,6 +806,9 @@ nav .line {
     width: 48px;
     height: 48px;
     position: relative;
+  }
+  .HeadrnavBtn #navAnimatedIcon.open {
+    position: absolute;
   }
   .HeadrnavBtn #navAnimatedIcon svg {
     width: 100%;

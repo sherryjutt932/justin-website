@@ -750,6 +750,12 @@ nav {
     // transform: scale(55%) translateY(6px);
     height: 30px;
     width: 30px;
+
+    #navAnimatedIcon.open{
+      position: fixed;
+      height: 40px;
+      width: 40px;
+    }
   }
 
   #navigation {
@@ -818,6 +824,12 @@ nav {
     // transform: scale(55%) translateY(6px);
     height: 40px;
     width: 40px;
+
+    #navAnimatedIcon.open{
+      position: fixed;
+      height: 40px;
+      width: 40px;
+    }
   }
 
   #hero,
@@ -988,6 +1000,10 @@ nav {
     height: 48px;
     // transform: scale(100%) translateY(0px);
     position: relative;
+
+    #navAnimatedIcon.open{
+      position: absolute;
+    }
 
     #navAnimatedIcon svg {
       width: 100%;
