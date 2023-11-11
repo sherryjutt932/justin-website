@@ -1,8 +1,8 @@
 /* Icon 1 */
 .HeadrnavBtn {
   // transform: scale(55%) translateY(6px);
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   position: relative;
   z-index: 100 !important;
 
@@ -512,6 +512,10 @@ nav {
   justify-content: space-between;
   white-space: nowrap;
 
+  #navbtnplacer{
+    opacity: 0;
+    width: 30px;
+  }
   .logoimg {
     justify-content: left;
 
@@ -745,8 +749,8 @@ nav {
 
     #navAnimatedIcon.open{
       position: fixed;
-      height: 40px;
-      width: 40px;
+      height: 30px;
+      width: 30px;
     }
   }
 
@@ -762,6 +766,11 @@ nav {
     height: 100px;
     min-height: 100px;
     max-height: 100px;
+
+    #navbtnplacer{
+      opacity: 0;
+      width: 30px;
+    }
 
     & > div {
       gap: 16px;
@@ -905,6 +914,11 @@ nav {
     height: 133px;
     min-height: 133px;
     max-height: 133px;
+
+    #navbtnplacer{
+      opacity: 0;
+      width: 40px;
+    }
 
     & > div {
       gap: 22px;
