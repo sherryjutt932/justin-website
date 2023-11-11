@@ -76,11 +76,7 @@ async function runAnimation() {
     end: "+=2000",
     // end: "+=500",
     // pin:true,
-
-    onEnter: () => {
-      // Additional actions when the animation starts
-    },
-    scrub: 1.5,
+    scrub: true,
     animation: herotimeline,
   });
 }
