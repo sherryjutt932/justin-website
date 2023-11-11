@@ -3,6 +3,8 @@
   // transform: scale(55%) translateY(6px);
   height: 40px;
   width: 40px;
+  position: relative;
+  z-index: 100 !important;
 
   #navAnimatedIcon {
     width: 100%;
@@ -86,103 +88,52 @@
   display: none;
 }
 
-.nav-icon1 {
-  width: 53px;
-  height: 45px;
-  display: block;
-  position: relative;
-  margin: 50px auto;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-.nav-icon1 span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background: #000;
-  border-radius: 4px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-
-.nav-icon1 span:nth-child(1) {
-  top: 0px;
-}
-
-.nav-icon1 span:nth-child(2) {
-  top: 18px;
-}
-
-.nav-icon1 span:nth-child(3) {
-  top: 36px;
-}
-
-.nav-icon1.open span:nth-child(1) {
-  top: 18px;
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
-}
-
-.nav-icon1.open span:nth-child(2) {
-  opacity: 0;
-  left: -60px;
-}
-
-.nav-icon1.open span:nth-child(3) {
-  top: 18px;
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-}
-
 #navigationSec.open {
+  --localtransitiontime : 600ms;
   #navigation {
     header {
       .content {
         & > div {
           &:nth-child(1) {
             .nav-link > div {
-              transition-delay: (100ms);
-              transform: translateY(0px);
+              //hello
+              transition-delay: var(--localtransitiontime);
               opacity: 1;
+
+            }
+            .nav-link:nth-child(2){
+              div {transition-delay: calc(var(--localtransitiontime) + 100ms);}
+            }
+            .nav-link:nth-child(3){
+              div {transition-delay: calc(var(--localtransitiontime) + 200ms);}
+            }
+            .nav-link:nth-child(4){
+              div {transition-delay: calc(var(--localtransitiontime) + 300ms);}
+            }
+            .nav-link:nth-child(5){
+              div {transition-delay: calc(var(--localtransitiontime) + 400ms);}
             }
           }
           &:nth-child(2) {
             .card {
-              transition-delay: (100ms);
-              transform: translateX(0px);
+              transition-delay: var(--localtransitiontime);
               opacity: 1;
 
               &:nth-child(2) {
-                transition-delay: (300ms);
+                transition-delay: calc(var(--localtransitiontime) + 100ms);
               }
               &:nth-child(3) {
-                transition-delay: (500ms);
+                transition-delay: calc(var(--localtransitiontime) + 200ms);
               }
             }
           }
         }
       }
+    }
+
+    .footer {
+      opacity: 1;
+      transition-delay: calc(var(--localtransitiontime) + 400ms);
     }
   }
 }
@@ -196,7 +147,7 @@
   left: 0;
   z-index: 50;
   background-color: var(--main);
-  transition: all 500ms ease;
+  transition: all 1s ease;
   // transition: height 500ms cubic-bezier(1,0,.41,.44);
   // box-shadow: 0px 10px 20px 0px #00000030;
 }
@@ -301,9 +252,9 @@
           .nav-link {
             overflow: hidden;
             & > div {
-              opacity: 1;
-              transition: all 0.9s cubic-bezier(0.5, 0, 0.75, 0);
-              transform: translateY(90%);
+              opacity: 0;
+              transition: opacity 1s ease;
+              //hello1
               border-radius: 100px;
               overflow: hidden;
               position: relative;
@@ -346,30 +297,11 @@
           align-items: end;
           gap: 40px;
 
-          #navdot {
-            opacity: 1;
-            position: fixed;
-            left: 100vw;
-            top: 0;
-            transform: translateY(-25%);
-            height: 40px;
-            width: 40px;
-            border-radius: 100%;
-            background-color: var(--sec);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0ms;
-            z-index: 100;
-            opacity: 0;
-            pointer-events: none;
-          }
-
           .card {
+            transition: opacity 1s ease;
             color: var(--black);
             text-decoration: none;
             opacity: 0;
-            transform: translateX(100%);
             display: flex;
             max-width: 396px;
             max-height: 164px;
@@ -378,10 +310,9 @@
             padding: 15px;
             gap: 30px;
             cursor: pointer;
-            transition: all 500ms ease;
             position: relative;
 
-            &:nth-child(3) {
+            &:nth-child(2) {
               margin-right: 25%;
             }
 
@@ -412,6 +343,8 @@
   }
 
   .footer {
+    opacity: 0;
+    transition: opacity 1s ease;
     color: var(--dark);
     width: 100%;
     position: relative;
@@ -730,15 +663,15 @@ nav {
           }
           h2{
             color: var(--black);
-            font-size: 22px;
+            font-size: 19px;
             font-weight: 500;
-            line-height: 28px;
+            line-height: 25px;
           }
           p{
             color: var(--gray-5e);
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 400;
-            line-height: 28px;
+            line-height: 25px;
           }
         }
         &:nth-child(2) {
@@ -960,9 +893,9 @@ nav {
     }
   }
 
-  #marqueeWrapper {
-    // max-width: 645px;
-  }
+  // #marqueeWrapper {
+  //   // max-width: 645px;
+  // }
 
   nav {
     height: 133px;
@@ -1005,6 +938,16 @@ nav {
 
       .detail {
         & > div {
+          &:nth-child(1){
+            h2{
+              font-size: 22px;
+              line-height: 28px;
+            }
+            p{
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
           &:nth-child(2) {
             font-size: 22px;
             line-height: 32px;
@@ -1041,41 +984,43 @@ nav {
 
 @media (max-width: 750px) {
   .HeadrnavBtn {
+    width: 48px;
+    height: 48px;
     // transform: scale(100%) translateY(0px);
     position: relative;
 
-    #navAnimatedIconM svg {
+    #navAnimatedIcon svg {
       width: 100%;
       height: 100%;
       transform: translate3d(0, 0, 0);
       content-visibility: visible;
     }
 
-    #navAnimatedIconM .changepath {
+    #navAnimatedIcon .changepath {
       transition: all 500ms ease;
     }
 
-    #navAnimatedIconM.open #p1change {
+    #navAnimatedIcon.open #p1change {
       animation: iconanim 1s ease;
     }
 
-    #navAnimatedIconM.open #p2change {
+    #navAnimatedIcon.open #p2change {
       animation: iconanim2 1s ease;
     }
 
-    #navAnimatedIconM.open #p3change {
+    #navAnimatedIcon.open #p3change {
       animation: iconanim3 1s ease;
     }
 
-    #navAnimatedIconM.close #p1change {
+    #navAnimatedIcon.close #p1change {
       animation: reverseIconanim 1s ease;
     }
 
-    #navAnimatedIconM.close #p2change {
+    #navAnimatedIcon.close #p2change {
       animation: reverseIconanim2 1s ease;
     }
 
-    #navAnimatedIconM.close #p3change {
+    #navAnimatedIcon.close #p3change {
       animation: reverseIconanim3 1s ease;
     }
 
@@ -1124,6 +1069,7 @@ nav {
           justify-content: space-between;
           padding: 10px 0;
           padding-right: 10px;
+          color: var(--black);
 
           &:active,
           &:hover {
@@ -1149,12 +1095,13 @@ nav {
       }
     }
 
-    #navAnimatedIconM {
+    #navAnimatedIcon {
       width: 48px;
       height: 48px;
       padding: 10px;
       aspect-ratio: 1/1;
       z-index: 100;
+      position: absolute;
       cursor: pointer;
       // background-color: #fff;
       border-radius: 100px;
@@ -1162,12 +1109,14 @@ nav {
   }
 
   .HeadrnavBtn {
-    #navAnimatedIconM #changesvgM {
+    #navAnimatedIcon #changesvgM {
       transition: all 1000ms ease;
     }
     #mobileNavBtn.initial {
       height: 48px;
-          width: 48px;
+      width: 48px;
+      top: 0;
+      right: 0;
       & > div {
         height: 48px;
           width: 48px;
@@ -1176,8 +1125,9 @@ nav {
 
     #mobileNavBtn.open {
       animation: who 1s forwards;
-      top: -5px;
+      top: -13px;
       right: -10px;
+      padding-top:8px;
       & > div {
         animation: who 1s forwards;
         .mobileNav-item,
@@ -1201,8 +1151,8 @@ nav {
 
     #mobileNavBtn.close {
       animation: whc 1s forwards;
-      top: -4px;
-      right: -4px;
+      top: 0;
+      right: 0;
       & > div {
         animation: whc 1s forwards;
         .mobileNav-item,
@@ -1317,6 +1267,7 @@ nav {
           color: var(--gray-cd);
           letter-spacing: 0.1ch;
           font-size: 24px;
+          margin-top: 8px;
         }
         button {
           border: none;

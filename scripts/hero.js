@@ -74,14 +74,13 @@ async function runAnimation() {
     trigger: heroSec,
     start: "top top",
     end: "+=2000",
-
     // end: "+=500",
     // pin:true,
 
     onEnter: () => {
       // Additional actions when the animation starts
     },
-    scrub: true,
+    scrub: 2,
     animation: herotimeline,
   });
 }
@@ -157,10 +156,10 @@ function toggleMenu() {
   closedd3 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
 
   if (isMobile()) {
-    var changesvgeleM = document.getElementById("changesvgM");
+    var changesvgeleM = document.getElementById("changesvg");
     var navAnimatedIcon_pathlistM =
       changesvgeleM.getElementsByClassName("changepath");
-    var wrapperM = document.getElementById("navAnimatedIconM");
+    var wrapperM = document.getElementById("navAnimatedIcon");
 
     wrapperM.classList.toggle("open");
 
@@ -178,6 +177,7 @@ function toggleMenu() {
       wrapperM.classList.add("close");
     }
   } else {
+    console.log(wrapper)
     wrapper.classList.toggle("open");
 
     if (wrapper.classList.contains("open")) {
@@ -240,16 +240,16 @@ var navigation_cards_list = navigation_cards.getElementsByClassName("card");
 
 const navDot = document.getElementById("navdot");
 
-function handleNavDot(e) {
-  // Update the position of nav_dot based on the mouse position
-  const mouseX = e.clientX - (navDot.offsetWidth/2);
-  const mouseY = e.clientY - (navDot.offsetHeight/2);
+// function handleNavDot(e) {
+//   // Update the position of nav_dot based on the mouse position
+//   const mouseX = e.clientX - (navDot.offsetWidth/2);
+//   const mouseY = e.clientY - (navDot.offsetHeight/2);
 
-  gsap.to(navDot, {
-    left: `${mouseX}px`,
-    top: `${mouseY}px`,
-  });
-}
+//   gsap.to(navDot, {
+//     left: `${mouseX}px`,
+//     top: `${mouseY}px`,
+//   });
+// }
 
 // Convert HTMLCollection to an array for easier manipulation
 var navigation_cards_Array = Array.from(navigation_cards_list);
@@ -264,27 +264,36 @@ navigation_cards_Array.forEach(function (card) {
 
     // Add active class to the clicked card
     card.classList.add("active");
-    gsap.to(navDot,0,{
-      left: `${card.getBoundingClientRect().left}px`,
-      top: `${card.getBoundingClientRect().top}px`,
+
+    gsap.to(mousefollower, {
+      width: 40,
     });
-    gsap.to(navDot,.2,{
-      opacity:1,
-      scale:1,
-    });
-    document.addEventListener("mousemove", handleNavDot);
     
+    let mousefollower_rightarrow = mousefollower.querySelector("#mousefollower-rightarrow");
+    if (mousefollower_rightarrow) {
+      mousefollower_rightarrow.style.display = "block";
+      gsap.to(mousefollower_rightarrow, {
+        scale:1
+      });
+    }
+
   });
   card.addEventListener("mouseleave", function () {
-    gsap.to(navDot,.2,{
-      // opacity:0,
-      scale:0,
-    })
-    document.removeEventListener("mousemove", handleNavDot);
-    gsap.to(navDot,0,{
-      opacity:0,
-      delay:0.2
-    })
+    gsap.to(mousefollower,{
+      width:16
+    });
+    
+    let mousefollower_rightarrow = mousefollower.querySelector("#mousefollower-rightarrow");
+    if (mousefollower_rightarrow) {
+      gsap.to(mousefollower_rightarrow, {
+        scale:0,
+        onComplete: () => {
+          mousefollower_rightarrow.style.display = "block";
+        }
+      });
+      
+    }
+
   });
 });
 

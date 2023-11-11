@@ -29,10 +29,11 @@
         }
         &>div{
             flex: 1 1 60%;
-            padding-right: 10%;
+            // padding-right: 10%;
+            margin-right: -70px;
             img,svg{
-                width: 663px;
-                height: 283px;
+                width: calc(663px);
+                height: calc(283px);
                 float: right;
             }
         }
@@ -377,12 +378,6 @@
                 }
                 &>div{
                     flex: 1 1 60%;
-                    padding-right: 10%;
-                    img,svg{
-                        width: 663px;
-                        height: 283px;
-                        float: right;
-                    }
                 }
                }
 

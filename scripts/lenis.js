@@ -8,7 +8,7 @@ gsap.ticker.add((time)=>{
     lenis.raf(time * 600)
   }
   else{
-    lenis.raf(time * 300)
+    lenis.raf(time * 500)
 
   }
 })

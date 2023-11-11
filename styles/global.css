@@ -54,13 +54,29 @@ body {
   overflow-x: hidden;
 }
 
-.pattern{
-  background-color: var(--main);
-  background-image: radial-gradient(var(--dark) 4%, transparent 5%),
-    radial-gradient(var(--dark) 4%, transparent 5%);
-  background-size: 50px 50px;
-  background-position: 0 0, 50px 50px;
-  background-repeat: repeat;
+#mousefollower{
+  position: fixed;
+  left: -20px;
+  top: -20px;
+  pointer-events: none;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background-color: var(--sec);
+  border-radius: 100px;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mousefollower img{
+  display: none;
+  width: 18px;
+  transform: scale(0);
+}
+@media (max-width: 750px){
+  #mousefollower{
+    display: none;
+  }
 }
 
 html.lenis {

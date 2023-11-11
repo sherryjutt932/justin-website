@@ -29,7 +29,7 @@
 }
 #ideasSec #ideasCon .animated-head > div {
   flex: 1 1 60%;
-  padding-right: 10%;
+  margin-right: -70px;
 }
 #ideasSec #ideasCon .animated-head > div img, #ideasSec #ideasCon .animated-head > div svg {
   width: 663px;
@@ -323,12 +323,6 @@
   }
   #ideasSec #ideasCon .animated-head > div {
     flex: 1 1 60%;
-    padding-right: 10%;
-  }
-  #ideasSec #ideasCon .animated-head > div img, #ideasSec #ideasCon .animated-head > div svg {
-    width: 663px;
-    height: 283px;
-    float: right;
   }
   #ideasSec #ideasCon .ideasproducts {
     margin-top: 80px;

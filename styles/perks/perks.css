@@ -213,7 +213,8 @@
   #perksSec .perksCarousel-wrapper .perksCarousel .perkCard-mb p {
     font-size: 16px;
     line-height: 24px;
-    color: var(--gray-97);
+    color: var(--black) !important;
+    opacity: 0.6;
   }
   #perksSec .perksCarousel-wrapper .perksCarousel-buttons {
     display: flex;
