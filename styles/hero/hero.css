@@ -842,7 +842,6 @@ nav .line {
     display: flex;
     border-radius: 24px;
     background-color: var(--light);
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1254901961);
     overflow: hidden;
     z-index: 50;
     transition: all 1s ease;
