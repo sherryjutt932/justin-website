@@ -80,7 +80,7 @@ async function runAnimation() {
     onEnter: () => {
       // Additional actions when the animation starts
     },
-    scrub: 2,
+    scrub: 1.5,
     animation: herotimeline,
   });
 }

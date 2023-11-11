@@ -1526,6 +1526,7 @@ nav {
         & > div {
 
           &.scrollerAnim{
+            display: none;
             justify-content: center;
             padding: 40px 0;
           }

@@ -1262,6 +1262,7 @@ nav .line {
     flex-direction: column-reverse;
   }
   .head .headCon .detail > div.scrollerAnim {
+    display: none;
     justify-content: center;
     padding: 40px 0;
   }
