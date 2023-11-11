@@ -38,7 +38,7 @@ else{
   aboutusTl.to(
       stericRef,
       {
-        rotation: 1080,
+        rotation: 500,
         ease: "linear",
       },
       "a"
