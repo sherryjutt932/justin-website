@@ -7,10 +7,15 @@ let herotimeline; // declare timeline variable
 function setCirclePosition() {
   const element = circleBg;
   if (element) {
-    return {
-      left: window.innerWidth / 2,
-      top: window.scrollY + window.innerHeight / 2,
-    };
+    return new Promise((resolve) => {
+      requestAnimationFrame(() => {
+        const rect = element.getBoundingClientRect();
+        resolve({
+          left: rect.left + rect.width / 2,
+          top: rect.top + window.scrollY + rect.height / 2,
+        });
+      });
+    });
   }
 }
 
@@ -24,25 +29,27 @@ if (isMobile()) {
 function setTimeline(location) {
   var timeline = gsap.timeline();
   if (location) {
-    timeline.fromTo(
-      heroBg,
-      {
-        clipPath: `circle(0% at ${location.left}px ${location.top}px)`,
-      },
-      {
-        clipPath: `circle(180% at ${location.left}px ${location.top}px)`,
-      },
-      "a"
-    );
-    timeline.to(
-      circleBg,
-      {
-        backgroundColor: "#FF2626",
-        duration: cir_duration,
-        ease: "power2.inOut", // Adjust easing for smoother color transition
-      },
-      "a"
-    );
+    timeline
+      .fromTo(
+        heroBg,
+        {
+          clipPath: `circle(0% at ${location.left}px ${location.top}px)`,
+        },
+        {
+          clipPath: `circle(180% at ${location.left}px ${location.top}px)`,
+          // clipPath: `circle(70% at ${location.left}px ${location.top}px)`,
+        },
+        "a"
+      )
+      .to(
+        circleBg,
+        {
+          backgroundColor: "#FF2626",
+          duration: cir_duration,
+          ease: "steps(1)",
+        },
+        "a"
+      );
   }
   return timeline;
 }
@@ -67,6 +74,9 @@ async function runAnimation() {
     trigger: heroSec,
     start: "top top",
     end: "+=2000",
+    // end: "+=500",
+    // pin:true,
+
     onEnter: () => {
       // Additional actions when the animation starts
     },
@@ -75,27 +85,16 @@ async function runAnimation() {
   });
 }
 
-setTimeout(() => {
-  // Initial run of the animation
-  runAnimation();
+runAnimation();
+// setTimeout(() => {
+//   // Initial run of the animation
 
-  // Set listener for window resize with debouncing
-  let resizeTimeout;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-      // Run animation on resize
-      runAnimation();
-    }, 300);
-  });
-}, 300);
-
-// Function to check if it's a mobile device
-function isMobile() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
-}
+//   // Set listener for window resize
+//   window.addEventListener("resize", () => {
+//     // Run animation on resize
+//     runAnimation();
+//   });
+// }, 300);
 
 // ----------------------------Toggle Menu
 
