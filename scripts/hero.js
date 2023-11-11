@@ -76,7 +76,7 @@ async function runAnimation() {
     end: "+=2000",
     // end: "+=500",
     // pin:true,
-    scrub: true,
+    scrub: 2,
     animation: herotimeline,
   });
 }
