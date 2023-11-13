@@ -99,7 +99,7 @@ Array.from(perkCards).forEach(item => {
     let mouseX = e.changedTouches[0].clientX;
     let totalChange = sliderPosition-mouseX;
     gsap.to(
-      perksCarousel_Mobile,.1,{
+      perksCarousel_Mobile,.2,{
           x:0,
         }
       );
