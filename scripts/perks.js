@@ -85,11 +85,14 @@ Array.from(perkCards).forEach(item => {
   item.addEventListener("touchmove",(e)=>{
     let mouseX = e.touches[0].clientX;
     let totalChange = sliderPosition-mouseX;
-    gsap.to(
-      perksCarousel_Mobile,0,{
-          x:-totalChange,
-        }
-      );
+
+      if(totalChange > -100 && totalChange<100){
+        gsap.to(
+          perksCarousel_Mobile,0,{
+              x:-totalChange,
+            }
+          );
+      };
   });
   item.addEventListener("touchstart",(e)=>{
     let mouseX = e.touches[0].clientX;
