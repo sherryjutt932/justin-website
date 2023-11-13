@@ -105,7 +105,7 @@ Array.from(perkCards).forEach(item => {
       prevPerkCarousel();
     }
     gsap.to(
-      perksCarousel_Mobile,.25,{
+      perksCarousel_Mobile,.1,{
           x:0,
         }
       );
