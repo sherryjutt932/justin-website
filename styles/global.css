@@ -54,6 +54,30 @@ body {
   overflow-x: hidden;
 }
 
+.themetitle{
+  font-size: 16px;
+  font-family: var(--Satoshi);
+}
+.themedot{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 30px;
+  background-color: var(--dark);
+} 
+@media (min-width: 1536px){
+.themedot{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+} 
+.themetitle{
+  font-size: 20px;
+  font-family: var(--Satoshi);
+}
+}
+
 #mousefollower{
   position: fixed;
   left: -20px;

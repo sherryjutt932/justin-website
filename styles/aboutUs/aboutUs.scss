@@ -19,15 +19,28 @@
         font-family: var(--Satoshi);
         font-size: 20px;
         height: fit-content;
+        display: flex;
+        align-items: center;
+        // .dot{
+        //     display: inline-block;
+        //     width: 12px;
+        //     height: 12px;
+        //     border-radius: 100px;
+        //     background-color: var(--dark);
+        //     margin-right: 8px;
+        // }
+    }
 
-        .dot{
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 100px;
-            background-color: var(--dark);
-            margin-right: 8px;
-        }
+    .bottomborder{
+        position: absolute;
+        bottom: 60px;
+        border-radius: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 1px solid var(--gray-c5);
+        width: calc(100% - 128px);
+        // 2xlw-[calc(100%-256px)]
+        display: block;
     }
 }
 
@@ -85,6 +98,10 @@
     padding: 40px 0;
     gap: 50px;
 
+    .animiconlist{
+        display: none !important;
+    }
+
     &>div:nth-child(1){
         flex: 1 1 0%;
         height: fit-content;
@@ -128,6 +145,10 @@
     
 .aboutus{
     padding:64px 120px;
+
+    .bottomborder{
+        width: calc(100% - 240px);
+    }
 }
 
 #aboutRef{
@@ -192,20 +213,32 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    
+
+        .bottomborder{
+            position: absolute;
+            bottom: 0px;
+            border-radius: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 1px solid var(--gray-c5);
+            width: calc(100% - 48px);
+            // 2xlw-[calc(100%-256px)]
+            display: block;
+        }
+
         .abouthead{
             font-family: var(--Satoshi);
             font-size: 20px;
             height: fit-content;
     
-            .dot{
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border-radius: 100px;
-                background-color: var(--dark);
-                margin-right: 8px;
-            }
+            // .dot{
+            //     display: inline-block;
+            //     width: 12px;
+            //     height: 12px;
+            //     border-radius: 100px;
+            //     background-color: var(--dark);
+            //     margin-right: 8px;
+            // }
         }
     }
     
@@ -213,13 +246,13 @@
         width: 100%;
         font-size: 36px;
         font-weight: 400 !important;
-        line-height: 55px;
-        font-family: var(--NohemiL);
-        text-transform: uppercase;
+        line-height: 41px;
+        font-family: var(--Satoshi);
+        text-transform: unset;
         display: flex;
         flex-wrap: nowrap;
-        margin: 30px 0px;
-        margin-top: 70px;
+        margin-top: 55px;
+        margin-top: 40px;
         
         .pc-aboutus{
             display: none;
@@ -229,26 +262,6 @@
             width: 100%;
             align-items: center; 
             white-space: nowrap;           
-            justify-content: space-between;
-            gap: 30px;
-            &>div:nth-child(1){
-                flex-grow: 1;
-            }
-            &>div:nth-child(2){
-                display: flex;
-                height: 80%;
-                justify-content: space-between;
-                flex-direction: column;
-                padding-bottom: 20px;
-                .animicon{
-                    width: 60px;
-                    height: 60px;
-                    &:nth-child(even){
-                        position: relative;
-                        left: -120%;
-                    }
-                }
-            }
         }
 
     }
@@ -258,7 +271,9 @@
         flex-grow: 1;
         flex-direction: column;
         padding-top:20px;
+        padding-bottom: 0;
         gap: 50px;
+
     
         &>div:nth-child(1){
             flex: 1 1 0%;
@@ -269,14 +284,28 @@
             p{
                 max-width: 100%;
                 font-family: var(--Satoshi);
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 400 !important;
                 line-height: 27px;
                 margin-right: 0px;
             }
         }
     
-        &>div:nth-child(2){
+        &>div:nth-child(2).animiconlist{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .animicon{
+                width: 60px;
+                height: 60px;
+                &:nth-child(even){
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &>div:nth-child(3){
             height: 100%;
             width: fit-content;
             display: flex;

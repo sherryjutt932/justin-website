@@ -13,14 +13,10 @@
   font-size: 16px;
   line-height: 21px;
   margin-bottom: 50px;
-}
-#perksSec #perksHead > div:nth-child(1) span {
-  display: inline-block;
-  border-radius: 20px;
-  width: 8px;
-  height: 8px;
-  background-color: black;
-  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 #perksSec #perksHead > div:nth-child(2) {
   display: flex;
@@ -91,11 +87,6 @@
     line-height: 28px;
     margin-bottom: 80px;
   }
-  #perksSec #perksHead > div:nth-child(1) span {
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
-  }
   #perksSec #perksHead > div:nth-child(2) h1 {
     font-size: 80px;
     line-height: 95px;
@@ -141,14 +132,6 @@
     line-height: 21px;
     margin-bottom: 30px;
   }
-  #perksSec #perksHead > div:nth-child(1) span {
-    display: inline-block;
-    border-radius: 20px;
-    width: 8px;
-    height: 8px;
-    background-color: black;
-    margin-right: 8px;
-  }
   #perksSec #perksHead > div:nth-child(2) {
     display: flex;
     flex-direction: column;
@@ -181,10 +164,10 @@
   #perksSec .perksCarousel-wrapper .perksCarousel {
     display: flex;
     gap: 20px;
-    transition: transform 0.5s ease;
+    transition: transform 300ms ease;
   }
   #perksSec .perksCarousel-wrapper .perksCarousel .perkCard-mb {
-    transition: transform 0.5s ease;
+    transition: transform 500ms ease;
     border: 1px solid var(--gray-c5);
     background-color: var(--main);
     aspect-ratio: 1.72;

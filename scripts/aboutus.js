@@ -6,10 +6,11 @@ const stericRef = document.getElementById("stericRef");
 var aboutusTl = gsap.timeline();
 
 if (!isMobile()) {
+ let xposition =  aboutRef.offsetWidth - (window.innerWidth * 0.8);
   aboutusTl.to(
       aboutRef,
       {
-        xPercent: -63,
+        x: -xposition + "px",
         ease: "none",
       },
       "a"
@@ -52,3 +53,34 @@ else{
       animation: aboutusTl,
     });
 }
+
+
+
+// ------------------mobile floating
+
+const about_icon_float = document.getElementsByClassName("about-icon-float");
+
+const animateabouticonlist = () => {
+  if(about_icon_float[0]){
+    gsap.timeline().to(
+      [about_icon_float[0],about_icon_float[2]],3,
+      //
+      {
+        y:process_scrollDir === "down" ? 10 : -10,
+      }
+      ,"a"
+    )
+    .to(
+      [about_icon_float[1],about_icon_float[3]],3,
+      //
+      {
+        y:process_scrollDir === "down" ? -0 : 40,
+      }
+      ,"a"
+    )
+  }
+  
+  requestAnimationFrame(animateabouticonlist);
+};
+
+animateabouticonlist();

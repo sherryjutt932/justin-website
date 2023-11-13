@@ -1,71 +1,38 @@
 /* Icon 1 */
 .HeadrnavBtn {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   position: relative;
   z-index: 100 !important;
 }
 .HeadrnavBtn #navAnimatedIcon {
-  width: 100%;
-  height: 100%;
+  height: 25px;
+  width: 25px;
   cursor: pointer;
-}
-.HeadrnavBtn #navAnimatedIcon svg {
-  width: 100%;
-  height: 100%;
-  transform: translate3d(0, 0, 0);
-  content-visibility: visible;
-}
-.HeadrnavBtn #navAnimatedIcon .changepath {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
   transition: all 500ms ease;
 }
-.HeadrnavBtn #navAnimatedIcon.open #p1change {
-  animation: iconanim 1s ease;
+.HeadrnavBtn #navAnimatedIcon #hamburger-line1,
+.HeadrnavBtn #navAnimatedIcon #hamburger-line2 {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 2px;
+  transition: all 500ms ease;
+  transform-origin: center center;
 }
-.HeadrnavBtn #navAnimatedIcon.open #p2change {
-  animation: iconanim2 1s ease;
+.HeadrnavBtn #navAnimatedIcon.open {
+  position: fixed;
+  gap: 0;
 }
-.HeadrnavBtn #navAnimatedIcon.open #p3change {
-  animation: iconanim3 1s ease;
+.HeadrnavBtn #navAnimatedIcon.open #hamburger-line1 {
+  transform: rotate(45deg);
 }
-@keyframes iconanim {
-  20% {
-    transform: translateY(10%);
-  }
-}
-@keyframes iconanim2 {
-  20% {
-    transform: scaleX(1.2);
-  }
-}
-@keyframes iconanim3 {
-  20% {
-    transform: translateY(-10%);
-  }
-}
-.HeadrnavBtn #navAnimatedIcon.close #p1change {
-  animation: reverseIconanim 1s ease;
-}
-.HeadrnavBtn #navAnimatedIcon.close #p2change {
-  animation: reverseIconanim2 1s ease;
-}
-.HeadrnavBtn #navAnimatedIcon.close #p3change {
-  animation: reverseIconanim3 1s ease;
-}
-@keyframes reverseIconanim {
-  20% {
-    transform: translateY(10%);
-  }
-}
-@keyframes reverseIconanim2 {
-  20% {
-    transform: scaleX(1.2);
-  }
-}
-@keyframes reverseIconanim3 {
-  20% {
-    transform: translateY(-10%);
-  }
+.HeadrnavBtn #navAnimatedIcon.open #hamburger-line2 {
+  transform: rotate(-45deg) translate(1px, -1px);
 }
 
 #mobileNavBtn {
@@ -368,11 +335,11 @@
 #heroBg .head .headCon .circle {
   background-color: var(--dark);
 }
-#heroBg .head .headCon .detail > div:nth-child(1) a {
+#heroBg .head .headCon .detail > div:nth-child(2) a {
   color: inherit;
 }
-#heroBg .head .headCon .detail > div:nth-child(1) a > div > div {
-  background-color: var(--light);
+#heroBg .head .headCon .detail > div:nth-child(2) a > div > div {
+  background-color: var(--light) !important;
 }
 
 #marqueeWrapper {
@@ -439,7 +406,7 @@ nav {
 }
 nav #navbtnplacer {
   opacity: 0;
-  width: 30px;
+  width: 25px;
 }
 nav .logoimg {
   justify-content: left;
@@ -636,15 +603,6 @@ nav .line {
 }
 
 @media (min-width: 1390px) {
-  .HeadrnavBtn {
-    height: 30px;
-    width: 30px;
-  }
-  .HeadrnavBtn #navAnimatedIcon.open {
-    position: fixed;
-    height: 30px;
-    width: 30px;
-  }
   #navigation .footer {
     height: 16vh;
     min-height: 90px;
@@ -654,10 +612,6 @@ nav .line {
     height: 100px;
     min-height: 100px;
     max-height: 100px;
-  }
-  nav #navbtnplacer {
-    opacity: 0;
-    width: 30px;
   }
   nav > div {
     gap: 16px;
@@ -685,14 +639,14 @@ nav .line {
   }
 }
 @media (min-width: 1536px) {
+  /* Icon 1 */
   .HeadrnavBtn {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
   }
-  .HeadrnavBtn #navAnimatedIcon.open {
-    position: fixed;
-    height: 40px;
-    width: 40px;
+  .HeadrnavBtn #navAnimatedIcon {
+    height: 35px;
+    width: 35px;
   }
   #hero,
   #heroBg {
@@ -758,7 +712,7 @@ nav .line {
   }
   nav #navbtnplacer {
     opacity: 0;
-    width: 40px;
+    width: 35px;
   }
   nav > div {
     gap: 22px;
@@ -821,33 +775,6 @@ nav .line {
   }
   .HeadrnavBtn #navAnimatedIcon.open {
     position: absolute;
-  }
-  .HeadrnavBtn #navAnimatedIcon svg {
-    width: 100%;
-    height: 100%;
-    transform: translate3d(0, 0, 0);
-    content-visibility: visible;
-  }
-  .HeadrnavBtn #navAnimatedIcon .changepath {
-    transition: all 500ms ease;
-  }
-  .HeadrnavBtn #navAnimatedIcon.open #p1change {
-    animation: iconanim 1s ease;
-  }
-  .HeadrnavBtn #navAnimatedIcon.open #p2change {
-    animation: iconanim2 1s ease;
-  }
-  .HeadrnavBtn #navAnimatedIcon.open #p3change {
-    animation: iconanim3 1s ease;
-  }
-  .HeadrnavBtn #navAnimatedIcon.close #p1change {
-    animation: reverseIconanim 1s ease;
-  }
-  .HeadrnavBtn #navAnimatedIcon.close #p2change {
-    animation: reverseIconanim2 1s ease;
-  }
-  .HeadrnavBtn #navAnimatedIcon.close #p3change {
-    animation: reverseIconanim3 1s ease;
   }
   .HeadrnavBtn #mobileNavBtn {
     position: absolute;
@@ -914,9 +841,6 @@ nav .line {
     position: absolute;
     cursor: pointer;
     border-radius: 100px;
-  }
-  .HeadrnavBtn #navAnimatedIcon #changesvgM {
-    transition: all 1000ms ease;
   }
   .HeadrnavBtn #mobileNavBtn.initial {
     height: 48px;
@@ -1143,10 +1067,10 @@ nav .line {
   #heroBg .head .headCon .circle {
     background-color: var(--dark);
   }
-  #heroBg .head .headCon .detail > div:nth-child(1) a {
+  #heroBg .head .headCon .detail > div:nth-child(2) a {
     color: inherit;
   }
-  #heroBg .head .headCon .detail > div:nth-child(1) a > div > div {
+  #heroBg .head .headCon .detail > div:nth-child(2) a > div > div {
     background-color: var(--light);
   }
   #marqueeWrapper {
@@ -1306,7 +1230,6 @@ nav .line {
     font-size: 14px;
     line-height: 21px;
     margin-top: 16px;
-    font-weight: 600;
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -1316,6 +1239,8 @@ nav .line {
   .head .headCon .detail > div:nth-child(2) a > div {
     position: relative;
     padding-bottom: 4px;
+    font-weight: 400;
+    font-family: var(--Satoshi);
   }
   .head .headCon .detail > div:nth-child(2) a > div > div {
     background-color: var(--dark);

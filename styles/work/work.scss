@@ -1,631 +1,512 @@
 #workSec {
-    width: 100%;
-    height: 100vh;
-    padding-top: 30px;
+  width: 100%;
+  height: 100vh;
+
+  #animatedlineM{
+    display: none;
+}
 }
 
 .work {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    .topborder{
-        position: absolute;
-        top: 0;
-        border-radius: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-bottom: 1px solid var(--gray-c5);
-        width: calc(100% - 128px);
-        // 2xlw-[calc(100%-256px)]
-        display: block;
-    }
-
-    .workhead{
-        font-family: var(--Satoshi);
-        font-size: 16px;
-        height: fit-content;
-        padding: 0px 64px;
-        padding-top: 30px;
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        // 2xl:px-32
-
-        .dot{
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 100px;
-            background-color: var(--dark);
-            margin-right: 8px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  .workhead {
+      height: fit-content;
+      padding: 0px 100px;
+      padding-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      
+      & > div:nth-child(1) {
+          display: flex;
+          align-items: center;
         }
+        & > div:nth-child(2) {
+            padding-right: 5px;
     }
+  }
+  
+  .workGrid {
+      height: 100%;
+      font-size: 20px;
+      display: flex;
+      
+      & > div {
+          flex: 1 1 0%;
+        }
+        
+        .workdetail {
+      max-height: 100%;
+      height: 100%;
+      width: fit-content;
 
-    .workGrid{
+      #detailRef {
         height: 100%;
-        font-size: 20px;
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(3, 1fr);  
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
 
-        .workdetail{
-            grid-row: span 2;
-            grid-column: span 3 ;
-            width: 100%;
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 100%;
+          padding-top: 120px;
+          padding-bottom: 100px;
+          padding-left: 100px;
+          position: absolute;
 
-            #detailRef{
-                height: 100%;
-                width: fit-content;
-                display: flex;
-                flex-wrap: nowrap;
-                flex-direction: row-reverse;
-
-                &>div{
-                    flex: 1 1 0%;
-                    padding-left: 64px;
-                    // 2xl:pl-32
-                    // m14:pt-12
-                    padding-top: 112px;
-                    width: 40vw;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    // m14:justify-center m14:gap-16 2xl:gap-28
-                    height: 100%;
-
-                    h2{
-                        font-size: 60px;
-                        font-family: var(--NohemiL);
-                        font-weight: 300 !important;
-                        // m14:text-[60px] 2xl:text-[80px]
-                    }
-
-                    ul{
-                        width: fit-content;
-                        font-family: var(--Satoshi);
-                        font-size: 16px;
-                        // 2xl:text-[22px]
-                        list-style: disc;
-                        list-style-position: inside;
-
-                        li{
-                            padding: 20px 0px;
-                            padding-left: 16px;
-                            padding-right: 32px;
-                            border-top: 1px solid var(--gray-c5);
-                            
-                            &:last-child{
-                                border-bottom: 1px solid var(--gray-c5);
-
-                            }
-
-                            span{
-                                position: relative;
-                                left: -12px;
-                            }
-                        }
-                    }
-                }
+          &.open{
+            h2,ul,.stickybutton{
+                opacity: 1;
             }
-        }
+          }
 
-        .stickybutton{
-            grid-row: span 1 ;
-            grid-column: span 3 ;
-            padding-left: 64px;
-            padding-bottom: 30;
-            grid-row-start: 3;
+          h2 {
+            transition: opacity 500ms ease;
+          opacity: 0;
+            font-size: 60px;
+            font-family: var(--NohemiL);
+            font-weight: 300 !important;
+          }
+
+          ul {
+            transition: opacity 500ms ease;
+          opacity: 0;
+          transition-delay: 100ms;
+            width: fit-content;
+            font-family: var(--Satoshi);
+            font-size: 16px;
+            list-style: disc;
+            list-style-position: inside;
+
+            li {
+              padding: 20px 0px;
+              padding-left: 16px;
+              padding-right: 32px;
+              border-top: 1px solid var(--gray-c5);
+
+              &:last-child {
+                border-bottom: 1px solid var(--gray-c5);
+              }
+
+              span {
+                position: relative;
+                left: -12px;
+              }
+            }
+          }
+
+          .stickybutton {
+            transition: opacity 0ms ease;
+            opacity: 0;
+            transition-delay: 0ms;
+            width: fit-content;
             display: flex;
             flex-direction: column;
             justify-content: center;
             font-family: var(--SatoshiR);
-
-
-            &>a{
-                cursor: pointer;
-                width: fit-content;
-                text-decoration: none;
-             
-                #magneticBtn {
-                    margin: -30px;
-                    padding: 30px;
-                    display: inline-block;
-                    border-radius: 50%;
-
-                    &>div{
-                        overflow: hidden;
-                        position: relative;
-                            width: 96px;
-                            aspect-ratio: 1/1;
-                            background-color: var(--sec);
-                            border-radius: 200px;
-                            display: flex;
-                            white-space: nowrap;
-                            justify-content: center;
-                            font-size: 16px;
-                            align-items: center;
-                            color: var(--light);
-                            text-align: center;
-                            
-                            .Btnfirst {
-                                width: 96px;
-                                height: fit-content;
-                            }
-                            .Btnsecond {
-                                width: 96px;
-                                position: absolute;
-                                top: 50%;
-                                transform: translateY(-50%);
-                                left:100%;
-                            }
-                  }
-                  
-            }
-            }
-        }
-
-        .workimage{
-            grid-row: span 3;
-            grid-column: span 5;
-            max-height: 100%;
-            height: 100%;
-
-            #imgRef{
-                width: 100%;
-                height: 100%;
-                z-index: 10;
-                padding-bottom: 20px;
-
-                &>div{
-                    padding: 30 0px;
-                    height: 100%;
-                    display: flex;
-                    justify-content: end;
-                    align-items: end;
-                    padding-right: 64px;
-                    padding-bottom: 40px;
-
-                    img{
-                        aspect-ratio: 1088/656;
-                        width: 85%;
-                    }
-                }
-            }
-        }
-    }
-
-    .workflex{
-        display: none;
-    }
-
-    .morework{
-        display: none;
-    }
-}
-
-@media (min-width: 1390px) {
-   .work{
-    .topborder{
-        width: calc(100% - 128px);
-        // 2xlw-[calc(100%-256px)]
-    }
-
-    .workhead{
-        font-size: 20px;
-        padding-left: 100px !important;
-        padding-right: 100px !important;
-        // 2xl:px-32
-
-    }
-
-    .workGrid{
-        font-size: 20px;
-        .workdetail{
-            #detailRef{
-                &>div{
-                    // 2xl:pl-32
-                    padding-top: 40px;
-                    width: 40vw;
-                    gap: 64px;
-                    padding-left: 100px !important;
-                    justify-content: center;
-                    // 2xl:gap-28
-
-                    h2{
-                        font-size: 60px;
-                        // 2xl:text-[80px]
-                    }
-
-                    ul{
-                        font-size: 16px;
-                        // 2xl:text-[22px]
-
-                        li{
-                            padding-left: 16px;
-                            padding-right: 32px;
-                           
-                            span{
-                                left: -12px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .stickybutton{
-            padding-bottom: 30px;
-            padding-left: 100px !important;
-            justify-content: start;
-
-            &>a{
-             
-                #magneticBtn {
-                    margin: -30px;
-                    padding: 30px;
-
-                    &>div{
-                            width: 96px;
-                            font-size: 16px;
-                  }
-                  
-            }
-            }
-        }
-
-        .workimage{
-            #imgRef{
-                &>div{
-                    padding: 30px 0px;
-                    padding-right: 100px !important;
-                    // 2xl:pr-32 
-                    padding-bottom: 40px !important;
-                    // 2xl:pb-32 m14:pb-16
-
-                    img{
-                        min-width: 815px;
-                        width: 815px;
-                        min-height: 495px;
-                        height: 495px;
-                        // 2xl:w-[1088px]
-                    }
-                }
-            }
-        }
-    }
-   }
-}
-
-@media (min-width: 1536px) {
-    #workSec {
-        padding-top: 40px;
-    }
-
     
-   .work{
-    .topborder{
-        width: calc(100% - 256px);
+            & > a {
+              cursor: pointer;
+              width: fit-content;
+              text-decoration: none;
+    
+              #magneticBtn {
+                margin: -30px;
+                padding: 30px;
+                display: inline-block;
+                border-radius: 50%;
+    
+                & > div {
+                  overflow: hidden;
+                  position: relative;
+                  width: 96px;
+                  aspect-ratio: 1/1;
+                  background-color: var(--sec);
+                  border-radius: 200px;
+                  display: flex;
+                  white-space: nowrap;
+                  justify-content: center;
+                  font-size: 16px;
+                  align-items: center;
+                  color: var(--light);
+                  text-align: center;
+    
+                  .Btnfirst {
+                    width: 96px;
+                    height: fit-content;
+                  }
+                  .Btnsecond {
+                    width: 96px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
-    .workhead{
-        font-size: 20px;
-        padding-left: 120px !important;
-        padding-right: 120px !important;
+    .workimage {
+      max-height: 100%;
+      height: 100%;
+      
+      #imgRef {
+        position: relative;
+        height: 100%;
+        z-index: 10;
 
+        #animatedline{
+            position: absolute;
+            left: 10%;
+            height: 380%;
+            z-index: -1;
+        }
+
+        & > div {
+          height: 100%;
+          display: flex;
+          align-items: end;
+          padding-right: 100px;
+          padding-bottom: 100px;
+
+          img {
+            aspect-ratio: 1072/646;
+            width: 56vw;
+          }
+        }
+      }
+    }
+  }
+
+  .workflex {
+    display: none;
+  }
+
+  .morework {
+    display: none;
+  }
+}
+@media (min-width: 1536px) {
+  .work {
+    .workhead {
+      padding: 0px 120px;
+      padding-top: 60px;
     }
 
-    .workGrid{
-        font-size: 20px;
-        .workdetail{
-            #detailRef{
-                &>div{
-                    padding-top: 60px;
-                    width: 40vw;
-                    gap: 92px;
-                    padding-left: 120px !important;
-                    justify-content: center;
+    .workGrid {
+      .workdetail {
+        #detailRef {
+          & > div {
+            padding-top: 160px;
+            padding-bottom: 120px;
+            padding-left: 120px;
 
-                    h2{
-                        font-size: 80px;
-                    }
+            h2 {
+              font-size: 80px;
+              font-weight: 300 !important;
+            }
 
-                    ul{
-                        font-size: 22px;
-
-                        li{
-                            padding: 30px 0px;
-                            padding-left: 16px;
-                            padding-right: 32px;
-                           
-                            span{
-                                left: -12px;
-                            }
-                        }
+            ul{
+                font-size: 22px;
+                li{
+                    padding: 30px 0px;
+                    padding-left: 16px;
+                    padding-right: 32px
+                    span{
+                        left: -12px;
                     }
                 }
             }
-        }
 
-        .stickybutton{
-            padding-bottom: 30px;
-            padding-left: 120px !important;
-            justify-content: start;
-
-            &>a{
-             
-                #magneticBtn {
+            .stickybutton {
+                & > a {
+                  #magneticBtn {
                     margin: -30px;
                     padding: 30px;
-
-                    &>div{
-                            width: 132px;
-                            font-size: 22px;
-
-                            .Btnfirst {
-                                width: 132px;
-                            }
-                            .Btnsecond {
-                                width: 132px;
-                            }
-                  }
-                  
-            }
-            }
-        }
-
-        .workimage{
-            #imgRef{
-                &>div{
-                    padding: 30px 0px;
-                    padding-right: 120px !important;
-                    padding-bottom: 120px !important;
-
-                    img{
-                        width: 1088px;
-                        height: 656px;
+      
+                    & > div {
+                      width: 132px;
+                      font-size: 22px;
+      
+                      .Btnfirst {
+                        width: 132px;
+                      }
+                      .Btnsecond {
+                        width: 132px;
+                      }
                     }
+                  }
                 }
-            }
+              }
+          }
         }
-    }
-   }
-}
+      }
 
+      .workimage {
+        #imgRef {
+          & > div {
+            padding-right: 120px;
+            padding-bottom: 120px;
+            img {
+              width: 1072px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // -----------------mobile
 
 @media (max-width: 750px) {
-    #workSec {
+  #workSec {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+
+    #animatedlineM{
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: calc(100% - 400px);
         width: 100%;
-        height: fit-content;
-        overflow: hidden;
-        padding-top: 0px;
+        z-index: 5;
     }
+  }
+
+  .work {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 24px;
+    padding-top: 120px;
+
+    .topborder {
+      position: absolute;
+      top: 0;
+      border-radius: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 1px solid var(--gray-c5);
+      width: calc(100% - 48px);
+      // 2xlw-[calc(100%-256px)]
+      display: block;
+    }
+
+    .workhead {
+      font-family: var(--Satoshi);
+      font-size: 16px;
+      height: fit-content;
+      padding: 0px 24px;
+      padding-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      // 2xl:px-32
+
+      // .dot{
+      //     display: inline-block;
+      //     width: 12px;
+      //     height: 12px;
+      //     border-radius: 100px;
+      //     background-color: var(--dark);
+      //     margin-right: 8px;
+      // }
+
+      #workcounter {
+        display: none;
+      }
+    }
+
+    .workGrid {
+      display: none;
+    }
+
+    .workflex {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     
-    .work {
-        width: 100%;
-        height: fit-content;
+      .work-card {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        padding: 0px 24px;
-        padding-top: 120px;
-    
-        .topborder{
-            position: absolute;
-            top: 0;
-            border-radius: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-bottom: 1px solid var(--gray-c5);
-            width: calc(100% - 48px);
-            // 2xlw-[calc(100%-256px)]
-            display: block;
+        z-index: 10;
+        .work-card-head,
+        .work-card-detail {
+          display: flex;
+          & > div:nth-child(1) {
+            flex-grow: 1;
+          }
         }
-    
-        .workhead{
+
+        .work-card-head {
+          padding: 10px 0;
+          h2 {
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 40px;
+            font-family: var(--Satoshi);
+          }
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 40px;
+            font-family: var(--Satoshi);
+          }
+        }
+
+        .work-card-img {
+          width: 100%;
+          padding: 15px 0;
+          img {
+            width: 100%;
+          }
+        }
+
+        .work-card-detail {
+          padding: 10px 0;
+          ul {
+            width: 100%;
             font-family: var(--Satoshi);
             font-size: 16px;
-            height: fit-content;
-            padding: 0px 24px;
-            padding-top: 50px;
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            // 2xl:px-32
-    
-            .dot{
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border-radius: 100px;
-                background-color: var(--dark);
-                margin-right: 8px;
-            }
+            // 2xl:text-[22px]
+            list-style: disc;
+            list-style-position: inside;
 
-            #workcounter{
-                display: none;
-            }
-        }
-    
-        .workGrid{
-            display: none;
-        }
+            li {
+              padding: 20px 0px;
+              padding-left: 16px;
+              padding-right: 32px;
+              border-top: 1px solid var(--gray-c5);
 
-        .workflex{
+              &:last-child {
+                border-bottom: 1px solid var(--gray-c5);
+              }
+            }
+          }
+
+          .stickybutton {
+            padding-left: 24px;
             display: flex;
             flex-direction: column;
-            gap: 30px;
-           .work-card{
-            .work-card-head,
-            .work-card-detail{
-                display: flex;
-                &>div:nth-child(1){
-                    flex-grow: 1;
+            justify-content: center;
+            & > a {
+              cursor: pointer;
+              width: fit-content;
+              text-decoration: none;
+
+              .magneticBtn {
+                margin: -30px;
+                padding: 30px;
+                display: inline-block;
+                border-radius: 50%;
+
+                & > div {
+                  overflow: hidden;
+                  position: relative;
+                  width: 96px;
+                  aspect-ratio: 1/1;
+                  background-color: var(--sec);
+                  border-radius: 200px;
+                  display: flex;
+                  white-space: nowrap;
+                  justify-content: center;
+                  font-size: 16px;
+                  align-items: center;
+                  color: var(--light);
+                  text-align: center;
+                  font-family: var(--Satoshi);
+                  .Btnfirst {
+                    width: 96px;
+                    height: fit-content;
+                  }
                 }
+              }
             }
-
-            .work-card-head{
-                padding: 10px 0;
-                h2{
-                    font-weight: 400;
-                    font-size: 36px;
-                    line-height: 40px;
-                    font-family: var(--Satoshi);
-                }
-                p{
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 40px;
-                    font-family: var(--Satoshi);
-                }
-            }
-
-            .work-card-img{
-                width: 100%;
-                padding: 15px 0;
-                img{
-                    width: 100%;
-                }
-            }
-
-            .work-card-detail{
-             padding: 10px 0;
-             ul{
-                    width: 100%;
-                    font-family: var(--Satoshi);
-                    font-size: 16px;
-                    // 2xl:text-[22px]
-                    list-style: disc;
-                    list-style-position: inside;
-
-                    li{
-                        padding: 20px 0px;
-                        padding-left: 16px;
-                        padding-right: 32px;
-                        border-top: 1px solid var(--gray-c5);
-                        
-                        &:last-child{
-                            border-bottom: 1px solid var(--gray-c5);
-
-                        }
-                        
-                    }
-                }
-
-                .stickybutton{
-                    padding-left: 24px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    &>a{
-                        cursor: pointer;
-                        width: fit-content;
-                        text-decoration: none;
-                     
-                        .magneticBtn {
-                            margin: -30px;
-                            padding: 30px;
-                            display: inline-block;
-                            border-radius: 50%;
-        
-                            &>div{
-                                overflow: hidden;
-                                position: relative;
-                                    width: 96px;
-                                    aspect-ratio: 1/1;
-                                    background-color: var(--sec);
-                                    border-radius: 200px;
-                                    display: flex;
-                                    white-space: nowrap;
-                                    justify-content: center;
-                                    font-size: 16px;
-                                    align-items: center;
-                                    color: var(--light);
-                                    text-align: center;
-                                    font-family: var(--Satoshi);
-                                    .Btnfirst {
-                                        width: 96px;
-                                        height: fit-content;
-                                    }
-                                   
-                          }
-                          
-                    }
-                    }
-                }
-            }
-           }
+          }
         }
-
-        .morework{
-            display: block;
-            padding-top: 20px;
-            a {
-                font-size: 14px;
-                line-height: 21px;
-                margin-top: 16px;
-                font-family: var(--SatoshiR);
-                font-weight: 600;
-                text-transform: uppercase;
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: var(--black);
-                color: inherit;
-                width: fit-content;
-                
-                &>div {
-                    position: relative;
-                    padding-bottom: 4px;
-    
-                    &>div {
-                        background-color: var(--dark);
-                        position: absolute;
-                        bottom: -2px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        height: 1px;
-                        width: 100%;
-                        transition: all 300ms;
-                    }
-    
-                }
-    
-                &:hover>div>div {
-                    width: 0;
-                }
-    
-                span {
-                    color: var(--dark);
-                    transition: all 300ms;
-                    height: 36px;
-                    border: 1px dashed var(--dark);
-                    background-color: var(--light);
-                    margin-left: 24px;
-                    padding: 4px 30px;
-                    border-radius: 100px;
-                    display: block;
-    
-                    img {
-                        vertical-align: middle;
-                    }
-                }
-    
-                &:hover span {
-                    border: 1px dashed var(--light);
-                }
-            }
-        }
+      }
     }
-    
+
+    .morework {
+      display: block;
+      padding-top: 20px;
+      a {
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 16px;
+        font-family: var(--Satoshi);
+        font-weight: unset;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--black);
+        color: inherit;
+        width: fit-content;
+
+        & > div {
+          position: relative;
+          padding-bottom: 4px;
+
+          & > div {
+            background-color: var(--dark);
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 100%;
+            transition: all 300ms;
+          }
+        }
+
+        &:hover > div > div {
+          width: 0;
+        }
+
+        span {
+          color: var(--dark);
+          transition: all 300ms;
+          height: 36px;
+          border: 1px dashed var(--dark);
+          background-color: var(--light);
+          margin-left: 24px;
+          padding: 4px 30px;
+          border-radius: 100px;
+          display: block;
+
+          img {
+            vertical-align: middle;
+          }
+        }
+
+        &:hover span {
+          border: 1px dashed var(--light);
+        }
+      }
+    }
+  }
 }

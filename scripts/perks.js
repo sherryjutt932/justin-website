@@ -75,14 +75,55 @@ setupAnimation(aicon_perks_mb_fixedmonthlysalary, apath_perks_fixedmonthlysalary
 let currentIndex = 0;
 const perkCards = document.querySelectorAll(".perkCard-mb");
 const perkCardsCont = document.querySelector("#perksRef");
+const perksCarousel_Mobile = document.querySelector("#perksCarouselMobile");
 const totalCards = perkCards.length;
 const width = perkCards[0].offsetWidth + 20; // Adjusted to offsetWidth
+
+var sliderPosition = 0;
+
+Array.from(perkCards).forEach(item => {
+  item.addEventListener("touchmove",(e)=>{
+    let mouseX = e.touches[0].clientX;
+    let totalChange = sliderPosition-mouseX;
+    gsap.to(
+      perksCarousel_Mobile,0,{
+          x:-totalChange,
+        }
+      );
+  });
+  item.addEventListener("touchstart",(e)=>{
+    let mouseX = e.touches[0].clientX;
+    sliderPosition = mouseX;
+  });
+  item.addEventListener("touchend",(e)=>{
+    let mouseX = e.changedTouches[0].clientX;
+    let totalChange = sliderPosition-mouseX;
+    if(totalChange > 120){
+      nextPerkCarousel();
+    }
+    else if(totalChange<120){
+      prevPerkCarousel();
+    }
+    gsap.to(
+      perksCarousel_Mobile,.25,{
+          x:0,
+        }
+      );
+    sliderPosition = 0;
+  });
+});
 
 function nextPerkCarousel() {
   if (currentIndex < totalCards - 1) {
     currentIndex++;
     perkCards.forEach((card, index) => {
       card.style.transform = `translateX(-${currentIndex * width}px)`;
+      // gsap.to(
+      //   card,{
+      //     x:()=>`-${currentIndex * width}px`,
+      //   }
+      // );
+
     });
   }
 }
@@ -92,6 +133,13 @@ function prevPerkCarousel() {
     currentIndex--;
     perkCards.forEach((card, index) => {
       card.style.transform = `translateX(-${currentIndex * width}px)`;
+      // gsap.to(
+      //   card,{
+      //     x:()=>`-${currentIndex * width}px`,
+      //   }
+      // );
     });
   }
 }
+
+

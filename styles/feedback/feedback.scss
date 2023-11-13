@@ -26,16 +26,8 @@
         width: 100%;
         margin-bottom: 80px;
         padding-bottom: 20px;
-        // border-bottom: 1px solid var(--gray-c5);
-        
-        span{
-            display: inline-block;
-            border-radius: 20px;
-            width: 8px;
-            height: 8px;
-            background-color: black;
-            margin-right: 8px;
-        }
+        display: flex;
+        align-items: center;
     }
     
     .feedbackCon{
@@ -190,11 +182,6 @@
         &>div>div:nth-child(1){
             font-size: 20px;
             line-height: 28px;
-            span{
-                width: 10px;
-                height: 10px;
-                margin-right: 10px;
-            }
         }
 
         .feedbackCon{
@@ -303,15 +290,6 @@
             width: 100%;
             margin-bottom: 0px;
             padding-bottom: 0px;
-            
-            span{
-                display: inline-block;
-                border-radius: 20px;
-                width: 8px;
-                height: 8px;
-                background-color: black;
-                margin-right: 8px;
-            }
         }
         
         .feedbackCon{

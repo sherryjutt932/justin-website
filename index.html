@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 
 
+  <link href="./styles/loading/loading.css" rel="stylesheet" />
   <link href="./styles/aboutUs/aboutUs.css" rel="stylesheet" />
   <link href="./styles/skills/skills.css" rel="stylesheet" />
   <link href="./styles/hero/hero.css" rel="stylesheet" />
@@ -30,6 +31,15 @@
   <div id="mousefollower">
     <img id="mousefollower-rightarrow" src="./assets/icons/navbarContentCardArrow.svg" alt="">
   </div>
+
+  <section id="loadingSec">
+    <img id="loadingsteric" src="./assets/icons/steric-white.svg" alt="steric">
+    <div class="loading-footer">
+      <div><span class="loadingdot"></span> Web Pioneers</div>
+      <div><span id="loading-percent">0</span>%</div>
+    </div>
+  </section>
+
   <section id="navigationSec" class="initial">
     <div id="navigation">
       <header>
@@ -39,22 +49,22 @@
           </div>
           <div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Home</div>
               <div class="textbg">Home</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Portfolio</div>
               <div class="textbg">Portfolio</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">About Us</div>
               <div class="textbg">About Us</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Pricing</div>
               <div class="textbg">Pricing</div>
             </div>
@@ -62,7 +72,7 @@
           <div>
             <div class="line"></div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Login</div>
               <div class="textbg">Login</div>
             </div>
@@ -77,31 +87,31 @@
         <div class="content">
           <div>
             <div class="nav-link">
-              <div>
+              <div class="non-mousetracker">
                 <div class="text">Portfolio</div>
               <div class="textbg">Portfolio</div>
               </div>
             </div>
             <div class="nav-link">
-              <div>
+              <div class="non-mousetracker">
                 <div class="text">Stories</div>
               <div class="textbg">Stories</div>
               </div>
             </div>
             <div class="nav-link">
-              <div>
+              <div class="non-mousetracker">
                 <div class="text">Pricing</div>
               <div class="textbg">Pricing</div>
               </div>
             </div>
             <div class="nav-link">
-              <div>
+              <div class="non-mousetracker">
                 <div class="text">FAQ's</div>
               <div class="textbg">FAQ's</div>
               </div>
             </div>
             <div class="nav-link">
-              <div>
+              <div class="non-mousetracker">
                 <div class="text">Contact</div>
               <div class="textbg">Contact</div>
               </div>
@@ -149,7 +159,7 @@
         <div class="footer">
           <div class="border-top"></div>
           <!-- <div class="creator">Made by Xaib</div> -->
-          <a  href="/" class="LinkhoverGroup creator">
+          <a  href="/" class="LinkhoverGroup creator" style="cursor: unset;">
             <div class="textonly">
               <div class="visibleTag">Made by Xaib</div>
             <div class="hiddenTag">Made by Xaib</div>
@@ -157,21 +167,21 @@
           </a>
 
           <div class="icons">
-            <a  href="/" class="LinkhoverGroup">
+            <a  href="/" class="LinkhoverGroup non-mousetracker">
               <div class="icononly">
                 <img class="visibleTag" src="./assets/icons/header/dribble.svg" alt="">
                 <img class="hiddenTag" src="./assets/icons/header/dribble.svg" alt="">
               </div>
             </a>
 
-            <a  href="/" class="LinkhoverGroup">
+            <a  href="/" class="LinkhoverGroup non-mousetracker">
               <div class="icononly">
                 <img class="visibleTag" src="./assets/icons/header/linkedin.svg"  alt="">
                 <img class="hiddenTag" src="./assets/icons/header/linkedin.svg"  alt="">
               </div>
             </a>
 
-            <a  href="/" class="LinkhoverGroup">
+            <a  href="/" class="LinkhoverGroup non-mousetracker">
               <div class="icononly">
                 <img class="visibleTag" src="./assets/icons/header/instagram.svg" alt="">
                 <img class="hiddenTag" src="./assets/icons/header/instagram.svg" alt="">
@@ -256,22 +266,22 @@
           </div>
           <div class="navlinkscenter">
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Home</div>
               <div class="textbg">Home</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Portfolio</div>
               <div class="textbg">Portfolio</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">About Us</div>
               <div class="textbg">About Us</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Pricing</div>
               <div class="textbg">Pricing</div>
             </div>
@@ -279,70 +289,15 @@
           <div>
             <div class="line"></div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Login</div>
               <div class="textbg">Login</div>
             </div>
-
-
-            <!-- <button onclick="toggleMenu()" class="HeadrnavBtn">
-              <div id="navAnimatedIcon">
-                <svg id="changesvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" width="48" height="48" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
-                  <defs>
-                    <clipPath id="__lottie_element_2">
-                      <rect width="48" height="48" x="0" y="0"></rect>
-                    </clipPath>
-                  </defs>
-                  <g clip-path="url(#__lottie_element_2)">
-                    <g transform="matrix(1,0,0,1,24,32)" opacity="1" style="display: block;">
-                      <g opacity="1" transform="matrix(1,0,0,1,-0.25,0)">
-                        <path id="p1change" class="changepath" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="2" d=" M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0"></path>
-                      </g>
-                    </g>
-                    <g transform="matrix(1,0,0,1,24,24)" opacity="1" style="display: block;">
-                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                        <path id="p2change" class="changepath" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="2" d=" M-16,0 C-16,0 16,0 16,0"></path>
-                      </g>
-                    </g>
-                    <g transform="matrix(1,0,0,1,24,16)" opacity="1" style="display: block;">
-                      <g opacity="1" transform="matrix(1,0,0,1,-0.25,0)">
-                        <path id="p3change" class="changepath" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="2" d=" M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0"></path>
-                      </g>
-                    </g>
-                  </g>
-                </svg>
-              
-              </div>
-            </button> -->
-
            
             <div class="HeadrnavBtn">
-              <button id="navAnimatedIcon" onclick="toggleMenu()">
-                <svg id="changesvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" width="48" height="48" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
-                  <defs>
-                    <clipPath id="__lottie_element_2">
-                      <rect width="48" height="48" x="0" y="0"></rect>
-                    </clipPath>
-                  </defs>
-                  <g clip-path="url(#__lottie_element_2)">
-                    <g transform="matrix(1,0,0,1,24,32)" opacity="1" style="display: block;">
-                      <g opacity="1" transform="matrix(1,0,0,1,-0.25,0)">
-                        <path id="p1change" class="changepath" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="2" d=" M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0"></path>
-                      </g>
-                    </g>
-                    <g transform="matrix(1,0,0,1,24,24)" opacity="1" style="display: block;">
-                      <g opacity="1" transform="matrix(1,0,0,1,0,0)">
-                        <path id="p2change" class="changepath" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="2" d=" M-16,0 C-16,0 16,0 16,0"></path>
-                      </g>
-                    </g>
-                    <g transform="matrix(1,0,0,1,24,16)" opacity="1" style="display: block;">
-                      <g opacity="1" transform="matrix(1,0,0,1,-0.25,0)">
-                        <path id="p3change" class="changepath" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="10" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="2" d=" M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0"></path>
-                      </g>
-                    </g>
-                  </g>
-                </svg>
-              
+              <button id="navAnimatedIcon" class="" onclick="toggleMenu()">
+                <div id="hamburger-line1"></div>
+                <div id="hamburger-line2"></div>
               </button>
 
               <div id="mobileNavBtn" class="initial">
@@ -513,22 +468,22 @@
           </div>
           <div class="navlinkscenter">
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Home</div>
               <div class="textbg">Home</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Portfolio</div>
               <div class="textbg">Portfolio</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">About Us</div>
               <div class="textbg">About Us</div>
             </div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Pricing</div>
               <div class="textbg">Pricing</div>
             </div>
@@ -536,7 +491,7 @@
           <div>
             <div class="line"></div>
             <!-- nav link -->
-            <div class="nav-link">
+            <div class="nav-link non-mousetracker">
               <div class="text">Login</div>
               <div class="textbg">Login</div>
             </div>
@@ -609,8 +564,8 @@
     <div class="aboutus">
 
       <div class="abouthead">
-        <span class="dot"></span>
-        About us
+        <span class="themedot"></span>
+        <span class="themetitle">About us</span>
       </div>
 
       <!-- horizontal scroller -->
@@ -653,28 +608,17 @@
 
 
 
-            <div>Check our portfolio</div>
+            <div>Check out our portfolio</div>
           </div>
         </div>
 
         <div class="mobile-aboutus">
           <div>
-            At our agency,<br>
-            We specialize<br>
-            In crafting<br>
-            Digital <br>products<br>
-            With great <br>
-            care Check <br>
+            At our agency,we<br>
+            specialize in crafting<br>
+            digital products with<br>
+            great care. Check out<br>
             our portfolio<br>
-          </div>
-
-          <div>
-            <div class="animicon" id="aicon-mb-crafting"></div>
-            <div class="animicon" id="aicon-mb-products"></div>
-            <div class="animicon" id="aicon-mb-care"></div>
-            <div class="animicon" id="aicon-mb-portfolio"></div>
-
-
           </div>
         </div>
 
@@ -691,22 +635,37 @@
           </p>
         </div>
 
+        <div class="animiconlist">
+          <div class="animicon about-icon-float" id="aicon-mb-crafting"></div>
+          <div class="animicon about-icon-float" id="aicon-mb-products"></div>
+          <div class="animicon about-icon-float" id="aicon-mb-care"></div>
+          <div class="animicon about-icon-float" id="aicon-mb-portfolio"></div>
+        </div>
+
         <div>
           <img id="stericRef" src="assets/icons/steric.svg" alt="steric" />
         </div>
       </div>
+
+      <span class="bottomborder"></span>
+
     </div>
   </section>
 
   <section id="workSec">
+    <svg id="animatedlineM" width="231" height="2040" viewBox="0 0 231 2040" fill="none"  preserveAspectRatio="xMidYMax meet" >
+      <path id="animatedlinepathM" d="M181.181 1C183.082 81.0216 123.962 115.903 100.38 134.007C55.6539 165.736 -35.0419 228.725 16.2898 261.276C80.4544 301.969 223.774 292.646 164.545 406.649C105.316 520.656 -44.0356 468.493 86.3046 570.668C216.644 672.843 243.371 630.727 214.835 610.428C174.266 581.571 141.877 713.653 121.769 779.857C101.66 846.06 132.066 855.047 78.376 890.276C44.7617 912.33 25.1426 826.219 99.9739 887.664C174.806 949.109 108.741 975.809 107.277 977.089C33.6838 1017.03 287.839 1147.45 201.116 1181.72C92.7123 1224.56 -10.3996 1173.49 61.0775 1280.69C132.554 1387.88 303.112 1194.83 194.708 1440.22C107.985 1636.54 78.3058 1642.56 64.4736 1624.28C41.562 1576.72 8.36002 1502.65 76.3635 1559.72C103.175 1589.72 145.314 1657.76 160.523 1691.18C179.535 1732.94 162.166 1816.11 138.404 1861.65L128.347 1883.69C119.695 1915 120.596 1956.29 154.671 1959.16C197.265 1962.75 223.955 1984.97 178.985 2038.57" stroke="#FF2626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      
+
     <div class="work ">
 
-      <span class="topborder"></span>
-
       <div class="workhead">
-        <div><span class="dot"></span>
-          Recent Work</div>
-        <div id="workcounter">
+        <div>
+          <span class="themedot"></span>
+          <span class="themetitle"> Recent Work</span>
+        </div>
+        <div id="workcounter" style="opacity: 0;">
           01
         </div>
       </div>
@@ -716,11 +675,13 @@
 
         <!-- Detail -->
         <div class="workdetail">
+          
           <div id="detailRef">
             <!-- detail item -->
-            <div>
+            <div class="workdetailitem open">
+              
               <h2>
-                Kayuqu
+                Epoch
               </h2>
               <ul>
                 <li>
@@ -733,9 +694,62 @@
                   <span>Web development</span>
                 </li>
               </ul>
+              <div class="stickybutton">
+                <a href="/">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+      
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View more
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View more
+                        </div>
+                      </div>
+      
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
             <!-- detail item -->
-            <div>
+            <div class="workdetailitem">
+              <h2>
+                Flora
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton">
+                <a href="/">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+      
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View more
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View more
+                        </div>
+                      </div>
+      
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
               <h2>
                 Furniture
               </h2>
@@ -750,9 +764,27 @@
                   <span>Web development</span>
                 </li>
               </ul>
+              <div class="stickybutton">
+                <a href="/">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+      
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View more
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View more
+                        </div>
+                      </div>
+      
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
             <!-- detail item -->
-            <div>
+            <div class="workdetailitem">
               <h2>
                 Tavern
               </h2>
@@ -767,45 +799,47 @@
                   <span>Web development</span>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- sticky button -->
-        <div class="stickybutton">
-          <a href="/">
-            <div id="magneticBtn">
-              <div class="my-button">
-
-                <div>
-                  <div id="Btnfirst" class="Btnfirst">
-                    View more
+              <div class="stickybutton">
+                <a href="/">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+      
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View more
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View more
+                        </div>
+                      </div>
+      
+                    </div>
                   </div>
-                  <div id="Btnsecond" class="Btnsecond">
-                    View more
-                  </div>
-                </div>
-
+                </a>
               </div>
             </div>
-          </a>
+          </div>
+
         </div>
 
         <!-- images scroller -->
         <div class="workimage">
-          <div id="imgRef">
-
-            <!-- img card -->
+          <div id="imgRef" >
+            <svg id="animatedline" width="623" height="3539" viewBox="0 0 623 3539" fill="none"  preserveAspectRatio="xMidYMax meet" >
+              <path id="animatedlinepath"  d="M270.846 2C149.851 87.8711 -95.5014 258.346 43.3622 346.445C216.942 456.577 604.654 431.346 444.426 739.888C284.199 1048.44 -119.831 907.264 232.768 1183.79C585.366 1460.32 657.667 1346.34 580.471 1291.4C470.723 1213.3 383.104 1570.77 328.706 1749.95C274.308 1929.13 348.243 2089.16 203 2184.5C112.066 2244.19 58.9916 2011.13 261.427 2177.43C463.863 2343.73 293.462 2280.28 289.504 2283.75C90.4171 2391.84 777.963 2744.82 543.358 2837.58C250.102 2953.52 -28.8384 2815.31 164.523 3105.42C357.884 3395.53 819.279 2873.03 526.024 3537.19" stroke="#FF2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            <!-- <img id="animatedline" src="assets/icons/animline.svg" alt="animatedline"> -->
             <div>
-              <img src="assets/images/work1.png" alt="workImage" />
+              <img src="assets/images/Work/DESIGN.png" alt="workImage" />
             </div>
-            <!-- img card -->
             <div>
-              <img src="assets/images/work1.png" alt="workImage" />
+              <img src="assets/images/Work/DESIGN-1.png" alt="workImage" />
             </div>
-            <!-- img card -->
             <div>
-              <img src="assets/images/work1.png" alt="workImage" />
+              <img src="assets/images/Work/DESIGN-2.png" alt="workImage" />
+            </div>
+            <div>
+              <img src="assets/images/Work/DESIGN-3.png" alt="workImage" />
             </div>
           </div>
         </div>
@@ -813,7 +847,7 @@
 
       <!-- work flex for mobile -->
       <div class="workflex">
-
+          
         <div class="work-card">
           <div class="work-card-head">
             <div>
@@ -824,7 +858,7 @@
             </div>
           </div>
           <div class="work-card-img">
-            <img src="./assets/images/work1.png" alt="">
+            <img src="./assets/images/Work/DESIGN.png" alt="">
           </div>
           <div class="work-card-detail">
             <div>
@@ -863,14 +897,14 @@
         <div class="work-card">
           <div class="work-card-head">
             <div>
-              <h2>Epoch.</h2>
+              <h2>Flora.</h2>
             </div>
             <div>
               <p>02</p>
             </div>
           </div>
           <div class="work-card-img">
-            <img src="./assets/images/work1.png" alt="">
+            <img src="./assets/images/Work/DESIGN-1.png" alt="">
           </div>
           <div class="work-card-detail">
             <div>
@@ -909,14 +943,59 @@
         <div class="work-card">
           <div class="work-card-head">
             <div>
-              <h2>Epoch.</h2>
+              <h2>Furniture.</h2>
             </div>
             <div>
               <p>03</p>
             </div>
           </div>
           <div class="work-card-img">
-            <img src="./assets/images/work1.png" alt="">
+            <img src="./assets/images/Work/DESIGN-2.png" alt="">
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="/">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View more
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Tavern.</h2>
+            </div>
+            <div>
+              <p>04</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <img src="./assets/images/Work/DESIGN-3.png" alt="">
           </div>
           <div class="work-card-detail">
             <div>
@@ -973,9 +1052,10 @@
     <div id="boxesRef2">
       <div class="boxitem">
         <div>
+
           <div>
-            <span></span>
-            01
+            <span class="themedot"></span>
+            <span class="themetitle">01</span>
           </div>
 
           <div>
@@ -989,8 +1069,8 @@
       <div class="boxitem">
         <div>
           <div>
-            <span></span>
-            02
+            <span class="themedot"></span>
+            <span class="themetitle">02</span>
           </div>
 
           <div>
@@ -1005,8 +1085,8 @@
       <div class="boxitem">
         <div>
           <div>
-            <span></span>
-            03
+            <span class="themedot"></span>
+            <span class="themetitle">03</span>
           </div>
 
           <div>
@@ -1021,8 +1101,8 @@
       <div class="boxitem">
         <div>
           <div>
-            <span></span>
-            04
+            <span class="themedot"></span>
+            <span class="themetitle">04</span>
           </div>
 
           <div>
@@ -1310,7 +1390,8 @@
 
     <div id="perksHead">
       <div>
-        <span></span> Membership Benefits
+        <span class="themedot"></span>
+        <span class="themetitle">Membership Benefits</span>
       </div>
       <div>
         <h1>
@@ -1363,7 +1444,7 @@
 
     <div class="perksCarousel-wrapper">
 
-      <div class="perksCarousel">
+      <div class="perksCarousel" id="perksCarouselMobile">
         <div class="perkCard-mb">
           <div class="animicon" id="aicon-perks-mb-designboard"></div>
           <h1>Design Board</h1>
@@ -1418,8 +1499,10 @@
 
   <section id="feedbackSec">
     <div class="feedbackWrapper">
+      
       <div>
-        <div><span></span> Client Feedback</div>
+        <span class="themedot"></span>
+        <span class="themetitle">Client Feedback</span>
       </div>
   
       <div class="feedbackCon">

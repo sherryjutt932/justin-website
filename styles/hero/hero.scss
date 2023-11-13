@@ -1,87 +1,45 @@
 /* Icon 1 */
 .HeadrnavBtn {
-  // transform: scale(55%) translateY(6px);
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   position: relative;
   z-index: 100 !important;
 
   #navAnimatedIcon {
-    width: 100%;
-    height: 100%;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
-  }
-
-  #navAnimatedIcon svg {
-    width: 100%;
-    height: 100%;
-    transform: translate3d(0, 0, 0);
-    content-visibility: visible;
-  }
-
-  #navAnimatedIcon .changepath {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
     transition: all 500ms ease;
   }
 
-  #navAnimatedIcon.open #p1change {
-    animation: iconanim 1s ease;
+
+  #navAnimatedIcon #hamburger-line1,
+  #navAnimatedIcon #hamburger-line2 {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 500ms ease;
+    transform-origin: center center;
   }
 
-  #navAnimatedIcon.open #p2change {
-    animation: iconanim2 1s ease;
+  #navAnimatedIcon.open {
+    position: fixed;
+    gap: 0;
   }
 
-  #navAnimatedIcon.open #p3change {
-    animation: iconanim3 1s ease;
+  #navAnimatedIcon.open #hamburger-line1 {
+    transform: rotate(45deg);
   }
 
-  @keyframes iconanim {
-    20% {
-      transform: translateY(10%);
-    }
+  #navAnimatedIcon.open #hamburger-line2 {
+    transform: rotate(-45deg) translate(1px,-1px) ;
   }
 
-  @keyframes iconanim2 {
-    20% {
-      transform: scaleX(1.2);
-    }
-  }
-
-  @keyframes iconanim3 {
-    20% {
-      transform: translateY(-10%);
-    }
-  }
-
-  #navAnimatedIcon.close #p1change {
-    animation: reverseIconanim 1s ease;
-  }
-
-  #navAnimatedIcon.close #p2change {
-    animation: reverseIconanim2 1s ease;
-  }
-
-  #navAnimatedIcon.close #p3change {
-    animation: reverseIconanim3 1s ease;
-  }
-
-  @keyframes reverseIconanim {
-    20% {
-      transform: translateY(10%);
-    }
-  }
-
-  @keyframes reverseIconanim2 {
-    20% {
-      transform: scaleX(1.2);
-    }
-  }
-
-  @keyframes reverseIconanim3 {
-    20% {
-      transform: translateY(-10%);
-    }
-  }
 }
 
 #mobileNavBtn {
@@ -432,13 +390,13 @@
 
       .detail {
         & > div {
-          &:nth-child(1) {
+          &:nth-child(2) {
             a {
               color: inherit;
 
               & > div {
                 & > div {
-                  background-color: var(--light);
+                  background-color: var(--light) !important;
                 }
               }
             }
@@ -514,7 +472,7 @@ nav {
 
   #navbtnplacer{
     opacity: 0;
-    width: 30px;
+    width: 25px;
   }
   .logoimg {
     justify-content: left;
@@ -742,18 +700,7 @@ nav {
 }
 
 @media (min-width: 1390px) {
-  .HeadrnavBtn {
-    // transform: scale(55%) translateY(6px);
-    height: 30px;
-    width: 30px;
-
-    #navAnimatedIcon.open{
-      position: fixed;
-      height: 30px;
-      width: 30px;
-    }
-  }
-
+ 
   #navigation {
     .footer {
       height: 16vh;
@@ -766,11 +713,6 @@ nav {
     height: 100px;
     min-height: 100px;
     max-height: 100px;
-
-    #navbtnplacer{
-      opacity: 0;
-      width: 30px;
-    }
 
     & > div {
       gap: 16px;
@@ -821,17 +763,16 @@ nav {
 }
 
 @media (min-width: 1536px) {
-  .HeadrnavBtn {
-    // transform: scale(55%) translateY(6px);
-    height: 40px;
-    width: 40px;
 
-    #navAnimatedIcon.open{
-      position: fixed;
-      height: 40px;
-      width: 40px;
-    }
+  /* Icon 1 */
+.HeadrnavBtn {
+  height: 35px;
+  width: 35px;
+  #navAnimatedIcon {
+    height: 35px;
+    width: 35px;
   }
+}
 
   #hero,
   #heroBg {
@@ -917,7 +858,7 @@ nav {
 
     #navbtnplacer{
       opacity: 0;
-      width: 40px;
+      width: 35px;
     }
 
     & > div {
@@ -1004,46 +945,10 @@ nav {
   .HeadrnavBtn {
     width: 48px;
     height: 48px;
-    // transform: scale(100%) translateY(0px);
     position: relative;
 
     #navAnimatedIcon.open{
       position: absolute;
-    }
-
-    #navAnimatedIcon svg {
-      width: 100%;
-      height: 100%;
-      transform: translate3d(0, 0, 0);
-      content-visibility: visible;
-    }
-
-    #navAnimatedIcon .changepath {
-      transition: all 500ms ease;
-    }
-
-    #navAnimatedIcon.open #p1change {
-      animation: iconanim 1s ease;
-    }
-
-    #navAnimatedIcon.open #p2change {
-      animation: iconanim2 1s ease;
-    }
-
-    #navAnimatedIcon.open #p3change {
-      animation: iconanim3 1s ease;
-    }
-
-    #navAnimatedIcon.close #p1change {
-      animation: reverseIconanim 1s ease;
-    }
-
-    #navAnimatedIcon.close #p2change {
-      animation: reverseIconanim2 1s ease;
-    }
-
-    #navAnimatedIcon.close #p3change {
-      animation: reverseIconanim3 1s ease;
     }
 
     #mobileNavBtn {
@@ -1131,9 +1036,6 @@ nav {
   }
 
   .HeadrnavBtn {
-    #navAnimatedIcon #changesvgM {
-      transition: all 1000ms ease;
-    }
     #mobileNavBtn.initial {
       height: 48px;
       width: 48px;
@@ -1380,10 +1282,10 @@ nav {
 
         .detail {
           & > div {
-            &:nth-child(1) {
+            &:nth-child(2) {
               a {
                 color: inherit;
-
+                
                 & > div {
                   & > div {
                     background-color: var(--light);
@@ -1569,7 +1471,6 @@ nav {
               font-size: 14px;
               line-height: 21px;
               margin-top: 16px;
-              font-weight: 600;
               text-transform: uppercase;
               display: flex;
               align-items: center;
@@ -1579,6 +1480,8 @@ nav {
               & > div {
                 position: relative;
                 padding-bottom: 4px;
+                font-weight: 400;
+                font-family: var(--Satoshi);
 
                 & > div {
                   background-color: var(--dark);

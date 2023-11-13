@@ -1,7 +1,9 @@
 #workSec {
   width: 100%;
   height: 100vh;
-  padding-top: 30px;
+}
+#workSec #animatedlineM {
+  display: none;
 }
 
 .work {
@@ -11,23 +13,11 @@
   display: flex;
   flex-direction: column;
 }
-.work .topborder {
-  position: absolute;
-  top: 0;
-  border-radius: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-bottom: 1px solid var(--gray-c5);
-  width: calc(100% - 128px);
-  display: block;
-}
 .work .workhead {
-  font-family: var(--Satoshi);
-  font-size: 16px;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 0px 64px;
-  padding-top: 30px;
+  padding: 0px 100px;
+  padding-top: 40px;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -35,50 +25,57 @@
   left: 0;
   width: 100%;
 }
-.work .workhead .dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 100px;
-  background-color: var(--dark);
-  margin-right: 8px;
+.work .workhead > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.work .workhead > div:nth-child(2) {
+  padding-right: 5px;
 }
 .work .workGrid {
   height: 100%;
   font-size: 20px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+}
+.work .workGrid > div {
+  flex: 1 1 0%;
 }
 .work .workGrid .workdetail {
-  grid-row: span 2;
-  grid-column: span 3;
-  width: 100%;
-}
-.work .workGrid .workdetail #detailRef {
+  max-height: 100%;
   height: 100%;
   width: -moz-fit-content;
   width: fit-content;
+}
+.work .workGrid .workdetail #detailRef {
+  height: 100%;
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 .work .workGrid .workdetail #detailRef > div {
-  flex: 1 1 0%;
-  padding-left: 64px;
-  padding-top: 112px;
-  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 100%;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  padding-left: 100px;
+  position: absolute;
+}
+.work .workGrid .workdetail #detailRef > div.open h2, .work .workGrid .workdetail #detailRef > div.open ul, .work .workGrid .workdetail #detailRef > div.open .stickybutton {
+  opacity: 1;
 }
 .work .workGrid .workdetail #detailRef > div h2 {
+  transition: opacity 500ms ease;
+  opacity: 0;
   font-size: 60px;
   font-family: var(--NohemiL);
   font-weight: 300 !important;
 }
 .work .workGrid .workdetail #detailRef > div ul {
+  transition: opacity 500ms ease;
+  opacity: 0;
+  transition-delay: 100ms;
   width: -moz-fit-content;
   width: fit-content;
   font-family: var(--Satoshi);
@@ -99,30 +96,30 @@
   position: relative;
   left: -12px;
 }
-.work .workGrid .stickybutton {
-  grid-row: span 1;
-  grid-column: span 3;
-  padding-left: 64px;
-  padding-bottom: 30;
-  grid-row-start: 3;
+.work .workGrid .workdetail #detailRef > div .stickybutton {
+  transition: opacity 0ms ease;
+  opacity: 0;
+  transition-delay: 0ms;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: var(--SatoshiR);
 }
-.work .workGrid .stickybutton > a {
+.work .workGrid .workdetail #detailRef > div .stickybutton > a {
   cursor: pointer;
   width: -moz-fit-content;
   width: fit-content;
   text-decoration: none;
 }
-.work .workGrid .stickybutton > a #magneticBtn {
+.work .workGrid .workdetail #detailRef > div .stickybutton > a #magneticBtn {
   margin: -30px;
   padding: 30px;
   display: inline-block;
   border-radius: 50%;
 }
-.work .workGrid .stickybutton > a #magneticBtn > div {
+.work .workGrid .workdetail #detailRef > div .stickybutton > a #magneticBtn > div {
   overflow: hidden;
   position: relative;
   width: 96px;
@@ -137,12 +134,12 @@
   color: var(--light);
   text-align: center;
 }
-.work .workGrid .stickybutton > a #magneticBtn > div .Btnfirst {
+.work .workGrid .workdetail #detailRef > div .stickybutton > a #magneticBtn > div .Btnfirst {
   width: 96px;
   height: -moz-fit-content;
   height: fit-content;
 }
-.work .workGrid .stickybutton > a #magneticBtn > div .Btnsecond {
+.work .workGrid .workdetail #detailRef > div .stickybutton > a #magneticBtn > div .Btnsecond {
   width: 96px;
   position: absolute;
   top: 50%;
@@ -150,29 +147,30 @@
   left: 100%;
 }
 .work .workGrid .workimage {
-  grid-row: span 3;
-  grid-column: span 5;
   max-height: 100%;
   height: 100%;
 }
 .work .workGrid .workimage #imgRef {
-  width: 100%;
+  position: relative;
   height: 100%;
   z-index: 10;
-  padding-bottom: 20px;
+}
+.work .workGrid .workimage #imgRef #animatedline {
+  position: absolute;
+  left: 10%;
+  height: 380%;
+  z-index: -1;
 }
 .work .workGrid .workimage #imgRef > div {
-  padding: 30 0px;
   height: 100%;
   display: flex;
-  justify-content: end;
   align-items: end;
-  padding-right: 64px;
-  padding-bottom: 40px;
+  padding-right: 100px;
+  padding-bottom: 100px;
 }
 .work .workGrid .workimage #imgRef > div img {
-  aspect-ratio: 1088/656;
-  width: 85%;
+  aspect-ratio: 1072/646;
+  width: 56vw;
 }
 .work .workflex {
   display: none;
@@ -181,87 +179,19 @@
   display: none;
 }
 
-@media (min-width: 1390px) {
-  .work .topborder {
-    width: calc(100% - 128px);
-  }
-  .work .workhead {
-    font-size: 20px;
-    padding-left: 100px !important;
-    padding-right: 100px !important;
-  }
-  .work .workGrid {
-    font-size: 20px;
-  }
-  .work .workGrid .workdetail #detailRef > div {
-    padding-top: 40px;
-    width: 40vw;
-    gap: 64px;
-    padding-left: 100px !important;
-    justify-content: center;
-  }
-  .work .workGrid .workdetail #detailRef > div h2 {
-    font-size: 60px;
-  }
-  .work .workGrid .workdetail #detailRef > div ul {
-    font-size: 16px;
-  }
-  .work .workGrid .workdetail #detailRef > div ul li {
-    padding-left: 16px;
-    padding-right: 32px;
-  }
-  .work .workGrid .workdetail #detailRef > div ul li span {
-    left: -12px;
-  }
-  .work .workGrid .stickybutton {
-    padding-bottom: 30px;
-    padding-left: 100px !important;
-    justify-content: start;
-  }
-  .work .workGrid .stickybutton > a #magneticBtn {
-    margin: -30px;
-    padding: 30px;
-  }
-  .work .workGrid .stickybutton > a #magneticBtn > div {
-    width: 96px;
-    font-size: 16px;
-  }
-  .work .workGrid .workimage #imgRef > div {
-    padding: 30px 0px;
-    padding-right: 100px !important;
-    padding-bottom: 40px !important;
-  }
-  .work .workGrid .workimage #imgRef > div img {
-    min-width: 815px;
-    width: 815px;
-    min-height: 495px;
-    height: 495px;
-  }
-}
 @media (min-width: 1536px) {
-  #workSec {
-    padding-top: 40px;
-  }
-  .work .topborder {
-    width: calc(100% - 256px);
-  }
   .work .workhead {
-    font-size: 20px;
-    padding-left: 120px !important;
-    padding-right: 120px !important;
-  }
-  .work .workGrid {
-    font-size: 20px;
+    padding: 0px 120px;
+    padding-top: 60px;
   }
   .work .workGrid .workdetail #detailRef > div {
-    padding-top: 60px;
-    width: 40vw;
-    gap: 92px;
-    padding-left: 120px !important;
-    justify-content: center;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    padding-left: 120px;
   }
   .work .workGrid .workdetail #detailRef > div h2 {
     font-size: 80px;
+    font-weight: 300 !important;
   }
   .work .workGrid .workdetail #detailRef > div ul {
     font-size: 22px;
@@ -269,38 +199,29 @@
   .work .workGrid .workdetail #detailRef > div ul li {
     padding: 30px 0px;
     padding-left: 16px;
-    padding-right: 32px;
+    padding-right: 32px span;
+    padding-right-left: -12px;
   }
-  .work .workGrid .workdetail #detailRef > div ul li span {
-    left: -12px;
-  }
-  .work .workGrid .stickybutton {
-    padding-bottom: 30px;
-    padding-left: 120px !important;
-    justify-content: start;
-  }
-  .work .workGrid .stickybutton > a #magneticBtn {
+  .work .workGrid .workdetail #detailRef > div .stickybutton > a #magneticBtn {
     margin: -30px;
     padding: 30px;
   }
-  .work .workGrid .stickybutton > a #magneticBtn > div {
+  .work .workGrid .workdetail #detailRef > div .stickybutton > a #magneticBtn > div {
     width: 132px;
     font-size: 22px;
   }
-  .work .workGrid .stickybutton > a #magneticBtn > div .Btnfirst {
+  .work .workGrid .workdetail #detailRef > div .stickybutton > a #magneticBtn > div .Btnfirst {
     width: 132px;
   }
-  .work .workGrid .stickybutton > a #magneticBtn > div .Btnsecond {
+  .work .workGrid .workdetail #detailRef > div .stickybutton > a #magneticBtn > div .Btnsecond {
     width: 132px;
   }
   .work .workGrid .workimage #imgRef > div {
-    padding: 30px 0px;
-    padding-right: 120px !important;
-    padding-bottom: 120px !important;
+    padding-right: 120px;
+    padding-bottom: 120px;
   }
   .work .workGrid .workimage #imgRef > div img {
-    width: 1088px;
-    height: 656px;
+    width: 1072px;
   }
 }
 @media (max-width: 750px) {
@@ -309,7 +230,17 @@
     height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
-    padding-top: 0px;
+    position: relative;
+  }
+  #workSec #animatedlineM {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100% - 400px);
+    width: 100%;
+    z-index: 5;
   }
   .work {
     width: 100%;
@@ -345,14 +276,6 @@
     left: 0;
     width: 100%;
   }
-  .work .workhead .dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 100px;
-    background-color: var(--dark);
-    margin-right: 8px;
-  }
   .work .workhead #workcounter {
     display: none;
   }
@@ -363,6 +286,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+  }
+  .work .workflex .work-card {
+    position: relative;
+    z-index: 10;
   }
   .work .workflex .work-card .work-card-head,
   .work .workflex .work-card .work-card-detail {
@@ -460,8 +387,8 @@
     font-size: 14px;
     line-height: 21px;
     margin-top: 16px;
-    font-family: var(--SatoshiR);
-    font-weight: 600;
+    font-family: var(--Satoshi);
+    font-weight: unset;
     text-transform: uppercase;
     display: flex;
     align-items: center;

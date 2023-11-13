@@ -19,14 +19,18 @@
   font-size: 20px;
   height: -moz-fit-content;
   height: fit-content;
+  display: flex;
+  align-items: center;
 }
-.aboutus .abouthead .dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
+.aboutus .bottomborder {
+  position: absolute;
+  bottom: 60px;
   border-radius: 100px;
-  background-color: var(--dark);
-  margin-right: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 1px solid var(--gray-c5);
+  width: calc(100% - 128px);
+  display: block;
 }
 
 #aboutRef {
@@ -77,6 +81,9 @@
   padding: 40px 0;
   gap: 50px;
 }
+.aboutdetail .animiconlist {
+  display: none !important;
+}
 .aboutdetail > div:nth-child(1) {
   flex: 1 1 0%;
   height: -moz-fit-content;
@@ -113,6 +120,9 @@
 @media (min-width: 1536px) {
   .aboutus {
     padding: 64px 120px;
+  }
+  .aboutus .bottomborder {
+    width: calc(100% - 240px);
   }
   #aboutRef {
     margin-top: 85px;
@@ -168,31 +178,33 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  .aboutus .bottomborder {
+    position: absolute;
+    bottom: 0px;
+    border-radius: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid var(--gray-c5);
+    width: calc(100% - 48px);
+    display: block;
+  }
   .aboutus .abouthead {
     font-family: var(--Satoshi);
     font-size: 20px;
     height: -moz-fit-content;
     height: fit-content;
   }
-  .aboutus .abouthead .dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 100px;
-    background-color: var(--dark);
-    margin-right: 8px;
-  }
   #aboutRef {
     width: 100%;
     font-size: 36px;
     font-weight: 400 !important;
-    line-height: 55px;
-    font-family: var(--NohemiL);
-    text-transform: uppercase;
+    line-height: 41px;
+    font-family: var(--Satoshi);
+    text-transform: unset;
     display: flex;
     flex-wrap: nowrap;
-    margin: 30px 0px;
-    margin-top: 70px;
+    margin-top: 55px;
+    margin-top: 40px;
   }
   #aboutRef .pc-aboutus {
     display: none;
@@ -202,32 +214,13 @@
     width: 100%;
     align-items: center;
     white-space: nowrap;
-    justify-content: space-between;
-    gap: 30px;
-  }
-  #aboutRef .mobile-aboutus > div:nth-child(1) {
-    flex-grow: 1;
-  }
-  #aboutRef .mobile-aboutus > div:nth-child(2) {
-    display: flex;
-    height: 80%;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-bottom: 20px;
-  }
-  #aboutRef .mobile-aboutus > div:nth-child(2) .animicon {
-    width: 60px;
-    height: 60px;
-  }
-  #aboutRef .mobile-aboutus > div:nth-child(2) .animicon:nth-child(even) {
-    position: relative;
-    left: -120%;
   }
   .aboutdetail {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     padding-top: 20px;
+    padding-bottom: 0;
     gap: 50px;
   }
   .aboutdetail > div:nth-child(1) {
@@ -240,19 +233,32 @@
   .aboutdetail > div:nth-child(1) p {
     max-width: 100%;
     font-family: var(--Satoshi);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400 !important;
     line-height: 27px;
     margin-right: 0px;
   }
-  .aboutdetail > div:nth-child(2) {
+  .aboutdetail > div:nth-child(2).animiconlist {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .aboutdetail > div:nth-child(2).animiconlist .animicon {
+    width: 60px;
+    height: 60px;
+  }
+  .aboutdetail > div:nth-child(2).animiconlist .animicon:nth-child(even) {
+    margin-bottom: 20px;
+  }
+  .aboutdetail > div:nth-child(3) {
     height: 100%;
     width: -moz-fit-content;
     width: fit-content;
     display: flex;
     align-items: end;
   }
-  .aboutdetail > div:nth-child(2) img {
+  .aboutdetail > div:nth-child(3) img {
     width: 132px;
     height: 132px;
   }

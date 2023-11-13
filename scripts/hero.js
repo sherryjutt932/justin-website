@@ -70,15 +70,28 @@ async function runAnimation() {
   herotimeline = timeline;
 
   // Create ScrollTrigger
-  ScrollTrigger.create({
-    trigger: heroSec,
-    start: "top top",
-    end: "+=2000",
-    // end: "+=500",
-    // pin:true,
-    scrub: true,
-    animation: herotimeline,
-  });
+  if(!isMobile()){
+    ScrollTrigger.create({
+      trigger: heroSec,
+      start: "top top",
+      end: "+=2000",
+      // end: "+=500",
+      // pin:true,
+      scrub: true,
+      animation: herotimeline,
+    });
+  }
+  else{
+    ScrollTrigger.create({
+      trigger: heroSec,
+      start: "top top",
+      end: "+=3000",
+      // end: "+=500",
+      // pin:true,
+      scrub: true,
+      animation: herotimeline,
+    });
+  }
 }
 
 runAnimation();
@@ -96,25 +109,20 @@ runAnimation();
 
 function toggleMenu() {
   const mobileNavBtnelement = document.getElementById("mobileNavBtn");
-  const element = document.getElementById("navigationSec");
-  var btnNavs = document.getElementsByClassName("nav-icon1");
-  Array.from(btnNavs).forEach((ele) => {
-    ele.classList.toggle("open");
-  });
-
-  if (element.classList.contains("initial")) {
-    element.classList.remove("initial");
+  const navigation_Sec = document.getElementById("navigationSec");
+  var navAnimated_Icon = document.getElementById("navAnimatedIcon");
+ 
+  if (navigation_Sec.classList.contains("initial")) {
+    navigation_Sec.classList.remove("initial");
   }
-  if (element.classList.contains("open")) {
-    element.classList.add("close");
+  if (navigation_Sec.classList.contains("open")) {
+    navigation_Sec.classList.add("close");
   } else {
-    element.classList.remove("close");
+    navigation_Sec.classList.remove("close");
   }
-  element.classList.toggle("open");
+  navigation_Sec.classList.toggle("open");
 
   if (isMobile()) {
-    // let mobileNavBtnelementwidth = mobileNavBtnelement.offsetWidth;
-    // let mobileNavBtn_FC = mobileNavBtnelement.querySelector("#mobileNavBtn-FC");
     if (mobileNavBtnelement.classList.contains("initial")) {
       mobileNavBtnelement.classList.remove("initial");
     }
@@ -127,76 +135,32 @@ function toggleMenu() {
     document.getElementById("heroSec").classList.toggle("open");
   }
 
-  // if (element && !isMobile()) {
-  //   const currentHeight = element.offsetHeight;
-  //   const isFullHeight = currentHeight === window.innerHeight;
-
-  //   // Toggle the height based on the current state
-  //   element.style.height = isFullHeight ? "0" : "100vh";
-  //   // element.style.position = isFullHeight ? '' : '';
-  // }
-
-  // ------new
-
-  var changesvgele = document.getElementById("changesvg");
-  var navAnimatedIcon_pathlist =
-    changesvgele.getElementsByClassName("changepath");
-  var wrapper = document.getElementById("navAnimatedIcon");
-
-  opend1 = "M-16,8 C-16,8 0,-8 0,-8 C0,-8 16,8 16,8";
-  opend2 = "M-1,0 C-1,0 1,0 1,0";
-  opend3 = "M-16,-9 C-16,-9 0,8 0,8 C0,8 16,-9 16,-9";
-
-  closedd1 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
-  closedd2 = "M-16,0 C-16,0 16,0 16,0";
-  closedd3 = "M-16,0 C-16,0 0,0 0,0 C0,0 16,0 16,0";
 
   if (isMobile()) {
-    var changesvgeleM = document.getElementById("changesvg");
-    var navAnimatedIcon_pathlistM =
-      changesvgeleM.getElementsByClassName("changepath");
     var wrapperM = document.getElementById("navAnimatedIcon");
 
     wrapperM.classList.toggle("open");
 
     if (wrapperM.classList.contains("open")) {
-      element.style.height = "100vh";
+      navigation_Sec.style.height = "100vh";
       wrapperM.classList.remove("close");
-      setTimeout(() => {
-        navAnimatedIcon_pathlistM[0].setAttribute("d", opend1);
-        navAnimatedIcon_pathlistM[1].setAttribute("d", opend2);
-        navAnimatedIcon_pathlistM[2].setAttribute("d", opend3);
-      }, 200);
       
     } else if (!wrapperM.classList.contains("open")) {
-      navAnimatedIcon_pathlistM[0].setAttribute("d", closedd1);
-      navAnimatedIcon_pathlistM[1].setAttribute("d", closedd2);
-      navAnimatedIcon_pathlistM[2].setAttribute("d", closedd3);
       wrapperM.classList.add("close");
-      element.style.height ="0";
+      navigation_Sec.style.height ="0";
     }
   } else {
     // console.log(wrapper)
-    wrapper.classList.toggle("open");
-    let wrapIL = wrapper.getBoundingClientRect().left;
-    let wrapIT = wrapper.getBoundingClientRect().top;
+    navAnimated_Icon.classList.toggle("open");
+    // let wrapIL = navAnimated_Icon.getBoundingClientRect().left;
+    // let wrapIT = navAnimated_Icon.getBoundingClientRect().top;
 
-    if (wrapper.classList.contains("open")) {
-      wrapper.style.left = wrapIL;
-      wrapper.style.top = wrapIT;
-      wrapper.classList.remove("close");
-      element.style.height = "100vh";
-      setTimeout(() => {
-        navAnimatedIcon_pathlist[0].setAttribute("d", opend1);
-        navAnimatedIcon_pathlist[1].setAttribute("d", opend2);
-        navAnimatedIcon_pathlist[2].setAttribute("d", opend3);
-      }, 5);
-    } else if (!wrapper.classList.contains("open")) {
-      navAnimatedIcon_pathlist[0].setAttribute("d", closedd1);
-      navAnimatedIcon_pathlist[1].setAttribute("d", closedd2);
-      navAnimatedIcon_pathlist[2].setAttribute("d", closedd3);
-      wrapper.classList.add("close");
-      element.style.height ="0";
+    if (navAnimated_Icon.classList.contains("open")) {
+      // navAnimated_Icon.style.left = wrapIL;
+      // navAnimated_Icon.style.top = wrapIT;
+      navigation_Sec.style.height = "100vh";
+    } else if (!navAnimated_Icon.classList.contains("open")) {
+      navigation_Sec.style.height ="0";
     }
   }
 } //event lister end

@@ -24,14 +24,8 @@
   width: 100%;
   margin-bottom: 80px;
   padding-bottom: 20px;
-}
-#feedbackSec > div > div:nth-child(1) span {
-  display: inline-block;
-  border-radius: 20px;
-  width: 8px;
-  height: 8px;
-  background-color: black;
-  margin-right: 8px;
+  display: flex;
+  align-items: center;
 }
 #feedbackSec .feedbackCon {
   display: flex;
@@ -162,11 +156,6 @@
     font-size: 20px;
     line-height: 28px;
   }
-  #feedbackSec > div > div:nth-child(1) span {
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
-  }
   #feedbackSec .feedbackCon .feedbackdetail {
     height: 90%;
     width: 60%;
@@ -248,14 +237,6 @@
     width: 100%;
     margin-bottom: 0px;
     padding-bottom: 0px;
-  }
-  #feedbackSec > div > div:nth-child(1) span {
-    display: inline-block;
-    border-radius: 20px;
-    width: 8px;
-    height: 8px;
-    background-color: black;
-    margin-right: 8px;
   }
   #feedbackSec .feedbackCon {
     display: flex;
