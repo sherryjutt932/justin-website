@@ -98,10 +98,10 @@ Array.from(perkCards).forEach(item => {
   item.addEventListener("touchend",(e)=>{
     let mouseX = e.changedTouches[0].clientX;
     let totalChange = sliderPosition-mouseX;
-    if(totalChange > 120){
+    if(totalChange > 100){
       nextPerkCarousel();
     }
-    else if(totalChange<120){
+    else if(totalChange<-100){
       prevPerkCarousel();
     }
     gsap.to(
