@@ -1,8 +1,8 @@
 const workSec = document.getElementById("workSec");
 const imgRef = document.getElementById("imgRef");
 const detailRef = document.getElementById("detailRef");
+const workdetail_item = document.getElementsByClassName("workdetailitem");
 
-// animated_line.style.strokeDashoffset = (animatedline_length*2)- 10;
 
 if (!isMobile()) {
   var worktimeline = gsap.timeline();
@@ -17,95 +17,8 @@ if (!isMobile()) {
     worktimeline.to(imgRef, {
       yPercent: -300,
       ease: "none",
+      delay:.1,
     });
-  }
-
-  if (true) {
-    const detailArray = Array.from(detailRef.children);
-
-    // for (let index = 1; index < detailArray.length; index++) {
-    //   const child = detailArray[index];
-    //   console.log("a")
-    //   worktimeline.to(
-    //     child,
-    //     {
-    //         xPercent: 100 * index,
-    //         duration:1,
-    //         ease:"none"
-    //       },
-    //       index
-    //       );
-
-    //       // Nested loop to access all previous children
-    //       for (let prevIndex = 0; prevIndex < index; prevIndex++) {
-    //         const prevChild = detailArray[prevIndex];
-
-    //         console.log("b")
-    //     worktimeline.to(
-    //       prevChild,
-    //       {
-    //         xPercent: 100 * index,
-    //         opacity: 0,
-    //         duration:.4,
-    //         ease:"none"
-    //       },
-    //       index
-    //     );
-    //   }
-    // }
-
-    // worktimeline.to(
-    //   detailArray[0],
-    //   {
-    //     xPercent: 100,
-    //     duration:0.4,
-    //     opacity: 0,
-    //     ease:"none"
-    //   },
-    //   1
-    // ).to(
-    //   detailArray[1],
-    //   {
-    //     xPercent: 100,
-    //     duration:1,
-    //     ease:"none"
-    //   },
-    //   1
-    // ).to(
-    //   detailArray[2],
-    //   {
-    //     xPercent: 100,
-    //     duration:1,
-    //     ease:"none"
-    //   },
-    //   1
-    // ).to(
-    //   detailArray[0],
-    //   {
-    //     xPercent: 200,
-    //     opacity: 0,
-    //     duration:0.4,
-    //     ease:"none"
-    //   },
-    //   2
-    // ).to(
-    //   detailArray[1],
-    //   {
-    //     xPercent: 200,
-    //     opacity: 0,
-    //     duration:0.4,
-    //     ease:"none"
-    //   },
-    //   2
-    // ).to(
-    //   detailArray[2],
-    //   {
-    //    xPercent: 200,
-    //     duration:1,
-    //     ease:"none"
-    //   },
-    //   2
-    // );
   }
 
   ScrollTrigger.create({
@@ -116,21 +29,43 @@ if (!isMobile()) {
     pin: true,
     animation: worktimeline,
     onUpdate: (self) => {
-      let workdetail_item = document.getElementsByClassName("workdetailitem");
       let progress = self.progress;
-
       let imgArray = Array.from(imgRef.children);
       let totalItems = imgArray.length - 1;
-      let currentIndex = Math.round(progress * (totalItems - 1)) + 1;
-      document.getElementById("workcounter").innerHTML =
-        currentIndex > 1 ? "0" + currentIndex : "01";
+      // let currentIndex = Math.round(progress * (totalItems - 1)) + 1;
+      let currentIndex = 1;
+      let windowsizefix = (window.innerWidth<1900)?Math.round((window.innerWidth/100)-12)/100:0;
+      console.log(progress,windowsizefix);
+      // document.getElementById("workcounter").innerHTML =
+      //   currentIndex > 1 ? "0" + currentIndex : "01";
+      if(progress>(0.33 - (windowsizefix))){
+        currentIndex = 2; //flora
+      }
+      if(progress> (0.61 - (windowsizefix))){
+        currentIndex = 3; //furniture
+      }
+      if(progress> (0.89 - (windowsizefix))){
+        currentIndex = 4; //tavern
+      }
+
       if (currentIndex >= 1 && currentIndex <= totalItems) {
         Array.from(workdetail_item).forEach((item) => {
           item.classList.remove("open");
         });
         workdetail_item[currentIndex - 1].classList.add("open");
       }
+
     },
+  });
+}
+else{
+  ScrollTrigger.create({
+    trigger: workSec,
+    start: "top top",
+    end: "+=150",
+    scrub: true,
+    pin: true,
+    animation: worktimeline,
   });
 }
 // animated_line.style.strokeDashoffset = (animatedline_length*2)- (svgdrawLength);
@@ -173,7 +108,7 @@ if (isMobile()) {
     scrub: true,
     animation: animatedlinetimeline,
     onUpdate: (self) => {
-      let svgdrawLength = animatedline_length * self.progress * 1.05;
+      let svgdrawLength = animatedline_length * self.progress * 1;
       animated_line.style.strokeDashoffset =
         animatedline_length - svgdrawLength;
     },

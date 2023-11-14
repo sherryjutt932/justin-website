@@ -33,7 +33,7 @@
 
     .bottomborder{
         position: absolute;
-        bottom: 60px;
+        bottom: 0px;
         border-radius: 100px;
         left: 50%;
         transform: translateX(-50%);
@@ -99,7 +99,7 @@
     gap: 50px;
 
     .animiconlist{
-        display: none !important;
+        display: none !important    ;
     }
 
     &>div:nth-child(1){
@@ -118,7 +118,7 @@
         }
     }
 
-    &>div:nth-child(2){
+    &>div:nth-child(3){
         height: 100%;
         width: fit-content;
         display: flex;
@@ -174,6 +174,7 @@
 }
 
 .aboutdetail{
+    max-height: 42vh;
     padding-bottom: 40px;
     &>div:nth-child(1){
         p{
@@ -184,7 +185,7 @@
         }
     }
 
-    &>div:nth-child(2){
+    &>div:nth-child(3){
         img{
             width: 256px;
             height: 256px;
@@ -292,7 +293,7 @@
         }
     
         &>div:nth-child(2).animiconlist{
-            display: flex;
+            display: flex !important;
             width: 100%;
             justify-content: space-between;
             margin-bottom: 20px;

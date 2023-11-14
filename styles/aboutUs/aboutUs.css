@@ -24,7 +24,7 @@
 }
 .aboutus .bottomborder {
   position: absolute;
-  bottom: 60px;
+  bottom: 0px;
   border-radius: 100px;
   left: 50%;
   transform: translateX(-50%);
@@ -99,14 +99,14 @@
   line-height: 27px;
   margin-right: 96px;
 }
-.aboutdetail > div:nth-child(2) {
+.aboutdetail > div:nth-child(3) {
   height: 100%;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
   align-items: end;
 }
-.aboutdetail > div:nth-child(2) img {
+.aboutdetail > div:nth-child(3) img {
   width: 176px;
   height: 176px;
 }
@@ -144,6 +144,7 @@
     height: 108px;
   }
   .aboutdetail {
+    max-height: 42vh;
     padding-bottom: 40px;
   }
   .aboutdetail > div:nth-child(1) p {
@@ -152,10 +153,10 @@
     line-height: 36px;
     margin-right: 126px;
   }
-  .aboutdetail > div:nth-child(2) {
+  .aboutdetail > div:nth-child(3) {
     margin-bottom: 60px;
   }
-  .aboutdetail > div:nth-child(2) img {
+  .aboutdetail > div:nth-child(3) img {
     width: 256px;
     height: 256px;
   }
@@ -239,7 +240,7 @@
     margin-right: 0px;
   }
   .aboutdetail > div:nth-child(2).animiconlist {
-    display: flex;
+    display: flex !important;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 20px;

@@ -71,6 +71,7 @@
   line-height: 32px;
   font-family: var(--Satoshi);
   display: flex;
+  white-space: nowrap;
   align-items: center;
   gap: 50px;
 }
@@ -519,6 +520,7 @@
     padding: 10px 20px;
     line-height: 20px;
     gap: 20px;
+    white-space: nowrap;
     color: var(--black);
     text-decoration: none;
   }
@@ -535,6 +537,7 @@
   #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) .hiddenTag {
     position: absolute;
     width: 100%;
+    white-space: nowrap;
     height: 100%;
     top: 100%;
     left: 0;
@@ -545,8 +548,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
   }
   #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(2) * {
     transition: all 400ms ease;

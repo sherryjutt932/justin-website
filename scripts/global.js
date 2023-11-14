@@ -50,7 +50,7 @@ function enableMouseTracker() {
 
 
 //  -------------------------loading
-const calculatedXValue = window.innerWidth + 300;
+const calculatedXValue = window.innerWidth + document.getElementById("loadingsteric").offsetWidth + 40;
 gsap.timeline().to(
   ".loading-footer",
   1,
@@ -69,7 +69,7 @@ gsap.timeline().to(
   "a"
 ).to(
   "#loading-percent",
-  4,
+  3,
   {
     textContent: "100",
     roundProps: "textContent",
@@ -77,10 +77,10 @@ gsap.timeline().to(
   "a"
 ).to(
   "#loadingSec",
-  1,
+  .9,
   {
-    yPercent: -105,
-    borderRadius:"30px",
-    ease: "power2.out",
-  }
+    borderRadius:"40px",
+    transform: ()=> !isMobile()?"scale3d(0.9,0.9,1) translateY(-130%)":"scale3d(0.95,0.95,1) translateY(-130%)",
+  },
+  "a+=3.4"
 )

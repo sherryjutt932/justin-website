@@ -1,12 +1,12 @@
 const aboutRef = document.getElementById("aboutRef");
 const aboutSec = document.getElementById("aboutSec");
 const stericRef = document.getElementById("stericRef");
-
+var paddingsize = (window.innerWidth>1536)?240:110;
 //GSAP animation for the horizontal scrolling
 var aboutusTl = gsap.timeline();
 
 if (!isMobile()) {
- let xposition =  aboutRef.offsetWidth - (window.innerWidth * 0.8);
+ let xposition =  aboutRef.offsetWidth - (window.innerWidth - (paddingsize+126));
   aboutusTl.to(
       aboutRef,
       {

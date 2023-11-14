@@ -335,6 +335,9 @@
 #heroBg .head .headCon .circle {
   background-color: var(--dark);
 }
+#heroBg .head .headCon .detail > div:nth-child(2) p {
+  color: var(--gray-97) !important;
+}
 #heroBg .head .headCon .detail > div:nth-child(2) a {
   color: inherit;
 }
