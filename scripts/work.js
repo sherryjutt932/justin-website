@@ -59,14 +59,14 @@ if (!isMobile()) {
   });
 }
 else{
-  ScrollTrigger.create({
-    trigger: workSec,
-    start: "top top",
-    end: "+=150",
-    scrub: true,
-    pin: true,
-    animation: worktimeline,
-  });
+  // ScrollTrigger.create({
+  //   trigger: workSec,
+  //   start: "top top",
+  //   end: "+=150",
+  //   scrub: true,
+  //   pin: true,
+  //   animation: worktimeline,
+  // });
 }
 // animated_line.style.strokeDashoffset = (animatedline_length*2)- (svgdrawLength);
 
