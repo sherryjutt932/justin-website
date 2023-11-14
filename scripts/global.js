@@ -55,7 +55,7 @@ gsap.timeline().to(
   "#loadingSec",
   0,
   {
-    backgroundColor:"#FF2626",
+    // backgroundColor:"#FF2626",
   },
 ).to(
   ".loading-footer",
