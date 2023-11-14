@@ -84,3 +84,18 @@ gsap.timeline().to(
   },
   "a+=3.4"
 )
+.to(
+  "#loadingSec",
+  0.2,
+  {
+    delay:2,
+    opacity:0,
+  }
+)
+.to(
+  "#loadingSec",
+  0,
+  {
+    display:"none",
+  }
+)
