@@ -83,7 +83,7 @@ gsap.timeline().to(
     transform: ()=> !isMobile()?"scale3d(0.9,0.9,1) translateY(-130%)":"scale3d(0.95,0.95,1) translateY(-130%)",
   },
   "a+=3.4"
-);
+)
 .to(
   "#loadingSec",
   0.2,
