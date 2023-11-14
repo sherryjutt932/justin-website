@@ -9,7 +9,7 @@
   display: flex;
   justify-content: end;
   flex-direction: column;
-  background-color: var(--sec);
+  background-color: var(--main);
   color: var(--light);
   z-index: 300;
 }
