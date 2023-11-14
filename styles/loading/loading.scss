@@ -9,7 +9,7 @@
   display: flex;
   justify-content: end;
   flex-direction: column;
-  background-color: var(--main);
+  background-color: var(--sec);
   color: var(--light);
   z-index: 300;
 
@@ -114,6 +114,7 @@
 
 @media (max-width: 750px){
     #loadingSec{
+     background-color: var(--main);
         #loadingsteric{
             height: 200px;
             width: 200px;
