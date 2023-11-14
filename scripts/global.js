@@ -88,7 +88,9 @@ gsap.timeline().to(
   "#loadingSec",
   0.2,
   {
-    zIndex:-300
+    zIndex:-300,
+    display:"none",
+    opacity:0,
   }
 )
 // .to(
