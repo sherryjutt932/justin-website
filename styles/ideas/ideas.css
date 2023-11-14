@@ -82,8 +82,12 @@
 #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) * {
   transition: all 300ms ease;
 }
+#ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) .visibleTag {
+  white-space: nowrap;
+}
 #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) .hiddenTag {
   position: absolute;
+  white-space: nowrap;
   width: 100%;
   height: 100%;
   top: 100%;
@@ -240,8 +244,12 @@
 #footer .footerCon a.LinkhoverGroup > div:nth-child(1) * {
   transition: all 300ms ease;
 }
+#footer .footerCon a.LinkhoverGroup > div:nth-child(1) .visibleTag {
+  white-space: nowrap;
+}
 #footer .footerCon a.LinkhoverGroup > div:nth-child(1) .hiddenTag {
   position: absolute;
+  white-space: nowrap;
   width: 100%;
   height: 100%;
   top: 100%;
@@ -533,6 +541,9 @@
   }
   #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) * {
     transition: all 300ms ease;
+  }
+  #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) .visibleTag {
+    white-space: nowrap;
   }
   #ideasSec #ideasCon .ideasproducts .tabsflex a.LinkhoverGroup > div:nth-child(1) .hiddenTag {
     position: absolute;

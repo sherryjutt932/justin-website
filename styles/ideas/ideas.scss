@@ -87,9 +87,14 @@
                         * {
                             transition: all 300ms ease;
                         }
+
+                        .visibleTag{
+                            white-space: nowrap;
+                        }
         
                         .hiddenTag {
                             position: absolute;
+                            white-space: nowrap;
                             width: 100%;
                             height: 100%;
                             top: 100%;
@@ -272,9 +277,13 @@
                 * {
                     transition: all 300ms ease;
                 }
+                .visibleTag{
+                    white-space: nowrap;
+                }
 
                 .hiddenTag {
                     position: absolute;
+                    white-space: nowrap;
                     width: 100%;
                     height: 100%;
                     top: 100%;
@@ -621,7 +630,9 @@
                             * {
                                 transition: all 300ms ease;
                             }
-            
+                            .visibleTag{
+                                white-space: nowrap;
+                            }
                             .hiddenTag {
                                 position: absolute;
                                 width: 100%;
