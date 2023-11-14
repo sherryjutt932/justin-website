@@ -75,6 +75,7 @@
 }
 
 .aboutdetail {
+  max-height: 42vh;
   display: flex;
   flex-grow: 1;
   flex-direction: row-reverse;
@@ -144,7 +145,6 @@
     height: 108px;
   }
   .aboutdetail {
-    max-height: 42vh;
     padding-bottom: 40px;
   }
   .aboutdetail > div:nth-child(1) p {
@@ -223,6 +223,7 @@
     padding-top: 20px;
     padding-bottom: 0;
     gap: 50px;
+    max-height: unset;
   }
   .aboutdetail > div:nth-child(1) {
     flex: 1 1 0%;
