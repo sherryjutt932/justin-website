@@ -241,7 +241,7 @@
     transform: translateX(-50%);
     height: calc(100% - 400px);
     width: 100%;
-    z-index: 5;
+    z-index: 9;
   }
   .work {
     width: 100%;
@@ -288,10 +288,6 @@
     flex-direction: column;
     gap: 30px;
   }
-  .work .workflex .work-card {
-    position: relative;
-    z-index: 10;
-  }
   .work .workflex .work-card .work-card-head,
   .work .workflex .work-card .work-card-detail {
     display: flex;
@@ -318,6 +314,8 @@
   .work .workflex .work-card .work-card-img {
     width: 100%;
     padding: 15px 0;
+    position: relative;
+    z-index: 15;
   }
   .work .workflex .work-card .work-card-img img {
     width: 100%;
