@@ -104,7 +104,7 @@
 }
 @media (max-width: 750px) {
   #loadingSec {
-    background-color: var(--light);
+    background-color: var(--main);
   }
   #loadingSec #loadingsteric {
     height: 200px;
