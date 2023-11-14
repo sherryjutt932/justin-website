@@ -80,23 +80,22 @@ gsap.timeline().to(
   .9,
   {
     borderRadius:"40px",
-    opacity:0,
     transform: ()=> !isMobile()?"scale3d(0.9,0.9,1) translateY(-130%)":"scale3d(0.95,0.95,1) translateY(-130%)",
   },
   "a+=3.4"
-)
-.to(
-  "#loadingSec",
-  0.2,
-  {
-    delay:2,
-    opacity:0,
-  }
-)
-.to(
-  "#loadingSec",
-  0,
-  {
-    display:"none",
-  }
-)
+);
+// .to(
+//   "#loadingSec",
+//   0.2,
+//   {
+//     delay:2,
+//     opacity:0,
+//   }
+// )
+// .to(
+//   "#loadingSec",
+//   0,
+//   {
+//     display:"none",
+//   }
+// )
