@@ -596,15 +596,16 @@
                     font-size: 18px;
                     line-height: 27px;
                     padding-right: 10%;
+                    margin-bottom: 60px;
                 }
 
                 .tabsflex {
-                    margin-top: 30px;
+                    margin-top: 0px;
                     display: flex;
-                    flex-wrap: nowrap;
+                    flex-wrap: wrap;
                     overflow-x: scroll;
-                    padding: 20px 0;
-                    gap: 30px;
+                    padding-top: 20px;
+                    gap: 25px;
 
                     &:last-of-type {
                         display: none;
@@ -612,12 +613,13 @@
 
                     a.LinkhoverGroup {
                         font-size: 20px;
-                        padding: 10px 20px;
+                        padding: 16px 20px;
                         line-height: 20px;
                         gap: 20px;
                         white-space: nowrap;
-                        color: var(--black);
                         text-decoration: none;
+                        margin-bottom: 0px;
+
 
                         &.mob-only {
                             display: flex !important;
@@ -699,7 +701,7 @@
         .idea-marquee-wrap {
             width: 100%;
             overflow: hidden;
-            padding: 24px 0px;
+            padding: 0px;
             padding-bottom: 90px;
             // m14py-10
 
