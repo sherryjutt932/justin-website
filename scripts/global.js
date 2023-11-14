@@ -53,9 +53,9 @@ function enableMouseTracker() {
 const calculatedXValue = window.innerWidth + document.getElementById("loadingsteric").offsetWidth + 40;
 gsap.timeline().to(
   "#loadingSec",
-  0.01,
+  0.1,
   {
-    // backgroundColor:"#FF2626",
+    backgroundColor:"#FF2626",
   },
 ).to(
   ".loading-footer",
