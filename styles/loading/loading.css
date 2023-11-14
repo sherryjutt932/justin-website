@@ -109,9 +109,9 @@
     left: -250px;
   }
   #loadingSec .loading-footer {
-    padding: 40px;
-    flex-direction: column-reverse;
+    padding: 60px 40px;
     gap: 20px;
+    align-items: center;
     opacity: 1;
     padding-top: 0;
   }
@@ -119,12 +119,14 @@
     width: 100%;
   }
   #loadingSec .loading-footer > div:nth-child(1) {
-    font-size: 24px;
+    font-size: 22px;
+    white-space: nowrap;
     line-height: 28px;
+    padding-bottom: 10px;
   }
   #loadingSec .loading-footer > div:nth-child(2) {
     text-align: right;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 50px;
+    line-height: 50px;
   }
 }/*# sourceMappingURL=loading.css.map */
