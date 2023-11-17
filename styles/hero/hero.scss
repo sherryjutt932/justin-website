@@ -203,6 +203,8 @@
             opacity: 0;
             transition: opacity 1s ease;
             overflow: hidden;
+            color: var(--dark);
+            text-decoration: none;
             & > div {
               //hello1
               border-radius: 100px;
@@ -217,6 +219,8 @@
                 padding: 6px 16px;
                 cursor: pointer;
                 transition: all 300ms;
+                color: var(--dark);
+            text-decoration: none;
               }
 
               &:hover > .text {
@@ -517,6 +521,8 @@ nav {
     position: relative;
     border-radius: 100px;
     overflow: hidden;
+    color: var(--dark);
+    text-decoration: none;
 
     & > .text {
       font-size: 16px;
@@ -525,6 +531,8 @@ nav {
       padding: 4px 16px;
       cursor: pointer;
       transition: all 300ms;
+      color: var(--dark);
+      text-decoration: none;
     }
 
     &:hover > .text {

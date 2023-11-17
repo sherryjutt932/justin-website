@@ -242,7 +242,6 @@ Array.from(frombelowanim).forEach(element => {
   });
 });
 
-
 //  -------------------------loading
 const calculatedXValue =
   window.innerWidth + document.getElementById("loadingsteric").offsetWidth + 40;
@@ -250,8 +249,7 @@ gsap.set("#loadingSec", {
   background: "#FF2626",
 });
 
-gsap
-  .timeline()
+gsap.timeline()
   .to(
     ".loading-footer",
     1,
@@ -296,10 +294,3 @@ gsap
     display: "none",
     opacity: 0,
   });
-// .to(
-//   "#loadingSec",
-//   0,
-//   {
-//     display:"none",
-//   }
-// )

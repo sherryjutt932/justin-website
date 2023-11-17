@@ -96,7 +96,7 @@ const animateabouticonlist = () => {
       [about_icon_float[0],about_icon_float[2]],3,
       //
       {
-        y:process_scrollDir === "down" ? 10 : -10,
+        y:ScrollDirection === "down" ? 10 : -10,
       }
       ,"a"
     )
@@ -104,7 +104,7 @@ const animateabouticonlist = () => {
       [about_icon_float[1],about_icon_float[3]],3,
       //
       {
-        y:process_scrollDir === "down" ? -0 : 40,
+        y:ScrollDirection === "down" ? -0 : 40,
       }
       ,"a"
     )

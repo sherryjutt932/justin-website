@@ -56,14 +56,10 @@ body {
   margin: 0 auto; */
   overflow-x: hidden;
 }
-
+/* 
 .animimage {
-  transition: all 500ms ease;
-}
-.animimage:hover {
-  transform-origin: 50% 50%;
-  transform: scale(1.1);
-}
+  transform-origin:0% 0%;
+} */
 
 .contentCont{
   padding-left: 100px;

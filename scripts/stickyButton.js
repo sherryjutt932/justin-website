@@ -55,7 +55,6 @@ else{
     duration: 0,
     ease: "none",
   });
-
 }
 };
 

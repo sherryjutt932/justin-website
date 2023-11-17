@@ -1,3 +1,4 @@
+// ----------------steric anim
 gsap.to("#rotateSteric", {
     rotation: 720,
     ease: "linear",
@@ -9,22 +10,48 @@ gsap.to("#rotateSteric", {
     }
 });
 
-// Loop through each image with the class "animimage"
-gsap.utils.toArray('.animimage').forEach((image, index) => {
-    // Set initial scale
-    //gsap.set(image, { scale: 1 });
-  
-    // Add a scroll trigger to zoom in when entering the viewport
-    // gsap.to(image, {
-    //   scale: 1.5,
-    //   scrollTrigger: {
-    //     trigger: image,
-    //     start: "top 80%", // Adjust the start point as needed
-    //     end: "bottom 20%", // Adjust the end point as needed
-    //     scrub: true,
-    //   }
-    // });
-  
-    
-  });
-  
+
+// -----------------about us
+var aboutUs_AboutUs = document.querySelector("#aboutUsAboutUs").querySelectorAll(".animimage");
+
+gsap.to( aboutUs_AboutUs[0], {
+  y:-100,
+  scrollTrigger: {
+    trigger:  aboutUs_AboutUs[0],
+    start: "top 70%",
+    end: "bottom top",
+    scrub:true
+  }
+})
+gsap.to( aboutUs_AboutUs[1], {
+  y:250,
+  scrollTrigger: {
+    trigger:  aboutUs_AboutUs[1],
+    start: "top 70%",
+    end: "bottom top",
+    scrub:true
+  }
+});
+
+
+// -----------------about us
+var aboutUs_Founders = document.querySelector("#aboutUsFounders").querySelectorAll(".imagecard");
+
+gsap.to( aboutUs_Founders[0], {
+  y:-100,
+  scrollTrigger: {
+    trigger:  aboutUs_Founders[0],
+    start: "top 70%",
+    end: "bottom top",
+    scrub:true
+  }
+})
+gsap.to( aboutUs_Founders[1], {
+  y:150,
+  scrollTrigger: {
+    trigger:  aboutUs_Founders[1],
+    start: "top 70%",
+    end: "bottom top",
+    scrub:true
+  }
+});

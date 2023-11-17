@@ -171,6 +171,8 @@
   opacity: 0;
   transition: opacity 1s ease;
   overflow: hidden;
+  color: var(--dark);
+  text-decoration: none;
 }
 #navigation header .content > div:nth-child(1) .nav-link > div {
   border-radius: 100px;
@@ -186,6 +188,8 @@
   padding: 6px 16px;
   cursor: pointer;
   transition: all 300ms;
+  color: var(--dark);
+  text-decoration: none;
 }
 #navigation header .content > div:nth-child(1) .nav-link > div:hover > .text {
   transform: scale(0.75);
@@ -445,6 +449,8 @@ nav .nav-link {
   position: relative;
   border-radius: 100px;
   overflow: hidden;
+  color: var(--dark);
+  text-decoration: none;
 }
 nav .nav-link > .text {
   font-size: 16px;
@@ -453,6 +459,8 @@ nav .nav-link > .text {
   padding: 4px 16px;
   cursor: pointer;
   transition: all 300ms;
+  color: var(--dark);
+  text-decoration: none;
 }
 nav .nav-link:hover > .text {
   transform: scale(0.75);

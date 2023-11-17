@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 
     <!-- styles -->
+    <link rel="stylesheet" href="../styles/loading/loading.css">
     <link rel="stylesheet" href="../styles/Navigation/navigation.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/bigscreen/bigscreen.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
@@ -17,6 +18,7 @@
 
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
     <!-- gsap -->
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
@@ -278,9 +280,13 @@
             <div>
                 <p class="frombelowanim">The Web Pioneers Agency <span>●</span> established by a pair of close-knit founders, was born out of
                     pure passion in 2022.</p>
-                <div style="overflow: hidden;"><img class="animimage" src="../assets/images/AboutUsImg2.png" alt=""></div>
+                <div class="animimage"><img class="photo" src="../assets/images/AboutUsImg2.png" alt=""></div>
             </div>
-            <div><img src="../assets/images/AboutUsImg1.png" alt=""></div>
+            <div>
+              <div class="animimage">
+                <img class="photo" src="../assets/images/AboutUsImg1.png" alt="">
+              </div>
+            </div>
         </div>
 
         <div class="detailcon">
@@ -322,7 +328,6 @@
             </div>
         </div>
 
-
     </section>
 
     <section id="aboutUsFounders" class="contentCont">
@@ -353,7 +358,9 @@
 
                 </div>
 
-                <img src="../assets/images/Founders1.png" alt="">
+                <div class="animimage">
+                  <img class="photo" src="../assets/images/Founders1.png" alt="">
+                </div>
             </div>
 
             <div class="imagecard">
@@ -370,7 +377,9 @@
 
                 </div>
 
-                <img src="../assets/images/Founders2.png" alt="">
+                <div class="animimage">
+                  <img class="photo" src="../assets/images/Founders2.png" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -828,6 +837,14 @@
         </section>
     </section>
 
+    <section id="loadingSec">
+      <img id="loadingsteric" src="../assets/icons/steric-white.svg" alt="steric">
+      <div class="loading-footer">
+        <div><span class="loadingdot"></span> Web Pioneers</div>
+        <div><span id="loading-percent">0</span>%</div>
+      </div>
+    </section>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             function loadScript(src, callback) {
@@ -842,6 +859,7 @@
             var scriptsToLoad = [
                 "../scripts/global.js",
                 "../scripts/lenis.js",
+                "../scripts/imagehover.js",
                 "../scripts/animated/figmafooter.js",
                 "../scripts/pages/aboutUs.js",
                 "../scripts/hero.js",
@@ -861,7 +879,6 @@
 
             loadScriptsSequentially(0);
         });
-
     </script>
 </body>
 

@@ -35,8 +35,8 @@
           }
         }
 
-        img {
-          padding-top: 30px;
+        .animimage{
+          margin-top: 30px;
         }
       }
     }
@@ -109,10 +109,8 @@
           }
         }
 
-        & > img {
+        .animimage{
           margin-top: 15px;
-          max-width: 604px;
-          max-height: 511px;
         }
       }
     }

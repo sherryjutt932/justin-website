@@ -75,18 +75,25 @@
   line-height: 44px;
   letter-spacing: -1px;
 }
-#aboutUsAboutUs .imagecon > div img {
-  padding-top: 90px;
-  display: block;
+#aboutUsAboutUs .imagecon > div .animimage {
+  margin-top: 90px;
+  overflow: hidden;
   width: 100%;
 }
-#aboutUsAboutUs .imagecon > div:nth-child(1) img {
+#aboutUsAboutUs .imagecon > div .animimage:nth-child(1) {
   max-width: 824px;
   max-height: 990px;
 }
-#aboutUsAboutUs .imagecon > div:nth-child(2) img {
+#aboutUsAboutUs .imagecon > div .animimage:nth-child(2) {
   max-width: 824px;
   max-height: 849px;
+}
+#aboutUsAboutUs .imagecon > div .animimage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #aboutUsAboutUs .detailcon {
   width: 100%;
@@ -244,12 +251,19 @@
 #aboutUsFounders .imagecon .imagecard .rotateHoverEffect:hover > div.icon .hiddenTag {
   transform: translate3d(100%, 100%, 0);
 }
-#aboutUsFounders .imagecon .imagecard > img {
+#aboutUsFounders .imagecon .imagecard .animimage {
   margin-top: 20px;
-  display: block;
-  width: 100%;
   max-width: 800px;
   max-height: 693px;
+  width: 100%;
+  overflow: hidden;
+}
+#aboutUsFounders .imagecon .imagecard .animimage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #aboutUsSkills {
