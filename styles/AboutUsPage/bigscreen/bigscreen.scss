@@ -17,6 +17,9 @@
       display: flex;
       border-bottom: 1px solid var(--gray-c5);
 
+      .mob{display: none;}
+      .desk{display: block;}
+
       &:nth-child(2) {
         flex-direction: row-reverse;
       }

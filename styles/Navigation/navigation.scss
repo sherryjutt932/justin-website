@@ -20,6 +20,8 @@ nav {
   .logoimg {
     justify-content: left;
 
+    .desk{display: block;}
+    .mob{display: none;}
     img {
       width: 59px;
     }
@@ -601,4 +603,365 @@ nav {
       height: 30px;
     }
   }
+}
+
+@media (max-width: 750px) {
+  nav {
+    color: var(--dark);
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0%;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    min-height: 120px;
+    max-height: 120px;
+    justify-content: space-between;
+    white-space: nowrap;
+
+    .logoimg {
+      justify-content: left;
+      .desk{display: none;}
+      .mob{display: block;}
+
+      img {
+        width: 53px;
+      }
+    }
+
+    .border-bottom {
+      position: absolute;
+      border-radius: 100px;
+      width: 100%;
+      left: 0%;
+      bottom: 0;
+      border-bottom: 1px solid var(--gray-c5);
+    }
+
+    & > div {
+      flex: 1 1 0%;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-child(3) {
+        justify-content: end;
+
+        button {
+          outline: none;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .navlinkscenter {
+      display: none !important;
+    }
+
+    .line {
+      display: none;
+    }
+  }
+
+  .HeadrnavBtn {
+    width: 48px;
+    height: 48px;
+    position: relative;
+
+    #navAnimatedIcon.open{
+      position: absolute;
+    }
+
+    #mobileNavBtn {
+      position: absolute;
+      //   height:0px;
+      //   width: 0px;
+      display: flex;
+      border-radius: 24px;
+      background-color: var(--light);
+      // box-shadow: 0px 2px 10px 0px #00000020;
+      overflow: hidden;
+      z-index: 50;
+
+      transition: all 1s ease;
+
+      & > div {
+        transition: all 1s ease;
+        // width: 0px;
+        // height: 0;
+        padding: 15px 24px;
+        .mobileNav-item,
+        .mobileNav-head {
+          opacity: 0;
+          transform: scale(0);
+          transition: all 1s ease;
+          transform-origin: top left;
+        }
+
+        .mobileNav-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          h1 {
+            font-family: var(--NohemiEL);
+            color: var(--gray-cd);
+            letter-spacing: 0.1ch;
+            font-size: 24px;
+          }
+        }
+
+        .mobileNav-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 0;
+          padding-right: 10px;
+          color: var(--black);
+
+          &:active,
+          &:hover {
+            div {
+              background-color: var(--sec);
+            }
+          }
+          p {
+            cursor: pointer;
+            text-decoration: none;
+            font-family: var(--Satoshi);
+            color: var(--black);
+            font-size: 20px;
+          }
+          div {
+            background-color: var(--light);
+            width: 10px;
+            height: 10px;
+            border-radius: 30px;
+            transition: all 500ms ease;
+          }
+        }
+      }
+    }
+
+    #navAnimatedIcon {
+      width: 48px;
+      height: 48px;
+      padding: 10px;
+      aspect-ratio: 1/1;
+      z-index: 100;
+      position: absolute;
+      cursor: pointer;
+      // background-color: #fff;
+      border-radius: 100px;
+    }
+  }
+
+  .HeadrnavBtn {
+    #mobileNavBtn.initial {
+      height: 48px;
+      width: 48px;
+      top: 0;
+      right: 0;
+      & > div {
+        height: 48px;
+          width: 48px;
+      }
+    }
+
+    #mobileNavBtn.open {
+      animation: who 1s forwards;
+      top: -20px;
+      right: -10px;
+      padding: 15px 0px;
+      & > div {
+        animation: who 1s forwards;
+        .mobileNav-item,
+        .mobileNav-head {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes who {
+        0% {
+          height: 48px;
+          width: 48px;
+        }
+        100% {
+          height: 350px;
+          width: 264px;
+        }
+      }
+    }
+
+    #mobileNavBtn.close {
+      animation: whc 1s forwards;
+      top: 0;
+      right: 0;
+      & > div {
+        animation: whc 1s forwards;
+        .mobileNav-item,
+        .mobileNav-head {
+          opacity: 0;
+          transform: scale(0.2);
+          padding: 0;
+        }
+      }
+
+      @keyframes whc {
+        0% {
+          height: 350px;
+          width: 264px;
+        }
+        100% {
+          height: 48px;
+          width: 48px;
+        }
+      }
+    }
+  }
+
+  #navigationSec {
+    width: 100%;
+    height: 0vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    opacity: 0;
+    transition: height 0ms linear;
+    transition: opacity 400ms ease;
+  }
+  #navigationSec.initial {
+    opacity: 0;
+    height: 0vh;
+    background-color: #00000080;
+  }
+  #navigationSec.open {
+    animation: navigationSecAnimO 500ms ease forwards;
+
+    @keyframes navigationSecAnimO {
+      0% {
+        height: 0vh;
+      }
+      1% {
+        opacity: 0;
+        height: 100vh;
+        background-color: #00000080;
+      }
+      100% {
+        opacity: 1;
+        height: 100vh;
+        background-color: #00000080;
+      }
+    }
+  }
+  #navigationSec.close {
+    animation: navigationSecAnimC 500ms ease forwards;
+
+    @keyframes navigationSecAnimC {
+      0% {
+        height: 100vh;
+        opacity: 1;
+        background-color: #00000080;
+      }
+      99% {
+        opacity: 0;
+        height: 100vh;
+        background-color: #00000080;
+      }
+      100% {
+        height: 0vh;
+      }
+    }
+  }
+
+  #navigation {
+    display: none;
+  }
+
+  #mobileNav {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: all 800ms ease;
+    & > div {
+      transition: all 800ms ease;
+      overflow: hidden;
+      clip-path: circle(0% at 90% 9%);
+      background-color: var(--light);
+      z-index: 100;
+      position: fixed;
+      right: 20px;
+      top: 30px;
+      border-radius: 24px;
+      width: 264px;
+      height: fit-content;
+      padding: 15px 24px;
+      color: var(--dark);
+
+      .mobileNav-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          font-family: var(--NohemiEL);
+          color: var(--gray-cd);
+          letter-spacing: 0.1ch;
+          font-size: 24px;
+          margin-top: 8px;
+        }
+        button {
+          border: none;
+          outline: none;
+          background: none;
+          border-radius: 100px;
+          padding-right: 0;
+          img {
+            width: 30px;
+          }
+        }
+      }
+
+      .mobileNav-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        padding-right: 10px;
+
+        &:active,
+        &:hover {
+          div {
+            background-color: var(--sec);
+          }
+        }
+        p {
+          cursor: pointer;
+          text-decoration: none;
+          font-family: var(--Satoshi);
+          color: var(--black);
+          font-size: 20px;
+        }
+        div {
+          background-color: var(--light);
+          width: 10px;
+          height: 10px;
+          border-radius: 30px;
+          transition: all 500ms ease;
+        }
+      }
+    }
+  }
+
 }

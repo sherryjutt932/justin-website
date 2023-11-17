@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../styles/Navigation/navigation.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/bigscreen/bigscreen.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
     <link rel="stylesheet" href="../styles/skills/skills.css">
     <link rel="stylesheet" href="../styles/ideas/ideas.css">
 
@@ -34,9 +35,12 @@
         <div id="navigation">
             <header>
                 <nav>
-                    <div class="logoimg">
-                        <img src="../assets/icons/mainlogo.svg" alt="">
+                  <div class="logoimg">
+                    <div class="desk">
+                      <lottie-player src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
                     </div>
+                    <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+                  </div>
                     <div>
                         <a href="../index.html" class="nav-link non-mousetracker">
                             <div class="text">Home</div>
@@ -179,10 +183,12 @@
 
     <section id="aboutUsHeader" class="contentCont herosection">
         <nav>
-            <div class="logoimg">
-                <lottie-player src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
-                <!-- <img src="../assets/icons/mainlogo.svg" alt=""> -->
+          <div class="logoimg">
+            <div class="desk">
+              <lottie-player src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
             </div>
+            <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+          </div>
             <div class="navlinkscenter">
                 <!-- nav link -->
                 <a href="../index.html" class="nav-link non-mousetracker">
@@ -261,7 +267,8 @@
         <div class="aboutUsMain">
             <div class="frombelowanim">
                 <h1>Pioneers</h1>
-                <p>We're passionate about exploring big ideas, creating strong brands, and making a positive impact</p>
+                <p class="desk">We're passionate about exploring big ideas, creating strong brands, and making a positive impact</p>
+                <p class="mob">Our top priority is to provide exceptional support to our clients throughout their entire project journey. Our team is readily accessible to address any inquiries.</p>
             </div>
             <div class="frombelowanim">
                 <h1>About us</h1>

@@ -11,7 +11,8 @@ gsap.to("#rotateSteric", {
 });
 
 
-// -----------------about us
+if(!isMobile()){
+  // -----------------about us
 var aboutUs_AboutUs = document.querySelector("#aboutUsAboutUs").querySelectorAll(".animimage");
 
 gsap.to( aboutUs_AboutUs[0], {
@@ -55,3 +56,4 @@ gsap.to( aboutUs_Founders[1], {
     scrub:true
   }
 });
+}

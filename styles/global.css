@@ -84,6 +84,12 @@ body {
   background-color: var(--dark);
 } 
 
+@media (max-width: 750px){
+  .contentCont{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 @media (min-width: 1536px){
   .contentCont{
     padding-left: 120px;
