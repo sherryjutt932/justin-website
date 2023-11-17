@@ -24,7 +24,8 @@ if (!isMobile()) {
   ScrollTrigger.create({
     trigger: workSec,
     start: "top top",
-    // end: () => `+=${imgRef.offsetHeight}`,
+    // end:"+=2000"
+    end: () => `+=${imgRef.offsetHeight*2}`,
     scrub: true,
     pin: true,
     animation: worktimeline,
@@ -35,16 +36,17 @@ if (!isMobile()) {
       // let currentIndex = Math.round(progress * (totalItems - 1)) + 1;
       let currentIndex = 1;
       let windowsizefix = (window.innerWidth<1900)?Math.round((window.innerWidth/100)-12)/100:0;
-      console.log(progress,windowsizefix);
+      let adjust = 0.07;
+      // console.log(progress,windowsizefix);
       // document.getElementById("workcounter").innerHTML =
       //   currentIndex > 1 ? "0" + currentIndex : "01";
-      if(progress>(0.33 - (windowsizefix))){
+      if(progress>(0.33 - adjust - (windowsizefix))){
         currentIndex = 2; //flora
       }
-      if(progress> (0.61 - (windowsizefix))){
+      if(progress> (0.61 - adjust - (windowsizefix))){
         currentIndex = 3; //furniture
       }
-      if(progress> (0.89 - (windowsizefix))){
+      if(progress> (0.89 - adjust - (windowsizefix))){
         currentIndex = 4; //tavern
       }
 
@@ -104,7 +106,7 @@ if (isMobile()) {
   ScrollTrigger.create({
     trigger: imgRef,
     start: "top top",
-    end: () => `+=${imgRef.offsetHeight}`,
+    end: () => `+=${imgRef.offsetHeight*2}`,
     scrub: true,
     animation: animatedlinetimeline,
     onUpdate: (self) => {

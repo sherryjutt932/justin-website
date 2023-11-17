@@ -21,6 +21,7 @@
   --gray-cd: #CDCDCD;
   --gray-d4: #D4D4D4;
   --gray-5e: #5E5E5E;
+  --gray-da: #DADADA;
   
   --main: #EAEAEA;
   --sec:  #FF2626;
@@ -56,6 +57,24 @@ body {
   overflow-x: hidden;
 }
 
+.animimage {
+  transition: all 500ms ease;
+}
+.animimage:hover {
+  transform-origin: 50% 50%;
+  transform: scale(1.1);
+}
+
+.contentCont{
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 100%;
+}
+.themeheading{
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
 .themetitle{
   font-size: 16px;
   font-family: var(--Satoshi);
@@ -68,7 +87,18 @@ body {
   border-radius: 30px;
   background-color: var(--dark);
 } 
+
 @media (min-width: 1536px){
+  .contentCont{
+    padding-left: 120px;
+    padding-right: 120px;
+    width: 100%;
+  }
+  .themeheading{
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+  }
 .themedot{
   width: 10px;
   height: 10px;
@@ -78,6 +108,7 @@ body {
   font-size: 20px;
   font-family: var(--Satoshi);
 }
+
 }
 
 #mousefollower{

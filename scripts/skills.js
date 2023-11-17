@@ -115,7 +115,7 @@ const animateskillMarquee = () => {
       [labelsRef.children[0]],3,
       //
       {
-        y:process_scrollDir === "down" ? -20 : 20,
+        y:ScrollDirection === "down" ? -25 : 25,
       }
       ,"a"
     )
@@ -123,14 +123,14 @@ const animateskillMarquee = () => {
       [labelsRef.children[3]],3,
       //
       {
-        y:process_scrollDir === "down" ? -25 : 25,
+        y:ScrollDirection === "down" ? -30 : 30,
       }
       ,"a"
     ).to(
       [labelsRef.children[1],labelsRef.children[2]],4,
       //
       {
-        y:process_scrollDir === "down" ? -15 : 15,
+        y:ScrollDirection === "down" ? -20 : 20,
       }
       ,"a"
     )

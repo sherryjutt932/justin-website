@@ -20,6 +20,8 @@
   <link href="./styles/feedback/feedback.css" rel="stylesheet" />
   <link href="./styles/ideas/ideas.css" rel="stylesheet" />
 
+  <!-- packages -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <!-- gsap -->
   <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
@@ -37,7 +39,7 @@
       <header>
         <nav>
           <div class="logoimg">
-            <img src="./assets/icons/mainlogo.svg" alt="">
+            <lottie-player src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
           </div>
           <div>
             <!-- nav link -->
@@ -254,7 +256,7 @@
       <header>
         <nav>
           <div class="logoimg">
-            <img src="./assets/icons/mainlogo.svg" alt="">
+            <lottie-player src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
           </div>
           <div class="navlinkscenter">
             <!-- nav link -->
@@ -396,7 +398,7 @@
               <div data-theme="light" data-pos="lt" class="label">Work</div>
               <div data-theme="dark" data-pos="rt" class="label">about</div>
               <div data-theme="dark" data-pos="lb" class="label">contact</div>
-              <div data-theme="dark" data-pos="rb" class="label">
+              <div data-theme="light" data-pos="rb" class="label">
                 discover
               </div>
             </div>
@@ -456,7 +458,7 @@
       <header>
         <nav>
           <div class="logoimg">
-            <img src="./assets/icons/mainlogo.svg" alt="">
+            <lottie-player src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
           </div>
           <div class="navlinkscenter">
             <!-- nav link -->
@@ -750,10 +752,10 @@
       
                       <div>
                         <div id="Btnfirst" class="Btnfirst">
-                          View more
+                          View details
                         </div>
                         <div id="Btnsecond" class="Btnsecond">
-                          View more
+                          View details
                         </div>
                       </div>
       
@@ -826,7 +828,7 @@
 
                     <div>
                       <div class="Btnfirst">
-                        View more
+                        View details
                       </div>
                     </div>
 
@@ -872,7 +874,7 @@
 
                     <div>
                       <div class="Btnfirst">
-                        View more
+                        View details
                       </div>
                     </div>
 
@@ -918,7 +920,7 @@
 
                     <div>
                       <div class="Btnfirst">
-                        View more
+                        View details
                       </div>
                     </div>
 
@@ -963,7 +965,7 @@
 
                     <div>
                       <div class="Btnfirst">
-                        View more
+                        View details
                       </div>
                     </div>
 
@@ -1540,7 +1542,6 @@
     </div>
     <div class="spacer"></div>
   </section>
-
   
   <section id="footer">
     <section id="ideasSec">
@@ -1609,7 +1610,8 @@
                 <img class="visibleTag" src="./assets/icons/link.svg" alt="">
                 <img class="hiddenTag"  src="./assets/icons/link.svg" alt="">
               </div>
-            </a><a href="/" class="LinkhoverGroup">
+            </a>
+            <a href="/" class="LinkhoverGroup">
               <div>
                 <div class="visibleTag">About</div>
               <div class="hiddenTag" >About</div>
@@ -1834,59 +1836,13 @@
     </section>
   </section>
 
-  <script>
-    function setupAnimation(containerId, animationPath) {
-      const container = document.getElementById(containerId);
-
-      return lottie.loadAnimation({
-        container: container,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: animationPath,
-      });
-    }
-
-
-    const apath_crafting = './assets/Animation/ABOUT US SECTION/Crafting/Crafting.json';
-    const apath_products = './assets/Animation/ABOUT US SECTION/Digital Production/DigitalProduction.json';
-    const apath_care = './assets/Animation/ABOUT US SECTION/Care/Care.json';
-    const apath_portfolio = './assets/Animation/ABOUT US SECTION/portfolio/portfolio.json';
-  
-    const apath_mob_crafting = './assets/Animation/ABOUT US SECTION/Crafting/Crafting.json';
-    const apath_mob_products = './assets/Animation/ABOUT US SECTION/Digital Production/DigitalProduction.json';
-    const apath_mob_care = './assets/Animation/ABOUT US SECTION/Care/Care.json';
-    const apath_mob_portfolio = './assets/Animation/ABOUT US SECTION/portfolio/portfolio.json';
-
-    const aicon_crafting = 'aicon-crafting';
-    const aicon_products = 'aicon-products';
-    const aicon_care = 'aicon-care';
-    const aicon_portfolio = 'aicon-portfolio';
-
-    const aicon_mb_crafting = 'aicon-mb-crafting';
-    const aicon_mb_products = 'aicon-mb-products';
-    const aicon_mb_care = 'aicon-mb-care';
-    const aicon_mb_portfolio = 'aicon-mb-portfolio';
-
-    setupAnimation(aicon_crafting, apath_crafting);
-    setupAnimation(aicon_products, apath_products);
-    setupAnimation(aicon_care, apath_care);
-    setupAnimation(aicon_portfolio, apath_portfolio);
-
-    setupAnimation(aicon_mb_crafting, apath_mob_crafting);
-    setupAnimation(aicon_mb_products, apath_mob_products);
-    setupAnimation(aicon_mb_care, apath_mob_care);
-    setupAnimation(aicon_mb_portfolio, apath_mob_portfolio);
-
-  </script>
-
-<section id="loadingSec">
-  <img id="loadingsteric" src="./assets/icons/steric-white.svg" alt="steric">
-  <div class="loading-footer">
-    <div><span class="loadingdot"></span> Web Pioneers</div>
-    <div><span id="loading-percent">0</span>%</div>
-  </div>
-</section>
+  <section id="loadingSec">
+    <img id="loadingsteric" src="./assets/icons/steric-white.svg" alt="steric">
+    <div class="loading-footer">
+      <div><span class="loadingdot"></span> Web Pioneers</div>
+      <div><span id="loading-percent">0</span>%</div>
+    </div>
+  </section>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -1934,33 +1890,6 @@
     });
 
   </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Code to run after the DOM is fully loaded
-
-    // Function to reload the page
-    function reloadPage() {
-      location.reload();
-    }
-
-    // Store the initial window width
-    var initialWidth = window.innerWidth;
-
-    // Attach the reload function to the window's resize event
-    window.addEventListener("resize", function () {
-      // Check if the width has changed
-      if (window.innerWidth !== initialWidth) {
-        // Debounce the reload to avoid excessive reloading
-        clearTimeout(window.resizeTimer);
-        window.resizeTimer = setTimeout(function () {
-          reloadPage();
-        }, 250);
-      }
-    });
-  });
-</script>
-
 
 
   <!-- <script src="./scripts/boxes.js"></script> -->
