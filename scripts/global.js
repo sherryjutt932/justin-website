@@ -237,7 +237,7 @@ Array.from(frombelowanim).forEach(element => {
     delay: 0,
     scrollTrigger: {
       trigger: element,
-      start:"top 70%",
+      start:"top 80%",
       toggleActions: "restart none none reverse"
     }
   });
