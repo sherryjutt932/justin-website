@@ -183,17 +183,15 @@
                         align-items: center;
                         aspect-ratio: 1.56;
                         margin-bottom: 30px;
-                        &>div{
-                            width: 145px;
-                            aspect-ratio: 1;
-                            border-radius: 100%;
-                            background-color: var(--light);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+
+                        &:hover > div.iconcon {
+                          width: 115px;
+                        }
+
+                        &>div.iconcon{
+                            width: 102px;
                             img{
-                                width: 70px;
-                                aspect-ratio: 1;
+                                width: 49px;
                             }
                         }
                     }

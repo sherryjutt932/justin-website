@@ -136,7 +136,12 @@
                  
                 .imageCon{
                     margin-bottom: 25px;
-                    &>div{
+                    
+                    &:hover > div.iconcon {
+                      width: 125px;
+                    }
+
+                    &>div.iconcon{
                         width: 110px;
                         img{
                             width: 54px;
