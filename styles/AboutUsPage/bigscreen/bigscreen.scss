@@ -48,6 +48,7 @@
   }
 }
 
+#unseenStories,
 #aboutUsAboutUs {
   width: 100%;
   position: relative;
@@ -155,14 +156,14 @@
         padding-bottom: 30px;
         h1{
             color: var(--dark);
-            font-family: var(--NohemiL);
+            font-family: var(--Satoshi);
             font-size: 80px;
             font-style: normal;
             font-weight: 300;
             line-height: 95px; /* 118.75% */
             span {
                 color: var(--sec);
-                font-size: 80px;
+                font-size: 55px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 95px;

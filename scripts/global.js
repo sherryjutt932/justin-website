@@ -244,54 +244,57 @@ Array.from(frombelowanim).forEach(element => {
 });
 
 //  -------------------------loading
-const calculatedXValue =
-  window.innerWidth + document.getElementById("loadingsteric").offsetWidth + 40;
-gsap.set("#loadingSec", {
-  background: "#FF2626",
-});
-
-gsap.timeline()
-  .to(
-    ".loading-footer",
-    1,
-    {
-      opacity: 1,
-    },
-    "b"
-  )
-  .to(
-    "#loadingsteric",
-    4,
-    {
-      x: calculatedXValue + "px",
-      rotate: 600,
-      ease: "power2.out",
-    },
-    "a"
-  )
-  .to(
-    "#loading-percent",
-    3,
-    {
-      textContent: "100",
-      roundProps: "textContent",
-    },
-    "a"
-  )
-  .to(
-    "#loadingSec",
-    0.9,
-    {
-      borderRadius: "40px",
-      transform: () =>
-        !isMobile()
-          ? "scale3d(0.9,0.9,1) translateY(-130%)"
-          : "scale3d(0.95,0.95,1) translateY(-130%)",
-    },
-    "a+=3.4"
-  )
-  .to("#loadingSec", 0.2, {
-    zIndex: -300,
-    display: "none",
-    opacity: 0,
+if((document.getElementById("loadingsteric"))){
+  var calculatedXValue =
+    window.innerWidth + document.getElementById("loadingsteric").offsetWidth + 40;
+  
+  gsap.set("#loadingSec", {
+    background: "#FF2626",
   });
+  
+  gsap.timeline()
+    .to(
+      ".loading-footer",
+      1,
+      {
+        opacity: 1,
+      },
+      "b"
+    )
+    .to(
+      "#loadingsteric",
+      4,
+      {
+        x: calculatedXValue + "px",
+        rotate: 600,
+        ease: "power2.out",
+      },
+      "a"
+    )
+    .to(
+      "#loading-percent",
+      3,
+      {
+        textContent: "100",
+        roundProps: "textContent",
+      },
+      "a"
+    )
+    .to(
+      "#loadingSec",
+      0.9,
+      {
+        borderRadius: "40px",
+        transform: () =>
+          !isMobile()
+            ? "scale3d(0.9,0.9,1) translateY(-130%)"
+            : "scale3d(0.95,0.95,1) translateY(-130%)",
+      },
+      "a+=3.4"
+    )
+    .to("#loadingSec", 0.2, {
+      zIndex: -300,
+      display: "none",
+      opacity: 0,
+    });
+}

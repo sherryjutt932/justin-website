@@ -33,6 +33,7 @@
         }
       }
     
+      #unseenStories,
       #aboutUsAboutUs {
         flex-direction: column;
       
@@ -97,7 +98,7 @@
                 font-size: 36px;
                 line-height: 41px; /* 118.75% */
                 span {
-                    font-size: 36px;
+                    font-size: 24px;
                     line-height: 41px; /* 118.75% */
                   }
             }

@@ -1,0 +1,439 @@
+#unseenStories {
+  .heading {
+    padding: 120px 0;
+  }
+  ul.outer {
+    display: none;
+  }
+
+
+  .unseenimages {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+
+    & > div {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      font-family: var(--Satoshi);
+      gap: 146px;
+
+      ul {
+        color: var(--dark);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 36px; /* 150% */
+        letter-spacing: -0.3px;
+        list-style: disc;
+        li:nth-child(1) {
+          padding-bottom: 70px;
+          max-width: 31ch;
+        }
+        li:nth-child(2) {
+          max-width: 27ch;
+        }
+      }
+
+      &:nth-child(2) {
+        align-items: center;
+      }
+      .round {
+        border-radius: 500px;
+      }
+      .sm {
+        width: 82.77%;
+      }
+      .md {
+        width: 86.53%;
+      }
+      .lg {
+        width: 100%;
+      }
+
+      .animimage {
+        overflow: hidden;
+        position: relative;
+        .stickybutton {
+          transition: opacity 0ms ease;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          opacity: 1;
+          transition-delay: 0ms;
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-family: var(--SatoshiR);
+          width: 132px;
+          height: 132px;
+
+          & > a {
+            cursor: pointer;
+            width: fit-content;
+            text-decoration: none;
+            #magneticBtn {
+              margin: 0px;
+              padding: 0px;
+              display: flex;
+              border-radius: 50%;
+
+              & > div {
+                overflow: hidden;
+                position: relative;
+                width: 132px;
+                font-size: 22px;
+
+                aspect-ratio: 1/1;
+                background-color: var(--sec);
+                border-radius: 200px;
+                display: flex;
+                white-space: nowrap;
+                justify-content: center;
+                align-items: center;
+                color: var(--light);
+                text-align: center;
+
+                .Btnfirst {
+                  width: 132px;
+                  height: fit-content;
+                }
+                .Btnsecond {
+                  width: 132px;
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  left: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .unseenimagesMob {
+    display: none;
+  }
+}
+
+#weProvide {
+  padding-bottom: 0px;
+  height: fit-content;
+  position: relative;
+  margin-bottom: -100vh;
+
+  .spacer {
+    height: 100vh;
+  }
+
+  .weProvideWrapper {
+    position: sticky;
+    top: 0%;
+    height: fit-content;
+
+    .heading {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+  }
+}
+
+#weProvide,
+#unseenStories {
+  .heading {
+    h1 {
+      color: var(--dark);
+      font-family: var(--Satoshi);
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 95px; /* 118.75% */
+    }
+  }
+}
+
+@media (max-width: 1536px) {
+  #unseenStories {
+    .heading {
+      padding: 100px 0;
+      padding-top: 60px;
+    }
+
+    ul.outer {
+      display: none;
+    }
+
+    .unseenimagesMob {
+      display: none;
+    }
+
+    .unseenimages {
+      & > div {
+        gap: 120px;
+
+        ul {
+          font-size: 18px;
+          line-height: 27px; /* 150% */
+          li:nth-child(1) {
+            padding-bottom: 40px;
+          }
+        }
+
+        .animimage {
+          .stickybutton {
+            width: 96px;
+            height: 96px;
+            & > a {
+              #magneticBtn {
+                // margin: -30px;
+                // padding: 30px;
+
+                & > div {
+                  width: 96px;
+                  font-size: 16px;
+
+                  .Btnfirst {
+                    width: 96px;
+                  }
+                  .Btnsecond {
+                    width: 96px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #weProvide {
+    .weProvideWrapper {
+      .heading {
+        padding: 100px 0;
+      }
+    }
+  }
+
+  #weProvide,
+  #unseenStories {
+    .heading {
+      h1 {
+        font-size: 60px;
+        line-height: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  #unseenStories {
+    display: block;
+    .heading {
+      padding: 55px 0;
+    }
+
+    ul {
+      color: var(--dark);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: -0.3px;
+      list-style: disc;
+      padding: 10px 0;
+    }
+
+    ul.outer {
+      display: block;
+      padding-left: 20px;
+    }
+    ul.inner {
+      padding-top: 0;
+      padding-bottom: 40px;
+    }
+
+    .unseenimagesMob {
+      padding-top: 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+        
+      .double {
+        display: flex;
+        font-family: var(--Satoshi);
+        gap: 16px;
+        &>div {
+          flex: 1 1 50%;
+        }
+      }
+      .square{
+        aspect-ratio: 1;
+        object-fit: cover;
+        img{
+          aspect-ratio: 1;
+        object-fit: cover;
+        }
+      }
+      .round {
+        border-radius: 500px;
+      }
+      .sm {
+        width: 82.77%;
+      }
+      .md {
+        width: 86.53%;
+      }
+      .lg {
+        width: 100%;
+      }
+
+      .animimage {
+        overflow: hidden;
+        position: relative;
+        .stickybutton {
+          transition: opacity 0ms ease;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          opacity: 1;
+          transition-delay: 0ms;
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-family: var(--SatoshiR);
+          width: 132px;
+          height: 132px;
+
+          & > a {
+            cursor: pointer;
+            width: fit-content;
+            text-decoration: none;
+            #magneticBtn {
+              margin: 0px;
+              padding: 0px;
+              display: flex;
+              border-radius: 50%;
+
+              & > div {
+                overflow: hidden;
+                position: relative;
+                width: 132px;
+                font-size: 22px;
+
+                aspect-ratio: 1/1;
+                background-color: var(--sec);
+                border-radius: 200px;
+                display: flex;
+                white-space: nowrap;
+                justify-content: center;
+                align-items: center;
+                color: var(--light);
+                text-align: center;
+
+                .Btnfirst {
+                  width: 132px;
+                  height: fit-content;
+                }
+                .Btnsecond {
+                  width: 132px;
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  left: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .unseenimages {
+      display: none;
+    }
+  }
+
+  #weProvide {
+    .weProvideWrapper {
+      .heading {
+        padding-top: 50px;
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  #weProvide,
+  #unseenStories {
+    .heading {
+      h1 {
+        font-size: 36px;
+        line-height: 41px; /* 118.75% */
+      }
+    }
+  }
+
+  .stickybutton {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & > a {
+      cursor: pointer;
+      width: fit-content;
+      text-decoration: none;
+
+      .magneticBtn {
+        margin: -30px;
+        padding: 30px;
+        display: inline-block;
+        border-radius: 50%;
+
+        & > div {
+          overflow: hidden;
+          position: relative;
+          width: 96px;
+          aspect-ratio: 1/1;
+          background-color: var(--sec);
+          border-radius: 200px;
+          display: flex;
+          white-space: nowrap;
+          justify-content: center;
+          font-size: 16px;
+          align-items: center;
+          color: var(--light);
+          text-align: center;
+          font-family: var(--Satoshi);
+          .Btnfirst {
+            width: 96px;
+            height: fit-content;
+          }
+        }
+      }
+    }
+  }
+}

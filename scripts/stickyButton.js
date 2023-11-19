@@ -1,4 +1,5 @@
-var magnets = document.querySelectorAll('#magneticBtn')
+if(!isMobile()){
+  var magnets = document.querySelectorAll('#magneticBtn')
 var strength = 50
 
 magnets.forEach( (magnet) => {
@@ -76,3 +77,5 @@ btnMarquee.addEventListener("touchstart", () => {
 btnMarquee.addEventListener("touchend", () => {
   isHoveredBtn = false;
 });
+
+}
