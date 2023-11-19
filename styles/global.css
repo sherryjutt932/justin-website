@@ -119,23 +119,42 @@ body {
   top: -20px;
   pointer-events: none;
   width: 16px;
-  aspect-ratio: 1/1;
+  height: 16px;
+  aspect-ratio: 1;
   background-color: var(--sec);
   border-radius: 100px;
   z-index: 200;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform-origin: 50% 50%;
+
 }
-#mousefollower img{
+#mousefollower #mousefollower-rightarrow{
   display: none;
   width: 18px;
+  transform-origin: 50% 50%;
   transform: scale(0);
 }
+#mousefollower-stickybutton{
+  display: none;
+  width: 132px;
+  height: 132px;
+  transform-origin: 50% 50%;
+  transform: scale(0);
+  overflow: hidden;
+}
+
 @media (max-width: 750px){
   #mousefollower{
     display: none;
   }
+}
+@media (max-width: 1536px){
+#mousefollower-stickybutton{
+  width: 96px;
+  height: 96px;
+}
 }
 
 html.lenis {

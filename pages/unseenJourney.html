@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
     <link rel="stylesheet" href="../styles/skills/skills.css">
     <link rel="stylesheet" href="../styles/ideas/ideas.css">
+    <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
 
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -29,6 +30,24 @@
 <body>
     <div id="mousefollower">
         <img id="mousefollower-rightarrow" src="../assets/icons/navbarContentCardArrow.svg" alt="">
+        <div id="mousefollower-stickybutton" class="stickybutton non-mousetracker">
+          <a href="/">
+            <div id="magneticBtn">
+              <div class="my-button">
+
+                <div>
+                  <div id="Btnfirst" class="Btnfirst">
+                    View details
+                  </div>
+                  <div id="Btnsecond" class="Btnsecond">
+                    View details
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </a>
+        </div>
     </div>
 
     <section id="navigationSec" class="initial contentCont">
@@ -292,36 +311,41 @@
 
       <div class="unseenimages">
         <div>
-          <div class="animimage round sm"><img class="photo" src="../assets/images/unseenjourney/pioneers.png" alt=""></div>
-          <div class="animimage md"><img class="photo" src="../assets/images/unseenjourney/shirt.png" alt=""></div>
-          <div class="animimage lg"><img class="photo" src="../assets/images/unseenjourney/cat.png" alt=""></div>
+          <div class="animimage round sm followSTB">
+            <a href="/">
+              <img class="photo" src="../assets/images/unseenjourney/pioneers.png" alt="">
+            </a>
+          </div>
+          <div class="animimage md followSTB">
+            <a href="/">
+              <img class="photo" src="../assets/images/unseenjourney/shirt.png" alt="">
+            </a>
+          </div>
+          <div class="animimage lg followSTB">
+            <a href="/">
+              <img class="photo" src="../assets/images/unseenjourney/cat.png" alt="">
+            </a>
+          </div>
         </div>
         <div>
           <ul>
             <li>Welcome to our blog, where we celebrate the remarkable power of the creator spirit. At web Pioneers, we firmly believe that within each of us lies an innate ability to imagine, innovate, and bring forth something truly extraordinary.</li>
             <li>Innovation lies at the heart of the creator spirit. It propels us to question the status quo.</li>
           </ul>
-          <div class="animimage lg"><img class="photo" src="../assets/images/unseenjourney/page.png" alt=""></div>
-          <div class="animimage round sm"><img class="photo" src="../assets/images/unseenjourney/Ellipse.png" alt=""></div>
-          <div class="animimage md"><img class="photo" src="../assets/images/unseenjourney/mockup.png" alt="">
-            <div class="stickybutton non-mousetracker">
-              <a href="/">
-                <div id="magneticBtn">
-                  <div class="my-button">
-    
-                    <div>
-                      <div id="Btnfirst" class="Btnfirst">
-                        View details
-                      </div>
-                      <div id="Btnsecond" class="Btnsecond">
-                        View details
-                      </div>
-                    </div>
-    
-                  </div>
-                </div>
-              </a>
-            </div>
+          <div class="animimage lg followSTB">
+            <a href="/">
+              <img class="photo" src="../assets/images/unseenjourney/page.png" alt="">
+            </a>
+          </div>
+          <div class="animimage round sm followSTB">
+            <a href="/">
+              <img class="photo" src="../assets/images/unseenjourney/Ellipse.png" alt="">
+            </a>
+          </div>
+          <div class="animimage md followSTB">
+            <a href="/">
+              <img class="photo" src="../assets/images/unseenjourney/mockup.png" alt="">
+            </a>
           </div>
         </div>
       </div>
@@ -717,7 +741,7 @@
                 "../scripts/pages/unseenjourney.js",
                 "../scripts/hero.js",
                 "../scripts/ideas.js",
-                "../scripts/stickyButton.js",
+                "../scripts/mousefollower_stickybutton.js",
             ];
 
             // Load each script one by one

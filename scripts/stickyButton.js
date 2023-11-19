@@ -21,15 +21,12 @@ function moveMagnet(event) {
     ease: Power4.easeOut
   })
 
-  //magnetButton.style.transform = 'translate(' + (((( event.clientX - bounding.left)/(magnetButton.offsetWidth))) - 0.5) * strength + 'px,'+ (((( event.clientY - bounding.top)/(magnetButton.offsetHeight))) - 0.5) * strength + 'px)';
+  
 }
 
-
-
-const btnMarquee = document.getElementById('magneticBtn');
-
-const firstBtn = document.getElementById('Btnfirst');
-const secondBtn = document.getElementById('Btnsecond');
+var btnMarquee = document.getElementById('magneticBtn');
+var firstBtn = document.getElementById('Btnfirst');
+var secondBtn = document.getElementById('Btnsecond');
 
 let xPercentBtn = 0;
 let directionBtn = "left";
