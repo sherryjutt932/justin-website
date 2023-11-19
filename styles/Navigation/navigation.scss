@@ -22,8 +22,8 @@ nav {
 
     .desk{display: block;}
     .mob{display: none;}
-    img {
-      width: 59px;
+    .logoanim, img {
+      height: 59px;
     }
   }
 
@@ -585,8 +585,8 @@ nav {
     }
 
     .logoimg {
-      img {
-        width: 73px;
+      .logoanim, img {
+        height: 73px;
       }
     }
 
@@ -626,8 +626,8 @@ nav {
       .desk{display: none;}
       .mob{display: block;}
 
-      img {
-        width: 53px;
+      .logoanim, img {
+        height: 53px;
       }
     }
 

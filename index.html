@@ -28,6 +28,7 @@
   <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
   <title>Justin Web</title>
+
 </head>
 
 <body>
@@ -41,7 +42,7 @@
         <nav>
           <div class="logoimg">
             <div class="desk">
-              <lottie-player src="./assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
+              <lottie-player class="logoanim" src="./assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
             </div>
             <img class="mob" src="./assets/icons/mainlogo.svg" alt="">
           </div>
@@ -261,7 +262,7 @@
         <nav>
           <div class="logoimg">
             <div class="desk">
-              <lottie-player src="./assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
+              <lottie-player class="logoanim" src="./assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
             </div>
             <img class="mob" src="./assets/icons/mainlogo.svg" alt="">
           </div>
@@ -466,7 +467,7 @@
         <nav>
           <div class="logoimg">
             <div class="desk">
-              <lottie-player src="./assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V2.json" hover></lottie-player>
+              <lottie-player class="logoanim" src="./assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
             </div>
             <img class="mob" src="./assets/icons/mainlogo.svg" alt="">
           </div>
@@ -1858,6 +1859,26 @@
     document.addEventListener("DOMContentLoaded", function () {
       // Code to run after the DOM is fully loaded
 
+    // Function to reload the page
+  function reloadPage() {
+    location.reload();
+  }
+
+  // Store the initial window width
+  var initialWidth = window.innerWidth;
+
+  // Attach the reload function to the window's resize event
+  window.addEventListener("resize", function () {
+    // Check if the width has changed
+    if (window.innerWidth !== initialWidth) {
+      // Debounce the reload to avoid excessive reloading
+      clearTimeout(window.resizeTimer);
+      window.resizeTimer = setTimeout(function () {
+        reloadPage();
+      }, 250);
+    }
+  });
+  
       // Load your scripts dynamically
       function loadScript(src, callback) {
         var script = document.createElement('script');

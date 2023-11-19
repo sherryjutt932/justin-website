@@ -214,10 +214,10 @@
       .round {
         border-radius: 500px;
         overflow: hidden;
-        a{
+        &>a{
           border-radius: 500px;
           overflow: hidden;
-          img{
+          &>img{
             overflow:hidden;
             border-radius: 500px;
           }

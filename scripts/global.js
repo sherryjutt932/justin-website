@@ -188,29 +188,45 @@ navigation_cards_Array.forEach(function (card) {
 });
 }
 
+// -------------logo animation
+const allLogoEle = document.getElementsByClassName('logoanim');
+
+    Array.from(allLogoEle).forEach(logoele => {
+      // Listen for mouseenter event (hover)
+      logoele.addEventListener('mouseenter', () => {
+        logoele.setDirection(1);
+        logoele.play(); // Play the animation
+      });
+
+      logoele.addEventListener('mouseleave', () => {
+        logoele.setDirection(-1); // Set animation direction to reverse
+        logoele.play(); // Play the animation in reverse
+      });
+    });
+
 // -----------------------page reload on resize
 document.addEventListener("DOMContentLoaded", function () {
   // Code to run after the DOM is fully loaded
 
-  // Function to reload the page
-  function reloadPage() {
-    location.reload();
-  }
+  // // Function to reload the page
+  // function reloadPage() {
+  //   location.reload();
+  // }
 
-  // Store the initial window width
-  var initialWidth = window.innerWidth;
+  // // Store the initial window width
+  // var initialWidth = window.innerWidth;
 
-  // Attach the reload function to the window's resize event
-  window.addEventListener("resize", function () {
-    // Check if the width has changed
-    if (window.innerWidth !== initialWidth) {
-      // Debounce the reload to avoid excessive reloading
-      clearTimeout(window.resizeTimer);
-      window.resizeTimer = setTimeout(function () {
-        reloadPage();
-      }, 250);
-    }
-  });
+  // // Attach the reload function to the window's resize event
+  // window.addEventListener("resize", function () {
+  //   // Check if the width has changed
+  //   if (window.innerWidth !== initialWidth) {
+  //     // Debounce the reload to avoid excessive reloading
+  //     clearTimeout(window.resizeTimer);
+  //     window.resizeTimer = setTimeout(function () {
+  //       reloadPage();
+  //     }, 250);
+  //   }
+  // });
 });
 
 //---------------scroll dir

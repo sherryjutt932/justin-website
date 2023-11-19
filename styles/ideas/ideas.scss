@@ -172,7 +172,7 @@
             // m14:text-[54px]
             display: flex;
             flex-wrap: nowrap;
-            font-family: var(--NohemiL);
+            font-family: var(--NohemiL) !important;
 
             #idea-marquee {
                 flex: 1 1 0%;
@@ -437,7 +437,7 @@
                 line-height: 80px;
                 display: flex;
                 flex-wrap: nowrap;
-                font-family: var(--Nohemi);
+                font-family: var(--NohemiL);
 
                 #idea-marquee {
                     flex: 1 1 0%;

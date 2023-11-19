@@ -14,7 +14,7 @@ function handleImageEnter(e) {
 
 // Function for mouse leave
 function handleImageLeave(e) {
-  gsap.to(e.currentTarget.querySelector('.photo'), 1, {
+  gsap.to(e.currentTarget.querySelector('.photo'), .5, {
       scale: 1,
       ease: "ease",
     });

@@ -7,15 +7,13 @@ let xPercentBtn = 0;
 let directionBtn = "left";
 let speedBtn = 12;
 let isHoveredBtn = false;
-var btnSize = window.innerWidth > 1536 ? 132 : 96;
-
 // Add click event listener to each card
 Array.from(follow_STB).forEach(function (card) {
   card.addEventListener("mouseenter", function () {
     let mousefollower_stickybutton = mousefollower.querySelector(
       "#mousefollower-stickybutton"
     );
-    if (mousefollower_stickybutton) {
+    if (mousefollower_stickybutton && !isHoveredBtn) {
       mousefollower_stickybutton.style.display = "block";
       gsap
         .timeline()
@@ -23,18 +21,17 @@ Array.from(follow_STB).forEach(function (card) {
           mousefollower,
           0.2,
           {
-            width: btnSize,
-            height: btnSize,
-          },
-          "a"
+            width: window.innerWidth > 1536 ? 132 : 96,
+            height: window.innerWidth > 1536 ? 132 : 96,
+          }
         )
         .to(
           mousefollower_stickybutton,
-          0.2,
+          0,
           {
             scale: 1,
           },
-          "a"
+          "-=0.08"
         );
 
         isHoveredBtn = true;
@@ -45,10 +42,8 @@ Array.from(follow_STB).forEach(function (card) {
     let mousefollower_stickybutton = mousefollower.querySelector(
       "#mousefollower-stickybutton"
     );
-    if (true) {
+    if (isHoveredBtn) {
       isHoveredBtn = false;
-      mousefollower_stickybutton.style.display = "none";
-
       gsap
         .timeline()
         .to(
@@ -56,12 +51,15 @@ Array.from(follow_STB).forEach(function (card) {
           0,
           {
             scale: 0,
+            onComplete: () => {
+                mousefollower_stickybutton.style.display = "none";
+            },
           },
           "a"
         )
         .to(
           mousefollower,
-          0,
+          0.2,
           {
             width: 16,
             height: 16,
