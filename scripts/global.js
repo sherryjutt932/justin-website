@@ -156,6 +156,7 @@ navigation_cards_Array.forEach(function (card) {
 
     gsap.to(mousefollower,0.2, {
       width: 40,
+      height: 40,
     });
 
     let mousefollower_rightarrow = mousefollower.querySelector(
@@ -171,6 +172,7 @@ navigation_cards_Array.forEach(function (card) {
   card.addEventListener("mouseleave", function () {
     gsap.to(mousefollower, 0.2,{
       width: 16,
+      height: 16,
     });
 
     let mousefollower_rightarrow = mousefollower.querySelector(
