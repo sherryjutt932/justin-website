@@ -35,10 +35,10 @@
 // });
 
 
-const apath_clear_demo = './assets/Animation/Clear path to your peoject/Book A Demo/Book_a_Demo.json';
-    const apath_clear_design = './assets/Animation/Clear path to your peoject/Get your designs/GetYourDesigns.json';
-    const apath_clear_request = './assets/Animation/Clear path to your peoject/Subscribe_And_Request/Subscribe_And_Request.json';
-    const apath_clear_revision = './assets/Animation/Clear path to your peoject/Unlimited_Revisions/unlimited_Revisions.json';
+const apath_clear_demo = '../assets/Animation/Clear path to your peoject/Book A Demo/Book_a_Demo.json';
+    const apath_clear_design = '../assets/Animation/Clear path to your peoject/Get your designs/GetYourDesigns.json';
+    const apath_clear_request = '../assets/Animation/Clear path to your peoject/Subscribe_And_Request/Subscribe_And_Request.json';
+    const apath_clear_revision = '../assets/Animation/Clear path to your peoject/Unlimited_Revisions/unlimited_Revisions.json';
 
     const aicon_clear_demo = 'aicon-demo';
     const aicon_clear_design = 'aicon-design';

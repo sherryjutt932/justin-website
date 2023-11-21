@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI UX</title>
+    <link href="../styles/global.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/Navigation/navigation.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/bigscreen/bigscreen.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
+    <link rel="stylesheet" href="../styles/UnseenJourneyPage/UnseenJourneyPage.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
+    <link rel="stylesheet" href="../styles/skills/skills.css">
+    <link rel="stylesheet" href="../styles/ideas/ideas.css">
+    <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
+    <link href="../styles/boxes/boxes.css" rel="stylesheet" />
+    <link href="../styles/process/process.css" rel="stylesheet" />
+    <link href="../styles/perks/perks.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/UIUX/UIUX.css">
+
+    <!-- packages -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- gsap -->
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+</head>
+
+<body>
+    <div id="mousefollower">
+        <img id="mousefollower-rightarrow" src="../assets/icons/navbarContentCardArrow.svg" alt="">
+        <div id="mousefollower-stickybutton" class="stickybutton non-mousetracker">
+            <a href="/">
+                <div id="magneticBtn">
+                    <div class="my-button">
+
+                        <div>
+                            <div id="Btnfirst" class="Btnfirst">
+                                View details
+                            </div>
+                            <div id="Btnsecond" class="Btnsecond">
+                                View details
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <section id="navigationSec" class="initial contentCont">
+        <div id="navigation">
+            <header>
+                <nav>
+                    <div class="logoimg">
+                        <div class="desk">
+                            <lottie-player class="logoanim"
+                                src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                        </div>
+                        <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+                    </div>
+                    <div>
+                        <a href="../index.html" class="nav-link non-mousetracker">
+                            <div class="text">Home</div>
+                            <div class="textbg">Home</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Portfolio</div>
+                            <div class="textbg">Portfolio</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
+                            <div class="text">About Us</div>
+                            <div class="textbg">About Us</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Pricing</div>
+                            <div class="textbg">Pricing</div>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="line"></div>
+                        <!-- nav link -->
+                        <div class="nav-link non-mousetracker">
+                            <div class="text">Login</div>
+                            <div class="textbg">Login</div>
+                        </div>
+
+                        <div id="navbtnplacer">
+                        </div>
+                    </div>
+
+                    <div class="border-bottom"></div>
+                </nav>
+
+                <div class="content">
+                    <div>
+                        <a href="/" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Portfolio</div>
+                                <div class="textbg">Portfolio</div>
+                            </div>
+                        </a>
+                        <a href="../pages/unseenJourney.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Stories</div>
+                                <div class="textbg">Stories</div>
+                            </div>
+                        </a>
+                        <div class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Pricing</div>
+                                <div class="textbg">Pricing</div>
+                            </div>
+                        </div>
+                        <div class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">FAQ's</div>
+                                <div class="textbg">FAQ's</div>
+                            </div>
+                        </div>
+                        <div class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Contact</div>
+                                <div class="textbg">Contact</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="navigation-cards">
+                        <a class="card" href="../pages/brandIdentity.html">
+                            <div>
+                                <h5>Brand Identity</h5>
+                                <p>Creative strategies for brands.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-brand"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="../pages/UIUX.html">
+                            <div>
+                                <h5>UI UX</h5>
+                                <p>Handcraft the user experience.</h>
+                            </div>
+                            <div>
+                                <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="../pages/webDevelopment.html">
+                            <div>
+                                <h5>Development</h5>
+                                <p>Leverage the power of code.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-development"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="border-top"></div>
+                    <!-- <div class="creator">Made by Xaib</div> -->
+                    <a href="/" class="LinkhoverGroup creator" style="cursor: unset;">
+                        <div class="textonly">
+                            <div class="visibleTag">Made by Xaib</div>
+                            <div class="hiddenTag">Made by Xaib</div>
+                        </div>
+                    </a>
+
+                    <div class="icons">
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/dribble.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/dribble.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/linkedin.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/linkedin.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/instagram.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/instagram.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </section>
+
+    <section id="aboutUsHeader" class="contentCont herosection">
+        <nav>
+            <div class="logoimg">
+                <div class="desk">
+                    <lottie-player class="logoanim"
+                        src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                </div>
+                <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+            </div>
+            <div class="navlinkscenter">
+                <!-- nav link -->
+                <a href="../index.html" class="nav-link non-mousetracker">
+                    <div class="text">Home</div>
+                    <div class="textbg">Home</div>
+                </a>
+                <!-- nav link -->
+                <a href="/" class="nav-link non-mousetracker">
+                    <div class="text">Portfolio</div>
+                    <div class="textbg">Portfolio</div>
+                </a>
+                <!-- nav link -->
+                <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
+                    <div class="text">About Us</div>
+                    <div class="textbg">About Us</div>
+                </a>
+                <!-- nav link -->
+                <a href="/" class="nav-link non-mousetracker">
+                    <div class="text">Pricing</div>
+                    <div class="textbg">Pricing</div>
+                </a>
+            </div>
+            <div>
+                <div class="line"></div>
+                <!-- nav link -->
+                <div class="nav-link non-mousetracker">
+                    <div class="text">Login</div>
+                    <div class="textbg">Login</div>
+                </div>
+
+                <div class="HeadrnavBtn">
+                    <button id="navAnimatedIcon" onclick="toggleNav()">
+                        <div id="hamburger-line1"></div>
+                        <div id="hamburger-line2"></div>
+                    </button>
+
+                    <div id="mobileNavBtn" class="initial">
+                        <div id="mobileNavBtn-FC">
+                            <div class="mobileNav-head">
+                                <h1>Menu</h1>
+                            </div>
+
+                            <a class="mobileNav-item">
+                                <p>Portfolio</p>
+                                <div></div>
+                            </a>
+                            <a class="mobileNav-item">
+                                <p>About Us</p>
+                                <div></div>
+                            </a>
+                            <a class="mobileNav-item">
+                                <p>Stories</p>
+                                <div></div>
+                            </a>
+                            <a class="mobileNav-item">
+                                <p>FAQ's</p>
+                                <div></div>
+                            </a>
+                            <a class="mobileNav-item">
+                                <p>Pricing</p>
+                                <div></div>
+                            </a>
+                            <a class="mobileNav-item">
+                                <p>Contact Us</p>
+                                <div></div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-bottom"></div>
+        </nav>
+        <div class="aboutUsMain">
+            <div class="frombelowanim">
+                <h1 class="headerh1andicon"><span>UI UX</span> <img src="../assets/icons/header/brandIdentity.svg" alt=""></h1>
+                
+                <div class="headerpandicon">
+                    <p>We carefully create user-friendly designs to make your digital experiences enjoyable and
+                        effortless.</p>
+                     <img src="../assets/icons/header/brandIdentity.svg" alt="">
+                </div>
+            </div>
+            <div class="frombelowanim">
+                <h1>Design</h1>
+                <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
+            </div>
+        </div>
+    </section>
+
+    <section id="unseenStories" class="contentCont">
+        <div class="themeheading">
+            <span class="themedot"></span>
+            <span class="themetitle">UI UX Design</span>
+        </div>
+
+        <div class="heading">
+            <h1>
+                We create designs to<br>
+                augment user experiences.
+            </h1>
+        </div>
+
+        <div class="UIUXCon">
+            
+            <div>
+                <svg width="233" height="262" viewBox="0 0 233 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M75.3197 260.104L177.783 260.006C182.868 260.001 186.988 255.877 186.988 250.791V238.117C186.988 232.693 182.327 228.443 176.925 228.942L74.4625 238.416C69.7223 238.855 66.0965 242.831 66.0965 247.592V250.889C66.0965 255.982 70.2273 260.108 75.3197 260.104Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M176.874 91.6999C182.196 91.6999 186.51 87.3857 186.51 82.0636C186.51 76.7415 182.196 72.4273 176.874 72.4273C171.552 72.4273 167.238 76.7415 167.238 82.0636C167.238 87.3857 171.552 91.6999 176.874 91.6999ZM148.402 75.1466C152.746 75.1466 154.922 69.8941 151.85 66.8221C149.721 64.6926 149.721 61.2398 151.85 59.1102L153.92 57.0399C156.05 54.9103 159.502 54.9103 161.632 57.0399C164.704 60.1118 169.957 57.9361 169.957 53.5917C169.957 50.58 172.398 48.1387 175.41 48.1387H178.337C181.349 48.1387 183.791 50.58 183.791 53.5917C183.791 57.9361 189.043 60.1118 192.115 57.0399C194.245 54.9103 197.698 54.9103 199.827 57.0399L201.898 59.1102C204.027 61.2398 204.027 64.6926 201.898 66.8221C198.825 69.8941 201.001 75.1466 205.346 75.1466C208.358 75.1466 210.799 77.5878 210.799 80.6001V83.5276C210.799 86.5388 208.358 88.9806 205.346 88.9806C201.001 88.9806 198.825 94.2331 201.898 97.3056C204.027 99.4352 204.027 102.887 201.898 105.017L199.827 107.087C197.698 109.217 194.245 109.217 192.115 107.087C189.043 104.015 183.791 106.191 183.791 110.535C183.791 113.547 181.349 115.988 178.337 115.988H175.41C172.398 115.988 169.957 113.547 169.957 110.535C169.957 106.191 164.704 104.015 161.632 107.087C159.502 109.217 156.05 109.217 153.92 107.087L151.85 105.017C149.721 102.887 149.721 99.4352 151.85 97.3056C154.922 94.2331 152.746 88.9806 148.402 88.9806C145.39 88.9806 142.949 86.5388 142.949 83.5276V80.6001C142.949 77.5878 145.39 75.1466 148.402 75.1466Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M81.0685 237.805V224.914C81.0685 218.949 75.774 214.374 69.8726 215.239L42.6497 219.232C32.8472 220.67 24.0525 213.072 24.052 203.164L24.051 171.671C24.0505 165.476 18.996 160.47 12.8006 160.53C4.55975 160.53 -0.864166 151.938 2.67956 144.498L14.3103 120.082C15.0034 118.627 15.3728 117.04 15.3925 115.428L15.6148 97.4954C15.6148 45.2275 57.5847 2.07831 109.853 1.897C127.473 1.83621 143.975 6.59564 158.119 14.9305" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M171.234 212.992V229.468" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M151.704 148.893C148.847 136.921 143.215 125.691 135.19 116.127C127.261 106.678 122.485 94.4936 122.485 81.1926C122.485 50.8966 147.256 26.3862 177.65 26.8101C207.467 27.2257 231.574 51.9606 231.259 81.7786C231.122 94.7274 226.46 106.59 218.778 115.861C210.744 125.56 205.003 136.848 202.083 148.895" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M151.966 177.666H201.78C204.531 177.666 206.762 175.436 206.762 172.685V153.861C206.762 151.11 204.531 148.88 201.78 148.88H151.966C149.215 148.88 146.985 151.11 146.985 153.861V172.685C146.985 175.436 149.215 177.666 151.966 177.666Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M200.482 177.666V178.84C200.482 187.635 193.353 194.764 184.559 194.764H168.094C159.3 194.764 152.171 187.635 152.171 178.84V177.666" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                    
+            </div>
+            <div>
+                <ul>
+                    <li>We analyze human behavioral patterns and blend them with data science and information architecture to design a unique 'blended experience'.</li>
+                    <li>We help you translate a simple idea into an exoticDigital design transformation vision.</li>
+                  </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="processSec" style="height: fit-content;">
+        <div class="proc-marquee-wrap">
+          <div class="proc-marquee-con">
+            <div id="proc-marquee">
+              <div id="proc-marquee-first">
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+              </div>
+              <div id="proc-marquee-second">
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+              </div>
+              <div id="proc-marquee-third">
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WE SERVE</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+                <div>WHAT DO</div>
+                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="listcon contentCont">
+            <div>UI DESIGN</div>
+            <div>UI DESIGN</div>
+            <div>Animations</div>
+            <div>UI Development</div>
+            <div>User Research</div>
+            <div>Iconography</div>
+            <div>UI Guidelines</div>
+            <div>UX Consultancy</div>
+            <div>Illustrations</div>
+            <div>Design System</div>
+            <div>UX Writing</div>
+        </div>
+     
+      </section>
+
+
+      <section id="perksSec" style="min-height: fit-content;">
+
+        <div id="perksHead">
+          <div>
+            <span class="themedot"></span>
+            <span class="themetitle">How It Works</span>
+          </div>
+          <div>
+            <h1>
+                A clear path to your project
+            </h1>
+            <p>
+                It begins with booking a demo, followed by subscription and request, receiving your designs, and enjoying unlimited revisions. We make it easy to achieve your project goals.
+            </p>
+          </div>
+        </div>
+    
+      </section>
+
+      <section id="boxesSec" style="padding-top: 0;">
+        <div id="boxesRef2">
+          <div class="boxitem">
+            <div>
+    
+              <div>
+                <span class="themedot"></span>
+                <span class="themetitle">01</span>
+              </div>
+    
+              <div>
+                <div>
+                  <div class="animicon" id="aicon-demo"></div>
+                </div>
+                <div>Book a<br> Demo</div>
+              </div>
+            </div>
+          </div>
+          <div class="boxitem">
+            <div>
+              <div>
+                <span class="themedot"></span>
+                <span class="themetitle">02</span>
+              </div>
+    
+              <div>
+                <div>
+                  <div class="animicon" id="aicon-request"></div>
+                  <!-- <img src="./assets/icons/request.svg" alt="" /> -->
+                </div>
+                <div>Subscribe &<br> Request</div>
+              </div>
+            </div>
+          </div>
+          <div class="boxitem">
+            <div>
+              <div>
+                <span class="themedot"></span>
+                <span class="themetitle">03</span>
+              </div>
+    
+              <div>
+                <div>
+                  <div class="animicon" id="aicon-design"></div>
+                  <!-- <img src="./assets/icons/designs.svg" alt="" /> -->
+                </div>
+                <div>Get Your<br> Designs</div>
+              </div>
+            </div>
+          </div>
+          <div class="boxitem">
+            <div>
+              <div>
+                <span class="themedot"></span>
+                <span class="themetitle">04</span>
+              </div>
+    
+              <div>
+                <div>
+                  <div class="animicon" id="aicon-revision"></div>
+                  <!-- <img src="./assets/icons/revisions.svg" alt="" /> -->
+                </div>
+                <div>Unlimited<br> Revisions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </section>
+
+      <section id="aboutUsDiscoverMore" class="contentCont">
+        <div class="discoverMoreWrapper">
+    
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Recent Work</span>
+              </div>
+              <div class="ALLPROJECTS heading">
+                <h1>
+                    Check Our <br>
+                    Awesome Work
+                </h1>
+                <div>
+                    <a href="/">
+                        ALL PROJECTS
+                    </a>
+                </div>
+              </div>
+    
+              <div class="imagerow">
+                <div>
+                    <div class="followSTB">
+                        <a href="/">
+                        <img src="../assets/images/Work/DESIGN.png" alt="">
+                        </a>
+                    </div>
+                    <p>Epoch</p>
+                </div>
+                <div>
+                    <div class="followSTB">
+                    <a href="/"><img src="../assets/images/Work/DESIGN-2.png" alt=""></a>
+                    </div>
+                    <p>Furniture</p>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="/">
+                    <img src="../assets/images/Work/DESIGN-3.png" alt="">
+                        </a>
+                    </div>
+                    <p>Tavern</p>
+                </div>
+              </div>
+        </div>
+        <div class="spacer"></div>
+    </section>
+
+
+    <section id="footer">
+        <section id="ideasSec">
+
+            <div id="ideasCon">
+
+                <div class="animated-head">
+
+                    <h1>Let’s turn your<br>
+                        idea into reality</h1>
+                    <div>
+                        <svg width="663" height="283" viewBox="0 0 663 283" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="Frame 1000003707">
+                                <path id="Ellipse 1228"
+                                    d="M565.886 97.6308C568.123 109.835 563.977 122.775 554.226 135.808C544.474 148.843 529.205 161.84 509.502 174.048C470.105 198.46 413.258 219.545 348.304 231.45C283.349 243.356 222.719 243.803 177.226 234.952C154.474 230.525 135.587 223.788 121.846 215.059C108.108 206.332 99.6412 195.704 97.4043 183.499C95.1674 171.295 99.3139 158.355 109.064 145.322C118.816 132.288 134.085 119.29 153.788 107.082C193.185 82.6705 250.032 61.5855 314.987 49.6799C379.942 37.7743 440.571 37.3268 486.065 46.1783C508.817 50.605 527.703 57.3422 541.444 66.0708C555.183 74.7982 563.649 85.4265 565.886 97.6308Z"
+                                    stroke="#EAEAEA" stroke-width="3"></path>
+                                <path id="*"
+                                    d="M314.452 232.835L302.087 225.678L308.151 215.93L319.981 222.567C326.857 226.381 330.512 229.377 334.255 233.018C333.989 227.729 334.296 222.759 335.634 215.679L338.273 201.721L349.684 203.878L347.045 217.836C345.706 224.916 343.897 230.022 341.998 234.482C346.775 232.661 351.309 231.004 358.9 229.925L372.578 227.902L374.83 239.432L360.502 241.542C353.319 242.698 347.868 242.506 343.067 242.226C346.657 246.677 349.102 250.491 351.826 257.292L357.631 270.123L347.034 274.824L341.191 262.195C338.059 255.318 336.697 250.241 335.667 245.646C333.119 250.193 329.998 254.422 324.89 259.113L314.635 268.698L306.283 260.414L316.371 250.588C321.798 245.329 325.912 242.545 330.433 239.838C324.474 237.873 319.94 236.178 314.452 232.835Z"
+                                    fill="#FF2626"
+                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                                </path>
+                                <circle id="Ellipse 1229" cx="270.001" cy="62.1572" r="15.9552"
+                                    transform="rotate(10.7066 270.001 62.1572)" fill="#FF2626"
+                                    style="transform: translate(0px, 0px) rotate(10.7066deg) rotateX(7.54902deg) rotateY(1.08333deg);">
+                                </circle>
+                                <path id="Vector"
+                                    d="M141.509 182.705L153.03 184.883C148.049 211.221 143.075 237.561 138.088 263.897L126.571 261.719C127.946 254.435 129.326 247.152 130.701 239.867C127.035 243.135 123.088 246.067 119.05 248.848C115.205 251.48 111.27 253.983 107.24 256.319C104.831 252.792 102.422 249.264 100.013 245.736C104.425 242.38 108.988 239.225 113.68 236.278C117.784 233.721 121.994 231.308 126.423 229.366C128.396 228.509 130.418 227.749 132.505 227.228C129.62 227.32 126.733 227.175 123.86 226.923C119.932 226.571 116.027 226.01 112.143 225.333C108.064 224.615 104.006 223.781 99.9837 222.796L102.363 210.212C105.57 210.576 108.764 211.045 111.948 211.58C116.233 212.306 120.499 213.164 124.709 214.249C127.853 215.065 130.973 216.002 133.994 217.204C131.915 215.658 130.055 213.837 128.294 211.938C125.588 209 123.124 205.844 120.777 202.61C117.325 197.822 114.11 192.861 111.134 187.759C114.664 185.352 118.195 182.948 121.727 180.544C125.259 185.179 128.579 189.979 131.66 194.93C133.693 198.215 135.614 201.574 137.281 205.064C138.692 197.612 140.1 190.158 141.509 182.705Z"
+                                    fill="#EAEAEA"
+                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                                </path>
+                                <path id="Vector_2"
+                                    d="M507.515 32.3699L547.499 39.9297L538.87 85.565C532.984 84.4535 527.097 83.3406 521.211 82.2284C520.79 84.4712 520.35 86.7097 519.947 88.956C519.707 90.4817 519.563 92.0842 520.026 93.5821C520.344 94.6792 521.131 95.5995 522.102 96.1727C523.226 96.8352 524.503 97.1711 525.773 97.4214C529.266 98.0841 532.761 98.7379 536.253 99.406L532.58 118.834C529.859 118.322 527.14 117.806 524.42 117.293C522.548 116.928 520.665 116.617 518.81 116.169C514.693 115.183 510.655 113.672 507.117 111.308C503.352 108.831 500.285 105.216 498.675 100.967C497.041 96.7579 496.765 92.1312 497.217 87.6655C497.365 86.0818 497.64 84.515 497.95 82.9564C501.139 66.0942 504.327 49.2321 507.515 32.3699Z"
+                                    fill="#EAEAEA"
+                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+
+                <div class="ideasproducts">
+                    <p>Designed Products across various Industries Fintech • Healthcare • SASS • <span
+                            style="display: inline-block;">E-commerce</span> • Retail • Realestate
+                    </p>
+
+                    <div class="tabsflex">
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Work</div>
+                                <div class="hiddenTag">Work</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Process</div>
+                                <div class="hiddenTag">Process</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">About</div>
+                                <div class="hiddenTag">About</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a><a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        </a><a href="/" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Contact Us</div>
+                                <div class="hiddenTag">Contact Us</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        </a><a href="/" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Services</div>
+                                <div class="hiddenTag">Services</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="tabsflex">
+                        </a><a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Contact Us</div>
+                                <div class="hiddenTag">Contact Us</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        </a><a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Services</div>
+                                <div class="hiddenTag">Services</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="idea-marquee-wrap">
+                <div class="idea-marquee-con">
+                    <div id="idea-marquee">
+                        <div id="idea-marquee-first">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                        <div id="idea-marquee-second">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                        <div id="idea-marquee-third">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="footerSec">
+            <div class="spacer"></div>
+            <div class="footerCon">
+                <div>
+                    <h1>Reach Us</h1>
+                    <p><img src="../assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
+                    <p><img src="../assets/icons/pk.svg" alt=""> +92 8754 3864</p>
+                    <a href="/" class="LinkhoverGroup">
+                        <div>
+                            <div class="visibleTag">business@webpioneers.com</div>
+                            <div class="hiddenTag">business@webpioneers.com</div>
+                        </div>
+
+                        <div>
+                            <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                            <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <div>
+                        <h1>Social</h1>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">linkedin</div>
+                                <div class="hiddenTag">linkedin</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Instagram</div>
+                                <div class="hiddenTag">Instagram</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Dribble</div>
+                                <div class="hiddenTag">Dribble</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Quick</h1>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Pricing</div>
+                                <div class="hiddenTag">Pricing</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">About</div>
+                                <div class="hiddenTag">About</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Team</div>
+                                <div class="hiddenTag">Team</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Legal</h1>
+
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Privacy</div>
+                                <div class="hiddenTag">Privacy</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Terms</div>
+                                <div class="hiddenTag">Terms</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to reload the page
+            function reloadPage() {
+                location.reload();
+            }
+
+            // Store the initial window width
+            var initialWidth = window.innerWidth;
+
+            // Attach the reload function to the window's resize event
+            window.addEventListener("resize", function () {
+                // Check if the width has changed
+                if (window.innerWidth !== initialWidth) {
+                    // Debounce the reload to avoid excessive reloading
+                    clearTimeout(window.resizeTimer);
+                    window.resizeTimer = setTimeout(function () {
+                        reloadPage();
+                    }, 250);
+                }
+            });
+
+
+            function loadScript(src, callback) {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = src;
+                script.onload = callback;
+                document.head.appendChild(script);
+            }
+
+            // List of scripts to load
+            var scriptsToLoad = [
+                "../scripts/global.js",
+                "../scripts/lenis.js",
+                "../scripts/imagehover.js",
+                "../scripts/animated/figmafooter.js",
+                "../scripts/pages/unseenjourney.js",
+                "../scripts/hero.js",
+                "../scripts/ideas.js",
+                "../scripts/process.js",
+                "../scripts/boxes.js",
+                "../scripts/perks.js",
+                "../scripts/mousefollower_stickybutton.js",
+            ];
+
+            // Load each script one by one
+            function loadScriptsSequentially(index) {
+                if (index < scriptsToLoad.length) {
+                    loadScript(scriptsToLoad[index], function () {
+                        // Load the next script in the array
+                        loadScriptsSequentially(index + 1);
+                    });
+                }
+            }
+
+            loadScriptsSequentially(0);
+        });
+    </script>
+</body>
+
+</html>
