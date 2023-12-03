@@ -21,7 +21,7 @@
 
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    
+
     <!-- gsap -->
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
@@ -33,36 +33,25 @@
         <img id="mousefollower-rightarrow" src="../assets/icons/navbarContentCardArrow.svg" alt="">
     </div>
 
-    <section id="navigationSec" class="initial contentCont">
+    <section id="navigationSec" class="initial ">
         <div id="navigation">
             <header>
-                <nav>
+                <nav class="contentCont">
                     <div class="logoimg">
                         <div class="desk">
-                            <lottie-player class="logoanim"
+                            <a href="/">
+                                <lottie-player class="logoanim"
                                 src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                            </a>
                         </div>
-                        <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+                        <a href="/">
+                            <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+                        </a>
                     </div>
-                    <div>
-                        <a href="../index.html" class="nav-link non-mousetracker">
-                            <div class="text">Home</div>
-                            <div class="textbg">Home</div>
-                        </a>
-                        <!-- nav link -->
-                        <a href="/" class="nav-link non-mousetracker">
-                            <div class="text">Portfolio</div>
-                            <div class="textbg">Portfolio</div>
-                        </a>
-                        <!-- nav link -->
-                        <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
-                            <div class="text">About Us</div>
-                            <div class="textbg">About Us</div>
-                        </a>
-                        <!-- nav link -->
-                        <a href="/" class="nav-link non-mousetracker">
-                            <div class="text">Pricing</div>
-                            <div class="textbg">Pricing</div>
+                    <div class="navlinkscenter">
+                        <a href="../pages/unseenJourney.html" class="themeheading">
+                            <span class="themedot"></span>
+                            <span class="themetitle">Back to stories</span>
                         </a>
                     </div>
                     <div>
@@ -80,9 +69,9 @@
                     <div class="border-bottom"></div>
                 </nav>
 
-                <div class="content">
+                <div class="content contentCont">
                     <div>
-                        <a href="/" class="nav-link">
+                        <a href="../pages/portfolio.html" class="nav-link">
                             <div class="non-mousetracker">
                                 <div class="text">Portfolio</div>
                                 <div class="textbg">Portfolio</div>
@@ -100,18 +89,18 @@
                                 <div class="textbg">Pricing</div>
                             </div>
                         </div>
-                        <div class="nav-link">
+                        <a href="../pages/FAQ.html" class="nav-link">
                             <div class="non-mousetracker">
                                 <div class="text">FAQ's</div>
                                 <div class="textbg">FAQ's</div>
                             </div>
-                        </div>
-                        <div class="nav-link">
+                        </a>
+                        <a href="../pages/contactUs.html" class="nav-link">
                             <div class="non-mousetracker">
                                 <div class="text">Contact</div>
                                 <div class="textbg">Contact</div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div id="navigation-cards">
@@ -145,7 +134,7 @@
                     </div>
                 </div>
 
-                <div class="footer">
+                <div class="footer contentCont">
                     <div class="border-top"></div>
                     <!-- <div class="creator">Made by Xaib</div> -->
                     <a href="/" class="LinkhoverGroup creator" style="cursor: unset;">
@@ -183,11 +172,11 @@
             </header>
         </div>
     </section>
-    
+
     <section id="aboutUsHeader" class="herosection detailwrapper">
         <nav class="contentCont">
-          <div class="logoimg">
-          </div>
+            <div class="logoimg">
+            </div>
             <div class="navlinkscenter">
                 <a href="../pages/unseenJourney.html" class="themeheading">
                     <span class="themedot"></span>
@@ -214,30 +203,30 @@
                                 <h1>Menu</h1>
                             </div>
 
-                            <a class="mobileNav-item">
+                            <a href="../pages/portfolio.html" class="mobileNav-item">
                                 <p>Portfolio</p>
                                 <div></div>
-                            </a>
-                            <a class="mobileNav-item">
+                              </a>
+                              <a  href="../pages/aboutUs.html"class="mobileNav-item">
                                 <p>About Us</p>
                                 <div></div>
-                            </a>
-                            <a class="mobileNav-item">
+                              </a>
+                              <a href="../pages/unseenJourney.html" class="mobileNav-item">
                                 <p>Stories</p>
                                 <div></div>
-                            </a>
-                            <a class="mobileNav-item">
+                              </a>
+                              <a href="../pages/FAQ.html" class="mobileNav-item">
                                 <p>FAQ's</p>
                                 <div></div>
-                            </a>
-                            <a class="mobileNav-item">
+                              </a>
+                              <a href="/" class="mobileNav-item">
                                 <p>Pricing</p>
                                 <div></div>
-                            </a>
-                            <a class="mobileNav-item">
+                              </a>
+                              <a href="../pages/contactUs.html" class="mobileNav-item">
                                 <p>Contact Us</p>
                                 <div></div>
-                            </a>
+                              </a>
 
                         </div>
                     </div>
@@ -248,12 +237,10 @@
             <div class="border-bottom"></div>
         </nav>
         <div class="detailcon">
-            <div class="animimage imagediv">
-                <a href="/">
-                  <img class="photo" src="../assets/images/unseenjourney/mockup.png" alt="">
-                </a>
-              </div>
-           
+            <div class="imagediv">
+                <img class="photo" src="../assets/images/unseenjourney/mockup.png" alt="">
+            </div>
+
             <div class="imagedetail">
                 <h1>How to improve web design process</h1>
                 <h3>We Take You On An Exciting Journey</h3>
@@ -261,11 +248,26 @@
                     <button>STORIES</button>
                     <h4>23.11.2023</h4>
                 </div>
-                <p>Every successful web design project begins with a clear vision. In this blog post, we delve into the initial stages of our project, where we worked closely with our client to define their goals, target audience, and desired outcomes. We share insights into our collaborative process, how we distilled their vision into a comprehensive design brief, and set the foundation for an exceptional web experience.</p>
-                <p>A user-centric approach is at the core of effective web design. In this blog post, we discuss how we put ourselves in the shoes of the target audience, considering their needs, expectations, and preferences. We explore the importance of user research, information architecture, and intuitive navigation to create a seamless and engaging user experience. Learn how we crafted visually appealing designs that resonate with the users and drive conversions.</p>
-                <p>Visual aesthetics play a crucial role in web design, capturing attention and conveying brand messaging. In this blog post, we dive into the creative process of designing a visually stunning website that reflects our client's brand identity. From selecting color palettes and typography to creating captivating imagery and graphics, we discuss how we brought their vision to life and crafted a visual story that resonates with the target audience.</p>
+                <p>Every successful web design project begins with a clear vision. In this blog post, we delve into the
+                    initial stages of our project, where we worked closely with our client to define their goals, target
+                    audience, and desired outcomes. We share insights into our collaborative process, how we distilled
+                    their vision into a comprehensive design brief, and set the foundation for an exceptional web
+                    experience.</p>
+                <p>A user-centric approach is at the core of effective web design. In this blog post, we discuss how we
+                    put ourselves in the shoes of the target audience, considering their needs, expectations, and
+                    preferences. We explore the importance of user research, information architecture, and intuitive
+                    navigation to create a seamless and engaging user experience. Learn how we crafted visually
+                    appealing designs that resonate with the users and drive conversions.</p>
+                <p>Visual aesthetics play a crucial role in web design, capturing attention and conveying brand
+                    messaging. In this blog post, we dive into the creative process of designing a visually stunning
+                    website that reflects our client's brand identity. From selecting color palettes and typography to
+                    creating captivating imagery and graphics, we discuss how we brought their vision to life and
+                    crafted a visual story that resonates with the target audience.</p>
                 <h2>The Power of Web Development</h2>
-                <p>Web design goes hand in hand with web development. In this blog post, we explore the intricacies of web development and how it shapes the functionality of the website. We discuss the importance of responsive design, smooth page transitions, and optimal performance across devices. Learn how our development team brought the design to life, ensuring a seamless and intuitive user experience.</p>
+                <p>Web design goes hand in hand with web development. In this blog post, we explore the intricacies of
+                    web development and how it shapes the functionality of the website. We discuss the importance of
+                    responsive design, smooth page transitions, and optimal performance across devices. Learn how our
+                    development team brought the design to life, ensuring a seamless and intuitive user experience.</p>
             </div>
         </div>
     </section>
@@ -273,27 +275,36 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-          // Function to reload the page
-  function reloadPage() {
-    location.reload();
-  }
+            var customScroll = document.getElementsByClassName('imagedetail')[0];
+            if (customScroll) {
+                customScroll.addEventListener('wheel', function(event) {
+                    event.preventDefault();
+                    customScroll.scrollTop += event.deltaY;
+                });
+            }
 
-  // Store the initial window width
-  var initialWidth = window.innerWidth;
 
-  // Attach the reload function to the window's resize event
-  window.addEventListener("resize", function () {
-    // Check if the width has changed
-    if (window.innerWidth !== initialWidth) {
-      // Debounce the reload to avoid excessive reloading
-      clearTimeout(window.resizeTimer);
-      window.resizeTimer = setTimeout(function () {
-        reloadPage();
-      }, 250);
-    }
-  });
-  
-  
+            // Function to reload the page
+            function reloadPage() {
+                location.reload();
+            }
+
+            // Store the initial window width
+            var initialWidth = window.innerWidth;
+
+            // Attach the reload function to the window's resize event
+            window.addEventListener("resize", function () {
+                // Check if the width has changed
+                if (window.innerWidth !== initialWidth) {
+                    // Debounce the reload to avoid excessive reloading
+                    clearTimeout(window.resizeTimer);
+                    window.resizeTimer = setTimeout(function () {
+                        reloadPage();
+                    }, 250);
+                }
+            });
+
+
             function loadScript(src, callback) {
                 var script = document.createElement('script');
                 script.type = 'text/javascript';

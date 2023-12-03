@@ -65,8 +65,11 @@
           position: absolute;
 
           &.open{
-            h2,ul{
+            h2,ul, .stickybutton, .stickybutton>a{
                 opacity: 1;
+            }
+            .stickybutton{
+                z-index: 11;
             }
           }
 
@@ -109,7 +112,6 @@
             transition: opacity 0ms ease;
             position: relative;
             z-index: 10;
-            opacity: 1;
             transition-delay: 0ms;
             width: fit-content;
             display: flex;
@@ -118,8 +120,10 @@
             font-family: var(--SatoshiR);
             width: 96px;
             height: 96px;
+            opacity: 0;
     
             & > a {
+            opacity: 0;
               cursor: pointer;
               width: fit-content;
               text-decoration: none;
@@ -237,7 +241,10 @@
             }
 
             .stickybutton {
-                & > a {
+              width: 132px;
+              height: 132px;
+
+                & > a{
                   #magneticBtn {
                     // margin: -30px;
                     // padding: 30px;
@@ -416,6 +423,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+
             & > a {
               cursor: pointer;
               width: fit-content;

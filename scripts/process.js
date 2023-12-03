@@ -124,7 +124,7 @@ if (true) {
   var apath_Process_strategy =
     "./assets/Animation/Our_Process/Strategy/StratergyIcon_White_V3.json";
   var apath_Process_design =
-    "./assets/Animation/Our_Process/Design/Design_Icon_White.json";
+    "./assets/Animation/Our_Process/Design/Design_Icon_White_V3.json";
   var apath_Process_development =
     "./assets/Animation/Our_Process/Development/Development.json";
 

@@ -1,3 +1,7 @@
+
+
+// ---------------------mousefollower
+
 const mousefollower = document.getElementById("mousefollower");
 
 function isMobile() {

@@ -49,6 +49,11 @@
 
       .detail {
         & > div {
+          &:nth-child(1) {
+            p{
+              color: var(--gray-97) !important;
+            }
+          }
           &:nth-child(2) {
             p{
               color: var(--gray-97) !important;
@@ -212,6 +217,7 @@ header {
             align-items: center;
             text-decoration: none;
             color: inherit;
+            width: fit-content;
 
             & > div {
               position: relative;

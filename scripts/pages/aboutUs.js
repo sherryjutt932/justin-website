@@ -57,3 +57,6 @@ gsap.to( aboutUs_Founders[1], {
   }
 });
 }
+
+// -------------------------animationas
+// discoverMore-discovery

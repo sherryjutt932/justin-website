@@ -24,11 +24,12 @@ function moveMagnet(event) {
   
 }
 
-var btnMarquee = document.getElementById('magneticBtn');
+var btnMarquee = document.querySelectorAll('#magneticBtn');
 var firstBtn = document.getElementById('Btnfirst');
 var secondBtn = document.getElementById('Btnsecond');
 
-let xPercentBtn = 0;
+btnMarquee.forEach(element => {
+  let xPercentBtn = 0;
 let directionBtn = "left";
 let speedBtn = 12;
 let isHoveredBtn = false;
@@ -38,7 +39,7 @@ const animateMarqueeBtn = () => {
     xPercentBtn = directionBtn === "left" ? (xPercentBtn - speedBtn / 10) : (xPercentBtn + speedBtn / 10);
   xPercentBtn = (xPercentBtn <= -100) ? 0 : ((xPercentBtn >= 0) ? -100 : xPercentBtn);
 
-  gsap.to([firstBtn, secondBtn], {
+  gsap.to(["#Btnfirst", "#Btnsecond"], {
     xPercent: xPercentBtn,
     duration: 0,
     ease: "none",
@@ -48,7 +49,7 @@ const animateMarqueeBtn = () => {
 }
 else{
   xPercentBtn = 0;
-  gsap.to([firstBtn, secondBtn], {
+  gsap.to(["#Btnfirst", "#Btnsecond"], {
     xPercent: 0,
     duration: 0,
     ease: "none",
@@ -56,23 +57,23 @@ else{
 }
 };
 
-
-btnMarquee.addEventListener("mouseenter", () => {
-  isHoveredBtn = true;
-  animateMarqueeBtn();
-});
-
-btnMarquee.addEventListener("mouseleave", () => {
-  isHoveredBtn = false;
-});
-
-btnMarquee.addEventListener("touchstart", () => {
-  isHoveredBtn = true;
-  animateMarqueeBtn();
-});
-
-btnMarquee.addEventListener("touchend", () => {
-  isHoveredBtn = false;
+  element.addEventListener("mouseenter", () => {
+    isHoveredBtn = true;
+    animateMarqueeBtn();
+  });
+  
+  element.addEventListener("mouseleave", () => {
+    isHoveredBtn = false;
+  });
+  
+  element.addEventListener("touchstart", () => {
+    isHoveredBtn = true;
+    animateMarqueeBtn();
+  });
+  
+  element.addEventListener("touchend", () => {
+    isHoveredBtn = false;
+  });
 });
 
 }

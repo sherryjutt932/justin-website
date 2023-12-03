@@ -313,7 +313,7 @@ nav {
         justify-content: center;
 
         &:nth-child(1) {
-          gap: 15px;
+          gap: 10px;
           .nav-link {
             opacity: 0;
             transition: opacity 1s ease;
@@ -327,8 +327,8 @@ nav {
               overflow: hidden;
               position: relative;
               width: fit-content;
-              font-size: 40px;
-              line-height: 50px;
+              font-size: 35px;
+              line-height: 40px;
               font-family: var(--Satoshi);
 
               & > .text {
@@ -363,7 +363,7 @@ nav {
 
         &:nth-child(2) {
           align-items: end;
-          gap: 40px;
+          gap: 20px;
 
           .card {
             transition: opacity 1s ease;
@@ -376,7 +376,7 @@ nav {
             align-items: center;
             border: 1px solid var(--gray-cd);
             padding: 15px;
-            gap: 30px;
+            gap: 20px;
             cursor: pointer;
             position: relative;
 
@@ -385,8 +385,8 @@ nav {
             }
 
             h5 {
-              font-size: 20px;
-              line-height: 28px;
+              font-size: 18px;
+              line-height: 22px;
               font-family: var(--SatoshiM);
               margin-bottom: 10px;
               pointer-events: none;
@@ -399,8 +399,8 @@ nav {
               pointer-events: none;
             }
             .animicon {
-              width: 55px;
-              height: 55px;
+              width: 50px;
+              height: 50px;
               margin-right: 10px;
               pointer-events: none;
             }
@@ -620,6 +620,11 @@ nav {
     max-height: 120px;
     justify-content: space-between;
     white-space: nowrap;
+
+    a{
+      text-decoration: none;
+      color: #000;
+    }
 
     .logoimg {
       justify-content: left;

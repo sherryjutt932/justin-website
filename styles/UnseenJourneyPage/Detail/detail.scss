@@ -17,13 +17,9 @@ nav {
 }
 
 .detailwrapper {
-  overflow: hidden;
   .detailcon {
     height: calc(100vh - 133px);
     display: flex;
-    flex-wrap: nowrap;
-    overflow-y: hidden;
-    height: 100%;
     .imagediv {
       flex: 1 1 69.27%;
       background-color: aqua;
@@ -42,9 +38,8 @@ nav {
         display: flex;
         flex-direction: column;
         gap: 35px;
-        min-height: fit-content;
-        overflow: hidden;
-        overflow-y: scroll;
+        height: 100%;
+        overflow-y: auto;
       h1 {
         color: #000;
         font-family: var(--NohemiL);
@@ -122,6 +117,63 @@ nav {
         line-height: 28px; /* 77.778% */
     }
 
+    }
+  }
+}
+
+@media (max-width: 1536px){
+  nav {
+    .themeheading {
+      .themetitle {
+        font-size: 18px !important;
+      }
+    }
+  }
+
+  .detailwrapper {
+    .detailcon {
+      height: calc(100vh - 100px);
+      .imagedetail {
+          min-width: 350px;
+          padding: 25px;
+          gap: 25px;
+        h1 {
+          font-size: 44px;
+          line-height: 116.667%;
+          max-width: 8ch;
+        }
+  
+        h3 {
+          font-size: 20px;
+          line-height: 24px; /* 116.667% */
+        }
+  
+        .btndiv {
+          gap: 20px;
+          button {
+            height: 42px;
+            padding: 0px 24px;
+              font-size: 18px;
+              line-height: 22px; /* 140% */
+              
+          }
+          h4 {
+            font-size: 18px;
+            line-height: 22px; /* 116.667% */
+          }
+        }
+  
+        p {
+                font-size: 18px;
+                line-height: 26px; /* 145.455% */
+        }
+  
+        h2{
+          font-size: 20px;
+          line-height: 24px; /* 77.778% */
+      }
+  
+      }
     }
   }
 }

@@ -42,6 +42,11 @@
                 font-family: var(--SatoshiM);
                 position: absolute;
 
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                }
+
                 &[data-theme="light"]{
                     border: 2px solid var(--dark);
                 background-color: var(--light);
@@ -197,6 +202,10 @@
             line-height: 24px;
             .label{
                 padding: 10px 28px;
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                }
             }
         }
         }
@@ -287,6 +296,11 @@
                     text-transform: uppercase;
                     font-family: var(--SatoshiM);
                     position: absolute;
+
+                    a{
+                        text-decoration: none;
+                        color: inherit;
+                    }
     
                     &[data-theme="light"]{
                         border: 2px solid var(--dark);

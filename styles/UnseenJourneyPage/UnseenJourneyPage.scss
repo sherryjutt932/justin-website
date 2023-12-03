@@ -1,4 +1,5 @@
 #unseenStories {
+  height: fit-content;
   .heading {
     padding: 120px 0;
   }
@@ -6,11 +7,48 @@
     display: none;
   }
 
+  .animcon{
+    position: relative;
+    .pioneerAnim{
+      position: absolute;
+      left: 0%;
+      top: 0;
+      background-color: #242424;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+      font-family: var(--NohemiL);
+      font-size: 5.5vw;
+      font-weight: 300;
+
+      &>div{
+        background-color: #242424;
+      }
+
+      #pioneer1{
+        position: relative;
+        z-index: 10;
+        // transform: translateY(200%);
+      }
+      #pioneer2{
+        position: relative;
+        z-index: 5;
+        // transform: translateY(100%);
+      }
+    }
+  }
+  
 
   .unseenimages {
+    height: fit-content;
     width: 100%;
     display: flex;
     gap: 32px;
+
 
     & > div {
       flex: 1 1 50%;
@@ -39,6 +77,8 @@
       &:nth-child(2) {
         align-items: center;
       }
+      
+
       .round {
         border-radius: 500px;
       }
@@ -134,9 +174,6 @@
           li:nth-child(1) {
             padding-bottom: 40px;
           }
-        }
-
-        .animimage {
         }
       }
     }
