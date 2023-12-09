@@ -2,1101 +2,1637 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="../styles/global.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="../styles/global.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 
-    <!-- styles -->
-    <link rel="stylesheet" href="../styles/Navigation/navigation.css">
-    <link rel="stylesheet" href="../styles/AboutUsPage/bigscreen/bigscreen.css">
-    <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
-    <link rel="stylesheet" href="../styles/UnseenJourneyPage/UnseenJourneyPage.css">
-    <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
-    <link rel="stylesheet" href="../styles/work/work.css">
-    <link rel="stylesheet" href="../styles/ideas/ideas.css">
-    <link rel="stylesheet" href="../styles/UIUX/UIUX.css">
-    <link rel="stylesheet" href="../styles/portfolioPage/portfolioPage.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="../styles/Navigation/navigation.css">
+  <link rel="stylesheet" href="../styles/AboutUsPage/bigscreen/bigscreen.css">
+  <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
+  <link rel="stylesheet" href="../styles/UnseenJourneyPage/UnseenJourneyPage.css">
+  <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
+  <link rel="stylesheet" href="../styles/work/work.css">
+  <link rel="stylesheet" href="../styles/ideas/ideas.css">
+  <link rel="stylesheet" href="../styles/UIUX/UIUX.css">
+  <link rel="stylesheet" href="../styles/portfolioPage/portfolioPage.css">
 
-    <!-- packages -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- packages -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-    <!-- gsap -->
-    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+  <!-- gsap -->
+  <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 </head>
 
 <body>
-    <div id="mousefollower">
-        <img id="mousefollower-rightarrow" src="../assets/icons/navbarContentCardArrow.svg" alt="">
-    </div>
+  <div id="mousefollower">
+    <img id="mousefollower-rightarrow" src="../assets/icons/navbarContentCardArrow.svg" alt="">
+  </div>
 
-    <section id="navigationSec" class="initial contentCont">
-      <div id="navigation">
-          <header>
-              <nav>
-                  <div class="logoimg">
-                      <div class="desk">
-                        <a href="/">
-                          <lottie-player class="logoanim"
-                                src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
-                        </a>
-                      </div>
-                      <a href="/">
-                        <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
-                      </a>
-                  </div>
-                  <div>
-                      <a href="/" class="nav-link non-mousetracker">
-                          <div class="text">Home</div>
-                          <div class="textbg">Home</div>
-                      </a>
-                      <!-- nav link -->
-                      <a href="../pages/portfolio.html" class="nav-link non-mousetracker">
-                          <div class="text">Portfolio</div>
-                          <div class="textbg">Portfolio</div>
-                      </a>
-                      <!-- nav link -->
-                      <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
-                          <div class="text">About Us</div>
-                          <div class="textbg">About Us</div>
-                      </a>
-                      <!-- nav link -->
-                      <a href="/" class="nav-link non-mousetracker">
-                          <div class="text">Pricing</div>
-                          <div class="textbg">Pricing</div>
-                      </a>
-                  </div>
-                  <div>
-                      <div class="line"></div>
-                      <!-- nav link -->
-                      <div class="nav-link non-mousetracker">
-                          <div class="text">Login</div>
-                          <div class="textbg">Login</div>
-                      </div>
-
-                      <div id="navbtnplacer">
-                      </div>
-                  </div>
-
-                  <div class="border-bottom"></div>
-              </nav>
-
-              <div class="content">
-                  <div>
-                      <a href="../pages/portfolio.html" class="nav-link">
-                          <div class="non-mousetracker">
-                              <div class="text">Portfolio</div>
-                              <div class="textbg">Portfolio</div>
-                          </div>
-                      </a>
-                      <a href="../pages/unseenJourney.html" class="nav-link">
-                          <div class="non-mousetracker">
-                              <div class="text">Stories</div>
-                              <div class="textbg">Stories</div>
-                          </div>
-                      </a>
-                      <a href="/" class="nav-link">
-                          <div class="non-mousetracker">
-                              <div class="text">Pricing</div>
-                              <div class="textbg">Pricing</div>
-                          </div>
-                      </a>
-                      <a href="../pages/FAQ.html" class="nav-link">
-                          <div class="non-mousetracker">
-                              <div class="text">FAQ's</div>
-                              <div class="textbg">FAQ's</div>
-                          </div>
-                      </a>
-                      <a href="../pages/contactUs.html" class="nav-link">
-                          <div class="non-mousetracker">
-                              <div class="text">Contact</div>
-                              <div class="textbg">Contact</div>
-                          </div>
-                      </a>
-                  </div>
-
-                  <div id="navigation-cards">
-                      <a class="card" href="../pages/brandIdentity.html">
-                          <div>
-                              <h5>Brand Identity</h5>
-                              <p>Creative strategies for brands.</h>
-                          </div>
-                          <div>
-                              <div class="animicon" id="aicon-navbar-brand"></div>
-                          </div>
-                      </a>
-                      <a class="card" href="../pages/UIUX.html">
-                          <div>
-                              <h5>UI UX</h5>
-                              <p>Handcraft the user experience.</h>
-                          </div>
-                          <div>
-                              <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
-                          </div>
-                      </a>
-                      <a class="card" href="../pages/webDevelopment.html">
-                          <div>
-                              <h5>Development</h5>
-                              <p>Leverage the power of code.</h>
-                          </div>
-                          <div>
-                              <div class="animicon" id="aicon-navbar-development"></div>
-                          </div>
-                      </a>
-                  </div>
-              </div>
-
-              <div class="footer">
-                  <div class="border-top"></div>
-                  <!-- <div class="creator">Made by Xaib</div> -->
-                  <a href="/" class="LinkhoverGroup creator" style="cursor: unset;">
-                      <div class="textonly">
-                          <div class="visibleTag">Made by Xaib</div>
-                          <div class="hiddenTag">Made by Xaib</div>
-                      </div>
-                  </a>
-
-                  <div class="icons">
-                      <a href="/" class="LinkhoverGroup non-mousetracker">
-                          <div class="icononly">
-                              <img class="visibleTag" src="../assets/icons/header/dribble.svg" alt="">
-                              <img class="hiddenTag" src="../assets/icons/header/dribble.svg" alt="">
-                          </div>
-                      </a>
-
-                      <a href="/" class="LinkhoverGroup non-mousetracker">
-                          <div class="icononly">
-                              <img class="visibleTag" src="../assets/icons/header/linkedin.svg" alt="">
-                              <img class="hiddenTag" src="../assets/icons/header/linkedin.svg" alt="">
-                          </div>
-                      </a>
-
-                      <a href="/" class="LinkhoverGroup non-mousetracker">
-                          <div class="icononly">
-                              <img class="visibleTag" src="../assets/icons/header/instagram.svg" alt="">
-                              <img class="hiddenTag" src="../assets/icons/header/instagram.svg" alt="">
-                          </div>
-                      </a>
-
-                  </div>
-              </div>
-
-          </header>
-      </div>
-  </section>
-    <section id="aboutUsHeader" class="contentCont herosection">
-      <nav>
-        <div class="logoimg">
-          <div class="desk">
-          <a href="/">
-              <lottie-player class="logoanim" src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+  <section id="navigationSec" class="initial contentCont">
+    <div id="navigation">
+      <header>
+        <nav>
+          <div class="logoimg">
+            <div class="desk">
+              <a href="/">
+                <lottie-player class="logoanim"
+                  src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+              </a>
+            </div>
+            <a href="/">
+              <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
             </a>
           </div>
-          <a href="/">
-            <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
-          </a>
-        </div>
-          <div class="navlinkscenter">
-              <!-- nav link -->
-              <a href="/" class="nav-link non-mousetracker">
-                  <div class="text">Home</div>
-                  <div class="textbg">Home</div>
-              </a>
-              <!-- nav link -->
-              <a href="./portfolio.html" class="nav-link non-mousetracker">
-                  <div class="text">Portfolio</div>
-                  <div class="textbg">Portfolio</div>
-              </a>
-              <!-- nav link -->
-              <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
-                  <div class="text">About Us</div>
-                  <div class="textbg">About Us</div>
-              </a>
-              <!-- nav link -->
-              <a href="/" class="nav-link non-mousetracker">
-                  <div class="text">Pricing</div>
-                  <div class="textbg">Pricing</div>
-              </a>
+          <div>
+            <a href="/" class="nav-link non-mousetracker">
+              <div class="text">Home</div>
+              <div class="textbg">Home</div>
+            </a>
+            <!-- nav link -->
+            <a href="../pages/portfolio.html" class="nav-link non-mousetracker">
+              <div class="text">Portfolio</div>
+              <div class="textbg">Portfolio</div>
+            </a>
+            <!-- nav link -->
+            <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
+              <div class="text">About Us</div>
+              <div class="textbg">About Us</div>
+            </a>
+            <!-- nav link -->
+            <a href="/" class="nav-link non-mousetracker">
+              <div class="text">Pricing</div>
+              <div class="textbg">Pricing</div>
+            </a>
           </div>
           <div>
-              <div class="line"></div>
-              <!-- nav link -->
-              <div class="nav-link non-mousetracker">
-                  <div class="text">Login</div>
-                  <div class="textbg">Login</div>
-              </div>
+            <div class="line"></div>
+            <!-- nav link -->
+            <div class="nav-link non-mousetracker">
+              <div class="text">Login</div>
+              <div class="textbg">Login</div>
+            </div>
 
-              <div class="HeadrnavBtn">
-                  <button id="navAnimatedIcon" onclick="toggleNav()">
-                      <div id="hamburger-line1"></div>
-                      <div id="hamburger-line2"></div>
-                  </button>
-
-                  <div id="mobileNavBtn" class="initial">
-                      <div id="mobileNavBtn-FC">
-                          <div class="mobileNav-head">
-                              <h1>Menu</h1>
-                          </div>
-
-                          <a href="../pages/portfolio.html" class="mobileNav-item">
-                            <p>Portfolio</p>
-                            <div></div>
-                          </a>
-                          <a  href="../pages/aboutUs.html"class="mobileNav-item">
-                            <p>About Us</p>
-                            <div></div>
-                          </a>
-                          <a href="../pages/unseenJourney.html" class="mobileNav-item">
-                            <p>Stories</p>
-                            <div></div>
-                          </a>
-                          <a href="../pages/FAQ.html" class="mobileNav-item">
-                            <p>FAQ's</p>
-                            <div></div>
-                          </a>
-                          <a href="/" class="mobileNav-item">
-                            <p>Pricing</p>
-                            <div></div>
-                          </a>
-                          <a href="../pages/contactUs.html" class="mobileNav-item">
-                            <p>Contact Us</p>
-                            <div></div>
-                          </a>
-
-                      </div>
-                  </div>
-              </div>
-
+            <div id="navbtnplacer">
+            </div>
           </div>
 
           <div class="border-bottom"></div>
-      </nav>
-        <div class="aboutUsMain">
-            <div class="frombelowanim">
-                <h1 class="headerh1andicon"><span>Awesome</span></h1>
+        </nav>
 
-                <div class="headerpandicon">
-                    <p>With passion and precision, we craft every project with care. Join us on this creative journey!
-                    </p>
-                </div>
-            </div>
-            <div class="frombelowanim">
-                <h1>Projects</h1>
-                <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
-            </div>
-        </div>
-    </section>
-
-    <section id="ourWorkSec" class="contentCont">
-        <div class="borderBottom contentCont"> <div></div></div>
-         
-        <div class="themeheading">
-            <span class="themedot"></span>
-            <span class="themetitle">Our Work</span>
-        </div>
-
-
-        <div class="ourWorkWrapper">
-           <div >
-            <h2 class="first"><span class="animarrow">
-                <span class="orig"><svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M41.6211 15.3333L26.8938 0.606017L24.7724 2.72734L35.8785 13.8333L0.499774 13.8333L0.499774 16.8333L35.8785 16.8333L24.7724 27.9393L26.8938 30.0607L41.6211 15.3333Z"
-                        fill="black" />
-                </svg></span>
-                <span class="dup">
-                    <svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M41.6211 15.3333L26.8938 0.606017L24.7724 2.72734L35.8785 13.8333L0.499774 13.8333L0.499774 16.8333L35.8785 16.8333L24.7724 27.9393L26.8938 30.0607L41.6211 15.3333Z"
-                            fill="black" />
-                    </svg>
-                </span>
-            </span>
-            WE PROUDLY
-        </h2>
-        <h2>
-            PRESENT A SELECTION OF OUR CREATIVE PROJECTS. EACH PROJECT REPRESENTS OUR PASSION <span class="heart">
-                <svg width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25.7165 4.06658L23.8889 6.03009L22.0613 4.06658C17.0145 -1.35552 8.83194 -1.35553 3.78512 4.06657C-1.2617 9.48867 -1.26171 18.2796 3.78511 23.7017L20.2337 41.3734C22.2524 43.5422 25.5254 43.5422 27.5441 41.3734L43.9927 23.7017C49.0395 18.2796 49.0395 9.48867 43.9927 4.06658C38.9458 -1.35552 30.7633 -1.35552 25.7165 4.06658Z" fill="#FF2626"/>
-                    </svg>
-                    
-            </span> FOR DESIGN AND DEVELOPMENT <span>●</span>
-        </h2>
-           </div>
-
-           <div>
-            <p>
-                Every project we undertake is carefully crafted with a keen eye for detail and a passion for excellence. It's time to embark on an extraordinary creative adventure together!
-            </p>
-           </div>
-        </div>
-    </section>
-
-    <section id="workSec">
-        <svg id="animatedlineM" width="231" height="2040" viewBox="0 0 231 2040" fill="none"  preserveAspectRatio="xMidYMax meet" >
-          <path id="animatedlinepathM" d="M181.181 1C183.082 81.0216 123.962 115.903 100.38 134.007C55.6539 165.736 -35.0419 228.725 16.2898 261.276C80.4544 301.969 223.774 292.646 164.545 406.649C105.316 520.656 -44.0356 468.493 86.3046 570.668C216.644 672.843 243.371 630.727 214.835 610.428C174.266 581.571 141.877 713.653 121.769 779.857C101.66 846.06 132.066 855.047 78.376 890.276C44.7617 912.33 25.1426 826.219 99.9739 887.664C174.806 949.109 108.741 975.809 107.277 977.089C33.6838 1017.03 287.839 1147.45 201.116 1181.72C92.7123 1224.56 -10.3996 1173.49 61.0775 1280.69C132.554 1387.88 303.112 1194.83 194.708 1440.22C107.985 1636.54 78.3058 1642.56 64.4736 1624.28C41.562 1576.72 8.36002 1502.65 76.3635 1559.72C103.175 1589.72 145.314 1657.76 160.523 1691.18C179.535 1732.94 162.166 1816.11 138.404 1861.65L128.347 1883.69C119.695 1915 120.596 1956.29 154.671 1959.16C197.265 1962.75 223.955 1984.97 178.985 2038.57" stroke="#FF2626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          
-    
-        <div class="work ">
-    
-          <div class="workhead">
-            <div>
-              <span class="themedot"></span>
-              <span class="themetitle"> Recent Work</span>
-            </div>
-            <div id="workcounter" style="opacity: 0;">
-              01
-            </div>
+        <div class="content">
+          <div>
+            <a href="../pages/portfolio.html" class="nav-link">
+              <div class="non-mousetracker">
+                <div class="text">Portfolio</div>
+                <div class="textbg">Portfolio</div>
+              </div>
+            </a>
+            <a href="../pages/unseenJourney.html" class="nav-link">
+              <div class="non-mousetracker">
+                <div class="text">Stories</div>
+                <div class="textbg">Stories</div>
+              </div>
+            </a>
+            <a href="/" class="nav-link">
+              <div class="non-mousetracker">
+                <div class="text">Pricing</div>
+                <div class="textbg">Pricing</div>
+              </div>
+            </a>
+            <a href="../pages/FAQ.html" class="nav-link">
+              <div class="non-mousetracker">
+                <div class="text">FAQ's</div>
+                <div class="textbg">FAQ's</div>
+              </div>
+            </a>
+            <a href="../pages/contactUs.html" class="nav-link">
+              <div class="non-mousetracker">
+                <div class="text">Contact</div>
+                <div class="textbg">Contact</div>
+              </div>
+            </a>
           </div>
-    
-          <!-- work grid for pc -->
-          <div class="workGrid">
-    
-            <!-- Detail -->
-            <div class="workdetail">
-              
-              <div id="detailRef">
-                <!-- detail item -->
-                <div class="workdetailitem open">
-                  
-                  <h2>
-                    Epoch
-                  </h2>
-                  <ul>
-                    <li>
-                      <span>UX design</span>
-                    </li>
-                    <li>
-                      <span>UI design</span>
-                    </li>
-                    <li>
-                      <span>Web development</span>
-                    </li>
-                  </ul>
-                  <div class="stickybutton">
-                    <a href="../pages/portfolioDetail.html">
-                      <div id="magneticBtn">
-                        <div class="my-button">
-          
-                          <div>
-                            <div id="Btnfirst" class="Btnfirst">
-                              View details
-                            </div>
-                            <div id="Btnsecond" class="Btnsecond">
-                              View details
-                            </div>
-                          </div>
-          
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <!-- detail item -->
-                <div class="workdetailitem">
-                  <h2>
-                    Flora
-                  </h2>
-                  <ul>
-                    <li>
-                      <span>UX design</span>
-                    </li>
-                    <li>
-                      <span>UI design</span>
-                    </li>
-                    <li>
-                      <span>Web development</span>
-                    </li>
-                  </ul>
-                  <div class="stickybutton">
-                    <a href="../pages/portfolioDetail.html">
-                      <div id="magneticBtn">
-                        <div class="my-button">
-          
-                          <div>
-                            <div id="Btnfirst" class="Btnfirst">
-                              View details
-                            </div>
-                            <div id="Btnsecond" class="Btnsecond">
-                              View details
-                            </div>
-                          </div>
-          
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <!-- detail item -->
-                <div class="workdetailitem">
-                  <h2>
-                    Furniture
-                  </h2>
-                  <ul>
-                    <li>
-                      <span>UX design</span>
-                    </li>
-                    <li>
-                      <span>UI design</span>
-                    </li>
-                    <li>
-                      <span>Web development</span>
-                    </li>
-                  </ul>
-                  <div class="stickybutton">
-                    <a href="../pages/portfolioDetail.html">
-                      <div id="magneticBtn">
-                        <div class="my-button">
-          
-                          <div>
-                            <div id="Btnfirst" class="Btnfirst">
-                              View details
-                            </div>
-                            <div id="Btnsecond" class="Btnsecond">
-                              View details
-                            </div>
-                          </div>
-          
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <!-- detail item -->
-                <div class="workdetailitem">
-                  <h2>
-                    Tavern
-                  </h2>
-                  <ul>
-                    <li>
-                      <span>UX design</span>
-                    </li>
-                    <li>
-                      <span>UI design</span>
-                    </li>
-                    <li>
-                      <span>Web development</span>
-                    </li>
-                  </ul>
-                  <div class="stickybutton non-mousetracker">
-                    <a href="../pages/portfolioDetail.html">
-                      <div id="magneticBtn">
-                        <div class="my-button">
-          
-                          <div>
-                            <div id="Btnfirst" class="Btnfirst">
-                              View details
-                            </div>
-                            <div id="Btnsecond" class="Btnsecond">
-                              View details
-                            </div>
-                          </div>
-          
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-    
-            </div>
-    
-            <!-- images scroller -->
-            <div class="workimage">
-              <div id="imgRef" >
-                <svg id="animatedline" width="623" height="3539" viewBox="0 0 623 3539" fill="none"  preserveAspectRatio="xMidYMax meet" >
-                  <path id="animatedlinepath"  d="M270.846 2C149.851 87.8711 -95.5014 258.346 43.3622 346.445C216.942 456.577 604.654 431.346 444.426 739.888C284.199 1048.44 -119.831 907.264 232.768 1183.79C585.366 1460.32 657.667 1346.34 580.471 1291.4C470.723 1213.3 383.104 1570.77 328.706 1749.95C274.308 1929.13 348.243 2089.16 203 2184.5C112.066 2244.19 58.9916 2011.13 261.427 2177.43C463.863 2343.73 293.462 2280.28 289.504 2283.75C90.4171 2391.84 777.963 2744.82 543.358 2837.58C250.102 2953.52 -28.8384 2815.31 164.523 3105.42C357.884 3395.53 819.279 2873.03 526.024 3537.19" stroke="#FF2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                <!-- <img id="animatedline" src="assets/icons/animline.svg" alt="animatedline"> -->
-                <div>
-                  <a href="../pages/portfolioDetail.html">
-                    <img src="../assets/images/Work/DESIGN.png" alt="workImage" />
-                  </a>
-                </div>
-                <div>
-                  <a href="../pages/portfolioDetail.html">
-                    <img src="../assets/images/Work/DESIGN-1.png" alt="workImage" />
-                  </a>
-                </div>
-                <div>
-                  <a href="../pages/portfolioDetail.html">
-                    <img src="../assets/images/Work/DESIGN-2.png" alt="workImage" />
-                  </a>
-                </div>
-                <div>
-                  <a href="../pages/portfolioDetail.html">
-                    <img src="../assets/images/Work/DESIGN-3.png" alt="workImage" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- work flex for mobile -->
-          <div class="workflex">
-              
-            <div class="work-card">
-              <div class="work-card-head">
-                <div>
-                  <h2>Epoch.</h2>
-                </div>
-                <div>
-                  <p>01</p>
-                </div>
-              </div>
-              <div class="work-card-img">
-                <a href="/"><img src="../assets/images/Work/DESIGN.png" alt=""></a>
-              </div>
-              <div class="work-card-detail">
-                <div>
-                  <ul>
-                    <li>
-                      <span>UX design</span>
-                    </li>
-                    <li>
-                      <span>UI design</span>
-                    </li>
-                    <li>
-                      <span>Web development</span>
-                    </li>
-                  </ul>
-                </div>
-                <!-- sticky button -->
-                <div class="stickybutton">
-                  <a href="../pages/portfolioDetail.html">
-                    <div class="magneticBtn">
-                      <div class="my-button">
-    
-                        <div>
-                          <div class="Btnfirst">
-                            View details
-                          </div>
-                        </div>
-    
-                      </div>
-                    </div>
-                  </a>
-                </div>
-    
-              </div>
-            </div>
-    
-            <div class="work-card">
-              <div class="work-card-head">
-                <div>
-                  <h2>Flora.</h2>
-                </div>
-                <div>
-                  <p>02</p>
-                </div>
-              </div>
-              <div class="work-card-img">
-                <a href="/">
-                  <img src="../assets/images/Work/DESIGN-1.png" alt="">
-                </a>
-              </div>
-              <div class="work-card-detail">
-                <div>
-                  <ul>
-                    <li>
-                      <span>UX design</span>
-                    </li>
-                    <li>
-                      <span>UI design</span>
-                    </li>
-                    <li>
-                      <span>Web development</span>
-                    </li>
-                  </ul>
-                </div>
-                <!-- sticky button -->
-                <div class="stickybutton">
-                  <a href="../pages/portfolioDetail.html">
-                    <div class="magneticBtn">
-                      <div class="my-button">
-    
-                        <div>
-                          <div class="Btnfirst">
-                            View details
-                          </div>
-                        </div>
-    
-                      </div>
-                    </div>
-                  </a>
-                </div>
-    
-              </div>
-            </div>
-    
-            <div class="work-card">
-              <div class="work-card-head">
-                <div>
-                  <h2>Furniture.</h2>
-                </div>
-                <div>
-                  <p>03</p>
-                </div>
-              </div>
-              <div class="work-card-img">
-                <a href="/">
-                  <img src="../assets/images/Work/DESIGN-2.png" alt="">
-                </a>
-              </div>
-              <div class="work-card-detail">
-                <div>
-                  <ul>
-                    <li>
-                      <span>UX design</span>
-                    </li>
-                    <li>
-                      <span>UI design</span>
-                    </li>
-                    <li>
-                      <span>Web development</span>
-                    </li>
-                  </ul>
-                </div>
-                <!-- sticky button -->
-                <div class="stickybutton">
-                  <a href="../pages/portfolioDetail.html">
-                    <div class="magneticBtn">
-                      <div class="my-button">
-    
-                        <div>
-                          <div class="Btnfirst">
-                            View details
-                          </div>
-                        </div>
-    
-                      </div>
-                    </div>
-                  </a>
-                </div>
-    
-              </div>
-            </div>
-            <div class="work-card">
-              <div class="work-card-head">
-                <div>
-                  <h2>Tavern.</h2>
-                </div>
-                <div>
-                  <p>04</p>
-                </div>
-              </div>
-              <div class="work-card-img">
-                <a href="/">
-                  <img src="../assets/images/Work/DESIGN-3.png" alt="">
-                </a>
-              </div>
-              <div class="work-card-detail">
-                <div>
-                  <ul>
-                    <li>
-                      <span>UX design</span>
-                    </li>
-                    <li>
-                      <span>UI design</span>
-                    </li>
-                    <li>
-                      <span>Web development</span>
-                    </li>
-                  </ul>
-                </div>
-                <!-- sticky button -->
-                <div class="stickybutton">
-                  <a href="../pages/portfolioDetail.html">
-                    <div class="magneticBtn">
-                      <div class="my-button">
-    
-                        <div>
-                          <div class="Btnfirst">
-                            View details
-                          </div>
-                        </div>
-    
-                      </div>
-                    </div>
-                  </a>
-                </div>
-    
-              </div>
-            </div>
-    
-          </div>
-    
-    
-          <div class="morework">
-            <a href="/">
+
+          <div id="navigation-cards">
+            <a class="card" href="../pages/brandIdentity.html">
               <div>
-                More work
-                <div></div>
+                <h5>Brand Identity</h5>
+                <p>Creative strategies for brands.</h>
               </div>
-              <span>
-                <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-              </span>
+              <div>
+                <div class="animicon" id="aicon-navbar-brand"></div>
+              </div>
+            </a>
+            <a class="card" href="../pages/UIUX.html">
+              <div>
+                <h5>UI UX</h5>
+                <p>Handcraft the user experience.</h>
+              </div>
+              <div>
+                <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
+              </div>
+            </a>
+            <a class="card" href="../pages/webDevelopment.html">
+              <div>
+                <h5>Development</h5>
+                <p>Leverage the power of code.</h>
+              </div>
+              <div>
+                <div class="animicon" id="aicon-navbar-development"></div>
+              </div>
             </a>
           </div>
         </div>
-      </section>
 
-    <section id="footer">
-        <section id="ideasSec">
+        <div class="footer">
+          <div class="border-top"></div>
+          <!-- <div class="creator">Made by Xaib</div> -->
+          <a href="/" class="LinkhoverGroup creator" style="cursor: unset;">
+            <div class="textonly">
+              <div class="visibleTag">Made by Xaib</div>
+              <div class="hiddenTag">Made by Xaib</div>
+            </div>
+          </a>
 
-            <div id="ideasCon">
+          <div class="icons">
+            <a href="/" class="LinkhoverGroup non-mousetracker">
+              <div class="icononly">
+                <img class="visibleTag" src="../assets/icons/header/dribble.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/header/dribble.svg" alt="">
+              </div>
+            </a>
 
-                <div class="animated-head">
+            <a href="/" class="LinkhoverGroup non-mousetracker">
+              <div class="icononly">
+                <img class="visibleTag" src="../assets/icons/header/linkedin.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/header/linkedin.svg" alt="">
+              </div>
+            </a>
 
-                    <h1>Let’s turn your<br>
-                        idea into reality</h1>
-                    <div>
-                        <svg width="663" height="283" viewBox="0 0 663 283" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="Frame 1000003707">
-                                <path id="Ellipse 1228"
-                                    d="M565.886 97.6308C568.123 109.835 563.977 122.775 554.226 135.808C544.474 148.843 529.205 161.84 509.502 174.048C470.105 198.46 413.258 219.545 348.304 231.45C283.349 243.356 222.719 243.803 177.226 234.952C154.474 230.525 135.587 223.788 121.846 215.059C108.108 206.332 99.6412 195.704 97.4043 183.499C95.1674 171.295 99.3139 158.355 109.064 145.322C118.816 132.288 134.085 119.29 153.788 107.082C193.185 82.6705 250.032 61.5855 314.987 49.6799C379.942 37.7743 440.571 37.3268 486.065 46.1783C508.817 50.605 527.703 57.3422 541.444 66.0708C555.183 74.7982 563.649 85.4265 565.886 97.6308Z"
-                                    stroke="#EAEAEA" stroke-width="3"></path>
-                                <path id="*"
-                                    d="M314.452 232.835L302.087 225.678L308.151 215.93L319.981 222.567C326.857 226.381 330.512 229.377 334.255 233.018C333.989 227.729 334.296 222.759 335.634 215.679L338.273 201.721L349.684 203.878L347.045 217.836C345.706 224.916 343.897 230.022 341.998 234.482C346.775 232.661 351.309 231.004 358.9 229.925L372.578 227.902L374.83 239.432L360.502 241.542C353.319 242.698 347.868 242.506 343.067 242.226C346.657 246.677 349.102 250.491 351.826 257.292L357.631 270.123L347.034 274.824L341.191 262.195C338.059 255.318 336.697 250.241 335.667 245.646C333.119 250.193 329.998 254.422 324.89 259.113L314.635 268.698L306.283 260.414L316.371 250.588C321.798 245.329 325.912 242.545 330.433 239.838C324.474 237.873 319.94 236.178 314.452 232.835Z"
-                                    fill="#FF2626"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                                <circle id="Ellipse 1229" cx="270.001" cy="62.1572" r="15.9552"
-                                    transform="rotate(10.7066 270.001 62.1572)" fill="#FF2626"
-                                    style="transform: translate(0px, 0px) rotate(10.7066deg) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </circle>
-                                <path id="Vector"
-                                    d="M141.509 182.705L153.03 184.883C148.049 211.221 143.075 237.561 138.088 263.897L126.571 261.719C127.946 254.435 129.326 247.152 130.701 239.867C127.035 243.135 123.088 246.067 119.05 248.848C115.205 251.48 111.27 253.983 107.24 256.319C104.831 252.792 102.422 249.264 100.013 245.736C104.425 242.38 108.988 239.225 113.68 236.278C117.784 233.721 121.994 231.308 126.423 229.366C128.396 228.509 130.418 227.749 132.505 227.228C129.62 227.32 126.733 227.175 123.86 226.923C119.932 226.571 116.027 226.01 112.143 225.333C108.064 224.615 104.006 223.781 99.9837 222.796L102.363 210.212C105.57 210.576 108.764 211.045 111.948 211.58C116.233 212.306 120.499 213.164 124.709 214.249C127.853 215.065 130.973 216.002 133.994 217.204C131.915 215.658 130.055 213.837 128.294 211.938C125.588 209 123.124 205.844 120.777 202.61C117.325 197.822 114.11 192.861 111.134 187.759C114.664 185.352 118.195 182.948 121.727 180.544C125.259 185.179 128.579 189.979 131.66 194.93C133.693 198.215 135.614 201.574 137.281 205.064C138.692 197.612 140.1 190.158 141.509 182.705Z"
-                                    fill="#EAEAEA"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                                <path id="Vector_2"
-                                    d="M507.515 32.3699L547.499 39.9297L538.87 85.565C532.984 84.4535 527.097 83.3406 521.211 82.2284C520.79 84.4712 520.35 86.7097 519.947 88.956C519.707 90.4817 519.563 92.0842 520.026 93.5821C520.344 94.6792 521.131 95.5995 522.102 96.1727C523.226 96.8352 524.503 97.1711 525.773 97.4214C529.266 98.0841 532.761 98.7379 536.253 99.406L532.58 118.834C529.859 118.322 527.14 117.806 524.42 117.293C522.548 116.928 520.665 116.617 518.81 116.169C514.693 115.183 510.655 113.672 507.117 111.308C503.352 108.831 500.285 105.216 498.675 100.967C497.041 96.7579 496.765 92.1312 497.217 87.6655C497.365 86.0818 497.64 84.515 497.95 82.9564C501.139 66.0942 504.327 49.2321 507.515 32.3699Z"
-                                    fill="#EAEAEA"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                            </g>
-                        </svg>
+            <a href="/" class="LinkhoverGroup non-mousetracker">
+              <div class="icononly">
+                <img class="visibleTag" src="../assets/icons/header/instagram.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/header/instagram.svg" alt="">
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </header>
+    </div>
+  </section>
+
+  <section id="aboutUsHeader" class="contentCont herosection">
+    <nav>
+      <div class="logoimg">
+        <div class="desk">
+          <a href="/">
+            <lottie-player class="logoanim"
+              src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+          </a>
+        </div>
+        <a href="/">
+          <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+        </a>
+      </div>
+      <div class="navlinkscenter">
+        <!-- nav link -->
+        <a href="/" class="nav-link non-mousetracker">
+          <div class="text">Home</div>
+          <div class="textbg">Home</div>
+        </a>
+        <!-- nav link -->
+        <a href="./portfolio.html" class="nav-link non-mousetracker">
+          <div class="text">Portfolio</div>
+          <div class="textbg">Portfolio</div>
+        </a>
+        <!-- nav link -->
+        <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
+          <div class="text">About Us</div>
+          <div class="textbg">About Us</div>
+        </a>
+        <!-- nav link -->
+        <a href="/" class="nav-link non-mousetracker">
+          <div class="text">Pricing</div>
+          <div class="textbg">Pricing</div>
+        </a>
+      </div>
+      <div>
+        <div class="line"></div>
+        <!-- nav link -->
+        <div class="nav-link non-mousetracker">
+          <div class="text">Login</div>
+          <div class="textbg">Login</div>
+        </div>
+
+        <div class="HeadrnavBtn">
+          <button id="navAnimatedIcon" onclick="toggleNav()">
+            <div id="hamburger-line1"></div>
+            <div id="hamburger-line2"></div>
+          </button>
+
+          <div id="mobileNavBtn" class="initial">
+            <div id="mobileNavBtn-FC">
+              <div class="mobileNav-head">
+                <h1>Menu</h1>
+              </div>
+
+              <a href="../pages/portfolio.html" class="mobileNav-item">
+                <p>Portfolio</p>
+                <div></div>
+              </a>
+              <a href="../pages/aboutUs.html" class="mobileNav-item">
+                <p>About Us</p>
+                <div></div>
+              </a>
+              <a href="../pages/unseenJourney.html" class="mobileNav-item">
+                <p>Stories</p>
+                <div></div>
+              </a>
+              <a href="../pages/FAQ.html" class="mobileNav-item">
+                <p>FAQ's</p>
+                <div></div>
+              </a>
+              <a href="/" class="mobileNav-item">
+                <p>Pricing</p>
+                <div></div>
+              </a>
+              <a href="../pages/contactUs.html" class="mobileNav-item">
+                <p>Contact Us</p>
+                <div></div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-bottom"></div>
+    </nav>
+    <div class="aboutUsMain">
+      <div class="frombelowanim">
+        <h1 class="headerh1andicon"><span>Awesome</span></h1>
+
+        <div class="headerpandicon">
+          <p>With passion and precision, we craft every project with care. Join us on this creative journey!
+          </p>
+        </div>
+      </div>
+      <div class="frombelowanim">
+        <h1>Projects</h1>
+        <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
+      </div>
+    </div>
+  </section>
+
+  <section id="ourWorkSec" class="contentCont">
+    <div class="borderBottom contentCont">
+      <div></div>
+    </div>
+
+    <div class="themeheading">
+      <span class="themedot"></span>
+      <span class="themetitle">Our Work</span>
+    </div>
+
+
+    <div class="ourWorkWrapper">
+      <div>
+        <h2 class="first"><span class="animarrow">
+            <span class="orig"><svg width="42" height="31" viewBox="0 0 42 31" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M41.6211 15.3333L26.8938 0.606017L24.7724 2.72734L35.8785 13.8333L0.499774 13.8333L0.499774 16.8333L35.8785 16.8333L24.7724 27.9393L26.8938 30.0607L41.6211 15.3333Z"
+                  fill="black" />
+              </svg></span>
+            <span class="dup">
+              <svg width="42" height="31" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M41.6211 15.3333L26.8938 0.606017L24.7724 2.72734L35.8785 13.8333L0.499774 13.8333L0.499774 16.8333L35.8785 16.8333L24.7724 27.9393L26.8938 30.0607L41.6211 15.3333Z"
+                  fill="black" />
+              </svg>
+            </span>
+          </span>
+          WE PROUDLY
+        </h2>
+        <h2>
+          PRESENT A SELECTION OF OUR CREATIVE PROJECTS. EACH PROJECT REPRESENTS OUR PASSION <span class="heart">
+            <svg width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M25.7165 4.06658L23.8889 6.03009L22.0613 4.06658C17.0145 -1.35552 8.83194 -1.35553 3.78512 4.06657C-1.2617 9.48867 -1.26171 18.2796 3.78511 23.7017L20.2337 41.3734C22.2524 43.5422 25.5254 43.5422 27.5441 41.3734L43.9927 23.7017C49.0395 18.2796 49.0395 9.48867 43.9927 4.06658C38.9458 -1.35552 30.7633 -1.35552 25.7165 4.06658Z"
+                fill="#FF2626" />
+            </svg>
+
+          </span> FOR DESIGN AND DEVELOPMENT <span>●</span>
+        </h2>
+      </div>
+
+      <div>
+        <p>
+          Every project we undertake is carefully crafted with a keen eye for detail and a passion for excellence. It's
+          time to embark on an extraordinary creative adventure together!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="workSec">
+    <svg id="animatedlineM" width="385" height="5772" viewBox="0 0 385 5772" fill="none" >
+      <path id="animatedlinepathM" d="M183.503 1C169.762 50.765 168.823 117.594 208.706 154.473C250.828 193.422 188.081 232.663 202.025 292.25C227.36 400.513 156.655 419.052 165.712 468.395C176.17 525.366 199.443 586.418 209.922 634.285C231.212 731.537 286.971 902.043 339.692 806.087C405.593 686.14 93.2157 752.523 151.569 843.124C198.251 915.605 209.922 1060.61 209.922 1124.05C214.374 1176.95 212 1281.5 166.665 1279.05C110.054 1275.34 94.9575 1223.77 136.473 1201.55C177.987 1179.32 283.372 1140.58 287.146 1299.56C290.165 1426.75 196.277 1482.19 158.826 1510.96C87.7962 1561.39 -56.2383 1661.51 25.2817 1713.25C127.182 1777.93 354.789 1763.11 260.727 1944.32C166.665 2125.52 -70.5212 2042.61 136.473 2205.02C343.466 2367.42 385.91 2300.48 340.592 2268.21C276.164 2222.35 224.728 2432.28 192.793 2537.51C160.859 2642.74 209.146 2657.02 123.881 2713.02C70.4982 2748.07 39.3409 2611.2 158.181 2708.87C277.021 2806.53 172.103 2848.97 169.779 2851C52.9054 2914.49 456.53 3121.78 318.805 3176.26C146.649 3244.35 -17.1037 3163.18 96.4094 3333.56C209.922 3503.94 480.785 3197.08 308.629 3587.13C170.904 3899.17 123.77 3908.74 101.803 3879.68C65.4168 3804.08 12.6885 3686.36 120.685 3777.07C163.265 3824.75 230.186 3932.91 254.34 3986.01C284.532 4052.4 256.949 4184.6 219.212 4256.97L203.241 4292.01C189.5 4341.78 190.932 4407.4 245.046 4411.96C312.689 4417.66 355.075 4452.99 283.658 4538.18C212.241 4623.37 24.6976 4647.87 186.693 4721.66C316.289 4780.7 234.567 4846.45 245.046 4894.32C266.336 4991.57 322.096 5162.08 374.816 5066.12C440.718 4946.18 128.34 5012.56 186.693 5103.16C233.375 5175.64 245.046 5320.64 245.046 5384.08C249.497 5436.99 247.078 5542.05 201.789 5539.08C145.178 5535.38 130.082 5483.81 171.596 5461.58C213.111 5439.36 318.495 5400.61 322.269 5559.6C325.289 5686.78 231.401 5742.22 193.951 5771" stroke="#FF2626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      
+
+
+    <div class="work ">
+
+      <div class="workhead">
+        <div>
+          <span class="themedot"></span>
+          <span class="themetitle"> Recent Work</span>
+        </div>
+        <div id="workcounter" style="opacity: 0;">
+          01
+        </div>
+      </div>
+
+      <!-- work grid for pc -->
+      <div class="workGrid">
+
+        <!-- Detail -->
+        <div class="workdetail">
+
+          <div id="detailRef">
+            <!-- detail item -->
+            <div class="workdetailitem open">
+
+              <h2>
+                Epoch1
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
+
                     </div>
-                </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+              <h2>
+                Flora2
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
 
-
-                <div class="ideasproducts">
-                    <p>Designed Products across various Industries Fintech • Healthcare • SASS • <span
-                            style="display: inline-block;">E-commerce</span> • Retail • Realestate
-                    </p>
-
-                    <div class="tabsflex">
-                        <a href="../pages/portfolio.html" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Work</div>
-                                <div class="hiddenTag">Work</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
-
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Process</div>
-                                <div class="hiddenTag">Process</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="../pages/aboutUs.html" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">About</div>
-                                <div class="hiddenTag">About</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a><a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Plans</div>
-                                <div class="hiddenTag">Plans</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
-
-                        </a><a href="../pages/contactUs.html" class="LinkhoverGroup mob-only">
-                            <div>
-                                <div class="visibleTag">Contact Us</div>
-                                <div class="hiddenTag">Contact Us</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
-
-                        </a><a href="/" class="LinkhoverGroup mob-only">
-                            <div>
-                                <div class="visibleTag">Services</div>
-                                <div class="hiddenTag">Services</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
 
                     </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+              <h2>
+                Furniture3
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
 
-                    <div class="tabsflex">
-                        </a><a href="../pages/contactUs.html" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Contact Us</div>
-                                <div class="hiddenTag">Contact Us</div>
-                            </div>
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
 
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
-
-                        </a><a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Services</div>
-                                <div class="hiddenTag">Services</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
                     </div>
-                </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+              <h2>
+                Tavern4
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton non-mousetracker">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+
+              <h2>
+                Epoch5
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+              <h2>
+                Flora6
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+              <h2>
+                Furniture7
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+              <h2>
+                Tavern8
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton non-mousetracker">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+              <h2>
+                Furniture9
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- detail item -->
+            <div class="workdetailitem">
+              <h2>
+                Tavern10
+              </h2>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+              <div class="stickybutton non-mousetracker">
+                <a href="../pages/portfolioDetail.html">
+                  <div id="magneticBtn">
+                    <div class="my-button">
+
+                      <div>
+                        <div id="Btnfirst" class="Btnfirst">
+                          View details
+                        </div>
+                        <div id="Btnsecond" class="Btnsecond">
+                          View details
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            <div class="idea-marquee-wrap">
-                <div class="idea-marquee-con">
-                    <div id="idea-marquee">
-                        <div id="idea-marquee-first">
-                            <div>JUST GREAT WORK</div>
-                            <img src="../assets/icons/steric-med.svg" alt="" />
-                            <div>JUST GREAT WORK</div>
-                            <img src="../assets/icons/steric-med.svg" alt="" />
-                        </div>
-                        <div id="idea-marquee-second">
-                            <div>JUST GREAT WORK</div>
-                            <img src="../assets/icons/steric-med.svg" alt="" />
-                            <div>JUST GREAT WORK</div>
-                            <img src="../assets/icons/steric-med.svg" alt="" />
-                        </div>
-                        <div id="idea-marquee-third">
-                            <div>JUST GREAT WORK</div>
-                            <img src="../assets/icons/steric-med.svg" alt="" />
-                            <div>JUST GREAT WORK</div>
-                            <img src="../assets/icons/steric-med.svg" alt="" />
-                        </div>
-                    </div>
-                </div>
+          </div>
+
+        </div>
+
+        <!-- images scroller -->
+        <div class="workimage">
+          <div id="imgRef">
+            <!-- <svg id="animatedline" width="623" height="3539" viewBox="0 0 623 3539" fill="none"
+              preserveAspectRatio="xMidYMax meet">
+              <path id="animatedlinepath"
+                d="M270.846 2C149.851 87.8711 -95.5014 258.346 43.3622 346.445C216.942 456.577 604.654 431.346 444.426 739.888C284.199 1048.44 -119.831 907.264 232.768 1183.79C585.366 1460.32 657.667 1346.34 580.471 1291.4C470.723 1213.3 383.104 1570.77 328.706 1749.95C274.308 1929.13 348.243 2089.16 203 2184.5C112.066 2244.19 58.9916 2011.13 261.427 2177.43C463.863 2343.73 293.462 2280.28 289.504 2283.75C90.4171 2391.84 777.963 2744.82 543.358 2837.58C250.102 2953.52 -28.8384 2815.31 164.523 3105.42C357.884 3395.53 819.279 2873.03 526.024 3537.19"
+                stroke="#FF2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg> -->
+
+            <svg id="animatedline" width="663" height="9929" viewBox="0 0 663 9929" fill="none" preserveAspectRatio="xMidYMax meet">
+              <path id="animatedlinepath" d="M316.121 2C292.47 87.6044 290.854 202.562 359.5 266C432 333 324 400.5 348 503C391.606 689.232 269.91 721.122 285.5 806C303.5 904 343.557 1009.02 361.593 1091.36C398.236 1258.65 494.209 1551.95 584.951 1386.89C698.379 1180.56 160.72 1294.75 261.156 1450.6C341.505 1575.28 361.593 1824.71 361.593 1933.84C369.255 2024.84 365.09 2205.55 287.14 2200.46C189.701 2194.09 163.718 2105.38 235.173 2067.15C306.627 2028.92 488.013 1962.27 494.509 2235.74C499.705 2454.53 338.107 2549.9 273.648 2599.4C151.392 2686.15 -96.5176 2858.37 43.7933 2947.37C219.182 3058.63 610.935 3033.14 449.037 3344.84C287.14 3656.55 -121.101 3513.93 235.173 3793.29C591.446 4072.65 664.5 3957.5 586.5 3902C475.608 3823.1 387.076 4184.23 332.111 4365.24C277.146 4546.25 360.258 4570.82 213.501 4667.14C121.619 4727.44 67.9917 4492 272.537 4660C477.083 4828 296.5 4901 292.5 4904.5C91.3386 5013.7 786.05 5370.29 549 5464C252.688 5581.13 -29.1598 5441.5 166.217 5734.58C361.593 6027.66 827.797 5499.82 531.485 6170.77C294.435 6707.53 213.309 6723.99 175.5 6674C112.873 6543.96 22.118 6341.45 208 6497.5C281.287 6579.51 396.47 6765.56 438.044 6856.91C490.011 6971.11 442.535 7198.51 377.582 7323L350.093 7383.28C326.442 7468.89 328.907 7581.77 422.048 7589.62C538.474 7599.42 611.428 7660.19 488.506 7806.73C365.584 7953.27 42.7879 7995.42 321.611 8122.36C544.669 8223.91 404.012 8337.02 422.048 8419.36C458.691 8586.65 554.664 8879.95 645.406 8714.89C758.834 8508.56 221.175 8622.75 321.611 8778.6C401.96 8903.28 422.048 9152.71 422.048 9261.84C429.709 9352.84 425.545 9533.56 347.594 9528.46C250.156 9522.09 224.173 9433.38 295.627 9395.15C367.082 9356.92 548.467 9290.27 554.963 9563.75C560.16 9782.53 398.562 9877.9 334.103 9927.4" stroke="#FF2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              
+            <!-- <img id="animatedline" src="assets/icons/animline.svg" alt="animatedline"> -->
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN-1.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN-2.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN-3.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN-1.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN-2.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN-3.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN.png" alt="workImage" />
+              </a>
+            </div>
+            <div>
+              <a href="../pages/portfolioDetail.html">
+                <img src="../assets/images/Work/DESIGN-1.png" alt="workImage" />
+              </a>
             </div>
 
-        </section>
 
-        <section class="footerSec">
-            <div class="spacer"></div>
-            <div class="footerCon">
-                <div>
-                    <h1>Reach Us</h1>
-                    <p><img src="../assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
-                    <p><img src="../assets/icons/pk.svg" alt=""> +92 8754 3864</p>
-                    <a href="/" class="LinkhoverGroup">
-                        <div>
-                            <div class="visibleTag">business@webpioneers.com</div>
-                            <div class="hiddenTag">business@webpioneers.com</div>
-                        </div>
+          </div>
+        </div>
+      </div>
 
-                        <div>
-                            <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                            <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div>
-                    <div>
-                        <h1>Social</h1>
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">linkedin</div>
-                                <div class="hiddenTag">linkedin</div>
-                            </div>
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Instagram</div>
-                                <div class="hiddenTag">Instagram</div>
-                            </div>
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Dribble</div>
-                                <div class="hiddenTag">Dribble</div>
-                            </div>
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h1>Quick</h1>
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Pricing</div>
-                                <div class="hiddenTag">Pricing</div>
-                            </div>
+      <!-- work flex for mobile -->
+      <div class="workflex">
 
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="../pages/aboutUs.html" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">About</div>
-                                <div class="hiddenTag">About</div>
-                            </div>
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Team</div>
-                                <div class="hiddenTag">Team</div>
-                            </div>
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h1>Legal</h1>
-
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Privacy</div>
-                                <div class="hiddenTag">Privacy</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                            </div>
-                        </a>
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Terms</div>
-                                <div class="hiddenTag">Terms</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Epoch.</h2>
             </div>
-        </section>
+            <div>
+              <p>01</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/"><img src="../assets/images/Work/DESIGN.png" alt=""></a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Flora.</h2>
+            </div>
+            <div>
+              <p>02</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/">
+              <img src="../assets/images/Work/DESIGN-1.png" alt="">
+            </a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Furniture.</h2>
+            </div>
+            <div>
+              <p>03</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/">
+              <img src="../assets/images/Work/DESIGN-2.png" alt="">
+            </a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Tavern.</h2>
+            </div>
+            <div>
+              <p>04</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/">
+              <img src="../assets/images/Work/DESIGN-3.png" alt="">
+            </a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Epoch.</h2>
+            </div>
+            <div>
+              <p>01</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/"><img src="../assets/images/Work/DESIGN.png" alt=""></a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Flora.</h2>
+            </div>
+            <div>
+              <p>02</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/">
+              <img src="../assets/images/Work/DESIGN-1.png" alt="">
+            </a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Furniture.</h2>
+            </div>
+            <div>
+              <p>03</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/">
+              <img src="../assets/images/Work/DESIGN-2.png" alt="">
+            </a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Tavern.</h2>
+            </div>
+            <div>
+              <p>04</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/">
+              <img src="../assets/images/Work/DESIGN-3.png" alt="">
+            </a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Epoch.</h2>
+            </div>
+            <div>
+              <p>01</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/"><img src="../assets/images/Work/DESIGN.png" alt=""></a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card-head">
+            <div>
+              <h2>Flora.</h2>
+            </div>
+            <div>
+              <p>02</p>
+            </div>
+          </div>
+          <div class="work-card-img">
+            <a href="/">
+              <img src="../assets/images/Work/DESIGN-1.png" alt="">
+            </a>
+          </div>
+          <div class="work-card-detail">
+            <div>
+              <ul>
+                <li>
+                  <span>UX design</span>
+                </li>
+                <li>
+                  <span>UI design</span>
+                </li>
+                <li>
+                  <span>Web development</span>
+                </li>
+              </ul>
+            </div>
+            <!-- sticky button -->
+            <div class="stickybutton">
+              <a href="../pages/portfolioDetail.html">
+                <div class="magneticBtn">
+                  <div class="my-button">
+
+                    <div>
+                      <div class="Btnfirst">
+                        View details
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="morework">
+        <a href="/">
+          <div>
+            More work
+            <div></div>
+          </div>
+          <span>
+            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <section id="ideasSec">
+
+      <div id="ideasCon">
+
+        <div class="animated-head">
+
+          <h1>Let’s turn your<br>
+            idea into reality</h1>
+          <div>
+            <svg width="663" height="283" viewBox="0 0 663 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="Frame 1000003707">
+                <path id="Ellipse 1228"
+                  d="M565.886 97.6308C568.123 109.835 563.977 122.775 554.226 135.808C544.474 148.843 529.205 161.84 509.502 174.048C470.105 198.46 413.258 219.545 348.304 231.45C283.349 243.356 222.719 243.803 177.226 234.952C154.474 230.525 135.587 223.788 121.846 215.059C108.108 206.332 99.6412 195.704 97.4043 183.499C95.1674 171.295 99.3139 158.355 109.064 145.322C118.816 132.288 134.085 119.29 153.788 107.082C193.185 82.6705 250.032 61.5855 314.987 49.6799C379.942 37.7743 440.571 37.3268 486.065 46.1783C508.817 50.605 527.703 57.3422 541.444 66.0708C555.183 74.7982 563.649 85.4265 565.886 97.6308Z"
+                  stroke="#EAEAEA" stroke-width="3"></path>
+                <path id="*"
+                  d="M314.452 232.835L302.087 225.678L308.151 215.93L319.981 222.567C326.857 226.381 330.512 229.377 334.255 233.018C333.989 227.729 334.296 222.759 335.634 215.679L338.273 201.721L349.684 203.878L347.045 217.836C345.706 224.916 343.897 230.022 341.998 234.482C346.775 232.661 351.309 231.004 358.9 229.925L372.578 227.902L374.83 239.432L360.502 241.542C353.319 242.698 347.868 242.506 343.067 242.226C346.657 246.677 349.102 250.491 351.826 257.292L357.631 270.123L347.034 274.824L341.191 262.195C338.059 255.318 336.697 250.241 335.667 245.646C333.119 250.193 329.998 254.422 324.89 259.113L314.635 268.698L306.283 260.414L316.371 250.588C321.798 245.329 325.912 242.545 330.433 239.838C324.474 237.873 319.94 236.178 314.452 232.835Z"
+                  fill="#FF2626"
+                  style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                </path>
+                <circle id="Ellipse 1229" cx="270.001" cy="62.1572" r="15.9552"
+                  transform="rotate(10.7066 270.001 62.1572)" fill="#FF2626"
+                  style="transform: translate(0px, 0px) rotate(10.7066deg) rotateX(7.54902deg) rotateY(1.08333deg);">
+                </circle>
+                <path id="Vector"
+                  d="M141.509 182.705L153.03 184.883C148.049 211.221 143.075 237.561 138.088 263.897L126.571 261.719C127.946 254.435 129.326 247.152 130.701 239.867C127.035 243.135 123.088 246.067 119.05 248.848C115.205 251.48 111.27 253.983 107.24 256.319C104.831 252.792 102.422 249.264 100.013 245.736C104.425 242.38 108.988 239.225 113.68 236.278C117.784 233.721 121.994 231.308 126.423 229.366C128.396 228.509 130.418 227.749 132.505 227.228C129.62 227.32 126.733 227.175 123.86 226.923C119.932 226.571 116.027 226.01 112.143 225.333C108.064 224.615 104.006 223.781 99.9837 222.796L102.363 210.212C105.57 210.576 108.764 211.045 111.948 211.58C116.233 212.306 120.499 213.164 124.709 214.249C127.853 215.065 130.973 216.002 133.994 217.204C131.915 215.658 130.055 213.837 128.294 211.938C125.588 209 123.124 205.844 120.777 202.61C117.325 197.822 114.11 192.861 111.134 187.759C114.664 185.352 118.195 182.948 121.727 180.544C125.259 185.179 128.579 189.979 131.66 194.93C133.693 198.215 135.614 201.574 137.281 205.064C138.692 197.612 140.1 190.158 141.509 182.705Z"
+                  fill="#EAEAEA"
+                  style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                </path>
+                <path id="Vector_2"
+                  d="M507.515 32.3699L547.499 39.9297L538.87 85.565C532.984 84.4535 527.097 83.3406 521.211 82.2284C520.79 84.4712 520.35 86.7097 519.947 88.956C519.707 90.4817 519.563 92.0842 520.026 93.5821C520.344 94.6792 521.131 95.5995 522.102 96.1727C523.226 96.8352 524.503 97.1711 525.773 97.4214C529.266 98.0841 532.761 98.7379 536.253 99.406L532.58 118.834C529.859 118.322 527.14 117.806 524.42 117.293C522.548 116.928 520.665 116.617 518.81 116.169C514.693 115.183 510.655 113.672 507.117 111.308C503.352 108.831 500.285 105.216 498.675 100.967C497.041 96.7579 496.765 92.1312 497.217 87.6655C497.365 86.0818 497.64 84.515 497.95 82.9564C501.139 66.0942 504.327 49.2321 507.515 32.3699Z"
+                  fill="#EAEAEA"
+                  style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
+                </path>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+
+        <div class="ideasproducts">
+          <p>Designed Products across various Industries Fintech • Healthcare • SASS • <span
+              style="display: inline-block;">E-commerce</span> • Retail • Realestate
+          </p>
+
+          <div class="tabsflex">
+            <a href="../pages/portfolio.html" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Work</div>
+                <div class="hiddenTag">Work</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+              </div>
+            </a>
+
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Process</div>
+                <div class="hiddenTag">Process</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+              </div>
+            </a>
+            <a href="../pages/aboutUs.html" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">About</div>
+                <div class="hiddenTag">About</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+              </div>
+            </a><a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Plans</div>
+                <div class="hiddenTag">Plans</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+              </div>
+            </a>
+
+            </a><a href="../pages/contactUs.html" class="LinkhoverGroup mob-only">
+              <div>
+                <div class="visibleTag">Contact Us</div>
+                <div class="hiddenTag">Contact Us</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+              </div>
+            </a>
+
+            </a><a href="/" class="LinkhoverGroup mob-only">
+              <div>
+                <div class="visibleTag">Services</div>
+                <div class="hiddenTag">Services</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+              </div>
+            </a>
+
+          </div>
+
+          <div class="tabsflex">
+            </a><a href="../pages/contactUs.html" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Contact Us</div>
+                <div class="hiddenTag">Contact Us</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+              </div>
+            </a>
+
+            </a><a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Services</div>
+                <div class="hiddenTag">Services</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="idea-marquee-wrap">
+        <div class="idea-marquee-con">
+          <div id="idea-marquee">
+            <div id="idea-marquee-first">
+              <div>JUST GREAT WORK</div>
+              <img src="../assets/icons/steric-med.svg" alt="" />
+              <div>JUST GREAT WORK</div>
+              <img src="../assets/icons/steric-med.svg" alt="" />
+            </div>
+            <div id="idea-marquee-second">
+              <div>JUST GREAT WORK</div>
+              <img src="../assets/icons/steric-med.svg" alt="" />
+              <div>JUST GREAT WORK</div>
+              <img src="../assets/icons/steric-med.svg" alt="" />
+            </div>
+            <div id="idea-marquee-third">
+              <div>JUST GREAT WORK</div>
+              <img src="../assets/icons/steric-med.svg" alt="" />
+              <div>JUST GREAT WORK</div>
+              <img src="../assets/icons/steric-med.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Function to reload the page
-            function reloadPage() {
-                location.reload();
-            }
+    <section class="footerSec">
+      <div class="spacer"></div>
+      <div class="footerCon">
+        <div>
+          <h1>Reach Us</h1>
+          <p><img src="../assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
+          <p><img src="../assets/icons/pk.svg" alt=""> +92 8754 3864</p>
+          <a href="/" class="LinkhoverGroup psize">
+            <div>
+              <div class="visibleTag">business@webpioneers.com</div>
+              <div class="hiddenTag">business@webpioneers.com</div>
+            </div>
 
-            // Store the initial window width
-            var initialWidth = window.innerWidth;
+            <div>
+              <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+              <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+            </div>
+          </a>
+        </div>
+        <div>
+          <div>
+            <h1>Social</h1>
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">linkedin</div>
+                <div class="hiddenTag">linkedin</div>
+              </div>
+              <div>
+                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+              </div>
+            </a>
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Instagram</div>
+                <div class="hiddenTag">Instagram</div>
+              </div>
+              <div>
+                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+              </div>
+            </a>
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Dribble</div>
+                <div class="hiddenTag">Dribble</div>
+              </div>
+              <div>
+                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>Quick</h1>
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Pricing</div>
+                <div class="hiddenTag">Pricing</div>
+              </div>
 
-            // Attach the reload function to the window's resize event
-            window.addEventListener("resize", function () {
-                // Check if the width has changed
-                if (window.innerWidth !== initialWidth) {
-                    // Debounce the reload to avoid excessive reloading
-                    clearTimeout(window.resizeTimer);
-                    window.resizeTimer = setTimeout(function () {
-                        reloadPage();
-                    }, 250);
-                }
-            });
+              <div>
+                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+              </div>
+            </a>
+            <a href="../pages/aboutUs.html" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">About</div>
+                <div class="hiddenTag">About</div>
+              </div>
+              <div>
+                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+              </div>
+            </a>
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Team</div>
+                <div class="hiddenTag">Team</div>
+              </div>
+              <div>
+                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>Legal</h1>
+
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Privacy</div>
+                <div class="hiddenTag">Privacy</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+              </div>
+            </a>
+            <a href="/" class="LinkhoverGroup">
+              <div>
+                <div class="visibleTag">Terms</div>
+                <div class="hiddenTag">Terms</div>
+              </div>
+
+              <div>
+                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Function to reload the page
+      function reloadPage() {
+        location.reload();
+      }
+
+      // Store the initial window width
+      var initialWidth = window.innerWidth;
+
+      // Attach the reload function to the window's resize event
+      window.addEventListener("resize", function () {
+        // Check if the width has changed
+        if (window.innerWidth !== initialWidth) {
+          // Debounce the reload to avoid excessive reloading
+          clearTimeout(window.resizeTimer);
+          window.resizeTimer = setTimeout(function () {
+            reloadPage();
+          }, 250);
+        }
+      });
 
 
-            function loadScript(src, callback) {
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = src;
-                script.onload = callback;
-                document.head.appendChild(script);
-            }
+      function loadScript(src, callback) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = src;
+        script.onload = callback;
+        document.head.appendChild(script);
+      }
 
-            // List of scripts to load
-            var scriptsToLoad = [
-                "../scripts/global.js",
-                "../scripts/lenis.js",
-                "../scripts/imagehover.js",
-                "../scripts/animated/figmafooter.js",
-                "../scripts/pages/unseenjourney.js",
-                "../scripts/hero.js",
-                "../scripts/ideas.js",
-                "../scripts/work.js",
-                "../scripts/stickyButton.js",  
-            ];
+      // List of scripts to load
+      var scriptsToLoad = [
+        "../scripts/global.js",
+        "../scripts/lenis.js",
+        "../scripts/imagehover.js",
+        "../scripts/animated/figmafooter.js",
+        "../scripts/pages/unseenjourney.js",
+        "../scripts/hero.js",
+        "../scripts/ideas.js",
+        "../scripts/portfolioWork.js",
+        "../scripts/stickyButton.js",
+      ];
 
-            // Load each script one by one
-            function loadScriptsSequentially(index) {
-                if (index < scriptsToLoad.length) {
-                    loadScript(scriptsToLoad[index], function () {
-                        // Load the next script in the array
-                        loadScriptsSequentially(index + 1);
-                    });
-                }
-            }
+      // Load each script one by one
+      function loadScriptsSequentially(index) {
+        if (index < scriptsToLoad.length) {
+          loadScript(scriptsToLoad[index], function () {
+            // Load the next script in the array
+            loadScriptsSequentially(index + 1);
+          });
+        }
+      }
 
-            loadScriptsSequentially(0);
-        });
-    </script>
+      loadScriptsSequentially(0);
+    });
+  </script>
 </body>
 
 </html>

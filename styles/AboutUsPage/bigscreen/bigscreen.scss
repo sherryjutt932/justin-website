@@ -216,7 +216,7 @@
           overflow: hidden;
 
           p {
-            transition: all 300ms ease;
+            transition: all 300ms linear;
             color: var(--dark);
             font-size: 22px;
             font-style: normal;
@@ -246,7 +246,8 @@
           height: 20px;
           width: 20px;
           * {
-            transition: all 400ms ease;
+            transition: all 300ms linear;
+
           }
 
           img {
@@ -363,7 +364,7 @@
             aspect-ratio: 1;
             border-radius: 100%;
             background-color: var(--sec);
-            transition: all 500ms ease-out;
+            transition: all 300ms linear;
           }
 
           &:hover > div.hovercon {
@@ -374,7 +375,7 @@
           }
 
           & > div.iconcon {
-            transition: all 500ms ease-out;
+            transition: all 300ms linear;
             position: relative;
             z-index: 2;
             width: 145px;

@@ -8,6 +8,7 @@
 }
 
 .contactForm {
+  height: fit-content;
   .discoverMoreWrapper {
     top: -100px !important;
   }
@@ -61,6 +62,7 @@
               flex-direction: column;
               gap: 35px;
               input {
+                font-family: var(--Satoshi) !important;
                 color: #000;
                 background-color: transparent;
                 border: none;
@@ -85,7 +87,14 @@
           }
         }
 
+        .btnDiv{
+          width: 100%;
+          display: flex;
+          justify-content: end;
+        }
+
         .btnArrow {
+          justify-self: end;
           border: none;
           margin-top: 16px;
           font-weight: 600;
@@ -139,6 +148,119 @@
 
           &:hover span {
             border: 1px dashed var(--light);
+          }
+        }
+      }
+    }
+  }
+}
+
+#aboutUsDiscoverMore {
+  padding-bottom: 120px;
+  height: fit-content;
+  position: relative;
+  margin-bottom: -100vh;
+
+  .spacer {
+    height: 100vh;
+  }
+
+  .discoverMoreWrapper {
+    position: sticky;
+    top: -50%;
+    height: fit-content;
+  }
+}
+
+
+.frequentlyAsked{
+  .frequentlyAskedCon{
+    display: flex;
+    gap: 100px;
+    padding: 80px 0;
+    &>div{
+      &:nth-child(1){
+        width: 40%;
+      }
+      &:nth-child(2){
+        width: 60%;
+      }
+
+      *{
+        transition: all 0.5s ease;
+      }
+
+      h1{
+        color: var(--dark);
+        font-family: var(--NohemiL);
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 95px; /* 118.75% */
+      }
+
+      h4{
+        color: var(--dark);
+        font-family: var(--Satoshi);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      p{
+        color: var(--gray-79);
+        font-family: var(--Satoshi);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 160% */
+      }
+
+      button{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .quesCard{
+        background-color: transparent;
+        padding: 42px 25px;
+        display: flex;
+        gap: 30px;
+        border-bottom: 1px solid var(--gray-c5);
+        .ques{
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          p{
+            height: 0;
+            overflow: hidden;
+          }
+        }
+      }
+
+      .quesCard.active{
+        background-color: #fff;
+        padding: 42px 25px;
+        display: flex;
+        gap: 30px;
+        border-bottom: 1px solid var(--gray-c5);
+        .ques{
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          p{
+            height: fit-content;
+            overflow: hidden;
+          }
+        }
+        button{
+          padding: 10px;
+          img{
+            transform: rotate(180deg);
           }
         }
       }
@@ -275,6 +397,80 @@ line-height: 19.6px;
       }
     }
   }
+
+  .frequentlyAsked{
+    .frequentlyAskedCon{
+      display: flex;
+      gap: 40px;
+      padding: 60px 0;
+      &>div{
+        &:nth-child(1){
+          width: 40%;
+        }
+        &:nth-child(2){
+          width: 60%;
+        }
+  
+        *{
+          transition: all 0.3s ease;
+        }
+  
+        h1{
+          font-size: 60px;
+          line-height: 70px; /* 118.75% */
+        }
+  
+        h4{
+          font-size: 18px;
+          line-height: 24px; /* 160% */
+        }
+  
+        p{
+          font-size: 18px;
+          line-height: 24px; /* 160% */
+        }
+  
+        button{
+          padding: 10px;
+          img{
+            width: 15px;
+          }
+        }
+  
+        .quesCard{
+          padding: 24px 15px;
+          gap: 25px;
+          .ques{
+            gap: 0px;
+            p{
+              height: 0;
+              overflow: hidden;
+            }
+          }
+        }
+  
+        .quesCard.active{
+          padding: 24px 15px;
+          gap: 25px;
+          .ques{
+            gap: 25px;
+            p{
+              height: fit-content;
+              overflow: hidden;
+            }
+          }
+          button{
+            padding: 10px;
+            img{
+              width: 15px;
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  
 }
 
 
@@ -418,4 +614,94 @@ line-height: 19.6px;
         }
       }
 
+      #aboutUsDiscoverMore {
+        padding-bottom: 120px;
+        height: fit-content;
+        position: relative;
+        margin-bottom: -100vh;
+      
+        .spacer {
+          height: 100vh;
+        }
+      
+        .discoverMoreWrapper {
+          position: sticky;
+          top: -140%;
+          height: fit-content;
+        }
+      }
+
+      .frequentlyAsked{
+        .frequentlyAskedCon{
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          padding: 40px 0;
+          &>div{
+            &:nth-child(1){
+              width: 100%;
+            }
+            &:nth-child(2){
+              width: 100%;
+            }
+      
+            *{
+              transition: all 0.3s ease;
+            }
+      
+            h1{
+              font-size: 36px;
+              line-height: 41px; /* 118.75% */
+            }
+      
+            h4{
+              font-size: 20px;
+              line-height: 26px; /* 160% */
+            }
+      
+            p{
+              font-size: 18px;
+              line-height: 27px; /* 160% */
+            }
+      
+            button{
+              padding: 10px;
+              img{
+                width: 15px;
+              }
+            }
+      
+            .quesCard{
+              padding: 24px 15px;
+              gap: 25px;
+              .ques{
+                gap: 0px;
+                p{
+                  height: 0;
+                  overflow: hidden;
+                }
+              }
+            }
+      
+            .quesCard.active{
+              padding: 24px 15px;
+              gap: 25px;
+              .ques{
+                gap: 25px;
+                p{
+                  height: fit-content;
+                  overflow: hidden;
+                }
+              }
+              button{
+                padding: 10px;
+                img{
+                  width: 15px;
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+        }
+      }
 }

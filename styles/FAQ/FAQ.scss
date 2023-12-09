@@ -1,0 +1,435 @@
+#aboutUsDiscoverMore {
+  padding-bottom: 120px;
+  height: fit-content;
+  position: relative;
+  margin-bottom: -100vh;
+
+  .spacer {
+    height: 100vh;
+  }
+
+  .discoverMoreWrapper {
+    position: sticky;
+    // top: -300vh;
+    height: fit-content;
+  }
+}
+
+.FAQ {
+    .FAQCon {
+        display: flex;
+        gap: 100px;
+        padding-bottom: 80px;
+        position: relative;
+    & > div {
+      &:nth-child(1) {
+        flex-basis: 5%;
+        flex-grow: 0;
+
+        .FAQMenu{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: end;
+            padding-right: 30px;
+            border-right: 1px solid var(--gray-c5);
+            position: sticky;
+            top: 100px;
+            margin-top: 100px;
+
+            .hoverBtnAnim {
+                position: relative;
+                overflow: hidden;
+                color: var(--dark);
+                text-decoration: none;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                cursor: pointer;
+                border-radius: 100px;
+                white-space: nowrap;
+                font-family: var(--Satoshi);
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                width: fit-content;
+                transition: color 0 none;
+            
+                & > .text {
+                    padding: 10px;
+                    transition: all 300ms;
+                }
+            
+                & > .textbg {
+                    position: absolute;
+                    background-color: var(--sec);
+                    padding: 10px;
+                    transition: all 300ms;
+                    border-radius: 100px;
+                    color: var(--light);
+                    top: 105%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            
+                &.active,
+                &:hover {
+                    .text {
+                        transform: scale(0.75);
+                    }
+                    .textbg {
+                        top: 0%;
+                    }
+                }
+            }
+            
+        }
+      }
+      &:nth-child(2) {
+        flex-basis: 100%;
+        flex-grow: 1;
+
+        .FAQGroup{
+            padding-top: 100px;
+
+            .FAQGroup_head{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 40px;
+                button{
+                    display: none;
+                }
+                h2{
+                    span{
+                        display: none;
+                    }
+                }
+            }
+
+        }
+        button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            padding: 10px;
+            cursor: pointer;
+          }
+      }
+
+      * {
+        transition: all 0.5s ease;
+      }
+
+      .double{
+        display: flex;
+        gap: 32px;
+      }
+
+      h2 {
+        color: var(--dark);
+        font-family: var(--NohemiL);
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: normal;
+      }
+
+      h4 {
+        color: var(--dark);
+        font-family: var(--Satoshi);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      p {
+        color: var(--gray-79);
+        font-family: var(--Satoshi);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 160% */
+      }
+
+      .quesCard {
+        background-color: transparent;
+        padding: 30px;
+        display: flex;
+        gap: 30px;
+        border-bottom: 1px solid var(--gray-c5);
+        height: fit-content;
+        .ques {
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          p {
+            height: 0;
+            overflow: hidden;
+          }
+        }
+      }
+
+      .quesCard.active {
+        background-color: #fff;
+        padding: 42px 25px;
+        display: flex;
+        gap: 30px;
+        border-bottom: 1px solid var(--gray-c5);
+        .ques {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          p {
+            height: fit-content;
+            overflow: hidden;
+          }
+        }
+        button {
+          padding: 10px;
+          img {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1536px) {
+    .FAQ {
+        .FAQCon {
+            display: flex;
+            gap: 75px;
+            padding-bottom: 80px;
+            position: relative;
+        & > div {
+          &:nth-child(1) {
+    
+            .FAQMenu{
+                gap: 30px;
+                top: 60px;
+                margin-top: 60px;
+    
+                .hoverBtnAnim {
+                    font-size: 16px;
+                    line-height: 1;
+                }
+                
+            }
+          }
+          &:nth-child(2) {
+    
+            .FAQGroup{
+                padding-top: 60px;
+    
+                .FAQGroup_head{
+                    margin-bottom: 30px;
+                }
+
+            }
+            button{
+                padding: 10px;
+                img{
+                  width: 15px;
+                }
+              }
+        
+          }
+    
+          * {
+            transition: all 0.5s ease;
+          }
+    
+          .double{
+            display: flex;
+            gap: 32px;
+          }
+    
+          h2 {
+            font-size: 30px;
+            line-height: normal;
+          }
+    
+          h4{
+            font-size: 18px;
+            line-height: 1; /* 160% */
+          }
+    
+          p{
+            font-size: 15px;
+            line-height: 23px; /* 160% */
+          }
+    
+          .quesCard {
+            background-color: transparent;
+            padding: 22px;
+            display: flex;
+            gap: 0px;
+            height: fit-content;
+            .ques {
+              display: flex;
+              flex-direction: column;
+              gap: 0px;
+              p {
+                height: 0;
+                overflow: hidden;
+              }
+            }
+          }
+    
+          .quesCard.active {
+            background-color: #fff;
+            padding: 22px;
+            display: flex;
+            gap: 0px;
+            .ques {
+              gap: 20px;
+              p {
+                height: fit-content;
+                overflow: hidden;
+              }
+            }
+            button{
+                padding: 10px;
+                img{
+                  width: 15px;
+                  transform: rotate(180deg);
+                }
+              }
+          }
+        }
+      }
+    }
+}
+
+@media (max-width: 750px) {
+
+    .FAQ {
+        .FAQCon {
+            display: flex;
+            gap: 75px;
+            padding-bottom: 80px;
+            padding-top: 80px;
+            position: relative;
+        & > div {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            .FAQGroup{
+                margin-top: 30px;
+                padding-top: 0;
+                .FAQGroup_head{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 0px;
+                    
+                    button{
+                        display: block;
+                    }
+
+                    h2{
+                        span{
+                            display: unset;
+                            color: var(--sec);
+                            font-size: 20px;
+                            line-height: 30px;
+                            vertical-align: middle;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                .questions{
+                    height:0;
+                    overflow: hidden;
+                    margin-top: 0px;
+                }
+            }
+            
+            .FAQGroup.active{
+                .questions{
+                    height: fit-content;
+                    margin-top: 30px;
+
+                }
+            }
+            button{
+                padding: 10px;
+                img{
+                  width: 15px;
+                }
+              }
+        
+          }
+    
+          * {
+            transition: all 0.5s ease;
+          }
+    
+          .double{
+            display: flex;
+            gap: 0px;
+            flex-direction: column;
+          }
+    
+          h2 {
+            font-size: 30px;
+            line-height: normal;
+          }
+    
+          h4{
+            font-size: 18px;
+            line-height: 1; /* 160% */
+          }
+    
+          p{
+            font-size: 15px;
+            line-height: 23px; /* 160% */
+          }
+    
+          .quesCard {
+            background-color: transparent;
+            padding: 22px;
+            display: flex;
+            gap: 0px;
+            height: fit-content;
+            .ques {
+              display: flex;
+              flex-direction: column;
+              gap: 0px;
+              p {
+                height: 0;
+                overflow: hidden;
+              }
+            }
+          }
+    
+          .quesCard.active {
+            background-color: #fff;
+            padding: 22px;
+            display: flex;
+            gap: 0px;
+            .ques {
+              gap: 20px;
+              p {
+                height: fit-content;
+                overflow: hidden;
+              }
+            }
+            button{
+                padding: 10px;
+                img{
+                  width: 15px;
+                  transform: rotate(180deg);
+                }
+              }
+          }
+        }
+      }
+    }
+
+}

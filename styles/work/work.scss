@@ -194,6 +194,7 @@
           img {
             aspect-ratio: 1072/646;
             width: 50vw;
+            max-width: 50vw;
           }
         }
       }
@@ -393,6 +394,7 @@
           z-index: 15;
           img {
             width: 100%;
+            max-width: unset;
           }
         }
 
