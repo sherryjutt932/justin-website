@@ -4,7 +4,7 @@ function setStickyTop() {
     var pos = Math.max(((document.getElementsByClassName("discoverMoreWrapper")[0].offsetHeight * (1)) - (60) - (window.innerHeight*0.5)) ,0);
 
     setTimeout(() => {
-        document.getElementById("FAQGroups").style.top = -pos + "px";
+        document.getElementById("frequentlyAskedGroups").style.top = -pos + "px";
     }, 100);
 
 }

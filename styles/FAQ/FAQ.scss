@@ -73,8 +73,7 @@
                     transform: translateX(-50%);
                 }
             
-                &.active,
-                &:hover {
+                &.active {
                     .text {
                         transform: scale(0.75);
                     }
@@ -155,42 +154,84 @@
       }
 
       .quesCard {
+        position: relative;
         background-color: transparent;
-        padding: 30px;
+        padding: 0 30px;
         display: flex;
         gap: 30px;
         border-bottom: 1px solid var(--gray-c5);
         height: fit-content;
+        cursor: pointer;
+        &::before{
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 0%;
+          left: 0%;
+          bottom: 0%;
+          background-color: #fff;
+          z-index: -1;
+          transition: all 0.7s ease;
+        }
         .ques {
           display: flex;
+          justify-content: center;
           flex-direction: column;
           gap: 0px;
-          p {
-            height: 0;
-            overflow: hidden;
-          }
-        }
-      }
+          margin: 30px 0;
+          overflow: hidden;
 
-      .quesCard.active {
-        background-color: #fff;
-        padding: 42px 25px;
-        display: flex;
-        gap: 30px;
-        border-bottom: 1px solid var(--gray-c5);
-        .ques {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
+          h4{
+            padding: 10px 0;
+          }
           p {
             height: fit-content;
+            transform: translateY(110%);
+            transition: all 0.7s ease;
+            max-height: 0px;
             overflow: hidden;
           }
         }
         button {
           padding: 10px;
+          margin: 30px 0;
+          img {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      .quesCard.open {
+        &::before{
+          height: 100%;
+        }
+        .ques {
+          gap: 20px;
+          p {
+            transform: translateY(0%);
+            max-height: 300px;
+          }
+        }
+        button {
           img {
             transform: rotate(180deg);
+          }
+        }
+      }
+      .quesCard.close {
+        &::before{
+          height: 0%;
+        }
+        .ques {
+          gap: 0px;
+          p {
+            max-height: 0px;
+            transform: translateY(110%);
+          }
+        }
+        button {
+          img {
+            transform: rotate(0deg);
           }
         }
       }
@@ -265,40 +306,27 @@
     
           .quesCard {
             background-color: transparent;
-            padding: 22px;
+            padding: 0 22px;
             display: flex;
             gap: 0px;
             height: fit-content;
             .ques {
-              display: flex;
-              flex-direction: column;
-              gap: 0px;
-              p {
-                height: 0;
-                overflow: hidden;
-              }
-            }
-          }
-    
-          .quesCard.active {
-            background-color: #fff;
-            padding: 22px;
-            display: flex;
-            gap: 0px;
-            .ques {
-              gap: 20px;
-              p {
-                height: fit-content;
-                overflow: hidden;
-              }
+              margin: 22px 0;
             }
             button{
-                padding: 10px;
-                img{
-                  width: 15px;
-                  transform: rotate(180deg);
-                }
-              }
+              margin: 22px 0;
+            }
+          }
+
+          .quesCard.open {
+            .ques {
+              gap: 12px;
+            }
+          }
+          .quesCard.close {
+            .ques {
+              gap: 0px;
+            }
           }
         }
       }
@@ -391,43 +419,6 @@
             line-height: 23px; /* 160% */
           }
     
-          .quesCard {
-            background-color: transparent;
-            padding: 22px;
-            display: flex;
-            gap: 0px;
-            height: fit-content;
-            .ques {
-              display: flex;
-              flex-direction: column;
-              gap: 0px;
-              p {
-                height: 0;
-                overflow: hidden;
-              }
-            }
-          }
-    
-          .quesCard.active {
-            background-color: #fff;
-            padding: 22px;
-            display: flex;
-            gap: 0px;
-            .ques {
-              gap: 20px;
-              p {
-                height: fit-content;
-                overflow: hidden;
-              }
-            }
-            button{
-                padding: 10px;
-                img{
-                  width: 15px;
-                  transform: rotate(180deg);
-                }
-              }
-          }
         }
       }
     }

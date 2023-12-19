@@ -225,42 +225,89 @@
         cursor: pointer;
       }
 
-      .quesCard{
+      .quesCard {
+        position: relative;
         background-color: transparent;
-        padding: 42px 25px;
+        padding: 0 25px;
         display: flex;
         gap: 30px;
         border-bottom: 1px solid var(--gray-c5);
-        .ques{
+        height: fit-content;
+        cursor: pointer;
+        &::before{
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 0%;
+          left: 0%;
+          bottom: 0%;
+          background-color: #fff;
+          z-index: -1;
+          transition: all 0.7s ease;
+        }
+        .ques {
           display: flex;
+          justify-content: center;
           flex-direction: column;
           gap: 0px;
-          p{
-            height: 0;
+          margin: 42px 0;
+          overflow: hidden;
+
+          h4{
+            padding: 10px 0;
+          }
+          p {
+            height: fit-content;
+            transform: translateY(110%);
+            transition: all 0.7s ease;
+            max-height: 0px;
             overflow: hidden;
+          }
+        }
+        .index{
+          padding: 10px;
+          margin: 42px 0;
+        }
+        button {
+          padding: 10px;
+          margin: 42px 0;
+          img {
+            transform: rotate(0deg);
           }
         }
       }
 
-      .quesCard.active{
-        background-color: #fff;
-        padding: 42px 25px;
-        display: flex;
-        gap: 30px;
-        border-bottom: 1px solid var(--gray-c5);
-        .ques{
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          p{
-            height: fit-content;
-            overflow: hidden;
+      .quesCard.open {
+        &::before{
+          height: 100%;
+        }
+        .ques {
+          gap: 32px;
+          p {
+            transform: translateY(0%);
+            max-height: 300px;
           }
         }
-        button{
-          padding: 10px;
-          img{
+        button {
+          img {
             transform: rotate(180deg);
+          }
+        }
+      }
+      .quesCard.close {
+        &::before{
+          height: 0%;
+        }
+        .ques {
+          gap: 0px;
+          p {
+            max-height: 0px;
+            transform: translateY(110%);
+          }
+        }
+        button {
+          img {
+            transform: rotate(0deg);
           }
         }
       }
@@ -437,34 +484,28 @@ line-height: 19.6px;
           }
         }
   
-        .quesCard{
-          padding: 24px 15px;
+  
+        .quesCard {
+          background-color: transparent;
+          padding: 0 15px;
+          display: flex;
           gap: 25px;
-          .ques{
-            gap: 0px;
-            p{
-              height: 0;
-              overflow: hidden;
-            }
+          height: fit-content;
+          .ques,
+          .index,
+          button{
+            margin: 24px 0;
           }
         }
-  
-        .quesCard.active{
-          padding: 24px 15px;
-          gap: 25px;
-          .ques{
-            gap: 25px;
-            p{
-              height: fit-content;
-              overflow: hidden;
-            }
+
+        .quesCard.open {
+          .ques {
+            gap: 14px;
           }
-          button{
-            padding: 10px;
-            img{
-              width: 15px;
-              transform: rotate(180deg);
-            }
+        }
+        .quesCard.close {
+          .ques {
+            gap: 0px;
           }
         }
       }
@@ -671,35 +712,9 @@ line-height: 19.6px;
               }
             }
       
-            .quesCard{
-              padding: 24px 15px;
-              gap: 25px;
-              .ques{
-                gap: 0px;
-                p{
-                  height: 0;
-                  overflow: hidden;
-                }
-              }
-            }
-      
-            .quesCard.active{
-              padding: 24px 15px;
-              gap: 25px;
-              .ques{
-                gap: 25px;
-                p{
-                  height: fit-content;
-                  overflow: hidden;
-                }
-              }
-              button{
-                padding: 10px;
-                img{
-                  width: 15px;
-                  transform: rotate(180deg);
-                }
-              }
+            .quesCard {
+              padding: 0px;
+              gap: 0px;
             }
           }
         }

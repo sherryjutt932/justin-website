@@ -399,8 +399,8 @@ nav {
               pointer-events: none;
             }
             .animicon {
-              width: 50px;
-              height: 50px;
+              width: 40px;
+              height: 40px;
               margin-right: 10px;
               pointer-events: none;
             }
@@ -508,7 +508,7 @@ nav {
       .content {
         & > div {
           &:nth-child(1) {
-            gap: 25px;
+            gap: 15px;
             .nav-link {
               div {
                 font-size: 60px;
@@ -526,7 +526,7 @@ nav {
           }
 
           &:nth-child(2) {
-            gap: 50px;
+            gap: 30px;
 
             .card {
               max-width: 396px;
@@ -543,6 +543,12 @@ nav {
                 font-size: 22px;
                 line-height: 30px;
                 max-width: 213px;
+              }
+              .animicon {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+                pointer-events: none;
               }
             }
           }

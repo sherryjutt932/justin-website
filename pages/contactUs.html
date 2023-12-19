@@ -358,7 +358,7 @@
     </section>
     
     <section id="aboutUsDiscoverMore" class="contentCont frequentlyAsked">
-        <div class="discoverMoreWrapper">
+        <div class="discoverMoreWrapper" id="frequentlyAskedGroups">
 
             <div class="themeheading">
                 <span class="themedot"></span>
@@ -370,7 +370,7 @@
                     <h1>Frequently asked questions</h1>
                 </div>
                 <div>
-                    <div class="quesCard active">
+                    <div class="quesCard" onclick="toggleFAQ(this, '.frequentlyAskedCon')">
                         <div class="index">
                             <p>
                                 01
@@ -385,10 +385,10 @@
                             </p>
                         </div>
                         <div class="btn">
-                            <button onclick="toggleFAQ(button, '.frequentlyAskedCon');"> <img src="../assets/icons/dropdown.svg" alt=""> </button>
+                            <button > <img src="../assets/icons/dropdown.svg" alt=""> </button>
                         </div>
                     </div>
-                    <div class="quesCard">
+                    <div class="quesCard" onclick="toggleFAQ(this, '.frequentlyAskedCon')">
                         <div class="index">
                             <p>
                                 02
@@ -403,10 +403,10 @@
                             </p>
                         </div>
                         <div class="btn">
-                            <button onclick="toggleFAQ(button, '.frequentlyAskedCon');"> <img src="../assets/icons/dropdown.svg" alt=""> </button>
+                            <button > <img src="../assets/icons/dropdown.svg" alt=""> </button>
                         </div>
                     </div>
-                    <div class="quesCard">
+                    <div class="quesCard" onclick="toggleFAQ(this, '.frequentlyAskedCon')">
                         <div class="index">
                             <p>
                                 03
@@ -421,10 +421,10 @@
                             </p>
                         </div>
                         <div class="btn">
-                            <button onclick="toggleFAQ(button, '.frequentlyAskedCon');"> <img src="../assets/icons/dropdown.svg" alt=""> </button>
+                            <button > <img src="../assets/icons/dropdown.svg" alt=""> </button>
                         </div>
                     </div>
-                    <div class="quesCard">
+                    <div class="quesCard" onclick="toggleFAQ(this, '.frequentlyAskedCon')">
                         <div class="index">
                             <p>
                                 04
@@ -438,11 +438,11 @@
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             </p>
                         </div>
-                        <div class="btn">
-                            <button onclick="toggleFAQ(button, '.frequentlyAskedCon');"> <img src="../assets/icons/dropdown.svg" alt=""> </button>
+                        <div class="btn" >
+                            <button > <img src="../assets/icons/dropdown.svg" alt=""> </button>
                         </div>
                     </div>
-                    <div class="quesCard">
+                    <div class="quesCard" onclick="toggleFAQ(this, '.frequentlyAskedCon')">
                         <div class="index">
                             <p>
                                 05
@@ -457,10 +457,10 @@
                             </p>
                         </div>
                         <div class="btn">
-                            <button onclick="toggleFAQ(button, '.frequentlyAskedCon');"> <img src="../assets/icons/dropdown.svg" alt=""> </button>
+                            <button> <img src="../assets/icons/dropdown.svg" alt=""> </button>
                         </div>
                     </div>
-                    <div class="quesCard">
+                    <div class="quesCard" onclick="toggleFAQ(this, '.frequentlyAskedCon')">
                         <div class="index">
                             <p>
                                 06
@@ -475,10 +475,10 @@
                             </p>
                         </div>
                         <div class="btn">
-                            <button onclick="toggleFAQ(button, '.frequentlyAskedCon');"> <img src="../assets/icons/dropdown.svg" alt=""> </button>
+                            <button > <img src="../assets/icons/dropdown.svg" alt=""> </button>
                         </div>
                     </div>
-                    <div class="quesCard">
+                    <div class="quesCard" onclick="toggleFAQ(this, '.frequentlyAskedCon')">
                         <div class="index">
                             <p>
                                 07
@@ -493,7 +493,7 @@
                             </p>
                         </div>
                         <div class="btn">
-                            <button onclick="toggleFAQ(button, '.frequentlyAskedCon');"> <img src="../assets/icons/dropdown.svg" alt=""> </button>
+                            <button > <img src="../assets/icons/dropdown.svg" alt=""> </button>
                         </div>
                     </div>
                 </div>
@@ -839,7 +839,7 @@
                 "../scripts/pages/unseenjourney.js",
                 "../scripts/hero.js",
                 "../scripts/ideas.js",
-                "../scripts/FAQ.js",
+                "../scripts/pages/contactUs.js",
             ];
 
             // Load each script one by one

@@ -32,6 +32,7 @@ ScrollTrigger.create({
     start: "bottom bottom",
     end: "+=400",
     scrub: 1,
+    marker:true,
     animation:ideasanim,
   });
 
