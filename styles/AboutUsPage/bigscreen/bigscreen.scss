@@ -35,10 +35,10 @@
         font-size: 144px;
       }
       p {
-        max-width: 35ch;
+        max-width: 37ch;
         text-align: right;
         color: var(--gray-5e);
-        font-family: var(--Satoshi);
+        font-family: var(--SatoshiM);
         font-size: 22px;
         font-style: normal;
         font-weight: 500;
@@ -400,7 +400,7 @@
         p {
           margin-top: 15px;
           color: var(--gray-5e);
-          font-family: var(--SatoshiM);
+          font-family: var(--SatoshiM) !important;
           font-size: 22px;
           font-style: normal;
           font-weight: 500;

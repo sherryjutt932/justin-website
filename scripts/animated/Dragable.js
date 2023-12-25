@@ -59,10 +59,11 @@ const matterContainer = document.getElementById("matterContainer");
   }
 
   function createImage(string, width, height, color, bg, borderRadius) {
-    let w = width + width/1.5;
-    let h = height + 26;
-    let lineWidth = 3;
-    borderRadius = borderRadius - (lineWidth * 2) - 1;
+    let mul = 2;
+    let w = width * mul ;
+    let h = height * mul;
+    let lineWidth = isMobile()?  (2) : (2 * mul) ;
+    borderRadius = (borderRadius /2) * mul;
 
     let drawing = document.createElement("canvas");
     drawing.width = w;
@@ -88,7 +89,7 @@ ctx.fill();
     ctx.fillStyle = color;
 
 
-    ctx.font = "20pt sans-serif";
+    ctx.font =  isMobile()? "19pt sans-serif" :  "24pt sans-serif";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
   
@@ -99,9 +100,11 @@ ctx.fill();
     return drawing.toDataURL("image/png");
   }
 
+
+
   function initMatterJS() {
     engine = Matter.Engine.create();
-    engine.world.gravity.y = 0.5;
+    engine.world.gravity.y = 1;
 
 
     render = Matter.Render.create({
@@ -122,18 +125,19 @@ ctx.fill();
   }
 
   function createRectangle(x, y, width, height, angle, borderRadius, slomo, index) {
+   
     return Matter.Bodies.rectangle(x, y, width, height, {
             background: "transparent",
             chamfer: { radius: borderRadius /2},
             angle: angle,
-            restitution: .4,
-            timeScale: slomo.toFixed(2),
-            friction: 0.1,
+            restitution: .3,
+            friction: 0.2,
+            frictionAir: 0.01,
             render: {
               sprite: {
                 texture: createImage(textArray[index].text, width, height, textArray[index].color, textArray[index].bg, borderRadius),
-                xScale: 0.6, // Adjust the scale as needed
-                yScale: 0.6,
+                xScale:  isMobile()? 0.45 : 0.5, // Adjust the scale as needed
+                yScale: isMobile()? 0.45 : 0.5,
               },
             },
     });
@@ -141,7 +145,9 @@ ctx.fill();
 
   function setup() {
     const numberOfRectangles = textArray.length;
-    const size = 40;
+    const size = isMobile()? 34: 44 ;
+    var recWidth =  isMobile()? 150: 200;
+    var recHeight = size;
     const borderRadius =  size;
 
     for (let i = 0; i < numberOfRectangles; i++) {
@@ -149,8 +155,6 @@ ctx.fill();
       var randomY = Matter.Common.random(100, 1);
       var randomAngle = Matter.Common.random(-1, 1);
       var slomo =  Matter.Common.random(30, 50) / 100;
-      var recWidth = 200;
-      var recHeight = size;
 
       const rectangle = createRectangle(
         randomX,
@@ -166,7 +170,7 @@ ctx.fill();
       Matter.World.add(engine.world, rectangle);
     }
 
-    const THICCNESS = 60;
+    const THICCNESS = 1000;
 
     const ground = Matter.Bodies.rectangle(
       matterContainer.clientWidth / 2,

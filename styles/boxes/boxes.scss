@@ -14,8 +14,8 @@
 
     .boxitem {
         background-color: var(--main);
-        aspect-ratio: 1.25;
         flex: 1 1 25%;
+        aspect-ratio: 1.5;
         border: 1px solid var(--gray-c5);
         border-left: none;
 
@@ -25,11 +25,12 @@
 
         &>div{
         background-color: var(--main);
-        aspect-ratio: 1.25;
+        aspect-ratio: 1.5;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
+
 
 
         &>div:nth-child(1) {

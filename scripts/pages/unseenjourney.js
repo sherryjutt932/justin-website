@@ -5,7 +5,7 @@ gsap.to("#rotateSteric", {
     scrollTrigger: {
       trigger: "#aboutUsHeader",
       start: "top 1%",
-      end: "+=2000",
+      end: "+=1000",
       scrub:true
     }
 });

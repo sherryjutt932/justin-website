@@ -242,14 +242,14 @@ header {
             span {
               color: var(--dark);
               transition: all 300ms;
-              height: 36px;
               border: 1px dashed var(--dark);
               background-color: var(--light);
-              margin-left: 24px;
-              padding: 4px 36px;
               border-radius: 100px;
               display: block;
-
+              
+              height: 36px;
+              margin-left: 24px;
+              padding: 4px 36px;
               img {
                 vertical-align: middle;
               }
