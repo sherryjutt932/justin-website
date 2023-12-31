@@ -1581,18 +1581,17 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Function to reload the page
-            function reloadPage() {
-                location.reload();
-            }
-
-            // Store the initial window width
+           // Store the initial window width
             var initialWidth = window.innerWidth;
 
             // Attach the reload function to the window's resize event
             window.addEventListener("resize", function () {
                 // Check if the width has changed
-                if (window.innerWidth !== initialWidth) {
+                var currentWidth = window.innerWidth;
+                var widthDifference = Math.abs(currentWidth - initialWidth);
+
+                // Check if the width difference is more than 50 pixels
+                if (widthDifference > 50) {
                     // Debounce the reload to avoid excessive reloading
                     clearTimeout(window.resizeTimer);
                     window.resizeTimer = setTimeout(function () {
@@ -1600,6 +1599,12 @@
                     }, 250);
                 }
             });
+
+            function reloadPage() {
+                // Your reload logic here
+                location.reload();
+            }
+
 
 
             function loadScript(src, callback) {
