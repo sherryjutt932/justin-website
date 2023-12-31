@@ -1528,10 +1528,10 @@
         margin-bottom: 0px;
       flex: 0;
       h1 {
-        font-size: 7vw;
-        overflow: hidden;
-        max-width: 100%;
-        overflow-x: hidden;
+        white-space: wrap;
+        br{
+          display: none;
+        }
       }
 
   
