@@ -1558,7 +1558,8 @@
         margin-top: 35vh;
           .stackCard {
             // width: 95%;
-            width: 95%;
+            width: 97%;
+            max-width: 360px;
             height: 285px;
             aspect-ratio: unset;
             padding-bottom: 20px;
@@ -1586,7 +1587,7 @@
               }
               & > div:nth-child(2) {
                 p {
-                  line-height: 24px; /* 154.545% */
+                  line-height: 21px; /* 154.545% */
                   font-size: 16px;
                   width: 100%;
                 }
