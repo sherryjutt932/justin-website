@@ -1519,7 +1519,7 @@
   #digitalDesign {
 
     #digitalDesignWrapper {
-      height: 100dvh;
+      height: calc(100vh + 200px);
 
       flex-direction: column;
   
@@ -1555,7 +1555,7 @@
       & > div:nth-child(2) {
   
         #cardStack {
-        margin-top: 65%;
+        margin-top: 35vh;
           .stackCard {
             width: 95%;
             padding-bottom: 20px;
