@@ -198,17 +198,17 @@
                     .themeheading{
                         padding-top: 0;
                         .themetitle{
-                            font-family: var(--SatoshiM);
+                            font-family: var(--Satoshi);
                         }
                     }
                     p{
                         margin-top: 15px;
                         color: var(--gray-5e);
-                        font-family: var(--SatoshiM);
-                        font-size: 22px;
+                        font-family: var(--Satoshi) !important;
+                        font-size: 20px;
                         font-style: normal;
                         font-weight: 500;
-                        line-height: 32px; /* 145.455% */
+                        line-height: 29px; /* 145.455% */
                     }
                 }
             }
