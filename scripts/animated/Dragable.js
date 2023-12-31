@@ -1,259 +1,154 @@
 const matterContainer = document.getElementById("matterContainer");
-  let engine, render, runner, shouldRunEffect;
+let engine, render, runner, shouldRunEffect;
+var Rectangles = [];
+var shouldRunFlag = true;
 
-  const textArray = [
-    {
-      text: "ANIMATIONS",
-      bg: "#fff",
-      color: "#000",
+function initMatterJS() {
+  engine = Matter.Engine.create();
+  engine.world.gravity.y = 1;
+
+  render = Matter.Render.create({
+    element: matterContainer,
+    engine: engine,
+    options: {
+      width: matterContainer.offsetWidth,
+      height: matterContainer.offsetHeight,
+      background: "transparent",
+      wireframes: false,
+      showAngleIndicator: false,
     },
-    {
-      text: "UX WRITING",
-      bg: "#000",
-      color: "#fff",
+  });
+
+  runner = Matter.Runner.create();
+
+  Matter.Runner.run(runner, engine);
+}
+
+function createRectangle(xx, yy, HtmlLabel) {
+  let h = HtmlLabel.offsetHeight + 1;
+  let w = HtmlLabel.offsetWidth + 1;
+  var box = {
+    body: Matter.Bodies.rectangle(xx, yy, w, h, {
+      restitution: 0.3,
+      friction: 0.5,
+      frictionAir: 0.01,
+      chamfer: { radius: h /2}
+    }),
+    elem: HtmlLabel,
+    render() {
+      const { x, y } = this.body.position;
+      this.elem.style.top = `${y}px`;
+      this.elem.style.left = `${x}px`;
+      this.elem.style.transform = ` translate(-50%, -50%) rotate(${this.body.angle}rad)`;
     },
+  };
+  return box;
+}
+
+function setup() {
+
+  if (!shouldRunFlag) return;
+  const HtmlLabels = document.getElementsByClassName("dragableLabels");
+  const THICCNESS = 1000;
+
+  Array.from(HtmlLabels).forEach((HtmlLabel) => {
+    var randomX = Matter.Common.random(
+      matterContainer.offsetWidth * 0.3,
+      matterContainer.offsetWidth * 0.8
+    );
+    var randomY = Matter.Common.random(100, 1);
+    var rectangle = createRectangle(randomX, randomY, HtmlLabel);
+    Rectangles.push(rectangle);
+    Matter.Composite.add(engine.world, rectangle.body);
+  });
+
+  const ground = Matter.Bodies.rectangle(
+    matterContainer.clientWidth / 2,
+    matterContainer.clientHeight + THICCNESS / 2 ,
+    27184,
+    THICCNESS,
+    { isStatic: true }
+  );
+
+  const top = Matter.Bodies.rectangle(
+    matterContainer.clientWidth / 2,
+    0 - 2 - THICCNESS / 2,
+    27184,
+    THICCNESS,
+    { isStatic: true }
+  );
+
+  const leftWall = Matter.Bodies.rectangle(
+    0 - THICCNESS / 2,
+    matterContainer.clientHeight / 2,
+    THICCNESS,
+    matterContainer.clientHeight * 5,
     {
-      text: "DESIGN SYSTEMS",
-      bg: "#fff",
-      color: "#000",
-    },
-    {
-      text: "UX DESIGN",
-      bg: "#000",
-      color: "#fff",
-    },
-    {
-      text: "USER RESEARCH",
-      bg: "#fff",
-      color: "#000",
-    },
-    {
-      text: "UI GUIDLINES",
-      bg: "#000",
-      color: "#fff",
-    },
-    {
-      text: "UI DESIGN",
-      bg: "#fff",
-      color: "#000",
-    },
-    
-  ];
-
-  function getRandomColor() {
-    // List of colors excluding white
-    const colors = [
-      "#A1E8AF",
-      "#D72638",
-      "#12355B",
-      "#FF661F",
-      "#DDAE7E",
-      "#F3A712",
-    ];
-
-    // Get a random index from the colors array
-    const randomIndex = Math.floor(Math.random() * colors.length);
-
-    // Return the color at the random index
-    return colors[randomIndex];
-  }
-
-  function createImage(string, width, height, color, bg, borderRadius) {
-    let mul = 2;
-    let w = width * mul ;
-    let h = height * mul;
-    let lineWidth = isMobile()?  (2) : (2 * mul) ;
-    borderRadius = (borderRadius /2) * mul;
-
-    let drawing = document.createElement("canvas");
-    drawing.width = w;
-    drawing.height = h;
-    let ctx = drawing.getContext("2d");
-  
-
-    // Draw rounded rectangle with a black background
-    ctx.fillStyle = bg;
-    ctx.beginPath();
-    ctx.moveTo(borderRadius + lineWidth / 2, lineWidth / 2);
-ctx.arcTo(w - lineWidth / 2, lineWidth / 2, w - lineWidth / 2, h - lineWidth / 2, borderRadius);
-ctx.arcTo(w - lineWidth / 2, h - lineWidth / 2, lineWidth / 2, h - lineWidth / 2, borderRadius);
-ctx.arcTo(lineWidth / 2, h - lineWidth / 2, lineWidth / 2, lineWidth / 2, borderRadius);
-ctx.arcTo(lineWidth / 2, lineWidth / 2, w - lineWidth / 2, lineWidth / 2, borderRadius);
-ctx.closePath();
-ctx.fill();
-  
-    ctx.strokeStyle = color;
-    ctx.lineWidth = lineWidth;
-    ctx.stroke();
-    
-    ctx.fillStyle = color;
-
-
-    ctx.font =  isMobile()? "19pt sans-serif" :  "24pt sans-serif";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-  
-    // Use w/2 and h/2 as the center for positioning the text
-    ctx.fillText(string, w / 2, h / 2);
-  
-    // Return the data URL of the canvas as a PNG image
-    return drawing.toDataURL("image/png");
-  }
-
-
-
-  function initMatterJS() {
-    engine = Matter.Engine.create();
-    engine.world.gravity.y = 1;
-
-
-    render = Matter.Render.create({
-      element: matterContainer,
-      engine: engine,
-      options: {
-        width: matterContainer.offsetWidth,
-        height: matterContainer.offsetHeight,
-        background: "transparent",
-        wireframes: false,
-        showAngleIndicator: false,
-      },
-    });
-
-    runner = Matter.Runner.create();
-
-    Matter.Runner.run(runner, engine);
-  }
-
-  function createRectangle(x, y, width, height, angle, borderRadius, slomo, index) {
-   
-    return Matter.Bodies.rectangle(x, y, width, height, {
-            background: "transparent",
-            chamfer: { radius: borderRadius /2},
-            angle: angle,
-            restitution: .3,
-            friction: 0.2,
-            frictionAir: 0.01,
-            render: {
-              sprite: {
-                texture: createImage(textArray[index].text, width, height, textArray[index].color, textArray[index].bg, borderRadius),
-                xScale:  isMobile()? 0.45 : 0.5, // Adjust the scale as needed
-                yScale: isMobile()? 0.45 : 0.5,
-              },
-            },
-    });
-  }
-
-  function setup() {
-    const numberOfRectangles = textArray.length;
-    const size = isMobile()? 34: 44 ;
-    var recWidth =  isMobile()? 150: 200;
-    var recHeight = size;
-    const borderRadius =  size;
-
-    for (let i = 0; i < numberOfRectangles; i++) {
-      var randomX = Matter.Common.random((matterContainer.offsetWidth*0.3), (matterContainer.offsetWidth*0.8));
-      var randomY = Matter.Common.random(100, 1);
-      var randomAngle = Matter.Common.random(-1, 1);
-      var slomo =  Matter.Common.random(30, 50) / 100;
-
-      const rectangle = createRectangle(
-        randomX,
-        randomY,
-        recWidth,
-        recHeight,
-        randomAngle,
-        borderRadius,
-        slomo,
-        i
-      );
-
-      Matter.World.add(engine.world, rectangle);
+      isStatic: true,
     }
+  );
 
-    const THICCNESS = 1000;
+  const rightWall = Matter.Bodies.rectangle(
+    matterContainer.clientWidth + THICCNESS / 2 + 2,
+    matterContainer.clientHeight / 2,
+    THICCNESS,
+    matterContainer.clientHeight * 5,
+    { isStatic: true }
+  );
 
-    const ground = Matter.Bodies.rectangle(
-      matterContainer.clientWidth / 2,
-      matterContainer.clientHeight + (THICCNESS / 2) - (4),
-      27184,
-      THICCNESS,
-      { isStatic: true }
-    );
+  const Boundries = [ground, top, leftWall, rightWall];
+  Matter.Composite.add(engine.world, Boundries);
+
+  const mouse = Matter.Mouse.create(render.canvas);
+  const mouseConstraint = Matter.MouseConstraint.create(engine, {
+    mouse: mouse,
     
-    const top = Matter.Bodies.rectangle(
-      matterContainer.clientWidth / 2,
-      0 - 2 - THICCNESS / 2,
-      27184,
-      THICCNESS,
-      { isStatic: true }
-    );
+  });
 
-    const leftWall = Matter.Bodies.rectangle(
-      0 - THICCNESS / 2,
-      matterContainer.clientHeight / 2,
-      THICCNESS,
-      matterContainer.clientHeight * 5,
-      {
-        isStatic: true,
-      }
-    );
+  Matter.Composite.add(engine.world, mouseConstraint);
 
-    const rightWall = Matter.Bodies.rectangle(
-      matterContainer.clientWidth + THICCNESS / 2 + 2,
-      matterContainer.clientHeight / 2,
-      THICCNESS,
-      matterContainer.clientHeight * 5,
-      { isStatic: true }
-    );
+  mouseConstraint.mouse.element.removeEventListener(
+    "mousewheel",
+    mouseConstraint.mouse.mousewheel
+  );
+  mouseConstraint.mouse.element.removeEventListener(
+    "DOMMouseScroll",
+    mouseConstraint.mouse.mousewheel
+  );
 
-    Matter.Composite.add(engine.world, [ground, top, leftWall, rightWall]);
+  // Matter.Render.run(render);
 
-    const mouse = Matter.Mouse.create(render.canvas);
-    const mouseConstraint = Matter.MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 0.6,
-        render: {
-          visible: false,
-        },
-      },
+  (function rerender() {
+    Rectangles.forEach((element) => {
+      element.render();
     });
+    // box.render();
+    Matter.Engine.update(engine);
+    requestAnimationFrame(rerender);
+  })();
 
-    Matter.Composite.add(engine.world, mouseConstraint);
+  const handleResize = () => {
+    const containerWidth = matterContainer.offsetWidth;
+    const containerHeight = matterContainer.offsetHeight;
 
-    mouseConstraint.mouse.element.removeEventListener(
-      "mousewheel",
-      mouseConstraint.mouse.mousewheel
+    render.canvas.width = containerWidth;
+    render.canvas.height = containerHeight;
+
+    Matter.Body.setPosition(
+      ground,
+      Matter.Vector.create(containerWidth / 2, containerHeight + THICCNESS / 2)
     );
-    mouseConstraint.mouse.element.removeEventListener(
-      "DOMMouseScroll",
-      mouseConstraint.mouse.mousewheel
+
+    Matter.Body.setPosition(
+      rightWall,
+      Matter.Vector.create(containerWidth + THICCNESS / 2, containerHeight / 2)
     );
+  };
 
-    Matter.Render.run(render);
+  window.addEventListener("resize", handleResize);
 
-    const handleResize = () => {
-      const containerWidth = matterContainer.offsetWidth;
-      const containerHeight = matterContainer.offsetHeight;
+  shouldRunFlag = false;
+}
 
-      render.canvas.width = containerWidth;
-      render.canvas.height = containerHeight;
-
-      Matter.Body.setPosition(
-        ground,
-        Matter.Vector.create(containerWidth / 2, containerHeight + THICCNESS / 2)
-      );
-
-      Matter.Body.setPosition(
-        rightWall,
-        Matter.Vector.create(containerWidth + THICCNESS / 2, containerHeight / 2)
-      );
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    shouldRunEffect = false;
-  }
-
-  initMatterJS();
-  setup();
+initMatterJS();
+setup();

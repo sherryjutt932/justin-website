@@ -17,13 +17,13 @@ function calculateDistance() {
   return distance;
 }
 
-if (!isMobile) {
+if (!isMobile()) {
   gsap.timeline().to("#animCircle", {
-    rotate: 180 + 360,
+    rotate: 180,
     ease: "none",
     scrollTrigger: {
       trigger: "#unseenStories",
-      start: "120px top",
+      start: `${window.innerWidth > 1536? '140px': '110px'} top`,
       end: "+=2000",
       scrub: true,
       pin: true,
@@ -33,7 +33,7 @@ if (!isMobile) {
   UIUXTimeline.to(
     "#AnimDot1",
     {
-      y: -(paddingBottom + animCircleWidth + AnimDotWidth),
+      y: -(paddingBottom + animCircleWidth + AnimDotWidth + 3),
       x: animCircleWidth - AnimDotWidth + 5,
       ease: "none",
     },
@@ -41,25 +41,25 @@ if (!isMobile) {
   ).to(
     "#AnimDot2",
     {
-      y: -(paddingBottom + animCircleWidth + AnimDotWidth),
+      y: -(paddingBottom + animCircleWidth + AnimDotWidth + 3),
       x: -(animCircleWidth - AnimDotWidth + 5),
       ease: "none",
-      onComplete: () => {
-        digitalDesign.classList.add("active");
-      },
+      // onComplete: () => {
+      //   digitalDesign.classList.add("active");
+      // },
     },
     "a"
   );
 
   ScrollTrigger.create({
     trigger: "#unseenStories",
-    start: "bottom 95%",
-    end: "bottom 70%",
+    start: `${window.innerWidth > 1536? '145px': '115px'} top`,
+    end: "+=500",
     scrub: true,
     animation: UIUXTimeline,
-    onEnterBack: () => {
-      digitalDesign.classList.remove("active");
-    },
+    // onEnterBack: () => {
+    //   digitalDesign.classList.remove("active");
+    // },
   });
 
   var digitalDesignTimeline = gsap.timeline();
@@ -73,7 +73,7 @@ if (!isMobile) {
         digitalDesignTimeline.to(
           child,
           {
-            yPercent: -90 * (j + 1),
+            yPercent: -92 * (j + 1),
             ease: "none",
           },
           j + "unique"
@@ -83,9 +83,9 @@ if (!isMobile) {
           .to(
             child,
             {
-              // scale: 1 - ((0.1 ) * (j - i)),
-              scale: Math.pow(0.9, j - i),
-              y: 20 * (j - i),
+              scale: 1 - ((0.1 ) * (j - i)),
+              // scale: Math.pow(0.9, j - i),
+              // y: 20 * (j - i),
               ease: "none",
             },
             j + "unique"
@@ -93,7 +93,7 @@ if (!isMobile) {
           .to(
             child.getElementsByClassName("overlay")[0],
             {
-              opacity: 1 - 0.1 * j + 0.3,
+              opacity: 1 - (0.1 * j) ,
               ease: "none",
             },
             j + "unique"
@@ -112,12 +112,12 @@ if (!isMobile) {
   });
 } else {
   gsap.timeline().to("#animCircle", {
-    rotate: 180 + 360,
+    rotate: 180,
     ease: "none",
     scrollTrigger: {
       trigger: "#unseenStories",
-      start: "0px top",
-      end: "+=2000",
+      start: "110px top",
+      end: "+=1000",
       scrub: true,
       pin: true,
     },
@@ -126,7 +126,7 @@ if (!isMobile) {
   UIUXTimeline.to(
     "#AnimDot1",
     {
-      y: -(uiuxConElement.offsetHeight - animCircleWidth + AnimDotWidth),
+      y: -(uiuxConElement.offsetHeight - animCircleWidth + AnimDotWidth + 3),
       x: animCircleWidth - AnimDotWidth + 5,
       ease: "none",
     },
@@ -134,25 +134,25 @@ if (!isMobile) {
   ).to(
     "#AnimDot2",
     {
-      y: -(uiuxConElement.offsetHeight - animCircleWidth + AnimDotWidth),
+      y: -(uiuxConElement.offsetHeight - animCircleWidth + AnimDotWidth + 3),
       x: -(animCircleWidth - AnimDotWidth + 5),
       ease: "none",
-      onComplete: () => {
-        digitalDesign.classList.add("active");
-      },
+      // onComplete: () => {
+      //   digitalDesign.classList.add("active");
+      // },
     },
     "a"
   );
 
   ScrollTrigger.create({
     trigger: "#unseenStories",
-    start: "bottom 80%",
-    end: "bottom 50%",
+    start: "115px top",
+    end: "+=500",
     scrub: true,
     animation: UIUXTimeline,
-    onEnterBack: () => {
-      digitalDesign.classList.remove("active");
-    },
+    // onEnterBack: () => {
+    //   digitalDesign.classList.remove("active");
+    // },
   });
 
   var digitalDesignTimeline = gsap.timeline();
@@ -166,7 +166,7 @@ if (!isMobile) {
         digitalDesignTimeline.to(
           child,
           {
-            yPercent: -90 * (j + 1),
+            yPercent: -92 * (j + 1),
             ease: "none",
           },
           j + "unique"
@@ -176,9 +176,9 @@ if (!isMobile) {
           .to(
             child,
             {
-              // scale: 1 - ((0.1 ) * (j - i)),
-              scale: Math.pow(0.9, j - i),
-              y: 20 * (j - i),
+              scale: 1 - ((0.1 ) * (j - i)),
+              // scale: Math.pow(0.9, j - i),
+              // y: 20 * (j - i),
               ease: "none",
             },
             j + "unique"
@@ -186,7 +186,7 @@ if (!isMobile) {
           .to(
             child.getElementsByClassName("overlay")[0],
             {
-              opacity: 1 - 0.1 * j + 0.3,
+              opacity: 1 - (0.1 * j) ,
               ease: "none",
             },
             j + "unique"
@@ -203,4 +203,11 @@ if (!isMobile) {
     pin: true,
     animation: digitalDesignTimeline,
   });
+}
+
+function activeChange() {
+  digitalDesign.classList.add("active");
+}
+function deactiveChange() {
+  digitalDesign.classList.remove("active");
 }

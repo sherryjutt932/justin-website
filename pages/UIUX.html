@@ -24,6 +24,7 @@
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js" integrity="sha512-2r+xZ/Dm8+HI0I8dsj1Jlfchv4O3DGfWbqRalmSGtgdbVQrZyGRqHp9ek8GKk1x8w01JsmDZRrJZ4DzgXkAU+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- gsap -->
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
@@ -377,11 +378,13 @@
                             <div></div>
                         </div>
                     </a>
-                    <a class="arrowCircle non-mousetracker" href="/">
-                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M40.2697 0.216187L39.7033 32.8226L36.7038 32.7705L37.1787 5.4285L2.67796 39.9292L0.556641 37.8079L35.0574 3.30718L7.71537 3.7821L7.66327 0.78255L40.2697 0.216187Z" />
-                        </svg>
+                    <a onmouseenter="activeChange()" onmouseleave="deactiveChange()" class="stickyButton  non-mousetracker" href="/">
+                        <div id="magneticBtn" class="arrowCircle">
+                            <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M40.2697 0.216187L39.7033 32.8226L36.7038 32.7705L37.1787 5.4285L2.67796 39.9292L0.556641 37.8079L35.0574 3.30718L7.71537 3.7821L7.66327 0.78255L40.2697 0.216187Z" />
+                            </svg>
+                        </div>
 
                     </a>
 
@@ -396,17 +399,14 @@
                             <div>
                                 <div>
                                     <small>01</small>
-                                    <p>ideation</p>
+                                    <p>Empathise</p>
                                 </div>
                                 <div>
-                                    <img src="../assets/icons/ideation.svg" alt="">
+                                    <img src="../assets/icons/services/empathise.svg" alt="">
                                 </div>
                             </div>
                             <div>
-                                <p>With Proven ideation techniques combined with a client-centric approach at the core,
-                                    we
-                                    ideate roadmaps while mapping your business journey to decode human-focused problem
-                                    statements.</p>
+                                <p>As a thriving UI UX agency, we harness the proven empathy-driven human-focused design process to craft the best digital solutions mapping the users preferences.</p>
                             </div>
 
                             <div class="overlay"></div>
@@ -418,17 +418,14 @@
                             <div>
                                 <div>
                                     <small>02</small>
-                                    <p>ideation</p>
+                                    <p>Define (The Problem)</p>
                                 </div>
                                 <div>
-                                    <img src="../assets/icons/ideation.svg" alt="">
+                                    <img src="../assets/icons/services/design.svg" alt="">
                                 </div>
                             </div>
                             <div>
-                                <p>With Proven ideation techniques combined with a client-centric approach at the core,
-                                    we
-                                    ideate roadmaps while mapping your business journey to decode human-focused problem
-                                    statements.</p>
+                                <p>Apt logic and detailing is incorporated precisely with elements like design functions, features, functionalities, workflow and beyond to solve complex issues with minimal snags.</p>
                             </div>
                             <div class="overlay"></div>
 
@@ -443,80 +440,51 @@
                                     <p>ideation</p>
                                 </div>
                                 <div>
-                                    <img src="../assets/icons/ideation.svg" alt="">
+                                    <img src="../assets/icons/services/ideation.svg" alt="">
                                 </div>
                             </div>
                             <div>
-                                <p>With Proven ideation techniques combined with a client-centric approach at the core,
-                                    we
-                                    ideate roadmaps while mapping your business journey to decode human-focused problem
+                                <p>With Proven ideation techniques combined with a client-centric approach at the core, we ideate roadmaps while mapping your business journey to decode human-focused problem
                                     statements.</p>
                             </div>
                             <div class="overlay"></div>
 
                         </div>
                     </div>
-
+                   
                     <div class="stackCard">
                         <div class="cardWrapper">
                             <div>
                                 <div>
                                     <small>04</small>
-                                    <p>ideation</p>
+                                    <p>Prototype</p>
                                 </div>
                                 <div>
-                                    <img src="../assets/icons/ideation.svg" alt="">
+                                    <img src="../assets/icons/services/prototype.svg" alt="">
                                 </div>
                             </div>
                             <div>
-                                <p>With Proven ideation techniques combined with a client-centric approach at the core,
-                                    we
-                                    ideate roadmaps while mapping your business journey to decode human-focused problem
-                                    statements.</p>
+                                <p>We develop a results-focused prototype meant to build an authentic digital connection with the utmost level of detail and quality based on diversified experiments.</p>
                             </div>
                             <div class="overlay"></div>
 
                         </div>
                     </div>
 
+                  
                     <div class="stackCard">
                         <div class="cardWrapper">
                             <div>
                                 <div>
                                     <small>05</small>
-                                    <p>ideation</p>
+                                    <p>Testing</p>
                                 </div>
                                 <div>
-                                    <img src="../assets/icons/ideation.svg" alt="">
+                                    <img src="../assets/icons/services/testing.svg" alt="">
                                 </div>
                             </div>
                             <div>
-                                <p>With Proven ideation techniques combined with a client-centric approach at the core,
-                                    we
-                                    ideate roadmaps while mapping your business journey to decode human-focused problem
-                                    statements.</p>
-                            </div>
-                            <div class="overlay"></div>
-
-                        </div>
-                    </div>
-
-                    <div class="stackCard">
-                        <div class="cardWrapper">
-                            <div>
-                                <div>
-                                    <small>06</small>
-                                    <p>ideation</p>
-                                </div>
-                                <div>
-                                    <img src="../assets/icons/ideation.svg" alt="">
-                                </div>
-                            </div>
-                            <div>
-                                <p>With Proven ideation techniques combined with a client-centric approach at the core,
-                                    we
-                                    ideate roadmaps while mapping your business journey to decode human-focused problem
-                                    statements.</p>
+                                <p>We refine our designs using advanced testing methods, assessing how they perform across various platforms. This approach gives us a deeper understanding of our customers' experiences.</p>
                             </div>
                             <div class="overlay"></div>
 
@@ -543,7 +511,8 @@
             </div>
             <div>
                 <h1 class="customPerksSecP">
-                    Tools powering our design process
+                    Tools powering <br>
+                    our design process
                 </h1>
                 <p>
                     Our design process is powered by cutting-edge tools, including Figma for interactive design and
@@ -1055,7 +1024,19 @@
 
     <section id="dragableSec">
         <div class="MatterWrapper">
-            <div id="matterContainer" class="matterContainer"></div>
+            <div id="matterContainer" class="matterContainer">
+                <div class="dragableLabels whiteLabel">ANIMATIONS</div>
+            <div class="dragableLabels blackLabel">UX WRITING</div>
+            <div class="dragableLabels whiteLabel">DESIGN SYSTEMS</div>
+            <div class="dragableLabels blackLabel">UX DESIGN</div>
+            <div class="dragableLabels whiteLabel">USER RESEARCH</div>
+            <div class="dragableLabels blackLabel">UI GUIDELINES</div>
+            <div class="dragableLabels whiteLabel">UI DESIGN</div>
+            
+
+            </div>
+
+            
             <div class="matterContainerOverlay contentCont">
                 <div class="themeheading">
                     <span class="themedot" style="background-color: #fff;"></span>
