@@ -1557,12 +1557,16 @@
         #cardStack {
         margin-top: 35vh;
           .stackCard {
-            width: 95%;
+            // width: 95%;
+            width: 360px;
+            height: 285px;
+            aspect-ratio: unset;
             padding-bottom: 20px;
-            aspect-ratio: 1.4;
             .cardWrapper {
               padding: 20px;
               gap: 20px;
+              width: 360px;
+              height: 265px;
               overflow: hidden;
   
               & > div:nth-child(1) {
