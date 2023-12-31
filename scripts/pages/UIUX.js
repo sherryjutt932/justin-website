@@ -116,10 +116,9 @@ if (!isMobile()) {
     ease: "none",
     scrollTrigger: {
       trigger: "#unseenStories",
-      start: "110px top",
-      end: "+=1000",
+      start: "30% center",
+      end: "30% top",
       scrub: true,
-      pin: true,
     },
   });
 
@@ -146,8 +145,8 @@ if (!isMobile()) {
 
   ScrollTrigger.create({
     trigger: "#unseenStories",
-    start: "115px top",
-    end: "+=500",
+    start: "31% top",
+    end: "71% top",
     scrub: true,
     animation: UIUXTimeline,
     // onEnterBack: () => {
