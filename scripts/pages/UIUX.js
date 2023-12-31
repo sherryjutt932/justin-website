@@ -197,8 +197,8 @@ if (!isMobile()) {
 
   ScrollTrigger.create({
     trigger: "#digitalDesignWrapper",
-    end: "+=2000",
     start: "top top",
+    end: "+=2000",
     scrub: true,
     pin: true,
     animation: digitalDesignTimeline,
