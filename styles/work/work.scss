@@ -366,6 +366,7 @@
         .work-card-head,
         .work-card-detail {
           display: flex;
+          align-items: center;
           & > div:nth-child(1) {
             flex-grow: 1;
           }

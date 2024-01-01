@@ -1660,11 +1660,14 @@
     }
   
     .boxList {
+      height: fit-content;
       flex-wrap: wrap;
       .Box_Item {
         flex: 1 1 45%;
         gap: 10px;
-        aspect-ratio: 1.3;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        aspect-ratio: unset;
         h2 {
           font-size: 25px;
           line-height: normal;

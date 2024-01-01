@@ -14,16 +14,17 @@
     <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
     <link rel="stylesheet" href="../styles/UnseenJourneyPage/UnseenJourneyPage.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
-    <link rel="stylesheet" href="../styles/skills/skills.css">
     <link rel="stylesheet" href="../styles/ideas/ideas.css">
+    <link rel="stylesheet" href="../styles/work/work.css">
     <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
     <link href="../styles/boxes/boxes.css" rel="stylesheet" />
-    <link href="../styles/process/process.css" rel="stylesheet" />
     <link href="../styles/perks/perks.css" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/UIUX/UIUX.css">
 
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js" integrity="sha512-2r+xZ/Dm8+HI0I8dsj1Jlfchv4O3DGfWbqRalmSGtgdbVQrZyGRqHp9ek8GKk1x8w01JsmDZRrJZ4DzgXkAU+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- gsap -->
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
@@ -329,32 +330,15 @@
 
         <div class="UIUXCon">
             
-            <div>
-                <svg width="200" height="201" viewBox="0 0 200 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M104.203 74.7912V83.6916C104.203 87.44 101.164 90.4795 97.4156 90.4795H96.3594" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M56.7207 58.9075H48.1113C42.2672 58.9075 37.5293 63.6454 37.5293 69.4896C37.5293 80.9735 46.8391 90.2837 58.323 90.2837H58.7227" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M141.84 90.2837H142.239C153.723 90.2837 163.033 80.9739 163.033 69.4899C163.033 63.6454 158.295 58.9075 152.451 58.9075H143.842" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M42.2199 153.825L37.8609 154.914C23.8379 158.42 14 171.02 14 185.475V197.456C14 197.83 14.3027 198.133 14.6762 198.133H185.891C186.265 198.133 186.568 197.83 186.568 197.456V185.475C186.568 171.02 176.73 158.42 162.707 154.914L137.591 148.636C128.987 156.084 115.476 160.884 100.284 160.884C85.0914 160.884 71.5809 156.084 62.9758 148.636L55.9215 150.399" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M137.538 106.46C139.954 101.623 141.459 96.2398 141.823 90.5266L142.462 80.5227L133.101 61.8012C132.217 60.0328 130.409 58.916 128.432 58.916C125.882 58.916 123.814 56.8484 123.814 54.298V47.1406H76.7527V54.298C76.7527 56.8484 74.6852 58.916 72.1348 58.916C70.1578 58.916 68.3504 60.0328 67.4664 61.8012L58.0996 80.5348L58.7371 90.5266C60.1355 112.443 78.3188 129.504 100.28 129.504C111.375 129.504 121.507 125.149 128.996 118.014" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M63.0223 106.46C60.6066 101.623 59.102 96.2398 58.7371 90.5266L58.0988 80.5227L67.4594 61.8012C68.3437 60.0328 70.1512 58.916 72.1281 58.916C74.6785 58.916 76.7461 56.8484 76.7461 54.298V47.1406H123.808V54.298C123.808 56.8484 125.875 58.916 128.426 58.916C130.403 58.916 132.21 60.0328 133.094 61.8012L142.461 80.5348L141.823 90.5266C140.425 112.443 122.242 129.504 100.28 129.504C89.1852 129.504 79.0539 125.149 71.5645 118.014" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M67.9258 165.237C77.6652 169.481 88.9242 171.787 100.616 171.787C112.307 171.787 123.566 169.481 133.305 165.237" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M108.37 47.1406L109.003 43.3391C109.402 40.9449 110.683 38.8102 112.529 37.234C116.584 33.7719 119.154 28.623 119.154 22.8738C119.154 12.45 110.705 4 100.28 4C97.4219 4 94.7059 4.64492 92.2715 5.7957" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M92.066 47.1406L91.4328 43.3391C91.0332 40.9449 89.7523 38.8102 87.9063 37.234C83.8516 33.7719 81.2813 28.623 81.2813 22.8738C81.2813 12.45 89.7309 4 100.155 4C103.014 4 105.73 4.64492 108.164 5.7957" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M132.637 20.1777H143.422" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M128.689 9.39258L138.029 4" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M128.689 30.9624L138.029 36.355" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M67.9219 20.1777H57.1367" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M71.8695 9.39258L62.5293 4" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M71.8695 30.9624L62.5293 36.355" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M105.673 25.5703C105.673 28.5488 103.259 30.9629 100.281 30.9629C97.3027 30.9629 94.8887 28.5488 94.8887 25.5703" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M100.281 30.9629V47.1406" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M112.416 106.459C108.989 109.263 104.803 110.912 100.283 110.912C95.7637 110.912 91.5773 109.263 88.1504 106.459" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M142.461 80.5225L144.347 50.9682C144.42 49.8236 144.449 48.6869 144.435 47.56C144.432 47.3271 144.241 47.1404 144.008 47.1404H123.814" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M76.7521 47.1405H56.5514C56.3185 47.1405 56.1271 47.3272 56.1244 47.5597C56.1107 48.6866 56.1393 49.8237 56.2123 50.9683L58.099 80.5347" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M76.748 122.217V131.713C76.748 139.634 71.3566 146.54 63.6719 148.461L62.9746 148.635" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M137.591 148.637L136.888 148.461C129.203 146.54 123.812 139.635 123.812 131.713V122.217" stroke="black" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                                                    
+            <div class="bigiconAnim">
+                <div class="bigiconWrapper">
+                    <div id="animCircle">
+                        <div class="animDot" id="AnimDot1"></div>
+                        <div class="animDot" id="AnimDot2"></div>
+                    </div>
+                    <lottie-player autoplay loop class="animiconbig"
+                        src="../assets/Animation/Final big Icons/creative-thinking/Creative_Thinking_Black.json"></lottie-player>
+                </div>
             </div>
             <div>
                 <ul>
@@ -366,205 +350,928 @@
 
     </section>
 
-    <section id="processSec" style="height: fit-content;">
-        <div class="proc-marquee-wrap">
-          <div class="proc-marquee-con">
-            <div id="proc-marquee">
-              <div id="proc-marquee-first">
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-              </div>
-              <div id="proc-marquee-second">
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-              </div>
-              <div id="proc-marquee-third">
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WE SERVE</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-                <div>WHAT DO</div>
-                <img class="arrowRef" src="../assets/icons/longArrowRight.svg" alt="" />
-              </div>
+    <section id="digitalDesign">
+
+        <div id="digitalDesignWrapper" class="contentCont">
+            <div>
+                <h1>
+                    Turning brands into <br>
+                    unique visual identities.
+                </h1>
+                <div class="listcon">
+                    <div><span> Logo Design </span></div>
+                    <div><span> Branding Strategy </span></div>
+                    <div><span> Visual Identity </span></div>
+                    <div><span> Brand Storytelling </span></div>
+                    <div><span> SM Branding </span></div>
+                    <div><span> Pitch Deck Design </span></div>
+                </div>
+
+                <div class="buttoncon">
+                    <a class="hoverLine" href="/">
+                        <div>
+                            Get Started
+                            <div></div>
+                        </div>
+                    </a>
+                    <a onmouseenter="activeChange()" onmouseleave="deactiveChange()" class="stickyButton  non-mousetracker" href="/">
+                        <div id="magneticBtn" class="arrowCircle">
+                            <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M40.2697 0.216187L39.7033 32.8226L36.7038 32.7705L37.1787 5.4285L2.67796 39.9292L0.556641 37.8079L35.0574 3.30718L7.71537 3.7821L7.66327 0.78255L40.2697 0.216187Z" />
+                            </svg>
+                        </div>
+
+                    </a>
+
+                </div>
+
             </div>
-          </div>
-        </div>
-    
-        <div class="listcon contentCont">
-            <div>Logo Design</div>
-            <div>Web Design</div>
-            <div>Brand Consultation</div>
-            <div>Branding Strategy</div>
-            <div>Brand Storytelling</div>
-            <div>Social Media Branding</div>
-            <div>Brand Guidelines</div>
-            <div>Content Creation</div>
-            <!-- <div></div> -->
-            <div>Brand Audit</div>
-            <div>Visual Identity</div>
-        </div>
-     
-      </section>
+
+            <div>
+                <div id="cardStack">
+                    <div class="stackCard">
+                        <div class="cardWrapper">
+                            <div>
+                                <div>
+                                    <small>01</small>
+                                    <p>Research</p>
+                                </div>
+                                <div>
+                                    <img src="../assets/icons/services/research.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <p>At Web Pioneers, we craft brands that are resilient and future-ready. Our approach involves in-depth research to accurately identify business challenges, ensuring this by thoroughly evaluating current marketing materials.</p>
+                            </div>
+
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+
+                    <div class="stackCard">
+                        <div class="cardWrapper">
+                            <div>
+                                <div>
+                                    <small>02</small>
+                                    <p>Positioning</p>
+                                </div>
+                                <div>
+                                    <img src="../assets/icons/services/positioning.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <p>With brands, we work to co-create the brand’s purpose, vision, platform, architecture, and brand message matrix by blending human behavioural patterns with data science.</p>
+                            </div>
+                            <div class="overlay"></div>
+
+                        </div>
+                    </div>
+
+                    <div class="stackCard">
+                        <div class="cardWrapper">
+                            <div>
+                                <div>
+                                    <small>03</small>
+                                    <p>Creative</p>
+                                </div>
+                                <div>
+                                    <img src="../assets/icons/services/creative.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <p>Right from creating top-notch visual to verbal identity to guidelines, from brand assets to brand sprints, we help our clients deliver value-driven brand positioning outcomes.</p>
+                            </div>
+                            <div class="overlay"></div>
+
+                        </div>
+                    </div>
+                   
+                    <div class="stackCard">
+                        <div class="cardWrapper">
+                            <div>
+                                <div>
+                                    <small>04</small>
+                                    <p>Marketing</p>
+                                </div>
+                                <div>
+                                    <img src="../assets/icons/services/marketing.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <p>We create future-proof brand touchpoints and ensure seamless interaction between the brand and its users powered by security and performance.</p>
+                            </div>
+                            <div class="overlay"></div>
+
+                        </div>
+                    </div>
+
+                  
+                    <div class="stackCard">
+                        <div class="cardWrapper">
+                            <div>
+                                <div>
+                                    <small>05</small>
+                                    <p>Management</p>
+                                </div>
+                                <div>
+                                    <img src="../assets/icons/services/management.svg" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <p>We unlock scalable and accessible solutions for effortless customer interactions to help brands manage their customers’ pain points by identifying the customer experience gaps & bringing more customers.</p>
+                            </div>
+                            <div class="overlay"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
 
-      <section id="perksSec" style="min-height: fit-content;">
+            <img class="grid" src="../assets/icons/grid.svg" alt="">
+            <div class="gridoverlay"></div>
+        </div>
+
+    </section>
+
+
+    <section id="perksSec" style="min-height: fit-content;">
 
         <div id="perksHead">
-          <div>
-            <span class="themedot"></span>
-            <span class="themetitle">How It Works</span>
-          </div>
-          <div>
-            <h1>
-                A clear path to your project
-            </h1>
-            <p>
-                It begins with booking a demo, followed by subscription and request, receiving your designs, and enjoying unlimited revisions. We make it easy to achieve your project goals.
-            </p>
-          </div>
+            <div>
+                <span class="themedot"></span>
+                <span class="themetitle">Tool box</span>
+            </div>
+            <div>
+                <h1 class="customPerksSecP">
+                    Tools Fueling Our <br>
+                    Branding Services
+                </h1>
+                <p>
+                    In our branding design services, we leverage powerful social media platforms for social media presence, all contributing to comprehensive brand development.
+                </p>
+            </div>
         </div>
-    
-      </section>
 
-      <section id="boxesSec" style="padding-top: 0;">
+    </section>
+
+    <section class="boxesSec inUIUX" style="padding-top: 0;" >
+        <div class="boxesRef2">
+            <div class="boxitem">
+                <div>
+
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">Facebook</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="../assets/icons/tools/facebook.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">Twitter</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="../assets/icons/tools/twitter.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">Instagram</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="../assets/icons/tools/insta.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">LinkedIn</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="../assets/icons/tools/linkedin.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="boxesRef3" class="boxesRef2">
+            <div class="boxitem boxitemEmpty">
+            </div>
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">Google Ads</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="../assets/icons/tools/googleads.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">MailChimp</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="../assets/icons/tools/mailchimp.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxitem boxitemEmpty">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="workSec">
+        <svg id="animatedlineM" width="231" height="2040" viewBox="0 0 231 2040" fill="none"
+            preserveAspectRatio="xMidYMax meet">
+            <path id="animatedlinepathM"
+                d="M181.181 1C183.082 81.0216 123.962 115.903 100.38 134.007C55.6539 165.736 -35.0419 228.725 16.2898 261.276C80.4544 301.969 223.774 292.646 164.545 406.649C105.316 520.656 -44.0356 468.493 86.3046 570.668C216.644 672.843 243.371 630.727 214.835 610.428C174.266 581.571 141.877 713.653 121.769 779.857C101.66 846.06 132.066 855.047 78.376 890.276C44.7617 912.33 25.1426 826.219 99.9739 887.664C174.806 949.109 108.741 975.809 107.277 977.089C33.6838 1017.03 287.839 1147.45 201.116 1181.72C92.7123 1224.56 -10.3996 1173.49 61.0775 1280.69C132.554 1387.88 303.112 1194.83 194.708 1440.22C107.985 1636.54 78.3058 1642.56 64.4736 1624.28C41.562 1576.72 8.36002 1502.65 76.3635 1559.72C103.175 1589.72 145.314 1657.76 160.523 1691.18C179.535 1732.94 162.166 1816.11 138.404 1861.65L128.347 1883.69C119.695 1915 120.596 1956.29 154.671 1959.16C197.265 1962.75 223.955 1984.97 178.985 2038.57"
+                stroke="#FF2626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        
+
+
+        <div class="work ">
+
+            <div class="workhead">
+                <div>
+                    <span class="themedot"></span>
+                    <span class="themetitle"> Recent Work</span>
+                </div>
+                <div id="workcounter" style="opacity: 0;">
+                    01
+                </div>
+            </div>
+
+            <!-- work grid for pc -->
+            <div class="workGrid">
+
+                <!-- Detail -->
+                <div class="workdetail">
+
+                    <div id="detailRef">
+                        <!-- detail item -->
+                        <div class="workdetailitem open">
+
+                            <h2>
+                                Epoch
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span>UX design</span>
+                                </li>
+                                <li>
+                                    <span>UI design</span>
+                                </li>
+                                <li>
+                                    <span>Web development</span>
+                                </li>
+                            </ul>
+                            <div class="stickybutton">
+                                <a href="../pages/portfolioDetail.html">
+                                    <div id="magneticBtn">
+                                        <div class="my-button">
+
+                                            <div>
+                                                <div id="Btnfirst" class="Btnfirst">
+                                                    View details
+                                                </div>
+                                                <div id="Btnsecond" class="Btnsecond">
+                                                    View details
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- detail item -->
+                        <div class="workdetailitem">
+                            <h2>
+                                Flora
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span>UX design</span>
+                                </li>
+                                <li>
+                                    <span>UI design</span>
+                                </li>
+                                <li>
+                                    <span>Web development</span>
+                                </li>
+                            </ul>
+                            <div class="stickybutton">
+                                <a href="../pages/portfolioDetail.html">
+                                    <div id="magneticBtn">
+                                        <div class="my-button">
+
+                                            <div>
+                                                <div id="Btnfirst" class="Btnfirst">
+                                                    View details
+                                                </div>
+                                                <div id="Btnsecond" class="Btnsecond">
+                                                    View details
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- detail item -->
+                        <div class="workdetailitem">
+                            <h2>
+                                Furniture
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span>UX design</span>
+                                </li>
+                                <li>
+                                    <span>UI design</span>
+                                </li>
+                                <li>
+                                    <span>Web development</span>
+                                </li>
+                            </ul>
+                            <div class="stickybutton">
+                                <a href="../pages/portfolioDetail.html">
+                                    <div id="magneticBtn">
+                                        <div class="my-button">
+
+                                            <div>
+                                                <div id="Btnfirst" class="Btnfirst">
+                                                    View details
+                                                </div>
+                                                <div id="Btnsecond" class="Btnsecond">
+                                                    View details
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- images scroller -->
+                <div class="workimage">
+                    <div id="imgRef">
+                        <svg id="animatedline" width="623" height="3539" viewBox="0 0 623 3539" fill="none"
+                            preserveAspectRatio="xMidYMax meet">
+                            <path id="animatedlinepath"
+                                d="M270.846 2C149.851 87.8711 -95.5014 258.346 43.3622 346.445C216.942 456.577 604.654 431.346 444.426 739.888C284.199 1048.44 -119.831 907.264 232.768 1183.79C585.366 1460.32 657.667 1346.34 580.471 1291.4C470.723 1213.3 383.104 1570.77 328.706 1749.95C274.308 1929.13 348.243 2089.16 203 2184.5C112.066 2244.19 58.9916 2011.13 261.427 2177.43C463.863 2343.73 293.462 2280.28 289.504 2283.75C90.4171 2391.84 777.963 2744.82 543.358 2837.58C250.102 2953.52 -28.8384 2815.31 164.523 3105.42C357.884 3395.53 819.279 2873.03 526.024 3537.19"
+                                stroke="#FF2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        
+                        <!-- <img id="animatedline" src="assets/icons/animline.svg" alt="animatedline"> -->
+                        <div>
+                            <a href="../pages/portfolioDetail.html">
+                                <img src="../assets/images/Work/DESIGN.png" alt="workImage" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="../pages/portfolioDetail.html">
+                                <img src="../assets/images/Work/DESIGN-1.png" alt="workImage" />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="../pages/portfolioDetail.html">
+                                <img src="../assets/images/Work/DESIGN-2.png" alt="workImage" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- work flex for mobile -->
+            <div class="workflex">
+
+                <div class="work-card">
+                    <div class="work-card-head">
+                        <div>
+                            <h2>Epoch.</h2>
+                        </div>
+                        <div>
+                            <p>01</p>
+                        </div>
+                    </div>
+                    <div class="work-card-img">
+                        <a href="/"><img src="../assets/images/Work/DESIGN.png" alt=""></a>
+                    </div>
+                    <div class="work-card-detail">
+                        <div>
+                            <ul>
+                                <li>
+                                    <span>UX design</span>
+                                </li>
+                                <li>
+                                    <span>UI design</span>
+                                </li>
+                                <li>
+                                    <span>Web development</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- sticky button -->
+                        <div class="stickybutton">
+                            <a href="../pages/portfolioDetail.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-card-head">
+                        <div>
+                            <h2>Flora.</h2>
+                        </div>
+                        <div>
+                            <p>02</p>
+                        </div>
+                    </div>
+                    <div class="work-card-img">
+                        <a href="/">
+                            <img src="../assets/images/Work/DESIGN-1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="work-card-detail">
+                        <div>
+                            <ul>
+                                <li>
+                                    <span>UX design</span>
+                                </li>
+                                <li>
+                                    <span>UI design</span>
+                                </li>
+                                <li>
+                                    <span>Web development</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- sticky button -->
+                        <div class="stickybutton">
+                            <a href="../pages/portfolioDetail.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-card-head">
+                        <div>
+                            <h2>Furniture.</h2>
+                        </div>
+                        <div>
+                            <p>03</p>
+                        </div>
+                    </div>
+                    <div class="work-card-img">
+                        <a href="/">
+                            <img src="../assets/images/Work/DESIGN-2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="work-card-detail">
+                        <div>
+                            <ul>
+                                <li>
+                                    <span>UX design</span>
+                                </li>
+                                <li>
+                                    <span>UI design</span>
+                                </li>
+                                <li>
+                                    <span>Web development</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- sticky button -->
+                        <div class="stickybutton">
+                            <a href="../pages/portfolioDetail.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="morework">
+                <a href="/">
+                    <div>
+                        More work
+                        <div></div>
+                    </div>
+                    <span>
+                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="boxesSec">
         <div id="boxesRef2">
-          <div class="boxitem">
-            <div>
-    
-              <div>
-                <span class="themedot"></span>
-                <span class="themetitle">01</span>
-              </div>
-    
-              <div>
+            <div class="boxitem">
                 <div>
-                  <div class="animicon" id="aicon-demo"></div>
-                </div>
-                <div>Book a<br> Demo</div>
-              </div>
-            </div>
-          </div>
-          <div class="boxitem">
-            <div>
-              <div>
-                <span class="themedot"></span>
-                <span class="themetitle">02</span>
-              </div>
-    
-              <div>
-                <div>
-                  <div class="animicon" id="aicon-request"></div>
-                  <!-- <img src="./assets/icons/request.svg" alt="" /> -->
-                </div>
-                <div>Subscribe &<br> Request</div>
-              </div>
-            </div>
-          </div>
-          <div class="boxitem">
-            <div>
-              <div>
-                <span class="themedot"></span>
-                <span class="themetitle">03</span>
-              </div>
-    
-              <div>
-                <div>
-                  <div class="animicon" id="aicon-design"></div>
-                  <!-- <img src="./assets/icons/designs.svg" alt="" /> -->
-                </div>
-                <div>Get Your<br> Designs</div>
-              </div>
-            </div>
-          </div>
-          <div class="boxitem">
-            <div>
-              <div>
-                <span class="themedot"></span>
-                <span class="themetitle">04</span>
-              </div>
-    
-              <div>
-                <div>
-                  <div class="animicon" id="aicon-revision"></div>
-                  <!-- <img src="./assets/icons/revisions.svg" alt="" /> -->
-                </div>
-                <div>Unlimited<br> Revisions</div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-      </section>
 
-      <section id="aboutUsDiscoverMore" class="contentCont">
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">01</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <div class="animicon" id="aicon-demo"></div>
+                        </div>
+                        <div>Book a<br> Demo</div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">02</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <div class="animicon" id="aicon-request"></div>
+                            <!-- <img src="../assets/icons/request.svg" alt="" /> -->
+                        </div>
+                        <div>Subscribe &<br> Request</div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">03</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <div class="animicon" id="aicon-design"></div>
+                            <!-- <img src="../assets/icons/designs.svg" alt="" /> -->
+                        </div>
+                        <div>Get Your<br> Designs</div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">04</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <div class="animicon" id="aicon-revision"></div>
+                            <!-- <img src="../assets/icons/revisions.svg" alt="" /> -->
+                        </div>
+                        <div>Unlimited<br> Revisions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="dragableSec">
+        <div class="MatterWrapper">
+            <div id="matterContainer" class="matterContainer">
+                <div class="dragableLabels whiteLabel">LOGO DESIGN</div>
+            <div class="dragableLabels blackLabel">GUIDELINES</div>
+            <div class="dragableLabels whiteLabel">VISUAL IDENTITY</div>
+            <div class="dragableLabels blackLabel">PICTH DECKS</div>
+            <div class="dragableLabels whiteLabel">BRAND AUDIT</div>
+            <div class="dragableLabels blackLabel">SOCIAL POSTS</div>
+            <div class="dragableLabels whiteLabel">WEB DESIGN</div>
+            
+
+            </div>
+
+            
+            <div class="matterContainerOverlay contentCont">
+                <div class="themeheading">
+                    <span class="themedot" style="background-color: #fff;"></span>
+                    <span class="themetitle">Let's start</span>
+                </div>
+                <div class="matterConHead">
+                    <div>
+                        <h1>
+                            Get Started With <br>
+                            Web Pioneers
+                        </h1>
+                    </div>
+                    <div>
+                        <p>
+                            We elevate your business identity, ensuring it resonates with your audience and stands out in the market.
+                        </p>
+                        <a href="/">
+                            <div>
+                                Get quote
+                                <div></div>
+                            </div>
+                            <span>
+                                <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="boxList">
+            <div class="Box_Item">
+                <h2>7+</h2>
+                <p>Expert members</p>
+            </div>
+            <div class="Box_Item">
+                <h2>40+</h2>
+                <p>SUCCESSFUL PROJECTS</p>
+            </div>
+            <div class="Box_Item">
+                <h2>5+</h2>
+                <p>years combined</p>
+            </div>
+            <div class="Box_Item">
+                <h2>100%</h2>
+                <p>positive feedback</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutUsDiscoverMore" class="contentCont">
         <div class="discoverMoreWrapper">
-    
             <div class="themeheading">
                 <span class="themedot"></span>
-                <span class="themetitle">Recent Work</span>
-              </div>
-              <div class="ALLPROJECTS heading">
+                <span class="themetitle">Discover More</span>
+            </div>
+
+            <div class="heading">
                 <h1>
-                    Check Our <br>
-                    Awesome Work
+                    It’s better<br>
+                    with pioneers
                 </h1>
+            </div>
+
+            <div class="discoverCardCon">
+                <div class="discoverCard frombelowanim">
+                    <div class="imageCon">
+                        <div class="iconcon">
+                            <!-- <img src="../assets/icons/request.svg" alt=""> -->
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/DiscoverMore/Discovery/Discovery.json"></lottie-player>
+                            <!-- <div class="animicon" id="discoverMore-discovery"></div> -->
+                        </div>
+                        <div class="hovercon"></div>
+                    </div>
+                    <div class="themeheading">
+                        <span class="themedot"></span>
+                        <span class="themetitle">Discovery</span>
+                    </div>
+                    <p>In the Discovery phase, we deeply explore your brand, learning what it stands for and what makes
+                        it unique. We use research and analysis to find insights that make your brand special.</p>
+                </div>
+                <div class="discoverCard frombelowanim">
+                    <div class="imageCon">
+                        <div class="iconcon">
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/DiscoverMore/Meet/Meet.json"></lottie-player>
+                        </div>
+                        <div class="hovercon"></div>
+
+                    </div>
+                    <div class="themeheading">
+                        <span class="themedot"></span>
+                        <span class="themetitle">Meet</span>
+                    </div>
+                    <p>This phase is all about connecting with you, fostering open communication, and committing to
+                        creating exceptional designs that truly represent your brand's personality.</p>
+                </div>
+                <div class="discoverCard frombelowanim">
+                    <div class="imageCon">
+                        <div class="iconcon">
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/DiscoverMore/Collaboration/Colaboration.json"></lottie-player>
+                        </div>
+                        <div class="hovercon"></div>
+
+                    </div>
+                    <div class="themeheading">
+                        <span class="themedot"></span>
+                        <span class="themetitle">Collaboration</span>
+                    </div>
+                    <p>We ensure your voice is heard at every step. Together, we enhance your vision, combining our
+                        design expertise with your brand's story to create designs that truly connect.</p>
+                </div>
+                <div class="discoverCard frombelowanim">
+                    <div class="imageCon">
+                        <div class="iconcon">
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/Our_Process/Design/Design_Icon_Black.json"></lottie-player>
+                        </div>
+                        <div class="hovercon"></div>
+
+                    </div>
+                    <div class="themeheading">
+                        <span class="themedot"></span>
+                        <span class="themetitle">Design</span>
+                    </div>
+                    <p>In the Design phase, our creative talents come to life. We use our deep understanding of your
+                        brand and the insights we've gathered to create visually stunning designs.</p>
+                </div>
+                <div class="discoverCard frombelowanim">
+                    <div class="imageCon">
+                        <div class="iconcon">
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/Our_Process/Development/Development_Black.json"></lottie-player>
+                        </div>
+                        <div class="hovercon"></div>
+
+                    </div>
+                    <div class="themeheading">
+                        <span class="themedot"></span>
+                        <span class="themetitle">Development</span>
+                    </div>
+                    <p>After design approval, we move on to the Development phase. Our skilled team brings the designs
+                        to life, turning them into functional and interactive experience.</p>
+                </div>
+                <div class="discoverCard frombelowanim">
+                    <div class="imageCon">
+                        <div class="iconcon">
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/DiscoverMore/Implement/implement.json"></lottie-player>
+                        </div>
+                        <div class="hovercon"></div>
+                    </div>
+                    <div class="themeheading">
+                        <span class="themedot"></span>
+                        <span class="themetitle">Implement</span>
+                    </div>
+                    <p>Whether it's launching a new website, refreshing your brand identity, or introducing a product,
+                        we work closely with you to ensure a smooth and impactful process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="otherServices" class="contentCont">
+        <div class="border_top contentCont">
+            <div></div>
+        </div>
+        <div class="otherServicesWrapper">
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Other Services</span>
+            </div>
+
+            <div class="heading">
+                <h1>
+                    We Bring Skills, <br>
+                    You Achieve Results
+                </h1>
+
                 <div>
-                    <a href="../pages/portfolio.html">
-                        ALL PROJECTS
+                    <p>
+                        Providing top-notch design and UI/UX skills, we help boost your business, making it more user-friendly and successful.
+                    </p>
+                    <a href="/">
+                        <div>
+                          get started
+                          <div></div>
+                        </div>
+                        <span>
+                          <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                        </span>
+                      </a>
+                </div>
+            </div>
+
+            <div class="otherServicesSec">
+
+                <div id="skillsBoxesRef">
+
+                    <a href="/" class="boxCard iconBox">
+                        <div class="iconWrapper">
+                            <img src="../assets/icons/largeIconOnly.svg" alt="">
+                        </div>
                     </a>
+
+                    <a href="./UIUX.html" class="boxCard">
+                        <div class="boxWrapper">
+                            <div class="number">1</div>
+                            <div class="lable">CREATIVITY</div>
+                            <div class="arrow">
+                                <img src="../assets/icons/arrowRight.svg" alt="arrowRight" />
+                            </div>
+
+                            <div class="namea">UI UX</div>
+                            <div class="nameb">
+                                <p>design</p>
+                                <p>design</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./webDevelopment.html" class="boxCard">
+                        <div class="boxWrapper">
+                            <div class="number">2</div>
+                            <div class="lable">INNOVATION</div>
+                            <div class="arrow">
+                                <img src="../assets/icons/arrowRight.svg" alt="arrowRight" />
+                            </div>
+
+                            <div class="namea">web</div>
+                            <div class="nameb">
+                                <p>development</p>
+                                <p>development</p>
+                            </div>
+                        </div>
+                    </a>
+
+
                 </div>
-              </div>
-    
-              <div class="imagerow">
-                <div>
-                    <div class="followSTB">
-                        <a href="/">
-                        <img src="../assets/images/Work/DESIGN.png" alt="">
-                        </a>
-                    </div>
-                    <p>Epoch</p>
-                </div>
-                <div>
-                    <div class="followSTB">
-                    <a href="/"><img src="../assets/images/Work/DESIGN-2.png" alt=""></a>
-                    </div>
-                    <p>Furniture</p>
-                </div>
-                <div>
-                    <div class="followSTB">
-                        <a href="/">
-                    <img src="../assets/images/Work/DESIGN-3.png" alt="">
-                        </a>
-                    </div>
-                    <p>Tavern</p>
-                </div>
-              </div>
+
+            </div>
         </div>
         <div class="spacer"></div>
     </section>
@@ -867,18 +1574,17 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Function to reload the page
-            function reloadPage() {
-                location.reload();
-            }
-
-            // Store the initial window width
+           // Store the initial window width
             var initialWidth = window.innerWidth;
 
             // Attach the reload function to the window's resize event
             window.addEventListener("resize", function () {
                 // Check if the width has changed
-                if (window.innerWidth !== initialWidth) {
+                var currentWidth = window.innerWidth;
+                var widthDifference = Math.abs(currentWidth - initialWidth);
+
+                // Check if the width difference is more than 50 pixels
+                if (widthDifference > 50) {
                     // Debounce the reload to avoid excessive reloading
                     clearTimeout(window.resizeTimer);
                     window.resizeTimer = setTimeout(function () {
@@ -886,6 +1592,12 @@
                     }, 250);
                 }
             });
+
+            function reloadPage() {
+                // Your reload logic here
+                location.reload();
+            }
+
 
 
             function loadScript(src, callback) {
@@ -904,11 +1616,14 @@
                 "../scripts/animated/figmafooter.js",
                 "../scripts/pages/unseenjourney.js",
                 "../scripts/hero.js",
-                "../scripts/ideas.js",
-                "../scripts/process.js",
                 "../scripts/boxes.js",
-                "../scripts/perks.js",
                 "../scripts/mousefollower_stickybutton.js",
+                "../scripts/animated/Dragable.js",
+                "../scripts/stickyButton.js",
+                "../scripts/pages/UIUX.js",
+                "../scripts/pages/work3.js",
+                "../scripts/pages/lessBoxes.js",
+                "../scripts/ideas.js",
             ];
 
             // Load each script one by one

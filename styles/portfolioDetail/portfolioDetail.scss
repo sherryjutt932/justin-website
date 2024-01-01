@@ -24,6 +24,23 @@
     flex-direction: column;
     gap: 100px;
 
+    .custom{
+        .imgbg{
+            overflow: hidden;
+            img{
+                display: block;
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                max-height: 100%;
+                object-fit: cover;
+            }
+            .mobileMok{
+                max-height: 80vh;
+            }
+        }
+
+    }
 
     .themeheading{
         padding-top: 0 !important;
@@ -167,6 +184,14 @@
     }
 }
 
+
+#aboutUsDiscoverMore{
+    height: 200vh !important;
+    .discoverMoreWrapper{
+        height: 100vh;
+        top: 0 !important;
+    }
+}
 
 @media (max-width: 1536px) {
     .DetailContent{
@@ -343,5 +368,13 @@
             max-width: 250px;
         }
     
+    }
+
+    #aboutUsDiscoverMore{
+        height: 250vh !important;
+        .discoverMoreWrapper{
+            height: 150vh;
+            top: -50vh !important;
+        }
     }
 }

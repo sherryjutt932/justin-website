@@ -69,6 +69,18 @@
                     display: flex;
                     align-items: center;
                     gap: 20px;
+
+                    & > div:nth-child(1){
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    gap: 20px;
+                    width: auto;
+                }
+
+                    & > div:nth-child(2){
+                        display: none;
+                   }
                    
                     .tablet{
                         min-width: 260px;
@@ -200,11 +212,10 @@
                         }
         
                     }
-                    
         
                     &>div:nth-child(2){
                         gap: 20px;
-                       
+
                         .tablet{
                             min-width: 330px;
                             padding: 25px;
@@ -329,10 +340,38 @@
         
                     &>div:nth-child(2){
                         display: flex;
-                        align-items: center;
                         gap: 20px;
-                       padding-top: 20px;
-                       z-index: 10;
+                        padding-top: 20px;
+                        z-index: 10;
+                        align-items: flex-start;
+                        
+                        & > div:nth-child(1){
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: unset;
+                        gap: 20px;
+                        width: 220px;
+                    }
+
+                        & > div:nth-child(2){
+                            display: flex;
+                            align-items: flex-start;
+                        .feebackimgMobile{
+                            position: relative;
+                            #biglogo{
+                                height: auto;
+                                width: 100%;
+                                max-height: 350px;
+                            }
+                            #rotate-steric{
+                                position: absolute;
+                                top: 15px;
+                                height: 35px;
+                                left: 50%;
+                                animation: rotate 15s linear infinite forwards;
+                            }
+                        }
+                       }
                         .tablet{
                             min-width: 200px;
                             white-space: nowrap;
@@ -415,18 +454,7 @@
             }
         
             .feebackimg{
-                position: relative;
-                padding-top: 100px;
-                #biglogo{
-                height: 142px;
-                }
-                #rotate-steric{
-                    position: absolute;
-                    top: 110px;
-                height: 25px;
-                    left: 50%;
-                    animation: rotate 15s linear infinite forwards;
-                }
+                display: none;
             }
         }
     }
