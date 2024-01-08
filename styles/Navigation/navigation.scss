@@ -508,7 +508,7 @@ nav {
       .content {
         & > div {
           &:nth-child(1) {
-            gap: 15px;
+            gap: max(3vh, 15px);
             .nav-link {
               div {
                 font-size: 60px;
@@ -526,7 +526,7 @@ nav {
           }
 
           &:nth-child(2) {
-            gap: 30px;
+            gap: max(5vh, 30px);
 
             .card {
               max-width: 396px;
@@ -975,4 +975,30 @@ nav {
     }
   }
 
+}
+
+
+@media (min-width: 2000px) {
+  #navigation {
+
+    header {
+      .content {
+        & > div {
+          &:nth-child(1) {
+            gap: 5vh;
+          }
+
+          &:nth-child(2) {
+            gap: 8vh;
+
+            .card {
+              transform: scale(1.2);
+              transform-origin: right center;
+            }
+          }
+        }
+      }
+    }
+  }
+ 
 }

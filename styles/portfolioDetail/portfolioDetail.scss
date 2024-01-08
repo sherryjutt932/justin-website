@@ -55,6 +55,11 @@
         align-items: center;
     }
 
+    .aStrech{
+        align-items: stretch !important;
+    }
+
+
     .fit{
         width: 100%;
         height: fit-content;
@@ -73,7 +78,6 @@
             font-size: 80px;
             font-style: normal;
             font-weight: 300;
-            max-width: 20ch;
             line-height: 95px; /* 118.75% */
         }
     }
@@ -116,6 +120,7 @@
           font-weight: 300;
           line-height: normal;
           margin-bottom: 25px;
+          text-transform: capitalize;
         }
         p {
             font-family: var(--Satoshi);

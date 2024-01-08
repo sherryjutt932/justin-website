@@ -1,6 +1,8 @@
 
 // set top position for section before footer
 function setStickyTop() {
+    // var pos = Math.max(((document.getElementsByClassName("discoverMoreWrapper")[0].offsetHeight * (1)) - (60) - (window.innerHeight*0.5)) ,0);
+
     var pos = Math.max(((document.getElementsByClassName("discoverMoreWrapper")[0].offsetHeight * (1)) - (60) - (window.innerHeight*0.5)) ,0);
 
     setTimeout(() => {

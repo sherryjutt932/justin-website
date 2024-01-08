@@ -285,20 +285,21 @@ if((document.getElementById("loadingsteric"))){
     )
     .to(
       "#loadingsteric",
-      4,
+      2,
       {
         x: calculatedXValue + "px",
         rotate: 600,
-        ease: "power2.out",
+        ease: "sine",
       },
       "a"
     )
     .to(
       "#loading-percent",
-      3,
+      1.6,
       {
         textContent: "100",
         roundProps: "textContent",
+        ease:"steps(50)"
       },
       "a"
     )
@@ -306,13 +307,13 @@ if((document.getElementById("loadingsteric"))){
       "#loadingSec",
       0.9,
       {
-        borderRadius: "40px",
+        borderRadius: "60px",
         transform: () =>
           !isMobile()
-            ? "scale3d(0.9,0.9,1) translateY(-130%)"
+            ? "scale3d(0.95,0.9,1) translateY(-130%)"
             : "scale3d(0.95,0.95,1) translateY(-130%)",
       },
-      "a+=3.4"
+      "a+=1.9"
     )
     .to("#loadingSec", 0.2, {
       zIndex: -300,

@@ -32,12 +32,13 @@
         transform: translate(-50%, -50%) rotate(45deg);
 
         .animDot {
-          background-color: var(--sec);
+          background-color: var(--dark);
           height: 28px;
           aspect-ratio: 1;
           border-radius: 100%;
           position: absolute;
           top: 50%;
+          transition: opacity 0.5s ease;
 
           &#AnimDot1 {
             left: 0px;
@@ -151,8 +152,8 @@
 
 #digitalDesign {
   width: 100%;
-  color: var(--light);
-  background: var(--dark);
+  color: var(--dark);
+  background: transparent;
   transition: all 300ms ease;
   position: relative;
   z-index: 10;
@@ -173,7 +174,7 @@
       display: block;
       object-fit: cover;
       z-index: -2;
-      opacity: 0 ;
+      opacity: 0;
       transition: all 0.3s ease;
     }
     .gridoverlay {
@@ -197,7 +198,7 @@
       justify-content: space-between;
 
       h1 {
-        color: #fff;
+        color: inherit;
         font-family: var(--NohemiL);
         font-size: max(4.1vw, 36px);
         line-height: 118.75%;
@@ -282,11 +283,12 @@
           padding-bottom: 60px;
           transform-origin: center center;
           overflow: hidden;
-          
+
           .cardWrapper {
             width: 100%;
             position: relative;
             background-color: #fff;
+            border-top: 1px solid #979797;
             color: #000;
             padding: 40px;
             display: flex;
@@ -301,7 +303,7 @@
               position: absolute;
               top: 0;
               z-index: 19;
-              background-color: #fff;
+              background-color: #d6d6d6;
               opacity: 0;
             }
 
@@ -595,7 +597,7 @@
     left: -50vw;
     white-space: nowrap;
     border-radius: 200px;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     font-family: var(--Satoshi);
     font-size: 22px;
@@ -607,19 +609,19 @@
     pointer-events: none;
   }
 
-  .whiteLabel{
+  .whiteLabel {
     background-color: #fff;
     border: 2px solid #000;
     color: #000;
   }
-  .blackLabel{
+  .blackLabel {
     background-color: #000;
     border: 2px solid #fff;
     color: #fff;
   }
 }
 
-.p5Canvas{
+.p5Canvas {
   display: none !important;
 }
 
@@ -690,7 +692,6 @@
           font-weight: 400;
           line-height: 36px; /* 150% */
           margin-bottom: 20px;
-
         }
         a {
           font-size: 18px;
@@ -904,8 +905,8 @@
   }
 }
 
-.customPerksSecP{
-  width: 50% !important; 
+.customPerksSecP {
+  width: 50% !important;
 }
 
 @media (min-width: 1536px) {
@@ -952,13 +953,12 @@
 }
 
 @media (max-width: 1536px) {
-  #unseenStories .heading{
+  #unseenStories .heading {
     padding-top: 80px !important;
   }
   .UIUXCon {
     display: flex;
     padding-bottom: 110px;
-
 
     & > div {
       flex: 1 1 50%;
@@ -1036,18 +1036,16 @@
     }
   }
 
-
   #digitalDesign {
     #digitalDesignWrapper {
-  
       & > div:nth-child(1) {
         margin: 60px auto;
-  
+
         .buttoncon {
           gap: 40px;
           .hoverLine {
             font-size: 14px;
-  
+
             & > div {
               & > div {
                 bottom: -2px;
@@ -1057,7 +1055,6 @@
         }
       }
       & > div:nth-child(2) {
-  
         #cardStack {
           .stackCard {
             width: 477px;
@@ -1065,7 +1062,7 @@
             .cardWrapper {
               padding: 30px;
               gap: 20px;
-  
+
               & > div:nth-child(1) {
                 & > div:nth-child(1) {
                   gap: 30px;
@@ -1094,12 +1091,11 @@
       }
       .listcon {
         padding-right: 60px;
-  
+
         & > div {
           padding: 40px 20px;
           font-size: 18px;
 
-  
           span {
             position: relative;
             z-index: 10;
@@ -1108,7 +1104,7 @@
       }
     }
   }
-  
+
   .inUIUX {
     .boxesRef2 {
       .boxitem {
@@ -1125,7 +1121,6 @@
     .MatterWrapper {
       .matterContainerOverlay {
         .matterConHead {
-  
           h1 {
             font-size: 60px;
             line-height: 71px; /* 118.75% */
@@ -1135,11 +1130,10 @@
             line-height: 27px; /* 150% */
             max-width: 32ch;
           }
-  
         }
       }
     }
-  
+
     .boxList {
       .Box_Item {
         gap: 20px;
@@ -1161,9 +1155,6 @@
   }
 
   #otherServices {
-  
-  
-    
     .otherServicesWrapper {
       position: sticky;
       top: -150px;
@@ -1171,58 +1162,55 @@
       padding-bottom: 110px;
       display: flex;
       flex-direction: column;
-  
+
       .heading {
         padding-top: 60px;
         h1 {
           font-size: 60px;
           line-height: 71px; /* 118.75% */
         }
-  
+
         & > div {
           padding-right: 80px;
           p {
             line-height: 27px; /* 150% */
             font-size: 18px;
             margin-bottom: 20px;
-  
           }
           a {
             font-size: 14px;
-  
+
             & > div {
               padding-bottom: 4px;
-  
+
               & > div {
                 bottom: -2px;
               }
             }
-  
-  
+
             span {
-  
               height: 36px;
               margin-left: 24px;
               padding: 7px 30px;
             }
-  
+
             &:hover span {
               border: 1px dashed var(--light);
             }
           }
         }
       }
-  
+
       .otherServicesSec {
         flex: 1;
-  
+
         #skillsBoxesRef {
           display: flex;
           gap: 30px;
           height: 100%;
           align-items: center;
           line-height: normal;
-  
+
           .boxCard.iconBox {
             background-color: unset !important;
           }
@@ -1231,7 +1219,7 @@
             background-color: var(--light);
             color: var(--dark);
             //padding: 48px 0px;
-  
+
             &:nth-child(2) {
               // mt-24 2xl:mt-32
               margin-top: 40px;
@@ -1240,18 +1228,18 @@
               // mt-48 2xl:mt-64
               margin-top: 80px;
             }
-  
+
             &:hover .boxWrapper .arrow {
               transform: translateX(50%);
             }
-  
+
             &:hover .boxWrapper .nameb p:nth-child(1) {
               transform: translateY(-100%);
             }
             &:hover .boxWrapper .nameb p:nth-child(2) {
               top: 0;
             }
-  
+
             .iconWrapper {
               display: flex;
               justify-content: center;
@@ -1262,7 +1250,7 @@
                 width: 12vw;
               }
             }
-  
+
             .boxWrapper {
               text-transform: uppercase;
               font-family: var(--Satoshi);
@@ -1275,7 +1263,7 @@
               align-items: center;
               position: relative;
               cursor: pointer;
-  
+
               .number {
                 position: absolute;
                 font-size: 12px;
@@ -1290,7 +1278,7 @@
                 align-items: center;
                 justify-content: center;
               }
-  
+
               .lable {
                 position: absolute;
                 font-size: 16px;
@@ -1300,7 +1288,7 @@
                 top: 24px;
                 color: var(--gray-79);
               }
-  
+
               .arrow {
                 transition: all 700ms;
                 position: absolute;
@@ -1313,18 +1301,18 @@
                   height: 12px;
                 }
               }
-  
+
               .namea {
                 margin-bottom: 0px;
               }
-  
+
               .nameb {
                 position: relative;
                 overflow: hidden;
-  
+
                 p {
                   transition: all 500ms;
-  
+
                   &:nth-child(2) {
                     position: absolute;
                     top: 110%;
@@ -1342,13 +1330,18 @@
   }
 }
 
+#digitalDesign.activeBlack {
+  color: var(--light);
+  background: var(--dark);
+}
+
 @media (min-width: 750px) {
   #digitalDesign.active {
-    background: var(--sec);
-  
+    background: var(--sec) !important;
+
     #digitalDesignWrapper {
       .grid {
-        opacity: 0.6;
+        opacity: 1;
       }
       .gridoverlay {
         opacity: 1;
@@ -1364,12 +1357,12 @@
           }
         }
       }
-  
+
       .listcon {
         & > div {
           border-bottom: 1px solid var(--light);
           color: var(--light);
-  
+
           &:hover {
             color: var(--dark);
             &::after {
@@ -1381,9 +1374,10 @@
     }
   }
 }
+
 @media (max-width: 750px) {
-  #unseenStories .heading{
-    br{
+  #unseenStories .heading {
+    br {
       display: none;
     }
   }
@@ -1411,7 +1405,7 @@
     .bigiconAnim {
       .bigiconWrapper {
         padding: 60px;
-  
+
         #animCircle {
           .animDot {
             height: 22px;
@@ -1517,35 +1511,32 @@
   }
 
   #digitalDesign {
-
     #digitalDesignWrapper {
       height: calc(100vh + 200px);
-
       flex-direction: column;
-  
+
       & > div:nth-child(1) {
         margin: 60px 0;
         margin-bottom: 0px;
-      flex: 0;
-      h1 {
-        white-space: wrap;
-        br{
-          display: none;
+        flex: 0;
+        h1 {
+          max-width: 100%;
+          white-space: wrap;
+          br {
+            display: none;
+          }
         }
-      }
 
-  
         .buttoncon {
           gap: 40px;
           .hoverLine {
             font-size: 14px;
-  
+
             & > div {
               & > div {
                 bottom: -2px;
               }
             }
-
           }
           .arrowCircle {
             width: 84px;
@@ -1553,11 +1544,9 @@
         }
       }
       & > div:nth-child(2) {
-  
         #cardStack {
-        margin-top: 35vh;
+          margin-top: 5vh;
           .stackCard {
-            // width: 95%;
             width: 97%;
             max-width: 360px;
             height: 285px;
@@ -1569,7 +1558,7 @@
               width: 100%;
               height: 265px;
               overflow: hidden;
-  
+
               & > div:nth-child(1) {
                 & > div:nth-child(1) {
                   gap: 30px;
@@ -1599,21 +1588,20 @@
       .listcon {
         padding: 0px;
         padding-bottom: 20px;
-  
+
         & > div {
           padding: 0px 10px;
           height: 11vh;
-  
         }
       }
     }
   }
 
-  .customPerksSecP{
-    width: 100% !important; 
+  .customPerksSecP {
+    width: 100% !important;
   }
 
-  .stickybutton{
+  .stickybutton {
     width: fit-content !important;
     height: fit-content !important;
   }
@@ -1621,7 +1609,7 @@
     .boxitem {
       border-top: none !important;
     }
-    .boxitemEmpty{
+    .boxitemEmpty {
       display: none !important;
     }
   }
@@ -1641,10 +1629,11 @@
 
   #dragableSec {
     .MatterWrapper {
+      height: calc(100% - 320px);
       .matterContainerOverlay {
         .matterConHead {
           flex-direction: column;
-  
+
           h1 {
             font-size: 36px;
             line-height: 41px; /* 118.75% */
@@ -1654,13 +1643,12 @@
             line-height: 27px; /* 150% */
             max-width: 95%;
           }
-  
         }
       }
     }
-  
+
     .boxList {
-      height: fit-content;
+      height: 320px;
       flex-wrap: wrap;
       .Box_Item {
         flex: 1 1 45%;
@@ -1685,14 +1673,9 @@
       line-height: 16px; /* 109.091% */
       padding: 12px 22px;
     }
-  
   }
 
-
   #otherServices {
-  
-  
-    
     .otherServicesWrapper {
       position: sticky;
       top: -350px;
@@ -1700,7 +1683,7 @@
       padding-bottom: 200px;
       display: flex;
       flex-direction: column;
-  
+
       .heading {
         padding-top: 60px;
         flex-direction: column;
@@ -1709,11 +1692,11 @@
           font-size: 36px;
           line-height: 41px; /* 118.75% */
 
-          br{
+          br {
             display: none;
           }
         }
-  
+
         & > div {
           max-width: 100%;
           padding-right: 00px;
@@ -1721,43 +1704,38 @@
             line-height: 27px; /* 150% */
             font-size: 16px;
             margin-bottom: 20px;
-  
           }
-         
         }
       }
-  
+
       .otherServicesSec {
         flex: 1;
-  
+
         #skillsBoxesRef {
           display: flex;
           flex-direction: column;
           gap: 40px;
-        height: fit-content;
+          height: fit-content;
           height: 100%;
           align-items: stretch;
           line-height: normal;
           margin-top: 80px;
           position: relative;
 
-          
           .boxCard.iconBox {
             background-color: unset !important;
           }
-          
+
           .boxCard {
             flex: 1 1 0%;
             background-color: var(--light);
             color: var(--dark);
             //padding: 48px 0px;
-  
+
             &:nth-child(1) {
               position: absolute;
               right: 20px;
               top: -120px;
-
-              
             }
             &:nth-child(2) {
               // mt-24 2xl:mt-32
@@ -1767,18 +1745,18 @@
               // mt-48 2xl:mt-64
               margin-top: 0px;
             }
-  
+
             &:hover .boxWrapper .arrow {
               transform: translateX(50%);
             }
-  
+
             &:hover .boxWrapper .nameb p:nth-child(1) {
               transform: translateY(-100%);
             }
             &:hover .boxWrapper .nameb p:nth-child(2) {
               top: 0;
             }
-  
+
             .iconWrapper {
               display: flex;
               justify-content: center;
@@ -1789,7 +1767,7 @@
                 width: 90px;
               }
             }
-  
+
             .boxWrapper {
               text-transform: uppercase;
               font-family: var(--Satoshi);
@@ -1802,7 +1780,7 @@
               align-items: center;
               position: relative;
               cursor: pointer;
-  
+
               .number {
                 position: absolute;
                 font-size: 12px;
@@ -1817,7 +1795,7 @@
                 align-items: center;
                 justify-content: center;
               }
-  
+
               .lable {
                 position: absolute;
                 font-size: 16px;
@@ -1827,7 +1805,7 @@
                 top: 24px;
                 color: var(--gray-79);
               }
-  
+
               .arrow {
                 transition: all 700ms;
                 position: absolute;
@@ -1840,18 +1818,18 @@
                   height: 12px;
                 }
               }
-  
+
               .namea {
                 margin-bottom: 0px;
               }
-  
+
               .nameb {
                 position: relative;
                 overflow: hidden;
-  
+
                 p {
                   transition: all 500ms;
-  
+
                   &:nth-child(2) {
                     position: absolute;
                     top: 110%;
@@ -1867,5 +1845,4 @@
       }
     }
   }
-  
 }
