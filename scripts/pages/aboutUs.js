@@ -60,3 +60,12 @@ gsap.to( aboutUs_Founders[1], {
 
 // -------------------------animationas
 // discoverMore-discovery
+
+
+ //pos sticky
+ var aboutUsDiscoverMore = document.querySelector(".aboutUsDiscoverMorePage .discoverMoreWrapper");
+
+if (isMobile()) {
+  aboutUsDiscoverMore.style.top = `-${aboutUsDiscoverMore.offsetHeight - (window.innerHeight/2)}px`;
+}
+

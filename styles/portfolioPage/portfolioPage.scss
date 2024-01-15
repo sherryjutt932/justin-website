@@ -41,11 +41,30 @@
         line-height: 70px; /* 134.615% */
         max-width: 37ch;
       }
+      
+      .IconEffect{
+        position: relative;
+        line-height: 0;
+        display: inline-flex;
+        height: 40px;
+        
+        &:hover .absIcon{
+          opacity: 0;
+        }
 
-      .heart {
-        vertical-align: middle;
-        svg {
-          width: 40px;
+        img {
+          display: inline-block;
+          vertical-align: middle;
+          width: auto;
+          height: 100%;
+          transition: opacity 0.5s ease;
+          cursor: pointer;
+        }
+
+        .absIcon{
+          position: absolute;
+          bottom: 0%;
+          left: 0%;
         }
       }
 
@@ -153,10 +172,8 @@
           max-width: 37ch;
         }
 
-        .heart {
-          svg {
-            width: 30px;
-          }
+        .IconEffect{
+          height: 30px;
         }
 
         .first {
@@ -223,12 +240,6 @@
           max-width: unset;
         }
 
-        .heart {
-          svg {
-            width: 30px;
-          }
-        }
-
         .first {
           margin-left: 8px;
           .animarrow {
@@ -258,8 +269,23 @@
     .discoverMoreWrapper {
         position: sticky !important;
         .letsStart {
+          position: relative;
+
+          p{
+            br{
+              display: none;
+            }
+          }
         .logoCon{
-            display: none;
+          padding-right: 0;
+          position: absolute;
+          right: 5%;
+          bottom: 0;
+          transform: translateY(-20%);
+          img{
+            display: block;
+            width: max(90px, 8vw);
+        }
         }
       }
     }

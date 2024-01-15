@@ -3,6 +3,10 @@ const imgRef = document.getElementById("imgRef");
 const detailRef = document.getElementById("detailRef");
 const workdetail_item = document.getElementsByClassName("workdetailitem");
 
+function mapRange(value, fromMin, fromMax, toMin, toMax) {
+  return ((value - fromMin) / (fromMax - fromMin)) * (toMax - toMin) + toMin;
+}
+
 
 if (!isMobile()) {
   var worktimeline = gsap.timeline();
@@ -20,8 +24,19 @@ if (!isMobile()) {
   worktimeline.to(imgRef, {
     yPercent: -(100 * (imgArray.length-2) ) ,
     ease: "none",
+    duration:1.6,
     delay:.1,
   });
+
+  let animated_line = document.getElementById("animatedlinepath");
+  let animatedline_length = animated_line.getTotalLength();
+  animated_line.style.strokeDasharray =
+    animatedline_length + " " + animatedline_length;
+  animated_line.style.strokeDashoffset = animatedline_length;
+
+    var totalHeight = (window.innerHeight) * (imgArray.length-1);
+
+    var progg = 0.4;
 
   ScrollTrigger.create({
     trigger: workSec,
@@ -32,34 +47,18 @@ if (!isMobile()) {
     pin: true,
     animation: worktimeline,
     onUpdate: (self) => {
-      let progress = self.progress;
       let imgArray = Array.from(imgRef.children);
       let totalItems = imgArray.length - 1;
-      // let currentIndex = Math.round(progress * (totalItems - 1)) + 1;
       let currentIndex = 1;
-      let windowsizefix = (window.innerWidth<1900)?Math.round((window.innerWidth/100)-12)/100:0;
-      let adjust = 0.07;
-      // console.log(progress,windowsizefix);
-      // document.getElementById("workcounter").innerHTML =
-      //   currentIndex > 1 ? "0" + currentIndex : "01";
-      for (let i = 2; i <= totalItems; i++) {
-        let threshold = (i - 1) / totalItems;
-        if (progress > (threshold - adjust - windowsizefix + 0.14)) {
-          currentIndex = i;
+      let mapIndex = mapRange((self.progress*0.9), 0, 1, 0, (totalItems)); 
+      for (let i =  1; i <= totalItems; i++) {
+        let threshold = (i - 1) * 0.94 + 0.82;
+        if (mapIndex > threshold) {
+          currentIndex = i +1;
         } else {
-          break; // Break the loop if the condition is not met
+          break;
         }
       }
-
-      // if(progress>(0.33 - adjust - (windowsizefix))){
-      //   currentIndex = 2; //flora
-      // }
-      // if(progress> (0.61 - adjust - (windowsizefix))){
-      //   currentIndex = 3; //furniture
-      // }
-      // if(progress> (0.89 - adjust - (windowsizefix))){
-      //   currentIndex = 4; //tavern
-      // }
 
       if (currentIndex >= 1 && currentIndex <= totalItems) {
         Array.from(workdetail_item).forEach((item) => {
@@ -67,6 +66,9 @@ if (!isMobile()) {
         });
         workdetail_item[currentIndex - 1].classList.add("open");
       }
+
+      const mappedValue = mapRange((self.progress), 0, 1, 0, (animatedline_length)); 
+      animated_line.style.strokeDashoffset = animatedline_length - mappedValue;
 
     },
   });
@@ -101,36 +103,50 @@ if (isMobile()) {
     scrub: true,
     animation: animatedlinetimeline,
     onUpdate: (self) => {
-      let svgdrawLength = animatedline_length * self.progress * 1.3;
+      let svgdrawLength = animatedline_length * self.progress * 1.24;
       animated_line.style.strokeDashoffset =
         animatedline_length - svgdrawLength;
     },
   });
-} else {
-  let animated_line = document.getElementById("animatedlinepath");
-  let animatedline_length = animated_line.getTotalLength();
-  animated_line.style.strokeDasharray =
-    animatedline_length + " " + animatedline_length;
-  animated_line.style.strokeDashoffset = animatedline_length;
-  let animatedlinetimeline = gsap.timeline();
 
-  let imgArray = Array.from(imgRef.children);
-    var totalHeight = (window.innerHeight) * (imgArray.length-1);
+  var floatAnim = document.querySelector(".floatAnim");
 
-    var progg = 0.4;
-    
-  ScrollTrigger.create({
-    trigger: imgRef,
-    start: "top top",
-    end: () => `+=${totalHeight}`,
-    scrub: true,
-    animation: animatedlinetimeline,
-    onUpdate: (self) => {
-      let svgdrawLength = (animatedline_length) * self.progress * (progg + (self.progress * 0.7));
-      // if(svgdrawLength < (animatedline_length*0.85)){progg = 0.4}
-      // else if((animatedline_length*0.85) < svgdrawLength < (animatedline_length*1.35)){progg = 0.45}
-      // else if((animatedline_length*1.35) < svgdrawLength < (animatedline_length*2.35)){progg = 0.5}
-      animated_line.style.strokeDashoffset = animatedline_length - svgdrawLength;
+gsap.fromTo(
+  floatAnim,
+  {
+    yPercent: -20,
+  },
+  {
+    yPercent: 20,
+    scrollTrigger: {
+      trigger:floatAnim,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
     },
-  });
+  }
+);
+} else {
+  
+
+
+  var floatAnim = document.querySelector(".floatAnim");
+
+gsap.fromTo(
+  floatAnim,
+  {
+    yPercent: -30,
+  },
+  {
+    yPercent: 30,
+    scrollTrigger: {
+      trigger:floatAnim,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+    },
+  }
+);
+
+
 }

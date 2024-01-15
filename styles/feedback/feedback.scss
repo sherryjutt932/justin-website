@@ -54,6 +54,7 @@
                     p{
                     // transform: translateX(-300%);
                         flex-shrink: 0;
+                        padding-right: 30px;
                         height: 100%;
                         width: 100%;
                         font-size: 26px;
@@ -120,7 +121,9 @@
                             font-weight: 400 !important;
                             font-size: 18px;
                         line-height: normal;
+                        font-family: var(--Satoshi);
                         display: none;
+                        text-transform: capitalize;
                         }
                         p.active{
                             display: block;

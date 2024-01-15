@@ -1,9 +1,29 @@
 const animimages = document.getElementsByClassName("animimage");
+const appearAnim = document.getElementsByClassName("appearAnim");
 
 Array.from(animimages).forEach((image) => {
   image.addEventListener("mouseover", handleImageEnter);
   image.addEventListener("mousemove", handleImageHover);
   image.addEventListener("mouseout", handleImageLeave);
+});
+
+Array.from(appearAnim).forEach((image) => {
+  gsap.fromTo(
+    image,
+    {
+      yPercent: 30,
+    },
+    {
+      yPercent: 0,
+      scrollTrigger: {
+        trigger:image,
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+      },
+    }
+  );
+
 });
 
 // Function for mouse enter

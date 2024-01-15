@@ -302,6 +302,9 @@
                 font-size: 36px;
                 font-weight: 400;
                 line-height: 41px; /* 118.75% */
+                br{
+                    display: none;
+                }
             }
         }
     
@@ -333,6 +336,9 @@
                 font-size: 36px;
                 line-height: 41px;
               margin-bottom: 25px;
+              br{
+                display: none;
+            }
             }
             p {
               font-size: 16px;

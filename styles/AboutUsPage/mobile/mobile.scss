@@ -152,11 +152,11 @@
         margin-bottom: -100vh;
     
         .spacer{
-            height: 100vh;
+            height: 97vh;
         }
     
         .discoverMoreWrapper{
-            position: static;
+            position: sticky;
             height: fit-content;
     
             .heading{

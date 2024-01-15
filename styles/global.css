@@ -23,7 +23,8 @@
   --gray-5e: #5E5E5E;
   --gray-da: #DADADA;
   
-  --main: #EAEAEA;
+  /* --main: #EAEAEA; */
+  --main: #FFF;
   --sec:  #FF2626;
   --dark: #000000;
   --light:#ffffff;
