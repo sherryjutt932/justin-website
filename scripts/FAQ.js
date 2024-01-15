@@ -22,6 +22,7 @@ function toggleFAQ(card, groupSelector) {
             if (quesCard !== card) {
                 quesCard.classList.add('close');
                 quesCard.classList.remove('open');
+                quesCard.querySelector(".ques .pWrapper").style.maxHeight =  "0px";
             }
         });
     }
@@ -29,10 +30,12 @@ function toggleFAQ(card, groupSelector) {
     if (card.classList.contains('open')) {
         card.classList.remove('open');
         card.classList.add('close');
+        card.querySelector(".ques .pWrapper").style.maxHeight =  "0px";
     }
     else{
         card.classList.remove('close');
         card.classList.add('open');
+        card.querySelector(".ques .pWrapper").style.maxHeight =  card.querySelector(".ques .pWrapper p").offsetHeight + "px";
 
     }
 
