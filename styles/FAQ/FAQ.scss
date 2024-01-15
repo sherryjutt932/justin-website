@@ -169,9 +169,10 @@
           height: 0%;
           left: 0%;
           bottom: 0%;
-          // background-color: #fff;
+          background-color: #fff;
           z-index: -1;
-          transition: all 0.7s ease;
+          transition: all 0.5s ease;
+          transform-origin: top;
         }
         .ques {
           display: flex;
