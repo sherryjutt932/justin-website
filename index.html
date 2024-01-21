@@ -20,6 +20,7 @@
   <link href="./styles/perks/perks.css" rel="stylesheet" />
   <link href="./styles/feedback/feedback.css" rel="stylesheet" />
   <link href="./styles/ideas/ideas.css" rel="stylesheet" />
+  <link href="./styles/theme/theme.css" rel="stylesheet" />
 
   <!-- packages -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -27,7 +28,7 @@
   <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-  <title>Justin Web</title>
+  <title>Web Pioneers</title>
 
 </head>
 
@@ -319,13 +320,19 @@
                     clients throughout their entire project journey. Our team
                     is readily accessible to address any inquiries.
                   </p>
-                  <a href="/">
+                  <!-- <a href="/">
                     <div>
                       Learn More
                       <div></div>
                     </div>
                     <span>
                       <img src="./assets/icons/greaterThen.svg" alt="greaterthen" />
+                    </span>
+                  </a> -->
+                  <a href="/" class="btnRounded">
+                    <span>Get Free Estimates Now</span>
+                    <span>
+                      <img src="./assets/icons/greaterThenL.svg" alt="greaterthen" />
                     </span>
                   </a>
                 </div>
@@ -342,32 +349,34 @@
             <br />
             You Achieve Results
             <div id="labelsRef">
-              <div data-theme="light" data-pos="lt" class="label"><a href="./pages/portfolio.html">Work</a></div>
+              <div data-theme="light" data-pos="lt" class="label"><a href="./pages/portfolio.html">Portfolio</a></div>
               <div data-theme="dark" data-pos="rt" class="label"><a href="./pages/aboutUs.html">about</a></div>
               <div data-theme="dark" data-pos="lb" class="label"><a href="./pages/contactUs.html">contact</a></div>
               <div data-theme="light" data-pos="rb" class="label">
-                <a href="./pages/portfolio.html">discover</a>
+                <a href="./pages/portfolio.html">pricing</a>
               </div>
             </div>
           </div>
         </div>
 
         <div id="boxesRef">
-          <a href="./pages/UIUX.html" class="boxCard">
+
+          <a href="./pages/brandIdentity.html" class="boxCard">
             <div class="boxWrapper">
               <div class="number">1</div>
-              <div class="lable">creativity</div>
+              <div class="lable">distinctive</div>
               <div class="arrow">
                 <img src="./assets/icons/arrowRight.svg" alt="arrowRight" />
               </div>
 
-              <div class="namea">ui ux</div>
+              <div class="namea">brand</div>
               <div class="nameb">
-                <p>design</p>
-                <p>design</p>
+                <p>identity</p>
+                <p>identity</p>
               </div>
             </div>
           </a>
+
           <a href="./pages/webDevelopment.html" class="boxCard">
             <div class="boxWrapper">
               <div class="number">2</div>
@@ -383,21 +392,22 @@
               </div>
             </div>
           </a>
-          <a href="./pages/brandIdentity.html" class="boxCard">
+          <a href="./pages/UIUX.html" class="boxCard">
             <div class="boxWrapper">
               <div class="number">3</div>
-              <div class="lable">distinctive</div>
+              <div class="lable">creativity</div>
               <div class="arrow">
                 <img src="./assets/icons/arrowRight.svg" alt="arrowRight" />
               </div>
 
-              <div class="namea">brand</div>
+              <div class="namea">ui ux</div>
               <div class="nameb">
-                <p>identity</p>
-                <p>identity</p>
+                <p>design</p>
+                <p>design</p>
               </div>
             </div>
           </a>
+        
         </div>
       </div>
     </div>
@@ -490,7 +500,7 @@
                     clients throughout their entire project journey. Our team
                     is readily accessible to address any inquiries.
                   </p>
-                  <a href="/">
+                  <!-- <a href="/">
                     <div>
                       Learn More
                       <div></div>
@@ -498,7 +508,14 @@
                     <span>
                       <img src="./assets/icons/greaterThen.svg" alt="greaterthen" />
                     </span>
+                  </a> -->
+                  <a href="/" class="btnRounded btndark">
+                    <span>Get Free Estimates Now</span>
+                    <span>
+                      <img src="./assets/icons/greaterThenL.svg" alt="greaterthen" />
+                    </span>
                   </a>
+
                 </div>
               </div>
             </div>
@@ -525,32 +542,36 @@
             <div class="scrollerItem">
               We specialize
               <div class="inline-block align-middle mx-10">
-                <div class="animicon" id="aicon-crafting"></div>
-                <!-- <img src="./assets/icons/specialize.svg" alt="specialize" /> -->
+                <!-- <div class="animicon" id="aicon-crafting"></div> -->
+                <lottie-player class="animicon" autoplay loop
+                src="./assets/Animation/newIcons/About Us/Crafting/Crafting.json"></lottie-player>
               </div>
             </div>
 
             <div class="scrollerItem">
               In crafting
               <div class="inline-block align-middle mx-10">
-                <div class="animicon" id="aicon-products"></div>
-                <!-- <img src="./assets/icons/crafting.svg" alt="crafting" /> -->
+                <!-- <div class="animicon" id="aicon-products"></div> -->
+                <lottie-player class="animicon" autoplay loop
+                src="./assets/Animation/newIcons/About Us/digital production/Digital Production.json"></lottie-player>
               </div>
             </div>
 
             <div class="scrollerItem">
               Digital products
               <div class="inline-block align-middle mx-10">
-                <div class="animicon" id="aicon-care"></div>
-                <!-- <img src="./assets/icons/products.svg" alt="products" /> -->
+                <!-- <div class="animicon" id="aicon-care"></div> -->
+                <lottie-player class="animicon" autoplay loop
+                src="./assets/Animation/newIcons/About Us/Care/Care.json"></lottie-player>
               </div>
             </div>
 
             <div class="scrollerItem">
               With great care
               <div class="inline-block align-middle mx-10">
-                <div class="animicon" id="aicon-portfolio"></div>
-                <!-- <img src="./assets/icons/care.svg" alt="care" /> -->
+                <!-- <div class="animicon" id="aicon-portfolio"></div> -->
+                <lottie-player class="animicon" autoplay loop
+                src="./assets/Animation/newIcons/About Us/Our Portfolio/OurPortfolio.json"></lottie-player>
               </div>
             </div>
 
@@ -576,11 +597,19 @@
       <!-- detail -->
       <div class="aboutdetail">
         <div>
+         <span>
           <p>
             Every project we undertake is carefully crafted with a keen eye
             for detail and a passion for excellence. It's time to embark on an
             extraordinary creative adventure together!
           </p>
+          <a href="/" class="btnRounded">
+            <span>Get Free Estimates Now</span>
+            <span>
+              <img src="./assets/icons/greaterThenL.svg" alt="greaterthen" />
+            </span>
+          </a>
+         </span>
         </div>
 
         <div class="animiconlist">

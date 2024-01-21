@@ -93,7 +93,6 @@
 
 .aboutdetail{
     max-height: 42vh;
-
     display: flex;
     flex-grow: 1;
     flex-direction: row-reverse;
@@ -111,6 +110,7 @@
         justify-content: end;
 
         p{
+            color: var(--gray-2f) !important;
             max-width: 410px;
             font-family: var(--Satoshi);
             font-size: 18px;

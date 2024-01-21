@@ -35,7 +35,7 @@
             font-size: 18px;
             line-height: 20px;
             .label{
-                padding: 8px 24px;
+                padding: 10px 24px;
                 border-radius: 100px;
                 width: fit-content;
                 text-transform: uppercase;
@@ -48,12 +48,12 @@
                 }
 
                 &[data-theme="light"]{
-                    border: 2px solid var(--dark);
+                    border: 1px dashed var(--dark);
                 background-color: var(--light);
                 color: var(--dark);
                 }
                 &[data-theme="dark"]{
-                    border: 2px solid var(--light);
+                    border: 1px dashed var(--light);
                 background-color: var(--dark);
                 color: var(--light);
                 }
@@ -92,6 +92,7 @@
         background-color: var(--light);
         color: var(--dark);
         text-decoration: none;
+        border-radius: 10px;
         //padding: 48px 0px;
 
         &:nth-child(2){
@@ -202,7 +203,7 @@
             font-size: 22px;
             line-height: 24px;
             .label{
-                padding: 10px 28px;
+                padding: 14px 32px;
                 a{
                     text-decoration: none;
                     color: inherit;
@@ -217,6 +218,7 @@
         gap: 30px;
     
         .boxCard{
+        border-radius: 12px;
     
             &:nth-child(2){
                 margin-top: 110px;
@@ -291,7 +293,7 @@
                 font-size: 14px;
                 line-height: 14px;
                 .label{
-                    padding: 8px 24px;
+                    padding: 8px 18px;
                     border-radius: 100px;
                     width: fit-content;
                     text-transform: uppercase;
@@ -304,12 +306,12 @@
                     }
     
                     &[data-theme="light"]{
-                        border: 2px solid var(--dark);
+                        border: 1px dashed var(--dark);
                     background-color: var(--light);
                     color: var(--dark);
                     }
                     &[data-theme="dark"]{
-                        border: 2px solid var(--light);
+                        border: 1px dashed var(--light);
                     background-color: var(--dark);
                     color: var(--light);
                     }
@@ -349,7 +351,7 @@
             flex: 1 1 0%;
             background-color: var(--light);
             color: var(--dark);
-            //padding: 48px 0px;
+            border-radius: 8px;
     
             &:nth-child(2){
                 // mt-24 2xl:mt-32

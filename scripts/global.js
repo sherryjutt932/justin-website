@@ -272,6 +272,7 @@ if((document.getElementById("loadingsteric"))){
   
   gsap.set("#loadingSec", {
     background: "#FF2626",
+    top:0,
   });
   
   gsap.timeline()

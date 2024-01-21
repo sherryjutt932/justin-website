@@ -22,6 +22,7 @@
   --gray-d4: #D4D4D4;
   --gray-5e: #5E5E5E;
   --gray-da: #DADADA;
+  --gray-2f: #2F2F2F;
   
   --main: #EAEAEA;
   /* --main: #FFF; */
@@ -81,6 +82,7 @@ a{
 .themetitle{
   font-size: 16px;
   font-family: var(--Satoshi);
+  text-transform: capitalize;
 }
 .themedot{
   display: inline-block;
