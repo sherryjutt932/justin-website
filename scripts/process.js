@@ -5,10 +5,11 @@ const processThird = document.getElementById("proc-marquee-third");
 
 var process_xPercent = 0;
 var processSpeed = 6;
+var process_scrollDir = "up";
 
 const animateProcessMarquee = () => {
   process_xPercent =
-    ScrollDirection === "down"
+  process_scrollDir === "down"
       ? process_xPercent - processSpeed / 5
       : process_xPercent + processSpeed / 5;
   process_xPercent =
@@ -18,10 +19,10 @@ const animateProcessMarquee = () => {
       ? -processFirst.offsetWidth
       : process_xPercent;
 
-  gsap.to(".arrowRef", {
-    rotate: ScrollDirection === "down" ? 180 : 0,
-    duration: 0.7,
-  });
+  // gsap.to(".arrowRef", {
+  //   rotate: ScrollDirection === "down" ? 180 : 0,
+  //   duration: 0.7,
+  // });
 
   gsap.to([processFirst, processSecond, processThird], {
     x: process_xPercent + "px",

@@ -44,74 +44,170 @@
         }
         
         .workdetail {
-      max-height: 100%;
-      height: 100%;
-      width: fit-content;
+          
+          max-height: 100%;
+          height: 100%;
+          width: fit-content;
+          
+          #detailRef {
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            
+            & > div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              min-height: 100%;
+              padding-top: 120px;
+              padding-bottom: 100px;
+              padding-left: 100px;
+              position: absolute;
+              gap: 30px;
+              max-width: 40vw;
 
-      #detailRef {
-        height: 100%;
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-
-        & > div {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          min-height: 100%;
-          padding-top: 120px;
-          padding-bottom: 100px;
-          padding-left: 100px;
-          position: absolute;
-
-          &.open{
-            h2,ul, .stickybutton, .stickybutton>a{
-                opacity: 1;
+          &{
+            & > *{
+                opacity: 0;
             }
-            .stickybutton{
-                z-index: 11;
-            }
+          }
+
+          img{
+            display: block;
+            width: 48px;
+            object-fit: contain;
           }
 
           h2 {
             transition: opacity 200ms ease;
-          opacity: 0;
             font-size: 60px;
             font-family: var(--NohemiL);
             font-weight: 300 !important;
-          transition-delay: 100ms;
+            transition-delay: 100ms;
           }
 
           ul {
             transition: opacity 200ms ease;
-            opacity: 0;
             width: fit-content;
             font-family: var(--Satoshi);
-            font-size: 16px;
-            list-style: disc;
-            list-style-position: inside;
+            color: #000;
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            row-gap: 25px;
+            flex-wrap: wrap;
 
             li {
-              padding: 20px 0px;
-              padding-left: 16px;
-              padding-right: 32px;
-              border-top: 1px solid var(--gray-c5);
-
-              &:last-child {
-                border-bottom: 1px solid var(--gray-c5);
-              }
-
-              span {
-                position: relative;
-                left: -12px;
+              span{
+                border-radius: 50px;
+              background: #DADADA;
+              padding: 10px 30px;
+              font-size: 17px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 1;
+              white-space: nowrap;
               }
             }
           }
 
+          p{
+            color: #2F2F2F;
+            font-size: 18px;
+            font-family: var(--Satoshi);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            max-width: 32.5ch;
+          }
+
+          .worktablet{
+            width: fit-content;
+            border: 1px dashed var(--dark);
+            border-radius: 200px;
+            padding: 12px 16px;
+            padding-right: 40px;
+            display: flex;
+            align-items: center;
+            background-color: var(--light);
+            span{
+                display: inline-block;
+                width: 21px;
+            height: 21px;
+            border-radius: 100px;
+            background-color: var(--dark);
+            margin-right:30px;
+
+            }
+
+            h2{
+                font-family: var(--SatoshiM) !important;
+                font-size: 14px;
+            line-height: 130%;
+            }
+            
+            p{
+                font-weight: 400 !important;
+                font-size: 14px;
+            line-height: 130%;
+            font-family: var(--Satoshi);
+            text-transform: capitalize;
+            color: rgba(0,0,0,0.8);
+            }
+        }
+
+
+          &.open{
+          & > *{
+              opacity: 1;
+          }
+    
+        }
+          
+        }
+      }
+    }
+
+    .workimage {
+      max-height: 100%;
+      height: 100%;
+      
+      #imgRef {
+        position: relative;
+        height: 100%;
+        z-index: 10;
+
+        #animatedline{
+            position: absolute;
+            left: -25%;
+            height: 380%;
+            min-width: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        & > div {
+          height: 100%;
+          display: flex;
+          align-items: end;
+          padding-right: 100px;
+          padding-bottom: 100px;
+          position: relative;
+
+          img {
+            aspect-ratio: 1072/646;
+            width: 50vw;
+            max-width: 50vw;
+          }
+
           .stickybutton {
             transition: opacity 0ms ease;
-            position: relative;
-            z-index: 10;
+            position: absolute;
+            z-index: 100;
+            right: 160px;
+            bottom: 70px;
             transition-delay: 0ms;
             width: fit-content;
             display: flex;
@@ -120,10 +216,8 @@
             font-family: var(--SatoshiR);
             width: 96px;
             height: 96px;
-            opacity: 0;
     
             & > a {
-            opacity: 0;
               cursor: pointer;
               width: fit-content;
               text-decoration: none;
@@ -166,40 +260,6 @@
         }
       }
     }
-
-    .workimage {
-      max-height: 100%;
-      height: 100%;
-      
-      #imgRef {
-        position: relative;
-        height: 100%;
-        z-index: 10;
-
-        #animatedline{
-            position: absolute;
-            left: -25%;
-            height: 380%;
-            min-width: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        & > div {
-          height: 100%;
-          display: flex;
-          align-items: end;
-          padding-right: 100px;
-          padding-bottom: 100px;
-
-          img {
-            aspect-ratio: 1072/646;
-            width: 50vw;
-            max-width: 50vw;
-          }
-        }
-      }
-    }
   }
 
   .workflex {
@@ -219,32 +279,72 @@
 
     .workGrid {
       .workdetail {
+        
         #detailRef {
           & > div {
             padding-top: 160px;
             padding-bottom: 120px;
             padding-left: 120px;
+            gap: 35px;
+            
+            img{
+              width: 64px;
+            }
 
             h2 {
               font-size: 80px;
               font-weight: 300 !important;
             }
 
-            ul{
+            ul {
+            row-gap: 40px;
+              li {
+                span{
+                padding: 14px 40px;
                 font-size: 22px;
-                li{
-                    padding: 30px 0px;
-                    padding-left: 16px;
-                    padding-right: 32px
-                    span{
-                        left: -12px;
-                    }
                 }
+              }
+            }
+
+            p{
+              font-size: 24px;
+            }
+  
+
+            .tablet{
+              padding: 16px 20px;
+              padding-right: 50px;
+              span{
+                  width: 28px;
+              height: 28px;
+              }
+  
+              p, h2{
+                  font-size: 18px;
+              }
+          }
+
+          
+            
+          }
+        }
+      }
+
+      .workimage {
+        #imgRef {
+          & > div {
+            padding-right: 120px;
+            padding-bottom: 120px;
+            img {
+              width: 1072px;
             }
 
             .stickybutton {
               width: 132px;
               height: 132px;
+
+              right: 200px;
+              bottom: 80px;
 
                 & > a{
                   #magneticBtn {
@@ -265,18 +365,6 @@
                   }
                 }
               }
-          }
-        }
-      }
-
-      .workimage {
-        #imgRef {
-          & > div {
-            padding-right: 120px;
-            padding-bottom: 120px;
-            img {
-              width: 1072px;
-            }
           }
         }
       }
@@ -303,6 +391,7 @@
         width: 100%;
         z-index: 9;
         pointer-events: none;
+        opacity: 0;
     }
   }
 

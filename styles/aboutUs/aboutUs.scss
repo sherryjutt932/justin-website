@@ -102,30 +102,28 @@
     .animiconlist{
         display: none !important    ;
     }
-
+    
     &>div:nth-child(1){
-        flex: 1 1 0%;
+        flex: 0 1 40%;
         height: fit-content;
         display: flex;
-        justify-content: end;
-
+        justify-content: start;
+        
         p{
             color: var(--gray-2f) !important;
-            max-width: 410px;
             font-family: var(--Satoshi);
             font-size: 18px;
             font-weight: 400 !important;
             line-height: 27px;
-            margin-right: 96px;
+            max-width: 33ch;
         }
     }
-
+    
     &>div:nth-child(3){
+        flex: 0 1 60%;
         height: 100%;
-        width: fit-content;
         display: flex;
         align-items: end;
-        // m14:h-64 2xl:mb-16
         
         img{
             width: 176px;
@@ -179,10 +177,8 @@
     padding-bottom: 40px;
     &>div:nth-child(1){
         p{
-            max-width: 536px;
             font-size: 24px;
             line-height: 36px;
-            margin-right: 126px;
         }
     }
 
@@ -291,7 +287,6 @@
                 font-size: 16px;
                 font-weight: 400 !important;
                 line-height: 27px;
-                margin-right: 0px;
             }
         }
     

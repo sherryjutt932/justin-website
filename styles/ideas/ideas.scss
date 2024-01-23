@@ -11,15 +11,17 @@
     color: var(--light);
     padding-bottom: 20px;
     border-radius: 30px;
+    min-height: 100vh;
 
     #ideasCon {
         display: flex;
         flex-direction: column;
-        padding: 110px 100px;
-
+        padding: 90px 100px;
        .animated-head{
         display: flex;
         align-items: center;
+        flex-direction: column;
+        gap: 30px;
         h1 {
             flex: 1 1 40%;
             font-family: var(--NohemiL);
@@ -27,36 +29,51 @@
             line-height: 70px;
             font-weight: 300 !important;
         }
-        &>div{
-            flex: 1 1 60%;
-            // padding-right: 10%;
-            margin-right: -70px;
-            img,svg{
-                width: calc(663px);
-                height: calc(283px);
-                float: right;
-            }
-        }
+        // &>div{
+        //     flex: 1 1 60%;
+        //     // padding-right: 10%;
+        //     margin-right: -70px;
+        //     img,svg{
+        //         width: calc(663px);
+        //         height: calc(283px);
+        //         float: right;
+        //     }
+        // }
        }
 
         .ideasproducts {
-            margin-top: 60px;
-            padding-top: 40px;
+            margin-top: 45px;
+            padding-top: 45px;
             border-top: 1px solid var(--gray-97);
-            color: var(--gray-97);
-            font-family: var(-Satoshi);
-            font-weight: 400 !important;
-
+            
+            
             p {
-                font-size: 24px;
-                line-height: 32px;
-                margin-bottom: 90px;
+                line-height: 1;
+                text-align: center;
+                
+                &:nth-child(1){
+                    font-family: var(--Satoshi);
+                    font-size: 18px;
+                    color: var(--gray-97);
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                    
+                }
+                &:nth-child(2){
+                    font-size: 20px;
+                    color: var(--light);
+                    font-family: var(--SatoshiM);
+                    font-weight: 500;
+                    margin-bottom: 60px;
+                    
+                }
             }
 
             .tabsflex {
                 margin-top: 30px;
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: center;
                 gap: 30px;
 
                 .mob-only {
@@ -71,7 +88,7 @@
                     padding: 25px;
                     color: var(--light);
                     cursor: pointer;
-                    font-size: 25px;
+                    font-size: 24px;
                     text-decoration: none;
                     line-height: 32px;
                     font-family: var(--Satoshi);
@@ -158,8 +175,8 @@
     .idea-marquee-wrap {
         width: 100%;
         overflow: hidden;
-        padding: 24px 0px;
-        padding-bottom: 110px;
+        padding: 0;
+        padding-bottom: 90px;
         // m14py-10
 
         .idea-marquee-con {
@@ -169,6 +186,7 @@
             vertical-align: bottom;
             font-size: 60px;
             line-height: 60px;
+            font-weight: 300;
             // m14:text-[54px]
             display: flex;
             flex-wrap: nowrap;
@@ -208,6 +226,8 @@
                     margin: 0px 48px;
                     height: 50px;
                     width: 50px;
+                    vertical-align: middle;
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -219,12 +239,12 @@
     height: fit-content;
 
     .footerSec{
-        margin-top: -97vh;
+        margin-top: -100vh;
         background-color: var(--main);
     }
     
     .spacer{
-        height: 100vh;
+        height: 97vh;
     }
     .footerCon {
         position: sticky;
@@ -260,13 +280,13 @@
         a.LinkhoverGroup {
             font-weight: 400;
             margin-bottom: 15px;
-            color: var(--black);
             cursor: pointer;
             font-size: 20px;
             text-decoration: none;
             line-height: 25px;
             font-family: var(--Satoshi);
             display: flex;
+            color: var(--linkClr) !important;
             align-items: center;
             gap: 10px;
 
@@ -342,9 +362,9 @@
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 27px;
             line-height: 32px;
-            font-family: var(--NohemiL);
+            font-family: var(--NohemiL) !important;
             padding-bottom: 30px;
             font-weight: 300 !important;
 
@@ -356,7 +376,8 @@
             font-family: var(--Satoshi);
             font-weight: 400;
             padding-bottom: 15px;
-
+            color: var(--linkClr) !important;
+            margin-bottom: 15px;
             img {
                 height: 16px;
                 margin-right: 0px;
@@ -372,35 +393,33 @@
         border-radius: 40px;
 
         #ideasCon {
-            display: flex;
-            flex-direction: column;
-            padding: 150px 120px;
-            padding-bottom: 10px;
+            padding: 120px 120px;
+            gap: 50px;
 
             .animated-head{
-                display: flex;
-                align-items: center;
                 h1 {
                     flex: 1 1 40%;
-                    font-family: var(--NohemiL);
                     font-size: 80px;
                      line-height: 95px;
                 }
-                &>div{
-                    flex: 1 1 60%;
-                }
+                // &>div{
+                //     flex: 1 1 60%;
+                // }
                }
 
                
             .ideasproducts {
-                margin-top: 80px;
+                margin-top: 60px;
                 padding-top: 60px;
-                margin-bottom: 190px;
-
                 p {
-                    font-size: 32px;
-                    line-height: normal;
-                    margin-bottom: 120px;
+                    &:nth-child(1){
+                        font-size: 24px;
+                        margin-bottom: 40px;
+                    }
+                    &:nth-child(2){
+                        font-size: 26px;
+                        margin-bottom: 80px;
+                    }
                 }
 
                 .tabsflex {
@@ -411,7 +430,7 @@
 
                     a.LinkhoverGroup {
                         padding: 25px;
-                        font-size: 34px;
+                        font-size: 33px;
                         line-height: 40px;
                         gap: 65px;
             
@@ -423,10 +442,8 @@
         .idea-marquee-wrap {
             width: 100%;
             overflow: hidden;
-            padding: 24px 0px;
+            padding: 0px;
         padding-bottom: 120px;
-
-            // m14py-10
 
             .idea-marquee-con {
                 width: 100%;
@@ -505,8 +522,6 @@
             h1 {
                 font-size: 36px;
                 line-height: 40px;
-                font-family: var(--Nohemi);
-                font-weight: 400 !important;
                 padding-bottom: 30px;
             }
 
@@ -750,6 +765,7 @@
                         height: 45px;
                         width: 45px;
                         vertical-align: middle;
+                        margin-bottom: 8px;
                     }
                 }
             }

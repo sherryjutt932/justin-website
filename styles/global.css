@@ -24,6 +24,8 @@
   --gray-da: #DADADA;
   --gray-2f: #2F2F2F;
   
+  --linkClr: #0A0613;
+  
   --main: #EAEAEA;
   /* --main: #FFF; */
   --sec:  #FF2626;
@@ -93,12 +95,37 @@ a{
   background-color: var(--dark);
 } 
 
-@media (max-width: 750px){
+.themedot.light{
+  background-color: var(--light) !important;
+}
+
+
+@media (max-width: 1024px){
+  .contentCont{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 430px){
   .contentCont{
     padding-left: 24px;
     padding-right: 24px;
   }
+  
+  .desktop{
+    display: none !important;
+  }
 }
+
+@media (min-width: 431px){
+  .mobile{
+    display: none !important ;
+  }
+}
+
+
+
 @media (min-width: 1536px){
   .contentCont{
     padding-left: 120px;
@@ -154,7 +181,7 @@ a{
   overflow: hidden;
 }
 
-@media (max-width: 750px){
+@media (max-width: 430px){
   #mousefollower{
     display: none;
   }

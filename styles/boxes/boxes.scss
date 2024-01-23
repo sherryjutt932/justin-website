@@ -19,18 +19,23 @@
         border: 1px solid var(--gray-c5);
         border-left: none;
 
+        
         &:last-child {
             border-right: none;
         }
-
+        
         &>div{
-        background-color: var(--main);
-        aspect-ratio: 1.5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+            background-color: var(--main);
+            aspect-ratio: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease;
 
+            &:hover{
+                background-color: #E2E2E2 !important;
+            }
 
 
         &>div:nth-child(1) {

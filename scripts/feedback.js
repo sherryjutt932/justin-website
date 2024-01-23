@@ -62,7 +62,7 @@ function nextButtonClick() {
   let carouselNumber = document.getElementById("carouselNumber");
 
   let ind = carouselNumber.dataset.index;
-    let newind = (parseInt(ind) + 1) % 5;
+    let newind = (parseInt(ind) + 1) % FeedbackCardsTotal;
   
     carouselNumber.dataset.index = newind;
     carouselNumber.innerHTML = "0" + (newind + 1);
@@ -82,7 +82,7 @@ function prevButtonClick() {
     let carouselNumber = document.getElementById("carouselNumber");
 
   let ind = carouselNumber.dataset.index;
-  let newind = (ind <= 0) ? 4 : (parseInt(ind) - 1);
+  let newind = (ind <= 0) ? (FeedbackCardsTotal-1) : (parseInt(ind) - 1);
 
   carouselNumber.dataset.index = newind;
   carouselNumber.innerHTML = "0" + (newind + 1);
