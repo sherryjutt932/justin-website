@@ -292,7 +292,7 @@
 
 // -----------------mobile
 
-@media (max-width: 750px) {
+@media (max-width: 430px) {
     
 #processSec {
     width: 100%;
@@ -305,7 +305,7 @@
     flex-direction: column;
     
     .proc-marquee-wrap {
-        font-size: 48px;
+        font-size: 30px;
         width: 100%;
         overflow: hidden;
         padding: 24px 0px;
@@ -316,7 +316,7 @@
             color: var(--light);
             line-height: 1;
             vertical-align: bottom;
-            font-size: 48px;
+            font-size: 30px;
             letter-spacing: 0.1ch;
             // m14:text-[54px]
             display: flex;
@@ -352,9 +352,9 @@
                 }
 
                 img.arrowRef{
-                    height: 45px;
-                        width: 45px;
-                    margin: 0px 24px;
+                    height: 30px;
+                        width: 30px;
+                    margin: 0px 14px;
                     margin-bottom: 0px;
                 }
             }
@@ -374,6 +374,8 @@
         .process-card{
             position: relative;
             padding: 20px;
+            border-radius: 8px;
+            overflow: hidden;
 
             &>div:nth-child(1){
                 position: relative;
@@ -419,7 +421,7 @@
                 position: relative;
                 z-index: 10;
                 p{
-                    color: var(--gray-97);
+                    color: var(--gray-2f);
                     font-family: var(--Satoshi);
                     font-size: 16px;
                     font-weight: 100;

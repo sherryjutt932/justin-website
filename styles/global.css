@@ -37,6 +37,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html{
@@ -75,6 +76,7 @@ a{
   padding-left: 100px;
   padding-right: 100px;
   width: 100%;
+
 }
 .themeheading{
   display: flex;

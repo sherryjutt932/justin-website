@@ -379,6 +379,7 @@ nav {
             gap: 40px;
             cursor: pointer;
             position: relative;
+            border-radius: 12px;
 
             &:nth-child(2) {
               margin-right: 25%;
@@ -397,6 +398,7 @@ nav {
               max-width: 180px;
               font-family: var(--Satoshi);
               pointer-events: none;
+              opacity: 0.8;
             }
             .animicon {
               width: 40px;
@@ -611,7 +613,7 @@ nav {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 430px) {
   nav {
     color: var(--dark);
     width: 100%;

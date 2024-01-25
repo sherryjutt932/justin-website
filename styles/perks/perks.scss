@@ -155,7 +155,7 @@
 // ---------------mobile
 
 
-@media (max-width: 750px) {
+@media (max-width: 430px) {
     #perksSec {
         width: 100%;
         min-height: unset;
@@ -163,27 +163,29 @@
         overflow: hidden;
 
         #perksHead {
-            padding: 62px 24px;
+            padding: 40px 24px;
             font-family: var(--Satoshi);
             font-weight: 400 !important;
-
+            text-align: left;
 
             &>div:nth-child(1) {
                 font-size: 16px;
                 line-height: 21px;
                 margin-bottom: 30px;
+                justify-content: flex-start;
             }
-
+            
             &>div:nth-child(2) {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                align-items: flex-start;
 
                 h1 {
                     width: 80%;
                     font-size: 36px;
                     line-height: 41px;
-                    font-family: var(--NohemiL);
+                    font-family: var(--Satoshi);
                     font-weight: 300 !important;
                 }
 
@@ -229,6 +231,7 @@
                     padding: 20px 15px;
                     gap: 25px;
                     font-family: var(--Satoshi);
+                    border-radius: 8px;
 
                     img,
                     .animicon {

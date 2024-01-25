@@ -129,6 +129,77 @@
   }
 }
 
+.hover3d {
+  text-decoration: none;
+  gap: 20px;
+
+  &.mob-only {
+    display: flex !important;
+  }
+
+  & > div.textonly {
+    position: relative;
+    overflow: hidden;
+
+    & > div {
+      padding: 5px 0px;
+    }
+    * {
+      transition: all 300ms ease;
+    }
+
+    .hiddenTag {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  & > div.icononly {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+
+    * {
+      transition: all 400ms ease;
+    }
+
+    .hiddenTag {
+      position: absolute;
+      top: 100%;
+      left: -100%;
+    }
+  }
+
+  &:hover {
+    & > div.textonly {
+      .visibleTag {
+        transform: translateY(-100%);
+      }
+
+      .hiddenTag {
+        transform: translateY(-100%);
+      }
+    }
+
+    & > div.icononly {
+      .visibleTag {
+        transform: translate3d(100%, -100%, 0);
+      }
+
+      .hiddenTag {
+        transform: translate3d(100%, -100%, 0);
+      }
+    }
+  }
+}
+
 @media (max-width: 1536px) {
   .ThemeButton {
     font-size: 14px;
@@ -183,7 +254,7 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 430px) {
   .btnRounded {
     padding: 13px 21px;
     gap: 10px;

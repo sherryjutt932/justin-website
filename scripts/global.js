@@ -5,7 +5,7 @@
 const mousefollower = document.getElementById("mousefollower");
 
 function isMobile() {
-  return window.innerWidth < 750;
+  return window.innerWidth < 430;
 }
 
 if (!isMobile()) {
@@ -264,6 +264,26 @@ Array.from(frombelowanim).forEach(element => {
     }
   });
 });
+
+// -------------mount animation mobile
+if(isMobile()){
+const frombelowanimM = document.getElementsByClassName("frombelowanimM");
+
+Array.from(frombelowanimM).forEach(element => {
+  gsap.from(element, {
+    duration: 1, 
+    yPercent: 10, 
+    opacity: 0, 
+    ease: "sine", 
+    delay: 0,
+    scrollTrigger: {
+      trigger: element,
+      start:"top 70%",
+      toggleActions: "restart none none reverse"
+    }
+  });
+});
+}
 
 //  -------------------------loading
 if((document.getElementById("loadingsteric"))){

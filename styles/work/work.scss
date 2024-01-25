@@ -2,9 +2,9 @@
   width: 100%;
   height: 100vh;
 
-  #animatedlineM{
+  #animatedlineM {
     display: none;
-}
+  }
 }
 
 .work {
@@ -13,67 +13,66 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  
+
   .workhead {
-      height: fit-content;
-      padding: 0px 100px;
-      padding-top: 40px;
+    height: fit-content;
+    padding: 0px 100px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    & > div:nth-child(1) {
       display: flex;
-      justify-content: space-between;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      
-      & > div:nth-child(1) {
-          display: flex;
-          align-items: center;
-        }
-        & > div:nth-child(2) {
-            padding-right: 5px;
+      align-items: center;
+    }
+    & > div:nth-child(2) {
+      padding-right: 5px;
     }
   }
-  
-  .workGrid {
-      height: 100%;
-      font-size: 20px;
-      display: flex;
-      
-      & > div {
-          flex: 1 1 0%;
-        }
-        
-        .workdetail {
-          
-          max-height: 100%;
-          height: 100%;
-          width: fit-content;
-          
-          #detailRef {
-            height: 100%;
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            
-            & > div {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              min-height: 100%;
-              padding-top: 120px;
-              padding-bottom: 100px;
-              padding-left: 100px;
-              position: absolute;
-              gap: 30px;
-              max-width: 40vw;
 
-          &{
-            & > *{
-                opacity: 0;
+  .workGrid {
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+
+    & > div {
+      flex: 1 1 0%;
+    }
+
+    .workdetail {
+      max-height: 100%;
+      height: 100%;
+      width: fit-content;
+
+      #detailRef {
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 100%;
+          padding-top: 120px;
+          padding-bottom: 100px;
+          padding-left: 100px;
+          position: absolute;
+          gap: 30px;
+          max-width: 40vw;
+
+          & {
+            & > * {
+              opacity: 0;
             }
           }
 
-          img{
+          img {
             display: block;
             width: 48px;
             object-fit: contain;
@@ -99,21 +98,21 @@
             flex-wrap: wrap;
 
             li {
-              span{
+              span {
                 border-radius: 50px;
-              background: #DADADA;
-              padding: 10px 30px;
-              font-size: 17px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 1;
-              white-space: nowrap;
+                background: #e2e2e2;
+                padding: 10px 30px;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+                white-space: nowrap;
               }
             }
           }
 
-          p{
-            color: #2F2F2F;
+          p {
+            color: #2f2f2f;
             font-size: 18px;
             font-family: var(--Satoshi);
             font-style: normal;
@@ -122,49 +121,45 @@
             max-width: 32.5ch;
           }
 
-          .worktablet{
+          .worktablet {
             width: fit-content;
             border: 1px dashed var(--dark);
             border-radius: 200px;
-            padding: 12px 16px;
+            padding: 8px 15px;
             padding-right: 40px;
             display: flex;
             align-items: center;
             background-color: var(--light);
-            span{
-                display: inline-block;
-                width: 21px;
-            height: 21px;
-            border-radius: 100px;
-            background-color: var(--dark);
-            margin-right:30px;
-
+            span {
+              display: inline-block;
+              width: 21px;
+              height: 21px;
+              border-radius: 100px;
+              background-color: var(--dark);
+              margin-right: 30px;
             }
 
-            h2{
-                font-family: var(--SatoshiM) !important;
-                font-size: 14px;
-            line-height: 130%;
+            h2 {
+              font-family: var(--SatoshiM) !important;
+              font-size: 14px;
+              line-height: 120%;
             }
-            
-            p{
-                font-weight: 400 !important;
-                font-size: 14px;
-            line-height: 130%;
-            font-family: var(--Satoshi);
-            text-transform: capitalize;
-            color: rgba(0,0,0,0.8);
+
+            p {
+              font-weight: 400 !important;
+              font-size: 14px;
+              line-height: 120%;
+              font-family: var(--Satoshi);
+              text-transform: capitalize;
+              color: rgba(0, 0, 0, 0.8);
             }
-        }
-
-
-          &.open{
-          & > *{
-              opacity: 1;
           }
-    
-        }
-          
+
+          &.open {
+            & > * {
+              opacity: 1;
+            }
+          }
         }
       }
     }
@@ -172,20 +167,20 @@
     .workimage {
       max-height: 100%;
       height: 100%;
-      
+
       #imgRef {
         position: relative;
         height: 100%;
         z-index: 10;
 
-        #animatedline{
-            position: absolute;
-            left: -25%;
-            height: 380%;
-            min-width: 100%;
-            z-index: -1;
-            pointer-events: none;
-            opacity: 0;
+        #animatedline {
+          position: absolute;
+          left: -25%;
+          height: 380%;
+          min-width: 100%;
+          z-index: -1;
+          pointer-events: none;
+          opacity: 0;
         }
 
         & > div {
@@ -216,7 +211,7 @@
             font-family: var(--SatoshiR);
             width: 96px;
             height: 96px;
-    
+
             & > a {
               cursor: pointer;
               width: fit-content;
@@ -226,7 +221,7 @@
                 padding: 0px;
                 display: flex;
                 border-radius: 50%;
-    
+
                 & > div {
                   overflow: hidden;
                   position: relative;
@@ -241,7 +236,7 @@
                   align-items: center;
                   color: var(--light);
                   text-align: center;
-    
+
                   .Btnfirst {
                     width: 96px;
                     height: fit-content;
@@ -279,15 +274,14 @@
 
     .workGrid {
       .workdetail {
-        
         #detailRef {
           & > div {
             padding-top: 160px;
             padding-bottom: 120px;
             padding-left: 120px;
             gap: 35px;
-            
-            img{
+
+            img {
               width: 64px;
             }
 
@@ -297,35 +291,32 @@
             }
 
             ul {
-            row-gap: 40px;
+              row-gap: 40px;
               li {
-                span{
-                padding: 14px 40px;
-                font-size: 22px;
+                span {
+                  padding: 14px 40px;
+                  font-size: 22px;
                 }
               }
             }
 
-            p{
+            p {
               font-size: 24px;
             }
-  
 
-            .tablet{
-              padding: 16px 20px;
+            .worktablet {
+              padding: 13px 20px;
               padding-right: 50px;
-              span{
-                  width: 28px;
-              height: 28px;
+              span {
+                width: 28px;
+                height: 28px;
               }
-  
-              p, h2{
-                  font-size: 18px;
-              }
-          }
 
-          
-            
+              p,
+              h2 {
+                font-size: 18px;
+              }
+            }
           }
         }
       }
@@ -346,25 +337,25 @@
               right: 200px;
               bottom: 80px;
 
-                & > a{
-                  #magneticBtn {
-                    // margin: -30px;
-                    // padding: 30px;
-      
-                    & > div {
+              & > a {
+                #magneticBtn {
+                  // margin: -30px;
+                  // padding: 30px;
+
+                  & > div {
+                    width: 132px;
+                    font-size: 22px;
+
+                    .Btnfirst {
                       width: 132px;
-                      font-size: 22px;
-      
-                      .Btnfirst {
-                        width: 132px;
-                      }
-                      .Btnsecond {
-                        width: 132px;
-                      }
+                    }
+                    .Btnsecond {
+                      width: 132px;
                     }
                   }
                 }
               }
+            }
           }
         }
       }
@@ -374,24 +365,24 @@
 
 // -----------------mobile
 
-@media (max-width: 750px) {
+@media (max-width: 430px) {
   #workSec {
     width: 100%;
     height: fit-content;
     overflow: hidden;
     position: relative;
 
-    #animatedlineM{
-        display: block;
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        transform: translateX(-50%);
-        height: calc(100% - 400px);
-        width: 100%;
-        z-index: 9;
-        pointer-events: none;
-        opacity: 0;
+    #animatedlineM {
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: calc(100% - 400px);
+      width: 100%;
+      z-index: 9;
+      pointer-events: none;
+      opacity: 0;
     }
   }
 
@@ -443,19 +434,23 @@
         display: none;
       }
     }
-
     .workGrid {
       display: none;
     }
-
     .workflex {
       display: flex;
       flex-direction: column;
       gap: 30px;
-    
+
+      .head-logo {
+        img {
+          width: 46px;
+          display: block;
+        }
+      }
+
       .work-card {
-        .work-card-head,
-        .work-card-detail {
+        .work-card-head {
           display: flex;
           align-items: center;
           & > div:nth-child(1) {
@@ -488,29 +483,6 @@
             width: 100%;
             max-width: unset;
           }
-        }
-
-        .work-card-detail {
-          padding: 10px 0;
-          ul {
-            width: 100%;
-            font-family: var(--Satoshi);
-            font-size: 16px;
-            // 2xl:text-[22px]
-            list-style: disc;
-            list-style-position: inside;
-
-            li {
-              padding: 20px 0px;
-              padding-left: 16px;
-              padding-right: 32px;
-              border-top: 1px solid var(--gray-c5);
-
-              &:last-child {
-                border-bottom: 1px solid var(--gray-c5);
-              }
-            }
-          }
 
           .stickybutton {
             padding-left: 24px;
@@ -522,24 +494,28 @@
               cursor: pointer;
               width: fit-content;
               text-decoration: none;
+              position: absolute;
+              right: 10%;
+              bottom: -15px;
 
               .magneticBtn {
-                margin: -30px;
-                padding: 30px;
+                margin: 0px;
+                padding: 0px;
                 display: inline-block;
                 border-radius: 50%;
 
                 & > div {
                   overflow: hidden;
                   position: relative;
-                  width: 96px;
+                  width: 82px;
                   aspect-ratio: 1/1;
                   background-color: var(--sec);
                   border-radius: 200px;
                   display: flex;
+                  font-weight: 200;
                   white-space: nowrap;
                   justify-content: center;
-                  font-size: 16px;
+                  font-size: 13px;
                   align-items: center;
                   color: var(--light);
                   text-align: center;
@@ -553,64 +529,109 @@
             }
           }
         }
+
+        .work-card-detail {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 10px 0;
+          padding-top: 40px;
+          //  img{
+          //   display: block;
+          //   width: 48px;
+          //   object-fit: contain;
+          // }
+
+          // h2 {
+          //   transition: opacity 200ms ease;
+          //   font-size: 60px;
+          //   font-family: var(--NohemiL);
+          //   font-weight: 300 !important;
+          //   transition-delay: 100ms;
+          // }
+
+          ul {
+            transition: opacity 200ms ease;
+            width: fit-content;
+            font-family: var(--Satoshi);
+            color: #000;
+            list-style: none;
+            display: flex;
+            gap: 5px;
+            row-gap: 15px;
+            flex-wrap: wrap;
+
+            li {
+              span {
+                border-radius: 100px;
+                background: #e2e2e2;
+                padding: 5px 12px;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+                white-space: nowrap;
+              }
+            }
+          }
+
+          p {
+            color: #2f2f2f;
+            font-size: 16px;
+            font-family: var(--Satoshi);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            max-width: 90%;
+          }
+
+          .worktablet {
+            width: fit-content;
+            border: 1px dashed var(--dark);
+            border-radius: 200px;
+            padding: 5px 8px;
+            padding-right: 30px;
+            display: flex;
+            align-items: center;
+            background-color: var(--light);
+            white-space: nowrap;
+            span {
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              border-radius: 100px;
+              background-color: var(--dark);
+              margin-right: 15px;
+            }
+
+            h2 {
+              font-family: var(--SatoshiM) !important;
+              font-size: 12px;
+              line-height: 120%;
+            }
+
+            p {
+              font-weight: 400 !important;
+              font-size: 12px;
+              line-height: 120%;
+              font-family: var(--Satoshi);
+              text-transform: capitalize;
+              color: rgba(0, 0, 0, 0.8);
+            }
+          }
+        }
       }
-    }
-
-    .morework {
-      display: block;
-      padding-top: 20px;
-      a {
-        font-size: 14px;
-        line-height: 21px;
-        margin-top: 16px;
-        font-family: var(--Satoshi);
-        font-weight: unset;
-        text-transform: uppercase;
+      .morework {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        text-decoration: none;
-        color: var(--black);
-        color: inherit;
-        width: fit-content;
-
-        & > div {
-          position: relative;
-          padding-bottom: 4px;
-
-          & > div {
-            background-color: var(--dark);
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 1px;
-            width: 100%;
-            transition: all 300ms;
-          }
+        .btnRounded{
+          margin-top: 0 !important;
+          padding: 16px 20px;
         }
-
-        &:hover > div > div {
-          width: 0;
-        }
-
-        span {
-          color: var(--dark);
-          transition: all 300ms;
-          height: 36px;
-          border: 1px dashed var(--dark);
-          background-color: var(--light);
-          margin-left: 24px;
-          padding: 4px 30px;
-          border-radius: 100px;
+        & > img{
+          width: 65px;
           display: block;
-
-          img {
-            vertical-align: middle;
-          }
-        }
-
-        &:hover span {
-          border: 1px dashed var(--light);
         }
       }
     }

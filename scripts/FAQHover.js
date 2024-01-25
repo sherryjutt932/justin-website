@@ -12,12 +12,10 @@ if(!isMobile()){
             const moveX = (x / boxRect.width - 0.5) * 20;
             const moveY = (y / boxRect.height - 0.5) * 20;
         
-            console.log(moveX, moveY);
             gsap.to(moveBtn, { xPercent: -(moveX * 6), yPercent: -(moveY * 2), duration: 0.3 });
         });
         
         card.addEventListener('mouseleave', () => {
-            console.log("leave");
             gsap.to(moveBtn, { xPercent: 0, yPercent: 0, duration: 0.3 });
         });
         

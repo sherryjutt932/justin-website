@@ -558,7 +558,7 @@
 // ------------mobile
 
 
-@media (max-width: 750px) {
+@media (max-width: 430px) {
     #ideasSec {
         width: 100%;
         // height: 100vh;
@@ -581,21 +581,22 @@
             .animated-head{
                 display: flex;
                 align-items: center;
-                flex-direction: row;
+                justify-content: center;
                 h1 {
                     flex: 1 1 100%;
                     font-family: var(--NohemiL);
                     font-size: 48px;
                     line-height: 60px;
                     font-weight: 300 !important;
-                    padding-right: 10%;
+                    padding-right: 0%;
+                    text-align: center;
 
                     br{
                         display: none;
                     }
                 }
                 &>div{
-                    display: none;
+                    // display: none;
                 }
                }
 
@@ -610,7 +611,8 @@
                 p {
                     font-size: 18px;
                     line-height: 27px;
-                    padding-right: 10%;
+                    padding-right: 0%;
+                    font-weight: 400 !important;
                     margin-bottom: 60px;
                 }
 
@@ -619,7 +621,7 @@
                     display: flex;
                     flex-wrap: wrap;
                     padding-top: 20px;
-                    gap: 25px;
+                    gap: 15px;
 
                     &:last-of-type {
                         display: none;
