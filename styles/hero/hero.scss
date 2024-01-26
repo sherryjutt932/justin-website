@@ -351,7 +351,7 @@ header {
   }
 }
 
-@media (max-width: 1024px) and (min-width: 430px) {
+@media (max-width: 1024px) and (min-width: 431px) {
 
   #heroSec{
     min-height: unset;
@@ -360,6 +360,7 @@ header {
   #heroBg {
     padding: 0 60px;
     min-height: unset;
+    padding-bottom: 60px;
   }
 
   header{

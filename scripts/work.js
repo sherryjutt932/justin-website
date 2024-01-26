@@ -4,7 +4,7 @@ const detailRef = document.getElementById("detailRef");
 const workdetail_item = document.getElementsByClassName("workdetailitem");
 
 
-if (!isMobile()) {
+if (!isMobile() && !isTab()) {
   var worktimeline = gsap.timeline();
 
   // gsap.set(detailRef, {
@@ -115,4 +115,50 @@ if (isMobile()) {
         animatedline_length - svgdrawLength;
     },
   });
+}
+
+if (isTab()) {
+  var currentWorkIndex = 0;
+
+  function nextWork() {
+    Array.from(workdetail_item).forEach((item) => {
+      item.classList.remove("open");
+    });
+
+    currentWorkIndex++;
+    if (currentWorkIndex >= workdetail_item.length) {
+      // If index goes beyond the length, set it to the last index
+      
+      currentWorkIndex = workdetail_item.length - 1;
+    }
+    
+    setTimeout(() => {
+     gsap.to("#imgRef", {
+       yPercent: -(100 * currentWorkIndex),
+       duration:1,
+     });
+    }, 50);
+    workdetail_item[currentWorkIndex].classList.add("open");
+  }
+
+  function prevWork() {
+    Array.from(workdetail_item).forEach((item) => {
+      item.classList.remove("open");
+    });
+
+    currentWorkIndex--;
+    if (currentWorkIndex < 0) {
+      // If index goes below 0, set it to 0
+      
+      currentWorkIndex = 0;
+    }
+    
+    setTimeout(() => {
+      gsap.to("#imgRef", {
+        yPercent: -(100 * currentWorkIndex),
+        duration:1,
+      });
+     }, 50);
+    workdetail_item[currentWorkIndex].classList.add("open");
+  }
 }

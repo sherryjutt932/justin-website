@@ -92,6 +92,7 @@
   height: 100%;
   align-items: center;
   line-height: normal;
+  justify-content: center;
 
   .boxCard {
     flex: 1 1 0%;
@@ -99,6 +100,7 @@
     color: var(--dark);
     text-decoration: none;
     border-radius: 10px;
+    max-width: 540px;
     //padding: 48px 0px;
 
     &:nth-child(2) {
@@ -257,7 +259,7 @@
   }
 }
 
-@media (max-width: 1024px) and (min-width: 430px) {
+@media (max-width: 1024px) and (min-width: 431px) {
   .skills {
     font-size: 42px;
     line-height: 50px;

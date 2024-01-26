@@ -121,6 +121,15 @@
             max-width: 32.5ch;
           }
 
+          .worktabletControls{
+            display: flex;
+            gap: 20px;
+
+            & > *:not(.worktablet){
+              display: none;
+            }
+          }
+
           .worktablet {
             width: fit-content;
             border: 1px dashed var(--dark);
@@ -351,6 +360,152 @@
                     }
                     .Btnsecond {
                       width: 132px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 431px) {
+  #workSec {
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+  }
+
+  .work {
+    height: 560px;
+    .workhead {
+      padding: 0px 60px;
+      padding-top: 60px;
+    }
+
+    .workGrid {
+      .workdetail {
+        #detailRef {
+          & > div {
+            padding-top: 120px;
+            padding-bottom: 0px;
+            padding-left: 60px;
+            gap: 25px;
+
+            img {
+              width: 40px;
+            }
+
+            h2 {
+              font-size: 42px;
+            }
+
+            ul {
+              row-gap: 30px;
+              li {
+                span {
+                  padding: 10px 20px;
+                  font-size: 13px;
+                }
+              }
+            }
+
+            p {
+              font-size: 14px;
+            }
+
+            .worktabletControls{
+              display: flex;
+              align-items: center;
+              gap: 10px;
+  
+              & > *:not(.worktablet){
+                display: unset;
+              }
+
+              button {
+                cursor: pointer;
+                background-color: var(--dark);
+                color: var(--light);
+                width: 25px;
+                height: 25px;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100px;
+                text-align: center;
+                outline: none;
+                border: none;
+                transition: all 500ms ease;
+    
+                svg {
+                  width: 15px;
+                  height: 15px;
+                }
+    
+                &:hover {
+                  transform: scale(1.2);
+                }
+    
+                &:nth-child(2) {
+                  background-color: var(--gray-d4) !important;
+                }
+              }
+
+            }
+
+            .worktablet {
+              padding: 9px 15px;
+              padding-right: 30px;
+              span {
+                width: 15px;
+                height: 15px;
+              }
+
+              p,
+              h2 {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+
+      .workimage {
+        #imgRef {
+          height: calc(560px);
+          & > div {
+            padding-right: 60px;
+            padding-bottom: 60px;
+
+            img {
+              width: 560px;
+            }
+
+            .stickybutton {
+              width: 22px;
+              height: 72px;
+
+              right: calc(76px + 60px);
+              bottom: calc(40px + 0px);
+
+              & > a {
+                #magneticBtn {
+                  // margin: -30px;
+                  // padding: 30px;
+
+                  & > div {
+                    width: 72px;
+                    font-size: 11px;
+
+                    .Btnfirst {
+                      width: 72px;
+                    }
+                    .Btnsecond {
+                      width: 72px;
                     }
                   }
                 }

@@ -289,6 +289,78 @@
     }
 }
 
+@media (max-width: 1024px) and (min-width: 431px){
+    #processSec {
+        height: fit-content;
+        .proc-marquee-wrap {
+            .proc-marquee-con{
+                font-size: 28px;
+
+                #proc-marquee{
+                    
+                    #proc-marquee-first{
+                        padding-top: 12px;
+                    }
+                    #proc-marquee-fourth,
+                    #proc-marquee-second,
+                        #proc-marquee-third{
+                        padding-top: 12px;
+                    }
+        
+                    img.arrowRef{
+                        // margin: 0px 48px;
+                        margin: 0px 20px;
+                        height: 32px;
+                        width: 32px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    
+        .proc-cards-wrap{
+            padding: 60px;
+            &>div{
+                .card-icon{
+                    padding-right: 40px;
+                    img,.animicon{
+                        width: 140px;
+                        height: 140px;
+                    }
+                }
+    
+                .card-grid{
+                    .process-card{
+                        max-height: unset;
+                        padding: 15px;
+                        &>div:nth-child(1){
+                            top: 14px;
+                            &>span{
+                                font-size: 9px;
+                                height: 14px;
+                                line-height: 13px;
+                            }
+                        }
+                        &>div:nth-child(2){
+    
+                            h1{
+                                font-size: 17px;
+                                padding-bottom: 12px;
+                            }
+    
+                            p{
+                                font-size: 13px;
+                                line-height: 18px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 // -----------------mobile
 

@@ -31,6 +31,7 @@
   --sec:  #FF2626;
   --dark: #000000;
   --light:#ffffff;
+
 }
 
 *{
@@ -101,12 +102,31 @@ a{
   background-color: var(--light) !important;
 }
 
+.inTab{
+display: none;
+}
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) and (min-width: 431px) {
   .contentCont{
     padding-left: 60px;
     padding-right: 60px;
   }
+
+  .notInTab{
+    display: none;
+  }
+  .inTab{
+    display: unset;
+  }
+
+  .themetitle{
+    font-size: 14px;
+  }
+  .themedot{
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+  } 
 }
 
 @media (max-width: 430px){

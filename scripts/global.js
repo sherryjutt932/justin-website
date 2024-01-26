@@ -5,7 +5,10 @@
 const mousefollower = document.getElementById("mousefollower");
 
 function isMobile() {
-  return window.innerWidth < 430;
+  return window.innerWidth <= 430;
+}
+function isTab() {
+  return window.innerWidth > 430 && window.innerWidth <= 1024;
 }
 
 if (!isMobile()) {

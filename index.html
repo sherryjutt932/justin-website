@@ -156,6 +156,35 @@
           </div>
         </div>
 
+        <div class="tabValue">
+          <div>
+
+            <div>
+              <span class="themedot"></span>
+              <span class="themetitle">Let's Start!</span>
+            </div>
+            <h1>
+              Get started with <br>
+              Pioneers
+            </h1>
+            <p>
+              Our top priority is to provide exceptional support to our clients throughout their entire project journey.
+            </p>
+            <a href="/" class="btnRounded">
+              <span>Get Free Estimates Now</span>
+              <span>
+                <img src="./assets/icons/greaterThen.svg" alt="greaterthen" />
+                <img src="./assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+              </span>
+            </a>
+
+          </div>
+
+          <div>
+            <img src="./assets/icons/largeIconOnly.svg" alt="">
+          </div>
+        </div>
+
         <div class="footer">
           <div class="border-top"></div>
           <!-- <div class="creator">Made by Xaib</div> -->
@@ -543,13 +572,17 @@
       <!-- horizontal scroller -->
       <div id="aboutRef">
         <div class="pc-aboutus">
-          <div>At our agency,</div>
+          <div class="notInTab">At our agency,</div>
           <div class="scrollerWrapper">
+
+            <div class="scrollerItem inTab">
+              At our agency,
+            </div>
 
             <div class="scrollerItem">
               We specialize<div class="inline-block align-middle mx-10">
                 <!-- <div class="animicon" id="aicon-crafting"></div> -->
-                <lottie-player class="animicon" autoplay loop
+                <lottie-player class="animicon about-icon-float" autoplay loop
                   src="./assets/Animation/newIcons/About Us/Crafting/Crafting.json"></lottie-player>
               </div>
             </div>
@@ -557,7 +590,7 @@
             <div class="scrollerItem">
               In crafting<div class="inline-block align-middle mx-10">
                 <!-- <div class="animicon" id="aicon-products"></div> -->
-                <lottie-player class="animicon" autoplay loop
+                <lottie-player class="animicon about-icon-float" autoplay loop
                   src="./assets/Animation/newIcons/About Us/digital production/Digital Production.json"></lottie-player>
               </div>
             </div>
@@ -565,7 +598,7 @@
             <div class="scrollerItem">
               Digital products<div class="inline-block align-middle mx-10">
                 <!-- <div class="animicon" id="aicon-care"></div> -->
-                <lottie-player class="animicon" autoplay loop
+                <lottie-player class="animicon about-icon-float" autoplay loop
                   src="./assets/Animation/newIcons/About Us/Care/Care.json"></lottie-player>
               </div>
             </div>
@@ -573,7 +606,7 @@
             <div class="scrollerItem">
               With great care<div class="inline-block align-middle mx-10">
                 <!-- <div class="animicon" id="aicon-portfolio"></div> -->
-                <lottie-player class="animicon" autoplay loop
+                <lottie-player class="animicon about-icon-float" autoplay loop
                   src="./assets/Animation/newIcons/About Us/Our Portfolio/OurPortfolio.json"></lottie-player>
               </div>
             </div>
@@ -619,13 +652,13 @@
         <div class="animiconlist">
 
 
-          <lottie-player class="animicon about-icon-float" autoplay loop
+          <lottie-player class="animicon about-icon-floatM" autoplay loop
             src="./assets/Animation/newIcons/About Us/Crafting/Crafting.json"></lottie-player>
-          <lottie-player class="animicon about-icon-float" autoplay loop
+          <lottie-player class="animicon about-icon-floatM" autoplay loop
             src="./assets/Animation/newIcons/About Us/digital production/Digital Production.json"></lottie-player>
-          <lottie-player class="animicon about-icon-float" autoplay loop
+          <lottie-player class="animicon about-icon-floatM" autoplay loop
             src="./assets/Animation/newIcons/About Us/Care/Care.json"></lottie-player>
-          <lottie-player class="animicon about-icon-float" autoplay loop
+          <lottie-player class="animicon about-icon-floatM" autoplay loop
             src="./assets/Animation/newIcons/About Us/Our Portfolio/OurPortfolio.json"></lottie-player>
 
           <!-- <div class="animicon about-icon-float" id="aicon-mb-crafting"></div>
@@ -693,12 +726,29 @@
                 They consistently set and achieve clear goals with a strong work ethic, creativity, and skillfulness,
                 while meeting deadlines and effectively solving problems.
               </p>
-              <div class="worktablet">
-                <span></span>
-                <div>
-                  <h2>Michael</h2>
-                  <p>Home Stylist</p>
+              <div class="worktabletControls">
+                <div class="worktablet">
+                  <span></span>
+                  <div>
+                    <h2>Michael</h2>
+                    <p>Home Stylist</p>
+                  </div>
                 </div>
+
+                <button onclick="prevWork()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+
+                </button>
+                <button onclick="nextWork()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+                </button>
+
               </div>
 
             </div>
@@ -722,12 +772,29 @@
               <p>
                 Their commitment to creating a user-friendly experience has significantly enhanced our financial
                 management processes. We are delighted with the outcome,</p>
-              <div class="worktablet">
-                <span></span>
-                <div>
-                  <h2>Ethan</h2>
-                  <p>Ventures LLC</p>
+              <div class="worktabletControls">
+                <div class="worktablet">
+                  <span></span>
+                  <div>
+                    <h2>Ethan</h2>
+                    <p>Ventures LLC</p>
+                  </div>
                 </div>
+
+                <button onclick="prevWork()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+
+                </button>
+                <button onclick="nextWork()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+                </button>
+
               </div>
             </div>
             <!-- detail item -->
@@ -751,12 +818,27 @@
               <p>
                 Their dedication, creativity, and timely delivery of the website exceeded our expectations. We're
                 thrilled with the end result, and it beautifully reflects the essence of Flora.</p>
-              <div class="worktablet">
-                <span></span>
-                <div>
-                  <h2>Olivia</h2>
-                  <p>Blossom Events</p>
+              <div class="worktabletControls">
+                <div class="worktablet">
+                  <span></span>
+                  <div>
+                    <h2>Olivia</h2>
+                    <p>Blossom Events</p>
+                  </div>
                 </div>
+                <button onclick="prevWork()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+
+                </button>
+                <button onclick="nextWork()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+                </button>
               </div>
             </div>
             <!-- detail item -->
@@ -780,12 +862,29 @@
               <p>
                 The website's aesthetic is a true reflection of my vision, enhancing the appeal of my collections. I'm
                 immensely grateful for how the team honored the essence of my brand.</p>
-              <div class="worktablet">
-                <span></span>
-                <div>
-                  <h2>Sophia</h2>
-                  <p>Designer</p>
+
+              <div class="worktabletControls">
+                <div class="worktablet">
+                  <span></span>
+                  <div>
+                    <h2>Sophia</h2>
+                    <p>Designer</p>
+                  </div>
                 </div>
+
+                <button onclick="prevWork()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+
+                </button>
+                <button onclick="nextWork()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
