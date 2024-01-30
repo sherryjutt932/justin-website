@@ -295,7 +295,7 @@ header {
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1700px) {
 
   #hero,
   #heroBg {
@@ -350,6 +350,16 @@ header {
     }
   }
 }
+
+// @media (min-width: 1700px) and (max-width: 1700px) {
+//   .head {
+//     .headCon {
+//       // font-size: 140px;
+//       line-height: 120px;
+
+//     }
+//   }
+// }
 
 @media (max-width: 1024px) and (min-width: 431px) {
 

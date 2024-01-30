@@ -11,7 +11,6 @@
   line-height: 70px;
   padding: 64px 0;
   gap: 64px;
-  z-index: 10;
 }
 
 #labelsCon {
@@ -25,7 +24,8 @@
     position: relative;
     width: fit-content;
     margin: 0 auto;
-
+    
+   
     #labelsRef {
       position: absolute;
       left: 0%;
@@ -34,6 +34,8 @@
       width: 100%;
       font-size: 18px;
       line-height: 20px;
+
+
       .label {
         border-radius: 100px;
         width: fit-content;
@@ -42,6 +44,7 @@
         position: absolute;
         overflow: hidden;
         transition: all 300ms ease;
+        cursor: pointer !important;
 
         a {
           text-decoration: none;
@@ -198,7 +201,7 @@
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1700px) {
   .skills {
     font-size: 80px;
     line-height: 95px;
@@ -339,7 +342,6 @@
     line-height: 60px;
     padding: 64px 20px;
     gap: 140px;
-    z-index: 10;
   }
 
   #labelsCon {

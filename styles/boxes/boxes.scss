@@ -86,7 +86,7 @@
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1700px) {
   #boxesRef2,
   .boxesRef2 {
     .boxitem {
@@ -176,8 +176,9 @@
       aspect-ratio: 1;
       border: none;
       padding: 8px;
-
+      
       > div {
+        border-radius: 8px;
         border: 1px solid var(--gray-c5);
         aspect-ratio: 1;
         width: 100%;

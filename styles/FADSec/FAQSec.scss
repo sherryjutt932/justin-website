@@ -31,10 +31,10 @@
         height: fit-content;
         cursor: pointer;
         z-index: 2;
-        border-radius: 8px;
         overflow: hidden;
-
+        
         &::before {
+          border-radius: 8px;
           position: absolute;
           content: "";
           width: 100%;
@@ -181,7 +181,7 @@
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1700px) {
   .FAQSec {
     .FAQGroup {
       margin: 70px 0;
@@ -196,8 +196,11 @@
 
       .questions {
         .quesCard {
-          border-radius: 6px;
           padding: 0px 20px;
+          
+          &::before {
+            border-radius: 6px;
+          }
 
           h2 {
             font-size: 18px;
@@ -230,7 +233,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 431px) {
     .FAQSec {
       .FAQGroup {
         margin: 30px 0;
@@ -244,9 +247,11 @@
   
         .questions {
           .quesCard {
-            border-radius: 8px;
             padding: 0px 20px;
-  
+            
+            &::before {
+              border-radius: 8px;
+            }
             h2 {
               font-size: 14px;
             }
@@ -262,6 +267,8 @@
               }
             }
             .btnWrapper {
+              left: unset;
+              right: 0px;
               button {
                 width: 35px;
                 height: 35px;
@@ -296,9 +303,12 @@
   
         .questions {
           .quesCard {
-            border-radius: 6px;
             padding: 0px 10px;
             gap: 20px;
+            
+            &::before {
+              border-radius: 6px;
+            }
   
             h2 {
                 margin: 30px 0;
