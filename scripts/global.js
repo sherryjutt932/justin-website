@@ -274,14 +274,14 @@ const frombelowanimM = document.getElementsByClassName("frombelowanimM");
 
 Array.from(frombelowanimM).forEach(element => {
   gsap.from(element, {
-    duration: 1, 
+    duration: .5, 
     yPercent: 10, 
     opacity: 0, 
     ease: "sine", 
     delay: 0,
     scrollTrigger: {
       trigger: element,
-      start:"top 70%",
+      start:"top 90%",
       toggleActions: "restart none none reverse"
     }
   });
@@ -345,3 +345,22 @@ if((document.getElementById("loadingsteric"))){
       opacity: 0,
     });
 }
+
+
+// ----------smoth scroller-----------------
+const smoothScrollers = document.querySelectorAll('.smoothScroller');
+
+smoothScrollers.forEach(smoothScroller => {
+  smoothScroller.addEventListener('click', function (e) {
+      e.preventDefault();
+    
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+    
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+        });
+      }
+    });
+});

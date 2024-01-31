@@ -237,12 +237,12 @@
                 }
 
                 p {
-                    width: 95%;
-                    font-size: 16px;
+                    width: 100%;
+                    font-size: 15px;
                     line-height: 27px;
-                    letter-spacing: -0.3px;
-                    max-width: 392px;
-                    margin-top: 20px;
+                    letter-spacing: -0.4px;
+                    max-width: unset;
+                    margin-top: 20px; 
                     margin-right: 0;
                 }
             }
