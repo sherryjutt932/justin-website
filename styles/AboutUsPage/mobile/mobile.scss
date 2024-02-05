@@ -1,220 +1,266 @@
-@media (max-width: 430px){
-    #aboutUsHeader {
-        height: fit-content;
-      
-        .aboutUsMain {
-          & > div {
-            .mob{display: block;}
-            .desk{display: none;}
-            padding: 30px 0;
-    
-            &:nth-child(1) {
-              flex-direction: column;
-              align-items: start;
-            }
-      
-            h1 {
-              font-size: 48px;
-              line-height: 1;
-              padding: 15px 0;
-            }
-            p {
-              max-width: none;
-              font-size: 16px;
-                font-weight: 400;
-                line-height: 27px; /* 168.75% */
-                letter-spacing: -0.3px;
-            }
-            img {
-                width: 84px;
-                height: 81px;
-            }
-          }
+@media (max-width: 500px) {
+  #aboutUsHeader {
+    height: fit-content;
+
+    .aboutUsMain {
+      & > div {
+        .mob {
+          display: block;
+        }
+        .desk {
+          display: none;
+        }
+        padding: 30px 0;
+
+        &:nth-child(1) {
+          flex-direction: column;
+          align-items: start;
+        }
+
+        h1 {
+          font-size: 48px;
+          line-height: 1;
+          padding: 15px 0;
+        }
+        p {
+          max-width: none;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 27px; /* 168.75% */
+          letter-spacing: -0.3px;
+        }
+        img {
+          width: 84px;
+          height: 81px;
         }
       }
-    
-      #unseenStories,
-      #aboutUsAboutUs {
+    }
+  }
+
+  #unseenStories,
+  #aboutUsAboutUs {
+    flex-direction: column;
+
+    .imagecon {
+      flex-direction: column;
+      padding-top: 50px;
+      gap: 32px;
+
+      & > div {
+        flex: 1 1 50%;
+        p {
+          font-size: 24px;
+          line-height: 34px; /* 141.667% */
+          max-width: 25ch;
+          padding-bottom: 45px;
+          span {
+            font-size: 24px;
+            line-height: 34px;
+          }
+        }
+
+        .animimage {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .detailcon {
+      flex-direction: column;
+      gap: 45px;
+      padding: 45px 0;
+
+      & > div {
         flex-direction: column;
-      
-        .imagecon {
-          flex-direction: column;
-          padding-top: 50px;
-          gap: 32px;
-      
-          & > div {
-            flex: 1 1 50%;
-            p {
-                font-size: 24px;
-                line-height: 34px; /* 141.667% */
-              max-width: 25ch;
-              padding-bottom: 45px;
-              span {
-                font-size: 24px;
-                line-height: 34px;
-              }
-            }
-      
-            .animimage{
-              margin-top: 0px;
-            }
+        gap: 45px;
+        .detailbox {
+          h3 {
+            font-size: 18px;
+            line-height: 14px;
           }
-        }
-      
-        .detailcon {
-          flex-direction: column;
-          gap: 45px;
-          padding: 45px 0;
-      
-          & > div {
-            flex-direction: column;
-            gap: 45px;
-            .detailbox {
-              h3 {
-                font-size: 18px;
-                line-height: 14px;
-              }
-              p {
-                font-size: 16px;
-                line-height: 24px; /* 150% */
-                letter-spacing: -0.3px; /* 145.455% */
-                max-width: none;
-                span {
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-              }
+          p {
+            font-size: 16px;
+            line-height: 24px; /* 150% */
+            letter-spacing: -0.3px; /* 145.455% */
+            max-width: none;
+            span {
+              font-size: 16px;
+              line-height: 24px;
             }
           }
         }
       }
+    }
+  }
 
-      #aboutUsFounders{
-        padding-bottom: 60px;
-        .heading{
-            padding-top: 40px;
-            padding-bottom: 60px;
-            h1{
-                font-size: 36px;
-                line-height: 41px; /* 118.75% */
-                span {
-                    font-size: 24px;
-                    line-height: 41px; /* 118.75% */
-                  }
-            }
+  #aboutUsFounders {
+    padding-bottom: 60px;
+    .heading {
+      padding-top: 40px;
+      padding-bottom: 60px;
+      h1 {
+        font-size: 36px;
+        line-height: 41px; /* 118.75% */
+        span {
+          font-size: 24px;
+          line-height: 41px; /* 118.75% */
         }
-    
-        .imagecon{
-            gap: 60px;
-            flex-direction: column;
-    
-            .imagecard{
-                flex: 1 1 50%;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-    
-                &:nth-child(1){
-                    padding-top: 0px;
-                }
-    
-                h3{
-                    font-size: 18px;
-                    line-height: 14px;
-                }
-                .rotateHoverEffect{
-                    margin-bottom: 15px;
-                    &>div.text {
-        
-                        p{
-                            font-size: 16px;
-                            line-height: 24px; /* 150% */
-                        }
-        
-                    }
-        
-                    &>div.icon {
-                        height: 20px;
-                        width: 20px;
-                        img {
-                            padding: 5px;
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
 
-      #aboutUsDiscoverMore{
-        padding-bottom: 120px;
-        height: fit-content;
+    .imagecon {
+      gap: 60px;
+      flex-direction: column;
+
+      .imagecard {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &:nth-child(1) {
+          padding-top: 0px;
+        }
+
+        h3 {
+          font-size: 18px;
+          line-height: 14px;
+        }
+        .rotateHoverEffect {
+          margin-bottom: 15px;
+          & > div.text {
+            p {
+              font-size: 16px;
+              line-height: 24px; /* 150% */
+            }
+          }
+
+          & > div.icon {
+            height: 20px;
+            width: 20px;
+            img {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aboutUsDiscoverMore {
+    padding-bottom: 120px;
+    height: fit-content;
     position: relative;
-        margin-bottom: -100vh;
-    
-        .spacer{
-            height: 97vh;
-        }
-    
-        .discoverMoreWrapper{
-            position: sticky;
-            height: fit-content;
-    
-            .heading{
-                padding: 40px 0;
-                h1{
-                    font-size: 36px;
-                    line-height: 41px;
-                }
-            }
-        
-            .discoverCardCon{
-                padding: 10px 0;
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                column-gap: 0px;
-                row-gap: 45px;
-        
-                .discoverCard{
-                     
-                    .imageCon{
-                        background-color: var(--gray-da);
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        aspect-ratio: 1.56;
-                        margin-bottom: 30px;
+    margin-bottom: -100vh;
 
-                        &:hover > div.iconcon {
-                          width: 115px;
-                        }
-
-                        &>div.iconcon{
-                            width: 102px;
-                            img, .animicon{
-                                width: 55px;
-                            }
-                        }
-                    }
-                    .themeheading{
-                        padding-top: 0;
-                        .themetitle{
-                            font-family: var(--Satoshi);
-                        }
-                    }
-                    p{
-                        margin-top: 15px;
-                        color: var(--gray-5e);
-                        font-family: var(--Satoshi) !important;
-                        font-size: 20px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 29px; /* 145.455% */
-                    }
-                }
-            }
-        }
-    
+    .spacer {
+      height: 97vh;
     }
 
+    .discoverMoreWrapper {
+      position: sticky;
+      height: fit-content;
 
+      .heading {
+        padding: 40px 0;
+        flex-direction: column;
+        h1 {
+          font-size: 36px;
+          line-height: 41px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .discoverCardConWrapper{
+        width: 100%;
+        overflow: hidden;
+        // overflow-x: scroll;
+
+      }
+      .discoverMoreCarousel-buttons{
+        display: flex;
+        padding: 30px 0;
+        gap: 20px;
+
+        button {
+            cursor: pointer;
+            background-color: var(--dark);
+            color: var(--light);
+            width: 37px;
+            height: 37px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            text-align: center;
+            outline: none;
+            border: none;
+            transition: all 500ms ease;
+
+            svg {
+                width: 17px;
+                height: 17px;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &:nth-child(1) {
+                background-color: var(--gray-d4) !important;
+            }
+
+        }
+    }
+
+      .discoverCardCon {
+        padding: 10px 0;
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 20px;
+        row-gap: 45px;
+        width: fit-content;
+        
+        .discoverCard {
+          transition: transform 300ms ease;
+          width: 75vw;
+          .imageCon {
+            background-color: var(--gray-da);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1.56;
+            margin-bottom: 30px;
+
+            &:hover > div.iconcon {
+              width: 115px;
+            }
+
+            & > div.iconcon {
+              width: 102px;
+              img,
+              .animicon {
+                width: 55px;
+              }
+            }
+          }
+          .themeheading {
+            padding-top: 0;
+            .themetitle {
+              font-family: var(--Satoshi);
+            }
+          }
+          p {
+            margin-top: 15px;
+            color: var(--gray-5e);
+            font-family: var(--Satoshi) !important;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 29px; /* 145.455% */
+          }
+        }
+      }
+    }
+  }
 }

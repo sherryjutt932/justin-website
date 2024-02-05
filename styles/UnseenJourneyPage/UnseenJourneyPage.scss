@@ -150,7 +150,7 @@
   }
 }
 
-@media (max-width: 1536px) {
+@media (max-width: 1700px) {
   #unseenStories {
     .heading {
       padding: 100px 0;
@@ -199,7 +199,20 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 1024px) {
+
+  #weProvide,
+  #unseenStories {
+    .heading {
+      h1 {
+        font-size: 42px;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
   #unseenStories {
     display: block;
     .heading {

@@ -12,19 +12,25 @@
     <link rel="stylesheet" href="../styles/Navigation/navigation.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/bigscreen/bigscreen.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/tab/tab.css">
     <link rel="stylesheet" href="../styles/UnseenJourneyPage/UnseenJourneyPage.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
-    <link rel="stylesheet" href="../styles/ideas/ideas.css">
     <link rel="stylesheet" href="../styles/work/work.css">
     <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
     <link href="../styles/boxes/boxes.css" rel="stylesheet" />
     <link href="../styles/perks/perks.css" rel="stylesheet" />
+    <link href="../styles/FADSec/FAQSec.css" rel="stylesheet" />
+    <link href="../styles/contactUsSec/contactUsSec.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/theme/theme.css">
     <link rel="stylesheet" href="../styles/UIUX/UIUX.css">
+    <link rel="stylesheet" href="../styles/ideas/ideas.css">
 
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js" integrity="sha512-2r+xZ/Dm8+HI0I8dsj1Jlfchv4O3DGfWbqRalmSGtgdbVQrZyGRqHp9ek8GKk1x8w01JsmDZRrJZ4DzgXkAU+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"
+        integrity="sha512-2r+xZ/Dm8+HI0I8dsj1Jlfchv4O3DGfWbqRalmSGtgdbVQrZyGRqHp9ek8GKk1x8w01JsmDZRrJZ4DzgXkAU+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- gsap -->
     <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
@@ -210,7 +216,7 @@
         </div>
     </section>
 
-    <section id="aboutUsHeader" class="contentCont herosection">
+    <section id="ServicePageHeader" class="contentCont herosection">
         <nav>
             <div class="logoimg">
                 <div class="desk">
@@ -230,7 +236,7 @@
                     <div class="textbg">Home</div>
                 </a>
                 <!-- nav link -->
-                <a href="./portfolio.html" class="nav-link non-mousetracker">
+                <a href="../portfolio.html" class="nav-link non-mousetracker">
                     <div class="text">Portfolio</div>
                     <div class="textbg">Portfolio</div>
                 </a>
@@ -298,24 +304,74 @@
 
             <div class="border-bottom"></div>
         </nav>
-        <div class="aboutUsMain">
-            <div class="frombelowanim">
-                <h1 class="headerh1andicon"><span>UI UX</span> <lottie-player class="animicon" autoplay loop
-                        src="../assets/Animation/get your designs_Rounded corners/Get your designs_rounded corner.json"></lottie-player>
-                </h1>
 
-                <div class="headerpandicon">
-                    <p>We carefully create user-friendly designs to make your digital experiences enjoyable and
-                        effortless.</p>
+        <div class="ServicePageHead">
+            <div class="frombelowanim">
+                <div class="left">
                     <lottie-player class="animicon" autoplay loop
                         src="../assets/Animation/get your designs_Rounded corners/Get your designs_rounded corner.json"></lottie-player>
+                    <h1>UI UX Design</h1>
+                </div>
+                <p class="mobile">We carefully create user-friendly designs to make your digital experiences enjoyable and
+                    effortless.</p>
+                <div>
+                    <a href="/" class="btnRounded mobile">
+                        <span>Get Free Estimates Now</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
+                    </a>
+                    <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
                 </div>
             </div>
             <div class="frombelowanim">
-                <h1>Design</h1>
-                <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
+                <div class="arrowText">
+                    <h2 class="first"><span class="animarrow">
+                            <span class="orig"><svg width="42" height="31" viewBox="0 0 42 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M41.6211 15.3333L26.8938 0.606017L24.7724 2.72734L35.8785 13.8333L0.499774 13.8333L0.499774 16.8333L35.8785 16.8333L24.7724 27.9393L26.8938 30.0607L41.6211 15.3333Z"
+                                        fill="black" />
+                                </svg></span>
+                            <span class="dup">
+                                <svg width="42" height="31" viewBox="0 0 42 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M41.6211 15.3333L26.8938 0.606017L24.7724 2.72734L35.8785 13.8333L0.499774 13.8333L0.499774 16.8333L35.8785 16.8333L24.7724 27.9393L26.8938 30.0607L41.6211 15.3333Z"
+                                        fill="black" />
+                                </svg>
+                            </span>
+                        </span>
+                        We elevate
+                    </h2>
+                    <h2 style="max-width: 37ch;">
+                        Your business growth through expert u/ux design. Explore our portfolio <span class="IconEffect">
+
+                            <img class="absIcon" src="../assets/icons/blackCircle.svg" alt="">
+                            <img class="overlayIcon" src="../assets/icons/blackCircleHover.svg" alt="">
+
+                        </span> each project reflects our passion for crafting seamless user experiences.
+                    </h2>
+                </div>
+
+                <div class="btnText">
+                    <div></div>
+                    <div class="desktop">
+                        <p>We carefully create user-friendly designs to make your digital experiences enjoyable and
+                            effortless.</p>
+                        <a href="/" class="btnRounded">
+                            <span>Get Free Estimates Now</span>
+                            <span>
+                                <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                                <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+
     </section>
 
     <section id="unseenStories" class="contentCont">
@@ -349,6 +405,13 @@
                         architecture to design a unique 'blended experience'.</li>
                     <li>We help you translate a simple idea into an exotic Digital design transformation vision.</li>
                 </ul>
+                <a href="/" class="btnRounded" id="ulCTA">
+                    <span>Get Free Estimates Now</span>
+                    <span>
+                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                        <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                    </span>
+                </a>
             </div>
         </div>
 
@@ -372,15 +435,19 @@
                 </div>
 
                 <div class="buttoncon">
-                    <a class="hoverLine" href="/">
-                        <div>
-                            Get Started
-                            <div></div>
-                        </div>
+                    <a href="/" class="btnRounded btnlight">
+                        <span>Get Free Estimates Now</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
                     </a>
-                    <a onmouseenter="activeChange()" onmouseleave="deactiveChange()" class="stickyButton  non-mousetracker" href="/">
+
+                    <a onmouseenter="activeChange()" onmouseleave="deactiveChange()"
+                        class="stickyButton  non-mousetracker" href="/">
                         <div id="magneticBtn" class="arrowCircle">
-                            <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="41" height="40" viewBox="0 0 41 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M40.2697 0.216187L39.7033 32.8226L36.7038 32.7705L37.1787 5.4285L2.67796 39.9292L0.556641 37.8079L35.0574 3.30718L7.71537 3.7821L7.66327 0.78255L40.2697 0.216187Z" />
                             </svg>
@@ -406,7 +473,8 @@
                                 </div>
                             </div>
                             <div>
-                                <p>As a thriving UI UX agency, we harness the proven empathy-driven human-focused design process to craft the best digital solutions mapping the users preferences.</p>
+                                <p>As a thriving UI UX agency, we harness the proven empathy-driven human-focused design
+                                    process to craft the best digital solutions mapping the users preferences.</p>
                             </div>
 
                             <div class="overlay"></div>
@@ -425,7 +493,9 @@
                                 </div>
                             </div>
                             <div>
-                                <p>Apt logic and detailing is incorporated precisely with elements like design functions, features, functionalities, workflow and beyond to solve complex issues with minimal snags.</p>
+                                <p>Apt logic and detailing is incorporated precisely with elements like design
+                                    functions, features, functionalities, workflow and beyond to solve complex issues
+                                    with minimal snags.</p>
                             </div>
                             <div class="overlay"></div>
 
@@ -444,14 +514,16 @@
                                 </div>
                             </div>
                             <div>
-                                <p>With Proven ideation techniques combined with a client-centric approach at the core, we ideate roadmaps while mapping your business journey to decode human-focused problem
+                                <p>With Proven ideation techniques combined with a client-centric approach at the core,
+                                    we ideate roadmaps while mapping your business journey to decode human-focused
+                                    problem
                                     statements.</p>
                             </div>
                             <div class="overlay"></div>
 
                         </div>
                     </div>
-                   
+
                     <div class="stackCard">
                         <div class="cardWrapper">
                             <div>
@@ -464,14 +536,14 @@
                                 </div>
                             </div>
                             <div>
-                                <p>We develop a results-focused prototype meant to build an authentic digital connection with the utmost level of detail and quality based on diversified experiments.</p>
+                                <p>We develop a results-focused prototype meant to build an authentic digital connection
+                                    with the utmost level of detail and quality based on diversified experiments.</p>
                             </div>
                             <div class="overlay"></div>
 
                         </div>
                     </div>
 
-                  
                     <div class="stackCard">
                         <div class="cardWrapper">
                             <div>
@@ -484,7 +556,9 @@
                                 </div>
                             </div>
                             <div>
-                                <p>We refine our designs using advanced testing methods, assessing how they perform across various platforms. This approach gives us a deeper understanding of our customers' experiences.</p>
+                                <p>We refine our designs using advanced testing methods, assessing how they perform
+                                    across various platforms. This approach gives us a deeper understanding of our
+                                    customers' experiences.</p>
                             </div>
                             <div class="overlay"></div>
 
@@ -495,12 +569,11 @@
             </div>
 
 
-            <img class="grid" src="../assets/icons/grid.svg" alt="">
+            <img class="grid" src="../assets/icons/grid2.png" alt="">
             <div class="gridoverlay"></div>
         </div>
 
     </section>
-
 
     <section id="perksSec" style="min-height: fit-content;">
 
@@ -510,20 +583,31 @@
                 <span class="themetitle">Tool box</span>
             </div>
             <div>
-                <h1 class="customPerksSecP">
-                    Tools powering <br>
-                    our design process
-                </h1>
-                <p>
-                    Our design process is powered by cutting-edge tools, including Figma for interactive design and
-                    prototyping, Miro for collaborative mood boarding and brainstorming sessions.
-                </p>
+                <div>
+                    <h1 class="customPerksSecP">
+                        Tools powering <br class="desktop">
+                        our <br class="mobile">design process
+                    </h1>
+                </div>
+                <div>
+                    <p>
+                        Our design process is powered by cutting-edge tools, including Figma for interactive design and
+                        prototyping, Miro for collaborative mood boarding and brainstorming sessions.
+                    </p>
+                    <a href="/" class="btnRounded">
+                        <span>Get Free Estimates Now</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
 
     </section>
 
-    <section class="boxesSec inUIUX" style="padding-top: 0;" >
+    <section class="boxesSec inUIUX" style="padding-top: 0;">
         <div class="boxesRef2">
             <div class="boxitem">
                 <div>
@@ -584,7 +668,19 @@
             </div>
         </div>
         <div id="boxesRef3" class="boxesRef2">
-            <div class="boxitem boxitemEmpty">
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">InVision</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="../assets/icons/tools/invision.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="boxitem">
                 <div>
@@ -614,7 +710,19 @@
                     </div>
                 </div>
             </div>
-            <div class="boxitem boxitemEmpty">
+            <div class="boxitem">
+                <div>
+                    <div>
+                        <span class="themedot"></span>
+                        <span class="themetitle">Framer</span>
+                    </div>
+
+                    <div>
+                        <div>
+                            <img src="../assets/icons/tools/framer.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -627,7 +735,6 @@
                 d="M181.181 1C183.082 81.0216 123.962 115.903 100.38 134.007C55.6539 165.736 -35.0419 228.725 16.2898 261.276C80.4544 301.969 223.774 292.646 164.545 406.649C105.316 520.656 -44.0356 468.493 86.3046 570.668C216.644 672.843 243.371 630.727 214.835 610.428C174.266 581.571 141.877 713.653 121.769 779.857C101.66 846.06 132.066 855.047 78.376 890.276C44.7617 912.33 25.1426 826.219 99.9739 887.664C174.806 949.109 108.741 975.809 107.277 977.089C33.6838 1017.03 287.839 1147.45 201.116 1181.72C92.7123 1224.56 -10.3996 1173.49 61.0775 1280.69C132.554 1387.88 303.112 1194.83 194.708 1440.22C107.985 1636.54 78.3058 1642.56 64.4736 1624.28C41.562 1576.72 8.36002 1502.65 76.3635 1559.72C103.175 1589.72 145.314 1657.76 160.523 1691.18C179.535 1732.94 162.166 1816.11 138.404 1861.65L128.347 1883.69C119.695 1915 120.596 1956.29 154.671 1959.16C197.265 1962.75 223.955 1984.97 178.985 2038.57"
                 stroke="#FF2626" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        
 
 
         <div class="work ">
@@ -651,13 +758,13 @@
                     <div id="detailRef">
                         <!-- detail item -->
                         <div class="workdetailitem open">
-
+                            <img src="../assets/icons/largeIconOnly.svg" alt="">
                             <h2>
                                 Epoch
                             </h2>
                             <ul>
                                 <li>
-                                    <span>UX design</span>
+                                    <span>UX</span>
                                 </li>
                                 <li>
                                     <span>UI design</span>
@@ -666,6 +773,157 @@
                                     <span>Web development</span>
                                 </li>
                             </ul>
+                            <p>
+                                They consistently set and achieve clear goals with a strong work ethic, creativity, and
+                                skillfulness,
+                                while meeting deadlines and effectively solving problems.
+                            </p>
+                            <div class="worktabletControls">
+                                <div class="worktablet">
+                                    <span></span>
+                                    <div>
+                                        <h2>Michael</h2>
+                                        <p>Home Stylist</p>
+                                    </div>
+                                </div>
+
+                                <button onclick="prevWork()">
+                                    <svg width="24" height="17" viewBox="0 0 24 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334"
+                                            stroke="white" stroke-width="1.6" />
+                                    </svg>
+
+                                </button>
+                                <button onclick="nextWork()">
+                                    <svg width="24" height="17" viewBox="0 0 24 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667"
+                                            stroke="white" stroke-width="1.6" />
+                                    </svg>
+                                </button>
+
+                            </div>
+
+                        </div>
+                        <!-- detail item -->
+                        <div class="workdetailitem">
+                            <img src="../assets/icons/largeIconOnly.svg" alt="">
+                            <h2>
+                                Finvault
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span>UX</span>
+                                </li>
+                                <li>
+                                    <span>UI design</span>
+                                </li>
+                                <li>
+                                    <span>Web development</span>
+                                </li>
+                            </ul>
+                            <p>
+                                Their commitment to creating a user-friendly experience has significantly enhanced our
+                                financial
+                                management processes. We are delighted with the outcome,</p>
+                            <div class="worktabletControls">
+                                <div class="worktablet">
+                                    <span></span>
+                                    <div>
+                                        <h2>Ethan</h2>
+                                        <p>Ventures LLC</p>
+                                    </div>
+                                </div>
+
+                                <button onclick="prevWork()">
+                                    <svg width="24" height="17" viewBox="0 0 24 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334"
+                                            stroke="white" stroke-width="1.6" />
+                                    </svg>
+
+                                </button>
+                                <button onclick="nextWork()">
+                                    <svg width="24" height="17" viewBox="0 0 24 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667"
+                                            stroke="white" stroke-width="1.6" />
+                                    </svg>
+                                </button>
+
+                            </div>
+                        </div>
+                        <!-- detail item -->
+                        <div class="workdetailitem">
+                            <img src="../assets/icons/largeIconOnly.svg" alt="">
+
+                            <h2>
+                                Flora
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span>UX</span>
+                                </li>
+                                <li>
+                                    <span>UI design</span>
+                                </li>
+                                <li>
+                                    <span>Web development</span>
+                                </li>
+                            </ul>
+                            <p>
+                                Their dedication, creativity, and timely delivery of the website exceeded our
+                                expectations. We're
+                                thrilled with the end result, and it beautifully reflects the essence of Flora.</p>
+                            <div class="worktabletControls">
+                                <div class="worktablet">
+                                    <span></span>
+                                    <div>
+                                        <h2>Olivia</h2>
+                                        <p>Blossom Events</p>
+                                    </div>
+                                </div>
+                                <button onclick="prevWork()">
+                                    <svg width="24" height="17" viewBox="0 0 24 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334"
+                                            stroke="white" stroke-width="1.6" />
+                                    </svg>
+
+                                </button>
+                                <button onclick="nextWork()">
+                                    <svg width="24" height="17" viewBox="0 0 24 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667"
+                                            stroke="white" stroke-width="1.6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- images scroller -->
+                <div class="workimage">
+                    <div id="imgRef">
+                        <svg id="animatedline" width="623" height="3539" viewBox="0 0 623 3539" fill="none"
+                            preserveAspectRatio="xMidYMax meet">
+                            <path id="animatedlinepath"
+                                d="M270.846 2C149.851 87.8711 -95.5014 258.346 43.3622 346.445C216.942 456.577 604.654 431.346 444.426 739.888C284.199 1048.44 -119.831 907.264 232.768 1183.79C585.366 1460.32 657.667 1346.34 580.471 1291.4C470.723 1213.3 383.104 1570.77 328.706 1749.95C274.308 1929.13 348.243 2089.16 203 2184.5C112.066 2244.19 58.9916 2011.13 261.427 2177.43C463.863 2343.73 293.462 2280.28 289.504 2283.75C90.4171 2391.84 777.963 2744.82 543.358 2837.58C250.102 2953.52 -28.8384 2815.31 164.523 3105.42C357.884 3395.53 819.279 2873.03 526.024 3537.19"
+                                stroke="#FF2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <!-- <img id="animatedline" src="../assets/icons/animline.svg" alt="animatedline"> -->
+
+                        <!-- item image -->
+                        <div>
+                            <a href="../pages/Epoch.html">
+                                <img src="../assets/images/Work/DESIGN.png" alt="workImage" />
+                            </a>
                             <div class="stickybutton">
                                 <a href="../pages/Epoch.html">
                                     <div id="magneticBtn">
@@ -685,22 +943,37 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- detail item -->
-                        <div class="workdetailitem">
-                            <h2>
-                                Flora
-                            </h2>
-                            <ul>
-                                <li>
-                                    <span>UX design</span>
-                                </li>
-                                <li>
-                                    <span>UI design</span>
-                                </li>
-                                <li>
-                                    <span>Web development</span>
-                                </li>
-                            </ul>
+
+                        <!-- item image -->
+                        <div>
+                            <a href="../pages/Finvault.html">
+                                <img src="../assets/images/Work/DESIGN-1.png" alt="workImage" />
+                            </a>
+                            <div class="stickybutton">
+                                <a href="../pages/Finvault.html">
+                                    <div id="magneticBtn">
+                                        <div class="my-button">
+
+                                            <div>
+                                                <div id="Btnfirst" class="Btnfirst">
+                                                    View details
+                                                </div>
+                                                <div id="Btnsecond" class="Btnsecond">
+                                                    View details
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- item image -->
+                        <div>
+                            <a href="../pages/Flora.html">
+                                <img src="../assets/images/Work/DESIGN-2.png" alt="workImage" />
+                            </a>
                             <div class="stickybutton">
                                 <a href="../pages/Flora.html">
                                     <div id="magneticBtn">
@@ -720,72 +993,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- detail item -->
-                        <div class="workdetailitem">
-                            <h2>
-                                2Modern
-                            </h2>
-                            <ul>
-                                <li>
-                                    <span>UX design</span>
-                                </li>
-                                <li>
-                                    <span>UI design</span>
-                                </li>
-                                <li>
-                                    <span>Web development</span>
-                                </li>
-                            </ul>
-                            <div class="stickybutton">
-                                <a href="../pages/2Modern.html">
-                                    <div id="magneticBtn">
-                                        <div class="my-button">
 
-                                            <div>
-                                                <div id="Btnfirst" class="Btnfirst">
-                                                    View details
-                                                </div>
-                                                <div id="Btnsecond" class="Btnsecond">
-                                                    View details
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- images scroller -->
-                <div class="workimage">
-                    <div id="imgRef">
-                        <svg id="animatedline" width="623" height="3539" viewBox="0 0 623 3539" fill="none"
-                            preserveAspectRatio="xMidYMax meet">
-                            <path id="animatedlinepath"
-                                d="M270.846 2C149.851 87.8711 -95.5014 258.346 43.3622 346.445C216.942 456.577 604.654 431.346 444.426 739.888C284.199 1048.44 -119.831 907.264 232.768 1183.79C585.366 1460.32 657.667 1346.34 580.471 1291.4C470.723 1213.3 383.104 1570.77 328.706 1749.95C274.308 1929.13 348.243 2089.16 203 2184.5C112.066 2244.19 58.9916 2011.13 261.427 2177.43C463.863 2343.73 293.462 2280.28 289.504 2283.75C90.4171 2391.84 777.963 2744.82 543.358 2837.58C250.102 2953.52 -28.8384 2815.31 164.523 3105.42C357.884 3395.53 819.279 2873.03 526.024 3537.19"
-                                stroke="#FF2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        
-                        <!-- <img id="animatedline" src="assets/icons/animline.svg" alt="animatedline"> -->
-                        <div>
-                            <a href="../pages/Epoch.html">
-                                <img src="../assets/images/Work/DESIGN.png" alt="workImage" />
-                            </a>
-                        </div>
-                        <div>
-                            <a href="../pages/Flora.html">
-                                <img src="../assets/images/Work/DESIGN-1.png" alt="workImage" />
-                            </a>
-                        </div>
-                        <div>
-                            <a href="../pages/2Modern.html">
-                                <img src="../assets/images/Work/DESIGN-2.png" alt="workImage" />
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -793,7 +1001,11 @@
             <!-- work flex for mobile -->
             <div class="workflex">
 
-                <div class="work-card">
+                <div class="head-logo">
+                    <img src="../assets/icons/largeIconOnly.svg" alt="">
+                </div>
+
+                <div class="work-card frombelowanimM">
                     <div class="work-card-head">
                         <div>
                             <h2>Epoch.</h2>
@@ -803,23 +1015,7 @@
                         </div>
                     </div>
                     <div class="work-card-img">
-                        <a href="./Epoch.html"><img src="../assets/images/Work/DESIGN.png" alt=""></a>
-                    </div>
-                    <div class="work-card-detail">
-                        <div>
-                            <ul>
-                                <li>
-                                    <span>UX design</span>
-                                </li>
-                                <li>
-                                    <span>UI design</span>
-                                </li>
-                                <li>
-                                    <span>Web development</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- sticky button -->
+                        <a href="../pages/Epoch.html"><img src="../assets/images/Work/DESIGN.png" alt=""></a>
                         <div class="stickybutton">
                             <a href="../pages/Epoch.html">
                                 <div class="magneticBtn">
@@ -835,39 +1031,104 @@
                                 </div>
                             </a>
                         </div>
+                    </div>
+                    <div class="work-card-detail">
+                        <ul>
+                            <li>
+                                <span>UX</span>
+                            </li>
+                            <li>
+                                <span>UI design</span>
+                            </li>
+                            <li>
+                                <span>Web development</span>
+                            </li>
+                        </ul>
+                        <p>
+                            They consistently set and achieve clear goals with a strong work ethic, creativity, and
+                            skillfulness,
+                            while meeting deadlines and effectively solving problems.
+                        </p>
+                        <div class="worktablet">
+                            <span></span>
+                            <div>
+                                <h2>Michael</h2>
+                                <p>Home Stylist</p>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
 
-                <div class="work-card">
+                <div class="work-card frombelowanimM">
                     <div class="work-card-head">
                         <div>
-                            <h2>Flora.</h2>
+                            <h2>Finvault.</h2>
                         </div>
                         <div>
                             <p>02</p>
                         </div>
                     </div>
                     <div class="work-card-img">
-                        <a href="./Flora.html">
+                        <a href="../pages/Finvault.html">
                             <img src="../assets/images/Work/DESIGN-1.png" alt="">
                         </a>
+                        <div class="stickybutton">
+                            <a href="../pages/Finvault.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="work-card-detail">
-                        <div>
-                            <ul>
-                                <li>
-                                    <span>UX design</span>
-                                </li>
-                                <li>
-                                    <span>UI design</span>
-                                </li>
-                                <li>
-                                    <span>Web development</span>
-                                </li>
-                            </ul>
+                        <ul>
+                            <li>
+                                <span>UX</span>
+                            </li>
+                            <li>
+                                <span>UI design</span>
+                            </li>
+                            <li>
+                                <span>Web development</span>
+                            </li>
+                        </ul>
+                        <p>
+                            Their commitment to creating a user-friendly experience has significantly enhanced our
+                            financial
+                            management processes. We are delighted with the outcome,</p>
+                        <div class="worktablet">
+                            <span></span>
+                            <div>
+                                <h2>Ethan</h2>
+                                <p>Ventures LLC</p>
+                            </div>
                         </div>
-                        <!-- sticky button -->
+
+                    </div>
+                </div>
+
+                <div class="work-card frombelowanimM">
+                    <div class="work-card-head">
+                        <div>
+                            <h2>Flora.</h2>
+                        </div>
+                        <div>
+                            <p>03</p>
+                        </div>
+                    </div>
+                    <div class="work-card-img">
+                        <a href="../pages/Flora.html">
+                            <img src="../assets/images/Work/DESIGN-2.png" alt="">
+                        </a>
                         <div class="stickybutton">
                             <a href="../pages/Flora.html">
                                 <div class="magneticBtn">
@@ -883,72 +1144,48 @@
                                 </div>
                             </a>
                         </div>
-
-                    </div>
-                </div>
-
-                <div class="work-card">
-                    <div class="work-card-head">
-                        <div>
-                            <h2>2Modern.</h2>
-                        </div>
-                        <div>
-                            <p>03</p>
-                        </div>
-                    </div>
-                    <div class="work-card-img">
-                        <a href="./2Modern.html">
-                            <img src="../assets/images/Work/DESIGN-2.png" alt="">
-                        </a>
                     </div>
                     <div class="work-card-detail">
-                        <div>
-                            <ul>
-                                <li>
-                                    <span>UX design</span>
-                                </li>
-                                <li>
-                                    <span>UI design</span>
-                                </li>
-                                <li>
-                                    <span>Web development</span>
-                                </li>
-                            </ul>
+                        <ul>
+                            <li>
+                                <span>UX</span>
+                            </li>
+                            <li>
+                                <span>UI design</span>
+                            </li>
+                            <li>
+                                <span>Web development</span>
+                            </li>
+                        </ul>
+                        <p>
+                            Their dedication, creativity, and timely delivery of the website exceeded our expectations.
+                            We're
+                            thrilled with the end result, and it beautifully reflects the essence of Flora.</p>
+                        <div class="worktablet">
+                            <span></span>
+                            <div>
+                                <h2>Olivia</h2>
+                                <p>Blossom Events</p>
+                            </div>
                         </div>
-                        <!-- sticky button -->
-                        <div class="stickybutton">
-                            <a href="../pages/2Modern.html">
-                                <div class="magneticBtn">
-                                    <div class="my-button">
-
-                                        <div>
-                                            <div class="Btnfirst">
-                                                View details
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
                     </div>
                 </div>
 
+                <div class="morework">
+                    <a href="/" class="btnRounded">
+                        <span>See All Projects</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
+                    </a>
+
+                    <img src="../assets/icons/largeIconOnly.svg" alt="">
+                </div>
             </div>
+        </div>
 
 
-            <div class="morework">
-                <a href="./portfolio.html">
-                    <div>
-                        More work
-                        <div></div>
-                    </div>
-                    <span>
-                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                    </span>
-                </a>
-            </div>
         </div>
     </section>
 
@@ -964,7 +1201,8 @@
 
                     <div>
                         <div>
-                            <div class="animicon" id="aicon-demo"></div>
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/newIcons/Clear pth to Project/Book_a_demo/Book_a_Demo.json"></lottie-player>
                         </div>
                         <div>Book a<br> Demo</div>
                     </div>
@@ -979,8 +1217,8 @@
 
                     <div>
                         <div>
-                            <div class="animicon" id="aicon-request"></div>
-                            <!-- <img src="../assets/icons/request.svg" alt="" /> -->
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/newIcons/Clear pth to Project/subsribe_Request/Subscribe_Request.json"></lottie-player>
                         </div>
                         <div>Subscribe &<br> Request</div>
                     </div>
@@ -995,8 +1233,8 @@
 
                     <div>
                         <div>
-                            <div class="animicon" id="aicon-design"></div>
-                            <!-- <img src="../assets/icons/designs.svg" alt="" /> -->
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/newIcons/Clear pth to Project/Get your design/Get_Your_Design.json"></lottie-player>
                         </div>
                         <div>Get Your<br> Designs</div>
                     </div>
@@ -1011,8 +1249,8 @@
 
                     <div>
                         <div>
-                            <div class="animicon" id="aicon-revision"></div>
-                            <!-- <img src="../assets/icons/revisions.svg" alt="" /> -->
+                            <lottie-player class="animicon" autoplay loop
+                                src="../assets/Animation/newIcons/Clear pth to Project/Revisions/Ulimited_Revisions.json"></lottie-player>
                         </div>
                         <div>Unlimited<br> Revisions</div>
                     </div>
@@ -1026,17 +1264,17 @@
         <div class="MatterWrapper">
             <div id="matterContainer" class="matterContainer">
                 <div class="dragableLabels whiteLabel">ANIMATIONS</div>
-            <div class="dragableLabels blackLabel">UX WRITING</div>
-            <div class="dragableLabels whiteLabel">DESIGN SYSTEMS</div>
-            <div class="dragableLabels blackLabel">UX DESIGN</div>
-            <div class="dragableLabels whiteLabel">USER RESEARCH</div>
-            <div class="dragableLabels blackLabel">UI GUIDELINES</div>
-            <div class="dragableLabels whiteLabel">UI DESIGN</div>
-            
+                <div class="dragableLabels blackLabel">UX WRITING</div>
+                <div class="dragableLabels whiteLabel">DESIGN SYSTEMS</div>
+                <div class="dragableLabels blackLabel">UX DESIGN</div>
+                <div class="dragableLabels whiteLabel">USER RESEARCH</div>
+                <div class="dragableLabels blackLabel">UI GUIDELINES</div>
+                <div class="dragableLabels whiteLabel">UI DESIGN</div>
+
 
             </div>
 
-            
+
             <div class="matterContainerOverlay contentCont">
                 <div class="themeheading">
                     <span class="themedot" style="background-color: #fff;"></span>
@@ -1095,109 +1333,285 @@
             </div>
 
             <div class="heading">
-                <h1>
-                    It’s better<br>
-                    with pioneers
-                </h1>
+                <div>
+                    <h1>
+                        It’s better<br>
+                        with pioneers
+                    </h1>
+                </div>
+                <div>
+                    <p>
+                        Every project we undertake is carefully crafted with a keen eye for detail and a passion for
+                        excellence. It's time to embark on an extraordinary creative adventure together!
+                    </p>
+                    <a href="/" class="btnRounded">
+                        <span>Get Free Estimates Now</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
+                    </a>
+                </div>
             </div>
 
-            <div class="discoverCardCon">
-                <div class="discoverCard frombelowanim">
-                    <div class="imageCon">
-                        <div class="iconcon">
-                            <!-- <img src="../assets/icons/request.svg" alt=""> -->
-                            <lottie-player class="animicon" autoplay loop
-                                src="../assets/Animation/DiscoverMore/Discovery/Discovery.json"></lottie-player>
-                            <!-- <div class="animicon" id="discoverMore-discovery"></div> -->
+            <div class="discoverCardConWrapper">
+                <div class="discoverCardCon" id="discoverMoreCarousel">
+                    <div class="discoverCard">
+                        <div class="imageCon">
+                            <div class="iconcon">
+                                <!-- <img src="../assets/icons/request.svg" alt=""> -->
+                                <lottie-player class="animicon" autoplay loop
+                                    src="../assets/Animation/DiscoverMore/Discovery/Discovery.json"></lottie-player>
+                                <!-- <div class="animicon" id="discoverMore-discovery"></div> -->
+                            </div>
+                            <div class="hovercon"></div>
                         </div>
-                        <div class="hovercon"></div>
+                        <div class="themeheading">
+                            <span class="themedot"></span>
+                            <span class="themetitle">Discovery</span>
+                        </div>
+                        <p>In the Discovery phase, we deeply explore your brand, learning what it stands for and what makes
+                            it unique. We use research and analysis to find insights that make your brand special.</p>
                     </div>
-                    <div class="themeheading">
-                        <span class="themedot"></span>
-                        <span class="themetitle">Discovery</span>
+                    <div class="discoverCard">
+                        <div class="imageCon">
+                            <div class="iconcon">
+                                <lottie-player class="animicon" autoplay loop
+                                    src="../assets/Animation/DiscoverMore/Meet/Meet.json"></lottie-player>
+                            </div>
+                            <div class="hovercon"></div>
+    
+                        </div>
+                        <div class="themeheading">
+                            <span class="themedot"></span>
+                            <span class="themetitle">Meet</span>
+                        </div>
+                        <p>This phase is all about connecting with you, fostering open communication, and committing to
+                            creating exceptional designs that truly represent your brand's personality.</p>
                     </div>
-                    <p>In the Discovery phase, we deeply explore your brand, learning what it stands for and what makes
-                        it unique. We use research and analysis to find insights that make your brand special.</p>
+                    <div class="discoverCard">
+                        <div class="imageCon">
+                            <div class="iconcon">
+                                <lottie-player class="animicon" autoplay loop
+                                    src="../assets/Animation/DiscoverMore/Collaboration/Colaboration.json"></lottie-player>
+                            </div>
+                            <div class="hovercon"></div>
+    
+                        </div>
+                        <div class="themeheading">
+                            <span class="themedot"></span>
+                            <span class="themetitle">Collaboration</span>
+                        </div>
+                        <p>We ensure your voice is heard at every step. Together, we enhance your vision, combining our
+                            design expertise with your brand's story to create designs that truly connect.</p>
+                    </div>
+                    <div class="discoverCard">
+                        <div class="imageCon">
+                            <div class="iconcon">
+                                <lottie-player class="animicon" autoplay loop
+                                    src="../assets/Animation/Our_Process/Design/Design_Icon_Black.json"></lottie-player>
+                            </div>
+                            <div class="hovercon"></div>
+    
+                        </div>
+                        <div class="themeheading">
+                            <span class="themedot"></span>
+                            <span class="themetitle">Design</span>
+                        </div>
+                        <p>In the Design phase, our creative talents come to life. We use our deep understanding of your
+                            brand and the insights we've gathered to create visually stunning designs.</p>
+                    </div>
+                    <div class="discoverCard">
+                        <div class="imageCon">
+                            <div class="iconcon">
+                                <lottie-player class="animicon" autoplay loop
+                                    src="../assets/Animation/Our_Process/Development/Development_Black.json"></lottie-player>
+                            </div>
+                            <div class="hovercon"></div>
+    
+                        </div>
+                        <div class="themeheading">
+                            <span class="themedot"></span>
+                            <span class="themetitle">Development</span>
+                        </div>
+                        <p>After design approval, we move on to the Development phase. Our skilled team brings the designs
+                            to life, turning them into functional and interactive experience.</p>
+                    </div>
+                    <div class="discoverCard">
+                        <div class="imageCon">
+                            <div class="iconcon">
+                                <lottie-player class="animicon" autoplay loop
+                                    src="../assets/Animation/DiscoverMore/Implement/implement.json"></lottie-player>
+                            </div>
+                            <div class="hovercon"></div>
+                        </div>
+                        <div class="themeheading">
+                            <span class="themedot"></span>
+                            <span class="themetitle">Implement</span>
+                        </div>
+                        <p>Whether it's launching a new website, refreshing your brand identity, or introducing a product,
+                            we work closely with you to ensure a smooth and impactful process.</p>
+                    </div>
                 </div>
-                <div class="discoverCard frombelowanim">
-                    <div class="imageCon">
-                        <div class="iconcon">
-                            <lottie-player class="animicon" autoplay loop
-                                src="../assets/Animation/DiscoverMore/Meet/Meet.json"></lottie-player>
-                        </div>
-                        <div class="hovercon"></div>
+            </div>
+            <div class="discoverMoreCarousel-buttons mobile">
+                <button onclick="prevDiscoverMore()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.55556 1L2 8.33333M2 8.33333L9.55555 15.6667M2 8.33333L23.5 8.33334" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+        
+                </button>
+                <button onclick="nextDiscoverMore()">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.4444 16L22 8.66667M22 8.66667L14.4444 1.33333M22 8.66667L0.5 8.66667" stroke="white"
+                      stroke-width="1.6" />
+                  </svg>
+        
+                </button>
+              </div>
 
-                    </div>
-                    <div class="themeheading">
-                        <span class="themedot"></span>
-                        <span class="themetitle">Meet</span>
-                    </div>
-                    <p>This phase is all about connecting with you, fostering open communication, and committing to
-                        creating exceptional designs that truly represent your brand's personality.</p>
-                </div>
-                <div class="discoverCard frombelowanim">
-                    <div class="imageCon">
-                        <div class="iconcon">
-                            <lottie-player class="animicon" autoplay loop
-                                src="../assets/Animation/DiscoverMore/Collaboration/Colaboration.json"></lottie-player>
-                        </div>
-                        <div class="hovercon"></div>
+        </div>
+    </section>
 
-                    </div>
-                    <div class="themeheading">
-                        <span class="themedot"></span>
-                        <span class="themetitle">Collaboration</span>
-                    </div>
-                    <p>We ensure your voice is heard at every step. Together, we enhance your vision, combining our
-                        design expertise with your brand's story to create designs that truly connect.</p>
-                </div>
-                <div class="discoverCard frombelowanim">
-                    <div class="imageCon">
-                        <div class="iconcon">
-                            <lottie-player class="animicon" autoplay loop
-                                src="../assets/Animation/Our_Process/Design/Design_Icon_Black.json"></lottie-player>
-                        </div>
-                        <div class="hovercon"></div>
+    <section class="FAQSec contentCont">
+        <div class="FAQGroup">
 
-                    </div>
-                    <div class="themeheading">
-                        <span class="themedot"></span>
-                        <span class="themetitle">Design</span>
-                    </div>
-                    <p>In the Design phase, our creative talents come to life. We use our deep understanding of your
-                        brand and the insights we've gathered to create visually stunning designs.</p>
-                </div>
-                <div class="discoverCard frombelowanim">
-                    <div class="imageCon">
-                        <div class="iconcon">
-                            <lottie-player class="animicon" autoplay loop
-                                src="../assets/Animation/Our_Process/Development/Development_Black.json"></lottie-player>
-                        </div>
-                        <div class="hovercon"></div>
+            <div class="mobile">
+                <span class="themedot"></span>
+                <span class="themetitle">General</span>
+            </div>
 
-                    </div>
-                    <div class="themeheading">
-                        <span class="themedot"></span>
-                        <span class="themetitle">Development</span>
-                    </div>
-                    <p>After design approval, we move on to the Development phase. Our skilled team brings the designs
-                        to life, turning them into functional and interactive experience.</p>
-                </div>
-                <div class="discoverCard frombelowanim">
-                    <div class="imageCon">
-                        <div class="iconcon">
-                            <lottie-player class="animicon" autoplay loop
-                                src="../assets/Animation/DiscoverMore/Implement/implement.json"></lottie-player>
+            <h1>
+                Frequently <br>
+                asked questions
+            </h1>
+            <div class="questions">
+
+                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                    <h2>
+                        01
+                    </h2>
+                    <div class="ques">
+                        <h4>
+                            What is the typical turnaround time for a design or development project?
+                        </h4>
+                        <div class="pWrapper">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley
+                            </p>
                         </div>
-                        <div class="hovercon"></div>
                     </div>
-                    <div class="themeheading">
-                        <span class="themedot"></span>
-                        <span class="themetitle">Implement</span>
+                    <div class="btnWrapper">
+                        <button id="moveBtn">
+                            <div></div>
+                            <div></div>
+                        </button>
                     </div>
-                    <p>Whether it's launching a new website, refreshing your brand identity, or introducing a product,
-                        we work closely with you to ensure a smooth and impactful process.</p>
                 </div>
+                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                    <h2>
+                        02
+                    </h2>
+                    <div class="ques">
+                        <h4>
+                            Do you have experience working in our industry or niche?
+                        </h4>
+                        <div class="pWrapper">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnWrapper">
+                        <button id="moveBtn">
+                            <div></div>
+                            <div></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                    <h2>
+                        03
+                    </h2>
+                    <div class="ques">
+                        <h4>
+                            Can you accommodate rush projects or tight deadlines?
+                        </h4>
+                        <div class="pWrapper">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnWrapper">
+                        <button id="moveBtn">
+                            <div></div>
+                            <div></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                    <h2>
+                        04
+                    </h2>
+                    <div class="ques">
+                        <h4>
+                            What types of design and development services do you offer?
+                        </h4>
+                        <div class="pWrapper">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnWrapper">
+                        <button id="moveBtn">
+                            <div></div>
+                            <div></div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+
+                    <h2>
+                        05
+                    </h2>
+                    <div class="ques">
+                        <h4>
+                            How do you handle revisions or changes during a project?
+                        </h4>
+                        <div class="pWrapper">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnWrapper">
+                        <button id="moveBtn">
+                            <div></div>
+                            <div></div>
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1220,17 +1634,16 @@
 
                 <div>
                     <p>
-                        Providing top-notch design and UI/UX skills, we help boost your business, making it more user-friendly and successful.
+                        Providing top-notch design and UI/UX skills, we help boost your business, making it more
+                        user-friendly and successful.
                     </p>
-                    <a href="/">
-                        <div>
-                          get started
-                          <div></div>
-                        </div>
+                    <a href="/" class="btnRounded">
+                        <span>Get Free Estimates Now</span>
                         <span>
-                          <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
                         </span>
-                      </a>
+                    </a>
                 </div>
             </div>
 
@@ -1244,24 +1657,9 @@
                         </div>
                     </a>
 
-                    <a href="./webDevelopment.html" class="boxCard">
+                    <a href="../brandIdentity.html" class="boxCard">
                         <div class="boxWrapper">
                             <div class="number">1</div>
-                            <div class="lable">innovation</div>
-                            <div class="arrow">
-                                <img src="../assets/icons/arrowRight.svg" alt="arrowRight" />
-                            </div>
-
-                            <div class="namea">web</div>
-                            <div class="nameb">
-                                <p>development</p>
-                                <p>development</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="./brandIdentity.html" class="boxCard">
-                        <div class="boxWrapper">
-                            <div class="number">2</div>
                             <div class="lable">distinctive</div>
                             <div class="arrow">
                                 <img src="../assets/icons/arrowRight.svg" alt="arrowRight" />
@@ -1275,6 +1673,23 @@
                         </div>
                     </a>
 
+                    <a href="../webDevelopment.html" class="boxCard">
+                        <div class="boxWrapper">
+                            <div class="number">2</div>
+                            <div class="lable">innovation</div>
+                            <div class="arrow">
+                                <img src="../assets/icons/arrowRight.svg" alt="arrowRight" />
+                            </div>
+
+                            <div class="namea">web</div>
+                            <div class="nameb">
+                                <p>development</p>
+                                <p>development</p>
+                            </div>
+                        </div>
+                    </a>
+
+
 
                 </div>
 
@@ -1283,6 +1698,87 @@
         <div class="spacer"></div>
     </section>
 
+    <section id="contactUSForm" class="contentCont contactForm stickySection">
+        <div class="contactUSFormWrapper">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Contact Us</span>
+            </div>
+
+            <div class="contactFormCon">
+                <div class="stericcon">
+                    <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
+                </div>
+                <div class="form">
+                    <form action="">
+                        <div class="double">
+                            <div class="inputcard">
+                                <div><span>01</span></div>
+                                <div>
+                                    <input name="name" type="text" placeholder="Your full name">
+                                    <label for="name">What’s your name</label>
+                                </div>
+                            </div>
+                            <div class="inputcard">
+                                <div><span>02</span></div>
+                                <div>
+                                    <input name="name" type="text" placeholder="Your email address">
+                                    <label for="name">Type your email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="double">
+                            <div class="inputcard">
+                                <div><span>03</span></div>
+                                <div>
+                                    <input name="name" type="text" placeholder="Business name">
+                                    <label for="name">Your business name</label>
+                                </div>
+                            </div>
+                            <div class="inputcard">
+                                <div><span>04</span></div>
+                                <div>
+                                    <input name="name" type="text" placeholder="Phone number">
+                                    <label for="name">What’s your phone number</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inputcard bigp">
+                            <div><span>05</span></div>
+                            <div>
+                                <input name="name" type="text" placeholder="Type whatever you want">
+                                <label for="name">Your message</label>
+                            </div>
+                        </div>
+                        <div class="btnDiv">
+                            <button class="btnRounded" style="margin-top: 0;">
+                                <span>Submit</span>
+                                <span>
+                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                                </span>
+                            </button>
+
+                            <!-- <button type="submit" class="btnArrow">
+                    <div>
+                      Submit Form
+                      <div></div>
+                    </div>
+                    <span>
+                      <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                    </span>
+                  </button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="spacer">
+        </div>
+    </section>
 
     <section id="footer">
         <section id="ideasSec">
@@ -1291,80 +1787,85 @@
 
                 <div class="animated-head">
 
-                    <h1>Let’s turn your<br>
-                        idea into reality</h1>
                     <div>
-                        <svg width="663" height="283" viewBox="0 0 663 283" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="Frame 1000003707">
-                                <path id="Ellipse 1228"
-                                    d="M565.886 97.6308C568.123 109.835 563.977 122.775 554.226 135.808C544.474 148.843 529.205 161.84 509.502 174.048C470.105 198.46 413.258 219.545 348.304 231.45C283.349 243.356 222.719 243.803 177.226 234.952C154.474 230.525 135.587 223.788 121.846 215.059C108.108 206.332 99.6412 195.704 97.4043 183.499C95.1674 171.295 99.3139 158.355 109.064 145.322C118.816 132.288 134.085 119.29 153.788 107.082C193.185 82.6705 250.032 61.5855 314.987 49.6799C379.942 37.7743 440.571 37.3268 486.065 46.1783C508.817 50.605 527.703 57.3422 541.444 66.0708C555.183 74.7982 563.649 85.4265 565.886 97.6308Z"
-                                    stroke="#EAEAEA" stroke-width="3"></path>
-                                <path id="*"
-                                    d="M314.452 232.835L302.087 225.678L308.151 215.93L319.981 222.567C326.857 226.381 330.512 229.377 334.255 233.018C333.989 227.729 334.296 222.759 335.634 215.679L338.273 201.721L349.684 203.878L347.045 217.836C345.706 224.916 343.897 230.022 341.998 234.482C346.775 232.661 351.309 231.004 358.9 229.925L372.578 227.902L374.83 239.432L360.502 241.542C353.319 242.698 347.868 242.506 343.067 242.226C346.657 246.677 349.102 250.491 351.826 257.292L357.631 270.123L347.034 274.824L341.191 262.195C338.059 255.318 336.697 250.241 335.667 245.646C333.119 250.193 329.998 254.422 324.89 259.113L314.635 268.698L306.283 260.414L316.371 250.588C321.798 245.329 325.912 242.545 330.433 239.838C324.474 237.873 319.94 236.178 314.452 232.835Z"
-                                    fill="#FF2626"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                                <circle id="Ellipse 1229" cx="270.001" cy="62.1572" r="15.9552"
-                                    transform="rotate(10.7066 270.001 62.1572)" fill="#FF2626"
-                                    style="transform: translate(0px, 0px) rotate(10.7066deg) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </circle>
-                                <path id="Vector"
-                                    d="M141.509 182.705L153.03 184.883C148.049 211.221 143.075 237.561 138.088 263.897L126.571 261.719C127.946 254.435 129.326 247.152 130.701 239.867C127.035 243.135 123.088 246.067 119.05 248.848C115.205 251.48 111.27 253.983 107.24 256.319C104.831 252.792 102.422 249.264 100.013 245.736C104.425 242.38 108.988 239.225 113.68 236.278C117.784 233.721 121.994 231.308 126.423 229.366C128.396 228.509 130.418 227.749 132.505 227.228C129.62 227.32 126.733 227.175 123.86 226.923C119.932 226.571 116.027 226.01 112.143 225.333C108.064 224.615 104.006 223.781 99.9837 222.796L102.363 210.212C105.57 210.576 108.764 211.045 111.948 211.58C116.233 212.306 120.499 213.164 124.709 214.249C127.853 215.065 130.973 216.002 133.994 217.204C131.915 215.658 130.055 213.837 128.294 211.938C125.588 209 123.124 205.844 120.777 202.61C117.325 197.822 114.11 192.861 111.134 187.759C114.664 185.352 118.195 182.948 121.727 180.544C125.259 185.179 128.579 189.979 131.66 194.93C133.693 198.215 135.614 201.574 137.281 205.064C138.692 197.612 140.1 190.158 141.509 182.705Z"
-                                    fill="#EAEAEA"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                                <path id="Vector_2"
-                                    d="M507.515 32.3699L547.499 39.9297L538.87 85.565C532.984 84.4535 527.097 83.3406 521.211 82.2284C520.79 84.4712 520.35 86.7097 519.947 88.956C519.707 90.4817 519.563 92.0842 520.026 93.5821C520.344 94.6792 521.131 95.5995 522.102 96.1727C523.226 96.8352 524.503 97.1711 525.773 97.4214C529.266 98.0841 532.761 98.7379 536.253 99.406L532.58 118.834C529.859 118.322 527.14 117.806 524.42 117.293C522.548 116.928 520.665 116.617 518.81 116.169C514.693 115.183 510.655 113.672 507.117 111.308C503.352 108.831 500.285 105.216 498.675 100.967C497.041 96.7579 496.765 92.1312 497.217 87.6655C497.365 86.0818 497.64 84.515 497.95 82.9564C501.139 66.0942 504.327 49.2321 507.515 32.3699Z"
-                                    fill="#EAEAEA"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                            </g>
-                        </svg>
+                        <span class="themedot light"></span>
+                        <span class="themetitle">Let’s get started</span>
                     </div>
+
+                    <h1>Let’s turn your idea into reality</h1>
                 </div>
 
 
                 <div class="ideasproducts">
-                    <p>Designed Products across various Industries Fintech • Healthcare • SASS • <span
-                            style="display: inline-block;">E-commerce</span> • Retail • Realestate
+                    <p>Designed Products across various Industries</p>
+                    <p>Fintech • Healthcare • SASS • <span style="display: inline-block;">E-commerce</span> • Retail •
+                        Real estate
                     </p>
 
                     <div class="tabsflex">
-                        <a href="../pages/portfolio.html" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Work</div>
-                                <div class="hiddenTag">Work</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
-
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Process</div>
-                                <div class="hiddenTag">Process</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
                         <a href="../pages/aboutUs.html" class="LinkhoverGroup">
                             <div>
-                                <div class="visibleTag">About</div>
-                                <div class="hiddenTag">About</div>
+                                <div class="visibleTag">About Us</div>
+                                <div class="hiddenTag">About Us</div>
                             </div>
 
                             <div>
                                 <img class="visibleTag" src="../assets/icons/link.svg" alt="">
                                 <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
                             </div>
-                        </a><a href="/" class="LinkhoverGroup">
+                        </a>
+
+
+                        <a href="../pages/brandIdentity.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Services</div>
+                                <div class="hiddenTag">Services</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+
+                        </a>
+
+                        <a href="../pages/portfolio.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Portfolio</div>
+                                <div class="hiddenTag">Portfolio</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/contactUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Contact</div>
+                                <div class="hiddenTag">Contact</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/unseenJourney.html" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Stories</div>
+                                <div class="hiddenTag">Stories</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="#pricingSec" class="LinkhoverGroup mob-only smoothScroller">
                             <div>
                                 <div class="visibleTag">Plans</div>
                                 <div class="hiddenTag">Plans</div>
@@ -1376,10 +1877,11 @@
                             </div>
                         </a>
 
-                        </a><a href="../pages/contactUs.html" class="LinkhoverGroup mob-only">
+
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup mob-only">
                             <div>
-                                <div class="visibleTag">Contact Us</div>
-                                <div class="hiddenTag">Contact Us</div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
                             </div>
 
                             <div>
@@ -1388,25 +1890,14 @@
                             </div>
                         </a>
 
-                        </a><a href="/" class="LinkhoverGroup mob-only">
-                            <div>
-                                <div class="visibleTag">Services</div>
-                                <div class="hiddenTag">Services</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
 
                     </div>
 
                     <div class="tabsflex">
-                        </a><a href="../pages/contactUs.html" class="LinkhoverGroup">
+                        <a href="#pricingSec" class="LinkhoverGroup smoothScroller">
                             <div>
-                                <div class="visibleTag">Contact Us</div>
-                                <div class="hiddenTag">Contact Us</div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
                             </div>
 
                             <div>
@@ -1415,10 +1906,10 @@
                             </div>
                         </a>
 
-                        </a><a href="/" class="LinkhoverGroup">
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup">
                             <div>
-                                <div class="visibleTag">Services</div>
-                                <div class="hiddenTag">Services</div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
                             </div>
 
                             <div>
@@ -1426,7 +1917,21 @@
                                 <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
                             </div>
                         </a>
+
+                        <a href="../pages/unseenJourney.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Stories</div>
+                                <div class="hiddenTag">Stories</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
                     </div>
+
                 </div>
             </div>
 
@@ -1464,7 +1969,7 @@
                     <h1>Reach Us</h1>
                     <p><img src="../assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
                     <p><img src="../assets/icons/pk.svg" alt=""> +92 8754 3864</p>
-                    <a href="/" class="LinkhoverGroup psize">
+                    <a href="/" class="LinkhoverGroup">
                         <div>
                             <div class="visibleTag">business@webpioneers.com</div>
                             <div class="hiddenTag">business@webpioneers.com</div>
@@ -1514,7 +2019,7 @@
                 <div>
                     <div>
                         <h1>Quick</h1>
-                        <a href="/" class="LinkhoverGroup">
+                        <a href="#pricingSec" class="LinkhoverGroup smoothScroller">
                             <div>
                                 <div class="visibleTag">Pricing</div>
                                 <div class="hiddenTag">Pricing</div>
@@ -1581,7 +2086,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-           // Store the initial window width
+            // Store the initial window width
             var initialWidth = window.innerWidth;
 
             // Attach the reload function to the window's resize event
@@ -1628,8 +2133,11 @@
                 "../scripts/animated/Dragable.js",
                 "../scripts/stickyButton.js",
                 "../scripts/pages/UIUX.js",
+                "../scripts/FAQ.js",
+                "../scripts/FAQHover.js",
                 "../scripts/pages/work3.js",
                 "../scripts/pages/lessBoxes.js",
+                "../scripts/pages/contactSteric.js",
                 "../scripts/ideas.js",
             ];
 

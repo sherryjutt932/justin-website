@@ -9,12 +9,13 @@ var paddingBottom = parseInt(
   10
 );
 
-var uls = uiuxConElement.getElementsByTagName("li");
-console.log(uls);
+var uls = Array.from(uiuxConElement.getElementsByTagName("li"));
+var ulCTA = document.getElementById("ulCTA");
+uls.push(ulCTA);
 
 gsap.set(uls, {
   opacity: 0,
-});
+}); 
 
 function calculateDistance() {
   var box1Bottom = animCircle.getBoundingClientRect().bottom;
@@ -23,30 +24,33 @@ function calculateDistance() {
   return distance;
 }
 
-if (!isMobile()) {
+if(!isMobile()){
   gsap.timeline().to("#animCircle", {
     rotate: 180,
     ease: "none",
     scrollTrigger: {
       trigger: "#unseenStories",
       start: `${window.innerWidth > 1536 ? "140px" : "110px"} top`,
-      end: "+=1000",
+      end: "+=500",
       scrub: true,
       pin: true,
       onUpdate: (self) => {
         const progress = self.progress;
-        if (progress >= 0 && progress < 0.5) {
-          gsap.to(uls[0], {
-            opacity: progress * 2, // Map progress from 0 to 0.5
-          });
+    
+        if (progress >= 0 && progress < 1/3) {
+            gsap.to(uls[0], {
+                opacity: progress * 3, // Map progress from 0 to 1/3
+            });
+        } else if (progress >= 1/3 && progress < 2/3) {
+            gsap.to(uls[1], {
+                opacity: (progress - 1/3) * 3, // Map progress from 1/3 to 2/3
+            });
+        } else if (progress >= 2/3 && progress <= 1) {
+            gsap.to(uls[2], {
+                opacity: (progress - 2/3) * 3, // Map progress from 2/3 to 1
+            });
         }
-
-        if (progress >= 0.5 && progress <= 1) {
-          gsap.to(uls[1], {
-            opacity: (progress - 0.5) * 2, // Map progress from 0.5 to 1
-          });
-        }
-      },
+    },
     },
   });
 
@@ -134,7 +138,7 @@ if (!isMobile()) {
     pin: true,
     animation: digitalDesignTimeline,
   });
-} else {
+}else{
   gsap.timeline().to("#animCircle", {
     rotate: 180,
     ease: "none",
@@ -142,20 +146,25 @@ if (!isMobile()) {
       trigger: "#unseenStories",
       start: "30% center",
       end: "30% top",
+
       onUpdate: (self) => {
         const progress = self.progress;
-        if (progress >= 0 && progress < 0.5) {
-          gsap.to(uls[0], {
-            opacity: progress * 2, // Map progress from 0 to 0.5
-          });
+    
+        if (progress >= 0 && progress < 1/3) {
+            gsap.to(uls[0], {
+                opacity: progress * 3, // Map progress from 0 to 1/3
+            });
+        } else if (progress >= 1/3 && progress < 2/3) {
+            gsap.to(uls[1], {
+                opacity: (progress - 1/3) * 3, // Map progress from 1/3 to 2/3
+            });
+        } else if (progress >= 2/3 && progress <= 1) {
+            gsap.to(uls[2], {
+                opacity: (progress - 2/3) * 3, // Map progress from 2/3 to 1
+            });
         }
-
-        if (progress >= 0.5 && progress <= 1) {
-          gsap.to(uls[1], {
-            opacity: (progress - 0.5) * 2, // Map progress from 0.5 to 1
-          });
-        }
-      },
+    },
+    
       scrub: true,
     },
   });
@@ -247,4 +256,84 @@ function activeChange() {
 }
 function deactiveChange() {
   digitalDesign.classList.remove("active");
+}
+
+
+
+let discoverMoreCurrentIndex = 0;
+const discoverMoreCarousel = document.querySelector("#discoverMoreCarousel");
+const discoverMoreCards = Array.from(discoverMoreCarousel.children);
+const totaldiscoverMoreCards = discoverMoreCards.length;
+const discoverMoreCardWidth = discoverMoreCards[0].offsetWidth + 20; // Adjusted to offsetWidth
+
+
+if(isMobile()){
+  var discoverMoreSliderPosition = 0;
+  
+  discoverMoreCards.forEach(item => {
+    item.addEventListener("touchmove",(e)=>{
+      let mouseX = e.touches[0].clientX;
+      let totalChange = discoverMoreSliderPosition-mouseX;
+  
+        if(totalChange > -100 && totalChange<100){
+          gsap.to(
+            discoverMoreCarousel,0,{
+                x:-totalChange,
+              }
+            );
+        };
+    });
+    item.addEventListener("touchstart",(e)=>{
+      let mouseX = e.touches[0].clientX;
+      discoverMoreSliderPosition = mouseX;
+    });
+    item.addEventListener("touchend",(e)=>{
+      let mouseX = e.changedTouches[0].clientX;
+      let totalChange = discoverMoreSliderPosition-mouseX;
+      gsap.to(
+        discoverMoreCarousel,.2,{
+            x:0,
+          }
+        );
+      if(totalChange > 100){
+        nextDiscoverMore();
+      }
+      else if(totalChange<-100){
+        prevDiscoverMore();
+      }
+      discoverMoreSliderPosition = 0;
+    });
+  });
+  
+  function nextDiscoverMore() {
+    if (discoverMoreCurrentIndex < totaldiscoverMoreCards - 1) {
+      discoverMoreCurrentIndex++;
+      discoverMoreCards.forEach((card, index) => {
+        card.style.transform = `translateX(-${discoverMoreCurrentIndex * discoverMoreCardWidth}px)`;
+        // gsap.to(
+        //   card,{
+        //     x:()=>`-${discoverMoreCurrentIndex * width}px`,
+        //   }
+        // );
+  
+      });
+    }
+  }
+  
+  function prevDiscoverMore() {
+    if (discoverMoreCurrentIndex > 0) {
+      discoverMoreCurrentIndex--;
+      discoverMoreCards.forEach((card, index) => {
+        card.style.transform = `translateX(-${discoverMoreCurrentIndex * discoverMoreCardWidth}px)`;
+        // gsap.to(
+        //   card,{
+        //     x:()=>`-${discoverMoreCurrentIndex * width}px`,
+        //   }
+        // );
+      });
+    }
+  }
+  
+  
+  
 }
