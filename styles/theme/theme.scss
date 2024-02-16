@@ -212,6 +212,40 @@
   }
 }
 
+#GetInTouchSec{
+  margin-bottom: -100vh;
+  .GetInTouch{
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 100px;
+    margin: 100px 0;
+    text-align: center;
+    border-radius: 12px;
+    padding-bottom: 60px;
+    gap: 15px;
+
+    p{
+      font-size: 24px;
+      line-height: 36px;
+      font-family: var(--SatoshiR);
+      font-weight: 300;
+    }
+
+    h1{
+      font-weight: 400;
+      font-size: 80px;
+      line-height: 95px;
+      font-family: var(--NohemiL);
+    }
+  }
+  .spacer{
+    height: 100vh;
+  }
+}
+
 @media (max-width: 1700px) {
   .ThemeButton {
     font-size: 14px;
@@ -248,9 +282,26 @@
       }
     }
   }
+
+  #GetInTouchSec{
+    .GetInTouch{
+      border-radius: 8px;
+      padding-bottom: 44px;
+      gap: 10px;
+      p{
+        font-size: 18px;
+        line-height: 27px;
+      }
+      h1{
+        font-size: 60px;
+        line-height: 71px;
+      }
+    }
+   
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 501px)  {
   .btnRounded {
     padding: 10px 14px;
     gap: 8px;
@@ -263,6 +314,30 @@
         height: 9px;
       }
     }
+  }
+
+  #GetInTouchSec{
+    margin-bottom: 0;
+    .GetInTouch{
+      border-radius: 8px;
+      padding-bottom: 30px;
+      gap: 8px;
+      top: 0px;
+      position: static;
+      margin: 70px 0;
+      p{
+        font-size: 13px;
+        line-height: 20px;
+      }
+      h1{
+        font-size: 42px;
+        line-height: 50px;
+      }
+    }
+    .spacer{
+      height: 0px;
+    }
+   
   }
 }
 
@@ -277,6 +352,29 @@
       img {
         width: 11px;
         height: 11px;
+      }
+    }
+  }
+
+  #GetInTouchSec{
+    .GetInTouch{
+      align-items: flex-start;
+      top: 60px;
+      margin: 60px 0;
+      text-align: left;
+      border-radius: 8px;
+      padding-bottom: 30px;
+      gap: 15px;
+  
+      p{
+        font-size: 16px;
+        line-height: 27px;
+      }
+  
+      h1{
+        font-size: 36px;
+        line-height: 41px;
+        font-family: var(--SatoshiR);
       }
     }
   }

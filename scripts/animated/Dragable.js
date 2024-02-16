@@ -150,5 +150,7 @@ function setup() {
   shouldRunFlag = false;
 }
 
-initMatterJS();
+setTimeout(() => {
+  initMatterJS();
 setup();
+}, 50);

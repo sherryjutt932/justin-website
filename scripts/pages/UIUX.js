@@ -15,7 +15,7 @@ uls.push(ulCTA);
 
 gsap.set(uls, {
   opacity: 0,
-}); 
+});
 
 function calculateDistance() {
   var box1Bottom = animCircle.getBoundingClientRect().bottom;
@@ -24,7 +24,7 @@ function calculateDistance() {
   return distance;
 }
 
-if(!isMobile()){
+if (!isMobile() && !isTab()) {
   gsap.timeline().to("#animCircle", {
     rotate: 180,
     ease: "none",
@@ -36,21 +36,43 @@ if(!isMobile()){
       pin: true,
       onUpdate: (self) => {
         const progress = self.progress;
-    
-        if (progress >= 0 && progress < 1/3) {
+        const direction = self.direction;
+
+        if (direction === 1) {
+          // Scrolling down
+          if (progress < 1 / 3) {
             gsap.to(uls[0], {
-                opacity: progress * 3, // Map progress from 0 to 1/3
+              opacity: Math.round(progress * 3), // Map progress from 0 to 1/3
             });
-        } else if (progress >= 1/3 && progress < 2/3) {
+          }
+          if (progress >= 1 / 3 && progress < 2 / 3) {
             gsap.to(uls[1], {
-                opacity: (progress - 1/3) * 3, // Map progress from 1/3 to 2/3
+              opacity: Math.round((progress - 1 / 3) * 3), // Map progress from 1/3 to 2/3
             });
-        } else if (progress >= 2/3 && progress <= 1) {
+          }
+          if (progress >= 2 / 3) {
             gsap.to(uls[2], {
-                opacity: (progress - 2/3) * 3, // Map progress from 2/3 to 1
+              opacity: Math.round((progress - 2 / 3) * 3), // Map progress from 2/3 to 1
             });
+          }
+        } else if (direction === -1) {
+          if (progress < 1 / 3) {
+            gsap.to(uls[0], {
+              opacity: Math.round(progress * 3), // Map progress from 0 to 1/3
+            });
+          }
+          if (progress >= 1 / 3 && progress < 2 / 3) {
+            gsap.to(uls[1], {
+              opacity: Math.round((progress - 1 / 3) * 3), // Map progress from 1/3 to 2/3
+            });
+          }
+          if (progress >= 2 / 3) {
+            gsap.to(uls[2], {
+              opacity: Math.round((progress - 2 / 3) * 3), // Map progress from 2/3 to 1
+            });
+          }
         }
-    },
+      },
     },
   });
 
@@ -70,8 +92,8 @@ if(!isMobile()){
       ease: "none",
       onComplete: () => {
         digitalDesign.classList.add("activeBlack");
-        document.getElementById("AnimDot1").style.opacity=0;
-        document.getElementById("AnimDot2").style.opacity=0;
+        document.getElementById("AnimDot1").style.opacity = 0;
+        document.getElementById("AnimDot2").style.opacity = 0;
       },
     },
     "a"
@@ -84,8 +106,8 @@ if(!isMobile()){
     scrub: true,
     animation: UIUXTimeline,
     onEnterBack: () => {
-      document.getElementById("AnimDot1").style.opacity=1;
-      document.getElementById("AnimDot2").style.opacity=1;
+      document.getElementById("AnimDot1").style.opacity = 1;
+      document.getElementById("AnimDot2").style.opacity = 1;
       digitalDesign.classList.remove("activeBlack");
     },
   });
@@ -138,7 +160,7 @@ if(!isMobile()){
     pin: true,
     animation: digitalDesignTimeline,
   });
-}else{
+} else if (isMobile()) {
   gsap.timeline().to("#animCircle", {
     rotate: 180,
     ease: "none",
@@ -149,22 +171,22 @@ if(!isMobile()){
 
       onUpdate: (self) => {
         const progress = self.progress;
-    
-        if (progress >= 0 && progress < 1/3) {
-            gsap.to(uls[0], {
-                opacity: progress * 3, // Map progress from 0 to 1/3
-            });
-        } else if (progress >= 1/3 && progress < 2/3) {
-            gsap.to(uls[1], {
-                opacity: (progress - 1/3) * 3, // Map progress from 1/3 to 2/3
-            });
-        } else if (progress >= 2/3 && progress <= 1) {
-            gsap.to(uls[2], {
-                opacity: (progress - 2/3) * 3, // Map progress from 2/3 to 1
-            });
+
+        if (progress >= 0 && progress < 1 / 3) {
+          gsap.to(uls[0], {
+            opacity: progress * 3, // Map progress from 0 to 1/3
+          });
+        } else if (progress >= 1 / 3 && progress < 2 / 3) {
+          gsap.to(uls[1], {
+            opacity: (progress - 1 / 3) * 3, // Map progress from 1/3 to 2/3
+          });
+        } else if (progress >= 2 / 3 && progress <= 1) {
+          gsap.to(uls[2], {
+            opacity: (progress - 2 / 3) * 3, // Map progress from 2/3 to 1
+          });
         }
-    },
-    
+      },
+
       scrub: true,
     },
   });
@@ -212,7 +234,7 @@ if(!isMobile()){
         digitalDesignTimeline.to(
           child,
           {
-            yPercent: (-92 * (j )),
+            yPercent: -92 * j,
             ease: "none",
           },
           j + "unique"
@@ -249,6 +271,11 @@ if(!isMobile()){
     pin: true,
     animation: digitalDesignTimeline,
   });
+} else {
+  gsap.to(uls, {
+    opacity: 1,
+    duration: 0,
+  });
 }
 
 function activeChange() {
@@ -258,73 +285,68 @@ function deactiveChange() {
   digitalDesign.classList.remove("active");
 }
 
-
-
 let discoverMoreCurrentIndex = 0;
 const discoverMoreCarousel = document.querySelector("#discoverMoreCarousel");
 const discoverMoreCards = Array.from(discoverMoreCarousel.children);
 const totaldiscoverMoreCards = discoverMoreCards.length;
 const discoverMoreCardWidth = discoverMoreCards[0].offsetWidth + 20; // Adjusted to offsetWidth
 
-
-if(isMobile()){
+if (isMobile()) {
   var discoverMoreSliderPosition = 0;
-  
-  discoverMoreCards.forEach(item => {
-    item.addEventListener("touchmove",(e)=>{
+
+  discoverMoreCards.forEach((item) => {
+    item.addEventListener("touchmove", (e) => {
       let mouseX = e.touches[0].clientX;
-      let totalChange = discoverMoreSliderPosition-mouseX;
-  
-        if(totalChange > -100 && totalChange<100){
-          gsap.to(
-            discoverMoreCarousel,0,{
-                x:-totalChange,
-              }
-            );
-        };
+      let totalChange = discoverMoreSliderPosition - mouseX;
+
+      if (totalChange > -100 && totalChange < 100) {
+        gsap.to(discoverMoreCarousel, 0, {
+          x: -totalChange,
+        });
+      }
     });
-    item.addEventListener("touchstart",(e)=>{
+    item.addEventListener("touchstart", (e) => {
       let mouseX = e.touches[0].clientX;
       discoverMoreSliderPosition = mouseX;
     });
-    item.addEventListener("touchend",(e)=>{
+    item.addEventListener("touchend", (e) => {
       let mouseX = e.changedTouches[0].clientX;
-      let totalChange = discoverMoreSliderPosition-mouseX;
-      gsap.to(
-        discoverMoreCarousel,.2,{
-            x:0,
-          }
-        );
-      if(totalChange > 100){
+      let totalChange = discoverMoreSliderPosition - mouseX;
+      gsap.to(discoverMoreCarousel, 0.2, {
+        x: 0,
+      });
+      if (totalChange > 100) {
         nextDiscoverMore();
-      }
-      else if(totalChange<-100){
+      } else if (totalChange < -100) {
         prevDiscoverMore();
       }
       discoverMoreSliderPosition = 0;
     });
   });
-  
+
   function nextDiscoverMore() {
     if (discoverMoreCurrentIndex < totaldiscoverMoreCards - 1) {
       discoverMoreCurrentIndex++;
       discoverMoreCards.forEach((card, index) => {
-        card.style.transform = `translateX(-${discoverMoreCurrentIndex * discoverMoreCardWidth}px)`;
+        card.style.transform = `translateX(-${
+          discoverMoreCurrentIndex * discoverMoreCardWidth
+        }px)`;
         // gsap.to(
         //   card,{
         //     x:()=>`-${discoverMoreCurrentIndex * width}px`,
         //   }
         // );
-  
       });
     }
   }
-  
+
   function prevDiscoverMore() {
     if (discoverMoreCurrentIndex > 0) {
       discoverMoreCurrentIndex--;
       discoverMoreCards.forEach((card, index) => {
-        card.style.transform = `translateX(-${discoverMoreCurrentIndex * discoverMoreCardWidth}px)`;
+        card.style.transform = `translateX(-${
+          discoverMoreCurrentIndex * discoverMoreCardWidth
+        }px)`;
         // gsap.to(
         //   card,{
         //     x:()=>`-${discoverMoreCurrentIndex * width}px`,
@@ -333,7 +355,4 @@ if(isMobile()){
       });
     }
   }
-  
-  
-  
 }
