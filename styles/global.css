@@ -4,12 +4,14 @@
   --NohemiEL: 'Nohemi-ExtraLight';
   --NohemiL: 'Nohemi-Light';
   --Nohemi: 'Nohemi-Regular';
+  --NohemiR: 'Nohemi-Regular';
   --NohemiM: 'Nohemi-Medium';
   --NohemiB: 'Nohemi-Bold';
   --NohemiSB: 'Nohemi-SemiBold';
   --NohemiBL: 'Nohemi-Black';
   --SatoshiL: 'Satoshi-Light';
   --Satoshi: 'Satoshi-Regular';
+  --SatoshiR: 'Satoshi-Regular';
   --SatoshiM: 'Satoshi-Medium';
   --SatoshiB: 'Satoshi-Bold';
   --SatoshiBL: 'Satoshi-Black';
@@ -44,7 +46,7 @@
 html{
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 html{

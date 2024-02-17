@@ -91,6 +91,8 @@
         margin-top: 90px;
         overflow: hidden;
         width: 100%;
+        border-radius: 12px;
+
 
         &:nth-child(1) {
           max-width: 824px;
@@ -105,6 +107,7 @@
           width: 100%;
           height: auto;
           object-fit: cover;
+
         }
       }
     }
@@ -134,7 +137,8 @@
           margin-bottom: 25px;
         }
         p {
-          color: var(--gray-5e);
+          color: var(--gray-2f);
+          font-family: var(--Satoshi);
           font-size: 22px;
           font-style: normal;
           font-weight: 500;
@@ -292,6 +296,7 @@
         max-width: 800px;
         max-height: 693px;
         width: 100%;
+        border-radius: 12px;  
         overflow: hidden;
         img {
           display: block;
@@ -305,23 +310,32 @@
 }
 
 #aboutUsSkills {
-  background-color: var(--dark);
+  background-color: #e2e2e2;
   display: flex;
+
+  #labelsCon {
+    & > div {
+      #labelsRef {
+        .label {
+  
+          &[data-theme="light"]:hover,
+          &[data-theme="dark"] {
+            border: 1px dashed var(--dark);
+            background-color: var(--main);
+            color: var(--dark);
+          }
+        }
+      }
+    }
+  }
 }
 
 #aboutUsDiscoverMore {
-  padding-bottom: 120px;
   height: fit-content;
   position: relative;
-  margin-bottom: -100vh;
-
-  .spacer {
-    height: 100vh;
-  }
 
   .discoverMoreWrapper {
-    position: sticky;
-    top: -100%;
+    position: static;
     height: fit-content;
 
     .heading {
@@ -431,5 +445,88 @@
         }
       }
     }
+  }
+}
+
+#darkBoxesSec {
+  width: 100%;
+  height: fit-content;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+
+  .boxList {
+    display: flex;
+    width: 100%;
+    .Box_Item {
+      flex: 1;
+      padding: 20px 0;
+      aspect-ratio: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      border-right: 1px solid #4c4c4c;
+      border-top: 1px solid #4c4c4c;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #141414;
+      }
+
+      &:last-of-type {
+        border-right: none;
+      }
+
+      h2 {
+        color: #fff;
+        font-family: var(--Satoshi);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      p {
+        color: var(--gray-97);
+        font-family: var(--SatoshiM);
+        font-size: 22px;
+        font-style: normal;
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 24px; /* 109.091% */
+      }
+    }
+  }
+
+  .dragableLabels {
+    position: absolute;
+    left: -50vw;
+    white-space: nowrap;
+    border-radius: 200px;
+    color: #fff;
+    text-align: center;
+    font-family: var(--Satoshi);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 109.091% */
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .whiteLabel {
+    background-color: #fff;
+    border: 1px dashed #000;
+    color: #000;
+  }
+  .blackLabel {
+    background-color: #000;
+    border: 1px dashed #fff;
+    color: #fff;
   }
 }

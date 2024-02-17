@@ -148,17 +148,10 @@
   }
 
   #aboutUsDiscoverMore {
-    padding-bottom: 120px;
     height: fit-content;
     position: relative;
-    margin-bottom: -100vh;
-
-    .spacer {
-      height: 97vh;
-    }
 
     .discoverMoreWrapper {
-      position: sticky;
       height: fit-content;
 
       .heading {
@@ -261,6 +254,35 @@
           }
         }
       }
+    }
+  }
+
+  #darkBoxesSec {
+    .boxList {
+      height: 320px;
+      flex-wrap: wrap;
+      .Box_Item {
+        flex: 1 1 45%;
+        gap: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        aspect-ratio: unset;
+        h2 {
+          font-size: 25px;
+          line-height: normal;
+        }
+        p {
+          font-family: var(--Satoshi);
+          font-size: 14px;
+          line-height: 18px; /* 109.091% */
+        }
+      }
+    }
+
+    .dragableLabels {
+      font-size: 14px;
+      line-height: 16px; /* 109.091% */
+      padding: 12px 22px;
     }
   }
 }

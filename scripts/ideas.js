@@ -29,10 +29,10 @@ else{
 
 ScrollTrigger.create({
     trigger: ideasSec,
-    start: "bottom bottom",
+    start: "top top",
     end: "+=400",
     scrub: 1,
-    marker:true,
+    marker: false,
     animation:ideasanim,
   });
 

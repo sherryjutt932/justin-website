@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
     <link rel="stylesheet" href="../styles/ideas/ideas.css">
     <link rel="stylesheet" href="../styles/contactUs/contactUs.css">
+    <link rel="stylesheet" href="../styles/theme/theme.css">
     <link rel="stylesheet" href="../styles/FAQ/FAQ.css">
 
     <!-- packages -->
@@ -38,17 +39,17 @@
                 <nav>
                     <div class="logoimg">
                         <div class="desk">
-                            <a href="/">
+                            <a href="../index.html">
                                 <lottie-player class="logoanim"
                                     src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
                             </a>
                         </div>
-                        <a href="/">
-                            <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+                        <a class="mob" href="../index.html">
+                            <img src="./assets/icons/mainlogo.svg" alt="">
                         </a>
                     </div>
                     <div>
-                        <a href="/" class="nav-link non-mousetracker">
+                        <a href="../index.html" class="nav-link non-mousetracker">
                             <div class="text">Home</div>
                             <div class="textbg">Home</div>
                         </a>
@@ -63,7 +64,7 @@
                             <div class="textbg">About Us</div>
                         </a>
                         <!-- nav link -->
-                        <a href="/" class="nav-link non-mousetracker">
+                        <a href="../index.html" class="nav-link non-mousetracker smoothScroller">
                             <div class="text">Pricing</div>
                             <div class="textbg">Pricing</div>
                         </a>
@@ -97,7 +98,7 @@
                                 <div class="textbg">Stories</div>
                             </div>
                         </a>
-                        <a href="/" class="nav-link">
+                        <a href="../index.html" class="nav-link smoothScroller">
                             <div class="non-mousetracker">
                                 <div class="text">Pricing</div>
                                 <div class="textbg">Pricing</div>
@@ -148,10 +149,40 @@
                     </div>
                 </div>
 
+                <div class="tabValue">
+                    <div>
+
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">Let's Start!</span>
+                        </div>
+                        <h1>
+                            Get started with <br>
+                            Pioneers
+                        </h1>
+                        <p>
+                            Our top priority is to provide exceptional support to our clients throughout their entire
+                            project journey.
+                        </p>
+                        <a href="./contactUs.html" class="btnRounded">
+                            <span>Get Free Estimates Now</span>
+                            <span>
+                                <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                                <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <div>
+                        <img src="../assets/icons/largeIconOnly.svg" alt="">
+                    </div>
+                </div>
+
                 <div class="footer">
                     <div class="border-top"></div>
                     <!-- <div class="creator">Made by Xaib</div> -->
-                    <a href="/" class="LinkhoverGroup creator" style="cursor: unset;">
+                    <a class="LinkhoverGroup creator" style="cursor: unset;">
                         <div class="textonly">
                             <div class="visibleTag">Made by Xaib</div>
                             <div class="hiddenTag">Made by Xaib</div>
@@ -187,7 +218,7 @@
         </div>
     </section>
 
-    <section id="aboutUsHeader" class="contentCont contactUsHeader">
+    <section id="ThemePageHeader" class="contentCont herosection">
         <nav>
             <div class="logoimg">
                 <div class="desk">
@@ -207,7 +238,7 @@
                     <div class="textbg">Home</div>
                 </a>
                 <!-- nav link -->
-                <a href="./portfolio.html" class="nav-link non-mousetracker">
+                <a href="../portfolio.html" class="nav-link non-mousetracker">
                     <div class="text">Portfolio</div>
                     <div class="textbg">Portfolio</div>
                 </a>
@@ -276,14 +307,23 @@
             <div class="border-bottom"></div>
         </nav>
 
-        <div class="aboutUsMain">
+        <div class="ThemePageHead">
             <div class="frombelowanim">
-                <h1>FAQ's</h1>
-
-                <p>Explore our FAQs! We're dedicated to providing answers and turning your ideas into reality.</p>
+                <div class="left">
+                    <h1>FAQ's</h1>
+                </div>
+                <div class="right">
+                    <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
+                </div>
             </div>
         </div>
+
     </section>
+
+    <div class="divider contentCont">
+        <div></div>
+    </div>
+
 
     <section id="aboutUsDiscoverMore" class="contentCont FAQ">
         <div class="discoverMoreWrapper" id="FAQGroups">
@@ -319,7 +359,7 @@
                     </div>
                 </div>
                 <div>
-                    <div id="FAQGroup_General" class="FAQGroup">
+                    <div id="FAQGroup_General" class="FAQGroup active">
                         <div class="FAQGroup_head">
                             <h2><span>●</span>General</h2>
                             <button onclick="toggleFAQGroup(this, '.FAQGroup');"> <img
@@ -334,14 +374,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
@@ -351,50 +394,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="double">
-                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
-                                    <div class="ques">
-                                        <h4>
-                                            What is the focus of digital products?
-                                        </h4>
-                                        <div class="pWrapper">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
-                                    </div>
-                                </div>
-                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
-                                    <div class="ques">
-                                        <h4>
-                                            What is the focus of digital products?
-                                        </h4>
-                                        <div class="pWrapper">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn">
-                                        <button> <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -406,14 +416,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
@@ -423,14 +436,59 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button  > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="double">
+                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                                    <div class="ques">
+                                        <h4>
+                                            What is the focus of digital products?
+                                        </h4>
+                                        <div class="pWrapper">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                                    <div class="ques">
+                                        <h4>
+                                            What is the focus of digital products?
+                                        </h4>
+                                        <div class="pWrapper">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -452,14 +510,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button> <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
@@ -469,50 +530,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="double">
-                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
-                                    <div class="ques">
-                                        <h4>
-                                            What is the focus of digital products?
-                                        </h4>
-                                        <div class="pWrapper">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn">
-                                        <button> <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
-                                    </div>
-                                </div>
-                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
-                                    <div class="ques">
-                                        <h4>
-                                            What is the focus of digital products?
-                                        </h4>
-                                        <div class="pWrapper">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -524,14 +552,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
@@ -541,14 +572,59 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="double">
+                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                                    <div class="ques">
+                                        <h4>
+                                            What is the focus of digital products?
+                                        </h4>
+                                        <div class="pWrapper">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                                    <div class="ques">
+                                        <h4>
+                                            What is the focus of digital products?
+                                        </h4>
+                                        <div class="pWrapper">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -570,14 +646,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
@@ -587,50 +666,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="double">
-                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
-                                    <div class="ques">
-                                        <h4>
-                                            What is the focus of digital products?
-                                        </h4>
-                                        <div class="pWrapper">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
-                                    </div>
-                                </div>
-                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
-                                    <div class="ques">
-                                        <h4>
-                                            What is the focus of digital products?
-                                        </h4>
-                                        <div class="pWrapper">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -642,14 +688,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
@@ -659,14 +708,59 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="double">
+                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                                    <div class="ques">
+                                        <h4>
+                                            What is the focus of digital products?
+                                        </h4>
+                                        <div class="pWrapper">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                                    <div class="ques">
+                                        <h4>
+                                            What is the focus of digital products?
+                                        </h4>
+                                        <div class="pWrapper">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -687,14 +781,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
@@ -704,50 +801,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="double">
-                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
-                                    <div class="ques">
-                                        <h4>
-                                            What is the focus of digital products?
-                                        </h4>
-                                        <div class="pWrapper">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
-                                    </div>
-                                </div>
-                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
-                                    <div class="ques">
-                                        <h4>
-                                            What is the focus of digital products?
-                                        </h4>
-                                        <div class="pWrapper">
-                                            <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -759,14 +823,17 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
@@ -776,14 +843,59 @@
                                         </h4>
                                         <div class="pWrapper">
                                             <p>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
                                                 Lorem Ipsum has been the industry's standard dummy
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="btn">
-                                        <button > <img
-                                                src="../assets/icons/dropdown.svg" alt=""> </button>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="double">
+                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                                    <div class="ques">
+                                        <h4>
+                                            What is the focus of digital products?
+                                        </h4>
+                                        <div class="pWrapper">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="quesCard" onclick="toggleFAQ(this, '.FAQGroup')">
+                                    <div class="ques">
+                                        <h4>
+                                            What is the focus of digital products?
+                                        </h4>
+                                        <div class="pWrapper">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem Ipsum has been the industry's standard dummy
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrapper">
+                                        <button id="moveBtn">
+                                            <div></div>
+                                            <div></div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -794,91 +906,124 @@
             </div>
 
         </div>
-        <div class="spacer" style="height: 97vh;"></div>
     </section>
 
 
-    <section id="footer">
+    <section id="GetInTouchSec" class="contentCont">
+        <div class="GetInTouch">
+    
+          <div class="themeheading">
+            <span class="themedot"></span>
+            <span class="themetitle">Get In Touch</span>
+          </div>
+          <h1>
+            Let’s work together
+          </h1>
+          <p>
+            We would love to hear from you! Our dedicated team is here to <br>
+            help you transform your ideas into reality.
+          </p>
+    
+          <a href="../pages/contactUs.html" class="btnRounded">
+            <span>Get Free Estimates Now</span>
+            <span>
+              <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+              <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+            </span>
+          </a>
+    
+        </div>
+    
+        <div class="spacer">
+        </div>
+      </section>
+
+      <section id="footer">
         <section id="ideasSec">
 
             <div id="ideasCon">
 
                 <div class="animated-head">
 
-                    <h1>Let’s turn your<br>
-                        idea into reality</h1>
                     <div>
-                        <svg width="663" height="283" viewBox="0 0 663 283" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="Frame 1000003707">
-                                <path id="Ellipse 1228"
-                                    d="M565.886 97.6308C568.123 109.835 563.977 122.775 554.226 135.808C544.474 148.843 529.205 161.84 509.502 174.048C470.105 198.46 413.258 219.545 348.304 231.45C283.349 243.356 222.719 243.803 177.226 234.952C154.474 230.525 135.587 223.788 121.846 215.059C108.108 206.332 99.6412 195.704 97.4043 183.499C95.1674 171.295 99.3139 158.355 109.064 145.322C118.816 132.288 134.085 119.29 153.788 107.082C193.185 82.6705 250.032 61.5855 314.987 49.6799C379.942 37.7743 440.571 37.3268 486.065 46.1783C508.817 50.605 527.703 57.3422 541.444 66.0708C555.183 74.7982 563.649 85.4265 565.886 97.6308Z"
-                                    stroke="#EAEAEA" stroke-width="3"></path>
-                                <path id="*"
-                                    d="M314.452 232.835L302.087 225.678L308.151 215.93L319.981 222.567C326.857 226.381 330.512 229.377 334.255 233.018C333.989 227.729 334.296 222.759 335.634 215.679L338.273 201.721L349.684 203.878L347.045 217.836C345.706 224.916 343.897 230.022 341.998 234.482C346.775 232.661 351.309 231.004 358.9 229.925L372.578 227.902L374.83 239.432L360.502 241.542C353.319 242.698 347.868 242.506 343.067 242.226C346.657 246.677 349.102 250.491 351.826 257.292L357.631 270.123L347.034 274.824L341.191 262.195C338.059 255.318 336.697 250.241 335.667 245.646C333.119 250.193 329.998 254.422 324.89 259.113L314.635 268.698L306.283 260.414L316.371 250.588C321.798 245.329 325.912 242.545 330.433 239.838C324.474 237.873 319.94 236.178 314.452 232.835Z"
-                                    fill="#FF2626"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                                <circle id="Ellipse 1229" cx="270.001" cy="62.1572" r="15.9552"
-                                    transform="rotate(10.7066 270.001 62.1572)" fill="#FF2626"
-                                    style="transform: translate(0px, 0px) rotate(10.7066deg) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </circle>
-                                <path id="Vector"
-                                    d="M141.509 182.705L153.03 184.883C148.049 211.221 143.075 237.561 138.088 263.897L126.571 261.719C127.946 254.435 129.326 247.152 130.701 239.867C127.035 243.135 123.088 246.067 119.05 248.848C115.205 251.48 111.27 253.983 107.24 256.319C104.831 252.792 102.422 249.264 100.013 245.736C104.425 242.38 108.988 239.225 113.68 236.278C117.784 233.721 121.994 231.308 126.423 229.366C128.396 228.509 130.418 227.749 132.505 227.228C129.62 227.32 126.733 227.175 123.86 226.923C119.932 226.571 116.027 226.01 112.143 225.333C108.064 224.615 104.006 223.781 99.9837 222.796L102.363 210.212C105.57 210.576 108.764 211.045 111.948 211.58C116.233 212.306 120.499 213.164 124.709 214.249C127.853 215.065 130.973 216.002 133.994 217.204C131.915 215.658 130.055 213.837 128.294 211.938C125.588 209 123.124 205.844 120.777 202.61C117.325 197.822 114.11 192.861 111.134 187.759C114.664 185.352 118.195 182.948 121.727 180.544C125.259 185.179 128.579 189.979 131.66 194.93C133.693 198.215 135.614 201.574 137.281 205.064C138.692 197.612 140.1 190.158 141.509 182.705Z"
-                                    fill="#EAEAEA"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                                <path id="Vector_2"
-                                    d="M507.515 32.3699L547.499 39.9297L538.87 85.565C532.984 84.4535 527.097 83.3406 521.211 82.2284C520.79 84.4712 520.35 86.7097 519.947 88.956C519.707 90.4817 519.563 92.0842 520.026 93.5821C520.344 94.6792 521.131 95.5995 522.102 96.1727C523.226 96.8352 524.503 97.1711 525.773 97.4214C529.266 98.0841 532.761 98.7379 536.253 99.406L532.58 118.834C529.859 118.322 527.14 117.806 524.42 117.293C522.548 116.928 520.665 116.617 518.81 116.169C514.693 115.183 510.655 113.672 507.117 111.308C503.352 108.831 500.285 105.216 498.675 100.967C497.041 96.7579 496.765 92.1312 497.217 87.6655C497.365 86.0818 497.64 84.515 497.95 82.9564C501.139 66.0942 504.327 49.2321 507.515 32.3699Z"
-                                    fill="#EAEAEA"
-                                    style="transform-origin: center center; transform: translate(0px, 0px) rotateX(7.54902deg) rotateY(1.08333deg);">
-                                </path>
-                            </g>
-                        </svg>
+                        <span class="themedot light"></span>
+                        <span class="themetitle">Let’s get started</span>
                     </div>
+
+                    <h1>Let’s turn your idea into reality</h1>
                 </div>
 
 
                 <div class="ideasproducts">
-                    <p>Designed Products across various Industries Fintech • Healthcare • SASS • <span
-                            style="display: inline-block;">E-commerce</span> • Retail • Realestate
+                    <p>Designed Products across various Industries</p>
+                    <p>Fintech • Healthcare • SASS • <span style="display: inline-block;">E-commerce</span> • Retail •
+                        Real estate
                     </p>
 
                     <div class="tabsflex">
-                        <a href="../pages/portfolio.html" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Work</div>
-                                <div class="hiddenTag">Work</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
-
-                        <a href="/" class="LinkhoverGroup">
-                            <div>
-                                <div class="visibleTag">Process</div>
-                                <div class="hiddenTag">Process</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
                         <a href="../pages/aboutUs.html" class="LinkhoverGroup">
                             <div>
-                                <div class="visibleTag">About</div>
-                                <div class="hiddenTag">About</div>
+                                <div class="visibleTag">About Us</div>
+                                <div class="hiddenTag">About Us</div>
                             </div>
 
                             <div>
                                 <img class="visibleTag" src="../assets/icons/link.svg" alt="">
                                 <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
                             </div>
-                        </a><a href="/" class="LinkhoverGroup">
+                        </a>
+
+
+                        <a href="../pages/brandIdentity.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Services</div>
+                                <div class="hiddenTag">Services</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+
+                        </a>
+
+                        <a href="../pages/portfolio.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Portfolio</div>
+                                <div class="hiddenTag">Portfolio</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/contactUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Contact</div>
+                                <div class="hiddenTag">Contact</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/unseenJourney.html" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Stories</div>
+                                <div class="hiddenTag">Stories</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="#pricingSec" class="LinkhoverGroup mob-only smoothScroller">
                             <div>
                                 <div class="visibleTag">Plans</div>
                                 <div class="hiddenTag">Plans</div>
@@ -890,10 +1035,11 @@
                             </div>
                         </a>
 
-                        </a><a href="../pages/contactUs.html" class="LinkhoverGroup mob-only">
+
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup mob-only">
                             <div>
-                                <div class="visibleTag">Contact Us</div>
-                                <div class="hiddenTag">Contact Us</div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
                             </div>
 
                             <div>
@@ -902,25 +1048,14 @@
                             </div>
                         </a>
 
-                        </a><a href="/" class="LinkhoverGroup mob-only">
-                            <div>
-                                <div class="visibleTag">Services</div>
-                                <div class="hiddenTag">Services</div>
-                            </div>
-
-                            <div>
-                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
-                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
-                            </div>
-                        </a>
 
                     </div>
 
                     <div class="tabsflex">
-                        </a><a href="../pages/contactUs.html" class="LinkhoverGroup">
+                        <a href="#pricingSec" class="LinkhoverGroup smoothScroller">
                             <div>
-                                <div class="visibleTag">Contact Us</div>
-                                <div class="hiddenTag">Contact Us</div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
                             </div>
 
                             <div>
@@ -929,10 +1064,10 @@
                             </div>
                         </a>
 
-                        </a><a href="/" class="LinkhoverGroup">
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup">
                             <div>
-                                <div class="visibleTag">Services</div>
-                                <div class="hiddenTag">Services</div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
                             </div>
 
                             <div>
@@ -940,7 +1075,21 @@
                                 <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
                             </div>
                         </a>
+
+                        <a href="../pages/unseenJourney.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Stories</div>
+                                <div class="hiddenTag">Stories</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
                     </div>
+
                 </div>
             </div>
 
@@ -978,7 +1127,7 @@
                     <h1>Reach Us</h1>
                     <p><img src="../assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
                     <p><img src="../assets/icons/pk.svg" alt=""> +92 8754 3864</p>
-                    <a href="/" class="LinkhoverGroup psize">
+                    <a href="/" class="LinkhoverGroup">
                         <div>
                             <div class="visibleTag">business@webpioneers.com</div>
                             <div class="hiddenTag">business@webpioneers.com</div>
@@ -1028,7 +1177,7 @@
                 <div>
                     <div>
                         <h1>Quick</h1>
-                        <a href="/" class="LinkhoverGroup">
+                        <a href="#pricingSec" class="LinkhoverGroup smoothScroller">
                             <div>
                                 <div class="visibleTag">Pricing</div>
                                 <div class="hiddenTag">Pricing</div>
@@ -1130,9 +1279,10 @@
                 "../scripts/lenis.js",
                 "../scripts/imagehover.js",
                 "../scripts/animated/figmafooter.js",
-                "../scripts/pages/unseenjourney.js",
+                "../scripts/pages/rotateSteric.js",
                 "../scripts/hero.js",
                 "../scripts/FAQ.js",
+                "../scripts/FAQHover.js",
                 "../scripts/ideas.js",
             ];
 

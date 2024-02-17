@@ -1,6 +1,6 @@
 const quesCards = document.getElementsByClassName('quesCard');
 
-if(!isMobile()){
+if(!isTab() && !isMobile()){
     Array.from(quesCards).forEach(card => {
     
         const moveBtn = card.querySelector('#moveBtn');

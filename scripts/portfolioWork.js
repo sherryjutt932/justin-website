@@ -150,3 +150,47 @@ gsap.fromTo(
 
 
 }
+
+
+
+
+
+
+
+const boxesRef = document.querySelector('#skillsBoxesRef');
+var boxesTl = gsap.timeline();
+
+if(!isMobile()){
+    boxesTl.fromTo(
+      [boxesRef.children[0]],
+      {
+        y:-50,
+      },
+      {
+        y:100,
+      },"a"
+    ).fromTo(
+      [boxesRef.children[1]],
+      {
+        y:-40,
+      },
+      {
+        y:0,
+      },"a"
+    ).fromTo(
+      [boxesRef.children[2]],
+      {
+          y:-30,
+        },
+        {
+          y:-100,
+        },"a"
+    )
+    ScrollTrigger.create({
+      trigger: boxesRef,
+      start: "top center",
+      end: "bottom top",
+      scrub: 3,
+      animation: boxesTl,
+    });
+  }
