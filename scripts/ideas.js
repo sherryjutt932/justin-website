@@ -1,8 +1,7 @@
-
 const ideasSec = document.getElementById("ideasSec");
 
 var ideasanim = gsap.timeline();
-if(!isMobile()){
+if (!isMobile()) {
   ideasanim.fromTo(
     ideasSec,
     {
@@ -13,8 +12,7 @@ if(!isMobile()){
     },
     "a"
   );
-}
-else{
+} else {
   ideasanim.fromTo(
     ideasSec,
     {
@@ -28,16 +26,16 @@ else{
 }
 
 ScrollTrigger.create({
-    trigger: ideasSec,
-    start: "top top",
-    end: "+=400",
-    scrub: 1,
-    marker: false,
-    animation:ideasanim,
-  });
+  trigger: ideasSec,
+  start: "top top",
+  end: "+=400",
+  scrub: 1,
+  marker: false,
+  animation: ideasanim,
+  
+});
 
-
-  const ideasMarquee = document.getElementById("idea-marquee");
+const ideasMarquee = document.getElementById("idea-marquee");
 const ideasFirst = document.getElementById("idea-marquee-first");
 const ideasSecond = document.getElementById("idea-marquee-second");
 const ideasThird = document.getElementById("idea-marquee-third");
@@ -48,7 +46,7 @@ var ideasSpeed = 12;
 
 const animateideasMarquee = () => {
   ideas_xPercent =
-  ideas_scrollDir === "down"
+    ideas_scrollDir === "down"
       ? ideas_xPercent - ideasSpeed / 5
       : ideas_xPercent + ideasSpeed / 5;
   ideas_xPercent =

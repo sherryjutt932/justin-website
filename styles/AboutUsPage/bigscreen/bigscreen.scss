@@ -324,6 +324,14 @@
             background-color: var(--main);
             color: var(--dark);
           }
+
+          &[data-theme="dark"]:hover,
+        &[data-theme="light"] {
+          border: 1px dashed var(--dark);
+          background-color: var(--light);
+          color: var(--dark);
+        }
+
         }
       }
     }

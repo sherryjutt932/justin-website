@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rao Drop | Portfolio Detail</title>
+    <link href="../styles/global.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/Navigation/navigation.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/bigscreen/bigscreen.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
+    <link rel="stylesheet" href="../styles/ideas/ideas.css">
+    <link rel="stylesheet" href="../styles/feedback/feedback.css" />
+    <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
+    <link rel="stylesheet" href="../styles/theme/theme.css" />
+    <link rel="stylesheet" href="../styles/portfolioPage/portfolioPage.css">
+    <link rel="stylesheet" href="../styles/portfolioDetail/portfolioDetail.css">
+
+    <!-- packages -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- gsap -->
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+</head>
+
+<body>
+    <div id="mousefollower">
+        <img id="mousefollower-rightarrow" src="../assets/icons/navbarContentCardArrow.svg" alt="">
+        <div id="mousefollower-stickybutton" class="stickybutton non-mousetracker">
+            <a href="/">
+                <div id="magneticBtn">
+                    <div class="my-button">
+
+                        <div>
+                            <div id="Btnfirst" class="Btnfirst">
+                                View details
+                            </div>
+                            <div id="Btnsecond" class="Btnsecond">
+                                View details
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <section id="navigationSec" class="initial contentCont">
+        <div id="navigation">
+            <header>
+                <nav>
+                    <div class="logoimg">
+                        <div class="desk">
+                            <a href="/">
+                                <lottie-player class="logoanim"
+                                    src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                            </a>
+                        </div>
+                        <a class="mob" href="/">
+                            <img src="./assets/icons/mainlogo.svg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Home</div>
+                            <div class="textbg">Home</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="./portfolio.html" class="nav-link non-mousetracker">
+                            <div class="text">Portfolio</div>
+                            <div class="textbg">Portfolio</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="./aboutUs.html" class="nav-link non-mousetracker">
+                            <div class="text">About Us</div>
+                            <div class="textbg">About Us</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Pricing</div>
+                            <div class="textbg">Pricing</div>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="line"></div>
+                        <!-- nav link -->
+                        <div class="nav-link non-mousetracker">
+                            <div class="text">Login</div>
+                            <div class="textbg">Login</div>
+                        </div>
+
+                        <div id="navbtnplacer">
+                        </div>
+                    </div>
+
+                    <div class="border-bottom"></div>
+                </nav>
+
+                <div class="content">
+                    <div>
+                        <a href="./portfolio.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Portfolio</div>
+                                <div class="textbg">Portfolio</div>
+                            </div>
+                        </a>
+                        <a href="./Journal.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Journal</div>
+                                <div class="textbg">Journal</div>
+                            </div>
+                        </a>
+                        <a href="/" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Pricing</div>
+                                <div class="textbg">Pricing</div>
+                            </div>
+                        </a>
+                        <a href="./FAQ.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">FAQ's</div>
+                                <div class="textbg">FAQ's</div>
+                            </div>
+                        </a>
+                        <a href="./contactUs.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Contact</div>
+                                <div class="textbg">Contact</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="navigation-cards">
+                        <a class="card" href="./brandIdentity.html">
+                            <div>
+                                <h5>Brand Identity</h5>
+                                <p>Creative strategies for brands.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-brand"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="./UIUX.html">
+                            <div>
+                                <h5>UI UX</h5>
+                                <p>Handcraft the user experience.</h>
+                            </div>
+                            <div>
+                                <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="./webDevelopment.html">
+                            <div>
+                                <h5>Development</h5>
+                                <p>Leverage the power of code.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-development"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tabValue">
+                    <div>
+
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">Let's Start!</span>
+                        </div>
+                        <h1>
+                            Get started with <br>
+                            Pioneers
+                        </h1>
+                        <p>
+                            Our top priority is to provide exceptional support to our clients throughout their entire
+                            project journey.
+                        </p>
+                        <a href="./contactUs.html" class="btnRounded">
+                            <span>Get Free Estimates Now</span>
+                            <span>
+                                <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                                <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <div>
+                        <img src="../assets/icons/largeIconOnly.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="border-top"></div>
+                    <!-- <div class="creator">Made by Xaib</div> -->
+                    <a class="LinkhoverGroup creator" style="cursor: unset;">
+                        <div class="textonly">
+                            <div class="visibleTag">Made by Xaib</div>
+                            <div class="hiddenTag">Made by Xaib</div>
+                        </div>
+                    </a>
+
+                    <div class="icons">
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/dribble.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/dribble.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/linkedin.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/linkedin.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/instagram.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/instagram.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </section>
+
+    <section id="ThemePageHeader" class="contentCont herosection">
+        <nav>
+            <div class="logoimg">
+                <div class="desk">
+                    <a href="/">
+                        <lottie-player class="logoanim"
+                            src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                    </a>
+                </div>
+                <a href="/">
+                    <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+                </a>
+            </div>
+            <div class="navlinkscenter">
+                <!-- nav link -->
+                <a href="/" class="nav-link non-mousetracker">
+                    <div class="text">Home</div>
+                    <div class="textbg">Home</div>
+                </a>
+                <!-- nav link -->
+                <a href="./portfolio.html" class="nav-link non-mousetracker">
+                    <div class="text">Portfolio</div>
+                    <div class="textbg">Portfolio</div>
+                </a>
+                <!-- nav link -->
+                <a href="./aboutUs.html" class="nav-link non-mousetracker">
+                    <div class="text">About Us</div>
+                    <div class="textbg">About Us</div>
+                </a>
+                <!-- nav link -->
+                <a href="/" class="nav-link non-mousetracker">
+                    <div class="text">Pricing</div>
+                    <div class="textbg">Pricing</div>
+                </a>
+            </div>
+            <div>
+                <div class="line"></div>
+                <!-- nav link -->
+                <div class="nav-link non-mousetracker">
+                    <div class="text">Login</div>
+                    <div class="textbg">Login</div>
+                </div>
+
+                <div class="HeadrnavBtn">
+                    <button id="navAnimatedIcon" onclick="toggleNav()">
+                        <div id="hamburger-line1"></div>
+                        <div id="hamburger-line2"></div>
+                    </button>
+
+                    <div id="mobileNavBtn" class="initial">
+                        <div id="mobileNavBtn-FC">
+                            <div class="mobileNav-head">
+                                <h1>Menu</h1>
+                            </div>
+
+                            <a href="../pages/portfolio.html" class="mobileNav-item">
+                                <p>Portfolio</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/aboutUs.html" class="mobileNav-item">
+                                <p>About Us</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/unseenJourney.html" class="mobileNav-item">
+                                <p>Stories</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/FAQ.html" class="mobileNav-item">
+                                <p>FAQ's</p>
+                                <div></div>
+                            </a>
+                            <a href="/" class="mobileNav-item">
+                                <p>Pricing</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/contactUs.html" class="mobileNav-item">
+                                <p>Contact Us</p>
+                                <div></div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-bottom"></div>
+        </nav>
+
+        <div class="ThemePageHead">
+            <div class="frombelowanim">
+                <div class="left">
+                    <h1>Rao Drop</h1>
+                </div>
+                <div class="right">
+                    <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="DetailContent contentCont">
+        <div class="fit imgbg bigP">
+            <div class="appearAnim">
+                <img class="photo" src="../assets/images/Raodrop/headermockup.png" alt="">
+            </div>
+        </div>
+
+        <div class="heading">
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">In Pictures</span>
+            </div>
+
+            <h1>
+                Rao Drop – Simplifying <br>
+                Your Journey
+            </h1>
+        </div>
+
+        <div class="double detailcon">
+            <div class="detailbox frombelowanim">
+                <h3>About RaoDrop</h3>
+                <p>
+                    RaoRide is a revolutionary rent and ride app designed to streamline your travel experience. Offering a user-friendly interface catering to all age groups, RaoRide simplifies the process of renting a vehicle for your journey. With a focus on accessibility and ease of use, our app transforms the way users navigate through the rental process, ensuring a seamless and enjoyable experience for everyone. <span>●</span> RaoRide is not just an app; it's a commitment to making every journey as simple and enjoyable as possible.
+                </p>
+            </div>
+            <div class="detailbox frombelowanim">
+                <h3>Our Approach</h3>
+                <p>
+                    Our engagement with RaoRide began with a commitment to design an app that is effortlessly navigable for users of all ages. Recognizing the importance of simplicity, we meticulously crafted an interface that ensures smooth navigation through the rental process. The goal was to create an app that caters to a diverse user base, offering a hassle-free experience from selecting a vehicle to completing the rental transaction. <span>●</span> Our approach involved user-centric design principles, ensuring clarity, and simplicity at every step.
+                </p>
+            </div>
+        </div>
+
+        <div class="fit imgbg bigP double biggap">
+            <div class="">
+                <img class="photo mobileMok" src="../assets/images/Raodrop/mobile1.png" alt="">
+            </div>
+            <div class="">
+                <img class="photo" src="../assets/images/Raodrop/tab1.png" alt="">
+            </div>
+        </div>
+
+        <div class="detailcon">
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Structure</span>
+            </div>
+            <div class="detailbox frombelowanim">
+                <h3>Design System Implementation</h3>
+                <p>
+                    We present the app's visual elements, including design components, the overall design system, typography, and our icon design system. Our journey began <span>●</span> with the creation of a comprehensive design system, leveraging reusable components that played a pivotal role in shaping the app's visual identity. Through thoughtful implementation.
+                </p>
+            </div>
+        </div>
+
+        <div class="fit double">
+            <div class="imgbg">
+                <div class=" ">
+                    <img class="photo" src="../assets/images/Raodrop/detail1.png" alt="">
+                </div>
+            </div>
+            <div class="imgbg">
+                <div class="">
+                    <img class="photo " src="../assets/images/Raodrop/detail2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="multipleImgs imgbg">
+            <div class="">
+                <img class="photo" src="../assets/images/Raodrop/ProjectPage1.png" alt="">
+            </div>
+            <div class="">
+                <img class="photo" src="../assets/images/Raodrop/ProjectPage2.png" alt="">
+            </div>
+            <div class="">
+                <img class="photo" src="../assets/images/Raodrop/ProjectPage3.png" alt="">
+            </div>
+            <div class="">
+                <img class="photo" src="../assets/images/Raodrop/ProjectPage4.png" alt="">
+            </div>
+        </div>
+
+        <div class="fit double aStrech">
+            <div class=" imgbg medP">
+                <img class="photo" src="../assets/images/Raodrop/ProjectPage5.png" alt="">
+            </div>
+            <div class=" imgbg medP">
+                <img class="photo" src="../assets/images/Raodrop/ProjectPage6.png" alt="">
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="feedbackSec">
+        <div class="feedbackWrapper">
+
+            <div>
+                <span class="themedot"></span>
+                <span class="themetitle">Client Feedback</span>
+            </div>
+
+            <div class="feedbackCon">
+
+                <div class="feedback-border-top">
+                    <div></div>
+                </div>
+
+                <div class="feedbackdetail">
+                    <div>
+                        <div id="feedbackP" class="carousel_track">
+                            <p class="carousel is-selected">
+                                <a href="../pages/RaoDrop.html">
+                                    <span>
+                                        Rao Drop
+                                    </span>
+                                    <img src="../assets/icons/arrowRight.svg" alt="">
+                                </a>
+                                Their commitment to creating an app that is easy for users of all ages to navigate is evident in every detail. RaoRide has become a go-to platform for hassle-free vehicle rentals, and the positive feedback from users speaks volumes about the success of the redesign.
+                            </p>
+
+                        </div>
+
+                        <div>
+                            <div>
+                                <div class="tablet">
+                                    <div><span id="carouselNumber" data-index="0"></span></div>
+                                    <div>
+                                        <h2 data-index="0" class="carouselname active">Aryan Rao</h2>
+                                        <p data-index="0" class="carouselrole active">Founder</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="feebackimgMobile">
+                                    <img id="biglogo" src="../assets/icons/logoBig.svg" alt="">
+                                    <img src="../assets/icons/steric-med.svg" id="rotate-steric" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="feebackimg">
+                    <img id="biglogo" src="../assets/icons/logoBig.svg" alt="">
+                    <img src="../assets/icons/steric-med.svg" id="rotate-steric" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- <div class="spacer"></div> -->
+    </section>
+
+    <section id="aboutUsDiscoverMore" class="contentCont">
+        <div class="discoverMoreWrapper">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Recent Work</span>
+            </div>
+            <div class="ALLPROJECTS heading">
+                <h1>
+                    Check our <br>
+                    other projects
+                </h1>
+                <div>
+                    <a href="./portfolio.html" class="btnRounded">
+                        <span>See All Projects</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="imagerow">
+                <div>
+                    <div class="followSTB">
+                        <a href="./Flora.html">
+                            <img src="../assets/images/Work/DESIGN-1.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Flora.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <p>Flora</p>
+                        <small>01</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./2Modern.html"><img src="../assets/images/Work/DESIGN-2.png" alt=""></a>
+                        <div class="stickybutton mobile">
+                            <a href="./2Modern.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <p>2Modern</p>
+                        <small>02</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./Finvault.html">
+                            <img src="../assets/images/Work/DESIGN-3.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Finvault.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <p>Finvault</p>
+                        <small>03</small>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile seeallwork">
+                <a href="./portfolio.html" class="btnRounded">
+                    <span>See All Projects</span>
+                    <span>
+                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                        <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                    </span>
+                </a>
+                <a href="/" class="logo-img"><img src="../assets/icons/largeIconOnly.svg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="otherServices" class="contentCont">
+
+        <div class="otherServicesWrapper">
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Our Services</span>
+            </div>
+
+            <div class="heading">
+                <h1>
+                    We Bring Skills, <br>
+                    You Achieve Results
+                </h1>
+
+                <div>
+                    <p>
+                        Providing top-notch design and UI/UX skills, we help boost your business, making it more
+                        user-friendly and successful.
+                    </p>
+                    <a href="./contactUs.html" class="btnRounded">
+                        <span>Get Free Estimates Now</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="otherServicesSec">
+
+                <div id="skillsBoxesRef">
+
+                    <a href="./brandIdentity.html" class="boxCard">
+                        <div class="boxWrapper">
+                            <div class="number">1</div>
+                            <div class="lable">distinctive</div>
+                            <div class="arrow">
+                                <img src="../assets/icons/arrowRight.svg" alt="arrowRight" />
+                            </div>
+
+                            <div class="namea">brand</div>
+                            <div class="nameb">
+                                <p>identity</p>
+                                <p>identity</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="./webDevelopment.html" class="boxCard">
+                        <div class="boxWrapper">
+                            <div class="number">2</div>
+                            <div class="lable">innovation</div>
+                            <div class="arrow">
+                                <img src="../assets/icons/arrowRight.svg" alt="arrowRight" />
+                            </div>
+
+                            <div class="namea">web</div>
+                            <div class="nameb">
+                                <p>development</p>
+                                <p>development</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="./UIUX.html" class="boxCard">
+                        <div class="boxWrapper">
+                            <div class="number">3</div>
+                            <div class="lable">CREATIVITY</div>
+                            <div class="arrow">
+                                <img src="../assets/icons/arrowRight.svg" alt="arrowRight" />
+                            </div>
+
+                            <div class="namea">UI UX</div>
+                            <div class="nameb">
+                                <p>DESIGN</p>
+                                <p>DESIGN</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </section>
+
+    <section id="GetInTouchSec" class="contentCont">
+        <div class="GetInTouch">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Get In Touch</span>
+            </div>
+            <h1>
+                Let’s work together
+            </h1>
+            <p>
+                We would love to hear from you! Our dedicated team is here to <br>
+                help you transform your ideas into reality.
+            </p>
+
+            <a href="./contactUs.html" class="btnRounded">
+                <span>Get Free Estimates Now</span>
+                <span>
+                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                </span>
+            </a>
+
+        </div>
+
+        <div class="spacer">
+        </div>
+    </section>
+
+    <section id="footer">
+        <section id="ideasSec">
+
+            <div id="ideasCon">
+
+                <div class="animated-head">
+
+                    <div>
+                        <span class="themedot light"></span>
+                        <span class="themetitle">Let’s get started</span>
+                    </div>
+
+                    <h1>Let’s turn your idea into reality</h1>
+                </div>
+
+
+                <div class="ideasproducts">
+                    <p>Designed Products across various Industries</p>
+                    <p>Fintech • Healthcare • SASS • <span style="display: inline-block;">E-commerce</span> • Retail •
+                        Real estate
+                    </p>
+
+                    <div class="tabsflex">
+                        <a href="../pages/aboutUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">About Us</div>
+                                <div class="hiddenTag">About Us</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                        <a href="../pages/brandIdentity.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Services</div>
+                                <div class="hiddenTag">Services</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+
+                        </a>
+
+                        <a href="../pages/portfolio.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Portfolio</div>
+                                <div class="hiddenTag">Portfolio</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/contactUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Contact</div>
+                                <div class="hiddenTag">Contact</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/Journal.html" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Journal</div>
+                                <div class="hiddenTag">Journal</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                    <div class="tabsflex">
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/unseenJourney.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Stories</div>
+                                <div class="hiddenTag">Stories</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="idea-marquee-wrap">
+                <div class="idea-marquee-con">
+                    <div id="idea-marquee">
+                        <div id="idea-marquee-first">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                        <div id="idea-marquee-second">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                        <div id="idea-marquee-third">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="footerSec">
+            <div class="spacer"></div>
+            <div class="footerCon">
+                <div>
+                    <h1>Reach Us</h1>
+                    <p><img src="../assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
+                    <p><img src="../assets/icons/pk.svg" alt=""> +92 8754 3864</p>
+                    <a href="/" class="LinkhoverGroup">
+                        <div>
+                            <div class="visibleTag">business@webpioneers.com</div>
+                            <div class="hiddenTag">business@webpioneers.com</div>
+                        </div>
+
+                        <div>
+                            <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                            <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <div>
+                        <h1>Social</h1>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">linkedin</div>
+                                <div class="hiddenTag">linkedin</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Instagram</div>
+                                <div class="hiddenTag">Instagram</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Dribble</div>
+                                <div class="hiddenTag">Dribble</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Quick</h1>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Pricing</div>
+                                <div class="hiddenTag">Pricing</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="../pages/aboutUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">About</div>
+                                <div class="hiddenTag">About</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Team</div>
+                                <div class="hiddenTag">Team</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Legal</h1>
+
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Privacy</div>
+                                <div class="hiddenTag">Privacy</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Terms</div>
+                                <div class="hiddenTag">Terms</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to reload the page
+            function reloadPage() {
+                location.reload();
+            }
+
+            // Store the initial window width
+            var initialWidth = window.innerWidth;
+
+            // Attach the reload function to the window's resize event
+            window.addEventListener("resize", function () {
+                // Check if the width has changed
+                if (window.innerWidth !== initialWidth) {
+                    // Debounce the reload to avoid excessive reloading
+                    clearTimeout(window.resizeTimer);
+                    window.resizeTimer = setTimeout(function () {
+                        reloadPage();
+                    }, 250);
+                }
+            });
+
+
+            function loadScript(src, callback) {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = src;
+                script.onload = callback;
+                document.head.appendChild(script);
+            }
+
+            // List of scripts to load
+            var scriptsToLoad = [
+                "../scripts/global.js",
+                "../scripts/lenis.js",
+                "../scripts/imagehover.js",
+                "../scripts/pages/rotateSteric.js",
+                "../scripts/hero.js",
+                "../scripts/pages/lessBoxes.js",
+                "../scripts/mousefollower_stickybutton.js",
+                "../scripts/ideas.js",
+            ];
+
+            // Load each script one by one
+            function loadScriptsSequentially(index) {
+                if (index < scriptsToLoad.length) {
+                    loadScript(scriptsToLoad[index], function () {
+                        // Load the next script in the array
+                        loadScriptsSequentially(index + 1);
+                    });
+                }
+            }
+
+            loadScriptsSequentially(0);
+        });
+    </script>
+</body>
+
+</html>

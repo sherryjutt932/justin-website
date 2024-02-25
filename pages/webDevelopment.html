@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../styles/AboutUsPage/bigscreen/bigscreen.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/smallscreen/smallscreen.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/tab/tab.css">
-    <link rel="stylesheet" href="../styles/UnseenJourneyPage/UnseenJourneyPage.css">
     <link rel="stylesheet" href="../styles/AboutUsPage/mobile/mobile.css">
     <link rel="stylesheet" href="../styles/work/work.css">
     <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
@@ -21,6 +20,7 @@
     <link href="../styles/perks/perks.css" rel="stylesheet" />
     <link href="../styles/FADSec/FAQSec.css" rel="stylesheet" />
     <link href="../styles/contactUsSec/contactUsSec.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/UnseenJourneyPage/UnseenJourneyPage.css" />
     <link rel="stylesheet" href="../styles/theme/theme.css">
     <link rel="stylesheet" href="../styles/UIUX/UIUX.css">
     <link rel="stylesheet" href="../styles/ideas/ideas.css">
@@ -63,185 +63,186 @@
 
     <section id="navigationSec" class="initial contentCont">
         <div id="navigation">
-          <header>
-            <nav>
-              <div class="logoimg">
-                <div class="desk">
-                  <a href="../index.html">
-                    <lottie-player class="logoanim"
-                      src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
-                  </a>
+            <header>
+                <nav>
+                    <div class="logoimg">
+                        <div class="desk">
+                            <a href="/">
+                                <lottie-player class="logoanim"
+                                    src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                            </a>
+                        </div>
+                        <a class="mob" href="/">
+                            <img src="./assets/icons/mainlogo.svg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Home</div>
+                            <div class="textbg">Home</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="./portfolio.html" class="nav-link non-mousetracker">
+                            <div class="text">Portfolio</div>
+                            <div class="textbg">Portfolio</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="./aboutUs.html" class="nav-link non-mousetracker">
+                            <div class="text">About Us</div>
+                            <div class="textbg">About Us</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Pricing</div>
+                            <div class="textbg">Pricing</div>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="line"></div>
+                        <!-- nav link -->
+                        <div class="nav-link non-mousetracker">
+                            <div class="text">Login</div>
+                            <div class="textbg">Login</div>
+                        </div>
+
+                        <div id="navbtnplacer">
+                        </div>
+                    </div>
+
+                    <div class="border-bottom"></div>
+                </nav>
+
+                <div class="content">
+                    <div>
+                        <a href="./portfolio.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Portfolio</div>
+                                <div class="textbg">Portfolio</div>
+                            </div>
+                        </a>
+                        <a href="./Journal.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Journal</div>
+                                <div class="textbg">Journal</div>
+                            </div>
+                        </a>
+                        <a href="/" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Pricing</div>
+                                <div class="textbg">Pricing</div>
+                            </div>
+                        </a>
+                        <a href="./FAQ.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">FAQ's</div>
+                                <div class="textbg">FAQ's</div>
+                            </div>
+                        </a>
+                        <a href="./contactUs.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Contact</div>
+                                <div class="textbg">Contact</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="navigation-cards">
+                        <a class="card" href="./brandIdentity.html">
+                            <div>
+                                <h5>Brand Identity</h5>
+                                <p>Creative strategies for brands.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-brand"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="./UIUX.html">
+                            <div>
+                                <h5>UI UX</h5>
+                                <p>Handcraft the user experience.</h>
+                            </div>
+                            <div>
+                                <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="./webDevelopment.html">
+                            <div>
+                                <h5>Development</h5>
+                                <p>Leverage the power of code.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-development"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <a class="mob" href="../index.html">
-                  <img src="./assets/icons/mainlogo.svg" alt="">
-                </a>
-              </div>
-              <div>
-                <a href="../index.html" class="nav-link non-mousetracker">
-                  <div class="text">Home</div>
-                  <div class="textbg">Home</div>
-                </a>
-                <!-- nav link -->
-                <a href="../pages/portfolio.html" class="nav-link non-mousetracker">
-                  <div class="text">Portfolio</div>
-                  <div class="textbg">Portfolio</div>
-                </a>
-                <!-- nav link -->
-                <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
-                  <div class="text">About Us</div>
-                  <div class="textbg">About Us</div>
-                </a>
-                <!-- nav link -->
-                <a href="../index.html" class="nav-link non-mousetracker smoothScroller">
-                  <div class="text">Pricing</div>
-                  <div class="textbg">Pricing</div>
-                </a>
-              </div>
-              <div>
-                <div class="line"></div>
-                <!-- nav link -->
-                <div class="nav-link non-mousetracker">
-                  <div class="text">Login</div>
-                  <div class="textbg">Login</div>
+
+                <div class="tabValue">
+                    <div>
+
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">Let's Start!</span>
+                        </div>
+                        <h1>
+                            Get started with <br>
+                            Pioneers
+                        </h1>
+                        <p>
+                            Our top priority is to provide exceptional support to our clients throughout their entire
+                            project journey.
+                        </p>
+                        <a href="./contactUs.html" class="btnRounded">
+                            <span>Get Free Estimates Now</span>
+                            <span>
+                                <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                                <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <div>
+                        <img src="../assets/icons/largeIconOnly.svg" alt="">
+                    </div>
                 </div>
-    
-                <div id="navbtnplacer">
+
+                <div class="footer">
+                    <div class="border-top"></div>
+                    <!-- <div class="creator">Made by Xaib</div> -->
+                    <a class="LinkhoverGroup creator" style="cursor: unset;">
+                        <div class="textonly">
+                            <div class="visibleTag">Made by Xaib</div>
+                            <div class="hiddenTag">Made by Xaib</div>
+                        </div>
+                    </a>
+
+                    <div class="icons">
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/dribble.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/dribble.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/linkedin.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/linkedin.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/instagram.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/instagram.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
                 </div>
-              </div>
-    
-              <div class="border-bottom"></div>
-            </nav>
-    
-            <div class="content">
-              <div>
-                <a href="../pages/portfolio.html" class="nav-link">
-                  <div class="non-mousetracker">
-                    <div class="text">Portfolio</div>
-                    <div class="textbg">Portfolio</div>
-                  </div>
-                </a>
-                <a href="../pages/unseenJourney.html" class="nav-link">
-                  <div class="non-mousetracker">
-                    <div class="text">Stories</div>
-                    <div class="textbg">Stories</div>
-                  </div>
-                </a>
-                <a href="../index.html" class="nav-link smoothScroller">
-                  <div class="non-mousetracker">
-                    <div class="text">Pricing</div>
-                    <div class="textbg">Pricing</div>
-                  </div>
-                </a>
-                <a href="../pages/FAQ.html" class="nav-link">
-                  <div class="non-mousetracker">
-                    <div class="text">FAQ's</div>
-                    <div class="textbg">FAQ's</div>
-                  </div>
-                </a>
-                <a href="../pages/contactUs.html" class="nav-link">
-                  <div class="non-mousetracker">
-                    <div class="text">Contact</div>
-                    <div class="textbg">Contact</div>
-                  </div>
-                </a>
-              </div>
-    
-              <div id="navigation-cards">
-                <a class="card" href="../pages/brandIdentity.html">
-                  <div>
-                    <h5>Brand Identity</h5>
-                    <p>Creative strategies for brands.</h>
-                  </div>
-                  <div>
-                    <div class="animicon" id="aicon-navbar-brand"></div>
-                  </div>
-                </a>
-                <a class="card" href="../pages/UIUX.html">
-                  <div>
-                    <h5>UI UX</h5>
-                    <p>Handcraft the user experience.</h>
-                  </div>
-                  <div>
-                    <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
-                  </div>
-                </a>
-                <a class="card" href="../pages/webDevelopment.html">
-                  <div>
-                    <h5>Development</h5>
-                    <p>Leverage the power of code.</h>
-                  </div>
-                  <div>
-                    <div class="animicon" id="aicon-navbar-development"></div>
-                  </div>
-                </a>
-              </div>
-            </div>
-    
-            <div class="tabValue">
-              <div>
-    
-                <div>
-                  <span class="themedot"></span>
-                  <span class="themetitle">Let's Start!</span>
-                </div>
-                <h1>
-                  Get started with <br>
-                  Pioneers
-                </h1>
-                <p>
-                  Our top priority is to provide exceptional support to our clients throughout their entire project journey.
-                </p>
-                <a href="./contactUs.html" class="btnRounded">
-                  <span>Get Free Estimates Now</span>
-                  <span>
-                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                  </span>
-                </a>
-    
-              </div>
-    
-              <div>
-                <img src="../assets/icons/largeIconOnly.svg" alt="">
-              </div>
-            </div>
-    
-            <div class="footer">
-              <div class="border-top"></div>
-              <!-- <div class="creator">Made by Xaib</div> -->
-              <a class="LinkhoverGroup creator" style="cursor: unset;">
-                <div class="textonly">
-                  <div class="visibleTag">Made by Xaib</div>
-                  <div class="hiddenTag">Made by Xaib</div>
-                </div>
-              </a>
-    
-              <div class="icons">
-                <a href="/" class="LinkhoverGroup non-mousetracker">
-                  <div class="icononly">
-                    <img class="visibleTag" src="../assets/icons/header/dribble.svg" alt="">
-                    <img class="hiddenTag" src="../assets/icons/header/dribble.svg" alt="">
-                  </div>
-                </a>
-    
-                <a href="/" class="LinkhoverGroup non-mousetracker">
-                  <div class="icononly">
-                    <img class="visibleTag" src="../assets/icons/header/linkedin.svg" alt="">
-                    <img class="hiddenTag" src="../assets/icons/header/linkedin.svg" alt="">
-                  </div>
-                </a>
-    
-                <a href="/" class="LinkhoverGroup non-mousetracker">
-                  <div class="icononly">
-                    <img class="visibleTag" src="../assets/icons/header/instagram.svg" alt="">
-                    <img class="hiddenTag" src="../assets/icons/header/instagram.svg" alt="">
-                  </div>
-                </a>
-    
-              </div>
-            </div>
-    
-          </header>
+
+            </header>
         </div>
     </section>
 
@@ -265,12 +266,12 @@
                     <div class="textbg">Home</div>
                 </a>
                 <!-- nav link -->
-                <a href="../portfolio.html" class="nav-link non-mousetracker">
+                <a href="./portfolio.html" class="nav-link non-mousetracker">
                     <div class="text">Portfolio</div>
                     <div class="textbg">Portfolio</div>
                 </a>
                 <!-- nav link -->
-                <a href="../pages/aboutUs.html" class="nav-link non-mousetracker">
+                <a href="./aboutUs.html" class="nav-link non-mousetracker">
                     <div class="text">About Us</div>
                     <div class="textbg">About Us</div>
                 </a>
@@ -1866,10 +1867,10 @@
                             </div>
                         </a>
 
-                        <a href="../pages/unseenJourney.html" class="LinkhoverGroup mob-only">
+                        <a href="../pages/Journal.html" class="LinkhoverGroup mob-only">
                             <div>
-                                <div class="visibleTag">Stories</div>
-                                <div class="hiddenTag">Stories</div>
+                                <div class="visibleTag">Journal</div>
+                                <div class="hiddenTag">Journal</div>
                             </div>
 
                             <div>
@@ -1878,7 +1879,7 @@
                             </div>
                         </a>
 
-                        <a href="#pricingSec" class="LinkhoverGroup mob-only smoothScroller">
+                        <a href="/" class="LinkhoverGroup mob-only">
                             <div>
                                 <div class="visibleTag">Plans</div>
                                 <div class="hiddenTag">Plans</div>
@@ -1907,7 +1908,7 @@
                     </div>
 
                     <div class="tabsflex">
-                        <a href="#pricingSec" class="LinkhoverGroup smoothScroller">
+                        <a href="/" class="LinkhoverGroup">
                             <div>
                                 <div class="visibleTag">Plans</div>
                                 <div class="hiddenTag">Plans</div>
@@ -2032,7 +2033,7 @@
                 <div>
                     <div>
                         <h1>Quick</h1>
-                        <a href="#pricingSec" class="LinkhoverGroup smoothScroller">
+                        <a href="/" class="LinkhoverGroup">
                             <div>
                                 <div class="visibleTag">Pricing</div>
                                 <div class="hiddenTag">Pricing</div>

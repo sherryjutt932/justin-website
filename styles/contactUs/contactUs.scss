@@ -1,446 +1,453 @@
-.contactUsHeader {
-  height: fit-content !important;
-  .aboutUsMain {
-    & > div {
-      padding: 120px 0 !important;
-    }
-  }
-}
+.ContactUsSec {
+  form {
+    padding-top: 100px;
+    padding-bottom: 100px;
 
-.contactForm {
-  height: fit-content;
-  .discoverMoreWrapper {
-    top: -100px !important;
-  }
-  .contactFormCon {
-    padding: 120px 0px;
-    display: flex;
-    justify-content: space-between;
-    .stericcon {
-      flex-basis: 30%;
-      padding-right: 50px;
-      img {
-        max-width: 100%;
+    .inputGroup {
+      display: flex;
+      gap: 30px;
+      padding-bottom: 50px;
+
+      & > * {
+        flex: 1;
       }
-    }
-    .form {
-      flex-basis: 70%;
-      max-width: 1200px;
 
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 45px;
+      .inputDiv {
+        border-bottom: 1px solid var(--gray-c5);
 
-        .double {
-          display: flex;
-          gap: 35px;
-          width: 100%;
-          & > div {
-            flex-basis: 50%;
-          }
-        }
-        .inputcard.bigp {
-          padding-bottom: 130px;
-        }
-        .inputcard {
-          display: flex;
-          font-family: var(--Satoshi);
-          gap: 35px;
-          border-bottom: 1px solid #c5c5c5;
-          padding-bottom: 35px;
-          & > div {
-            &:nth-child(1) {
-              span {
-                color: rgba(0, 0, 0, 0.45);
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                position: relative;
-                top: -12px;
-              }
-            }
-            &:nth-child(2) {
-              display: flex;
-              flex-direction: column;
-              gap: 35px;
-              input {
-                font-family: var(--Satoshi) !important;
-                color: #000;
-                background-color: transparent;
-                border: none;
-                outline: none;
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-              }
-              input::placeholder {
-                color: #000;
-              }
-
-              label {
-                color: rgba(0, 0, 0, 0.35);
-                font-size: 22px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-              }
-            }
-          }
-        }
-
-        .btnDiv {
-          width: 100%;
-          display: flex;
-          justify-content: end;
-        }
-
-        .btnArrow {
-          justify-self: end;
-          border: none;
-          margin-top: 16px;
-          font-weight: 600;
-          font-family: var(--SatoshiM);
-          text-transform: uppercase;
+        label {
           display: flex;
           align-items: center;
-          text-decoration: none;
-          color: inherit;
-          background-color: transparent;
-          font-size: 18px;
-          line-height: 1;
-          width: fit-content;
-          cursor: pointer;
+          gap: 15px;
 
-          & > div {
-            position: relative;
-            padding-bottom: 4px;
+          font-family: var(--Satoshi);
+          font-weight: 300;
+          font-size: 22px;
+          color: var(--gray-2f);
 
-            & > div {
-              bottom: -6px;
-              background-color: var(--dark);
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%);
-              height: 2px;
-              width: 100%;
-              transition: all 300ms;
-            }
-          }
-
-          &:hover > div > div {
-            width: 0;
-          }
-
-          span {
-            color: var(--dark);
-            transition: all 300ms;
-            border: 1px dashed var(--dark);
-            background-color: var(--light);
-            border-radius: 100px;
+          .mand {
             display: block;
-            margin-left: 32px;
-            padding: 6px 32px;
-            height: 40px;
+            width: 15px;
+          }
+          .opt {
+            color: #999797;
+          }
+          .ico {
+            display: block;
+            width: 30px;
+          }
+          .title {
+            margin-left: 5px;
+          }
+        }
 
-            img {
-              vertical-align: middle;
+        input:not([type="radio"]):not([type="checkbox"]),
+        textarea {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          padding: 40px 50px;
+          min-width: 0;
+          width: 100%;
+
+          font-family: var(--Satoshi);
+          font-weight: 300;
+          font-size: 28px;
+          color: #000;
+          line-height: 130%;
+          resize: none;
+
+          &::placeholder {
+            color: #757575;
+          }
+        }
+
+        .checkboxGroup {
+          display: flex;
+          padding: 50px 5px;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          label {
+            color: #000;
+            cursor: pointer;
+          }
+
+          .checkbox {
+            cursor: pointer;
+            display: flex;
+            gap: 16px;
+            position: relative;
+            display: block;
+            align-items: center;
+            padding-left: 35px;
+            margin-bottom: 10px;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            input {
+              position: absolute;
+              opacity: 0;
+              left: 0;
+              z-index: 10;
+              top: 50%;
+              transform: translateY(-50%);
+              cursor: pointer;
+              height: 25px;
+              width: 25px;
+            }
+
+            /* Create a custom checkbox */
+            .checkmark {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 0;
+              height: 25px;
+              width: 25px;
+              background-color: #e2e2e2;
+              border: 1px solid #c5c5c5;
+              border-radius: 4px;
+            }
+
+            /* On mouse-over, add a grey background color */
+            &:hover input ~ .checkmark {
+              background-color: #ccc;
+            }
+
+            /* When the checkbox is checked, add a blue background */
+            & input:checked ~ .checkmark {
+              background-color: var(--sec);
+              border: 1px solid var(--sec);
+            }
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+              content: "";
+              position: absolute;
+              display: none;
+            }
+
+            /* Show the checkmark when checked */
+            & input:checked ~ .checkmark:after {
+              display: block;
+            }
+
+            /* Style the checkmark/indicator */
+            & .checkmark:after {
+              left: 8px;
+              top: 4px;
+              width: 5px;
+              height: 10px;
+              border: solid white;
+              border-width: 0 3px 3px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
             }
           }
-
-          &:hover span {
-            border: 1px dashed var(--light);
-          }
         }
       }
     }
   }
 }
 
-#aboutUsDiscoverMore {
-  padding-bottom: 120px;
-  height: fit-content;
+#ui-datepicker-div {
+  display: none;
+  background-color: #fff;
+  border: 1px solid #c5c5c5;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-top: -75px;
+  font-size: 18px;
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  .ui-datepicker-calendar thead th {
+    padding: 0.25rem 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2f2f2f;
+  }
+  .ui-datepicker-calendar tbody td {
+    width: 2.5rem;
+    text-align: center;
+    padding: 0;
+  }
+  .ui-datepicker-calendar tbody td a {
+    display: block;
+    border-radius: 200px;
+    line-height: 2.4rem;
+    transition: 0.3s all;
+    color: #2f2f2f;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  .ui-datepicker-calendar tbody td a:hover {
+    background-color: #ff262620;
+  }
+  .ui-datepicker-calendar tbody td a.ui-state-active {
+    background-color: var(--sec);
+    color: white;
+  }
+  .ui-datepicker-header a.ui-corner-all {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border-radius: 0.25rem;
+    transition: 0.3s all;
+  }
+  .ui-datepicker-header a.ui-corner-all:hover {
+    background-color: #eceff1;
+  }
+  .ui-datepicker-header a.ui-datepicker-prev {
+    left: 0;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 50%;
+    transform: rotate(180deg);
+  }
+  .ui-datepicker-header a.ui-datepicker-next {
+    right: 0;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 50%;
+  }
+  .ui-datepicker-header a > span {
+    display: none;
+  }
+  .ui-datepicker-title {
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding-bottom: 0.25rem;
+  }
+  .ui-datepicker-week-col {
+    color: #78909c;
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+}
+
+.time-picker {
   position: relative;
-  margin-bottom: -100vh;
+  display: inline-block;
+  .time-picker-wrapper {
+    position: absolute;
+    top: 100%;
+    margin-top: -75px;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #c5c5c5;
+    border-radius: 8px;
+    padding: 20px 40px;
+    padding-right: 20px;
 
-  .spacer {
-    height: 100vh;
-  }
+    p {
+      color: #999797;
+      font-size: 18px;
+      font-weight: 300;
+      font-family: var(--Satoshi);
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    small {
+      color: #000;
+      font-size: 16px;
+      font-weight: 300;
+      font-family: var(--Satoshi);
+      text-align: center;
+      width: 100%;
+      display: block;
+    }
+    .time-picker-popup {
+      overflow-y: auto;
+      max-height: 210px;
+      padding-right: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-  .discoverMoreWrapper {
-    position: sticky;
-    top: -50%;
-    height: fit-content;
+      div {
+        padding: 15px;
+        width: 265px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #e2e2e2;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+
+        font-family: var(--Satoshi);
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1;
+
+        &:hover {
+          background-color: #ff262620;
+        }
+        &.selected {
+          background-color: var(--sec);
+          color: white;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        border-radius: 100vh;
+        background: transparent;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #e2e2e2;
+        transition: background 300ms ease !important;
+        border-radius: 100vh;
+
+        &:hover {
+          background: #cfcfcf !important;
+        }
+      }
+    }
   }
 }
 
-.frequentlyAsked {
-  .frequentlyAskedCon {
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+  .icons {
     display: flex;
-    gap: 100px;
-    padding: 80px 0;
-    padding-bottom: 0px !important;
-    & > div {
-      &:nth-child(1) {
-        width: 40%;
-      }
-      &:nth-child(2) {
-        width: 60%;
+    gap: 20px;
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+
+    a {
+      gap: 20px;
+      background-color: var(--sec);
+      border-radius: 100px;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.mob-only {
+        display: flex !important;
       }
 
-      * {
-        transition: all 0.5s ease;
-      }
-
-      h1 {
-        color: var(--dark);
-        font-family: var(--NohemiL);
-        font-size: 80px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 95px; /* 118.75% */
-      }
-
-      h4 {
-        color: var(--dark);
-        font-family: var(--Satoshi);
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-
-      p {
-        color: var(--gray-79);
-        font-family: var(--Satoshi);
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px; /* 160% */
-      }
-
-      button {
-        border: none;
-        outline: none;
-        background-color: transparent;
-        padding: 10px;
-        cursor: pointer;
-      }
-
-      .quesCard {
+      & > div.icononly {
         position: relative;
-        background-color: transparent;
-        padding: 0 25px;
+        overflow: hidden;
         display: flex;
-        gap: 30px;
-        border-bottom: 1px solid var(--gray-c5);
+        width: fit-content;
         height: fit-content;
-        cursor: pointer;
-        &::before {
+        justify-content: center;
+        align-items: center;
+
+        * {
+          transition: all 400ms ease;
+        }
+
+        .hiddenTag {
           position: absolute;
-          content: "";
-          width: 100%;
-          height: 0%;
-          left: 0%;
-          bottom: 0%;
-          background-color: #fff;
-          z-index: -1;
-          transition: all 0.7s ease;
-        }
-        .ques {
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          gap: 0px;
-          margin: 42px 0;
-          overflow: hidden;
-
-          h4 {
-            padding: 10px 0;
-          }
-          p {
-            height: fit-content;
-            transform: translateY(110%);
-            transition: all 0.7s ease;
-            max-height: 0px;
-            overflow: hidden;
-          }
-        }
-        .index {
-          padding: 10px;
-          margin: 42px 0;
-        }
-        button {
-          padding: 10px;
-          margin: 42px 0;
-          img {
-            transform: rotate(0deg);
-          }
+          top: 100%;
+          left: -100%;
         }
       }
 
-      .quesCard.open {
-        &::before {
-          height: 100%;
-        }
-        .ques {
-          gap: 32px;
-          p {
-            transform: translateY(0%);
-            max-height: 300px;
+      &:hover {
+        & > div.icononly {
+          .visibleTag {
+            transform: translate3d(100%, -100%, 0);
           }
-        }
-        button {
-          img {
-            transform: rotate(180deg);
-          }
-        }
-      }
-      .quesCard.close {
-        &::before {
-          height: 0%;
-        }
-        .ques {
-          gap: 0px;
-          p {
-            max-height: 0px;
-            transform: translateY(110%);
-          }
-        }
-        button {
-          img {
-            transform: rotate(0deg);
+
+          .hiddenTag {
+            transform: translate3d(100%, -100%, 0);
           }
         }
       }
     }
+  }
+  .btnRounded {
+    margin-top: 0 !important;
   }
 }
 
 @media (max-width: 1700px) {
-  .contactUsHeader {
-    height: fit-content !important;
-    .aboutUsMain {
-      & > div {
-        padding: 110px 0 !important;
-      }
-    }
-  }
+  .ContactUsSec {
+    form {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      .inputGroup {
+        gap: 30px;
+        padding-bottom: 40px;
 
-  .contactForm {
-    .discoverMoreWrapper {
-      top: -100px !important;
-    }
-    .contactFormCon {
-      padding: 100px 0px;
-      display: flex;
-      .stericcon {
-        width: 30%;
-      }
-      .form {
-        width: 70%;
+        .inputDiv {
+          label {
+            gap: 10px;
+            font-size: 16px;
 
-        form {
-          display: flex;
-          flex-direction: column;
-          gap: 45px;
-          .double {
-            display: flex;
-            gap: 35px;
-            width: 100%;
-            & > div {
-              flex-basis: 50%;
+            .mand {
+              width: 12px;
             }
-          }
-          .inputcard.bigp {
-            padding-bottom: 80px;
-          }
-          .inputcard {
-            display: flex;
-            font-family: var(--Satoshi);
-            gap: 25px;
-            border-bottom: 1px solid #c5c5c5;
-            padding-bottom: 25px;
-            & > div {
-              &:nth-child(1) {
-                span {
-                  color: rgba(0, 0, 0, 0.45);
-                  font-size: 14px;
-                  line-height: 19.6px;
-                }
-              }
-              &:nth-child(2) {
-                gap: 25px;
-                input {
-                  font-size: 18px;
-                }
-                input::placeholder {
-                  color: #000;
-                }
-
-                label {
-                  font-size: 14px;
-                  line-height: 19.6px;
-                }
-              }
+            .ico {
+              width: 25px;
             }
           }
 
-          .btnArrow {
-            border: none;
-            font-size: 14px;
-            line-height: 21px;
-            margin-top: 16px;
-            font-weight: 600;
-            font-family: var(--SatoshiM);
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-            background-color: transparent;
-            cursor: pointer;
+          input:not([type="radio"]):not([type="checkbox"]),
+          textarea {
+            padding: 35px 40px;
+            font-size: 21px;
+          }
 
-            & > div {
-              position: relative;
-              padding-bottom: 4px;
+          .checkboxGroup {
+            padding: 40px 5px;
 
-              & > div {
-                background-color: var(--dark);
-                position: absolute;
-                bottom: -2px;
-                left: 50%;
-                transform: translateX(-50%);
-                height: 2px;
-                width: 100%;
-                transition: all 300ms;
+            .checkbox {
+              gap: 12px;
+              padding-left: 20px;
+              margin-bottom: 10px;
+              font-size: 18px;
+
+              input {
+                height: 15px;
+                width: 15px;
               }
-            }
 
-            &:hover > div > div {
-              width: 0;
-            }
-
-            span {
-              color: var(--dark);
-              transition: all 300ms;
-              height: 36px;
-              border: 1px dashed var(--dark);
-              background-color: var(--light);
-              border-radius: 100px;
-              display: block;
-              margin-left: 24px;
-              padding: 4px 24px;
-
-              img {
-                vertical-align: middle;
+              .checkmark {
+                height: 15px;
+                width: 15px;
               }
-            }
 
-            &:hover span {
-              border: 1px dashed var(--light);
+              & .checkmark:after {
+                left: 4px;
+                top: 2px;
+                width: 3px;
+                height: 6px;
+                border-width: 0 2px 2px 0;
+              }
             }
           }
         }
@@ -448,273 +455,157 @@
     }
   }
 
-  .frequentlyAsked {
-    .frequentlyAskedCon {
-      display: flex;
-      gap: 40px;
-      padding: 60px 0;
-      & > div {
-        &:nth-child(1) {
-          width: 40%;
-        }
-        &:nth-child(2) {
-          width: 60%;
-        }
+  #ui-datepicker-div {
+    transform: scale(0.9);
+    transform-origin: left top;
+    margin-top: -65px;
+  }
 
-        * {
-          transition: all 0.3s ease;
-        }
+  .time-picker {
+    transform: scale(0.8);
+    transform-origin: left top;
+    .time-picker-wrapper {
+      margin-top: -60px;
+    }
+  }
 
-        h1 {
-          font-size: 60px;
-          line-height: 70px; /* 118.75% */
-        }
+  .formFooter {
+    .icons {
+      gap: 20px;
+      img {
+        width: 22px;
+        height: 22px;
+      }
+      a {
+        width: 34px;
+        height: 34px;
+      }
+    }
+  }
+}
 
-        h4 {
-          font-size: 18px;
-          line-height: 24px; /* 160% */
-        }
+@media (max-width: 1024px) and (min-width: 501px) {
+  .ContactUsSec {
+    form {
+      padding-top: 40px;
+      padding-bottom: 40px;
 
-        p {
-          font-size: 18px;
-          line-height: 24px; /* 160% */
-        }
+      .inputGroup {
+        gap: 20px;
+        padding-bottom: 32px;
 
-        button {
-          padding: 10px;
-          img {
-            width: 15px;
+        .inputDiv {
+          label {
+            gap: 6px;
+            font-size: 12px;
+
+            .mand {
+              width: 9px;
+            }
+            .ico {
+              width: 18px;
+            }
+          }
+
+          input:not([type="radio"]):not([type="checkbox"]),
+          textarea {
+            padding: 25px 30px;
+            font-size: 16px;
+          }
+
+          .checkboxGroup {
+            padding: 30px 3px;
+
+            .checkbox {
+              gap: 6px;
+              padding-left: 20px;
+              margin-bottom: 10px;
+              font-size: 13px;
+
+              input,
+              .checkmark {
+                height: 12px;
+                width: 12px;
+              }
+
+              & .checkmark:after {
+                left: 3px;
+                top: 2px;
+                width: 2px;
+                height: 4px;
+                border-width: 0 1px 1px 0;
+              }
+            }
           }
         }
+      }
+    }
+  }
 
-        .quesCard {
-          background-color: transparent;
-          padding: 0 15px;
-          display: flex;
-          gap: 25px;
-          height: fit-content;
-          .ques,
-          .index,
-          button {
-            margin: 24px 0;
-          }
-        }
+  #ui-datepicker-div {
+    transform: scale(0.8);
+    transform-origin: left top;
+    margin-top: -50px;
+  }
 
-        .quesCard.open {
-          .ques {
-            gap: 14px;
-          }
-        }
-        .quesCard.close {
-          .ques {
-            gap: 0px;
-          }
-        }
+  .time-picker {
+    transform: scale(0.7);
+    transform-origin: left top;
+    .time-picker-wrapper {
+      margin-top: -45px;
+    }
+  }
+
+  .formFooter {
+    .icons {
+      gap: 20px;
+      img {
+        width: 15px;
+        height: 15px;
+      }
+      a {
+        width: 22px;
+        height: 22px;
       }
     }
   }
 }
 
 @media (max-width: 500px) {
-  .contactUsHeader {
-    height: fit-content !important;
-    .aboutUsMain {
-      & > div {
-        padding: 30px 0 !important;
-        h1 {
-          padding-bottom: 40px !important;
+  .ContactUsSec {
+    form {
+      padding-top: 60px;
+      padding-bottom: 40px;
+
+      .inputGroup {
+        gap: 20px;
+        padding-bottom: 32px;
+        flex-direction: column;
+
+        .inputDiv {
+          margin-bottom: 30px;
+
+          label {
+            gap: 6px;
+            font-size: 15px;
+
+            .mand {
+              width: 12px;
+            }
+            .ico {
+              width: 25px;
+            }
+          }
+
+          input:not([type="radio"]):not([type="checkbox"]),
+          textarea {
+            padding: 40px 40px;
+            font-size: 22px;
+          }
+
         }
       }
     }
   }
-
-  .contactForm {
-    .discoverMoreWrapper {
-      top: -70% !important;
-    }
-    .contactFormCon {
-      padding: 50px 0px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 40px;
-      .stericcon {
-        flex-basis: 100%;
-        width: 100%;
-        img {
-          width: 66px;
-        }
-      }
-      .form {
-        flex-basis: 100%;
-        max-width: 1200px;
-        width: 100%;
-
-        form {
-          display: flex;
-          flex-direction: column;
-          gap: 35px;
-          width: 100%;
-
-          .double {
-            display: flex;
-            gap: 25px;
-            flex-direction: column;
-            width: 100%;
-            & > div {
-              flex-basis: 100%;
-            }
-          }
-          .inputcard.bigp {
-            padding-bottom: 90px;
-          }
-          .inputcard {
-            display: flex;
-            font-family: var(--Satoshi);
-            gap: 25px;
-            border-bottom: 1px solid #c5c5c5;
-            padding-bottom: 30px;
-            & > div {
-              &:nth-child(1) {
-                span {
-                  font-size: 14.2px;
-                  top: -12px;
-                }
-              }
-              &:nth-child(2) {
-                display: flex;
-                flex-direction: column;
-                gap: 25px;
-                input {
-                  font-size: 22px;
-                }
-
-                label {
-                  font-size: 15px;
-                }
-              }
-            }
-          }
-
-          .btnArrow {
-            font-size: 14px;
-            line-height: 21px;
-            margin-top: 16px;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-
-            & > div {
-              position: relative;
-              padding-bottom: 4px;
-              font-weight: 400;
-              font-family: var(--Satoshi);
-
-              & > div {
-                background-color: var(--dark);
-                position: absolute;
-                bottom: -2px;
-                left: 50%;
-                transform: translateX(-50%);
-                height: 2px;
-                width: 100%;
-                transition: all 300ms;
-              }
-            }
-
-            &:hover > div > div {
-              width: 0;
-            }
-
-            span {
-              color: var(--dark);
-              transition: all 300ms;
-              height: 36px;
-              border: 1px dashed var(--dark);
-              background-color: var(--light);
-              margin-left: 24px;
-              padding: 4px 36px;
-              border-radius: 100px;
-              display: block;
-
-              img {
-                vertical-align: middle;
-              }
-            }
-
-            &:hover span {
-              border: 1px dashed var(--light);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  #aboutUsDiscoverMore {
-    padding-bottom: 120px;
-    height: fit-content;
-    position: relative;
-    margin-bottom: -100vh;
-
-    .spacer {
-      height: 100vh;
-    }
-
-    .discoverMoreWrapper {
-      position: sticky;
-      top: -140%;
-      height: fit-content;
-    }
-  }
-
-  .frequentlyAsked {
-    .frequentlyAskedCon {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      padding: 40px 0;
-      & > div {
-        &:nth-child(1) {
-          width: 100%;
-        }
-        &:nth-child(2) {
-          width: 100%;
-        }
-
-        * {
-          transition: all 0.3s ease;
-        }
-
-        h1 {
-          font-size: 36px;
-          line-height: 41px; /* 118.75% */
-        }
-
-        h4 {
-          font-size: 20px;
-          line-height: 26px; /* 160% */
-        }
-
-        p {
-          font-size: 18px;
-          line-height: 27px; /* 160% */
-        }
-
-        button {
-          padding: 10px;
-          img {
-            width: 15px;
-          }
-        }
-
-        .quesCard {
-          padding: 0px;
-          gap: 0px;
-        }
-      }
-    }
-  }
+  
 }

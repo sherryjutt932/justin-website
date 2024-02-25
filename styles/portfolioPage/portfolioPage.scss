@@ -610,6 +610,7 @@
 
       .otherServicesSec {
         flex: 1;
+        padding-bottom: 20px;
 
         #skillsBoxesRef {
           display: flex;
@@ -633,9 +634,9 @@
             //padding: 48px 0px;
 
             &:nth-child(1) {
-              position: absolute;
-              right: 20px;
-              top: -140px;
+              // position: absolute;
+              // right: 20px;
+              // top: -140px;
             }
             &:nth-child(2) {
               // mt-24 2xl:mt-32

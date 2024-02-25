@@ -1,391 +1,531 @@
 #aboutUsHeader {
-    .aboutUsMain {
-      & > div {
-        border: none !important;
-      }
+  .aboutUsMain {
+    & > div {
+      border: none !important;
     }
+  }
 }
 
 #feedbackSec {
-    margin-bottom: 0 !important;
-    .feedbackWrapper{
-        position: static !important;
-        padding-bottom: 0;
-        
-        .feedbackCon{
-            border-bottom: 1px solid var(--gray-c5);
-            padding-bottom: 60px;
-        }
+  margin-bottom: 0 !important;
+  .feedbackWrapper {
+    position: static !important;
+    padding-bottom: 0;
+
+    .feedbackCon {
+      // border-bottom: 1px solid var(--gray-c5);
+      padding-bottom: 60px;
     }
+  }
 }
 
-.DetailContent{
+.DetailContent {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  .custom {
+    .imgbg {
+      overflow: hidden;
+      img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      .mobileMok {
+        max-height: 80vh;
+      }
+    }
+  }
+
+  .themeheading {
+    padding-top: 0 !important;
+    padding-bottom: 60px !important;
+  }
+
+  .full {
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aStrech {
+    align-items: stretch !important;
+    & > div{
+      flex: 1;
+    }
+  }
+
+  .fit {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading {
+    width: 100%;
+    height: fit-content;
+
+    h1 {
+      color: #000;
+      font-family: var(--NohemiL);
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 95px; /* 118.75% */
+    }
+  }
+
+  .double {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+  }
+
+  .double.equal {
+    & > * {
+      flex: 1 1 50%;
+    }
+  }
+
+  .double.biggap {
     gap: 100px;
+  }
 
-    .custom{
-        .imgbg{
-            overflow: hidden;
-            img{
-                display: block;
-                width: auto;
-                max-width: 100%;
-                height: auto;
-                max-height: 100%;
-                object-fit: cover;
-            }
-            .mobileMok{
-                max-height: 80vh;
-            }
-        }
+  .Vspacing {
+    padding: 100px 0;
+    gap: 100px;
+  }
 
+  .Fcol {
+    flex-direction: column;
+  }
+
+  .productdetail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px;
+    h2 {
+      font-family: var(--NohemiL);
+      color: var(--dark);
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      margin-bottom: 25px;
+      text-transform: capitalize;
     }
-
-    .themeheading{
-        padding-top: 0 !important;
-        padding-bottom:60px !important;
+    p {
+      font-family: var(--Satoshi);
+      color: var(--gray-2f);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px; /* 145.455% */
     }
-
-    .full{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  }
+  .detailbox {
+    h3 {
+      font-family: var(--SatoshiM);
+      color: var(--dark);
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 25px;
     }
-
-    .aStrech{
-        align-items: stretch !important;
+    p {
+      font-family: var(--SatoshiR);
+      color: var(--gray-2f);
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px; /* 145.455% */
+      max-width: 45ch;
+      span {
+        color: var(--sec);
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+      }
     }
+  }
 
-
-    .fit{
-        width: 100%;
-        height: fit-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .imgbg {
+    background-color: #e2e2e2;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bigP {
+    padding: 120px;
+  }
+
+  .medP {
+    padding: 90px;
+  }
+
+  .smP {
+    padding: 32px;
+  }
+
+  .multipleImgs{
+    display: flex;
+    padding: 50px;
+    gap: 50px;
     
-    .heading{
-        width: 100%;
-        height: fit-content;
-
-        h1{
-            color: #000;
-            font-family: var(--NohemiL);
-            font-size: 80px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 95px; /* 118.75% */
-        }
+    & > div{
+      flex: 1;
     }
 
-    .double{
+  }
+}
+
+#aboutUsDiscoverMore {
+  background-color: #e2e2e2;
+  height: fit-content !important;
+  margin-bottom: unset;
+  padding-bottom: 50px;
+  .discoverMoreWrapper {
+    height: fit-content;
+    top: 0 !important;
+    position: static;
+  }
+}
+
+.ALLPROJECTS {
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    width: fit-content !important;
+  }
+  & > div {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+}
+
+.imagerow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 32px;
+  padding-top: 20px;
+  & > div {
+    img {
+      display: block;
+      width: 100%;
+    }
+    p {
+      color: #000;
+      font-family: var(--Satoshi);
+      font-size: 32px;
+      padding-top: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .title{
         display: flex;
-        gap: 32px;
         justify-content: space-between;
+        align-items: flex-end;
+      }
+    small{
+        color: #2f2f2f;
+        font-family: var(--Satoshi);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        display: none;
     }
-    
-    .double.equal{
-        &>*{
-            flex: 1 1 50%;
-        }
-    }
-    
-    .double.biggap{
-        gap: 100px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .DetailContent {
+    gap: 70px;
+
+    .themeheading {
+      padding-bottom: 40px !important;
     }
 
-    .Vspacing{
-        padding: 100px 0;
-        gap: 100px;
-    }
-    
-    .Fcol{
-        flex-direction: column;
+    .heading {
+      h1 {
+        max-width: 20ch;
+        font-size: 60px;
+        line-height: 70px; /* 118.75% */
+      }
     }
 
-    .productdetail{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 70px;
-        h2 {
-            font-family: var(--NohemiL);
-            color: var(--dark);
-            font-size: 60px;
-            font-style: normal;
-          font-weight: 300;
-          line-height: normal;
-          margin-bottom: 25px;
-          text-transform: capitalize;
-        }
-        p {
-            font-family: var(--Satoshi);
-          color: var(--dark);
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 36px; /* 145.455% */
-        }
+    .double.biggap {
+      gap: 70px;
+    }
 
+    .Vspacing {
+      padding: 70px 0;
+      gap: 70px;
+    }
+
+    .productdetail {
+      padding: 50px;
+      h2 {
+        font-size: 45px;
+        line-height: 60px;
+        margin-bottom: 25px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 28px; /* 145.455% */
+      }
     }
     .detailbox {
-        font-family: var(--SatoshiM);
-        h3 {
-            color: var(--dark);
-            font-size: 26px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            margin-bottom: 25px;
+      font-family: var(--SatoshiM);
+      h3 {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 22px; /* 145.455% */
+        max-width: 45ch;
+        span {
+          font-size: 16px;
+          line-height: 22px;
         }
-        p {
-          color: var(--gray-79);
-          font-size: 22px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 32px; /* 145.455% */
-          max-width: 45ch;
-          span {
-            color: var(--sec);
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 32px;
+      }
+    }
+
+    .bigP {
+      padding: 90px;
+    }
+
+    .medP {
+      padding: 70px;
+    }
+  }
+
+  .ALLPROJECTS {
+    h1 {
+      width: fit-content !important;
+    }
+
+    & > div {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+    }
+  }
+
+  .imagerow {
+    & > div {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 501px) {
+}
+
+@media (max-width: 500px) {
+  #aboutUsHeader {
+    .aboutUsMain {
+      & > div {
+        &:nth-child(1) {
+          flex-direction: row;
+
+          h1 {
+            padding-bottom: 0px !important;
+          }
+          .stericcon {
+            img {
+              width: 66px;
+            }
           }
         }
       }
+    }
+  }
 
-    .imgbg{
-        background-color: var(--gray-da);
-        overflow: hidden;
-        img{
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+  .DetailContent {
+    gap: 40px;
+    padding-bottom: 40px;
+
+    .themeheading {
+      padding-bottom: 40px !important;
     }
 
-    .center{
+    .heading {
+      h1 {
+        font-family: var(--Satoshi);
+        max-width: unset;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 41px; /* 118.75% */
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .double {
+      flex-direction: column;
+    }
+
+    .double.biggap {
+      gap: 40px;
+    }
+
+    .double.reverse {
+      flex-direction: column-reverse;
+    }
+
+    .halfimg {
+      width: 60% !important;
+    }
+
+    .Vspacing {
+      padding: 40px 0;
+      gap: 40px;
+    }
+
+    .productdetail {
+      padding: 24px;
+      h2 {
+        font-family: var(--Satoshi);
+        font-size: 36px;
+        line-height: 41px;
+        margin-bottom: 25px;
+        br {
+          display: none;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px; /* 145.455% */
+        letter-spacing: -0.3px;
+      }
+    }
+    .detailbox {
+      h3 {
+        font-family: var(--SatoshiM);
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      p {
+        font-family: var(--Satoshi);
+        font-size: 16px;
+        line-height: 24px; /* 145.455% */
+        max-width: 45ch;
+        font-weight: 400;
+        letter-spacing: -0.3px;
+        span {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .bigP {
+      padding: 35px;
+    }
+
+    .medP {
+      padding: 35px 20px;
+    }
+    
+    .mobileMok {
+      max-width: 250px;
+    }
+    
+    .multipleImgs{
+      padding: 35px 20px;
+      gap: 40px;
+      flex-direction: column;
+    }
+  }
+
+  .ALLPROJECTS {
+    & > div {
+      display: none !important;
+    }
+  }
+
+  .imagerow {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 58px;
+    padding-top: 20px;
+    & > div {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        flex-direction: column-reverse;
+        gap: 20px;
+        position: relative;
 
-    .bigP{
-        padding: 120px;
-    }
-
-    .medP{
-        padding: 90px;
-    }
-
-    .smP{
-        padding: 32px;
-    }
-}
-
-
-#aboutUsDiscoverMore{
-    height: 200vh !important;
-    .discoverMoreWrapper{
-        height: 100vh;
-        top: 0 !important;
-    }
-}
-
-@media (max-width: 1536px) {
-    .DetailContent{
-        gap: 70px;
-    
-        .themeheading{
-            padding-bottom:40px !important;
+        .stickybutton{
+            position: absolute;
+            right: 40px;
+            bottom: -40px;
         }
-    
-        .heading{
-    
-            h1{
-                max-width: 20ch;
-                font-size: 60px;
-                line-height: 70px; /* 118.75% */
-            }
+      img {
+        display: block;
+        width: 100%;
+      }
+      p {
+          font-size: 24px;
+          padding-top: 5px;
         }
-    
-        .double.biggap{
-            gap: 70px;
-        }
-    
-        .Vspacing{
-            padding: 70px 0;
-            gap: 70px;
-        }
-        
-        .productdetail{
-            padding: 50px;
-            h2 {
-                font-size: 45px;
-                line-height: 60px;
-              margin-bottom: 25px;
-            }
-            p {
-              font-size: 18px;
-              line-height: 28px; /* 145.455% */
-            }
-    
-        }
-        .detailbox {
-            font-family: var(--SatoshiM);
-            h3 {
-              font-size: 20px;
-              margin-bottom: 25px;
-            }
-            p {
-              font-size: 16px;
-              line-height: 22px; /* 145.455% */
-              max-width: 45ch;
-              span {
-                font-size: 16px;
-                line-height: 22px;
-              }
-            }
+
+        .title{
+            padding: 0 15px;
           }
-    
-        .bigP{
-            padding: 90px;
-        }
-    
-        .medP{
-            padding: 70px;
-        }
-    
-    }
-}
-
-
-@media (max-width: 500px) {
-    #aboutUsHeader {
-        .aboutUsMain {
-            & > div {
-              &:nth-child(1) {
-                flex-direction: row;
-
-                h1{
-                    padding-bottom: 0px !important;
-                }
-                .stericcon{
-                    img{
-                        width: 66px;
-                    }
-                }
-              }
-            }
+        small{
+            display: block;
         }
     }
+  }
 
-    .DetailContent{
-        gap: 40px;
-        padding-bottom: 40px;
-    
-        .themeheading{
-            padding-bottom:40px !important;
-        }
-    
-        .heading{
-    
-            h1{
-                font-family: var(--Satoshi);
-                max-width: unset;
-                font-size: 36px;
-                font-weight: 400;
-                line-height: 41px; /* 118.75% */
-                br{
-                    display: none;
-                }
-            }
-        }
-    
-        .double{
-            flex-direction: column;
-        }
+  
 
-        .double.biggap{
-            gap: 40px;
-        }
-
-        .double.reverse{
-            flex-direction: column-reverse;
-        }
-
-        .halfimg{
-            width: 60% !important;
-        }
-    
-        .Vspacing{
+  #aboutUsDiscoverMore{
+      .discoverMoreWrapper{
+        .heading {
             padding: 40px 0;
-            gap: 40px;
-        }
-        
-        .productdetail{
-            padding: 24px;
-            h2 {
-                font-family: var(--Satoshi);
-                font-size: 36px;
-                line-height: 41px;
-              margin-bottom: 25px;
-              br{
-                display: none;
-            }
-            }
-            p {
-              font-size: 16px;
-              line-height: 24px; /* 145.455% */
-              letter-spacing: -0.3px;
-            }
-    
-        }
-        .detailbox {
-            font-family: var(--SatoshiM);
-            h3 {
-              font-size: 18px;
-              margin-bottom: 15px;
-            }
-            p {
-                font-family: var(--Satoshi);
-              font-size: 16px;
-              line-height: 24px; /* 145.455% */
-              max-width: 45ch;
-              font-weight: 400;
-              letter-spacing: -0.3px;
-              span {
-                font-size: 16px;
-                line-height: 22px;
-              }
-            }
-          }
-    
-        .bigP{
-            padding: 35px;
-        }
-    
-        .medP{
-            padding: 35px;
+            padding-bottom: 0px !important;
         }
 
-        .mobileMok{
-            max-width: 250px;
+        .seeallwork{
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .logo-img img{
+                display: block;
+                width: 65px;
+                object-fit: contain;
+            }
         }
-    
-    }
-
-    #aboutUsDiscoverMore{
-        height: 250vh !important;
-        .discoverMoreWrapper{
-            height: 150vh;
-            top: -50vh !important;
-        }
-    }
+      }
+  }
 }
