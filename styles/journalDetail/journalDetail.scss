@@ -413,7 +413,7 @@
       border-radius: 8px;
     }
   }
-  
+
   .jdBody {
     gap: 25px;
     margin: 40px 0;
@@ -508,6 +508,50 @@
 }
 
 @media (max-width: 500px) {
+    .jdBody {
+        gap: 30px;
+        margin: 50px 0;
+    
+        .jdBody-table {
+            display: none;
+        }
+        .jdBody-content {
+          h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+          }
+          h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+          }
+          p {
+            padding-bottom: 30px;
+          }
+          p,
+          li {
+            font-size: 20px;
+            line-height: 30px;
+    
+            &.small {
+              font-size: 16px;
+              line-height: 26px;
+            }
+          }
+    
+          li {
+            margin-left: 25px;
+          }
+          ul,
+          ol {
+            padding-bottom: 30px;
+          }
+          img {
+            border-radius: 10px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+
   .jdFooter {
     .jdFooter-wrapper {
       .heading {
