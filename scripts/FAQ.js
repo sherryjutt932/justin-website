@@ -25,6 +25,7 @@ function setStickyTop() {
 // functions
 function toggleFAQ(card, groupSelector) {
   var frequentlyAskedCon = card.closest(groupSelector);
+  var parentGroup = card.closest(".questionsWrapper");
 
   if (frequentlyAskedCon) {
     var quesCards = frequentlyAskedCon.querySelectorAll(".quesCard");
@@ -48,24 +49,35 @@ function toggleFAQ(card, groupSelector) {
       card.querySelector(".ques .pWrapper p").offsetHeight + "px";
   }
 
-//   setStickyTop();
+  setTimeout(() => {
+  parentGroup.style.maxHeight = parentGroup.querySelector(".questions").offsetHeight + "px";
+  }, 310);
 }
 
 function toggleFAQGroup(button, groupSelector) {
   var frequentlyAskedCon = button.closest(groupSelector);
-
   var quesCardGroupss = document.querySelectorAll(".FAQGroup");
-  quesCardGroupss.forEach(function (quesCardGroup) {
-      if (quesCardGroup != frequentlyAskedCon) {
-        quesCardGroup.classList.remove("active");
-      }
-    });
+  
+  // if (frequentlyAskedCon) {
+  //   quesCardGroupss.forEach(function (quesCardGroup) {
+  //     if (quesCardGroup !== frequentlyAskedCon) {
+  //       quesCardGroup.classList.add("close");
+  //       quesCardGroup.classList.remove("open");
+  //   frequentlyAskedCon.querySelector(".questionsWrapper").style.maxHeight = "0px";
+        
+  //     }
+  //   });
+  // }
 
-  if (frequentlyAskedCon) {
-    frequentlyAskedCon.classList.toggle("active");
+  if (frequentlyAskedCon.classList.contains("open")) {
+    frequentlyAskedCon.classList.remove("open");
+    frequentlyAskedCon.classList.add("close");
+    frequentlyAskedCon.querySelector(".questionsWrapper").style.maxHeight = "0px";
+  } else {
+    frequentlyAskedCon.classList.remove("close");
+    frequentlyAskedCon.classList.add("open");
+    frequentlyAskedCon.querySelector(".questionsWrapper").style.maxHeight = frequentlyAskedCon.querySelector(".questions").offsetHeight + "px";
   }
-
-//   setStickyTop();
 }
 
 if (!isMobile()) {
@@ -73,9 +85,7 @@ if (!isMobile()) {
     var element = document.getElementById(elementId);
 
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
+      element.scrollIntoView({});
     }
 
     var frequentlyAskedCon = button.closest(".FAQMenu");
@@ -120,5 +130,3 @@ if (!isMobile()) {
   // Initial update to set the active section when the page loads
   updateActiveSection();
 }
-
-// setStickyTop();

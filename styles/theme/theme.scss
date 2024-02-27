@@ -757,8 +757,10 @@
         gap: 10px;
 
         h1 {
-          font-size: 40px;
+          font-size: 36px;
+          line-height: 42px;
           max-width: unset;
+          font-family: var(--SatoshiR);
         }
 
         img#rotateSteric {

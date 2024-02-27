@@ -155,7 +155,7 @@
   width: 100%;
   color: var(--dark);
   background: transparent;
-  transition: all 300ms ease;
+  transition: all 500ms ease;
   position: relative;
   z-index: 10;
 
@@ -1638,8 +1638,9 @@
         flex: 0;
         h1 {
           min-width: 1px;
-          max-width: 98%;
+          max-width: 95vw !important;
           white-space: wrap !important;
+
           br {
             display: none;
           }
@@ -1787,6 +1788,11 @@
         padding-top: 30px;
         padding-bottom: 30px;
         aspect-ratio: unset;
+
+        &:nth-child(2) {
+          border-right: none;
+        }
+
         h2 {
           font-size: 25px;
           line-height: normal;

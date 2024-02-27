@@ -191,37 +191,7 @@ if (!isMobile() && !isTab()) {
     },
   });
 
-  UIUXTimeline.to(
-    "#AnimDot1",
-    {
-      y: -(uiuxConElement.offsetHeight - animCircleWidth + AnimDotWidth + 3),
-      x: animCircleWidth - AnimDotWidth + 5,
-      ease: "none",
-    },
-    "a"
-  ).to(
-    "#AnimDot2",
-    {
-      y: -(uiuxConElement.offsetHeight - animCircleWidth + AnimDotWidth + 3),
-      x: -(animCircleWidth - AnimDotWidth + 5),
-      ease: "none",
-      onComplete: () => {
-        digitalDesign.classList.add("activeBlack");
-      },
-    },
-    "a"
-  );
-
-  ScrollTrigger.create({
-    trigger: "#unseenStories",
-    start: "31% top",
-    end: "71% top",
-    scrub: true,
-    animation: UIUXTimeline,
-    onEnterBack: () => {
-      digitalDesign.classList.remove("activeBlack");
-    },
-  });
+  digitalDesign.classList.add("activeBlack")
 
   var digitalDesignTimeline = gsap.timeline();
   var cardStack = document.getElementById("cardStack");

@@ -437,10 +437,14 @@
         h1 {
           font-size: 42px;
           line-height: 50px; /* 118.75% */
+          flex: 1 1 60%;
         }
-
+        
         & > div {
+          padding-right: 0;
+          flex: 1 1 40%;
           p {
+            max-width: 32ch;
             font-size: 15px;
             line-height: 21px; /* 150% */
             margin-bottom: 10px;

@@ -346,6 +346,101 @@
 }
 
 @media (max-width: 1024px) and (min-width: 501px) {
+  .DetailContent {
+    gap: 50px;
+
+    .themeheading {
+      padding-bottom: 40px !important;
+    }
+
+    .heading {
+      h1 {
+        max-width: 20ch;
+        font-size: 42px;
+        line-height: 50px; /* 118.75% */
+      }
+    }
+
+    .double.biggap {
+      gap: 50px;
+    }
+
+    .Vspacing {
+      padding: 50px 0;
+      gap: 50px;
+    }
+
+    .productdetail {
+      padding: 30px;
+      h2 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 22px; /* 145.455% */
+      }
+    }
+    .detailbox {
+      font-family: var(--SatoshiM);
+      h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 19px; /* 145.455% */
+        max-width: 45ch;
+        span {
+          font-size: 15px;
+        line-height: 20px;
+        }
+      }
+    }
+
+    .bigP {
+      padding: 50px;
+    }
+
+    .medP {
+      padding: 30px;
+    }
+
+    .custom {
+      .imgbg {
+        .mobileMok {
+          max-height: 500px;
+        }
+      }
+    }
+
+  }
+
+  .ALLPROJECTS {
+    padding: 40px 0 !important;
+    h1 {
+      font-size: 42px !important;
+      line-height: 50px !important;
+      width: fit-content !important;
+    }
+
+    & > div {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+    }
+  }
+
+  .imagerow {
+    padding-top: 0;
+    & > div {
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -505,8 +600,6 @@
         }
     }
   }
-
-  
 
   #aboutUsDiscoverMore{
       .discoverMoreWrapper{

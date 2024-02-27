@@ -306,21 +306,31 @@
         font-size: 24px;
         line-height: normal;
 
+
         .number {
           font-size: 10px;
           line-height: 10px;
+          left: 15px;
+          top: 15px;
+          width: 18px;
+          height: 18px;
         }
 
         .lable {
           font-size: 12px;
+          right: 15px;
+          top: 15px;
         }
 
         .arrow {
-          height: 14px;
+          left: 15px;
+          bottom: 13px;
+          height: 11px;
           img {
-            height: 14px;
+            height: 11px;
           }
         }
+
       }
     }
   }

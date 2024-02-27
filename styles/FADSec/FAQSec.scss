@@ -1,5 +1,7 @@
 .FAQSec {
-    overflow: hidden;
+  height: fit-content;
+  position: relative;
+
   .FAQGroup {
     margin: 50px 0;
     padding: 40px;
@@ -32,7 +34,7 @@
         cursor: pointer;
         z-index: 2;
         overflow: hidden;
-        
+
         &::before {
           border-radius: 8px;
           position: absolute;
@@ -99,7 +101,7 @@
           pointer-events: none;
           opacity: 0;
           display: flex;
-          
+
           button {
             width: 50px;
             height: 50px;
@@ -181,6 +183,21 @@
       }
     }
   }
+  .spacer {
+    display: none;
+  }
+
+  &.stickyFAQ {
+    margin-bottom: -100vh;
+    .FAQGroup {
+      position: sticky !important;
+      top: -30vh;
+    }
+    .spacer {
+      display: block;
+      height: 100vh;
+    }
+  }
 }
 
 @media (min-width: 1700px) {
@@ -193,20 +210,20 @@
       h1 {
         font-size: 80px;
         line-height: 95px; /* 118.75% */
-      margin-bottom: 50px;
+        margin-bottom: 50px;
       }
 
       .questions {
         .quesCard {
           padding: 0px 20px;
-          
+
           &::before {
             border-radius: 6px;
           }
 
           h2 {
             font-size: 18px;
-          padding-top: 5px;
+            padding-top: 5px;
           }
 
           .ques {
@@ -236,119 +253,134 @@
 }
 
 @media (max-width: 1024px) and (min-width: 501px) {
-    .FAQSec {
-      .FAQGroup {
-        margin: 30px 0;
-        padding: 40px;
-        border-radius: 8px;
-  
-        h1 {
-          font-size: 42px;
-          line-height: 51px; /* 118.75% */
-        }
-  
-        .questions {
-          .quesCard {
-            padding: 0px 20px;
-            
-            &::before {
-              border-radius: 8px;
+  .FAQSec {
+    .FAQGroup {
+      margin: 30px 0;
+      padding: 40px;
+      border-radius: 8px;
+
+      h1 {
+        font-size: 42px;
+        line-height: 51px; /* 118.75% */
+      }
+
+      .questions {
+        .quesCard {
+          padding: 0px 20px;
+
+          &::before {
+            border-radius: 8px;
+          }
+          h2 {
+            font-size: 14px;
+          }
+
+          .ques {
+            h4 {
+              font-size: 15px;
             }
-            h2 {
-              font-size: 14px;
+            p {
+              padding-top: 20px;
+              font-size: 11px;
+              line-height: 20px; /* 160% */
             }
-  
-            .ques {
-              h4 {
-                font-size: 15px;
-              }
-              p {
-                padding-top: 20px;
-                font-size: 11px;
-                line-height: 20px; /* 160% */
-              }
-            }
-            .btnWrapper {
-              left: unset;
-              right: 0px;
-              transform: translate(-50%, -50%) scale(1);
-              opacity: 1;
-              button {
-                width: 35px;
-                height: 35px;
-                > div {
-                  width: 13px;
-                  height: 1px;
-                }
+          }
+          .btnWrapper {
+            left: unset;
+            right: 0px;
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            button {
+              width: 35px;
+              height: 35px;
+              > div {
+                width: 13px;
+                height: 1px;
               }
             }
           }
         }
       }
     }
+    &.stickyFAQ {
+      margin-bottom: 0vh;
+      .FAQGroup {
+        position: static !important;
+        top: 0vh;
+      }
+      .spacer {
+        display: none;
+        height:0vh;
+      }
+    }
   }
+}
 
-
-  
 @media (max-width: 500px) {
-    .FAQSec {
-      .FAQGroup {
-        margin: 15px 0;
-        padding: 25px 15px;
-        border-radius: 8px;
-  
-        h1 {
-          font-size: 36px;
-          line-height: 41px; /* 118.75% */
-          font-family: var(--Satoshi);
-          font-weight: 400;
-          margin: 40px 0;
-        }
-  
-        .questions {
-          .quesCard {
-            padding: 0px 10px;
-            gap: 20px;
-            
-            &::before {
-              border-radius: 6px;
+  .FAQSec {
+    .FAQGroup {
+      margin: 15px 0;
+      padding: 25px 15px;
+      border-radius: 8px;
+
+      h1 {
+        font-size: 36px;
+        line-height: 41px; /* 118.75% */
+        font-family: var(--Satoshi);
+        font-weight: 400;
+        margin: 40px 0;
+      }
+
+      .questions {
+        .quesCard {
+          padding: 0px 10px;
+          gap: 20px;
+
+          &::before {
+            border-radius: 6px;
+          }
+
+          h2 {
+            margin: 30px 0;
+            font-size: 16px;
+            margin-left: 0;
+          }
+
+          .ques {
+            margin: 30px 0;
+            width: 75%;
+            h4 {
+              font-size: 19px;
             }
-  
-            h2 {
-                margin: 30px 0;
-              font-size: 16px;
-              margin-left: 0;
+            p {
+              padding-top: 30px;
+              font-size: 15px;
+              line-height: 25px; /* 160% */
             }
-  
-            .ques {
-                margin: 30px 0;
-                width: 75%;
-              h4 {
-                font-size: 19px;
-              }
-              p {
-                padding-top: 30px;
-                font-size: 15px;
-                line-height: 25px; /* 160% */
-              }
-            }
-            .btnWrapper {
-                left: unset;
-                right: -5px;
-                top: 45px;
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-              button {
-                width: 30px;
-                height: 30px;
-                > div {
-                  width: 11px;
-                  height: 1px;
-                }
+          }
+          .btnWrapper {
+            left: unset;
+            right: -5px;
+            top: 45px;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            button {
+              width: 30px;
+              height: 30px;
+              > div {
+                width: 11px;
+                height: 1px;
               }
             }
           }
         }
       }
     }
+
+    &.stickyFAQ {
+      .FAQGroup {
+        top: calc(-(100vw * 1.2));
+      }
+    }
   }
+}

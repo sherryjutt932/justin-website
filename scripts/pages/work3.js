@@ -77,7 +77,7 @@ if (isMobile()) {
         animatedline_length - svgdrawLength;
     },
   });
-} else {
+} else if(!isMobile() && !isTab()){
   let animated_line = document.getElementById("animatedlinepath");
   let animatedline_length = animated_line.getTotalLength();
   animated_line.style.strokeDasharray =
@@ -99,48 +99,48 @@ if (isMobile()) {
   });
 }
 
-if (isTab()) {
-  var currentWorkIndex = 0;
+// if (isTab()) {
+//   var currentWorkIndex = 0;
 
-  function nextWork() {
-    Array.from(workdetail_item).forEach((item) => {
-      item.classList.remove("open");
-    });
+//   function nextWork() {
+//     Array.from(workdetail_item).forEach((item) => {
+//       item.classList.remove("open");
+//     });
 
-    currentWorkIndex++;
-    if (currentWorkIndex >= workdetail_item.length) {
-      // If index goes beyond the length, set it to the last index
+//     currentWorkIndex++;
+//     if (currentWorkIndex >= workdetail_item.length) {
+//       // If index goes beyond the length, set it to the last index
       
-      currentWorkIndex = workdetail_item.length - 1;
-    }
+//       currentWorkIndex = workdetail_item.length - 1;
+//     }
     
-    setTimeout(() => {
-     gsap.to("#imgRef", {
-       yPercent: -(100 * currentWorkIndex),
-       duration:1,
-     });
-    }, 50);
-    workdetail_item[currentWorkIndex].classList.add("open");
-  }
+//     setTimeout(() => {
+//      gsap.to("#imgRef", {
+//        yPercent: -(100 * currentWorkIndex),
+//        duration:1,
+//      });
+//     }, 50);
+//     workdetail_item[currentWorkIndex].classList.add("open");
+//   }
 
-  function prevWork() {
-    Array.from(workdetail_item).forEach((item) => {
-      item.classList.remove("open");
-    });
+//   function prevWork() {
+//     Array.from(workdetail_item).forEach((item) => {
+//       item.classList.remove("open");
+//     });
 
-    currentWorkIndex--;
-    if (currentWorkIndex < 0) {
-      // If index goes below 0, set it to 0
+//     currentWorkIndex--;
+//     if (currentWorkIndex < 0) {
+//       // If index goes below 0, set it to 0
       
-      currentWorkIndex = 0;
-    }
+//       currentWorkIndex = 0;
+//     }
     
-    setTimeout(() => {
-      gsap.to("#imgRef", {
-        yPercent: -(100 * currentWorkIndex),
-        duration:1,
-      });
-     }, 50);
-    workdetail_item[currentWorkIndex].classList.add("open");
-  }
-}
+//     setTimeout(() => {
+//       gsap.to("#imgRef", {
+//         yPercent: -(100 * currentWorkIndex),
+//         duration:1,
+//       });
+//      }, 50);
+//     workdetail_item[currentWorkIndex].classList.add("open");
+//   }
+// }

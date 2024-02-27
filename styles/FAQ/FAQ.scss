@@ -356,7 +356,7 @@
           .ques {
             margin: 22px 0;
 
-            p{
+            p {
               padding-top: 0;
             }
           }
@@ -390,21 +390,97 @@
 @media (max-width: 1024px) and (min-width: 501px) {
   .FAQ {
     .FAQCon {
+      gap: 40px;
       & > div {
+        &:nth-child(1) {
+          .FAQMenu {
+            gap: 10px;
+            top: 60px;
+            margin-top: 60px;
+            padding-right: 10px;
+            .hoverBtnAnim {
+              font-size: 15px;
+              line-height: 1;
+            }
+          }
+        }
+        &:nth-child(2) {
+          .FAQGroup {
+            padding-top: 60px;
+
+            .FAQGroup_head {
+              margin-bottom: 15px;
+            }
+          }
+          button {
+            padding: 10px;
+            img {
+              width: 15px;
+            }
+          }
+        }
+
+        * {
+          transition: all 0.5s ease;
+        }
+
+        .double {
+          display: flex;
+          gap: 30px;
+        }
+
+        h2 {
+          font-size: 22px;
+          line-height: normal;
+        }
+
+        h4 {
+          font-size: 14px;
+          line-height: 1; /* 160% */
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 18px; /* 160% */
+          width: 90%;
+        }
+
         .quesCard {
+          background-color: transparent;
+          padding: 0 16px;
+          display: flex;
+          gap: 0px;
+          height: fit-content;
+          &::before {
+            border-radius: 6px;
+          }
+          .ques {
+            margin: 16px 0;
+
+            p {
+              padding-top: 0;
+            }
+          }
           .btnWrapper {
-            left: unset;
-            right: 0px;
-            transform: translate(-50%, 0%) scale(1);
-            opacity: 1;
+            top: 24px;
             button {
-              width: 35px;
-              height: 35px;
+              width: 25px;
+              height: 25px;
               > div {
-                width: 13px;
-                height: 1px;
+                width: 10px;
               }
             }
+          }
+        }
+
+        .quesCard.open {
+          .ques {
+            gap: 0px;
+          }
+        }
+        .quesCard.close {
+          .ques {
+            gap: 0px;
           }
         }
       }
@@ -418,7 +494,7 @@
       display: flex;
       gap: 75px;
       padding-bottom: 0px;
-      padding-top: 80px;
+      padding-top: 20px;
       position: relative;
       & > div {
         &:nth-child(1) {
@@ -447,15 +523,15 @@
                 top: 45px;
                 opacity: 1;
                 transform: translate(-50%, 0%) scale(1);
-              button {
-                width: 30px;
-                height: 30px;
-                > div {
-                  width: 11px;
-                  height: 1px;
+                button {
+                  width: 30px;
+                  height: 30px;
+                  > div {
+                    width: 11px;
+                    height: 1px;
+                  }
                 }
               }
-            }
 
               h2 {
                 font-family: var(--Satoshi);
@@ -471,20 +547,41 @@
                 }
               }
             }
-            .questions {
-              height: 0;
+            .questionsWrapper{
+              max-height: 0;
               overflow: hidden;
               margin-top: 0px;
             }
-          }
-
-          .FAQGroup.active {
-            border-bottom: 1px solid transparent;
             .questions {
               height: fit-content;
-              margin-top: 0px;
             }
           }
+
+          .FAQGroup.open {
+            border-bottom: 1px solid transparent;
+            .FAQGroup_head {
+              button {
+                transform: rotate(180deg);
+              }
+
+              
+            }
+          }
+
+          .FAQGroup.close {
+            border-bottom: 1px solid var(--gray-c5);
+            .questionsWrapper{
+              max-height: 0px !important;
+            }
+            .FAQGroup_head {
+              button {
+                transform: rotate(0deg);
+              }
+
+              
+            }
+          }
+
           button {
             padding: 10px;
             img {

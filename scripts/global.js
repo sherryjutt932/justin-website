@@ -268,6 +268,22 @@ Array.from(frombelowanim).forEach(element => {
   });
 });
 
+// -------------mount animation
+const frombelowanimS = document.getElementsByClassName("frombelowanimS");
+
+Array.from(frombelowanimS).forEach(element => {
+  gsap.fromTo(element, {
+    yPercent: 10, 
+    opacity: 0, 
+  },{
+    duration: 1, 
+    yPercent: 0, 
+    opacity: 1, 
+    ease: "sine", 
+    delay:0.3,
+  });
+});
+
 // -------------mount animation mobile
 if(isMobile()){
 const frombelowanimM = document.getElementsByClassName("frombelowanimM");

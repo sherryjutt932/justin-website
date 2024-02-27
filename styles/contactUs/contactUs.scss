@@ -1,7 +1,7 @@
 .ContactUsSec {
   form {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 40px;
 
     .inputGroup {
       display: flex;
@@ -245,6 +245,7 @@
 .time-picker {
   position: relative;
   display: inline-block;
+  width: 100%;
   .time-picker-wrapper {
     position: absolute;
     top: 100%;
@@ -338,8 +339,8 @@
     gap: 20px;
 
     img {
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
     }
 
     a {
@@ -398,7 +399,7 @@
   .ContactUsSec {
     form {
       padding-top: 60px;
-      padding-bottom: 60px;
+      padding-bottom: 20px;
       .inputGroup {
         gap: 30px;
         padding-bottom: 40px;
@@ -462,9 +463,9 @@
   }
 
   .time-picker {
-    transform: scale(0.8);
-    transform-origin: left top;
     .time-picker-wrapper {
+      transform: scale(0.8);
+      transform-origin: left top;
       margin-top: -60px;
     }
   }
@@ -488,7 +489,7 @@
   .ContactUsSec {
     form {
       padding-top: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 15px;
 
       .inputGroup {
         gap: 20px;
@@ -549,9 +550,9 @@
   }
 
   .time-picker {
-    transform: scale(0.7);
-    transform-origin: left top;
     .time-picker-wrapper {
+      transform: scale(0.7);
+      transform-origin: left top;
       margin-top: -45px;
     }
   }
@@ -575,7 +576,7 @@
   .ContactUsSec {
     form {
       padding-top: 60px;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
 
       .inputGroup {
         gap: 20px;
@@ -607,5 +608,20 @@
       }
     }
   }
+
+  #ui-datepicker-div {
+    margin-top: -50px;
+    width: 260px;
+    left: 50% !important;
+    transform:  scale(0.9) translateX(-50%);
+  }
   
+  .time-picker {
+    .time-picker-wrapper {
+      margin-top: -45px;
+      left: 50% !important;
+      transform: scale(0.8) translateX(-50%);
+    }
+  }
+
 }
