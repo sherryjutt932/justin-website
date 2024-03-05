@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering the product design process : best practices</title>
+    <link href="../styles/global.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/Navigation/navigation.css">
+    <link rel="stylesheet" href="../styles/ideas/ideas.css">
+    <link rel="stylesheet" href="../styles/theme/theme.css">
+    <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
+    <link rel="stylesheet" href="../styles/journalDetail/journalDetail.css">
+
+    <!-- packages -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- gsap -->
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+</head>
+
+<body>
+    <div id="mousefollower">
+        <img id="mousefollower-rightarrow" src="../assets/icons/navbarContentCardArrow.svg" alt="">
+        <div id="mousefollower-stickybutton" class="stickybutton non-mousetracker">
+            <a href="/">
+                <div id="magneticBtn">
+                    <div class="my-button">
+
+                        <div>
+                            <div id="Btnfirst" class="Btnfirst">
+                                View details
+                            </div>
+                            <div id="Btnsecond" class="Btnsecond">
+                                View details
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <section id="navigationSec" class="initial contentCont">
+        <div id="navigation">
+            <header>
+                <nav>
+                    <div class="logoimg">
+                        <div class="desk">
+                            <a href="/">
+                                <lottie-player class="logoanim"
+                                    src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                            </a>
+                        </div>
+                        <a class="mob" href="/">
+                            <img src="./assets/icons/mainlogo.svg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Home</div>
+                            <div class="textbg">Home</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="./portfolio.html" class="nav-link non-mousetracker">
+                            <div class="text">Portfolio</div>
+                            <div class="textbg">Portfolio</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="./aboutUs.html" class="nav-link non-mousetracker">
+                            <div class="text">About Us</div>
+                            <div class="textbg">About Us</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Pricing</div>
+                            <div class="textbg">Pricing</div>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="line"></div>
+                        <!-- nav link -->
+                        <div class="nav-link non-mousetracker">
+                            <div class="text">Login</div>
+                            <div class="textbg">Login</div>
+                        </div>
+
+                        <div id="navbtnplacer">
+                        </div>
+                    </div>
+
+                    <div class="border-bottom"></div>
+                </nav>
+
+                <div class="content">
+                    <div>
+                        <a href="./portfolio.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Portfolio</div>
+                                <div class="textbg">Portfolio</div>
+                            </div>
+                        </a>
+                        <a href="./Journal.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Journal</div>
+                                <div class="textbg">Journal</div>
+                            </div>
+                        </a>
+                        <a href="/" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Pricing</div>
+                                <div class="textbg">Pricing</div>
+                            </div>
+                        </a>
+                        <a href="./FAQ.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">FAQ's</div>
+                                <div class="textbg">FAQ's</div>
+                            </div>
+                        </a>
+                        <a href="./contactUs.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Contact</div>
+                                <div class="textbg">Contact</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="navigation-cards">
+                        <a class="card" href="./brandIdentity.html">
+                            <div>
+                                <h5>Brand Identity</h5>
+                                <p>Creative strategies for brands.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-brand"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="./UIUX.html">
+                            <div>
+                                <h5>UI UX</h5>
+                                <p>Handcraft the user experience.</h>
+                            </div>
+                            <div>
+                                <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="./webDevelopment.html">
+                            <div>
+                                <h5>Development</h5>
+                                <p>Leverage the power of code.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-development"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tabValue">
+                    <div>
+
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">Let's Start!</span>
+                        </div>
+                        <h1>
+                            Get started with <br>
+                            Pioneers
+                        </h1>
+                        <p>
+                            Our top priority is to provide exceptional support to our clients throughout their entire
+                            project journey.
+                        </p>
+                        <a href="./contactUs.html" class="btnRounded">
+                            <span>Get Free Estimates Now</span>
+                            <span>
+                                <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                                <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <div>
+                        <img src="../assets/icons/largeIconOnly.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="border-top"></div>
+                    <!-- <div class="creator">Made by Xaib</div> -->
+                    <a class="LinkhoverGroup creator" style="cursor: unset;">
+                        <div class="textonly">
+                            <div class="visibleTag">Made by Xaib</div>
+                            <div class="hiddenTag">Made by Xaib</div>
+                        </div>
+                    </a>
+
+                    <div class="icons">
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/dribble.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/dribble.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/linkedin.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/linkedin.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/instagram.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/instagram.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </section>
+
+    <section id="ThemePageHeader" class="contentCont herosection">
+        <nav>
+            <div class="logoimg">
+                <div class="desk">
+                    <a href="/">
+                        <lottie-player class="logoanim"
+                            src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                    </a>
+                </div>
+                <a href="/">
+                    <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+                </a>
+            </div>
+            <div class="navlinkscenter">
+                <!-- nav link -->
+                <a href="/" class="nav-link non-mousetracker">
+                    <div class="text">Home</div>
+                    <div class="textbg">Home</div>
+                </a>
+                <!-- nav link -->
+                <a href="./portfolio.html" class="nav-link non-mousetracker">
+                    <div class="text">Portfolio</div>
+                    <div class="textbg">Portfolio</div>
+                </a>
+                <!-- nav link -->
+                <a href="./aboutUs.html" class="nav-link non-mousetracker">
+                    <div class="text">About Us</div>
+                    <div class="textbg">About Us</div>
+                </a>
+                <!-- nav link -->
+                <a href="/" class="nav-link non-mousetracker">
+                    <div class="text">Pricing</div>
+                    <div class="textbg">Pricing</div>
+                </a>
+            </div>
+            <div>
+                <div class="line"></div>
+                <!-- nav link -->
+                <div class="nav-link non-mousetracker">
+                    <div class="text">Login</div>
+                    <div class="textbg">Login</div>
+                </div>
+
+                <div class="HeadrnavBtn">
+                    <button id="navAnimatedIcon" onclick="toggleNav()">
+                        <div id="hamburger-line1"></div>
+                        <div id="hamburger-line2"></div>
+                    </button>
+
+                    <div id="mobileNavBtn" class="initial">
+                        <div id="mobileNavBtn-FC">
+                            <div class="mobileNav-head">
+                                <h1>Menu</h1>
+                            </div>
+
+                            <a href="../pages/portfolio.html" class="mobileNav-item">
+                                <p>Portfolio</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/aboutUs.html" class="mobileNav-item">
+                                <p>About Us</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/Journal.html" class="mobileNav-item">
+                                <p>Journal</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/FAQ.html" class="mobileNav-item">
+                                <p>FAQ's</p>
+                                <div></div>
+                            </a>
+                            <a href="/" class="mobileNav-item">
+                                <p>Pricing</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/contactUs.html" class="mobileNav-item">
+                                <p>Contact Us</p>
+                                <div></div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-bottom"></div>
+        </nav>
+
+        <div class="ThemePageHead">
+            <div class="frombelowanim">
+                <div class="left">
+                    <h1>Mastering the product design process : best practices</h1>
+                </div>
+                <div class="right desktop">
+                    <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="divider contentCont">
+        <div></div>
+    </div>
+
+    <!-- place content here -->
+    <section class="jdHeader contentCont">
+        <div class="jdHeader-detail">
+            <p>Jan 12, 2024</p>
+            <p>UI/UX</p>
+        </div>
+        <div class="jdHeader-image">
+            <img src="../assets/images/Journal/detail3/jd1.png" alt="" class="parallexImage">
+        </div>
+    </section>
+
+    <section class="backButton contentCont">
+        <a href="./Journal.html">
+            <img src="../assets/icons/prev.svg" alt="">
+            <span>Return to journal</span>
+        </a>
+    </section>
+
+    <section class="jdBody contentCont">
+        <div class="jdBody-table">
+            <div class="jdBody-table-wrapper">
+                <div class="head">
+                    Table of contents
+                </div>
+                <div class="body">
+                    <a href="#jdc1" class="active">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">1. What Is Product Design?</div>
+                    </a>
+                    <a href="#jdc2">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">2. Understanding the Product Design Process: Overview</div>
+                    </a>
+                    <a href="#jdc3">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">3. The Importance of a Well-Defined Process</div>
+                    </a>
+                    <a href="#jdc4">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">4. Key Stages of the Product Design Process</div>
+                    </a>
+                    <a href="#jdc5">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">5. Design and Development</div>
+                    </a>
+                    <a href="#jdc6">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">6. Designing for User Experience (UX)</div>
+                    </a>
+                    <a href="#jdc7">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">7. Design Evaluation and Refinement</div>
+                    </a>
+                    <a href="#jdc8">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">8. Launch and Post-Launch Activities</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="jdBody-content">
+
+            <p>
+                After our fair share of product design experience, we take a peek into the strategies, techniques, and
+                insider know-how that have set the foundation for all professional to turn into master product designers
+                in the industry. We are aiming at a deep dive into ideation, iteration, and implementation and weaving
+                them together with user-centered product design principles, seamless technological integration, and a
+                focus on aligning with business goals.
+            </p>
+            <div class="line"></div>
+            <br>
+
+            <div id="jdc1" class="content-item">
+                <h3>
+                    1- What Is Product Design?
+                </h3>
+                <p>
+                    Product design is all about creating a user-centered solution that solves a problem and delivers
+                    value to both the user and the business. The main task of the product designer is to provide the
+                    right product to answer what the user currently needs.
+                </p>
+
+                <p>
+                    Effective product design is one of the key elements for businesses to remain competitive in today's
+                    market, especially when it comes to digital products. This is why product designers conduct user
+                    research upfront and, consciously or not - master project management techniques that stand as a
+                    backbone for trendy products.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd2.png" alt="">
+
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc2" class="content-item">
+                <h3>
+                    2- Lack of White Space
+                </h3>
+                <p>
+                    The product design process helps fulfil the roles and responsibilities of the product designer and
+                    their team by ensuring that the product meets the needs of the key user groups, is aesthetically
+                    pleasing, and functions as intended.
+                </p>
+                <p>
+                    By understanding the product design process, product designers can work more effectively with their
+                    team members and stakeholders, ensuring that everyone has the same vision and works towards the same
+                    goal. Ultimately, this leads to a better-designed product that is more likely to succeed in the
+                    market.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd3.png" alt="">
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc3" class="content-item">
+                <h3>
+                    3- The Importance of a Well-Defined Process
+                </h3>
+                <p>
+                    A well-defined process provides a clear roadmap for the entire product design, making it easier for
+                    everyone involved to understand what needs to be done and when.
+                </p>
+                <p>
+                    It enables multiple stakeholders to collaborate effectively with the business goal in mind. A
+                    well-defined process allows for the integration of different perspectives and skill sets, ensuring
+                    that the final design is robust and meets the needs of the target audience.
+                </p>
+
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc4" class="content-item">
+                <h3>
+                    4- Key Stages of the Product Design Process
+                </h3>
+                <p>
+                    During the product research phase and ideation stage of the product design process, designers focus
+                    on generating creative ideas based on user analysis and conducting market research to ensure that
+                    the product will meet the needs of potential customers. This stage is crucial to product success and
+                    can help ensure that it is well-received by its target audience.
+                </p>
+                <p>
+                    By doing user and market research, designers can create a product that meets the needs of real users
+                    and stands out in a crowded market. This can lead to increased sales, positive brand recognition,
+                    and customer loyalty.
+                </p>
+                <h3>
+                    Understanding User Needs and Pain Points
+                </h3>
+                <p>
+                    To generate truly creative ideas, it is important to have insights into the target market and the
+                    user’s pain points. This includes user research, creating user personas, and user journey mapping.
+                    By doing so, product teams can gain a better understanding of user interaction with their future
+                    product.
+                </p>
+                <p>
+                    The process of conducting user research involves gathering data on user demographics, problems,
+                    needs, fears, and desires. This helps businesses to define the product and improve it to better meet
+                    those needs and create a more satisfying user journey.
+                </p>
+                <h3>
+                    Conducting Market Research
+                </h3>
+                <p>
+                    Conducting market research begins with identifying direct and indirect competitors. Direct
+                    competitors are companies that offer similar products, while indirect competitors offer products
+                    that are related or can be substituted for the product being developed. It is recommended to
+                    identify the top three direct competitors and an equal number of indirect competitors.
+                </p>
+                <p>
+                    After identifying competitors, it is important to identify areas where the product being developed
+                    can differentiate itself and improve upon existing products.
+                </p>
+                <h3>
+                    Understanding the Project's Scope
+                </h3>
+                <p>
+                    A clear idea of the project's scope and goals should be the lead for all activities to follow.
+                    Starting from the business goal and product design specification and finishing with the project's
+                    timeline, a skilled product designer would always have these at hand to go back to.
+                </p>
+                <p>
+                    Making sure every step stays aligned with the project's scope will help locate resources better to
+                    ensure a smooth product development.
+                </p>
+                <h3>
+                    Ideation and Conceptualization
+                </h3>
+                <p>
+                    During this phase, designers generate and refine ideas for the product. This involves brainstorming,
+                    research, and ideation sessions to identify the key features that should be included. The goal of
+                    this stage is to develop reliable and realistic representations of the product's purpose, target
+                    users, and functionality.
+                </p>
+                <h3>
+                    Ideation Techniques and Tools
+                </h3>
+                <p>
+                    Idea generation techniques and tools can aid in the selection and refinement by helping teams to
+                    evaluate which ideas are most feasible, desirable, and viable:
+                </p>
+                <ul>
+                    <li>
+                        <b>Brainstorming</b> is a well-known idea-generation technique that involves generating a large
+                        number of ideas in a short amount of time.
+                    </li>
+                    <li>
+                        <b>Mind mapping</b> is a visual brainstorming approach that helps to create connections between
+                        ideas.
+                    </li>
+                    <li>
+                        <b>Design thinking</b> is a problem-solving approach that focuses on understanding user needs
+                        and generating solutions that meet them.
+                    </li>
+                </ul>
+                <p>
+                    One of the popular brainstorming techniques is the SCAMPER method. SCAMPER stands for Substitute,
+                    Combine, Adapt, Modify, Put to another use, Eliminate, and Rearrange. This technique involves asking
+                    questions that help to generate new ideas by exploring possible changes to existing products or
+                    services.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd4.png" alt="">
+                <h3>
+                    Generating Creative Ideas
+                </h3>
+                <p>
+                    When generating creative ideas for product design, it is important to understand the process. The
+                    goal is to come up with innovative and useful suggestions. To do this, designers often use
+                    brainstorming sessions to generate a large number of ideas quickly.
+                </p>
+                <p>
+                    During this process, all ideas are considered and evaluated without judgment. Once a large number
+                    has been generated, designers can then begin to evaluate them based on their potential impact,
+                    feasibility, and relevance. By understanding what motivates and frustrates the target market,
+                    designers can create products that meet a real need and stand out in a crowded marketplace. Without
+                    this understanding, ideas may be interesting but ultimately irrelevant to the target market.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd5.png" alt="">
+                <h3>
+                    Developing Design Concepts
+                </h3>
+                <p>
+                    Developing design concepts involves several steps in the conceptual design phase. The first step is
+                    defining the problem to be solved. This step involves understanding the user's needs and
+                    requirements and identifying any constraints that may impact the design. The next step is refining
+                    the product design specification, which involves creating a detailed description of the product's
+                    features and functionality.
+                </p>
+                <p>
+                    After the initial problem definition, designers will investigate existing solutions. The design team
+                    then generates product ideas and concepts and evaluates them. This can involve creating prototypes
+                    and user testing to ensure that the solution meets the user's needs.
+                </p>
+                <p>
+                    The process will often end with design iterating, going back through the previous steps as needed
+                    until developing a concept that meets the project requirements.
+                </p>
+
+                <h3>
+                    Prototyping and Wireframing
+                </h3>
+                <p>
+                    Conceptualization and prototyping are important stages in the product design process. Prototyping
+                    involves creating a working model of the product to test its feasibility and functionality.
+                </p>
+                <p>
+                    Building prototypes is an important step in the design process because it can help identify
+                    potential issues early on and refine the product before building the final solution. Prototyping can
+                    also be used to gather feedback from users and stakeholders, which can inform the design and
+                    development of the product.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd6.png" alt="">
+
+                <p>
+                    There are different types of prototypes that can be used in the design process, including
+                    low-fidelity and high-fidelity prototypes. Here is the difference:
+                </p>
+                <ol>
+                    <li>
+                        <b>Low-fidelity</b> prototypes are quick and easy to create, often used in the early stages of
+                        the design process to explore different concepts.
+                    </li>
+                    <li>
+                        <b>High-fidelity</b> prototypes are more polished and detailed and used to simulate the final
+                        product as closely as possible.
+                    </li>
+                </ol>
+                <p>
+                    Designers should select the appropriate prototyping technique based on the stage of the design
+                    process and the prototype goals. For example, low-fidelity prototypes may be more appropriate for
+                    exploring design concepts, while high-fidelity prototypes may be better suited for testing specific
+                    product features and functions.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd7.png" alt="">
+
+
+                <h3>
+                    Rapid Prototyping Techniques
+                </h3>
+                <p>
+                    Rapid prototyping techniques are an essential part of the product design process. Prototyping
+                    enables designers to test their ideas and designs quickly and efficiently. Rapid prototyping
+                    techniques take this process one step further, allowing designers to create prototypes in a fraction
+                    of the time it would take with traditional methods.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd8.png" alt="">
+                <p>
+                    The process can be broken down into three stages: prototyping, reviewing, and refining. In the
+                    prototyping stage, designers create a basic prototype of their product. In the reviewing stage, the
+                    prototype is tested, and feedback is collected. Finally, in the refining stage, the feedback is used
+                    to make changes and improvements. This process is repeated until the final product is ready for
+                    production.
+                </p>
+
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc5" class="content-item">
+                <h3>
+                    5- Design and Development
+                </h3>
+                <p>
+                    Design plays a crucial role in shaping the perception of a product and influencing purchasing
+                    decisions. Designers must strike the right balance between form and function, incorporate brand
+                    identity into the design, and choose the right design approach to create a compelling user
+                    experience and build brand identity.
+                </p>
+                <h3>
+                    Visuals Influence Consumer Perception and Purchasing Decisions
+                </h3>
+                <p>
+                    Design aesthetics can significantly impact consumer perception and purchasing decisions.
+                    Aesthetically pleasing products are perceived to be of higher quality and more reliable, leading to
+                    an increased willingness to pay. In contrast, poor design can result in negative perceptions,
+                    leading to a decrease in sales.
+                </p>
+                <h3>
+                    Design Aesthetics Strengthen Brand Identity
+                </h3>
+                <p>
+                    Incorporating brand identity into the design requires utilizing elements such as color palette,
+                    typography, and visual style that align with the brand's personality and values. Consistency is also
+                    crucial in representing the brand across all design elements, including graphics, user interfaces,
+                    and marketing materials. A consistent brand identity helps build brand recognition and loyalty.
+                </p>
+                <h3>
+                    Striking the Right Balance Between Form and Function
+                </h3>
+                <p>
+                    An aesthetically pleasing design can enhance the user experience and differentiate the product.
+                    However, functionality should not be sacrificed for the sake of aesthetics. Products that don't
+                    perform as expected will not succeed in the market, regardless of how good they look.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd9.png" alt="">
+                <h3>
+                    Minimalism vs Rich Design: Choosing the Right Approach
+                </h3>
+                <p>
+                    Minimalism and rich design are two approaches to product design, each with its advantages and
+                    considerations. Minimalism emphasizes simplicity and functionality, while rich design focuses on
+                    visual appeal and immersive experiences. Designers must choose the approach that aligns with the
+                    brand's personality to create the desired user experience.
+                </p>
+
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc6" class="content-item">
+                <h3>
+                    6- Designing for User Experience (UX)
+                </h3>
+                <p>
+                    Incorporating UX in the product design process is crucial to ensure the success of a product. UX
+                    designers focus on refining a product based on user behavior research and journey maps, which help
+                    in creating intuitive and seamless user experiences. By incorporating UX principles, designers can
+                    strike the right balance between aesthetics and functionality.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd10.png" alt="">
+                <p>
+                    This results in products that are not only visually appealing but also user-friendly, increasing
+                    user satisfaction. Therefore, it is essential to involve UX designers in the product design process
+                    from the beginning to ensure that users' needs are met and the product is successful.
+                </p>
+                <h3>
+                    Understanding UX Design Principles
+                </h3>
+                <p>
+                    UX design principles are a set of guidelines that help UX designers refine a product based on
+                    research into user behavior and increase user satisfaction. By following these principles, designers
+                    can create products that are not only easy to use but also provide an enjoyable user experience.
+                </p>
+                <p>
+                    During the conceptual design phase, designers typically follow the principles of product design that
+                    make it easier for everyone to stay on the same page with the business objectives and product
+                    strategy.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd11.png" alt="">
+                <h3>
+                    Intuitive and Seamless User Journey mapping
+                </h3>
+                <p>
+                    Creating intuitive and seamless user experiences is essential in the product design process.
+                    One effective way to create these experiences is through user journey mapping. This process involves
+                    identifying important goals and incorporating empathy maps to explore different versions of each
+                    journey.
+                </p>
+                <h3>
+                    Development Collaboration
+                </h3>
+                <p>
+                    Collaboration and communication are key to implementing design thinking. Creating a product that
+                    solves a user's problem requires input from multiple perspectives. <br>
+                    To successfully create a product that meets user needs and satisfies stakeholders, designers must
+                    work closely with others involved in the project.
+                </p>
+                <h3>
+                    The Role of Collaboration in Product Design
+                </h3>
+                <p>
+                    Collaboration is a critical component of the product design process. <br>
+                    Design collaboration tools play a vital role in enhancing collaboration efficiency and facilitating
+                    remote collaboration. By enabling team members to share ideas, provide feedback, and track progress
+                    in real-time, these tools help to streamline the design process and ensure that projects are
+                    completed on time and within budget.
+                </p>
+                <h3>
+                    Effective Communication Between Designers and Stakeholders
+                </h3>
+                <p>
+                    Effective communication is crucial between designers and stakeholders to ensure that the product
+                    design process runs smoothly. That's how design concepts can be understood and approved by the team
+                    and stakeholders. A well-structured communication often involves a kick-off meeting, regular update
+                    meetings and a final reflection.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd12.png" alt="">
+
+                <h3>
+                    Using Design Collaboration Tools
+                </h3>
+                <p>
+                    Using design collaboration tools can be an essential component of the product design process. With
+                    popular tools like Figma and InVision, teams can quickly iterate through design ideas, build
+                    prototypes, and gather feedback from stakeholders.
+                </p>
+                <p>
+                    A visualization tool facilitates efficient workflow by enabling designers, product managers, and
+                    engineers to work together seamlessly. Designers can share their work with others, receive feedback,
+                    and make changes in real-time. Product managers can track progress, provide input, and ensure that
+                    the team is aligned with business goals. Engineers can provide technical input and ensure that
+                    designs can be implemented effectively.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc7" class="content-item">
+                <h3>
+                    7- Design Evaluation and Refinement
+                </h3>
+                <p>
+                    Design evaluation and refinement is a critical process in the development of effective product
+                    design. It involves assessing the resulting design and improving its effectiveness through a series
+                    of steps. <br>
+                    It sometimes involves making changes to the product's features, improving its functionality, or
+                    adjusting its marketing strategy.
+                </p>
+                <h3>
+                    Usability Testing
+                </h3>
+                <p>
+                    A good usability test should include realistic scenarios that users are likely to encounter in
+                    real-life use, and it should measure both task success and user satisfaction. The test should also
+                    be conducted in a neutral and unbiased manner, with no leading questions or cues that might
+                    influence user behavior.
+                </p>
+                <p>
+                    There are different methods of conducting usability tests, depending on the product, the stage of
+                    development, and the resources available:
+                </p>
+                <ul>
+                    <li>
+                        Lab testing - Users are observed and interact with the product in a controlled environment.
+                    </li>
+                    <li>
+                        Guerrilla testin - Researchers go out into the field and approach people randomly to test the
+                        product.
+                    </li>
+                    <li>
+                        Remote usability testing - Users interact with the product from their own devices and locations.
+                    </li>
+                </ul>
+                <h3>
+                    Gathering Feedback from Stakeholders and User Research
+                </h3>
+                <p>
+                    This step provides valuable insights into user needs and preferences, which can inform product
+                    design decisions. Additionally, gathering feedback early and often can help avoid the need for major
+                    rework down the line.
+                </p>
+                <p>
+                    There are several strategies and methods for collecting feedback from users, including online
+                    surveys, email questionnaires, and interviews. These methods can be used to gather both quantitative
+                    and qualitative data, providing a well-rounded understanding of the end user:
+                </p>
+                <img src="../assets/images/Journal/detail3/jd13.png" alt="">
+                <ul>
+                    <li>
+                        <b>Online surveys</b> are a cost-effective way to gather feedback from a large number of users.
+                    </li>
+                    <li>
+                        <b>Email questionnaires</b> are another option for gathering feedback, particularly for users
+                        who are more difficult to reach through other methods. These questionnaires can also be
+                        personalized.
+                    </li>
+                    <li>
+                        <b>Interviews</b> can provide more in-depth insights into user needs and preferences.
+                    </li>
+                </ul>
+                <h3>
+                    Iterative Product Development Process
+                </h3>
+                <p>
+                    The importance of iteration in creating a successful product design cannot be overstated.
+                </p>
+                <p>
+                    Through each iteration, designers gain valuable insights into the user experience and can make
+                    informed decisions about how to improve the product. This process helps to ensure that the final
+                    product is not only functional and attractive but also meets the user's needs and expectations.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd14.png" alt="">
+                <h3>
+                    Importance of Rigorous Testing
+                </h3>
+                <p>
+                    Rigorous testing ensures that the product design meets the intended outcomes and provides a great
+                    user experience. Adequate testing also helps to ensure that the product is safe, compliant with
+                    industry standards and meets the needs of the intended audience.
+                </p>
+                <p>
+                    By investing time and resources into rigorous testing, designers can create products that are not
+                    only functional but also enjoyable to use, ultimately leading to increased customer satisfaction and
+                    loyalty.
+                </p>
+                <h3>
+                    Types of Testing in Product Design
+                </h3>
+                <p>
+                    Two common types of testing in product design are A/B testing and SWOT analysis.
+                </p>
+                <p>
+                    <b>A/B testing</b> involves comparing two design versions to see which performs better with users,
+                    allowing for data-driven design decisions. <br>
+                    <b>SWOT analysis</b> provides an objective assessment of a product design's strengths, weaknesses,
+                    opportunities, and threats.
+                </p>
+                <img src="../assets/images/Journal/detail3/jd15.png" alt="">
+                <h3>
+                    Ensuring Quality and Performance
+                </h3>
+                <p>
+                    Quality assurance (QA) is essential to ensure that the final product meets customer expectations and
+                    industry standards. Conducting pre-release testing helps establish the quality of the solution and
+                    ensure its accordance with requirements and target audience expectations.
+                </p>
+                <p>
+                    This process involves testing the product at different stages of the design process to identify and
+                    address any issues that may arise.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc8" class="content-item">
+                <h3>
+                    8- Launch and Post-Launch Activities
+                </h3>
+                <p>
+                    Once the product has been developed and tested, the team will move into the launch phase. During
+                    this phase, they will work to create marketing materials and launch campaigns that will promote the
+                    product to its target users.
+                </p>
+                <p>
+                    After the product has launched, the team will shift their focus to post-launch activities. This may
+                    include monitoring user satisfaction and engagement, analyzing product performance metrics, and
+                    making updates and improvements based on consumer's opinion.
+                </p>
+
+                <h3>
+                    Collaboration With Development Teams
+                </h3>
+                <p>
+                    Benefits of collaboration between the product design team and the development team include improved
+                    functionality and feasibility of design concepts, as well as a shared understanding of the product
+                    vision and goals.
+                </p>
+                <p>
+                    It is important to establish clear communication channels and create a shared understanding of the
+                    product vision to avoid any communication challenges along the way.
+                </p>
+                <h3>
+                    Overcoming Implementation Challenges
+                </h3>
+                <p>
+                    The implementation phase of the product design process can present a range of challenges, such as
+                    technical constraints and unexpected issues. To ensure a successful product launch, designers should
+                    keep a few key considerations in mind. These include:
+                </p>
+                <ul>
+                    <li>
+                        Breaking down the implementation process into smaller, more manageable tasks
+                    </li>
+                    <li>
+                        Creating contingency plans
+                    </li>
+                    <li>
+                        Staying flexible in the face of unexpected challenges.
+                    </li>
+                </ul>
+                <img src="../assets/images/Journal/detail3/jd16.png" alt="">
+                <h3>
+                    Planning for a Successful Product Launch
+                </h3>
+                <p>
+                    Planning for a successful product launch involves careful consideration of a range of factors,
+                    including market research, product positioning, and marketing strategies. It is important to create
+                    a clear plan that outlines the steps involved in launching the product and identifies potential
+                    risks and challenges.
+                </p>
+                <h3>
+                    Post-Launch Evaluation and Feedback
+                </h3>
+                <p>
+                    Conducting a post-launch evaluation and gathering feedback is an important part of the product
+                    design process. This process can provide valuable insights into the success of the product, as well
+                    as areas for improvement. It is important to gather feedback from a range of sources, including
+                    users and stakeholders, and to use metrics to track product performance over time.
+                </p>
+                <h3>
+                    Analyzing User Feedback and Metrics
+                </h3>
+                <p>
+                    Analyzing user feedback and metrics is a key part of the product design process. This process
+                    involves collecting and analyzing data on user behavior, preferences, and satisfaction, as well as
+                    tracking key performance indicators such as user engagement and retention. By analyzing this data,
+                    designers can gain valuable insights into refining the product and improving its performance.
+                </p>
+                <h3>
+                    Continuous Improvement and Updates
+                </h3>
+                <p>
+                    Continuous improvement and updates are essential for ensuring that the product meets the evolving
+                    needs of the users and market. By analyzing customer assessment and metrics, designers can identify
+                    areas for improvement and prioritize updates accordingly. It is important to stay agile and
+                    responsive to changing user needs and market trends.
+                </p>
+                <h3>
+                    Post-Launch Support and Maintenance
+                </h3>
+                <p>
+                    Post-launch support and maintenance are important for ensuring the ongoing success of the product.
+                    This involves monitoring the key metrics of the product, catching bugs and issues, and implementing
+                    A/B testing to refine and improve the product over time. By providing ongoing support and
+                    maintenance, designers can ensure that the product continues to be a proper solution for user needs
+                    and remains competitive in the market.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divider contentCont">
+        <div></div>
+    </div>
+
+    <section class="jdFooter contentCont">
+        <div class="jdFooter-wrapper">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Journals</span>
+            </div>
+
+            <div class="ALLPROJECTS heading">
+                <h1>
+                    Check our <br>
+                    other journals
+                </h1>
+                <div>
+                    <a href="./Journal.html" class="btnRounded">
+                        <span>See All Journals</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="imagerow">
+                <div>
+                    <div class="followSTB">
+                        <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html">
+                            <img src="../assets/images/Journal/Journal4.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            4 key design strategies to boost your website purchases
+                        </p>
+                        <small>Jan 26, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./The-role-of-quality-assurance-in-user-experience-design.html">
+                            <img src="../assets/images/Journal/Journal5.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./The-role-of-quality-assurance-in-user-experience-design.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            The role of quality assurance in user experience design
+                        </p>
+                        <small>Feb 6, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html">
+                            <img src="../assets/images/Journal/Journal6.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Choosing a digital product agency over a freelance designer
+                        </p>
+                        <small>Feb 9, 2024</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile seeallwork">
+                <a href="./portfolio.html" class="btnRounded">
+                    <span>See All Projects</span>
+                    <span>
+                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                        <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                    </span>
+                </a>
+                <a href="/" class="logo-img"><img src="../assets/icons/largeIconOnly.svg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="GetInTouchSec" class="contentCont">
+        <div class="GetInTouch">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Get In Touch</span>
+            </div>
+            <h1>
+                Let’s work together
+            </h1>
+            <p>
+                We would love to hear from you! Our dedicated team is here to <br>
+                help you transform your ideas into reality.
+            </p>
+
+            <a href="../pages/contactUs.html" class="btnRounded">
+                <span>Get Free Estimates Now</span>
+                <span>
+                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                </span>
+            </a>
+
+        </div>
+
+        <div class="spacer">
+        </div>
+    </section>
+
+    <section id="footer">
+        <section id="ideasSec">
+
+            <div id="ideasCon">
+
+                <div class="animated-head">
+
+                    <div>
+                        <span class="themedot light"></span>
+                        <span class="themetitle">Let’s get started</span>
+                    </div>
+
+                    <h1>Let’s turn your idea into reality</h1>
+                </div>
+
+
+                <div class="ideasproducts">
+                    <p>Designed Products across various Industries</p>
+                    <p>Fintech • Healthcare • SASS • <span style="display: inline-block;">E-commerce</span> • Retail •
+                        Real estate
+                    </p>
+
+                    <div class="tabsflex">
+                        <a href="../pages/aboutUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">About Us</div>
+                                <div class="hiddenTag">About Us</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                        <a href="../pages/brandIdentity.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Services</div>
+                                <div class="hiddenTag">Services</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+
+                        </a>
+
+                        <a href="../pages/portfolio.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Portfolio</div>
+                                <div class="hiddenTag">Portfolio</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/contactUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Contact</div>
+                                <div class="hiddenTag">Contact</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/Journal.html" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Journal</div>
+                                <div class="hiddenTag">Journal</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                    <div class="tabsflex">
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/Journal.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Journal</div>
+                                <div class="hiddenTag">Journal</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="idea-marquee-wrap">
+                <div class="idea-marquee-con">
+                    <div id="idea-marquee">
+                        <div id="idea-marquee-first">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                        <div id="idea-marquee-second">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                        <div id="idea-marquee-third">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="footerSec">
+            <div class="spacer"></div>
+            <div class="footerCon">
+                <div>
+                    <h1>Reach Us</h1>
+                    <p><img src="../assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
+                    <p><img src="../assets/icons/pk.svg" alt=""> +92 8754 3864</p>
+                    <a href="/" class="LinkhoverGroup">
+                        <div>
+                            <div class="visibleTag">business@webpioneers.com</div>
+                            <div class="hiddenTag">business@webpioneers.com</div>
+                        </div>
+
+                        <div>
+                            <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                            <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <div>
+                        <h1>Social</h1>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">linkedin</div>
+                                <div class="hiddenTag">linkedin</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Instagram</div>
+                                <div class="hiddenTag">Instagram</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Dribble</div>
+                                <div class="hiddenTag">Dribble</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Quick</h1>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Pricing</div>
+                                <div class="hiddenTag">Pricing</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="../pages/aboutUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">About</div>
+                                <div class="hiddenTag">About</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Team</div>
+                                <div class="hiddenTag">Team</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Legal</h1>
+
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Privacy</div>
+                                <div class="hiddenTag">Privacy</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Terms</div>
+                                <div class="hiddenTag">Terms</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to reload the page
+            function reloadPage() {
+                location.reload();
+            }
+
+            // Store the initial window width
+            var initialWidth = window.innerWidth;
+
+            // Attach the reload function to the window's resize event
+            window.addEventListener("resize", function () {
+                // Check if the width has changed
+                if (window.innerWidth !== initialWidth) {
+                    // Debounce the reload to avoid excessive reloading
+                    clearTimeout(window.resizeTimer);
+                    window.resizeTimer = setTimeout(function () {
+                        reloadPage();
+                    }, 250);
+                }
+            });
+
+
+            function loadScript(src, callback) {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = src;
+                script.onload = callback;
+                document.head.appendChild(script);
+            }
+
+            // List of scripts to load
+            var scriptsToLoad = [
+                "../scripts/global.js",
+                "../scripts/lenis.js",
+                "../scripts/pages/journalDetail.js",
+                "../scripts/pages/rotateSteric.js",
+                "../scripts/mousefollower_stickybutton.js",
+                "../scripts/hero.js",
+                "../scripts/ideas.js",
+            ];
+
+            // Load each script one by one
+            function loadScriptsSequentially(index) {
+                if (index < scriptsToLoad.length) {
+                    loadScript(scriptsToLoad[index], function () {
+                        // Load the next script in the array
+                        loadScriptsSequentially(index + 1);
+                    });
+                }
+            }
+
+            loadScriptsSequentially(0);
+        });
+    </script>
+</body>
+
+</html>

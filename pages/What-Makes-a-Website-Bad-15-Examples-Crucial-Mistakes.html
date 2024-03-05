@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Makes a Website “Bad”? 15 Examples & Crucial Mistakes</title>
+    <link href="../styles/global.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../styles/Navigation/navigation.css">
+    <link rel="stylesheet" href="../styles/ideas/ideas.css">
+    <link rel="stylesheet" href="../styles/theme/theme.css">
+    <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
+    <link rel="stylesheet" href="../styles/journalDetail/journalDetail.css">
+
+    <!-- packages -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- gsap -->
+    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+</head>
+
+<body>
+    <div id="mousefollower">
+        <img id="mousefollower-rightarrow" src="../assets/icons/navbarContentCardArrow.svg" alt="">
+        <div id="mousefollower-stickybutton" class="stickybutton non-mousetracker">
+            <a href="/">
+                <div id="magneticBtn">
+                    <div class="my-button">
+
+                        <div>
+                            <div id="Btnfirst" class="Btnfirst">
+                                View details
+                            </div>
+                            <div id="Btnsecond" class="Btnsecond">
+                                View details
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <section id="navigationSec" class="initial contentCont">
+        <div id="navigation">
+            <header>
+                <nav>
+                    <div class="logoimg">
+                        <div class="desk">
+                            <a href="/">
+                                <lottie-player class="logoanim"
+                                    src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                            </a>
+                        </div>
+                        <a class="mob" href="/">
+                            <img src="./assets/icons/mainlogo.svg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Home</div>
+                            <div class="textbg">Home</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="./portfolio.html" class="nav-link non-mousetracker">
+                            <div class="text">Portfolio</div>
+                            <div class="textbg">Portfolio</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="./aboutUs.html" class="nav-link non-mousetracker">
+                            <div class="text">About Us</div>
+                            <div class="textbg">About Us</div>
+                        </a>
+                        <!-- nav link -->
+                        <a href="/" class="nav-link non-mousetracker">
+                            <div class="text">Pricing</div>
+                            <div class="textbg">Pricing</div>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="line"></div>
+                        <!-- nav link -->
+                        <div class="nav-link non-mousetracker">
+                            <div class="text">Login</div>
+                            <div class="textbg">Login</div>
+                        </div>
+
+                        <div id="navbtnplacer">
+                        </div>
+                    </div>
+
+                    <div class="border-bottom"></div>
+                </nav>
+
+                <div class="content">
+                    <div>
+                        <a href="./portfolio.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Portfolio</div>
+                                <div class="textbg">Portfolio</div>
+                            </div>
+                        </a>
+                        <a href="./Journal.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Journal</div>
+                                <div class="textbg">Journal</div>
+                            </div>
+                        </a>
+                        <a href="/" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Pricing</div>
+                                <div class="textbg">Pricing</div>
+                            </div>
+                        </a>
+                        <a href="./FAQ.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">FAQ's</div>
+                                <div class="textbg">FAQ's</div>
+                            </div>
+                        </a>
+                        <a href="./contactUs.html" class="nav-link">
+                            <div class="non-mousetracker">
+                                <div class="text">Contact</div>
+                                <div class="textbg">Contact</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="navigation-cards">
+                        <a class="card" href="./brandIdentity.html">
+                            <div>
+                                <h5>Brand Identity</h5>
+                                <p>Creative strategies for brands.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-brand"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="./UIUX.html">
+                            <div>
+                                <h5>UI UX</h5>
+                                <p>Handcraft the user experience.</h>
+                            </div>
+                            <div>
+                                <div style="width: 44px;" class="animicon" id="aicon-navbar-uiux"></div>
+                            </div>
+                        </a>
+                        <a class="card" href="./webDevelopment.html">
+                            <div>
+                                <h5>Development</h5>
+                                <p>Leverage the power of code.</h>
+                            </div>
+                            <div>
+                                <div class="animicon" id="aicon-navbar-development"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tabValue">
+                    <div>
+
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">Let's Start!</span>
+                        </div>
+                        <h1>
+                            Get started with <br>
+                            Pioneers
+                        </h1>
+                        <p>
+                            Our top priority is to provide exceptional support to our clients throughout their entire
+                            project journey.
+                        </p>
+                        <a href="./contactUs.html" class="btnRounded">
+                            <span>Get Free Estimates Now</span>
+                            <span>
+                                <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                                <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                            </span>
+                        </a>
+
+                    </div>
+
+                    <div>
+                        <img src="../assets/icons/largeIconOnly.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="border-top"></div>
+                    <!-- <div class="creator">Made by Xaib</div> -->
+                    <a class="LinkhoverGroup creator" style="cursor: unset;">
+                        <div class="textonly">
+                            <div class="visibleTag">Made by Xaib</div>
+                            <div class="hiddenTag">Made by Xaib</div>
+                        </div>
+                    </a>
+
+                    <div class="icons">
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/dribble.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/dribble.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/linkedin.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/linkedin.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup non-mousetracker">
+                            <div class="icononly">
+                                <img class="visibleTag" src="../assets/icons/header/instagram.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/header/instagram.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </header>
+        </div>
+    </section>
+
+    <section id="ThemePageHeader" class="contentCont herosection">
+        <nav>
+            <div class="logoimg">
+                <div class="desk">
+                    <a href="/">
+                        <lottie-player class="logoanim"
+                            src="../assets/Animation/Logo_Animation_V2/Logo_Web_Animation_V4.json"></lottie-player>
+                    </a>
+                </div>
+                <a href="/">
+                    <img class="mob" src="../assets/icons/mainlogo.svg" alt="">
+                </a>
+            </div>
+            <div class="navlinkscenter">
+                <!-- nav link -->
+                <a href="/" class="nav-link non-mousetracker">
+                    <div class="text">Home</div>
+                    <div class="textbg">Home</div>
+                </a>
+                <!-- nav link -->
+                <a href="./portfolio.html" class="nav-link non-mousetracker">
+                    <div class="text">Portfolio</div>
+                    <div class="textbg">Portfolio</div>
+                </a>
+                <!-- nav link -->
+                <a href="./aboutUs.html" class="nav-link non-mousetracker">
+                    <div class="text">About Us</div>
+                    <div class="textbg">About Us</div>
+                </a>
+                <!-- nav link -->
+                <a href="/" class="nav-link non-mousetracker">
+                    <div class="text">Pricing</div>
+                    <div class="textbg">Pricing</div>
+                </a>
+            </div>
+            <div>
+                <div class="line"></div>
+                <!-- nav link -->
+                <div class="nav-link non-mousetracker">
+                    <div class="text">Login</div>
+                    <div class="textbg">Login</div>
+                </div>
+
+                <div class="HeadrnavBtn">
+                    <button id="navAnimatedIcon" onclick="toggleNav()">
+                        <div id="hamburger-line1"></div>
+                        <div id="hamburger-line2"></div>
+                    </button>
+
+                    <div id="mobileNavBtn" class="initial">
+                        <div id="mobileNavBtn-FC">
+                            <div class="mobileNav-head">
+                                <h1>Menu</h1>
+                            </div>
+
+                            <a href="../pages/portfolio.html" class="mobileNav-item">
+                                <p>Portfolio</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/aboutUs.html" class="mobileNav-item">
+                                <p>About Us</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/Journal.html" class="mobileNav-item">
+                                <p>Journal</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/FAQ.html" class="mobileNav-item">
+                                <p>FAQ's</p>
+                                <div></div>
+                            </a>
+                            <a href="/" class="mobileNav-item">
+                                <p>Pricing</p>
+                                <div></div>
+                            </a>
+                            <a href="../pages/contactUs.html" class="mobileNav-item">
+                                <p>Contact Us</p>
+                                <div></div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-bottom"></div>
+        </nav>
+
+        <div class="ThemePageHead">
+            <div class="frombelowanim">
+                <div class="left">
+                    <h1>What Makes a Website “Bad”? 15 Examples & Crucial Mistakes</h1>
+                </div>
+                <div class="right desktop">
+                    <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="divider contentCont">
+        <div></div>
+    </div>
+
+    <!-- place content here -->
+    <section class="jdHeader contentCont">
+        <div class="jdHeader-detail">
+            <p>Jan 2, 2024</p>
+            <p>UI/UX</p>
+        </div>
+        <div class="jdHeader-image">
+            <img src="../assets/images/Journal/detail1/jd1.png" alt="" class="parallexImage">
+        </div>
+    </section>
+
+    <section class="backButton contentCont">
+        <a href="./Journal.html">
+            <img src="../assets/icons/prev.svg" alt="">
+            <span>Return to journal</span>
+        </a>
+    </section>
+    
+    <section class="jdBody contentCont">
+        <div class="jdBody-table">
+            <div class="jdBody-table-wrapper">
+                <div class="head">
+                    Table of contents
+                </div>
+                <div class="body">
+                    <a href="#jdc1" class="active">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">1. Poor web design</div>
+                    </a>
+                    <a href="#jdc2">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">2. Lack of white space</div>
+                    </a>
+                    <a href="#jdc3">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">3. Non-responsive design</div>
+                    </a>
+                    <a href="#jdc4">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">4. Inconsistent colors</div>
+                    </a>
+                    <a href="#jdc5">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">5. Poor typography choices</div>
+                    </a>
+                    <a href="#jdc6">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">6. Poor navigation</div>
+                    </a>
+                    <a href="#jdc7">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">7. Slow loading speed</div>
+                    </a>
+                    <a href="#jdc8">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">8. Low-quality images</div>
+                    </a>
+                    <a href="#jdc9">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">9. Unclear CTA buttons</div>
+                    </a>
+                    <a href="#jdc10">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">10. Poor user experience</div>
+                    </a>
+                    <a href="#jdc11">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">11. Complex registration process</div>
+                    </a>
+                    <a href="#jdc12">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">12. Ignoring SEO</div>
+                    </a>
+                    <a href="#jdc13">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">13. Accessibility issues</div>
+                    </a>
+                    <a href="#jdc14">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">14. Broken links & 404 errors</div>
+                    </a>
+                    <a href="#jdc15">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">15. Outdated web design</div>
+                    </a>
+                    <a href="#jdc16">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">16. FAQ’s</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="jdBody-content">
+            <h3>
+                Design Beyond Limits
+            </h3>
+            <p>
+                Beyond surface aesthetics, the quality of a website profoundly influences user experience. In this
+                article, we dissect 15 common web design mistakes, from poor layouts to slow loading speeds,
+                offering insights on creating websites that captivate users and foster success. Whether you're a
+                designer aiming for excellence or a business owner optimizing your online presence, learn to
+                navigate the pitfalls and ensure a seamless, user-friendly digital space.
+            </p>
+            <div class="line"></div>
+            <p>
+                It might be easy to say that bad websites are the ones which simply look bad. As always, the devil
+                is in the details and a proper examination of a website's functionalities is the way to go when
+                trying to find solutions.
+                We've gathered a list of common web design mistakes and examples that lead to subpar user
+                experience. From slow loading times to cluttered designs, we'll explore crucial issues in web
+                development.
+            </p>
+            <br>
+
+            <div id="jdc1" class="content-item">
+                <h3>
+                    1- Poor Web Design
+                </h3>
+                <p>
+                    Poor web design can have a significant impact on a website's success.
+                </p>
+                <ol>
+                    <li>
+                        It often leads to a high bounce rate as visitors quickly become frustrated with confusing
+                        layouts, slow load times, or cluttered interfaces, causing them to leave the site prematurely.
+                    </li>
+                    <li>
+                        Low conversion rates are a common consequence, as users are less likely to trust or engage with
+                        a poorly designed website, resulting in missed opportunities for businesses. 
+                    </li>
+                    <li>
+                        Bad web design leaves a negative impression on potential customers, damaging a brand's
+                        credibility and trustworthiness.
+                    </li>
+                </ol>
+                <p>Ultimately, subpar web design extends far beyond aesthetics, and can negatively affect user
+                    experience. This often damages the website's ability to attract, retain, and convert visitors
+                    effectively.</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc2" class="content-item">
+                <h3>
+                    2- Lack of White Space
+                </h3>
+                <p>
+                    White space, often referred to as "negative space", is a fundamental element in web design that
+                    significantly contributes to an enhanced user experience. It serves as breathing room between
+                    content, allowing for better readability.
+                </p>
+                <p>
+                    A website page with an excessively cluttered layout, where text, images, and buttons are tightly
+                    packed together, leaves no room for the eye to rest. This lack of white space might overwhelm users
+                    and make it challenging to keep visual interest or navigate the site efficiently.</p>
+                <img src="../assets/images/Journal/detail1/jd2.png" alt="">
+                <h3>
+                    Text walls
+                </h3>
+                <p>
+                    The biggest mistake in web design is adding too much text to the page. Site visitors might seek info
+                    but text walls are often scary. Internet users prefer texts that are quick to read at a glance.
+                </p>
+                <h3>
+                    Cluttered layout
+                </h3>
+                <p>
+                    For instance, consider a website showcasing multiple products in a cramped grid, with minimal
+                    spacing between each item. Users trying to browse through this cluttered layout may find it
+                    difficult to distinguish one product from another or click on the intended item, leading to
+                    frustration and likely site abandonment.
+                </p>
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    Web designers should prioritize content hierarchy, ensuring that essential elements are more
+                    prominent and separated from the less important ones. Secondly, designers can use appropriate
+                    margins and padding to create breathing space around content which easily engages users. Finally,
+                    maintaining a clean and minimalist design approach can help prevent clutter and promote a more
+                    comfortable and enjoyable browsing experience.
+                </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc3" class="content-item">
+                <h3>
+                    3- Non-Responsive Design
+                </h3>
+                <p>
+                    Responsive design is a vital aspect of modern web development, as it ensures a seamless and
+                    consistent user experience across different devices. With the usage increase of smartphones and
+                    tablets, mobile-friendly web design has become of greatest importance. Failing to optimize a website
+                    for mobile devices can frustrate users. Non-responsive websites often feature small text sizes that
+                    strain the eyes and hidden navigation menus that make it challenging for users to explore the site
+                    effectively.
+                </p>
+                <p>
+                    A non-responsive website where content and images are poorly scaled on a mobile device, forcing
+                    users to pinch, zoom, and scroll excessively just to access information. This not only challenges
+                    usability but can also put off potential visitors.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd3.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    First and foremost, designers need to use fluid grids and flexible layouts that adapt to different
+                    screen sizes. Media queries can be employed to apply specific styles and layouts for various
+                    devices, ensuring content remains accessible and visually appealing.
+                </p>
+                <p>
+                    Additionally, optimizing images and minimizing the use of heavy elements can enhance load times on
+                    mobile connections. By prioritizing these responsive design principles, web developers can create
+                    websites that adapt gracefully to the diversity of devices in today's digital landscape, delivering
+                    a superior user experience.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc4" class="content-item">
+                <h3>
+                    4- Inconsistent Colours or Visual Elements
+                </h3>
+                <p>
+                    Inconsistent color schemes or visual elements on a website can lead to confusion and frustration for
+                    users, undermining the overall user experience. When colors or visual elements vary significantly
+                    across different pages or sections of a site, it can give the impression of disjointedness and lack
+                    of attention to detail, potentially deterring users.
+                </p>
+                <p>
+                    For instance, consider a website where each page uses a different set of colors for headings and
+                    buttons, making it challenging for users to establish a visual hierarchy or navigate seamlessly.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd4.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To enhance the visual design elements of a website, designers should adhere to a consistent and
+                    coherent color scheme and visual style throughout the entire site. This includes using a defined
+                    palette of colors, consistent typography, and standardized visual elements such as buttons and
+                    icons.
+                </p>
+                <p>
+                    Establishing design guidelines and style guides can be invaluable in ensuring that all team members
+                    adhere to these standards. Regular reviews of the website can help identify and rectify any
+                    inconsistencies, ensuring a polished and user-friendly visual design that promotes a cohesive and
+                    enjoyable user experience.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc5" class="content-item">
+                <h3>
+                    5- Poor Typography Choices
+                </h3>
+                <p>
+                    Appropriate typography is a cornerstone of effective web design, with far-reaching implications for
+                    both readability and aesthetics. The choice of fonts plays a pivotal role in determining how easily
+                    users can consume content and how structured the user flow is. <br>
+                    Poor typography choices can undermine the user experience, making text difficult to read due to
+                    factors like overly decorative fonts, improper line spacing, tiny text sizes or too many different
+                    fonts.
+                </p>
+                <p>
+                    For example, imagine a website that employs a cursive font for body text or uses minuscule fonts for
+                    paragraphs – such decisions not only affect legibility but also detract from the overall visual
+                    appeal.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd5.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To improve typography on a website, designers should prioritize readability and consistency.
+                    Selecting fonts that are easy to read on screens and providing line spacing can enhance content
+                    accessibility. Maintaining a consistent typographic hierarchy throughout the site ensures that
+                    headings, subheadings, and body text are visually distinguishable and coherent to guide users'
+                    attention.
+                </p>
+                <p>
+                    Additionally, designers can use font pairings that complement each other, creating a balanced and
+                    aesthetically pleasing typographic landscape. By addressing poor typography choices and sticking to
+                    best practices, web designers can significantly elevate overall customer satisfaction.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc6" class="content-item">
+                <h3>
+                    6- Poor Navigation
+                </h3>
+                <p>
+                    Poor navigation is among the most common mistakes in web design, often resulting in user frustration
+                    and increased bounce rates. When navigation is poor, users encounter difficulties in locating
+                    information, products, or services, leading to a bad website usability.
+                </p>
+                <p>
+                    Issues like disorganized menus, unclear links, and excessive clicks make it challenging for visitors
+                    to efficiently access the content they seek. A web page where the main menu lacks clear categories,
+                    forcing users to click through multiple pages to find specific information speaks of bad website
+                    design. This not only wastes the users' time but also increases the chances of them leaving the site
+                    out of frustration.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd6.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To improve navigation creating clear, intuitive, and user-friendly navigation menus must be a
+                    priority. This involves organizing content logically, using descriptive labels for menu items, and
+                    ensuring that links are easy to identify. Implementing a breadcrumb trail, search functionality, and
+                    a well-structured sitemap can enhance navigation options.
+                </p>
+                <p>
+                    Regular usability testing and user feedback are crucial for identifying and addressing navigation
+                    issues, ultimately leading to a more satisfying and efficient user experience on the website.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc7" class="content-item">
+                <h3>
+                    7- Slow Loading Speed
+                </h3>
+                <p>
+                    Slow loading speed is a frequent issue that can poorly impact user interactions with a website.
+                    Common causes of slow-loading websites are the use of large images or media files, excessive plugins
+                    or scripts, and flawed server resources.
+                </p>
+                <p>
+                    Studies have shown that even a one-second delay in page loading can result in a 7% reduction in
+                    conversions and a 16% decrease in user satisfaction. Additionally, slow-loading websites tend to
+                    have higher bounce rates, as impatient users are more likely to leave the site before it fully
+                    loads. This can lead to missed opportunities for engagement and revenue.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd7.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To check and improve website loading speed, users can employ various tools and strategies. A free
+                    tool like Google's PageSpeed Insights or GTmetrix can provide detailed reports on a website's
+                    performance, highlighting areas that need improvement. To enhance loading speed, you can consider
+                    optimizing images and media, minimizing the use of plugins, and enabling browser caching. Switching
+                    to a faster web hosting provider can also make a significant difference.
+                </p>
+                <p>
+                    By regularly monitoring and addressing loading speed issues, website owners can ensure a smoother
+                    and more enjoyable experience for their visitors, ultimately benefiting their site's performance and
+                    user satisfaction.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc8" class="content-item">
+                <h3>
+                    8- Low-Quality Images
+                </h3>
+                <p>
+                    Low-quality images can significantly lower a website's visual effect and credibility. They not only
+                    fail to engage users but can also convey an impression of unprofessionalism and lack of attention to
+                    detail. Using high-resolution, visually attractive images that align with the website's content is
+                    critical in creating an immersive and positive user experience.
+                </p>
+                <p>
+                    When it comes to product images, professionalism is key. High-quality product images that showcase
+                    details and provide a clear, close-up view can enhance the audience's trust and interest in what you
+                    offer.
+                </p>
+                <p>
+                    Bad websites often display pictures and graphics that are unrelated to their content and don't
+                    strategically include high-quality visual content. Lack of effective use decreases visual impact and
+                    blocks effective communication of the message. Low-resolution images also spoil site aesthetics and
+                    reduce its reputation as a professional site. The pictures often lack the sharpest, most detailed
+                    details, which leads to poor user experience.
+                </p>
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To fix low-quality image issues, it's essential to avoid excessive use of generic stock images that
+                    lack authenticity and relevance. Conducting thorough testing to ensure optimal legibility and
+                    performance across various devices is also crucial, as the quality and size of images can
+                    significantly impact loading times and user satisfaction.
+                </p>
+                <p>
+                    By investing in high-quality imagery and being mindful of their usage, website owners can bolster
+                    their site's aesthetics and credibility, ultimately fostering a stronger connection with their
+                    audience.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc9" class="content-item">
+                <h3>
+                    9- Unclear CTA Buttons
+                </h3>
+                <p>
+                    Clear and compelling Call-to-Action (CTA) buttons are vital elements of any website, serving as the
+                    driving force behind user interaction and conversions. They provide a direct path for visitors to
+                    take the desired actions, such as making a purchase, signing up, or downloading content. However,
+                    common mistakes with CTAs can sabotage their effectiveness.
+                </p>
+                <p>
+                    Some websites fail to use them altogether, missing out on opportunities for user engagement. Others
+                    make the mistake of creating unenticing CTAs, which do not prompt users to take action.
+                    Additionally, not indicating the clickability of CTA buttons can lead to confusion.
+                </p>
+                <p>
+                    For instance, imagine a website with CTA buttons that blend seamlessly into the background or use
+                    generic, uninspiring text like "Submit" or "Click Here." Such issues can result in missed
+                    conversions and frustrated users.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd8.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To improve CTA buttons, designers should prioritize clarity and visual appeal. CTAs should be
+                    prominently displayed, contrasting with the background color and using persuasive, action-oriented
+                    text like "Get Started" or "Buy Now." They should also be designed to look clickable, with
+                    button-like styling, hover effects, or distinct colors.
+                </p>
+                <p>
+                    Regular A/B testing can help refine CTA button designs to maximize their impact on user engagement
+                    and conversion rates, ultimately enhancing the website's effectiveness in achieving its goals.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc10" class="content-item">
+                <h3>
+                    10- Poor User Experience
+                </h3>
+                <p>
+                    User experience (UX) is at the core of effective web design, as it directly influences how visitors
+                    interact with and perceive a website. An exceptional user experience requires intuitive navigation,
+                    clear calls to action, and smooth user flows. Poor UX, on the other hand, can have harmful
+                    consequences, causing frustration, higher bounce rates, and decreased user engagement. <br>
+                    A website with convoluted menus, sluggish loading times, or confusing layouts makes users more
+                    likely to abandon such a site, leading to missed opportunities for conversions or engagement.
+                    Additionally, poor UX can affect a brand's reputation and discourage potential users from returning
+                    or recommending the website to others.
+                </p>
+                <p>
+                    The readability of text is crucial when designing a user-friendly interface. Some websites have text
+                    readability issues and are unclickable. When a user struggles to navigate a website or cannot use a
+                    button, it can create frustration and negatively impact interaction. For that reason, businesses
+                    must perform rigorous tests to ensure readable and consistent text across different mobile devices
+                    and screens
+                </p>
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    In the digital age, where user attention spans are limited, prioritizing an optimal user experience
+                    is essential for the success and credibility of any website. <br>
+                    To enhance user experience, website owners can start by conducting thorough user research to
+                    understand their audience's needs and preferences. Implementing clear and intuitive navigation
+                    structures, optimizing website performance for faster loading times, and providing helpful feedback
+                    mechanisms are critical steps.
+                </p>
+                <p>
+                    Regular user testing and feedback collection can help identify pain points and areas for
+                    improvement. For more in-depth guidance on UX mapping methods, you can explore our key UX design
+                    methods to execute your strategy effectively. <br>
+                    By actively investing in user experience design, website owners can create a more engaging,
+                    user-friendly, and ultimately successful online presence.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc11" class="content-item">
+                <h3>
+                    11- Complex Registration Process
+                </h3>
+                <p>
+                    A complex registration process is a clear indicator of a poorly designed website. It refers to the
+                    intricate and often cumbersome steps users are required to go through when signing up for an account
+                    or accessing certain features. Such processes typically involve an excessive number of form fields,
+                    mandatory requirements, and multiple confirmation steps, making it challenging and time-consuming
+                    for users to complete their registration.
+                </p>
+                <p>
+                    A bad website design example would be one with a registration process that demands extensive
+                    personal information, email verification, phone verification, and captchas—all in one go. This
+                    complexity can put off potential users.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd9.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To enhance the registration process, websites should prioritize simplicity and user-friendliness.
+                    This involves minimizing the number of mandatory fields, only requesting essential information, and
+                    providing clear instructions along the way. Offering social media or single sign-on options can
+                    streamline the process significantly, reducing friction for users.
+                </p>
+                <p>
+                    Regular usability testing and feedback collection can help identify and rectify any pain points in
+                    the registration flow, ultimately resulting in a more efficient and user-friendly experience that
+                    encourages users to complete the process and engage with the website.
+                </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc12" class="content-item">
+                <h3>
+                    12- Ignoring SEO
+                </h3>
+                <p>
+                    Ignoring Search Engine Optimization (SEO) is a critical oversight in web design and digital
+                    marketing. SEO is the practice of optimizing a website's content, structure, and other elements to
+                    rank higher in search engine results pages (SERPs). When website owners neglect SEO, they miss out
+                    on a significant opportunity to enhance their online visibility and reach.
+                </p>
+                <p>
+                    Without effective SEO strategies, a website is less likely to appear in search results, making it
+                    harder for potential users or customers to find. This lack of visibility can have a deep impact on
+                    website performance, as it limits organic traffic, reduces opportunities for conversions, and
+                    challenges the website's overall success in the digital landscape.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd10.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    First and foremost, website owners should conduct thorough keyword research to identify the terms
+                    and phrases their target audience uses when searching online. These keywords should be strategically
+                    integrated into the website's content, headers, and meta tags.
+                </p>
+                <p>
+                    Additionally, optimizing images, improving site speed, and ensuring mobile-friendliness are crucial
+                    for SEO success.
+                </p>
+                <p>
+                    Regularly updating and creating high-quality content can also boost SEO rankings. Keeping up with
+                    search engine algorithm changes and staying informed about SEO trends is essential to maintain and
+                    improve website performance in the competitive online market.
+                </p>
+                <p>
+                    By implementing these SEO best practices, website owners can increase their visibility, attract more
+                    visitors, and ultimately achieve their online goals.
+                </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc13" class="content-item">
+                <h3>
+                    13- Accessibility Issues
+                </h3>
+                <p>
+                    Ensuring accessibility on websites is important as it promotes inclusivity, allowing all users,
+                    including those with disabilities, to have equal access to online content and services. Ignoring
+                    accessibility issues not only limits the reach of a website but also runs counter to the principles
+                    of digital equity.
+                </p>
+                <p>
+                    One crucial aspect of web accessibility is providing proper alt text (alternative text) for images.
+                    Alt text is a brief description of an image that is read aloud by screen readers to visually
+                    impaired users. This simple feature allows individuals who cannot see the image to understand its
+                    content and context. It's essential to ensure that alt text is descriptive, concise, and conveys the
+                    image's purpose, as this greatly enhances the user experience for people with visual impairments.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd11.png" alt="">
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To improve accessibility, website owners should follow the Web Content Accessibility Guidelines
+                    (WCAG), which provide a comprehensive set of recommendations for making web content more accessible.
+                    Key steps include creating clear and organized page structures with headers, using descriptive and
+                    meaningful link text, and ensuring keyboard navigation is available and easy to use.
+                </p>
+                <p>
+                    Additionally, providing proper alt text for images and captioning for multimedia content like videos
+                    can significantly improve accessibility for all users, including those with disabilities.
+                </p>
+                <p>
+                    By prioritizing accessibility, websites can offer a more inclusive and user-friendly experience to a
+                    broader audience.
+                </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc14" class="content-item">
+                <h3>
+                    14- Broken Links and 404 Errors
+                </h3>
+                <p>
+                    The website has a lot of broken links which redirect to a different page. Clicking on these links
+                    causes an error message. If users find the error, they'll likely leave the site and seek information
+                    in a similar manner, which increases the bounce rate and decreases user engagement. 404 errors may
+                    also cause confusion and undermine the brand's reputation and credibility. Often the smallest
+                    details undermine trust among customers. In addition, some links are redirecting directly to other
+                    web pages.
+                </p>
+                <img src="../assets/images/Journal/detail1/jd12.png" alt="">
+            </div>
+
+            <div id="jdc15" class="content-item">
+                <h3>
+                    15- Outdated web design
+                </h3>
+                <p>
+                    Outdated design on a website can significantly erode its credibility and effectiveness. It can
+                    convey a sense of stagnation and give the impression that the website may not be regularly updated
+                    or maintained. This lack of freshness and relevance can deter visitors and undermine the trust they
+                    place in the site's content or services. An outdated design often includes elements like clunky,
+                    old-fashioned layouts, obsolete color schemes, and outdated typography, which can make a website
+                    look unprofessional and out of touch.
+                </p>
+                <p>
+                    Consider an example of an outdated website with an image of a design that incorporates elements like
+                    excessive gradients, outdated fonts, and a heavy reliance on Flash animations. Such design choices
+                    were once trendy but are now considered passe, affecting the site's aesthetic appeal and overall
+                    user experience negatively.
+                </p>
+                <h3>
+                    How to improve?
+                </h3>
+                <p>
+                    To improve outdated design, web designers should prioritize a modern, user-centric approach. This
+                    involves updating the layout and visual elements to align with current design trends and user
+                    expectations. Utilizing contemporary colour schemes, typography, and responsive design principles
+                    can help bring the website up-to-date.
+                </p>
+                <p>
+                    Regular maintenance and content updates are also crucial to ensure that the website remains relevant
+                    and engaging for visitors. By investing in a design refresh, websites can regain credibility,
+                    attract more users, and better fulfil their intended purposes.
+                </p>
+                <h3>
+                    How to Avoid Poor Website Design
+                </h3>
+                <p>
+                    In the world of websites, steering clear of bad design is essential. Your online presence should not
+                    only be visually pleasing but also user-friendly. To accomplish this, follow these practical steps:
+                </p>
+                <h3>
+                    a. Get Professional Help
+                </h3>
+                <p>
+                    Consider hiring a skilled web design team. Their expertise can make a significant difference in
+                    creating a website that captures attention and offers a good user experience. If you're looking for
+                    high-quality web design services, you can check out our range of services.
+                </p>
+                <h3>
+                    b. Understand Your Audience
+                </h3>
+                <p>
+                    Knowing your audience is crucial. Conduct user research and analyze their behaviour to make design
+                    choices that cater to their needs and preferences. This user-focused approach is essential for
+                    creating a site that appeals to your visitors.
+                </p>
+                <h3>
+                    c. Create a Consistent Brand Identity
+                </h3>
+                <p>
+                    Consistency is key in web design. Developing a consistent brand identity ensures that your website's
+                    elements, from colours to typography, align with your brand's message and values.
+                    This consistency enhances the user experience and reinforces your brand's credibility. You can
+                    explore our article on branding in web design for more insights.
+                </p>
+                <p>
+                    By following these steps, you can set a solid foundation for a website that not only looks good but
+                    also delivers what your users expect. Avoiding poor website design is about creating a digital space
+                    that genuinely connects with your users and promotes trust, ultimately contributing to your online
+                    success.
+                </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc16" class="content-item">
+                <h3>
+                    16- FAQ
+                </h3>
+                <h4>
+                    How do you know if a website is bad?
+                </h4>
+                <p class="small">
+                    A bad website may have a slow loading speed, poor mobile responsiveness, outdated design, complex
+                    navigation, low-quality content, broken links, security issues, inconsistent branding, accessibility
+                    problems, complex registration or checkout processes, poor SEO or too many elements. These issues
+                    can put off users and lower a website's effectiveness.
+                </p>
+                <h4>
+                    How do I check the quality of a website?
+                </h4>
+                <p class="small">
+                    To check the quality of a website, it's important to check its loading speed, mobile responsiveness,
+                    design, navigation, content, links, security, branding, accessibility, user journey and SEO.
+                    Consider user-centricity and alignment with goals and industry standards.
+                </p>
+                <h4>
+                    What makes a website reliable or unreliable?
+                </h4>
+                <p class="small">
+                    A reliable website is characterized by accurate, current, and credible information, secure and
+                    responsive design, consistent branding, accessible content, and minimal errors or broken links. An
+                    unreliable website has outdated or inaccurate information, poor design, security vulnerabilities,
+                    and lacks credibility or consistency.
+                </p>
+                <h4>
+                    Can a Bad Website Design Hurt My Business?
+                </h4>
+                <p class="small">
+                    A badly designed website may be harmful to your business. Generally speaking, these can lead to a
+                    bad public image.
+                </p>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <div class="divider contentCont">
+        <div></div>
+    </div>
+
+    <section class="jdFooter contentCont">
+        <div class="jdFooter-wrapper">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Journals</span>
+            </div>
+
+            <div class="ALLPROJECTS heading">
+                <h1>
+                    Check our <br>
+                    other journals
+                </h1>
+                <div>
+                    <a href="./Journal.html" class="btnRounded">
+                        <span>See All Journals</span>
+                        <span>
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="imagerow">
+                <div>
+                    <div class="followSTB">
+                        <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html">
+                            <img src="../assets/images/Journal/Journal2.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Conversational UX design how to enhance user engagement
+                        </p>
+                        <small>Jan 2, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./Mastering-the-product-design-process-best-practices.html">
+                            <img src="../assets/images/Journal/Journal3.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Mastering-the-product-design-process-best-practices.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Mastering the product design process : best practices
+                        </p>
+                        <small>Jan 12, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html">
+                            <img src="../assets/images/Journal/Journal4.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            4 key design strategies to boost your website purchases
+                        </p>
+                        <small>Jan 26, 2024</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile seeallwork">
+                <a href="./Journal.html" class="btnRounded">
+                    <span>See All Journals</span>
+                    <span>
+                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                        <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                    </span>
+                </a>
+                <a href="/" class="logo-img"><img src="../assets/icons/largeIconOnly.svg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="GetInTouchSec" class="contentCont">
+        <div class="GetInTouch">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Get In Touch</span>
+            </div>
+            <h1>
+                Let’s work together
+            </h1>
+            <p>
+                We would love to hear from you! Our dedicated team is here to <br>
+                help you transform your ideas into reality.
+            </p>
+
+            <a href="../pages/contactUs.html" class="btnRounded">
+                <span>Get Free Estimates Now</span>
+                <span>
+                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                </span>
+            </a>
+
+        </div>
+
+        <div class="spacer">
+        </div>
+    </section>
+
+    <section id="footer">
+        <section id="ideasSec">
+
+            <div id="ideasCon">
+
+                <div class="animated-head">
+
+                    <div>
+                        <span class="themedot light"></span>
+                        <span class="themetitle">Let’s get started</span>
+                    </div>
+
+                    <h1>Let’s turn your idea into reality</h1>
+                </div>
+
+
+                <div class="ideasproducts">
+                    <p>Designed Products across various Industries</p>
+                    <p>Fintech • Healthcare • SASS • <span style="display: inline-block;">E-commerce</span> • Retail •
+                        Real estate
+                    </p>
+
+                    <div class="tabsflex">
+                        <a href="../pages/aboutUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">About Us</div>
+                                <div class="hiddenTag">About Us</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                        <a href="../pages/brandIdentity.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Services</div>
+                                <div class="hiddenTag">Services</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+
+                        </a>
+
+                        <a href="../pages/portfolio.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Portfolio</div>
+                                <div class="hiddenTag">Portfolio</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/contactUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Contact</div>
+                                <div class="hiddenTag">Contact</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/Journal.html" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Journal</div>
+                                <div class="hiddenTag">Journal</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="/" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup mob-only">
+                            <div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                    <div class="tabsflex">
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Plans</div>
+                                <div class="hiddenTag">Plans</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/FAQ.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">FAQ's</div>
+                                <div class="hiddenTag">FAQ's</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                        <a href="../pages/Journal.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Journal</div>
+                                <div class="hiddenTag">Journal</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/link.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/link.svg" alt="">
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="idea-marquee-wrap">
+                <div class="idea-marquee-con">
+                    <div id="idea-marquee">
+                        <div id="idea-marquee-first">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                        <div id="idea-marquee-second">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                        <div id="idea-marquee-third">
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                            <div>JUST GREAT WORK</div>
+                            <img src="../assets/icons/steric-med.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="footerSec">
+            <div class="spacer"></div>
+            <div class="footerCon">
+                <div>
+                    <h1>Reach Us</h1>
+                    <p><img src="../assets/icons/us.svg" alt=""> +1 (750) 996-4899</p>
+                    <p><img src="../assets/icons/pk.svg" alt=""> +92 8754 3864</p>
+                    <a href="/" class="LinkhoverGroup">
+                        <div>
+                            <div class="visibleTag">business@webpioneers.com</div>
+                            <div class="hiddenTag">business@webpioneers.com</div>
+                        </div>
+
+                        <div>
+                            <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                            <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <div>
+                        <h1>Social</h1>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">linkedin</div>
+                                <div class="hiddenTag">linkedin</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Instagram</div>
+                                <div class="hiddenTag">Instagram</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Dribble</div>
+                                <div class="hiddenTag">Dribble</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Quick</h1>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Pricing</div>
+                                <div class="hiddenTag">Pricing</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="../pages/aboutUs.html" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">About</div>
+                                <div class="hiddenTag">About</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Team</div>
+                                <div class="hiddenTag">Team</div>
+                            </div>
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h1>Legal</h1>
+
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Privacy</div>
+                                <div class="hiddenTag">Privacy</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="/" class="LinkhoverGroup">
+                            <div>
+                                <div class="visibleTag">Terms</div>
+                                <div class="hiddenTag">Terms</div>
+                            </div>
+
+                            <div>
+                                <img class="visibleTag" src="../assets/icons/linkb.svg" alt="">
+                                <img class="hiddenTag" src="../assets/icons/linkb.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to reload the page
+            function reloadPage() {
+                location.reload();
+            }
+
+            // Store the initial window width
+            var initialWidth = window.innerWidth;
+
+            // Attach the reload function to the window's resize event
+            window.addEventListener("resize", function () {
+                // Check if the width has changed
+                if (window.innerWidth !== initialWidth) {
+                    // Debounce the reload to avoid excessive reloading
+                    clearTimeout(window.resizeTimer);
+                    window.resizeTimer = setTimeout(function () {
+                        reloadPage();
+                    }, 250);
+                }
+            });
+
+
+            function loadScript(src, callback) {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = src;
+                script.onload = callback;
+                document.head.appendChild(script);
+            }
+
+            // List of scripts to load
+            var scriptsToLoad = [
+                "../scripts/global.js",
+                "../scripts/lenis.js",
+                "../scripts/pages/journalDetail.js",
+                "../scripts/pages/rotateSteric.js",
+                "../scripts/mousefollower_stickybutton.js",
+                "../scripts/hero.js",
+                "../scripts/ideas.js",
+            ];
+
+            // Load each script one by one
+            function loadScriptsSequentially(index) {
+                if (index < scriptsToLoad.length) {
+                    loadScript(scriptsToLoad[index], function () {
+                        // Load the next script in the array
+                        loadScriptsSequentially(index + 1);
+                    });
+                }
+            }
+
+            loadScriptsSequentially(0);
+        });
+    </script>
+</body>
+
+</html>

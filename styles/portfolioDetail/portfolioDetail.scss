@@ -163,6 +163,7 @@
   .imgbg {
     background-color: #e2e2e2;
     overflow: hidden;
+    border-radius: 12px;
     img {
       display: block;
       width: 100%;
@@ -409,6 +410,7 @@
 
     .custom {
       .imgbg {
+        border-radius: 8px;
         .mobileMok {
           max-height: 500px;
         }
@@ -482,6 +484,10 @@
           display: none;
         }
       }
+    }
+
+    .imgbg {
+      border-radius: 8px;
     }
 
     .double {

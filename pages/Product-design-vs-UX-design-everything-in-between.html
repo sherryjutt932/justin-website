@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal</title>
+    <title>Product design vs UX design everything in between</title>
     <link href="../styles/global.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 
@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="../styles/Navigation/navigation.css">
     <link rel="stylesheet" href="../styles/ideas/ideas.css">
     <link rel="stylesheet" href="../styles/theme/theme.css">
-    <link rel="stylesheet" href="../styles/journal/journal.css">
     <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
-
+    <link rel="stylesheet" href="../styles/journalDetail/journalDetail.css">
 
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -325,9 +324,9 @@
         <div class="ThemePageHead">
             <div class="frombelowanim">
                 <div class="left">
-                    <h1>Journal</h1>
+                    <h1>Product design vs UX design everything in between</h1>
                 </div>
-                <div class="right">
+                <div class="right desktop">
                     <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
                 </div>
             </div>
@@ -340,322 +339,479 @@
     </div>
 
     <!-- place content here -->
-    <section class="journalSec contentCont">
-        <div class="journalCon">
-            <div class="options">
-                <button onclick="handleJournalOption('all')" class="non-mousetracker active">All Topics</button>
-                <button onclick="handleJournalOption('UIUXJ')" class="non-mousetracker">UI UX</button>
-                <button onclick="handleJournalOption('webflowJ')" class="non-mousetracker">Webflow</button>
-                <button onclick="handleJournalOption('caseStudyJ')" class="non-mousetracker">Case Study</button>
+    <section class="jdHeader contentCont">
+        <div class="jdHeader-detail">
+            <p>Feb 12, 2024</p>
+            <p>UI/UX</p>
+        </div>
+        <div class="jdHeader-image">
+            <img src="../assets/images/Journal/detail7/jd1.png" alt="" class="parallexImage">
+        </div>
+    </section>
+
+    <section class="backButton contentCont">
+        <a href="./Journal.html">
+            <img src="../assets/icons/prev.svg" alt="">
+            <span>Return to journal</span>
+        </a>
+    </section>
+
+    <section class="jdBody contentCont">
+        <div class="jdBody-table">
+            <div class="jdBody-table-wrapper">
+                <div class="head">
+                    Table of contents
+                </div>
+                <div class="body">
+                    <a href="#jdc1" class="active">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">1. What Is Product Design?</div>
+                    </a>
+                    <a href="#jdc2">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">2. What Is UX Design?</div>
+                    </a>
+                    <a href="#jdc3">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">3- Product Design vs UX Design</div>
+                    </a>
+                    <a href="#jdc4">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">4- The Role of a Product Designer</div>
+                    </a>
+                    <a href="#jdc5">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">5- The Role of a UX Designer</div>
+                    </a>
+                    <a href="#jdc6">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">6- FAQ</div>
+                    </a>
+                </div>
             </div>
-            <div class="journals-group">
+        </div>
+        <div class="jdBody-content">
+            <p>
+                Job titles in the digital workspace often cause confusion and multiple “trips” to Google’s search bar.
+                To put Product Design vs UX Design might seem like a lost cause to some because of their multiple
+                similarities. Both areas offer a great amount of knowledge and expert know-how in any type of product or
+                service development.
+            </p>
+            <div class="line"></div>
+            <p>
+                Whether you're developing your own startup or looking for a job, understanding the differences between
+                the two could make your choice easier and essentially - more efficient.
+            </p>
+            <p>
+                When building digital products without the luxury of having an in-house design and development team, it
+                always comes down to one thing - choosing between hiring freelance product designers or working with an
+                agency. Both options have their pros and cons. However, we're here to tell you why we consider digital
+                product design agencies the better, more result-driven choice.
+            </p>
 
-                <!-- journal 1-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            What Makes a Website “Bad”? 15 Examples & Crucial Mistakes
-                        </h1>
-                        <img src="../assets/images/Journal/Journal1.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./What-Makes-a-Website-Bad-15-Examples-Crucial-Mistakes.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 4, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./What-Makes-a-Website-Bad-15-Examples-Crucial-Mistakes.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal1.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 2-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Conversational UX design how to enhance user engagement
-                        </h1>
-                        <img src="../assets/images/Journal/Journal2.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 6, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal2.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc1" class="content-item">
+                <h3>
+                    1- What Is Product Design?
+                </h3>
+                <p>
+                    Product Design focuses on meeting specific market needs and solving user problems. Staying involved
+                    from the beginning till the end of the product development is key, and it includes business-related
+                    processes like:
+                </p>
+                <p>
+                    market research <br>
+                    problem identification<br>
+                    product development<br>
+                    creation of informed solutions before the product's initial release.<br>
+                    Compared to UX design, product design has been around for longer and used to be associated with
+                    physical products. That, just like everything else, is rapidly changing. Today product designers
+                    often find themselves in the role of creative problem solvers for digital products. They have a
+                    narrow focus on business needs and objectives as well as user behaviour in the area they're creating
+                    products for.
+                </p>
+                <p>
+                    Product design is essentially project management focused on product roadmaps. What product design
+                    services present are solutions to the problems that might arise during the development process.
+                </p>
+                <p>
+                    The main task of the product designer is to provide the right product to answer what the user needs.
+                </p>
+                <img src="../assets/images/Journal/detail7/jd2.png" alt="">
 
-                <!-- journal 3-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Mastering the product design process : best practices
-                        </h1>
-                        <img src="../assets/images/Journal/Journal3.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Mastering-the-product-design-process-best-practices.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 5, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Mastering-the-product-design-process-best-practices.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal3.png" alt="">
-                    </a>
-                </div>
+            </div>
 
-                <!-- journal 4-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            4 key design strategies to boost your website purchases
-                        </h1>
-                        <img src="../assets/images/Journal/Journal4.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal4.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 5-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            The role of quality assurance in user experience design
-                        </h1>
-                        <img src="../assets/images/Journal/Journal5.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./The-role-of-quality-assurance-in-user-experience-design.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./The-role-of-quality-assurance-in-user-experience-design.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal5.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc2" class="content-item">
+                <h3>
+                    2- What Is UX Design?
+                </h3>
+                <p>
+                    User Experience Design (UX design) dives into creating a smooth and efficient user experience.
+                </p>
+                <p>
+                    A UX designer looks out for customer satisfaction with the product throughout its usage. That
+                    includes providing the service or product in the most intuitive way for the customer. After all, the
+                    fewer steps you have to reach the information you need - the better.
+                </p>
+                <p>
+                    UX design has a project management core of its own but remains more research-based including
+                    usability testing, user research, and prototyping. The data collected by user researchers gives
+                    important takeaways that guide any decisions throughout the design process and are quite crucial for
+                    the finished product.
+                </p>
+                <img src="../assets/images/Journal/detail7/jd3.png" alt="">
+                <h3>
+                    How Does UI Fit in the Picture?
+                </h3>
+                <p>
+                    As an inseparable part of UX design, UI design explores the ways visual design elements like colour,
+                    typography, and layout contribute to creating a positive user experience. Creating visually
+                    appealing and intuitive interfaces is important to satisfy different user personas and customer
+                    demands during their own product experience.
+                </p>
+                <p>
+                    Both UX designers and UI (user interface) designers have a strong understanding of visual design and
+                    the importance of aesthetics, but UX designers focus on it through the prism of user behaviour.
+                </p>
+                <p>
+                    The mutual work of UX and UI designers during the entire design process is crucial. A UI designer
+                    that doesn't constantly communicate and look back to the UX research conducted by the UX designer
+                    limits their tasks to the ones of a visual designer.
+                </p>
+                <img src="../assets/images/Journal/detail7/jd4.png" alt="">
 
-                <!-- journal 6-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Choosing a digital product agency over a freelance designer
-                        </h1>
-                        <img src="../assets/images/Journal/Journal6.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal6.png" alt="">
-                    </a>
-                </div>
+            </div>
 
-                <!-- journal 7-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Product design vs UX design-everything in between
-                        </h1>
-                        <img src="../assets/images/Journal/Journal7.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Product-design-vs-UX-design-everything-in-between.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Product-design-vs-UX-design-everything-in-between.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal7.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 8-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            Branding in web design: How to craft your digital identity
-                        </h1>
-                        <img src="../assets/images/Journal/Journal8.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal8.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc3" class="content-item">
+                <h3>
+                    3- Product Design vs UX Design
+                </h3>
+                <p>
+                    The main difference between product design and UX design comes from the perspective from which they
+                    approach the product. A product designer would aim at fitting a product to the current business and
+                    market economy while answering the user's needs. With that taken into account, a UX designer would
+                    be researching user behaviour and testing its usability in order to deliver the most intuitive
+                    experience.
+                </p>
+                <h3>
+                    Differences
+                </h3>
+                <p>
+                    Looking at the word "design" in both positions, it would be important to differentiate the product
+                    designer and UX designer's jobs from the one of a visual designer. Both the Product designer and the
+                    UX designer would often tap into visual design and have a great understanding of aesthetics, but
+                    neither focus on the way a product looks solely to please the eye.
+                </p>
+                <p>
+                    The key differences between product design and UX design come in the words that actually
+                    differentiate them - product and user experience (UX). Product designers focus on the product's
+                    business priorities and shaping it to fit the customer's needs from start to finish. UX design aims
+                    at delivering the product in the best way possible to make sure it's easy to use and the customer
+                    could make use of it without additional difficulties.
+                </p>
+                <h3>
+                    Similarities
+                </h3>
+                <p>
+                    Both the product designer and the UX designer aim to deliver what the consumer is looking for - by
+                    developing the product they need or making it easy for the user to find their way around. The two
+                    areas require a deep understanding of needs and wants together with empathy and emotional
+                    intelligence.
+                </p>
+                <p>
+                    Problem-solving skills would complement both positions as they often require adapting to current
+                    trends and events. Product design and UX design should not be put against each other. Instead, they
+                    should be working together - exchanging ideas and knowledge to ensure a well-developed and
+                    well-experienced end product for their user.
+                </p>
+            </div>
 
-                <!-- journal 9-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            What is webflow? A comprehensive guide to no-code web design
-                        </h1>
-                        <img src="../assets/images/Journal/Journal9.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./What-is-webflow-A-comprehensive-guide-to-no-code-web-design.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./What-is-webflow-A-comprehensive-guide-to-no-code-web-design.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal9.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 10-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            The most useful speed optimisation tactics for webflow websites
-                        </h1>
-                        <img src="../assets/images/Journal/Journal10.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./The-most-useful-speed-optimisation-tactics-for-webflow-websites.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./The-most-useful-speed-optimisation-tactics-for-webflow-websites.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal10.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc4" class="content-item">
+                <h3>
+                    4- The Role of a Product Designer
+                </h3>
+                <p>
+                    The product designer job description includes building, following and monitoring the whole product
+                    journey from start to finish. It circles around the maintenance of the customer's satisfaction with
+                    the product's core nature.
+                </p>
+                <h3>
+                    Job Description and Responsibilities
+                </h3>
+                <p>
+                    An experienced product designer is responsible for extensive market research and a more narrow focus
+                    on business acumen during the development process. Product designers tend to overlook processes like
+                    project managers and set up guidelines and milestones for the new features, marketing teams and
+                    essentially - the UX designers. <br>
+                    Product designers are using research to identify business opportunities that align with user needs
+                    and ensure products stay relevant and up-to-date.
+                </p>
+                <p>
+                    Staying on top of sales and marketing teams to make sure every part of the product roadmap is
+                    aligned with the rest.The design of new features and user testing are also part of the product
+                    designer's responsibilities. This is why prototyping tools are often used by product designers. Some
+                    commonly used tools for prototyping and analytics are Figma and June.
+                </p>
+                <h3>
+                    Skills Required
+                </h3>
+                <p>
+                    Highly developed empathy for users and problem-solving capabilities come first in the product
+                    designer's skill set. Proficiency in front-end web technologies and design knowledge are some of the
+                    few weapons of a successful product designer.
+                </p>
+                <p>
+                    Just like any other management role, the role of a product designer requires great communication
+                    skills, empathy for users, research skill and a good eye for clean, timeless design.
+                </p>
 
-                <!-- empty-->
-                <div id="empty" class="empty">
-                    Comming Soon
-                </div>
+            </div>
 
-                <!-- Load more button to show more then 5 journals-->
-                <div class="load-more" id="loadMore">
-                    <button type="button" onclick="handleLoadMore()" class="btnRounded secondary non-mousetracker">
-                        <span>Load More</span>
+            <div class="line"></div>
+
+            <div id="jdc5" class="content-item">
+                <h3>
+                    5- The Role of a UX Designer
+                </h3>
+                <p>
+                    User experience designers solve usability issues and ensure products follow a logical flow. They are
+                    strongly involved in early user and competitor research to identify and understand user problems and
+                    develop design solutions using different UX tools. Many UX designers turn to tools like FigJam to
+                    map out their products. When it comes to analytics and A/B testing, Maze and VWO provide extensive
+                    and structured insights.
+                </p>
+                <p>
+                    Part of the UX designer's responsibilities is the development of a smooth user experience back to
+                    back with the UI designers. Consumer satisfaction with the product's core is highly dependent on the
+                    UX design and the design thinking process which focuses on the people they create for and leads to
+                    better products.
+                </p>
+                <h3>
+                    Job Description and Responsibilities
+                </h3>
+                <p>
+                    User experience designers work closely with design teams and have a strong understanding of
+                    interaction design. They oversee the tasks of UI designers and participate in the problem-solving
+                    processes along the way.
+                </p>
+                <p>
+                    Making sure the product is experienced in the way it's intended without unnecessary disturbances on
+                    the way is one of the key tasks of the UX designer.
+                </p>
+                <p>
+                    User research and analysis as well as following the latest UX trends that align with the product
+                    design are crucial for meeting targets. The creation of personas, empathy and journey maps are part
+                    of the operational tasks of a UX designer.
+                </p>
+                <p>
+                    When it comes to communication and collaboration with teams, occasional briefings and UX writing
+                    might be required. Designing wireframes and mockups is usually the finishing step in the UX design
+                    process before handing it off to UI.
+                </p>
+                <h3>
+                    Skills Required
+                </h3>
+                <p>
+                    <b>Graphic design</b> and overall knowledge of visual design is a must, however, it isn't part of
+                    the UX designer's daily tasks when it comes to the end product. High competency with a range of
+                    design tools is a great addition to visual literacy.
+                </p>
+                <p>
+                    <b>Front-end web technologies</b> knowledge is a part of the required skill set for a developing UX
+                    designer. HTML, CSS and JS (JavaScript) are the foundation for building a website which makes them
+                    equal to “the basics” when it comes to building and designing a website. Some easier solutions, such
+                    as Tailwind CSS, are giving shortcut options to new professionals in the area.
+                </p>
+                <p>
+                    Technical proficiency is key due to the usual communication with design teams and occasional design
+                    tasks that could overlap with the UI design team's tasks.
+                </p>
+                <img src="../assets/images/Journal/detail7/jd5.png" alt="">
+
+            </div>
+
+            <div class="line"></div>
+
+            <div id="jdc6" class="content-item">
+                <h3>
+                    6- FAQ
+                </h3>
+                <h4>
+                    Is UX design the same as product design?
+                </h4>
+                <p class="small">
+                    While product design and UX design are often interchangeable, at their core they're different.
+                    Product design oversees the product's development from start to finish from a business perspective.
+                    UX design, on the other hand, focuses on the actual experience of the user and makes sure it fulfils
+                    the consumer's needs.
+                </p>
+                <h4>
+                    Which is better: UI UX or product design?
+                </h4>
+                <p class="small">
+                    Product design usually stays on top of UX and UI design as it delivers the field of action for the latter. The two areas are highly interconnected and often rely on each other. While product designers are more aware of the economic environment, UX and UI designers are focused on user behaviour and making the product easy to use.
+                </p>
+                <h4>
+                    What is an example of product design?
+                </h4>
+                <p class="small">
+                    Every digital application is a product once designed by a product designer to satisfy a customer's need. For example, we helped our customer Tolstoy figure out the design of their product - shoppable videos. 
+                </p>
+                <h4>
+                    What is an example of UX design?
+                </h4>
+                <p class="small">
+                    UX design gives the necessary functionality makeover to digital applications to make them as intuitive as possible. A great example from our portfolio is the way we designed the pricing list for Tolstoy. It gives you the opportunity to personalise it to fit your needs.
+                </p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <div class="divider contentCont">
+        <div></div>
+    </div>
+
+    <section class="jdFooter contentCont">
+        <div class="jdFooter-wrapper">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Journals</span>
+            </div>
+
+            <div class="ALLPROJECTS heading">
+                <h1>
+                    Check our <br>
+                    other journals
+                </h1>
+                <div>
+                    <a href="./Journal.html" class="btnRounded">
+                        <span>See All Journals</span>
                         <span>
-                            <img src="../assets/icons/add.svg" alt="+" />
-                            <img src="../assets/icons/add.svg" alt="+" class="hover" />
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
                         </span>
-                    </button>
+                    </a>
                 </div>
+            </div>
 
+            <div class="imagerow">
+                <div>
+                    <div class="followSTB">
+                        <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html">
+                            <img src="../assets/images/Journal/Journal8.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Branding in web design: How to craft your digital identity
+                        </p>
+                        <small>Feb 23, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./What-is-webflow-A-comprehensive-guide-to-no-code-web-design.html">
+                            <img src="../assets/images/Journal/Journal9.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./What-is-webflow-A-comprehensive-guide-to-no-code-web-design.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            What is webflow? A comprehensive guide to no-code web design
+                        </p>
+                        <small>March 8, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./The-most-useful-speed-optimisation-tactics-for-webflow-websites.html">
+                            <img src="../assets/images/Journal/Journal10.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./The-most-useful-speed-optimisation-tactics-for-webflow-websites.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            The most useful speed optimisation tactics for webflow websites
+                        </p>
+                        <small>Mar 12, 2024</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile seeallwork">
+                <a href="./Journal.html" class="btnRounded">
+                    <span>See All Journals</span>
+                    <span>
+                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                        <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                    </span>
+                </a>
+                <a href="/" class="logo-img"><img src="../assets/icons/largeIconOnly.svg" alt=""></a>
             </div>
         </div>
     </section>
@@ -1028,10 +1184,10 @@
             var scriptsToLoad = [
                 "../scripts/global.js",
                 "../scripts/lenis.js",
+                "../scripts/pages/journalDetail.js",
                 "../scripts/pages/rotateSteric.js",
-                "../scripts/pages/journal.js",
-                "../scripts/hero.js",
                 "../scripts/mousefollower_stickybutton.js",
+                "../scripts/hero.js",
                 "../scripts/ideas.js",
             ];
 

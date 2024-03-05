@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal</title>
+    <title>The role of quality assurance in user experience design</title>
     <link href="../styles/global.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 
@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="../styles/Navigation/navigation.css">
     <link rel="stylesheet" href="../styles/ideas/ideas.css">
     <link rel="stylesheet" href="../styles/theme/theme.css">
-    <link rel="stylesheet" href="../styles/journal/journal.css">
     <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
-
+    <link rel="stylesheet" href="../styles/journalDetail/journalDetail.css">
 
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -325,9 +324,9 @@
         <div class="ThemePageHead">
             <div class="frombelowanim">
                 <div class="left">
-                    <h1>Journal</h1>
+                    <h1>The role of quality assurance in user experience design</h1>
                 </div>
-                <div class="right">
+                <div class="right desktop">
                     <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
                 </div>
             </div>
@@ -340,322 +339,312 @@
     </div>
 
     <!-- place content here -->
-    <section class="journalSec contentCont">
-        <div class="journalCon">
-            <div class="options">
-                <button onclick="handleJournalOption('all')" class="non-mousetracker active">All Topics</button>
-                <button onclick="handleJournalOption('UIUXJ')" class="non-mousetracker">UI UX</button>
-                <button onclick="handleJournalOption('webflowJ')" class="non-mousetracker">Webflow</button>
-                <button onclick="handleJournalOption('caseStudyJ')" class="non-mousetracker">Case Study</button>
+    <section class="jdHeader contentCont">
+        <div class="jdHeader-detail">
+            <p>Feb 6, 2024</p>
+            <p>UI/UX</p>
+        </div>
+        <div class="jdHeader-image">
+            <img src="../assets/images/Journal/detail5/jd1.png" alt="" class="parallexImage">
+        </div>
+    </section>
+
+    <section class="backButton contentCont">
+        <a href="./Journal.html">
+            <img src="../assets/icons/prev.svg" alt="">
+            <span>Return to journal</span>
+        </a>
+    </section>
+
+    <section class="jdBody contentCont">
+        <div class="jdBody-table">
+            <div class="jdBody-table-wrapper">
+                <div class="head">
+                    Table of contents
+                </div>
+                <div class="body">
+                    <a href="#jdc1" class="active">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">1. What is QA?</div>
+                    </a>
+                    <a href="#jdc2">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">2. Why is QA important in UI/UX design?</div>
+                    </a>
+                    <a href="#jdc3">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">A. Usability & Accessibility</div>
+                    </a>
+                    <a href="#jdc4">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">B. Consistency and logic </div>
+                    </a>
+                    <a href="#jdc5">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">C. Compatibility</div>
+                    </a>
+                    <a href="#jdc6">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">D. Performance</div>
+                    </a>
+                </div>
             </div>
-            <div class="journals-group">
+        </div>
+        <div class="jdBody-content">
+            <p>
+                This article is about Quality Assurance and its role in User Experience Design. Furthermore, we've covered some of the important requirements our Quality Assurance Specialist has to take into account to ensure a high-quality UI/UX design.
+            </p>
+            <div class="line"></div>
 
-                <!-- journal 1-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            What Makes a Website “Bad”? 15 Examples & Crucial Mistakes
-                        </h1>
-                        <img src="../assets/images/Journal/Journal1.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./What-Makes-a-Website-Bad-15-Examples-Crucial-Mistakes.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 4, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./What-Makes-a-Website-Bad-15-Examples-Crucial-Mistakes.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal1.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc1" class="content-item">
+                <h3>
+                    1- What is QA?
+                </h3>
+                <p>
+                    Let’s start with what QA or Quality Assurance Testing actually means. It refers to one of the most crucial components of the development process that is designed to detect any errors that may have occurred before the release of the end product. Verifying that the product is functioning as intended, as well as debugging it before it is shipped out, is the main goal of Quality Assurance Testing.
+                </p>
 
-                <!-- journal 2-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Conversational UX design how to enhance user engagement
-                        </h1>
-                        <img src="../assets/images/Journal/Journal2.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 6, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal2.png" alt="">
-                    </a>
-                </div>
+            </div>
 
-                <!-- journal 3-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Mastering the product design process : best practices
-                        </h1>
-                        <img src="../assets/images/Journal/Journal3.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Mastering-the-product-design-process-best-practices.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 5, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Mastering-the-product-design-process-best-practices.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal3.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 4-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            4 key design strategies to boost your website purchases
-                        </h1>
-                        <img src="../assets/images/Journal/Journal4.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal4.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc2" class="content-item">
+                <h3>
+                    2- Why is QA important in UI/UX design?
+                </h3>
+                <p>
+                    As a digital agency, our focus leans more toward the design and visual quality of a web page, which is also one of the main responsibilities of our in-house Quality Assurance (QA) Specialist. The idea is for the QA to maintain the overall high quality of the product, so it shouldn't come as a surprise that QAs are often involved in design and web development as well.
+                </p>
+                <p>
+                    When it comes to defining the scope of a QA's responsibilities, it should go beyond simply ensuring that the product's functionality is working as intended. A QA must also consider the perspective of the end-user.
+                </p>
+                <img src="../assets/images/Journal/detail5/jd2.png" alt="">
+            </div>
 
-                <!-- journal 5-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            The role of quality assurance in user experience design
-                        </h1>
-                        <img src="../assets/images/Journal/Journal5.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./The-role-of-quality-assurance-in-user-experience-design.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./The-role-of-quality-assurance-in-user-experience-design.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal5.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 6-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Choosing a digital product agency over a freelance designer
-                        </h1>
-                        <img src="../assets/images/Journal/Journal6.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal6.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc3" class="content-item">
+                <h3>
+                    A. Usability & Accessibility
+                </h3>
+                <p>
+                    Usability and accessibility refer to how one could access a page, navigate through a website or even complete orders without much effort or involving many actions.
+                </p>
+            </div>
 
-                <!-- journal 7-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Product design vs UX design-everything in between
-                        </h1>
-                        <img src="../assets/images/Journal/Journal7.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Product-design-vs-UX-design-everything-in-between.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Product-design-vs-UX-design-everything-in-between.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal7.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 8-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            Branding in web design: How to craft your digital identity
-                        </h1>
-                        <img src="../assets/images/Journal/Journal8.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal8.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc4" class="content-item">
+                <h3>
+                    B. Consistency and logic
+                </h3>
+                <p>
+                    The product description or page needs to display every bit of necessary information for the user regarding its functionality and features and everything needs to perform as it should.
+                </p>
+            </div>
 
-                <!-- journal 9-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            What is webflow? A comprehensive guide to no-code web design
-                        </h1>
-                        <img src="../assets/images/Journal/Journal9.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./What-is-webflow-A-comprehensive-guide-to-no-code-web-design.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./What-is-webflow-A-comprehensive-guide-to-no-code-web-design.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal9.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 10-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            The most useful speed optimisation tactics for webflow websites
-                        </h1>
-                        <img src="../assets/images/Journal/Journal10.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./The-most-useful-speed-optimisation-tactics-for-webflow-websites.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./The-most-useful-speed-optimisation-tactics-for-webflow-websites.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal10.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc5" class="content-item">
+                <h3>
+                    C. Compatibility
+                </h3>
+                <p>
+                    The product needs to accommodate and adapt to multiple different devices and operating systems to ensure all users are able to go through the same experience. When testing, a website should perform equally as well in a variety of browsers and screen resolutions.
+                </p>
+            </div>
 
-                <!-- empty-->
-                <div id="empty" class="empty">
-                    Comming Soon
-                </div>
+            <div class="line"></div>
 
-                <!-- Load more button to show more then 5 journals-->
-                <div class="load-more" id="loadMore">
-                    <button type="button" onclick="handleLoadMore()" class="btnRounded secondary non-mousetracker">
-                        <span>Load More</span>
+            <div id="jdc6" class="content-item">
+                <h3>
+                    D. Performance
+                </h3>
+                <p>
+                    There's no doubt that there's nothing more annoying than a slow-performing system. Surveys show that the average user expects a certain page to load in up to 3 seconds. As a result, due to our constant desire to improve, we've done extensive research on how we can optimise the speed of every page we build on Webflow. 
+                </p>
+                <p>
+                    Apart from the above-mentioned criteria, our QA also needs to acknowledge and test the graphical user interface (GUI). The GUI is an interface visible to the user and through which that user interacts with computers and smartphones using images and other visual indicators rather than text. Our QA's job is to test that interface and check the screens and various controls in order to ensure that the software application is functioning appropriately and as intended.
+                </p>
+                <img src="../assets/images/Journal/detail5/jd3.png" alt="">
+                <h3>
+                    You have never done graphical user interface (GUI) testing before? <br>
+                    Take a look at the test cases below to help get you started:
+                </h3>
+                <p>
+                    You have never done graphical user interface (GUI) testing before? <br>
+                    Take a look at the test cases below to help get you started:
+                </p>
+                <ol>
+                        <li>Testing the various dimensions, alignments, and clarity of the elements</li>
+                        <li>Testing the different sections and resolutions of the screen</li>
+                        <li>Testing the readability and colours of the font</li>
+                        <li>Testing the display and colours of the error messages</li>
+                        <li>Testing the system interface</li>
+                        <li>Testing the overall spelling and grammar</li>
+                </ol>
+                <h3>
+                    Okay, you now have an idea where to start from, but you're wondering what common bugs and defects you may find? Worry not, we've got you covered:
+                </h3>
+
+                <ul>
+                    <li>Overall misalignments of various elements such as buttons, text boxes, drop-downs, etc.</li>
+                    <li>Incomplete or overlapping fields</li>
+                    <li>Actions not working when selected</li>
+                    <li>Inconsistency in display and alignment of labels</li>
+                    <li>Session Expired Error occurring way too soon or way too late</li>
+                </ul>
+                <ul>
+                    <li>In the realm of user experience design, quality assurance plays a crucial role in ensuring a seamless and delightful user journey. From testing usability and functionality to identifying and resolving issues, the QA process is instrumental in refining and improving the user experience. To gain a better perspective on how quality assurance fits into the broader design landscape, it's useful to learn more about the relationship between UX and product design and their vital roles in creating exceptional digital products.</li>
+                </ul>
+                <ul>
+                    <li>
+                        Essentially, when building and perfecting a digital product, it comes down to the UX Designer working in collaboration with the QA. While the QA assists with the efficient release of the product, the UX Designer needs to ensure that the implemented functionality of the designs is up to par, thus resulting in a polished final product. After all, teamwork makes the dream work, right?
+                    </li>
+                </ul>
+
+            </div>
+        
+
+        </div>
+    </section>
+
+    <div class="divider contentCont">
+        <div></div>
+    </div>
+
+    <section class="jdFooter contentCont">
+        <div class="jdFooter-wrapper">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Journals</span>
+            </div>
+
+            <div class="ALLPROJECTS heading">
+                <h1>
+                    Check our <br>
+                    other journals
+                </h1>
+                <div>
+                    <a href="./Journal.html" class="btnRounded">
+                        <span>See All Journals</span>
                         <span>
-                            <img src="../assets/icons/add.svg" alt="+" />
-                            <img src="../assets/icons/add.svg" alt="+" class="hover" />
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
                         </span>
-                    </button>
+                    </a>
                 </div>
+            </div>
 
+            <div class="imagerow">
+                <div>
+                    <div class="followSTB">
+                        <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html">
+                            <img src="../assets/images/Journal/Journal6.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Choosing a digital product agency over a freelance designer
+                        </p>
+                        <small>Feb 9, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./Product-design-vs-UX-design-everything-in-between.html">
+                            <img src="../assets/images/Journal/Journal7.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Product-design-vs-UX-design-everything-in-between.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Product design vs UX design everything in between
+                        </p>
+                        <small>Feb 12, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html">
+                            <img src="../assets/images/Journal/Journal8.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Branding in web design: How to craft your digital identity
+                        </p>
+                        <small>Feb 23, 2024</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile seeallwork">
+                <a href="./Journal.html" class="btnRounded">
+                    <span>See All Journals</span>
+                    <span>
+                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                        <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                    </span>
+                </a>
+                <a href="/" class="logo-img"><img src="../assets/icons/largeIconOnly.svg" alt=""></a>
             </div>
         </div>
     </section>
@@ -1028,10 +1017,10 @@
             var scriptsToLoad = [
                 "../scripts/global.js",
                 "../scripts/lenis.js",
+                "../scripts/pages/journalDetail.js",
                 "../scripts/pages/rotateSteric.js",
-                "../scripts/pages/journal.js",
-                "../scripts/hero.js",
                 "../scripts/mousefollower_stickybutton.js",
+                "../scripts/hero.js",
                 "../scripts/ideas.js",
             ];
 

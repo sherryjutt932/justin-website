@@ -142,6 +142,10 @@
     }
     p {
       padding-bottom: 35px;
+      a{
+        color: #ff2626;
+        text-decoration: underline;
+      }
     }
     p,
     li {
@@ -154,6 +158,10 @@
       &.small {
         font-size: 18px;
         line-height: 30px;
+      }
+      &.note {
+        font-weight: 600;
+        font-style: italic;
       }
     }
 
@@ -284,6 +292,16 @@
     border-radius: 12px;
     background-color: #e2e2e2;
     border: 1px solid #c5c5c5;
+  }
+}
+
+#ThemePageHeader {
+  .ThemePageHead {
+    & > div  {
+      h1 {
+        max-width: 25ch !important;
+      }
+    }
   }
 }
 

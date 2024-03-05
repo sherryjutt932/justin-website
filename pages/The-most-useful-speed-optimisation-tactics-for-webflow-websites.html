@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal</title>
+    <title>The most useful speed optimisation tactics for webflow websites</title>
     <link href="../styles/global.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 
@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="../styles/Navigation/navigation.css">
     <link rel="stylesheet" href="../styles/ideas/ideas.css">
     <link rel="stylesheet" href="../styles/theme/theme.css">
-    <link rel="stylesheet" href="../styles/journal/journal.css">
     <link rel="stylesheet" href="../styles/stickyButton/stickyButton.css">
-
+    <link rel="stylesheet" href="../styles/journalDetail/journalDetail.css">
 
     <!-- packages -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -325,9 +324,9 @@
         <div class="ThemePageHead">
             <div class="frombelowanim">
                 <div class="left">
-                    <h1>Journal</h1>
+                    <h1>The most useful speed optimisation tactics for webflow websites</h1>
                 </div>
-                <div class="right">
+                <div class="right desktop">
                     <img id="rotateSteric" src="../assets/icons/steric.svg" alt="steric">
                 </div>
             </div>
@@ -340,322 +339,462 @@
     </div>
 
     <!-- place content here -->
-    <section class="journalSec contentCont">
-        <div class="journalCon">
-            <div class="options">
-                <button onclick="handleJournalOption('all')" class="non-mousetracker active">All Topics</button>
-                <button onclick="handleJournalOption('UIUXJ')" class="non-mousetracker">UI UX</button>
-                <button onclick="handleJournalOption('webflowJ')" class="non-mousetracker">Webflow</button>
-                <button onclick="handleJournalOption('caseStudyJ')" class="non-mousetracker">Case Study</button>
+    <section class="jdHeader contentCont">
+        <div class="jdHeader-detail">
+            <p>Mar 12, 2024</p>
+            <p>UI/UX</p>
+        </div>
+        <div class="jdHeader-image">
+            <img src="../assets/images/Journal/detail10/jd1.png" alt="" class="parallexImage">
+        </div>
+    </section>
+
+    <section class="backButton contentCont">
+        <a href="./Journal.html">
+            <img src="../assets/icons/prev.svg" alt="">
+            <span>Return to journal</span>
+        </a>
+    </section>
+
+    <section class="jdBody contentCont">
+        <div class="jdBody-table">
+            <div class="jdBody-table-wrapper">
+                <div class="head">
+                    Table of contents
+                </div>
+                <div class="body">
+                    <a href="#jdc1" class="active">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">1. Image optimisation & compression</div>
+                    </a>
+                    <a href="#jdc2">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">2. What format to use? PNG vs JPEG vs SVG</div>
+                    </a>
+                    <a href="#jdc3">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">3. Lazy load images</div>
+                    </a>
+                    <a href="#jdc4">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">4. Reduce the use of web fonts</div>
+                    </a>
+                    <a href="#jdc5">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">5. Key Google PageSpeed metrics</div>
+                    </a>
+                    <a href="#jdc6">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">6. First Contentful Paint (FCP)</div>
+                    </a>
+                    <a href="#jdc7">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">7. Speed Index</div>
+                    </a>
+                    <a href="#jdc8">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">8. Largest Contentful Paint (LCP)</div>
+                    </a>
+                    <a href="#jdc9">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">9. Time to Interactive (TTI)</div>
+                    </a>
+                    <a href="#jdc10">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">10. Total Blocking Time (TBT)</div>
+                    </a>
+                    <a href="#jdc11">
+                        <div class="icon"><img src="../assets/icons/header/whiteArrow.svg" alt=""></div>
+                        <div class="text">11. Cumulative Layout Shift (CLS)</div>
+                    </a>
+
+                </div>
             </div>
-            <div class="journals-group">
+        </div>
+        <div class="jdBody-content">
+            <p>
+                Speed is the first thing your users will notice when visiting your website. It’s part of the entire
+                experience and that’s why it matters the most. We've colected some tips and tricks based on our own
+                experience with Webflow to help you build faster loading websites.
+            </p>
+            <div class="line"></div>
+            <p>
+                High performing websites get more traffic, they are ranked higher in search engines and perform better
+                overall when talking about converting users. The good news is that Webflow takes most of the important
+                factors out of the equation and provides an out of the box solution that automatically sets your website
+                up for success. <br>
+                Here is a short list of the tools that Webflow has integrated into its website builder in order to
+                achieve higher page speed performance results:
+            </p>
+            <ul>
+                <li>
+                    CDN (Content distribution Network)
+                </li>
+                <li>
+                    Minify CSS, JS & HTML
+                </li>
+                <li>
+                    Caching
+                </li>
+                <li>
+                    Generating cleaner HTML
+                </li>
+            </ul>
+            <p>
+                In fact these built-in automations are what made us transition out website from WordPress to Webflow in
+                the first place. Apart from benefiting from these tools, as a website designer and developer, you can
+                also implement some strategies in order to further improve your website's page speed load time.
+            </p>
 
-                <!-- journal 1-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            What Makes a Website “Bad”? 15 Examples & Crucial Mistakes
-                        </h1>
-                        <img src="../assets/images/Journal/Journal1.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./What-Makes-a-Website-Bad-15-Examples-Crucial-Mistakes.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 4, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./What-Makes-a-Website-Bad-15-Examples-Crucial-Mistakes.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal1.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 2-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Conversational UX design how to enhance user engagement
-                        </h1>
-                        <img src="../assets/images/Journal/Journal2.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 6, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal2.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc1" class="content-item">
+                <h3>
+                    1- Image optimisation & compression
+                </h3>
+                <p>
+                    Although Webflow can make your images responsive and optimize their size for different devices, that
+                    doesn't mean you don't have to make sure they are well compressed and optimized beforehand. For
+                    example, if you download a single image directly from Unsplash or Pexels and upload it in Webflow
+                    you will most probably be fine and not need to optimize further.
+                </p>
+                <p>
+                    If you however have 20-30 images on the same page, you will most probably end up with performance
+                    issues. Especially, if you are in Admin mode and trying to edit something, it saves the original
+                    image and that can result in very slow load time.
+                </p>
+                <img src="../assets/images/Journal/detail10/jd2.png" alt="">
 
-                <!-- journal 3-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Mastering the product design process : best practices
-                        </h1>
-                        <img src="../assets/images/Journal/Journal3.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Mastering-the-product-design-process-best-practices.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                Jan 5, 2024
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Mastering-the-product-design-process-best-practices.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal3.png" alt="">
-                    </a>
-                </div>
+            </div>
 
-                <!-- journal 4-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            4 key design strategies to boost your website purchases
-                        </h1>
-                        <img src="../assets/images/Journal/Journal4.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Four-key-design-strategies-to-boost-your-website-purchases.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal4.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 5-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            The role of quality assurance in user experience design
-                        </h1>
-                        <img src="../assets/images/Journal/Journal5.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./The-role-of-quality-assurance-in-user-experience-design.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./The-role-of-quality-assurance-in-user-experience-design.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal5.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc2" class="content-item">
+                <h3>
+                    2- What format to use? PNG vs JPEG vs SVG
+                </h3>
+                <h3>
+                    JPEG
+                </h3>
+                <p>
+                    You’ll probably use JPEG for all photography related graphics that don’t have transparent
+                    backgrounds or elements in them. You can make your image borders rounded in Webflow so don’t be
+                    deceived by the fact something has a border radius and it should be exported with it. The proper way
+                    is to export it without border radius and do it afterwards in Webflow. This way you can guarantee if
+                    someone replaces the image, it will remain with the same border radius.
+                </p>
+                <h3>
+                    PNG
+                </h3>
+                <p>
+                    Every image that uses alpha channel or transparency falls into the PNG category. It doesn’t have
+                    such compression as JPEG and is often used for interface elements (screens, mockups, UI) where you
+                    don’t want the things to get blurry. Usually, this is what happens when you use JPEG.
+                </p>
+                <h3>
+                    SVG
+                </h3>
+                <p>
+                    All vector graphics should be converted into SVG before being uploaded to Webflow. These will be
+                    your Icons, logos, and any other elements which you would incorporate as part of your design. This
+                    is the smallest possible format and if you have vector elements you should definitely use SVG.
+                </p>
+                <p class="note">
+                    After deciding the format, make sure to export it no more than 2X of the required image size. 2X is
+                    good for retina displays. For example, if your original image is 500x500px, you can export your
+                    asset in 1000x1000px but no bigger than that.
+                </p>
+                <p>
+                    After exporting it, we recommend using a service like TinyPNG to compress further.
+                </p>
+                <img src="../assets/images/Journal/detail10/jd3.png" alt="">
+            </div>
 
-                <!-- journal 6-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Choosing a digital product agency over a freelance designer
-                        </h1>
-                        <img src="../assets/images/Journal/Journal6.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Choosing-a-digital-product-agency-over-a-freelance-designer.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal6.png" alt="">
-                    </a>
-                </div>
+            <div class="line"></div>
 
-                <!-- journal 7-->
-                <div class="journal frombelowanim UIUXJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">UI UX</span>
-                        </div>
-                        <h1>
-                            Product design vs UX design-everything in between
-                        </h1>
-                        <img src="../assets/images/Journal/Journal7.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Product-design-vs-UX-design-everything-in-between.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Product-design-vs-UX-design-everything-in-between.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal7.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc3" class="content-item">
+                <h3>
+                    3- Lazy load images
+                </h3>
+                <img src="../assets/images/Journal/detail10/jd4.png" alt="">
+                <p>
+                    To make websites load faster, Webflow have turned the lazy load on by default. This feature
+                    “instructs” the browser you are using to not load the image before a user has scrolled through the
+                    section it’s positioned in.
+                </p>
+                <p>
+                    However, the only time you need to turn this option off is for all above the fold images as you will
+                    probably want them to load immediately when the website loads.
+                </p>
 
-                <!-- journal 8-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            Branding in web design: How to craft your digital identity
-                        </h1>
-                        <img src="../assets/images/Journal/Journal8.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./Branding-in-web-design-How-to-craft-your-digital-identity.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal8.png" alt="">
-                    </a>
-                </div>
+            </div>
+            <div class="line"></div>
 
-                <!-- journal 9-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            What is webflow? A comprehensive guide to no-code web design
-                        </h1>
-                        <img src="../assets/images/Journal/Journal9.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./What-is-webflow-A-comprehensive-guide-to-no-code-web-design.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./What-is-webflow-A-comprehensive-guide-to-no-code-web-design.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal9.png" alt="">
-                    </a>
-                </div>
+            <div id="jdc4" class="content-item">
+                <h3>
+                    4- Reduce the use of web fonts
+                </h3>
+                <p>
+                    A font can come up with many different widths and variations. For example, Roboto comes with 9
+                    widths and you probably won’t use more than 2-3 of them. Make sure to load only what you need.
+                </p>
 
-                <!-- journal 10-->
-                <div class="journal frombelowanim webflowJ">
-                    <div class="journal-detail">
-                        <div class="heading">
-                            <span class="themedot"></span>
-                            <span class="themetitle">Webflow</span>
-                        </div>
-                        <h1>
-                            The most useful speed optimisation tactics for webflow websites
-                        </h1>
-                        <img src="../assets/images/Journal/Journal10.png" alt="" class="mobile">
-                        <div class="footer">
-                            <a href="./The-most-useful-speed-optimisation-tactics-for-webflow-websites.html" class="btnRounded">
-                                <span>Read More</span>
-                                <span>
-                                    <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
-                                    <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
-                                </span>
-                            </a>
-                            <p>
-                                23.11.2023
-                            </p>
-                        </div>
-                    </div>
-                    <a href="./The-most-useful-speed-optimisation-tactics-for-webflow-websites.html" class="journal-image followSTB desktop">
-                        <img src="../assets/images/Journal/Journal10.png" alt="">
-                    </a>
-                </div>
+            </div>
+            <div class="line"></div>
 
-                <!-- empty-->
-                <div id="empty" class="empty">
-                    Comming Soon
-                </div>
+            <div id="jdc5" class="content-item">
+                <h3>
+                    5- Key Google PageSpeed metrics
+                </h3>
+                <p>
+                    It’s always good to check in with Google and their PageSpeed metrics. Mobile is always first of
+                    course as Google is checking how mobile friendly your website is and determines it’s ranking
+                    accordingly. Of course, the ranking of your website is also linked to how well your SEO is set up
+                    and executed.
+                </p>
 
-                <!-- Load more button to show more then 5 journals-->
-                <div class="load-more" id="loadMore">
-                    <button type="button" onclick="handleLoadMore()" class="btnRounded secondary non-mousetracker">
-                        <span>Load More</span>
+                <img src="../assets/images/Journal/detail10/jd5.png" alt="">
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc6" class="content-item">
+                <h3>
+                    6- First Contentful Paint (FCP)
+                </h3>
+
+                <p>
+                    The FCP is one of the most important metrics that you need to keep in mind when setting up your
+                    website for page speed success. The First Contentful Paint refers to how long it takes a browser to
+                    show a piece of content that is on your website. This content is called DOM content and it can be an
+                    image, non-white canvas element, or an SVG.
+                </p>
+                <p>
+                    When coming up with an FCP score, the calculation is based on your website’s page FCP time and that
+                    of other real websites. For example, a good FCP time is anything below 1.5 seconds. That will put
+                    your website in the 99-percentile in terms of performance.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc7" class="content-item">
+                <h3>
+                    7- Speed Index
+                </h3>
+
+                <p>
+                    Developers have created the Speed Index metric in order to measure how quickly your website’s visual
+                    content is displayed when first loading. It is measured in milliseconds and the lower it is the
+                    better. Generally, if your Speed Index is below 3.4 seconds, then you have a pretty fast loading
+                    website.
+                </p>
+                <p>
+                    The other cool thing is that you can easily check any website from here and the tool can even let
+                    you compare the speed between different devices.
+                </p>
+                <img src="../assets/images/Journal/detail10/jd6.png" alt="">
+
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc8" class="content-item">
+                <h3>
+                    8- Largest Contentful Paint (LCP)
+                </h3>
+
+                <p>
+                    Similar to FCP, LCP refers to the time that the largest in size content on your web page loads. When
+                    measuring your Largest Contentful Paint, you should always aim for it to be at 2.5 second or less.
+                    This means that your webpage will provide a good user experience and not make users frustrated due
+                    to slow load time.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc9" class="content-item">
+                <h3>
+                    9- Time to Interactive (TTI)
+                </h3>
+
+                <p>
+                    TTI refers to the amount of time it takes for a certain page to load and become fully interactive.
+                    This becomes possible once the initial useful content, which has been measured by the FCP, has
+                    rendered on the screen, the event handlers have registered for the majority of the already visible
+                    page elements, and the response time to user interaction is up to 50 milliseconds. If your TTI score
+                    is up to 3.8 seconds, your color-coding is considered fast, however once it exceeds 5 seconds it
+                    starts to get slower, resulting in a poor user experience.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc10" class="content-item">
+                <h3>
+                    10- Total Blocking Time (TBT)
+                </h3>
+
+                <p>
+                    TBT refers to the amount of time during which the main thread has been blocked before being able to
+                    respond to user input, which includes actions as simple as a keyboard press or a mouse click. One
+                    could calculate this by adding the blocking time for all long tasks which run on the main thread
+                    between FCP and TTI for more than 50 milliseconds. The blocking time occurs once the long tasks
+                    exceed 50 ms. For example, if a certain main thread timeline detects a 90 ms long task, the blocking
+                    time would be 40 ms.
+                </p>
+            </div>
+            <div class="line"></div>
+
+            <div id="jdc11" class="content-item">
+                <h3>
+                    11- Cumulative Layout Shift (CLS)
+                </h3>
+
+                <p>
+                    CLS measures the visual stability of a website by calculating the amount of all unexpected layout
+                    shifts a user experiences while loading a certain page. A layout shift refers to the change in
+                    position of any visible element, altering the page’s entire structure. In order to ensure a
+                    high-quality user experience, a good CLS score needs to be less than 0.1. If it’s between 0.1 and
+                    0.25 it would require some improvement, and if it exceeds 0.25, it’s considered poor.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divider contentCont">
+        <div></div>
+    </div>
+
+    <section class="jdFooter contentCont">
+        <div class="jdFooter-wrapper">
+
+            <div class="themeheading">
+                <span class="themedot"></span>
+                <span class="themetitle">Journals</span>
+            </div>
+
+            <div class="ALLPROJECTS heading">
+                <h1>
+                    Check our <br>
+                    other journals
+                </h1>
+                <div>
+                    <a href="./Journal.html" class="btnRounded">
+                        <span>See All Journals</span>
                         <span>
-                            <img src="../assets/icons/add.svg" alt="+" />
-                            <img src="../assets/icons/add.svg" alt="+" class="hover" />
+                            <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                            <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
                         </span>
-                    </button>
+                    </a>
                 </div>
+            </div>
 
+            <div class="imagerow">
+                <div>
+                    <div class="followSTB">
+                        <a href="./What-Makes-a-Website-Bad-15-Examples-Crucial-Mistakes.html">
+                            <img src="../assets/images/Journal/Journal1.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./What-Makes-a-Website-Bad-15-Examples-Crucial-Mistakes.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            What Makes a Website “Bad”? 15 Examples & Crucial Mistakes
+                        </p>
+                        <small>Jan 4, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html">
+                            <img src="../assets/images/Journal/Journal2.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Conversational-UX-design-how-to-enhance-user-engagement.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Conversational UX design how to enhance user engagement
+                        </p>
+                        <small>Jan 6, 2024</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="followSTB">
+                        <a href="./Mastering-the-product-design-process-best-practices.html">
+                            <img src="../assets/images/Journal/Journal3.png" alt="">
+                        </a>
+                        <div class="stickybutton mobile">
+                            <a href="./Mastering-the-product-design-process-best-practices.html">
+                                <div class="magneticBtn">
+                                    <div class="my-button">
+
+                                        <div>
+                                            <div class="Btnfirst">
+                                                View details
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="title">
+                        <div>
+                            <span class="themedot"></span>
+                            <span class="themetitle">UI UX</span>
+                        </div>
+                        <p>
+                            Mastering the product design process : best practices
+                        </p>
+                        <small>Jan 5, 2024</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile seeallwork">
+                <a href="./Journal.html" class="btnRounded">
+                    <span>See All Journals</span>
+                    <span>
+                        <img src="../assets/icons/greaterThen.svg" alt="greaterthen" />
+                        <img src="../assets/icons/greaterThenL.svg" alt="greaterthen" class="hover">
+                    </span>
+                </a>
+                <a href="/" class="logo-img"><img src="../assets/icons/largeIconOnly.svg" alt=""></a>
             </div>
         </div>
     </section>
@@ -1028,10 +1167,10 @@
             var scriptsToLoad = [
                 "../scripts/global.js",
                 "../scripts/lenis.js",
+                "../scripts/pages/journalDetail.js",
                 "../scripts/pages/rotateSteric.js",
-                "../scripts/pages/journal.js",
-                "../scripts/hero.js",
                 "../scripts/mousefollower_stickybutton.js",
+                "../scripts/hero.js",
                 "../scripts/ideas.js",
             ];
 
