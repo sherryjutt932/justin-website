@@ -375,7 +375,6 @@ smoothScrollers.forEach(smoothScroller => {
     
       if (targetElement) {
         targetElement.scrollIntoView({
-          behavior: 'smooth',
         });
       }
     });

@@ -76,6 +76,10 @@ a{
   text-decoration: none;
 }
 
+.smoothScroller{
+  scroll-behavior: smooth
+}
+
 .contentCont{
   padding-left: 100px;
   padding-right: 100px;
