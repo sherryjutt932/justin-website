@@ -367,6 +367,10 @@
           }
         }
 
+        & > div {
+          transform: translateX(-20px);
+        }
+
         .text {
           font-size: 20px;
         }
@@ -510,6 +514,10 @@
           img {
             width: 8px;
           }
+        }
+
+        & > div {
+          transform: translateX(-16px);
         }
 
         .text {
