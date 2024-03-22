@@ -180,6 +180,7 @@
 
           h4 {
             padding: 10px 0;
+            margin-right: 30px;
           }
           .pWrapper {
             max-height: 0px;
@@ -387,7 +388,7 @@
   }
 }
 
-@media (max-width: 1024px) and (min-width: 501px) {
+@media (max-width: 1200px) and (min-width: 501px) {
   .FAQ {
     .FAQCon {
       gap: 40px;
