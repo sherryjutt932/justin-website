@@ -32,7 +32,6 @@ ScrollTrigger.create({
   scrub: 1,
   marker: false,
   animation: ideasanim,
-  
 });
 
 const ideasMarquee = document.getElementById("idea-marquee");
